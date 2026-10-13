@@ -55,7 +55,7 @@ def main():
  dump(out/'run.json',run)
  for row in json.loads((ROOT/'logs/rmu_formal_blocks_manifest.json').read_text())['files']:assert tensorless_hash(ROOT/row['path'])==row['sha256']
  seed_everything(42);model,tok=get_model(cfg.model);data=get_data(cfg.data,mode=cfg.mode,tokenizer=tok,template_args=cfg.model.template_args);collator=get_collators(cfg.collator,tokenizer=tok)
- trainer,args=load_trainer(trainer_cfg=cfg.trainer,model=model,train_dataset=data['train'],processing_class=tok,data_collator=collator,evaluators=None,template_args=cfg.model.template_args);trainer.create_optimizer()
+ trainer,args=load_trainer(trainer_cfg=cfg.trainer,model=model,train_dataset=data['train'],processing_class=tok,data_collator=collator,evaluators=None,template_args=cfg.model.template_args);trainer.create_optimizer();model.to(trainer.accelerator.device)
  selected=[n for n,p in model.named_parameters() if p.requires_grad];assert selected==[f'model.layers.{i}.mlp.down_proj.weight' for i in range(a.hook-2,a.hook+1)]
  assert sum(p.numel() for p in model.parameters() if p.requires_grad)==74711040
  assert not trainer.ref_model.training and not any(p.requires_grad for p in trainer.ref_model.parameters())
