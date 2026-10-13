@@ -15,6 +15,7 @@ with tempfile.TemporaryDirectory() as directory:
     trainer = RMU(model=model, args=args, retain_loss_type="EMBED_DIFF", steering_coeff=2,
                   module_regex=r"model\.layers\.7",
                   trainable_params_regex=[r"model\.layers\.(5|6|7)\.mlp\.down_proj\.weight"])
+    assert trainer.model_accepts_loss_kwargs is False
     trainer.create_optimizer()
     names = [n for n,p in model.named_parameters() if p.requires_grad]
     assert names == [f"model.layers.{i}.mlp.down_proj.weight" for i in (5,6,7)], names
@@ -24,6 +25,11 @@ with tempfile.TemporaryDirectory() as directory:
     batch={"input_ids":ids,"attention_mask":torch.ones_like(ids),"labels":labels}
     loss=trainer.compute_loss(model,{"forget":batch,"retain":batch})
     assert torch.isfinite(loss)
+    model.eval()
+    with torch.no_grad():
+        evaluation_loss=trainer.compute_loss(model,{"forget":batch,"retain":batch})
+    assert not evaluation_loss.requires_grad
+    model.train()
     loss.backward()
     assert any(p.grad is not None and p.grad.abs().sum()>0 for p in model.parameters() if p.requires_grad)
     assert all(p.grad is None for p in model.parameters() if not p.requires_grad)

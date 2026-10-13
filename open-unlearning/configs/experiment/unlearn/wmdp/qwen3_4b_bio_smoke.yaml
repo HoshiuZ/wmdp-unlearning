@@ -5,6 +5,7 @@ defaults:
   - override /eval: null
 
 mode: unlearn
+eval: null
 data_split: bio
 task_name: qwen3_4b_rmu_bio_smoke3_v1
 model:

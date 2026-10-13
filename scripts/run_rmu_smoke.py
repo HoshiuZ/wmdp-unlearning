@@ -33,7 +33,8 @@ def fingerprints(model): return {n:tensor_hash(p) for n,p in model.named_paramet
 
 
 class Telemetry(TrainerCallback):
-    def __init__(self,trainer,path):
+    def __init__(self,trainer,path,phase="smoke_train"):
+        self.phase=phase
         self.trainer=trainer;self.path=path;self.start=None;self.last=None;self.total_tokens=0
     def on_train_begin(self,args,state,control,**kwargs):
         self.start=self.last=time.perf_counter();torch.cuda.reset_peak_memory_stats()
@@ -42,7 +43,7 @@ class Telemetry(TrainerCallback):
         records=self.trainer.step_loss_records;self.trainer.step_loss_records=[]
         current=time.perf_counter();elapsed=current-self.last
         tokens=sum(r['input_tokens'] for r in records);self.total_tokens+=tokens
-        row={'training_run_id':Path(args.output_dir).name,'phase':'smoke_train',
+        row={'training_run_id':Path(args.output_dir).name,'phase':self.phase,
              'step':state.global_step,'epoch':state.epoch,
              'forget_loss':sum(r['forget_loss'] for r in records)/len(records),
              'retain_loss':sum(r['retain_loss'] for r in records)/len(records),
@@ -53,7 +54,9 @@ class Telemetry(TrainerCallback):
              'tokens_per_second':tokens/elapsed,'elapsed_seconds':current-self.start,
              'interval_seconds':elapsed,'gpu_peak_allocated_bytes':torch.cuda.max_memory_allocated(),
              'gpu_peak_reserved_bytes':torch.cuda.max_memory_reserved(),
-             'checkpoint_path':None,'recorded_at':now()}
+             'checkpoint_path':None,'recorded_at':now(),
+             'sampled_forget_indices':[i for r in records for i in (r['sampled_indices']['forget'] or [])],
+             'sampled_retain_indices':[i for r in records for i in (r['sampled_indices']['retain'] or [])]}
         self.path.parent.mkdir(parents=True,exist_ok=True)
         with self.path.open('a') as f:f.write(json.dumps(row,allow_nan=False)+'\n')
         self.last=current

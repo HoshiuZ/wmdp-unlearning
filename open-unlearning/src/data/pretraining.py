@@ -90,3 +90,27 @@ class PretrainingDataset(Dataset):
         return preprocess_pretraining_instance(
             self.tokenizer, "", self.chunks[idx], self.max_length
         )
+
+
+class TokenBlockDataset(Dataset):
+    """Prepared token blocks: no decode/re-encode, chat template, or cross-document packing."""
+    def __init__(self, hf_args, template_args, tokenizer, text_key="text", max_length=256):
+        self.data = load_hf_dataset(**hf_args)
+        self.max_length = max_length
+        vocabulary_size = len(tokenizer)
+        for row in self.data:
+            ids = row["input_ids"]
+            if not 2 <= len(ids) <= max_length:
+                raise ValueError("TokenBlockDataset requires 2..max_length tokens")
+            if not all(isinstance(i, int) and not isinstance(i, bool) and 0 <= i < vocabulary_size for i in ids):
+                raise ValueError("Invalid cached token IDs")
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        import torch
+        ids = torch.tensor(self.data[idx]["input_ids"], dtype=torch.long)
+        labels = ids.clone()
+        labels[0] = -100
+        return {"input_ids": ids, "labels": labels, "attention_mask": torch.ones_like(ids), "index": idx}

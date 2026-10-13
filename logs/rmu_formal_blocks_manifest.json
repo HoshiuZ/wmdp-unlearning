@@ -1,0 +1,100 @@
+{
+  "prepared_at": "2026-10-13T13:44:38.745052+08:00",
+  "version": "rmu-formal-blocks-v1",
+  "seed": 42,
+  "sequence_length": 256,
+  "source_processing_version": "bio-clean-v1",
+  "training_started": false,
+  "selection_rule": "Smallest SHA256(formal-v1:42:sample_id), separately per role and split; one hash-selected full 256-token block per article; shorter articles kept if >=2 tokens; incomplete tails ignored for longer articles.",
+  "tokenization": "Native tokenizer add_special_tokens=True; no chat template, no decode/re-encode, no cross-article packing",
+  "files": [
+    {
+      "path": "data/processed/bio_v1/formal_blocks_v1/forget/train.jsonl",
+      "source_path": "data/processed/bio_v1/forget/train.jsonl",
+      "source_sha256": "75b1fc9ef9ea2b4388ffd037d1527548bdf4789e8c996c84ffe33f44a88b4a29",
+      "role": "forget",
+      "split": "train",
+      "selected_articles": 2048,
+      "blocks": 2048,
+      "short_blocks": 4,
+      "skipped_lt2tokens": 0,
+      "selected_article_tokens": 13941488,
+      "block_tokens": 523605,
+      "size_bytes": 3918024,
+      "sha256": "7353bad990eb564c74a52ab6ad8b664d5dff111c737ce19d0fff80b2455d9186"
+    },
+    {
+      "path": "data/processed/bio_v1/formal_blocks_v1/forget/validation.jsonl",
+      "source_path": "data/processed/bio_v1/forget/validation.jsonl",
+      "source_sha256": "032a9ae3d19468b8ee2eefa338bc4857614af10d1de35725e861caf3fcddc3ef",
+      "role": "forget",
+      "split": "validation",
+      "selected_articles": 64,
+      "blocks": 64,
+      "short_blocks": 0,
+      "skipped_lt2tokens": 0,
+      "selected_article_tokens": 460124,
+      "block_tokens": 16384,
+      "size_bytes": 122840,
+      "sha256": "33563fb11cd5bcc894716ed66b8703af8116cfc61e6cb6ce66ad1c4544d450b3"
+    },
+    {
+      "path": "data/processed/bio_v1/formal_blocks_v1/retain/train.jsonl",
+      "source_path": "data/processed/bio_v1/retain/train.jsonl",
+      "source_sha256": "a6b05b6c430aabbfaebfe0179faf020c45aa3f5e8a8e9644b6b52394d9378593",
+      "role": "retain",
+      "split": "train",
+      "selected_articles": 2048,
+      "blocks": 2048,
+      "short_blocks": 127,
+      "skipped_lt2tokens": 0,
+      "selected_article_tokens": 16666895,
+      "block_tokens": 504428,
+      "size_bytes": 3709520,
+      "sha256": "72e9f195ed2288f686fd8e3b7bd8de183c3f4d013a4e628a0a78ed5b181f8916"
+    },
+    {
+      "path": "data/processed/bio_v1/formal_blocks_v1/retain/validation.jsonl",
+      "source_path": "data/processed/bio_v1/retain/validation.jsonl",
+      "source_sha256": "2e3437e315a47e5aa1fad7e2cc0758d7df082a91aa1a0405a1ed6ca2657d06c5",
+      "role": "retain",
+      "split": "validation",
+      "selected_articles": 64,
+      "blocks": 64,
+      "short_blocks": 5,
+      "skipped_lt2tokens": 0,
+      "selected_article_tokens": 503478,
+      "block_tokens": 15388,
+      "size_bytes": 114355,
+      "sha256": "b332c7fc411400029c2891e20e383ab576110466594b7ed98dfa6142894b2374"
+    }
+  ],
+  "tokenizer_files": [
+    {
+      "path": "models/Qwen3-4B-Instruct-2507/tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    {
+      "path": "models/Qwen3-4B-Instruct-2507/tokenizer_config.json",
+      "sha256": "a62ff0a2472a0fa1b8eaabcb57c59b58afa42a22831dc141400b6e0cf2b65ce3"
+    },
+    {
+      "path": "models/Qwen3-4B-Instruct-2507/vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "path": "models/Qwen3-4B-Instruct-2507/merges.txt",
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    }
+  ],
+  "checks": {
+    "train_validation_sample_overlap": 0,
+    "train_validation_article_group_overlap": 0,
+    "valid_token_lengths": true
+  },
+  "limitations": [
+    "Article-balanced subset and one block per article, not full-corpus training.",
+    "Candidate pool size is not actual number of sampled/consumed training articles; actual indices must be recorded during training.",
+    "Validation is from held-out Bio corpora; representation loss is not MMLU or proof of safety."
+  ]
+}

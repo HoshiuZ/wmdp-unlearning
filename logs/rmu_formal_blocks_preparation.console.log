@@ -1,0 +1,5 @@
+forget train blocks 2048 short 4
+forget validation blocks 64 short 0
+retain train blocks 2048 short 127
+retain validation blocks 64 short 5
+Prepared and verified; no training started.

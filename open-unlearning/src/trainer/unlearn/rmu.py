@@ -43,6 +43,9 @@ class RMU(GradDiff):
         self.steering_coeff = steering_coeff
         self.control_vec = None
         self.step_loss_records = []
+        self.last_loss_record = None
+        # RMU averages its own activation losses and does not use token-count kwargs.
+        self.model_accepts_loss_kwargs = False
 
     def create_optimizer(self):
         self._freeze_all_params(self.model, False)
@@ -101,7 +104,7 @@ class RMU(GradDiff):
 
         hook_handle = module.register_forward_hook(hook)
         try:
-            with torch.set_grad_enabled(not no_grad):
+            with torch.set_grad_enabled(not no_grad and torch.is_grad_enabled()):
                 outputs = model(**inputs)
         finally:
             hook_handle.remove()
@@ -151,6 +154,10 @@ class RMU(GradDiff):
     def compute_loss(
         self, model, inputs, return_outputs=False, num_items_in_batch=None
     ):
+        sampled_indices = {
+            role: inputs[role]["index"].detach().cpu().tolist() if "index" in inputs[role] else None
+            for role in ("forget", "retain")
+        }
         forget_inputs = inputs["forget"]
         forget_inputs = {
             "input_ids": forget_inputs["input_ids"],
@@ -185,13 +192,15 @@ class RMU(GradDiff):
         loss = self.gamma * forget_loss + self.alpha * retain_loss
         if not torch.isfinite(loss):
             raise FloatingPointError("Non-finite RMU loss")
+        self.last_loss_record = {
+            "forget_loss": float(forget_loss.detach().float().cpu()),
+            "retain_loss": float(retain_loss.detach().float().cpu()),
+            "total_loss": float(loss.detach().float().cpu()),
+            "input_tokens": int(forget_inputs["attention_mask"].sum() + retain_inputs["attention_mask"].sum()),
+            "loss_tokens": int((forget_inputs["labels"] != -100).sum() + (retain_inputs["labels"] != -100).sum()),
+            "sampled_indices": sampled_indices,
+        }
         if model.training:
-            self.step_loss_records.append({
-                "forget_loss": float(forget_loss.detach().float().cpu()),
-                "retain_loss": float(retain_loss.detach().float().cpu()),
-                "total_loss": float(loss.detach().float().cpu()),
-                "input_tokens": int(forget_inputs["attention_mask"].sum() + retain_inputs["attention_mask"].sum()),
-                "loss_tokens": int((forget_inputs["labels"] != -100).sum() + (retain_inputs["labels"] != -100).sum()),
-            })
+            self.step_loss_records.append(self.last_loss_record)
 
         return (loss, forget_outputs) if return_outputs else loss
