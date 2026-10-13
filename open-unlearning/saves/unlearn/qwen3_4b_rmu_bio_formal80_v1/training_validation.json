@@ -271,7 +271,10 @@
   ],
   "note": "Formal RMU training; fixed final step80 checkpoint. Official WMDP/MMLU post-training evaluation remains pending.",
   "total_input_tokens": 641113,
-  "github_weights_uploaded": false,
+  "github_weights_uploaded": true,
   "lfs_version": "3.0.2",
-  "actual_consumption_dataset_manifest": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/training_datasets.jsonl"
+  "actual_consumption_dataset_manifest": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/training_datasets.jsonl",
+  "published_commit": "bde1f91",
+  "repository_url": "https://github.com/HoshiuZ/wmdp-unlearning",
+  "lfs_integrity_checked": true
 }

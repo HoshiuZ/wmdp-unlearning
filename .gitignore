@@ -38,3 +38,9 @@ __pycache__/
 
 # Processed Bio corpus and per-record audit inherit source access restrictions.
 /data/processed/bio_v1/
+
+# Keep the compatibility-trial weights local; the formal full model uses Git LFS.
+/open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/
+/open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/control_vector.pt
+# Raw external corpora stay local while redistribution terms remain unresolved.
+/open-unlearning/data/wmdp/

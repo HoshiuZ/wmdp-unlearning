@@ -103,9 +103,12 @@
     "dtype": "bfloat16",
     "attention": "sdpa"
   },
-  "storage": "GitHub Git LFS (upload pending)",
-  "github_weights_uploaded": false,
+  "storage": "GitHub Git LFS (uploaded and verified)",
+  "github_weights_uploaded": true,
   "reload_fingerprints_identical": true,
   "reload_forward_finite": true,
-  "post_training_official_evaluation": "pending"
+  "post_training_official_evaluation": "pending",
+  "published_commit": "bde1f91",
+  "repository_url": "https://github.com/HoshiuZ/wmdp-unlearning",
+  "lfs_integrity_checked": true
 }

@@ -46,3 +46,23 @@ The fixed checkpoint is step80 regardless of validation scores; validation detec
 Execution script is retained at `scripts/run_rmu_formal.py`; when authorized for the next step, run it from the project root with the independent environment. It refuses to overwrite the run directory, checks the initial baseline fingerprints, records actual consumed indices and validation rows, saves one final model and checks parameter-only changes and exact reloading/finite forward. It does not run post-training official tests.
 
 After formal training: review logs/validation and saved checkpoint, then evaluate full WMDP-Bio and MMLU under their locked baseline protocols. Formal full-weight GitHub LFS/hosting and authorized data-delivery access still need setup; source restrictions are not waived by storage configuration.
+
+## Formal run result
+
+The first formal80 run completed successfully on2026-10-13. It used1,280 distinct forget blocks and920 distinct retain blocks, each role exposed1,280 times (retain sampled with replacement), with641,113 input tokens across the two streams.80 training records and five validation records were saved. Only the three selected weight tensors changed; all other named parameter fingerprints stayed identical. Save/reload fingerprints match exactly and reloaded forward logits are finite.
+
+| Step | Held-out forget representation loss | Held-out retain representation loss | Retain NLL | Retain PPL |
+| ---: | ---: | ---: | ---: | ---: |
+| 0 | 0.537689 | 0.000000 | 2.193743 | 8.968723 |
+| 20 | 0.341095 | 0.026900 | 2.207053 | 9.088892 |
+| 40 | 0.254868 | 0.059553 | 2.238067 | 9.375191 |
+| 60 | 0.228485 | 0.065110 | 2.266483 | 9.645418 |
+| 80 | 0.207138 | 0.069951 | 2.299509 | 9.969286 |
+
+Peak CUDA allocated/reserved memory was 18.2404/18.4258 GiB. Lower forget representation loss and higher held-out retain NLL are observations, not proof of selective knowledge deletion or preserved general capability. Official post-training WMDP-Bio and MMLU remain pending.
+
+Artifacts: `open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/`; summary `logs/rmu_formal_run.json`; console `logs/rmu_formal80_v1.console.log`; actual-use archive recreation `scripts/archive_rmu_formal_usage.py`. Full formal weights are9 <=1GB safetensors shards using Git LFS; original base license/documentation are retained. Source/token corpora and actually-used token records remain local under source access restrictions.
+
+Next: confirm full-model publication, then evaluate this fixed checkpoint on full WMDP-Bio and MMLU using the locked baseline conditions. The evaluation results cannot be treated as a tuning signal for this completed run.
+
+Formal model publication completed: all10 LFS objects (nine weight shards plus control vector, about8GB) uploaded. The initial Git SSH connection closed while waiting for the long upload; re-pushing the same commit reused uploaded objects and succeeded at `bde1f91`. Local `git lfs fsck` passed. Model/upload metadata records this verified publication; restricted corpora remain local.
