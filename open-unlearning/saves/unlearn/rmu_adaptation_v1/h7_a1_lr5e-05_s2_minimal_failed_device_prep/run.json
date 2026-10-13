@@ -1,0 +1,16 @@
+{
+  "name": "h7_a1_lr5e-05_s2_minimal",
+  "started_at": "2026-10-13T16:36:08.842865+08:00",
+  "code_commit": "b58e1f2e9538d1705f24194547d4610082a0d419",
+  "script_sha256": "9a11745a601890ad9c8e063a2f298f0404901050c99b55c85b16fb245faf5019",
+  "hook": 7,
+  "alpha": 1,
+  "learning_rate": 5e-05,
+  "steering_coefficient": 2,
+  "seed": 42,
+  "minimal": true,
+  "status": "failed_before_optimizer_update",
+  "command": "/root/autodl-tmp/wmdp-work/scripts/run_rmu_adaptation.py --hook 7 --minimal",
+  "data_manifest": "logs/rmu_formal_blocks_manifest.json",
+  "failure": "Manual minimal check did not move model to CUDA before forward; fixed new-run device preparation. No change to RMU objective."
+}
