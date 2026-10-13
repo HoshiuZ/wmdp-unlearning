@@ -1,0 +1,20 @@
+{
+  "single_factor_only": true,
+  "original_diagnostic_restored": true,
+  "diagnostic_optimizer_steps": 0,
+  "new_training_cases": 1,
+  "steps": 40,
+  "checkpoints": 3,
+  "compressed_bytes": 191704980,
+  "matched_sampling_token_budget_control": true,
+  "unchanged_frozen_reference": true,
+  "all_reload_and_object_hashes_verified": true,
+  "development_id_prompt_target_verified": true,
+  "full_evaluations": 0,
+  "space": {
+    "total": 64424509440,
+    "used": 45044346880,
+    "free": 19380162560
+  },
+  "code_commit": "64b3fa957f65281f3a6ac2dbed079c457ae8f870"
+}

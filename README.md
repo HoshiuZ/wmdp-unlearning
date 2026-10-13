@@ -87,6 +87,14 @@ MMLU使用官方固定revision `c30699e8356da336a370243923dbaf21066bb9fe` 本地
 
 9个无损增量保存重载校验通过，配置、分项loss、验证、时间、显存及逐题记录留档。见 [中文报告](docs/simnpo-rmu-results.md)、[方案](docs/simnpo-rmu-plan.md)、[比较表](logs/simnpo_rmu_development.csv)、[完成审计](logs/simnpo_rmu_completion_audit.json)、[恢复说明](open-unlearning/saves/unlearn/simnpo_rmu_v1/README.md)。本轮仅本地提交，未推送。
 
+## 联合方法梯度诊断及系数减半
+
+完成36层down_proj只读梯度诊断：固定4个文章验证样本，在原始、RMU+CE40、联合20/40检查点分别计算各损失梯度。RMU/Sim遗忘梯度均值接近正交，未见稳定强反向冲突；选定三层的加权Sim/RMU梯度范数比均值从约0.50升至联合40步约20.44，显示明显尺度漂移。三层以外有大量梯度，但这不是扩大参数必然有效的证据。
+
+按预先门控只追加1组Sim系数减半（0.15665→0.07833），其余模型起点、参数范围、数据、采样、学习率、seed42和40步不变。第40步开发Bio63.2813%、加权MMLU损失3.4003点；原联合为60.5469%/损失4.1466点。减半缓解能力损伤但遗忘变弱，仍超过3点参考范围，未产生新前沿，未新增全量。
+
+3个新增检查点及全部诊断/负面结果保留，重建和采样预算校验通过；没有扩大训练参数、继续搜索或推送。见 [诊断与适配报告](docs/simnpo-rmu-gradient-results.md)、[预先门控](docs/simnpo-rmu-gradient-plan.md)、[梯度证据](logs/simnpo_rmu_gradient_diagnostics.json)、[单因素审计](logs/simnpo_rmu_half_completion_audit.json)。下一步若继续，更值得先研究训练中的梯度尺度平衡，再预先声明有限对照。
+
 ## 下一步
 
 交付整理暂缓；后续需要时按Word要求整理标准交付包：九个必需元数据文件、模型产物、实际训练与验证数据、前后评测证据及日志；受限数据依授权交付，缺项如实注明。当前标准平台交付包尚未完成。恢复攻击、再学习、多随机种子和多方法对照属于后续扩展。

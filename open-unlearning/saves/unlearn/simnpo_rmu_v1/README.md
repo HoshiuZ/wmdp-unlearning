@@ -9,3 +9,6 @@ SimNPO组不使用RMU目标或参考表示作为loss，但为了共享审计基�
 方案：`docs/simnpo-rmu-plan.md`；完成报告：`docs/simnpo-rmu-results.md`。开发/全量均使用已观察官方测试数据，是探索性证据；独立文章验证仅用于loss与梯度诊断。受限原始正文与token缓存未提交。
 
 模型许可证沿用原始Qwen3-4B-Instruct-2507的Apache-2.0，见本目录LICENSE；框架来源及MIT版权保留在上游目录和根README。SimNPO来源：https://github.com/OPTML-Group/Unlearn-Simple 。本轮先提交本地记录，未自动推送或发布模型。
+
+
+后续 `joint_simhalf_screen40` 为Sim系数减半的单因素适配，10/20/40步均有无损增量，恢复方式相同。梯度诊断与结果见 `docs/simnpo-rmu-gradient-results.md`，旧三组报告保留不覆盖。诊断36层仅求梯度，没有训练扩层或修改基模。
