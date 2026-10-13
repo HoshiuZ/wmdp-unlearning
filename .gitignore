@@ -35,3 +35,6 @@ __pycache__/
 
 # Hugging Face local download bookkeeping is not delivery data.
 **/.cache/
+
+# Processed Bio corpus and per-record audit inherit source access restrictions.
+/data/processed/bio_v1/

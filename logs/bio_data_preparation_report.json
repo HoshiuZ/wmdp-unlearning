@@ -1,0 +1,102 @@
+{
+  "processing_version": "bio-clean-v1",
+  "completed_at": "2026-10-13T12:59:08.096579+08:00",
+  "seed": 42,
+  "validation_group_fraction": 0.05,
+  "split_method": "Sort shared article groups, shuffle with Random(42), assign round(5% of groups) to validation. Record fractions can differ.",
+  "raw_counts": {
+    "forget": 24453,
+    "retain": 60887
+  },
+  "excluded_counts": {
+    "forget": {
+      "cross_role_exact_conflict": 2,
+      "empty_or_invalid_text": 12,
+      "exact_duplicate": 2
+    },
+    "retain": {
+      "exact_duplicate": 368,
+      "cross_role_exact_conflict": 2
+    }
+  },
+  "output_files": [
+    {
+      "path": "data/processed/bio_v1/forget/train.jsonl",
+      "role": "forget",
+      "split": "train",
+      "records": 23220,
+      "size_bytes": 720749094,
+      "sha256": "75b1fc9ef9ea2b4388ffd037d1527548bdf4789e8c996c84ffe33f44a88b4a29"
+    },
+    {
+      "path": "data/processed/bio_v1/forget/validation.jsonl",
+      "role": "forget",
+      "split": "validation",
+      "records": 1217,
+      "size_bytes": 37420261,
+      "sha256": "032a9ae3d19468b8ee2eefa338bc4857614af10d1de35725e861caf3fcddc3ef"
+    },
+    {
+      "path": "data/processed/bio_v1/retain/train.jsonl",
+      "role": "retain",
+      "split": "train",
+      "records": 57488,
+      "size_bytes": 1869078075,
+      "sha256": "a6b05b6c430aabbfaebfe0179faf020c45aa3f5e8a8e9644b6b52394d9378593"
+    },
+    {
+      "path": "data/processed/bio_v1/retain/validation.jsonl",
+      "role": "retain",
+      "split": "validation",
+      "records": 3029,
+      "size_bytes": 96500404,
+      "sha256": "2e3437e315a47e5aa1fad7e2cc0758d7df082a91aa1a0405a1ed6ca2657d06c5"
+    }
+  ],
+  "deduplication": "NFKC + casefold + whitespace normalization for exact SHA256 comparison; original casing and text preserved in output. Same DOI and verified near duplicates share a split; near duplicates are not deleted.",
+  "near_duplicate_screen": "128 evenly spaced five-word shingles; 64-permutation MinHash LSH threshold 0.8; verify candidates with full normalized-character similarity >=0.90. Heuristic, not exhaustive.",
+  "verified_near_duplicate_pairs": 326,
+  "max_lsh_candidates_per_record": 26,
+  "evaluation_questions_checked": 15600,
+  "evaluation_check": "Aho-Corasick normalized question substring matching, plus three 8-word anchors for questions >=16 words. Exclude verbatim questions >=20 words and >=120 normalized chars; shorter exact/anchor matches are unreviewed candidates, not confirmed contamination.",
+  "evaluation_confirmed_matches": 0,
+  "evaluation_candidates": {
+    "anchor_match_candidates": 76,
+    "short_exact_question_hits": 2
+  },
+  "candidate_review_complete": true,
+  "checks": {
+    "ids_unique": true,
+    "train_validation_exact_overlap": 0,
+    "train_validation_group_overlap": 0,
+    "counts_reconciled": true,
+    "saved_text_hashes_verified": true,
+    "split_assignment_reproduced_from_audit": true
+  },
+  "training_started": false,
+  "actual_language_distribution": null,
+  "language_note": "No language classifier run; no inferred distribution fabricated.",
+  "redistribution_authorization": null,
+  "distribution_note": "Processed Bio data stays local under source restrictions; receiving-party authorization remains to be confirmed.",
+  "dependencies": {
+    "pyahocorasick": "2.3.1",
+    "datasketch": "2.0.0",
+    "rapidfuzz": "3.14.6",
+    "pyarrow": "26.0.0",
+    "numpy": "2.2.3"
+  },
+  "limitations": [
+    "Approximate duplicate candidate generation is sampled and cannot prove absence of semantic duplicates.",
+    "All flagged candidates were screened/reviewed, but paraphrases, answer-only overlap and unknown contamination may remain undetected.",
+    "Training loader/tokenization compatibility will be verified before RMU short run."
+  ],
+  "candidate_review_summary": "logs/bio_overlap_candidate_review_summary.json",
+  "candidate_context_review": "Six non-repeated-anchor pairs reviewed; no matching complete test item found; all candidates retained.",
+  "processing_command": "envs/unlearning/bin/python -u scripts/prepare_bio_data.py",
+  "processing_script_sha256": "c4c1d84368da96c1620366410f3205071d1a3b13a54eccc5396e824046ee4325",
+  "input_manifest_paths": [
+    "logs/wmdp_download_manifest.json",
+    "logs/wmdp_bio_forget_download_manifest.json",
+    "logs/mmlu_dataset_manifest.json"
+  ]
+}

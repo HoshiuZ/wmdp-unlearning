@@ -1,0 +1,14 @@
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Collecting pyahocorasick
+  Downloading pyahocorasick-2.3.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (113 kB)
+Collecting datasketch
+  Downloading datasketch-2.0.0-py3-none-any.whl (107 kB)
+Collecting rapidfuzz
+  Downloading rapidfuzz-3.14.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 1.2 MB/s  0:00:02
+Requirement already satisfied: numpy>=1.11 in ./envs/unlearning/lib/python3.11/site-packages (from datasketch) (2.2.3)
+Requirement already satisfied: scipy>=1.0.0 in ./envs/unlearning/lib/python3.11/site-packages (from datasketch) (1.14.1)
+Installing collected packages: rapidfuzz, pyahocorasick, datasketch
+
+Successfully installed datasketch-2.0.0 pyahocorasick-2.3.1 rapidfuzz-3.14.6
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.

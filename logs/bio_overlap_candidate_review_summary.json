@@ -1,0 +1,23 @@
+{
+  "candidate_pairs": 78,
+  "corpus_records": 74,
+  "outcomes": {
+    "single_anchor_repeated_not_confirmed_near_question": 72,
+    "high_similarity_requires_context_review": 1,
+    "multiple_shared_phrases_requires_context_review": 3,
+    "short_exact_question_requires_context_review": 2
+  },
+  "confirmed_contamination": 0,
+  "automatic_exclusions_from_this_review": 0,
+  "review_note": "72 repeated-anchor matches rejected by distinct-anchor check; remaining six matched question/context pairs reviewed locally. They show ordinary knowledge statements or generic prompts without matching complete test items. Kept all; this does not prove absence of semantic overlap or unknown contamination.",
+  "local_detail_path": "data/processed/bio_v1/evaluation_overlap_candidate_review.json",
+  "context_review_complete": true,
+  "context_reviewed_pairs": 6,
+  "repeated_single_anchor_pairs": 72,
+  "final_decisions": {
+    "repeated_single_phrase_does_not_establish_question_overlap": 72,
+    "knowledge_statement_or_generic_prompt_overlap_without_matching_complete_test_item": 6
+  },
+  "detected_complete_test_item_copies": 0,
+  "local_detail_sha256": "c06af5dd2619cca1c53e1b404c48d41fb48f2210203677565cb559eef713cb12"
+}

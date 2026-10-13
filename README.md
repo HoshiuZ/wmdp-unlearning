@@ -32,7 +32,7 @@ OpenUnlearning 使用 MIT License，原始版权声明为 `Copyright (c) 2025 CM
 
 ## 尚未完成的工作
 
-已下载官方 S3 语料及获批的 Bio 遗忘语料，完成文件格式、样本数和校验值核查。Bio 遗忘语料共24,453条，为带 `text` 等字段的 Parquet；S3语料为每行一个JSON字符串。MMLU 训练前正常能力基线已完成：57个学科、14,042题，0-shot Accuracy **70.6737%**（9,924题正确），标准误约 **0.3617个百分点**。正式产物见 [MMLU基线目录](open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/)，协议和核查记录见 [logs/mmlu_baseline_run.json](logs/mmlu_baseline_run.json)。数据清洗与划分、RMU 短跑与正式训练、训练后评测和完整交付包均尚未完成。当前结果仅是原始模型基线，不表示已完成知识遗忘。后续 WMDP 分数下降也只能说明该代理任务能力减弱，需同时检查正常能力保持。
+已下载官方 S3 语料及获批的 Bio 遗忘语料，完成文件格式、样本数和校验值核查。Bio 遗忘语料共24,453条，为带 `text` 等字段的 Parquet；S3语料为每行一个JSON字符串。MMLU 训练前正常能力基线已完成：57个学科、14,042题，0-shot Accuracy **70.6737%**（9,924题正确），标准误约 **0.3617个百分点**。正式产物见 [MMLU基线目录](open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/)，协议和核查记录见 [logs/mmlu_baseline_run.json](logs/mmlu_baseline_run.json)。Bio 数据清洗与文章组划分已完成（seed42，约95/5）：遗忘训练/验证23,220/1,217条，保留训练/验证57,488/3,029条，规则和局限见 [数据处理记录](docs/data-preparation.md)。RMU 短跑与正式训练、训练后评测和完整交付包均尚未完成。当前结果仅是原始模型基线，不表示已完成知识遗忘。后续 WMDP 分数下降也只能说明该代理任务能力减弱，需同时检查正常能力保持。
 
 ## 仓库内容与留档
 
