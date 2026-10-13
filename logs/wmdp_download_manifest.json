@@ -1,0 +1,55 @@
+{
+  "recorded_at": "2026-10-13T11:13:27.289488+08:00",
+  "source_url": "https://cais-wmdp.s3.us-west-1.amazonaws.com/wmdp-corpora.zip",
+  "command": "/root/autodl-tmp/wmdp-work/envs/unlearning/bin/python -u setup_data.py --wmdp",
+  "working_directory": "/root/autodl-tmp/wmdp-work/open-unlearning",
+  "exit_code": 0,
+  "download_log": "logs/wmdp_download.log",
+  "license_or_authorization": null,
+  "license_note": "尚未核实来源许可；不能从框架MIT许可证推断语料许可。",
+  "archive_entries": [
+    {
+      "path": "wmdp-corpora/",
+      "size_bytes": 0,
+      "crc32": "00000000"
+    },
+    {
+      "path": "wmdp-corpora/cyber-retain-corpus.jsonl",
+      "size_bytes": 63053403,
+      "crc32": "8dd3c917"
+    },
+    {
+      "path": "wmdp-corpora/bio-retain-corpus.jsonl",
+      "size_bytes": 1951738833,
+      "crc32": "7232cdb4"
+    },
+    {
+      "path": "wmdp-corpora/cyber-forget-corpus.jsonl",
+      "size_bytes": 21977110,
+      "crc32": "4ed1ed1d"
+    }
+  ],
+  "files": [
+    {
+      "path": "open-unlearning/data/wmdp/wmdp-corpora/bio-retain-corpus.jsonl",
+      "size_bytes": 1951738833,
+      "sha256": "4122bbbed4a3ac381be21671aab3ab824a38950fe73a380aaeb130681cccb3eb"
+    },
+    {
+      "path": "open-unlearning/data/wmdp/wmdp-corpora/cyber-forget-corpus.jsonl",
+      "size_bytes": 21977110,
+      "sha256": "1fab5b5229d521849273db51175bf176e9208e959b17ccf3e4ec61d20bfe4cf0"
+    },
+    {
+      "path": "open-unlearning/data/wmdp/wmdp-corpora/cyber-retain-corpus.jsonl",
+      "size_bytes": 63053403,
+      "sha256": "ac0249a9fe0f6d2058a497285e95944e3b56874cb3377028c692e8032f933eaf"
+    },
+    {
+      "path": "open-unlearning/data/wmdp/wmdp-corpora.zip",
+      "size_bytes": 574964650,
+      "sha256": "030ad12feed583a291df21471a153ff70bebf002f27ee4eb19c9c41b6ccf4bdf"
+    }
+  ],
+  "disk_free_bytes": 34348695552
+}

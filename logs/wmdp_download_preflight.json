@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-13T11:00:42.058933+08:00",
+  "python": "3.11.17",
+  "wget": "/usr/bin/wget",
+  "unzip": "/usr/bin/unzip",
+  "huggingface_hub": "1.7.2",
+  "url": "https://cais-wmdp.s3.us-west-1.amazonaws.com/wmdp-corpora.zip",
+  "download_started": false,
+  "http_status": 200,
+  "archive_size_bytes": 574964650,
+  "content_type": "application/zip",
+  "last_modified": "Tue, 05 Mar 2024 22:55:55 GMT"
+}
