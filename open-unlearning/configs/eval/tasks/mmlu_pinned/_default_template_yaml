@@ -14,5 +14,3 @@ metric_list:
 metadata:
   version: 1.0
 
-dataset_kwargs:
-  revision: c30699e8356da336a370243923dbaf21066bb9fe

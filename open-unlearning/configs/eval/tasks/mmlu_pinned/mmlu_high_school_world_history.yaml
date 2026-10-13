@@ -1,7 +1,15 @@
-"dataset_name": "high_school_world_history"
-"description": "The following are multiple choice questions (with answers) about high\
-  \ school world history.\n\n"
-"tag": "mmlu_humanities_tasks"
-"include": "_default_template_yaml"
-"task": "mmlu_high_school_world_history"
-"task_alias": "high_school_world_history"
+dataset_name: null
+description: 'The following are multiple choice questions (with answers) about high
+  school world history.
+
+
+  '
+tag: mmlu_humanities_tasks
+include: _default_template_yaml
+task: mmlu_high_school_world_history
+task_alias: high_school_world_history
+dataset_path: parquet
+dataset_kwargs:
+  data_files:
+    test: ../data/evaluation/mmlu/subjects/high_school_world_history/test.parquet
+    dev: ../data/evaluation/mmlu/subjects/high_school_world_history/dev.parquet

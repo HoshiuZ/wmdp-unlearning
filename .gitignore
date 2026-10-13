@@ -32,3 +32,6 @@ __pycache__/
 
 # Official gated Bio corpus: keep local unless redistribution is explicitly permitted.
 /data/raw/wmdp-bio-forget/
+
+# Hugging Face local download bookkeeping is not delivery data.
+**/.cache/

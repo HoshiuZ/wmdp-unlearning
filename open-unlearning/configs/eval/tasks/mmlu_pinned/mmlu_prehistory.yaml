@@ -1,7 +1,14 @@
-"dataset_name": "prehistory"
-"description": "The following are multiple choice questions (with answers) about prehistory.\n\
-  \n"
-"tag": "mmlu_humanities_tasks"
-"include": "_default_template_yaml"
-"task": "mmlu_prehistory"
-"task_alias": "prehistory"
+dataset_name: null
+description: 'The following are multiple choice questions (with answers) about prehistory.
+
+
+  '
+tag: mmlu_humanities_tasks
+include: _default_template_yaml
+task: mmlu_prehistory
+task_alias: prehistory
+dataset_path: parquet
+dataset_kwargs:
+  data_files:
+    test: ../data/evaluation/mmlu/subjects/prehistory/test.parquet
+    dev: ../data/evaluation/mmlu/subjects/prehistory/dev.parquet

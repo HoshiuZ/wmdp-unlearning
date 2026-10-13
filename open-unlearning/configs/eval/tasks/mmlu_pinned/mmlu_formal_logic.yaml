@@ -1,7 +1,15 @@
-"dataset_name": "formal_logic"
-"description": "The following are multiple choice questions (with answers) about formal\
-  \ logic.\n\n"
-"tag": "mmlu_humanities_tasks"
-"include": "_default_template_yaml"
-"task": "mmlu_formal_logic"
-"task_alias": "formal_logic"
+dataset_name: null
+description: 'The following are multiple choice questions (with answers) about formal
+  logic.
+
+
+  '
+tag: mmlu_humanities_tasks
+include: _default_template_yaml
+task: mmlu_formal_logic
+task_alias: formal_logic
+dataset_path: parquet
+dataset_kwargs:
+  data_files:
+    test: ../data/evaluation/mmlu/subjects/formal_logic/test.parquet
+    dev: ../data/evaluation/mmlu/subjects/formal_logic/dev.parquet
