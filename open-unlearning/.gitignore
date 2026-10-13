@@ -194,3 +194,8 @@ cython_debug/
 !**/.hydra/
 !**/.hydra/**
 *.bak
+
+# Override upstream result/data re-inclusions for local-only artifacts.
+/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/
+/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/control_vector.pt
+/data/wmdp/
