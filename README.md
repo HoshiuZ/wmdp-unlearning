@@ -40,7 +40,7 @@ MMLU使用官方固定revision `c30699e8356da336a370243923dbaf21066bb9fe` 本地
 
 根目录私人工作文档不上传，公开README单独放行。独立环境、缓存、下载的原始基模及短跑完整权重留在本地。Bio遗忘语料条款限制未经许可向协作者名单之外分发；原始、清洗后正文和token缓存不公开提交，GitHub保存处理脚本、统计与来源记录。保留语料再分发许可尚待确认，平台接收方授权也需明确。
 
-## 适配探索最终结果
+## 第一轮适配探索结果
 
 完成实现审查与7组独立原始模型起点的40步训练，共21个开发检查点，并对2个候选进行了全量探索性评测。最佳已全量验证候选为 **hook12，更新10/11/12层down_proj.weight，alpha2，steering2，lr5e-5，第40步**；seed42、256token、batch1、累积16。
 
@@ -56,6 +56,22 @@ MMLU使用官方固定revision `c30699e8356da336a370243923dbaf21066bb9fe` 本地
 完整21个开发检查点、配置和两次全量对比见 [中文报告](docs/rmu-adaptation-results.md)、[CSV表](logs/rmu_adaptation_comparison_phase2.csv)、[最终结果](logs/rmu_adaptation_result_phase2.json)、[审查和预先声明方案](docs/rmu-adaptation-plan.md)。第一阶段报告单独保留于 [历史报告](docs/rmu-adaptation-results-phase1.md)。
 
 全部新增检查点采用Git LFS管理的无损BF16 XOR+gzip增量，不是LoRA或独立完整HF模型；加载需固定原始模型及helper，重建逐位核查通过。最终模型指针和加载示例见 [适配产物说明](open-unlearning/saves/unlearn/rmu_adaptation_v1/README.md)，选定checkpoint为 `h12_a2_lr5e-05_s2_screen40/checkpoint-40`。数据盘已由50GB扩至60GB，本轮未使用/tmp缓存。
+
+## 第二轮表示尺度与覆盖探索
+
+完成表示与梯度诊断、全部既有开发结果的MMLU等权/题数加权重算、3组尺度/alpha实验及1组公平覆盖对照，并对预先锁定的2个候选进行全量评测。均从同一原始模型开始，hook12、更新10/11/12层down_proj、lr5e-5、seed42、40步。
+
+| 全量探索性候选 | WMDP-Bio | MMLU | MMLU相对基线变化 |
+| --- | ---: | ---: | ---: |
+| 旧alpha2/steering2 | 66.3001% | 69.1355% | -1.5382点 |
+| 新alpha2/steering32 | 55.3810% | 68.4874% | -2.1863点 |
+| 新alpha1/steering32 | 50.6677% | 67.1913% | -3.4824点 |
+
+新增全量候选均未达到原2点能力损失约束；该档仍保留旧alpha2/steering2。3点参考档的最佳已观测候选为新alpha2/steering32，比旧alpha2多降低Bio10.9191点、额外损失MMLU0.6481点。3点仅为本轮取舍参考，不代表通用遗忘成功。开发集两档最佳相同，但全量能力损失更大，体现小子集误差。
+
+所有新模型与失败/负面结果保留。覆盖组严格匹配文章顺序和实际token预算，未见明确收益。10个新增增量实际约639.86MiB，保存重载逐位一致；第一组10/20步仅指标。数据盘60GiB，完成审计时余约9.12GiB，无需再次扩容。仅本地提交，未推送远端或发布模型。
+
+见 [第二轮中文报告](docs/rmu-scale-v2-results.md)、[完整开发配置表](logs/rmu_scale_v2_development_config_comparison.csv)、[全量比较表](logs/rmu_scale_v2_full_comparison.csv)、[完成审计](logs/rmu_scale_v2_completion_audit.json)、[增量加载说明](open-unlearning/saves/unlearn/rmu_scale_v2/README.md)。所有全量结果仍为已观察官方test后的探索性结果，不证明知识彻底删除。多seed复验及恢复测试留作后续，本轮未自动开展。
 
 ## 下一步
 

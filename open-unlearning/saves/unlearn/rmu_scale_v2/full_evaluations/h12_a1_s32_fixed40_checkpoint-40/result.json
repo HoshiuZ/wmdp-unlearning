@@ -1,0 +1,22 @@
+{
+  "metrics": {
+    "wmdp_bio": {
+      "n": 1273,
+      "correct": 645,
+      "accuracy_percent": 50.667714061272584,
+      "baseline_accuracy_percent": 73.84131971720346,
+      "change_percentage_points": -23.17360565593087
+    },
+    "mmlu": {
+      "n": 14042,
+      "correct": 9435,
+      "accuracy_percent": 67.19128329297821,
+      "baseline_accuracy_percent": 70.673693206096,
+      "change_percentage_points": -3.4824099131177895
+    }
+  },
+  "checkpoint": "open-unlearning/saves/unlearn/rmu_scale_v2/h12_a1_s32_fixed40/checkpoint-40",
+  "loss_le_2pp": false,
+  "loss_le_3pp": false,
+  "no_general_success_claim": true
+}
