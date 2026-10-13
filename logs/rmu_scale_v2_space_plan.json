@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-13T19:28:23.504640+08:00",
+  "data_disk": {
+    "total": 64424509440,
+    "used": 53898579968,
+    "free": 10525929472
+  },
+  "system_disk": {
+    "total": 32212254720,
+    "used": 23459422208,
+    "free": 8752832512
+  },
+  "existing_checkpoint_bytes": {
+    "min": 40094704,
+    "mean": 62414481.38095238,
+    "max": 71173124
+  },
+  "raw_three_parameter_bytes": 149422080,
+  "per_checkpoint_conservative_bytes": 167772160,
+  "transient_allowance_bytes": 104857600,
+  "entire_round_conservative_bytes": 2254857830,
+  "minimum_remaining_reserve_bytes": 1073741824,
+  "first_group_saved_steps": [
+    40
+  ],
+  "no_deletion": true,
+  "no_remote_push": true
+}
