@@ -115,6 +115,7 @@ def main():
     'Bio固定256题；MMLU每科30题共1710题。原始MMLU等权73.5088%、按全量各科题数加权69.9841%；所有候选用同一组57科权重，总14042。加权修正科目组成差异，不能消除30题/科的小样本误差；等权和加权排名都可能与全量不同，不将细微差距作强结论。开发题来自已经观察过的官方test，不是独立验证集；retain训练语料也不是能力验证集。','',
     '| 实验/步 | hook | alpha | steering | Bio% | MMLU等权% | MMLU加权% | 加权Δ点 | Pareto | 权重可用 |','| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- | --- |']
     dev_csv=[]
+    baseline_dev_bio=next(r['bio_percent'] for r in dev['rows'] if 'original_development' in r['path'])
     for r in dev['rows']:
         p=ROOT/r['path']; orig='original_development' in str(p)
         if orig: name='original';h=a=s='—';step=0;available=True
@@ -126,9 +127,9 @@ def main():
         lines.append(f"| {name}/{step} | {h} | {a} | {s} | {r['bio_percent']:.4f} | {r['mmlu']['all']['equal_percent']:.4f} | {r['mmlu']['all']['weighted_percent']:.4f} | {r['weighted_change_pp']:+.4f} | {'是' if r['pareto_weighted'] else '否'} | {'是' if available else '否（仅指标）'} |")
         lr=2.5e-5 if 'lr2.5e-05' in name else 5e-5
         params=','.join(f'model.layers.{i}.mlp.down_proj.weight' for i in range(h-2,h+1)) if isinstance(h,int) else ''
-        dev_csv.append([name,step,h,params,lr if not orig else '',a,s,r['bio_percent'],r['mmlu']['all']['equal_percent'],r['mmlu']['all']['weighted_percent'],r['equal_change_pp'],r['weighted_change_pp'],r['mmlu']['biology_related']['weighted_change_pp'],r['mmlu']['other']['weighted_change_pp'],r['pareto_weighted'],available])
+        dev_csv.append([name,step,h,params,lr if not orig else '',a,s,r['bio_percent'],r['bio_percent']-baseline_dev_bio,r['mmlu']['all']['equal_percent'],r['mmlu']['all']['weighted_percent'],r['equal_change_pp'],r['weighted_change_pp'],r['mmlu']['biology_related']['weighted_change_pp'],r['mmlu']['other']['weighted_change_pp'],r['pareto_weighted'],available])
     with (ROOT/'logs/rmu_scale_v2_development_config_comparison.csv').open('w') as f:
-        w=csv.writer(f,lineterminator='\n');w.writerow(['experiment','step','hook','updated_parameters','lr','alpha','steering','bio_percent','mmlu_equal_percent','mmlu_weighted_percent','mmlu_equal_change_pp','mmlu_weighted_change_pp','biology_change_pp','other_change_pp','pareto_weighted','weights_available']);w.writerows(dev_csv)
+        w=csv.writer(f,lineterminator='\n');w.writerow(['experiment','step','hook','updated_parameters','lr','alpha','steering','bio_percent','bio_change_pp','mmlu_equal_percent','mmlu_weighted_percent','mmlu_equal_change_pp','mmlu_weighted_change_pp','biology_change_pp','other_change_pp','pareto_weighted','weights_available']);w.writerows(dev_csv)
     lines+=['','所有表中训练候选参数类型为down_proj.weight，更新层为hook前两层及自身；学习率默认5e-5，名称lr2.5e-05的历史组为2.5e-5，其余保持不变。完整逐科、生物相关组及其他组变化见 reweighted_development.json 与CSV。','']
     for threshold,r in dev['best_at_2_and_3pp'].items():lines.append(f"- 加权MMLU损失≤{threshold}点最佳开发候选：`{Path(r['path']).parent.parent.parent.name}`，Bio {r['bio_percent']:.4f}%，MMLU加权变化{r['weighted_change_pp']:+.4f}点。")
     lines+=['','两档最佳相同，因此第二个全量点预先选更低Bio的alpha1/steering32，开发损失3.17点，明确在3点之外，不将其伪装为满足约束；最多2次全量，选择文件在全量开始前已提交。覆盖组Bio64.8438%、加权MMLU损失1.9499点，未成为Pareto点，也未见明确覆盖收益。','',
