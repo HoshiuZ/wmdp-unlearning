@@ -14,7 +14,7 @@ KEYS=['rmu_forget','sim_forget','retain_repr','retain_ce'];PAIRS=list(itertools.
 def main():
  start=time.perf_counter();coeff=json.loads((ROOT/'logs/simnpo_rmu_coefficients.json').read_text())['coefficients'];weights={'rmu_forget':1.,'sim_forget':coeff['sim_weight'],'retain_repr':2.,'retain_ce':coeff['ce_weight']}
  model=AutoModelForCausalLM.from_pretrained(BASE,dtype=torch.bfloat16,local_files_only=True,attn_implementation='sdpa',device_map='cuda');tok=AutoTokenizer.from_pretrained(BASE,local_files_only=True);model.eval();before=fingerprints(model);assert before==json.loads((REPO/'saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/base_weight_fingerprints.json').read_text())
- names=[f'model.layers.{i}.mlp.down_proj.weight' for i in range(32)];selected=names[10:13];parameters=dict(model.named_parameters());original={n:parameters[n].detach().cpu().clone() for n in selected}
+ names=[f'model.layers.{i}.mlp.down_proj.weight' for i in range(model.config.num_hidden_layers)];selected=names[10:13];parameters=dict(model.named_parameters());original={n:parameters[n].detach().cpu().clone() for n in selected}
  for n,p in parameters.items():p.requires_grad_(n in names)
  pool=[parameters[n] for n in names];module=model.model.layers[12];control=torch.tensor(json.loads((OUT/'joint_screen40/control_vector.json').read_text())['values']).reshape(1,1,-1).cuda().bfloat16()
  datasets={r:TokenBlockDataset(hf_args={'path':'json','data_files':str(ROOT/f'data/processed/bio_v1/formal_blocks_v1/{r}/validation.jsonl'),'split':'train'},template_args={},tokenizer=tok,max_length=256) for r in ['forget','retain']}
@@ -57,5 +57,5 @@ def main():
  with torch.no_grad():
   for n in selected:parameters[n].copy_(original[n].cuda())
  assert fingerprints(model)==before
- dump(ROOT/'logs/simnpo_rmu_gradient_diagnostics.json',{'weights':weights,'results':results,'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'seconds':time.perf_counter()-start,'gpu_peak_bytes':torch.cuda.max_memory_allocated(),'no_optimizer_steps':True,'original_restored_fingerprints_equal':True,'reference':'Original frozen eval no_grad hook12 activations cached in RAM; no second model or saved activations','scope':'32 down_proj gradients only, not all model parameters','limitation':'Four heldout article probes; outside gradient mass is not proof of capacity bottleneck or improved expanded training.'})
+ dump(ROOT/'logs/simnpo_rmu_gradient_diagnostics.json',{'weights':weights,'results':results,'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'seconds':time.perf_counter()-start,'gpu_peak_bytes':torch.cuda.max_memory_allocated(),'no_optimizer_steps':True,'original_restored_fingerprints_equal':True,'reference':'Original frozen eval no_grad hook12 activations cached in RAM; no second model or saved activations','scope':f'{model.config.num_hidden_layers} down_proj gradients only, not all model parameters','limitation':'Four heldout article probes; outside gradient mass is not proof of capacity bottleneck or improved expanded training.'})
 if __name__=='__main__':main()

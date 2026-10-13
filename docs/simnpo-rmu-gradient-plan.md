@@ -2,9 +2,9 @@
 
 2026-10-14北京时间。先诊断，不立即扩大更新参数。
 
-固定文章验证索引0/16/32/48，原始模型、RMU+CE40、联合20及联合40；模型eval，保留原始固定control向量。原始retain hook12表示缓存于内存且无梯度，所有检查点均从同一原始参数重建。分别对RMU forget、Sim forget、retain表示MSE、retain CE计算梯度，报告既有10/11/12 down_proj及全32层down_proj池的范数、两两余弦、加权forget/retain合成梯度余弦。没有optimizer.step，诊断末恢复原始参数指纹。
+固定文章验证索引0/16/32/48，原始模型、RMU+CE40、联合20及联合40；模型eval，保留原始固定control向量。原始retain hook12表示缓存于内存且无梯度，所有检查点均从同一原始参数重建。分别对RMU forget、Sim forget、retain表示MSE、retain CE计算梯度，报告既有10/11/12 down_proj及全36层down_proj池的范数、两两余弦、加权forget/retain合成梯度余弦。没有optimizer.step，诊断末恢复原始参数指纹。
 
-只为诊断开启全32层down_proj的requires_grad，不更新或保存它们；逐层梯度存在/能量不能证明扩大参数必然改善。hook12表示项对13层以后梯度应为零，以此验证梯度链路。统计原始/不同训练阶段的selected/outside能量占比，避免把范围限制当作已证实瓶颈。
+只为诊断开启全36层down_proj的requires_grad，不更新或保存它们；逐层梯度存在/能量不能证明扩大参数必然改善。hook12表示项对13层以后梯度应为零，以此验证梯度链路。统计原始/不同训练阶段的selected/outside能量占比，避免把范围限制当作已证实瓶颈。
 
 门控：若联合40固定probe平均的Sim加权/RMU forget范数比超过1（原始校准目标0.5），或联合forget与retain合成梯度平均余弦为负，且四个probe损失及范数有限，则最多做1组单因素适配：Sim系数减半，CE系数、RMU alpha2/steering2、beta0.1、lr5e-5、层/参数范围、数据、seed42、40步均不变。否则仅完成诊断并说明不支持此改动；不自动扩大参数范围。
 
