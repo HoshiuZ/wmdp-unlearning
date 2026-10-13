@@ -107,7 +107,7 @@ def main():
             if not probes: continue
             f=[p['forget_gradient_norm'] for p in probes];t=[p['alpha_weighted_retain_gradient_norm'] for p in probes];ratio=[p['forget_over_alpha_retain_ratio'] for p in probes if p['forget_over_alpha_retain_ratio'] is not None]
             lines.append(f"| {prefix}/{name} | {min(f):.4f}–{max(f):.4f} | {min(t):.4f}–{max(t):.4f} | {f'{min(ratio):.3f}–{max(ratio):.3f}' if ratio else 'null'} |")
-    lines+=['','新steering32/alpha2的forget cos目标显著增加，范数仍低于原始；范数与方向都发生变化。这些表示和梯度证据不能等同于知识删除。四个probe只是局部梯度诊断，不能代表整个训练梯度分布。','',
+    lines+=['','各组目标范数不同，forget MSE不能直接跨steering比较。新steering32/alpha2的forget cos目标显著增加，范数仍低于原始；范数与方向都发生变化。这些表示和梯度证据不能等同于知识删除。四个probe只是局部梯度诊断，不能代表整个训练梯度分布。','',
     '## 预先计划及公平性','',
     '固定hook12、10/11/12 down_proj、lr5e-5、40步、seed42、batch1×累积16、256token。同方向及文章顺序均核实。先alpha1/steering16，仅40步保存权重；10/20步仅存指标。复核空间后运行alpha1/steering32，其开发MMLU损失3.17点触发预先条件，再仅增alpha至2。每组40步，无多因素搜索。各组实际input token320619、loss token319339。','',
     '覆盖组只改变块位置，仍用alpha1/steering2，与旧固定块40步对照。相同2048训练文章/角色和640次输入/角色；所有验证文章组排除，不加入评测题。每篇最多4个不重叠位置，hash决定首访及循环；逐样本长度、采样顺序、实际token预算严格相同。forget不同位置640→640、retain545→631，非原位置输入636/553次。forget每篇本轮只访问一次，因此这是位置替换与retain重复访问多样化，不能声称完整文章覆盖或更大总token预算。数据版本和实际位置见coverage_manifest、coverage_readiness及run目录；受限token文件留本地并被Git忽略。','',
@@ -153,7 +153,7 @@ def main():
     lines+=['','## 运行、保存和限制','',
     '| 新实验 | 代码提交 | 运行秒数* | 峰值allocated GiB | reserved GiB | 保存权重步 |','| --- | --- | ---: | ---: | ---: | --- |']
     for r in trials:lines.append(f"| {r['name']} | {r['code_commit'][:7]} | {r['elapsed_seconds']:.1f} | {r['cuda_peak_allocated_bytes']/2**30:.3f} | {r['cuda_peak_reserved_bytes']/2**30:.3f} | {r['saved_steps']} |")
-    lines+=['','*运行秒数包括训练、固定文章验证及开发评测/保存开销；纯Trainer train_runtime详见run.json。完整配置、数据manifest、控制向量、训练/验证逐步损失、实际采样索引和位置均留档。PyTorch2.9.1+cu128、Transformers5.5.4、lm_eval0.4.11、datasets3.0.1。模型本地文件SHA及完整原始参数指纹固定，远端模型immutable revision未取得，不虚构版本。诊断与评测脚本均留档。','',
+    lines+=['','*运行秒数包括训练、固定文章验证及开发评测/保存开销；Trainer报告的train_runtime详见run.json，同样包含回调耗时，并非纯前后向训练时间。完整配置、数据manifest、控制向量、训练/验证逐步损失、实际采样索引和位置均留档。PyTorch2.9.1+cu128、Transformers5.5.4、lm_eval0.4.11、datasets3.0.1。模型本地文件SHA及完整原始参数指纹固定，远端模型immutable revision未取得，不虚构版本。诊断与评测脚本均留档。','',
     f"数据盘60GiB，初始可用{read(ROOT/'logs/rmu_scale_v2_space_plan.json')['data_disk']['free']/2**30:.3f}GiB，完成审计时剩余{space['data']['free']/2**30:.3f}GiB；系统盘剩余{space['system']['free']/2**30:.3f}GiB。10个新增检查点实际压缩对象{cpbytes/2**20:.3f}MiB，非pointer大小；均保存在数据盘.git/lfs/objects，不依赖/tmp唯一副本。原计划含临时/LFS/日志/评测/Git总保守预算约2.1GiB、至少1GiB余量；每次gate按实际空间复核。没有删除历史模型、LFS对象或扩容付费。",'',
     '检查点为BF16逐位XOR+gzip，必须使用固定原始模型和load_delta重建，不是LoRA或独立HF完整模型。保存后已重载核实逐位一致，最终评测另从完整指纹一致的原模型重建。未保存优化器状态，不能宣称可断点续训。失败和负面结果不覆盖。','',
     '本轮只一个seed、40步有限预算，覆盖一次文章位置、候选少量；80步首轮和40步适配的差异不能全部归于换层或steering。Bio选择题下降只表示该代理任务表现下降，不证明危险知识彻底删除、不可恢复或系统安全。后续优先对较好取舍做少量预先声明的多seed复验与恢复测试；本轮没有自动执行。标准平台交付包仍须另按Word要求整理，受限训练正文/数据不得公开发布。','',
