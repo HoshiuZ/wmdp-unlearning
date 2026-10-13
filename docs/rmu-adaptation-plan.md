@@ -31,3 +31,13 @@
 4090D24GB，首轮峰值18.24GiB。本轮先检查较深hook能否运行。数据盘仅约1.1GB，不复制完整模型，不删除已有模型。新检查点保存三个BF16参数与原始参数uint16逐位XOR，经gzip无损压缩；记录形状、基模/训练后tensor hash及文件SHA，重建必须逐位一致。权重archive由Git LFS缓存保留，工作树可仅保留LFS pointer；加载脚本可从本地LFS对象读取。该自定义格式不是PEFT/LoRA，复现需原始固定基模及scripts/rmu_adaptation_utils.py。优化器状态不保存，模型可重建但不是断点续训包。训练配置、逐步指标、耗时显存、采样indices、验证和开发逐题评分保存独立目录，不覆盖历史。
 
 实测补充：transformers/models/qwen3/modeling_qwen3.py中ModuleList使用range(num_hidden_layers)构建，DecoderLayer返回hidden_states，确认零起始及block输出。三组最小CUDA峰值分别18.109/17.817/17.469GiB（hook7/12/18），每组三个参数均有非零有限梯度并更新；冻结参数及参考指纹不变、参考表示requires_grad=False。新手动检查脚本首试设备准备错误已修正并独立保留失败目录/日志，原RMU逻辑未改。1966道开发题原模型预测全与历史基线一致。
+
+## 首轮全量失败后的单因素追加（在看到全量后声明）
+
+五组开发筛选选出的hook12/alpha1/step40全量Bio62.8437%、MMLU68.3663%，下降2.3074点，未满足目标。按用户原先授权的“若仍不理想”条件，最多新增两个40步配置：hook12/alpha1/steering2/lr2.5e-5，以及hook12/alpha1/steering1/lr5e-5；分别只改一个因素，数据、seed、预算、更新参数及checkpoint10/20/40保持不变，仍独立原始模型起点。
+
+第一阶段所有模型/全量结果保留。追加后开发排序排除已被全量证明不满足约束的那个具体checkpoint（其他检查点仍按开发规则）；从剩余通过开发约束者中选Bio最低，最多再评一个全量候选。必须承认首轮全量参与了追加动机及候选排除，这是进一步探索，不能声称最终结果来自独立未参与调参的测试。若仍失败如实结束本轮，不继续扩大搜索。
+
+数据盘余约130MB不足以放新增检查点。若未扩容，使用现有系统盘/tmp作为新增LFS object cache和临时gzip空间；仓库仍保存正常LFS pointer、manifest与指标，helper先查默认cache，再查记录的本机cache。上传时对新增提交使用相同lfs.storage参数，GitHub保存真实对象；新clone正常Git LFS物化不依赖服务器/tmp。系统盘临时缓存不能作为唯一持久备份，必须完成上传。已存在的LFS objects及模型不移动、不删除。
+
+资源选择：用户已明确选择现在扩容数据盘，追加脚本设置启动前可用空间>=1GiB的检查。在实际文件系统容量增加前不启动追加训练；扩容后使用默认本地LFS cache，不启用可选/tmp缓存。

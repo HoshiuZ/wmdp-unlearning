@@ -61,19 +61,33 @@ def save_delta(model,original,path):
   if name not in original:continue
   a=original[name].contiguous().view(torch.uint16).numpy();b=p.detach().cpu().contiguous().view(torch.uint16).numpy()
   payload=np.bitwise_xor(a,b).tobytes();file=path/(name+'.xor.gz')
-  with gzip.open(file,'wb',compresslevel=6) as f:f.write(payload)
-  compressed_sha=digest(file.read_bytes());size=file.stat().st_size
-  # Preserve actual object in local LFS cache; small pointer in worktree avoids duplicate storage.
-  with file.open('rb') as f:pointer=subprocess.check_output(['git','lfs','clean','--',str(file.relative_to(ROOT))],stdin=f,cwd=ROOT)
+  external=os.getenv('RMU_ADAPTATION_LFS_STORAGE')
+  if external:
+   import tempfile
+   cache=Path(external).resolve();cache.mkdir(parents=True,exist_ok=True)
+   descriptor,temporary=tempfile.mkstemp(suffix='.xor.gz',dir=cache);os.close(descriptor);compressed=Path(temporary)
+  else:cache=ROOT/'.git/lfs';compressed=file
+  with gzip.open(compressed,'wb',compresslevel=6) as f:f.write(payload)
+  compressed_sha=digest(compressed.read_bytes());size=compressed.stat().st_size
+  command=['git']+(['-c',f'lfs.storage={cache}'] if external else [])+['lfs','clean','--',str(file.relative_to(ROOT))]
+  with compressed.open('rb') as f:pointer=subprocess.check_output(command,stdin=f,cwd=ROOT)
   assert pointer.startswith(b'version https://git-lfs.github.com/spec/v1\n');file.write_bytes(pointer)
-  manifest['parameters'].append({'name':name,'shape':list(p.shape),'dtype':'bfloat16','file':file.name,'bytes':size,'compressed_sha256':compressed_sha,'base_tensor_sha256':tensor_hash(original[name]),'trained_tensor_sha256':tensor_hash(p)})
+  if external:compressed.unlink()
+  manifest['parameters'].append({'name':name,'shape':list(p.shape),'dtype':'bfloat16','file':file.name,'bytes':size,'compressed_sha256':compressed_sha,'base_tensor_sha256':tensor_hash(original[name]),'trained_tensor_sha256':tensor_hash(p),'local_lfs_cache':str(cache)})
  dump(path/'checkpoint.json',manifest);return manifest
 
 def materialized(path):
  with path.open('rb') as f:head=f.read(150)
  if not head.startswith(b'version https://git-lfs.github.com/spec/v1'):return path
  oid=[l.split(':',1)[1] for l in head.decode().splitlines() if l.startswith('oid sha256:')][0]
- return ROOT/'.git/lfs/objects'/oid[:2]/oid[2:4]/oid
+ default=ROOT/'.git/lfs/objects'/oid[:2]/oid[2:4]/oid
+ if default.exists():return default
+ manifest=path.parent/'checkpoint.json'
+ if manifest.exists():
+  row=next(r for r in json.loads(manifest.read_text())['parameters'] if r['file']==path.name)
+  alternative=Path(row.get('local_lfs_cache',str(ROOT/'.git/lfs')))/'objects'/oid[:2]/oid[2:4]/oid
+  if alternative.exists():return alternative
+ raise FileNotFoundError(f'Git LFS object {oid} unavailable; fetch/materialize the checkpoint first')
 
 def load_delta(model,path,original=None):
  manifest=json.loads((path/'checkpoint.json').read_text());params=dict(model.named_parameters())
