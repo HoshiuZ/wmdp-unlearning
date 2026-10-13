@@ -48,3 +48,5 @@ OpenUnlearning 使用 MIT License，原始版权声明为 `Copyright (c) 2025 CM
 Bio 遗忘语料访问条款限制未经许可向协作者名单之外分发；原始文件保存在本地，GitHub仅记录来源、固定版本、文件清单及统计，不包含token或受限正文。平台交付的接收方权限需另行确认。
 
 MMLU评测数据固定为 `cais/mmlu@c30699e8356da336a370243923dbaf21066bb9fe`，从官方 all/test 与 all/dev 按subject分组读取，不改写题目。完整结果保留任务配置、随机种子、版本、样本统计及逐题记录。0-shot结果不能直接与公开5-shot排行榜比较。
+
+RMU 实现和短跑输入已核查，准备了8+8训练文章、256token、3步配置；修复了梯度冻结和batch损失广播问题，小模型CPU检查通过。见 [RMU准备记录](docs/rmu-readiness.md)。真实4B CUDA短跑、显存及保存重载尚未验证。

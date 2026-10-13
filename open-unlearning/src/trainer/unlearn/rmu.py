@@ -1,6 +1,7 @@
 """Borrowed implementation from https://github.com/centerforaisafety/wmdp/blob/main/rmu/unlearn.py"""
 
 import re
+import logging
 import torch
 import deepspeed
 from trainer.unlearn.grad_diff import GradDiff
@@ -28,6 +29,8 @@ class RMU(GradDiff):
         if self.ref_model is None:
             self.ref_model = self._prepare_ref_model(self.model)
 
+        self.ref_model.requires_grad_(False)
+
         # Unfreeze only the selected parameters
         self.trainable_params_regex = (
             trainable_params_regex  # Regex for selecting params
@@ -44,8 +47,12 @@ class RMU(GradDiff):
         self._freeze_all_params(self.model, False)
         # This makes the optimizer to select only trainable params
         self._set_trainable_params(self.model, self.trainable_params_regex, True)
-        super().create_optimizer()
-        self._freeze_all_params(self.model, True)
+        selected = [name for name, param in self.model.named_parameters() if param.requires_grad]
+        if not selected:
+            raise ValueError("RMU trainable_params_regex matched no parameters")
+        logging.getLogger(__name__).info("RMU trainable parameters: %s", selected)
+        # Preserve the mask during forward/backward, not only optimizer construction.
+        return super().create_optimizer()
 
     def _get_matching_module(self, model, module_regex):
         """Returns a single module matching the given regex from a DeepSpeed/DDP-wrapped model."""
@@ -92,9 +99,11 @@ class RMU(GradDiff):
             return None
 
         hook_handle = module.register_forward_hook(hook)
-        with torch.set_grad_enabled(not (no_grad)):
-            outputs = model(**inputs)
-        hook_handle.remove()
+        try:
+            with torch.set_grad_enabled(not no_grad):
+                outputs = model(**inputs)
+        finally:
+            hook_handle.remove()
         return cache[0], outputs
 
     def get_control_vector(self, dim):
@@ -113,7 +122,9 @@ class RMU(GradDiff):
         squared_diff_sum = (
             (squared_diff * expanded_mask).mean(dim=2).sum(dim=(1))
         )  # Shape: [b, 1]
-        num_tokens = mask.sum(dim=-1, keepdim=True)  # Sum over seq_len, Shape: [b, 1]
+        num_tokens = mask.sum(dim=-1)  # Shape [b], matching per-example sums.
+        if (num_tokens == 0).any():
+            raise ValueError("RMU activation loss requires at least one valid token per example")
         return (squared_diff_sum / num_tokens).mean()
 
     def compute_retain_loss(self, model, retain_inputs):
