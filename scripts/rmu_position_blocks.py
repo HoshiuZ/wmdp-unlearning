@@ -15,5 +15,5 @@ class PositionBlockDataset:
   # First exposure selects a different position when possible; repeats rotate.
   offset=1+int(hashlib.sha256(f'coverage-v2:42:{self.role}:{row["sample_id"]}'.encode()).hexdigest(),16)%(n-1) if n>1 else 0
   chosen=(offset+visit)%n;o=row['options'][chosen];ids=torch.tensor(o['input_ids']);labels=ids.clone();labels[0]=-100
-  self.exposures.append({'index':index,'visit':visit,'sample_id':row['sample_id'],'article_group_id':row['article_group_id'],'option':chosen,'token_start':o['token_start'],'token_end':o['token_end'],'input_tokens':len(ids),'original_position':chosen==0})
+  self.exposures.append({'index':index,'visit':visit,'block_id':f'{row["sample_id"]}-tok-{o["token_start"]}-{o["token_end"]}','sample_id':row['sample_id'],'article_group_id':row['article_group_id'],'option':chosen,'token_start':o['token_start'],'token_end':o['token_end'],'input_tokens':len(ids),'original_position':chosen==0})
   return {'input_ids':ids,'labels':labels,'attention_mask':torch.ones_like(ids),'index':index}

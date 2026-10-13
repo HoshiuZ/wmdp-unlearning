@@ -41,6 +41,9 @@ def main():
  for row in json.loads((ROOT/'logs/rmu_formal_blocks_manifest.json').read_text())['files']:assert __import__('hashlib').sha256((ROOT/row['path']).read_bytes()).hexdigest()==row['sha256']
  seed_everything(42);model,tok=get_model(cfg.model);data=get_data(cfg.data,mode=cfg.mode,tokenizer=tok,template_args=cfg.model.template_args);collator=get_collators(cfg.collator,tokenizer=tok)
  if a.coverage_dir:
+  coverage_manifest=json.loads((Path(a.coverage_dir)/'manifest.json').read_text())
+  for row in coverage_manifest['files']:assert __import__('hashlib').sha256((ROOT/row['path']).read_bytes()).hexdigest()==row['sha256']
+  run['coverage_manifest']='logs/rmu_scale_v2_coverage_manifest.json';run['actual_data_version']=coverage_manifest['version'];dump(out/'run.json',run)
   from rmu_position_blocks import PositionBlockDataset
   for role in ['forget','retain']:setattr(data['train'],role,PositionBlockDataset(Path(a.coverage_dir)/role/'train.jsonl',role,tok))
  trainer,args=load_trainer(trainer_cfg=cfg.trainer,model=model,train_dataset=data['train'],processing_class=tok,data_collator=collator,evaluators=None,template_args=cfg.model.template_args);trainer.create_optimizer();model.to(trainer.accelerator.device)

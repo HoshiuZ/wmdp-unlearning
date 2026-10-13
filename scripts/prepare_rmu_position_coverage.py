@@ -26,6 +26,7 @@ def main():
      candidates=[i*256 for i in range(len(ids)//256) if i*256!=row['token_start']]
      candidates.sort(key=lambda i:hashlib.sha256(f'coverage-v2:42:{row["sample_id"]}:{i}'.encode()).hexdigest())
      for start in candidates[:3]:options.append({'token_start':start,'token_end':start+256,'input_ids':ids[start:start+256]})
+    assert all(tok.pad_token_id not in o['input_ids'] for o in options),'Native pad ID in alternative block'
     result={**row,'options':options};f.write(json.dumps(result,ensure_ascii=False,allow_nan=False)+'\n');multi+=len(options)>1;totaloptions+=len(options)
   manifest['files'].append({'role':role,'path':str(dest.relative_to(ROOT)),'sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'bytes':dest.stat().st_size,'articles':len(rows),'multiple_position_articles':multi,'total_options':totaloptions,'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'original_cache_sha256':hashlib.sha256(old.read_bytes()).hexdigest()})
   print(role,multi,totaloptions,flush=True)
