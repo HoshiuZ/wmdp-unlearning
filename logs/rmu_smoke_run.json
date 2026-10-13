@@ -1,0 +1,135 @@
+{
+  "run_id": "qwen3_4b_rmu_bio_smoke3_v1",
+  "started_at": "2026-10-13T13:35:48.533984+08:00",
+  "status": "completed",
+  "code_commit": "1485bacc69615d0738a15601391b1638f12abac7",
+  "command": "envs/unlearning/bin/python -u scripts/run_rmu_smoke.py",
+  "base_model": "/root/autodl-tmp/wmdp-work/models/Qwen3-4B-Instruct-2507",
+  "subset_manifest": "logs/rmu_smoke_subset_manifest.json",
+  "max_steps": 3,
+  "completed_at": "2026-10-13T13:36:44.471863+08:00",
+  "global_step": 3,
+  "training_metrics": {
+    "train_runtime": 1.0299,
+    "train_samples_per_second": 2.913,
+    "train_steps_per_second": 2.913,
+    "total_flos": 0.0,
+    "train_loss": 0.5364583333333334,
+    "epoch": 0.375
+  },
+  "selected_parameters": [
+    "model.layers.5.mlp.down_proj.weight",
+    "model.layers.6.mlp.down_proj.weight",
+    "model.layers.7.mlp.down_proj.weight"
+  ],
+  "changed_parameters": [
+    "model.layers.5.mlp.down_proj.weight",
+    "model.layers.6.mlp.down_proj.weight",
+    "model.layers.7.mlp.down_proj.weight"
+  ],
+  "parameter_changes": {
+    "model.layers.5.mlp.down_proj.weight": {
+      "changed_elements": 12959728,
+      "max_abs_change": 0.00018310546875,
+      "mean_abs_change": 6.0543559811776504e-05
+    },
+    "model.layers.6.mlp.down_proj.weight": {
+      "changed_elements": 12531745,
+      "max_abs_change": 0.00018310546875,
+      "mean_abs_change": 5.77768987568561e-05
+    },
+    "model.layers.7.mlp.down_proj.weight": {
+      "changed_elements": 12362622,
+      "max_abs_change": 0.00018310546875,
+      "mean_abs_change": 5.417497595772147e-05
+    }
+  },
+  "frozen_parameters_unchanged": true,
+  "cuda_peak_allocated_bytes": 19444815360,
+  "cuda_peak_reserved_bytes": 19675480064,
+  "reload_fingerprints_identical": true,
+  "reload_forward_finite": true,
+  "training_metrics_path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/training_metrics.jsonl",
+  "model_directory": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model",
+  "model_files": [
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/chat_template.jinja",
+      "size_bytes": 2630,
+      "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/config.json",
+      "size_bytes": 1594,
+      "sha256": "8a54e3c7e605be34d66d2b89952870de8467034fb9361202e3f99fd10a0ea218"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/generation_config.json",
+      "size_bytes": 186,
+      "sha256": "204989ce285023b3a074d3fd48ff9dbdd24ca08557f0c1c324b46cd23def8ba5"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/model-00001-of-00009.safetensors",
+      "size_bytes": 979780560,
+      "sha256": "02e36c59d346e8fda2b8ce7bdc5b1c722d0e8844a63c81a34c30d3d8e08edc1b"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/model-00002-of-00009.safetensors",
+      "size_bytes": 983094528,
+      "sha256": "63e8f31c98f1d8dd7ad733d1289698da0fe331fd9108bdd3def64cbc64666d72"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/model-00003-of-00009.safetensors",
+      "size_bytes": 988342384,
+      "sha256": "4c89f705a0f3645070a4c63c4cd42591aac7900e23709867752bd45c14695f6e"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/model-00004-of-00009.safetensors",
+      "size_bytes": 954258360,
+      "sha256": "8e3b10c0b509afa76e9c0d5fa2db1bef164485ea400bd618bdfc0782f9c2060f"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/model-00005-of-00009.safetensors",
+      "size_bytes": 959506960,
+      "sha256": "862f3a8ff20e2048e90e1d0f09b5cbc69c54128bd179b2a35487e6852d5672ea"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/model-00006-of-00009.safetensors",
+      "size_bytes": 959506968,
+      "sha256": "7e13ad8c2ca32e254c73d0a1af472226cb167d2fbe6a7b2903c6c9ea7ee239dd"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/model-00007-of-00009.safetensors",
+      "size_bytes": 983094576,
+      "sha256": "dba9f9ce1900a841f3ca0d2a446ff6dd34e116a4e6053eaf7b88e142b70333cd"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/model-00008-of-00009.safetensors",
+      "size_bytes": 988342432,
+      "sha256": "0fb05817aaa02d0eac14b3b291dddf87340f9a8725ccacac9d364c6165628462"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/model-00009-of-00009.safetensors",
+      "size_bytes": 249054752,
+      "sha256": "6f76d2f7a0e4a062050594214e49be9798bd7f6cb190b533b655cfca0f6c31a9"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/model.safetensors.index.json",
+      "size_bytes": 32855,
+      "sha256": "549e24ee5dfef3a320a7f36db3509223346f7b333643a3b761fff4264f76d41e"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/tokenizer.json",
+      "size_bytes": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/model/tokenizer_config.json",
+      "size_bytes": 665,
+      "sha256": "7a8b69bdd59cb05edc0ba8d60844b9395faf4752097f34382c7761bb8b198206"
+    }
+  ],
+  "note": "Compatibility trial only; not a formal unlearning result. No WMDP/MMLU measured.",
+  "training_metrics_sha256": "e19805cdbd75365c4331a9aaf18c9287096e2d90e8499be6ec99821b78da56ae",
+  "model_weights_uploaded": false,
+  "model_weight_storage_note": "Full trial weights retained locally; not the final delivery model. GitHub stores code, metadata, fingerprints and logs. Final-model weight hosting/LFS still to be configured."
+}

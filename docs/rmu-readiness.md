@@ -25,3 +25,13 @@ Full-corpus PretrainingDataset concatenates and tokenizes all text and decodes/r
 Config: `open-unlearning/configs/experiment/unlearn/wmdp/qwen3_4b_bio_smoke.yaml`; resolved config: `logs/rmu_smoke_resolved_config.json`. Proposed run: batch1, gradient accumulation1, sequence256, three optimizer steps, lr5e-5, AdamW, BF16/SDPA, seed42, no gradient checkpointing or DeepSpeed, no automatic MMLU/WMDP evaluation, no intermediate checkpoints, final save by train.py. remove_unused_columns=false preserves nested forget/retain inputs.
 
 Before the trial runs, add actual per-step forget/retain loss and memory telemetry; then verify finite forward/backward, peak CUDA memory, selected-weight changes, final save and reload. If it fails, preserve logs and resolve the concrete error. Do not evaluate official tests to select trial hyperparameters. A later formal run must independently restart from the original official model and cannot reuse trial weights as an equivalent baseline.
+
+## Actual smoke result
+
+The real Qwen3-4B three-step run completed successfully on 2026-10-13. Per-step forget representation losses were 0.546875, 0.52734375 and 0.53515625; retain representation losses were 0, 0.000095367431640625 and 0.000400543212890625. All losses and gradient norms were finite. These are training losses, not validation or WMDP/MMLU results. Total BF16 loss can round small retain terms; component values are recorded separately.
+
+Only the three selected weights changed. All other named parameter fingerprints were unchanged. The final full weights/tokenizer/configs were saved in <=1GB shards. Re-loading from disk produced identical parameter fingerprints and finite forward logits. GPU peak allocated/reserved memory was 18.1094/18.3242 GiB. This measured feasibility applies to batch1/256token/no-gradient-checkpointing, not every future configuration.
+
+Evidence: `logs/rmu_smoke_run.json`, run directory `open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/`, per-step `training_metrics.jsonl`, `trainer_state.json`, before/after weight fingerprints, artifact size/SHA256 list and console log. `scripts/run_rmu_smoke.py` reproduces the execution and verification, using OpenUnlearning factories; it refuses to overwrite an existing run. The saved control vector is local in the run directory. Full smoke weights remain on the server, not GitHub; this is not the final delivery model. Formal weight hosting remains to be configured.
+
+Next: fix the formal token-block sampling, optimizer-step/accumulation settings and validation monitoring; if sequence length changes, validate its memory demand. Formal training must restart from the official baseline and must not continue from these three-step weights.
