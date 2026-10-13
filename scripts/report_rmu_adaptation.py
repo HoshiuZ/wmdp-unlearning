@@ -6,6 +6,9 @@ from finish_rmu_adaptation import candidates
 
 def main():
  result=json.loads((ROOT/'logs/rmu_adaptation_result.json').read_text());rows=candidates();runs=[]
+ import shutil
+ shutil.copyfile(ROOT/'models/Qwen3-4B-Instruct-2507/LICENSE',OUT/'LICENSE')
+ dump(OUT/'selected_checkpoint.json',result['selection']['selected'])
  for p in OUT.glob('*_screen40/run.json'):
   x=json.loads(p.read_text());assert x['status']=='completed';runs.append(x)
  reference=json.loads((OUT/'h7_a1_lr5e-05_s2_screen40/consumed_block_indices.json').read_text())

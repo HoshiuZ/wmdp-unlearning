@@ -77,6 +77,9 @@ def materialized(path):
 
 def load_delta(model,path,original=None):
  manifest=json.loads((path/'checkpoint.json').read_text());params=dict(model.named_parameters())
+ if original is None:
+  expected=json.loads((REPO/'saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/base_weight_fingerprints.json').read_text())
+  assert {n:tensor_hash(p) for n,p in model.named_parameters()}==expected,'Complete starting model differs from pinned original'
  for row in manifest['parameters']:
   p=params[row['name']];a=original[row['name']] if original is not None else p.detach().cpu()
   assert tensor_hash(a)==row['base_tensor_sha256']
