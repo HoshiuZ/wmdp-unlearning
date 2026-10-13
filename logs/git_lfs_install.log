@@ -1,0 +1,59 @@
+Get:1 https://repo.huaweicloud.com/ubuntu jammy InRelease [270 kB]
+Get:2 https://repo.huaweicloud.com/ubuntu jammy-backports InRelease [127 kB]
+Get:3 https://repo.huaweicloud.com/ubuntu jammy-proposed InRelease [279 kB]
+Get:4 https://repo.huaweicloud.com/ubuntu jammy-security InRelease [129 kB]
+Get:5 https://repo.huaweicloud.com/ubuntu jammy-updates InRelease [128 kB]
+Get:6 https://repo.huaweicloud.com/ubuntu jammy/main Sources [1668 kB]
+Get:7 https://repo.huaweicloud.com/ubuntu jammy/multiverse Sources [361 kB]
+Get:8 https://repo.huaweicloud.com/ubuntu jammy/universe Sources [22.0 MB]
+Get:9 https://repo.huaweicloud.com/ubuntu jammy/restricted Sources [28.2 kB]
+Get:10 https://repo.huaweicloud.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:11 https://repo.huaweicloud.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:12 https://repo.huaweicloud.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:13 https://repo.huaweicloud.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:14 https://repo.huaweicloud.com/ubuntu jammy-backports/main Sources [10.0 kB]
+Get:15 https://repo.huaweicloud.com/ubuntu jammy-backports/universe Sources [13.5 kB]
+Get:16 https://repo.huaweicloud.com/ubuntu jammy-backports/main amd64 Packages [82.9 kB]
+Get:17 https://repo.huaweicloud.com/ubuntu jammy-backports/universe amd64 Packages [35.6 kB]
+Get:18 https://repo.huaweicloud.com/ubuntu jammy-proposed/universe Sources [26.7 kB]
+Get:19 https://repo.huaweicloud.com/ubuntu jammy-proposed/main Sources [104 kB]
+Get:20 https://repo.huaweicloud.com/ubuntu jammy-proposed/multiverse Sources [13.2 kB]
+Get:21 https://repo.huaweicloud.com/ubuntu jammy-proposed/restricted Sources [44.2 kB]
+Get:22 https://repo.huaweicloud.com/ubuntu jammy-proposed/main amd64 Packages [983 kB]
+Get:23 https://repo.huaweicloud.com/ubuntu jammy-proposed/multiverse amd64 Packages [30.0 kB]
+Get:24 https://repo.huaweicloud.com/ubuntu jammy-proposed/universe amd64 Packages [69.4 kB]
+Get:25 https://repo.huaweicloud.com/ubuntu jammy-proposed/restricted amd64 Packages [2648 kB]
+Get:26 https://repo.huaweicloud.com/ubuntu jammy-security/main Sources [449 kB]
+Get:27 https://repo.huaweicloud.com/ubuntu jammy-security/restricted Sources [101 kB]
+Get:28 https://repo.huaweicloud.com/ubuntu jammy-security/universe Sources [400 kB]
+Get:29 https://repo.huaweicloud.com/ubuntu jammy-security/multiverse Sources [40.3 kB]
+Get:30 https://repo.huaweicloud.com/ubuntu jammy-security/restricted amd64 Packages [7955 kB]
+Get:31 https://repo.huaweicloud.com/ubuntu jammy-security/multiverse amd64 Packages [96.8 kB]
+Get:32 https://repo.huaweicloud.com/ubuntu jammy-security/main amd64 Packages [4429 kB]
+Get:33 https://repo.huaweicloud.com/ubuntu jammy-security/universe amd64 Packages [1323 kB]
+Get:34 https://repo.huaweicloud.com/ubuntu jammy-updates/restricted Sources [106 kB]
+Get:35 https://repo.huaweicloud.com/ubuntu jammy-updates/main Sources [735 kB]
+Get:36 https://repo.huaweicloud.com/ubuntu jammy-updates/universe Sources [601 kB]
+Get:37 https://repo.huaweicloud.com/ubuntu jammy-updates/multiverse Sources [49.5 kB]
+Get:38 https://repo.huaweicloud.com/ubuntu jammy-updates/multiverse amd64 Packages [104 kB]
+Get:39 https://repo.huaweicloud.com/ubuntu jammy-updates/main amd64 Packages [4757 kB]
+Get:40 https://repo.huaweicloud.com/ubuntu jammy-updates/restricted amd64 Packages [8243 kB]
+Get:41 https://repo.huaweicloud.com/ubuntu jammy-updates/universe amd64 Packages [1624 kB]
+Fetched 79.7 MB in 15s (5326 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  git-lfs
+0 upgraded, 1 newly installed, 0 to remove and 196 not upgraded.
+Need to get 3544 kB of archives.
+After this operation, 10.5 MB of additional disk space will be used.
+Get:1 https://repo.huaweicloud.com/ubuntu jammy-security/universe amd64 git-lfs amd64 3.0.2-1ubuntu0.3 [3544 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 3544 kB in 1s (3526 kB/s)
+Selecting previously unselected package git-lfs.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 48144 files and directories currently installed.)
+Preparing to unpack .../git-lfs_3.0.2-1ubuntu0.3_amd64.deb ...
+Unpacking git-lfs (3.0.2-1ubuntu0.3) ...
+Setting up git-lfs (3.0.2-1ubuntu0.3) ...
