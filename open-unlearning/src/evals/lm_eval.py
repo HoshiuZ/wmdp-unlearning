@@ -1,4 +1,7 @@
 import logging
+import json
+from pathlib import Path
+from lm_eval.utils import handle_non_serializable
 from omegaconf import OmegaConf
 
 from lm_eval.models.hf_vlms import HFLM
@@ -18,7 +21,7 @@ class LMEvalEvaluator(Evaluator):
         self.tasks = OmegaConf.to_container(
             self.eval_cfg.tasks, resolve=True, throw_on_missing=True
         )
-        self.task_manager = TaskManager()
+        self.task_manager = TaskManager(include_path=self.eval_cfg.get("task_include_path", None))
         self.simple_evaluate_args = OmegaConf.to_container(
             self.eval_cfg.get("simple_evaluate_args", OmegaConf.create({})),
             resolve=True,
@@ -28,7 +31,11 @@ class LMEvalEvaluator(Evaluator):
     def prepare_model(self, model, **kwargs):
         """Prepare model for evaluation"""
         model.eval()
-        return HFLM(model)
+        return HFLM(
+            model,
+            tokenizer=kwargs.get("tokenizer"),
+            batch_size=self.simple_evaluate_args.get("batch_size", 1),
+        )
 
     def summarize(self, eval_results: dict, task_name: str) -> dict:
         """
@@ -111,6 +118,15 @@ class LMEvalEvaluator(Evaluator):
                 tasks=[task],
                 task_manager=self.task_manager,
                 **self.simple_evaluate_args,
+            )
+            # Preserve task configs, seeds, versions and sample counts as well as samples.
+            full_path = Path(output_dir) / f"LMEval_FULL_{task_name}.json"
+            full_path.parent.mkdir(parents=True, exist_ok=True)
+            serialized = json.dumps(results, default=handle_non_serializable)
+            safe_results = json.loads(serialized, parse_constant=lambda _: None)
+            full_path.write_text(
+                json.dumps(safe_results, ensure_ascii=False, indent=2, allow_nan=False),
+                encoding="utf-8",
             )
             logs.update({task_name: results["samples"]})
             summary.update(self.summarize(results, task_name))

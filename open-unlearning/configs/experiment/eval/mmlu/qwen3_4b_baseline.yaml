@@ -1,0 +1,20 @@
+# @package _global_
+defaults:
+  - override /model: Qwen3-4B-Instruct-2507
+  - override /eval: lm_eval
+seed: 0
+task_name: qwen3_4b_base_mmlu_0shot_full_v1
+eval:
+  lm_eval:
+    tasks: [mmlu]
+    task_include_path: configs/eval/tasks/mmlu_pinned
+    simple_evaluate_args:
+      batch_size: 1
+      num_fewshot: 0
+      apply_chat_template: false
+      system_instruction: null
+      log_samples: true
+      random_seed: 0
+      numpy_random_seed: 1234
+      torch_random_seed: 1234
+      fewshot_random_seed: 1234
