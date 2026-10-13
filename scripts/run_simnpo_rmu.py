@@ -17,23 +17,23 @@ TRAINER_REGISTRY['ControlledSimRMU']=ControlledSimRMU
 OUT=REPO/'saves/unlearn/simnpo_rmu_v1'
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--variant',choices=['probe','sim','rmu_ce','joint'],required=True);p.add_argument('--sim-scale',type=float,choices=[.5,1.],default=1.);p.add_argument('--check-only',action='store_true');p.add_argument('--gradient-cap',action='store_true');a=p.parse_args();probe=a.variant=='probe';assert a.sim_scale==1. or a.variant=='joint';assert not a.gradient_cap or (a.variant=='joint' and a.sim_scale==1.);name='implementation_probe' if probe else a.variant+('_gradcap' if a.gradient_cap else '')+('_simhalf' if a.sim_scale==.5 else '')+('_minimal' if a.check_only else '_screen40');out=OUT/name
+ p=argparse.ArgumentParser();p.add_argument('--steering',type=int,choices=[2,32],default=2);p.add_argument('--variant',choices=['probe','sim','rmu_ce','joint'],required=True);p.add_argument('--sim-scale',type=float,choices=[.5,1.],default=1.);p.add_argument('--check-only',action='store_true');p.add_argument('--gradient-cap',action='store_true');a=p.parse_args();probe=a.variant=='probe';assert not probe or a.steering==2;assert a.sim_scale==1. or a.variant=='joint';assert not a.gradient_cap or (a.variant=='joint' and a.sim_scale==1.);name='implementation_probe' if probe else a.variant+('_gradcap' if a.gradient_cap else '')+('_simhalf' if a.sim_scale==.5 else '')+('_s32' if a.steering==32 else '')+('_minimal' if a.check_only else '_screen40');out=OUT/name
  assert not out.exists();assert shutil.disk_usage(ROOT).free>2*2**30+700*2**20
- out.mkdir(parents=True);cfg=configuration(12,2,5e-5,2,name,40)
+ out.mkdir(parents=True);cfg=configuration(12,2,5e-5,a.steering,name,40)
  cfg.paths.output_dir=str(out);cfg.trainer.handler='ControlledSimRMU';cfg.trainer.args.output_dir=str(out);cfg.trainer.args.logging_dir=str(out/'logs')
  lock=ROOT/'logs/simnpo_rmu_coefficients.json'
  values={'sim_weight':1.,'ce_weight':1.} if probe else json.loads(lock.read_text())['coefficients'];values['sim_weight']*=a.sim_scale
  with open_dict(cfg.trainer.method_args):
   cfg.trainer.method_args.variant='joint' if probe else a.variant;cfg.trainer.method_args.beta=.1;cfg.trainer.method_args.gradient_cap=a.gradient_cap
   for k,v in values.items():cfg.trainer.method_args[k]=v
- dump(out/'training_config.json',OmegaConf.to_container(cfg,resolve=True));run={'name':name,'variant':a.variant,'status':'running','started_at':now(),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'data_manifest':'logs/rmu_formal_blocks_manifest.json','beta':.1,'delta':0,'alpha_repr':2,'steering':2,'lr':5e-5,'seed':42,'coefficients':values,'gradient_cap':a.gradient_cap,'sim_scale':a.sim_scale,'check_only':a.check_only,'max_steps':2 if probe or a.check_only else 40,'space_before':shutil.disk_usage(ROOT)._asdict()};dump(out/'run.json',run)
+ dump(out/'training_config.json',OmegaConf.to_container(cfg,resolve=True));run={'name':name,'variant':a.variant,'status':'running','started_at':now(),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'data_manifest':'logs/rmu_formal_blocks_manifest.json','beta':.1,'delta':0,'alpha_repr':2,'steering':a.steering,'lr':5e-5,'seed':42,'coefficients':values,'gradient_cap':a.gradient_cap,'sim_scale':a.sim_scale,'check_only':a.check_only,'max_steps':2 if probe or a.check_only else 40,'space_before':shutil.disk_usage(ROOT)._asdict()};dump(out/'run.json',run)
  for row in json.loads((ROOT/'logs/rmu_formal_blocks_manifest.json').read_text())['files']:assert __import__('hashlib').sha256((ROOT/row['path']).read_bytes()).hexdigest()==row['sha256']
  seed_everything(42);model,tok=get_model(cfg.model);data=get_data(cfg.data,mode=cfg.mode,tokenizer=tok,template_args=cfg.model.template_args);collator=get_collators(cfg.collator,tokenizer=tok)
  trainer,args=load_trainer(cfg.trainer,model,train_dataset=data['train'],processing_class=tok,data_collator=collator,evaluators=None,template_args=cfg.model.template_args);trainer.create_optimizer();model.to(trainer.accelerator.device)
  selected=[n for n,p in model.named_parameters() if p.requires_grad];assert selected==[f'model.layers.{i}.mlp.down_proj.weight' for i in [10,11,12]];before=fingerprints(model);expected=json.loads((REPO/'saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/base_weight_fingerprints.json').read_text());assert before==expected;assert not trainer.ref_model.training and not any(p.requires_grad for p in trainer.ref_model.parameters())
  original={n:p.detach().cpu().clone() for n,p in model.named_parameters() if n in selected};params=[p for n,p in model.named_parameters() if n in selected]
  # Consume the same control generator RNG as historical RMU, but use the saved direction.
- stored=json.loads((REPO/'saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s2_screen40/control_vector.json').read_text());saved=torch.tensor(stored['values']).reshape(1,1,-1);generator=trainer.get_control_vector
+ stored=json.loads((REPO/'saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s2_screen40/control_vector.json').read_text());saved=torch.tensor(stored['values']).reshape(1,1,-1)*(a.steering/2);assert abs(float(saved.norm())-a.steering)<1e-4;generator=trainer.get_control_vector
  def fixed_vector(dim):
   generator(dim) # preserve historical one-time RNG consumption at first loss
   trainer.control_vec=saved

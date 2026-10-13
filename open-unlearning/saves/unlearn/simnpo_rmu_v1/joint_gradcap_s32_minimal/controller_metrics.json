@@ -1,0 +1,20 @@
+[
+  {
+    "step": 0,
+    "rmu_gradient_norm": 0.6683861017227173,
+    "sim_gradient_norm": 2.187913656234741,
+    "effective_sim_weight": 0.15274508201403644,
+    "raw_weighted_ratio": 0.5127898527470908,
+    "capped_ratio": 0.49999999999977146,
+    "cap_active": true
+  },
+  {
+    "step": 0,
+    "rmu_gradient_norm": 0.5177798867225647,
+    "sim_gradient_norm": 2.1378042697906494,
+    "effective_sim_weight": 0.1211008636382384,
+    "raw_weighted_ratio": 0.6467842239986076,
+    "capped_ratio": 0.4999999999997661,
+    "cap_active": true
+  }
+]
