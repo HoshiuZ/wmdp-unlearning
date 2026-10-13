@@ -1,0 +1,22 @@
+{
+  "single_factor_only": true,
+  "controller_rule_verified": true,
+  "controller_microbatches": 640,
+  "original_diagnostic_restored": true,
+  "diagnostic_optimizer_steps": 0,
+  "new_training_cases": 1,
+  "steps": 40,
+  "checkpoints": 3,
+  "compressed_bytes": 190366181,
+  "matched_sampling_token_budget_control": true,
+  "unchanged_frozen_reference": true,
+  "all_reload_and_object_hashes_verified": true,
+  "development_id_prompt_target_verified": true,
+  "full_evaluations": 0,
+  "space": {
+    "total": 64424509440,
+    "used": 45240537088,
+    "free": 19183972352
+  },
+  "code_commit": "99afe27648e4202a579c593febc7e9e16f104da5"
+}

@@ -95,6 +95,14 @@ MMLU使用官方固定revision `c30699e8356da336a370243923dbaf21066bb9fe` 本地
 
 3个新增检查点及全部诊断/负面结果保留，重建和采样预算校验通过；没有扩大训练参数、继续搜索或推送。见 [诊断与适配报告](docs/simnpo-rmu-gradient-results.md)、[预先门控](docs/simnpo-rmu-gradient-plan.md)、[梯度证据](logs/simnpo_rmu_gradient_diagnostics.json)、[单因素审计](logs/simnpo_rmu_half_completion_audit.json)。下一步若继续，更值得先研究训练中的梯度尺度平衡，再预先声明有限对照。
 
+## 训练中梯度尺度限幅对照
+
+完成一组同预算40步对照：每个训练microbatch仅对实际3个可训练参数测RMU/Sim梯度范数，Sim权重取原上界与0.5倍梯度比公式的较小值；detach系数，不改已有梯度累积，验证/评测不更新控制器。其余模型起点、层、数据、采样、学习率和保留项不变。
+
+640个训练微批次逐条核验通过，600次触发限幅，限幅后的Sim/RMU比值均<=0.5。第40步开发Bio66.0156%、加权MMLU损失3.1090点；原联合60.5469%/4.1466点，减半63.2813%/3.4003点。限幅缓解损伤，但Bio降低幅度也减小，未形成新前沿；终点只略超3点，不能因此断言方法无效，仍需结合全部既有候选比较。
+
+按预先规则未新增全量，旧原始数据/模型/结果保持，3个增量无损重建，未追加rho搜索或扩层。本轮仅本地提交，尚未推送。见 [限幅报告](docs/simnpo-rmu-cap-results.md)、[预先规则](docs/simnpo-rmu-cap-plan.md)、[控制器汇总](logs/simnpo_rmu_cap_controller_summary.json)、[完成审计](logs/simnpo_rmu_cap_completion_audit.json)。单微批次优化器前约束不保证累积/Adam/MMLU约束。
+
 ## 下一步
 
 交付整理暂缓；后续需要时按Word要求整理标准交付包：九个必需元数据文件、模型产物、实际训练与验证数据、前后评测证据及日志；受限数据依授权交付，缺项如实注明。当前标准平台交付包尚未完成。恢复攻击、再学习、多随机种子和多方法对照属于后续扩展。

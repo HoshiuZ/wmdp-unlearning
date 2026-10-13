@@ -12,3 +12,6 @@ SimNPO组不使用RMU目标或参考表示作为loss，但为了共享审计基�
 
 
 后续 `joint_simhalf_screen40` 为Sim系数减半的单因素适配，10/20/40步均有无损增量，恢复方式相同。梯度诊断与结果见 `docs/simnpo-rmu-gradient-results.md`，旧三组报告保留不覆盖。诊断36层仅求梯度，没有训练扩层或修改基模。
+
+
+`joint_gradcap_screen40` 为训练中梯度尺度限幅的单因素对照，模型增量恢复方式相同。`controller_metrics.json`记录640个训练microbatch的原始范数、权重及限幅后比值。3个检查点均已核验，未保存optimizer，不能断点续训；验证使用最新训练权重且不更新控制器。报告为 `docs/simnpo-rmu-cap-results.md`。
