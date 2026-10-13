@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-10-13T11:58:44.379800+08:00",
+  "files": {
+    "bio-retain-corpus.jsonl": {
+      "size_bytes": 1951738833,
+      "counts": {
+        "lines": 60887,
+        "valid_json": 60887,
+        "type_str": 60887,
+        "decoded_text_chars": 1901474983
+      },
+      "record_format": "JSON string per line; not an object with a text field",
+      "empty_decoded_text": 0,
+      "invalid_json": 0
+    },
+    "cyber-forget-corpus.jsonl": {
+      "size_bytes": 21977110,
+      "counts": {
+        "lines": 1000,
+        "valid_json": 1000,
+        "type_str": 1000,
+        "decoded_text_chars": 20663516
+      },
+      "record_format": "JSON string per line; not an object with a text field",
+      "empty_decoded_text": 0,
+      "invalid_json": 0
+    },
+    "cyber-retain-corpus.jsonl": {
+      "size_bytes": 63053403,
+      "counts": {
+        "lines": 4473,
+        "valid_json": 4473,
+        "type_str": 4473,
+        "decoded_text_chars": 59652121,
+        "empty_decoded_text": 1
+      },
+      "record_format": "JSON string per line; not an object with a text field",
+      "empty_decoded_text": 1,
+      "invalid_json": 0
+    }
+  },
+  "contents_printed": false,
+  "loading_note": "Decode each line with json.loads, then normalize to objects with text and stable source IDs before configuring JSON loading. No conversion performed."
+}
