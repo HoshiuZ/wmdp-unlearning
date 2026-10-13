@@ -1,0 +1,106 @@
+{
+  "name": "implementation_probe",
+  "variant": "probe",
+  "status": "completed",
+  "started_at": "2026-10-14T00:31:28.595228+08:00",
+  "code_commit": "1338a7bfa3621c679bae91c1ae75558f85c7b7ef",
+  "data_manifest": "logs/rmu_formal_blocks_manifest.json",
+  "beta": 0.1,
+  "delta": 0,
+  "alpha_repr": 2,
+  "steering": 2,
+  "lr": 5e-05,
+  "seed": 42,
+  "coefficients": {
+    "sim_weight": 1.0,
+    "ce_weight": 1.0
+  },
+  "max_steps": 2,
+  "space_before": {
+    "total": 64424509440,
+    "used": 44270501888,
+    "free": 20154007552
+  },
+  "gradient_checks": [
+    {
+      "variant": "sim",
+      "step": 1,
+      "loss": 2.017843246459961,
+      "gradients": {
+        "model.layers.10.mlp.down_proj.weight": 0.23611250519752502,
+        "model.layers.11.mlp.down_proj.weight": 0.21068036556243896,
+        "model.layers.12.mlp.down_proj.weight": 0.18873798847198486
+      }
+    },
+    {
+      "variant": "sim",
+      "step": 2,
+      "loss": 1.876900553703308,
+      "gradients": {
+        "model.layers.10.mlp.down_proj.weight": 0.2975718080997467,
+        "model.layers.11.mlp.down_proj.weight": 0.25242680311203003,
+        "model.layers.12.mlp.down_proj.weight": 0.23410193622112274
+      }
+    },
+    {
+      "variant": "rmu_ce",
+      "step": 1,
+      "loss": 0.9824681282043457,
+      "gradients": {
+        "model.layers.10.mlp.down_proj.weight": 0.5381841063499451,
+        "model.layers.11.mlp.down_proj.weight": 0.36694541573524475,
+        "model.layers.12.mlp.down_proj.weight": 0.1411552131175995
+      }
+    },
+    {
+      "variant": "rmu_ce",
+      "step": 2,
+      "loss": 0.8645116686820984,
+      "gradients": {
+        "model.layers.10.mlp.down_proj.weight": 0.39746683835983276,
+        "model.layers.11.mlp.down_proj.weight": 0.3068290948867798,
+        "model.layers.12.mlp.down_proj.weight": 0.1238032653927803
+      }
+    },
+    {
+      "variant": "joint",
+      "step": 1,
+      "loss": 2.756364107131958,
+      "gradients": {
+        "model.layers.10.mlp.down_proj.weight": 0.5769747495651245,
+        "model.layers.11.mlp.down_proj.weight": 0.4124191701412201,
+        "model.layers.12.mlp.down_proj.weight": 0.2186271697282791
+      }
+    },
+    {
+      "variant": "joint",
+      "step": 2,
+      "loss": 2.6737825870513916,
+      "gradients": {
+        "model.layers.10.mlp.down_proj.weight": 0.4543328583240509,
+        "model.layers.11.mlp.down_proj.weight": 0.3603324890136719,
+        "model.layers.12.mlp.down_proj.weight": 0.20227451622486115
+      }
+    }
+  ],
+  "calibration": {
+    "sim_weight": 0.1566522562277117,
+    "ce_weight": 0.060028908617563034
+  },
+  "completed_at": "2026-10-14T00:32:37.525329+08:00",
+  "elapsed_seconds": 53.945671330206096,
+  "selected_parameters": [
+    "model.layers.10.mlp.down_proj.weight",
+    "model.layers.11.mlp.down_proj.weight",
+    "model.layers.12.mlp.down_proj.weight"
+  ],
+  "frozen_parameters_unchanged": true,
+  "reference_unchanged": true,
+  "cuda_peak_allocated_bytes": 19438209536,
+  "cuda_peak_reserved_bytes": 19572719616,
+  "space_after": {
+    "total": 64424509440,
+    "used": 44271042560,
+    "free": 20153466880
+  }
+}

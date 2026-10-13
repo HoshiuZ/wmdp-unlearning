@@ -39,5 +39,5 @@ class ControlledSimRMU(RMU):
   self.last_loss_record={'forget_loss':float(f.detach()),'retain_loss':float(r.detach()),'total_loss':float(loss.detach()),'input_tokens':sum(int(clean[k]['attention_mask'].sum()) for k in clean),'loss_tokens':sum(int((clean[k]['labels']!=-100).sum()) for k in clean),'sampled_indices':{k:inputs[k]['index'].detach().cpu().tolist() for k in clean}}
   if model.training:
    self.step_loss_records.append(self.last_loss_record)
-   self.component_records.append({'step':self.state.global_step,'components':{k:float(v.detach()) for k,v in c.items()}})
+   self.component_records.append({'step':self.state.global_step,'effective_prediction_tokens':sum(int((clean[k]['labels'][:,1:]!=-100).sum()) for k in clean),'components':{k:float(v.detach()) for k,v in c.items()}})
   return (loss,fo) if return_outputs else loss
