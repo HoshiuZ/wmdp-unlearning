@@ -29,3 +29,6 @@ __pycache__/
 *.key
 
 # No blanket exclusions for logs, datasets, results or delivery directories.
+
+# Official gated Bio corpus: keep local unless redistribution is explicitly permitted.
+/data/raw/wmdp-bio-forget/

@@ -1,0 +1,25 @@
+{
+  "downloaded_at": "2026-10-13T12:15:14.684272+08:00",
+  "dataset_id": "cais/wmdp-bio-forget-corpus",
+  "revision": "5a786ed1041e56fef2d4ed26c1239f12b73a68eb",
+  "endpoint": "https://huggingface.co",
+  "files": [
+    {
+      "path": "data/raw/wmdp-bio-forget/README.md",
+      "size_bytes": 1161,
+      "sha256": "8ce03c06f89c4fca3056675cd87bcfb5d11ed5e6d779ae2149c29e643e8040ba"
+    },
+    {
+      "path": "data/raw/wmdp-bio-forget/data/train-00000-of-00002.parquet",
+      "size_bytes": 204154454,
+      "sha256": "918b4b66f13fde0807cfb308a4d3d3f68533e184a66732e3b9f8e7c8bee1dd62"
+    },
+    {
+      "path": "data/raw/wmdp-bio-forget/data/train-00001-of-00002.parquet",
+      "size_bytes": 177866866,
+      "sha256": "3abf82955b42ebd114b08effc447e40f2204730038292654e2654351784c47fe"
+    }
+  ],
+  "distribution": "restricted: no distribution beyond collaborator list without explicit permission",
+  "raw_data_uploaded": false
+}

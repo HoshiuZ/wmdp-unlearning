@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-13T12:15:58.578777+08:00",
+  "files": [
+    {
+      "path": "data/raw/wmdp-bio-forget/data/train-00000-of-00002.parquet",
+      "rows": 12227,
+      "schema": "title: string\nabstract: string\ntext: string\ndoi: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"title\": {\"dtype\": \"string\", \"_type\"' + 157",
+      "null_text": 0,
+      "empty_text": 0
+    },
+    {
+      "path": "data/raw/wmdp-bio-forget/data/train-00001-of-00002.parquet",
+      "rows": 12226,
+      "schema": "title: string\nabstract: string\ntext: string\ndoi: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"title\": {\"dtype\": \"string\", \"_type\"' + 157",
+      "null_text": 0,
+      "empty_text": 12
+    }
+  ],
+  "total_rows": 24453,
+  "null_text": 0,
+  "empty_text": 12
+}
