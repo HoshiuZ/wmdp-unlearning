@@ -8,6 +8,14 @@ def read(p):return json.loads(p.read_text())
 def main():
  dev=read(ROOT/'logs/simnpo_rmu_development.json');lock=read(ROOT/'logs/simnpo_rmu_full_selection.json');coeff=read(ROOT/'logs/simnpo_rmu_coefficients.json');probe=read(OUT/'implementation_probe/run.json');assert probe['status']=='completed' and len(probe['gradient_checks'])==6
  new=[r for r in dev['rows'] if 'simnpo_rmu_v1' in r['path']];assert len(new)==9
+ baseline_dev=read(REPO/'saves/unlearn/rmu_adaptation_v1/original_development_protocol_check/samples.json')
+ for r in new:
+  samples=read(ROOT/r['path'])
+  for task,n in [('wmdp_bio',256),('mmlu',1710)]:
+   reference={(x['task'],x['doc_id']):x for x in baseline_dev[task]};assert len(samples[task])==n
+   assert {(x['task'],x['doc_id']) for x in samples[task]}==set(reference)
+   for x in samples[task]:
+    b=reference[(x['task'],x['doc_id'])];assert x['doc_hash']==b['doc_hash'] and x['prompt_hash']==b['prompt_hash'] and x['target']==b['target'] and x['baseline_acc']==b['acc']
  runs=[];size=0;count=0
  for mode in ['sim','rmu_ce','joint']:
   folder=OUT/(mode+'_screen40');run=read(folder/'run.json');assert run['status']=='completed';assert run['actual_input_tokens']==320619 and run['actual_loss_tokens']==319339 and run['effective_prediction_tokens']==319339;assert run['frozen_parameters_unchanged'] and run['reference_unchanged'];assert run['coefficients']==coeff['coefficients']
@@ -30,7 +38,7 @@ def main():
     b=reference[(r['task'],r['doc_id'])];assert r['doc_hash']==b['doc_hash'] and r['prompt_hash']==b['prompt_hash'] and r['baseline_acc']==b['acc']
   full.append({'name':folder.name,**result,'mmlu_subjects':summarize(samples['mmlu'])})
  assert len(full)<=2;space=shutil.disk_usage(ROOT)._asdict();assert space['free']>2*2**30
- audit={'new_training_cases':3,'steps_per_case':40,'saved_checkpoints':count,'compressed_delta_bytes':size,'full_evaluations':len(full),'all_reload_identical':True,'all_object_sha_verified':True,'frozen_and_reference_unchanged':True,'matched_sampling_and_input_loss_prediction_token_budget':True,'space':space,'optimizer_saved':False,'independent_test':False,'full_sample_hashes_verified':bool(full),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()};dump(ROOT/'logs/simnpo_rmu_completion_audit.json',audit);dump(ROOT/'logs/simnpo_rmu_full_results.json',{'rows':full,'exploratory':True})
+ audit={'new_training_cases':3,'steps_per_case':40,'saved_checkpoints':count,'compressed_delta_bytes':size,'full_evaluations':len(full),'all_reload_identical':True,'all_object_sha_verified':True,'frozen_and_reference_unchanged':True,'matched_sampling_and_input_loss_prediction_token_budget':True,'all_development_question_prompt_and_target_identity_verified':True,'space':space,'optimizer_saved':False,'independent_test':False,'full_sample_hashes_verified':bool(full),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()};dump(ROOT/'logs/simnpo_rmu_completion_audit.json',audit);dump(ROOT/'logs/simnpo_rmu_full_results.json',{'rows':full,'exploratory':True})
  lines=['# SimNPO独立对照与RMU联合：有限探索结果','',
  '三组均从同一Qwen3-4B-Instruct-2507原始模型开始；hook12、仅更新10/11/12 down_proj（74,711,040参数）、lr5e-5、seed42、batch1×累积16、256token、40步、同formal_blocks_v1训练文章/块/顺序。新增B=SimNPO+retain CE；C=RMU+retain表示MSE+retain CE；D=与C相同再加SimNPO遗忘项。历史A为alpha2/steering2 RMU，原文件保留。','',
  '## 实现与预先锁定尺度','',
@@ -57,10 +65,12 @@ def main():
  else:lines+=['新增点未满足预先声明的全量入选条件，因此本轮没有新增全量评测。这不证明这些方法绝对无效，只表示该参数范围、单seed和40步预算下未产生值得新增全量的开发前沿点。']
  lines+=['','历史全量仍保留：原始Bio73.8413/MMLU70.6737；RMU alpha2/steering2 Bio66.3001/MMLU69.1355，损失1.5382点；RMU alpha2/steering32 Bio55.3810/MMLU68.4874，损失2.1863点。开发不能与这些全量数字直接混用。所有新增全量也不代表独立测试，不证明知识删除。','',
  '## 时间、资源与保存','',
+ '本轮三个新增目标共120正式更新步，CUDA实现检查另有各2步并从原始权重独立恢复，不把它们接入正式训练。依赖沿用PyTorch2.9.1+cu128、Transformers5.5.4、lm_eval0.4.11、datasets3.0.1、Accelerate1.13.0。执行版本见各run.json和simnpo_rmu_provenance.json；probe过程的token计数遥测修订不改loss/梯度。B路径配置中未使用的历史paths.output_dir保留原样，实际Trainer output_dir与真实保存目录一致。','',
  '| 新组 | 代码提交 | 运行秒数 | 峰值allocated GiB | reserved GiB | input/loss/预测token |','| --- | --- | ---: | ---: | ---: | --- |']
  for r in runs:lines.append(f"| {r['variant']} | {r['code_commit'][:7]} | {r['elapsed_seconds']:.1f} | {r['cuda_peak_allocated_bytes']/2**30:.3f} | {r['cuda_peak_reserved_bytes']/2**30:.3f} | {r['actual_input_tokens']}/{r['actual_loss_tokens']}/{r['effective_prediction_tokens']} |")
  lines+=['','运行时间和Trainer train_runtime包含验证/开发回调，非纯前后向时间。每组10/20/40无损增量，共9个，重载逐位一致；3组每角色640次输入，同历史序列及实际预算。完整配置、数据SHA、分项微批loss640条/组、每10步64块/role文章验证、token数、显存、指纹和逐题评分均保存。未保存optimizer，不可断点续训；没有安装无关依赖或保存完整模型副本。','',f"新增实际压缩权重{size/2**20:.2f}MiB；完成时数据盘余{space['free']/2**30:.2f}GiB，未删除其他模型或自动扩容。基模远端immutable revision未知，以原本地文件清单及完整参数指纹固定。代码、测试、方案和日志仅本地提交，推送按用户指令。",'',
  '## 限制与下一步','',
+ '第40步联合组比同保留项RMU组进一步降低Bio6.2500点，却额外损失加权MMLU1.9643点；retain文章验证NLL升到3.0356（原始2.1937），而对照为2.1877。独立SimNPO的验证NLL为2.6023。本设置下联合更强地削弱了Bio，但能力损伤更大；不建议替换现有已验证RMU配置。全部新增开发点均被既有候选支配，未显示新的取舍前沿。','',
  '这是固定三层、单seed、一个beta和梯度校准系数的有限探索；不能外推方法的普遍优劣。联合有合理的表示/输出互补假说，但结果决定是否值得继续，不预设成功。不自动增加学习率、参数范围或超参搜索，也不自动多seed/恢复测试。若有新的良好取舍，下一轮可预先确定少量复验及恢复评测；若没有，应先检查输出梯度、同域forget/retain冲突和受限参数容量，再单独改变一个因素。','',
  '方法来源：[SimNPO官方仓库](https://github.com/OPTML-Group/Unlearn-Simple)，[论文](https://arxiv.org/abs/2410.07163)；RMU及OpenUnlearning来源见根README。']
  (ROOT/'docs/simnpo-rmu-results.md').write_text('\n'.join(lines)+'\n');print('AUDIT',audit);print('FULL',full)
