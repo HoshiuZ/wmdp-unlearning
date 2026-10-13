@@ -1,0 +1,42 @@
+{
+  "records": [
+    {
+      "run": "implementation_probe",
+      "sources": [
+        {
+          "path": "scripts/run_simnpo_rmu.py",
+          "committed_sha256": "0078c7913ad06b3726d9dda76652795022cfa694d1f378bfa4bfe99514ac29b5"
+        },
+        {
+          "path": "scripts/simnpo_rmu_method.py",
+          "committed_sha256": "018c1345fb80e8dd81b3a082f7ba358d9271cea978b28a50f8834e50aab178d5"
+        },
+        {
+          "path": "open-unlearning/src/trainer/unlearn/simnpo.py",
+          "committed_sha256": "fff0d79f0cf32233042518b5030e181b72c4008c3c1cd3fa3337b206ba771b19"
+        }
+      ],
+      "execution_head": "1338a7b",
+      "note": "Probe started before effective_prediction_tokens telemetry refinement was committed; refinement does not change loss or gradients. Sim run uses committed source. Its paths.output_dir metadata was historical; actual Trainer output_dir is authoritative. Later change only aligns the unused metadata path."
+    },
+    {
+      "run": "sim_screen40",
+      "sources": [
+        {
+          "path": "scripts/run_simnpo_rmu.py",
+          "committed_sha256": "67e471a26ac3c0a68a93d82462c57bcf27813b56ab47630268e49402c09ef901"
+        },
+        {
+          "path": "scripts/simnpo_rmu_method.py",
+          "committed_sha256": "84288e286c5e1c79a57f2d7d1a72c05742e09d34e13c931d20ed27557000bd90"
+        },
+        {
+          "path": "open-unlearning/src/trainer/unlearn/simnpo.py",
+          "committed_sha256": "fff0d79f0cf32233042518b5030e181b72c4008c3c1cd3fa3337b206ba771b19"
+        }
+      ],
+      "execution_head": "7913101",
+      "note": "Probe started before effective_prediction_tokens telemetry refinement was committed; refinement does not change loss or gradients. Sim run uses committed source. Its paths.output_dir metadata was historical; actual Trainer output_dir is authoritative. Later change only aligns the unused metadata path."
+    }
+  ]
+}
