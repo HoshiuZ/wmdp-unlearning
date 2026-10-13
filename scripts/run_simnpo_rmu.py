@@ -17,16 +17,16 @@ TRAINER_REGISTRY['ControlledSimRMU']=ControlledSimRMU
 OUT=REPO/'saves/unlearn/simnpo_rmu_v1'
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--variant',choices=['probe','sim','rmu_ce','joint'],required=True);a=p.parse_args();probe=a.variant=='probe';name='implementation_probe' if probe else a.variant+'_screen40';out=OUT/name
+ p=argparse.ArgumentParser();p.add_argument('--variant',choices=['probe','sim','rmu_ce','joint'],required=True);p.add_argument('--sim-scale',type=float,choices=[.5,1.],default=1.);p.add_argument('--check-only',action='store_true');a=p.parse_args();probe=a.variant=='probe';assert a.sim_scale==1. or a.variant=='joint';name='implementation_probe' if probe else a.variant+('_simhalf' if a.sim_scale==.5 else '')+('_minimal' if a.check_only else '_screen40');out=OUT/name
  assert not out.exists();assert shutil.disk_usage(ROOT).free>2*2**30+700*2**20
  out.mkdir(parents=True);cfg=configuration(12,2,5e-5,2,name,40)
  cfg.paths.output_dir=str(out);cfg.trainer.handler='ControlledSimRMU';cfg.trainer.args.output_dir=str(out);cfg.trainer.args.logging_dir=str(out/'logs')
  lock=ROOT/'logs/simnpo_rmu_coefficients.json'
- values={'sim_weight':1.,'ce_weight':1.} if probe else json.loads(lock.read_text())['coefficients']
+ values={'sim_weight':1.,'ce_weight':1.} if probe else json.loads(lock.read_text())['coefficients'];values['sim_weight']*=a.sim_scale
  with open_dict(cfg.trainer.method_args):
   cfg.trainer.method_args.variant='joint' if probe else a.variant;cfg.trainer.method_args.beta=.1
   for k,v in values.items():cfg.trainer.method_args[k]=v
- dump(out/'training_config.json',OmegaConf.to_container(cfg,resolve=True));run={'name':name,'variant':a.variant,'status':'running','started_at':now(),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'data_manifest':'logs/rmu_formal_blocks_manifest.json','beta':.1,'delta':0,'alpha_repr':2,'steering':2,'lr':5e-5,'seed':42,'coefficients':values,'max_steps':2 if probe else 40,'space_before':shutil.disk_usage(ROOT)._asdict()};dump(out/'run.json',run)
+ dump(out/'training_config.json',OmegaConf.to_container(cfg,resolve=True));run={'name':name,'variant':a.variant,'status':'running','started_at':now(),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'data_manifest':'logs/rmu_formal_blocks_manifest.json','beta':.1,'delta':0,'alpha_repr':2,'steering':2,'lr':5e-5,'seed':42,'coefficients':values,'sim_scale':a.sim_scale,'check_only':a.check_only,'max_steps':2 if probe or a.check_only else 40,'space_before':shutil.disk_usage(ROOT)._asdict()};dump(out/'run.json',run)
  for row in json.loads((ROOT/'logs/rmu_formal_blocks_manifest.json').read_text())['files']:assert __import__('hashlib').sha256((ROOT/row['path']).read_bytes()).hexdigest()==row['sha256']
  seed_everything(42);model,tok=get_model(cfg.model);data=get_data(cfg.data,mode=cfg.mode,tokenizer=tok,template_args=cfg.model.template_args);collator=get_collators(cfg.collator,tokenizer=tok)
  trainer,args=load_trainer(cfg.trainer,model,train_dataset=data['train'],processing_class=tok,data_collator=collator,evaluators=None,template_args=cfg.model.template_args);trainer.create_optimizer();model.to(trainer.accelerator.device)
@@ -41,7 +41,12 @@ def main():
  trainer.get_control_vector=fixed_vector
  val={r:TokenBlockDataset(hf_args={'path':'json','data_files':str(cfg.validation[r+'_file']),'split':'train'},template_args={},tokenizer=tok,max_length=256) for r in ['forget','retain']}
  start=time.perf_counter();torch.cuda.reset_peak_memory_stats()
- if probe:
+ if a.check_only:
+  model.train();checks=[]
+  for i in range(2):
+   batch=trainer._prepare_inputs(collator([data['train'][i]]));trainer.optimizer.zero_grad();loss=trainer.compute_loss(model,batch);loss.backward();grads={n:float(p.grad.float().norm()) for n,p in model.named_parameters() if n in selected};assert all(v>0 and __import__('math').isfinite(v) for v in grads.values());assert all(p.grad is None for n,p in model.named_parameters() if n not in selected);assert all(p.grad is None for p in trainer.ref_model.parameters());torch.nn.utils.clip_grad_norm_(params,1.);trainer.optimizer.step();checks.append({'step':i+1,'loss':float(loss.detach()),'gradients':grads})
+  after=fingerprints(model);assert set(n for n in before if before[n]!=after[n])==set(selected);run.update(gradient_checks=checks)
+ elif probe:
   records=[];model.eval()
   for i in [0,16,32,48]:
    batch=trainer._prepare_inputs(collator([{'forget':val['forget'][i],'retain':val['retain'][i]}]));c,_,_=trainer.components(model,batch);rec={'article_index':i,'losses':{k:float(v.detach()) for k,v in c.items()},'gradients':{}}

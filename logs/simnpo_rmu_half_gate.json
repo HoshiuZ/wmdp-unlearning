@@ -1,0 +1,16 @@
+{
+  "diagnostic_source": "logs/simnpo_rmu_gradient_diagnostics.json",
+  "ratio_mean": 20.438271006728773,
+  "forget_retain_cosine_mean": -0.03213849824241152,
+  "decision": "Only SimNPO coefficient half; no parameter expansion",
+  "old_sim_weight": 0.1566522562277117,
+  "new_sim_weight": 0.07832612811385585,
+  "ce_weight_unchanged": 0.060028908617563034,
+  "space": {
+    "total": 64424509440,
+    "used": 44847095808,
+    "free": 19577413632
+  },
+  "max_new_training_cases": 1,
+  "max_full_evaluations": 1
+}
