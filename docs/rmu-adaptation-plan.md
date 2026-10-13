@@ -29,3 +29,5 @@
 ## 资源与检查点
 
 4090D24GB，首轮峰值18.24GiB。本轮先检查较深hook能否运行。数据盘仅约1.1GB，不复制完整模型，不删除已有模型。新检查点保存三个BF16参数与原始参数uint16逐位XOR，经gzip无损压缩；记录形状、基模/训练后tensor hash及文件SHA，重建必须逐位一致。权重archive由Git LFS缓存保留，工作树可仅保留LFS pointer；加载脚本可从本地LFS对象读取。该自定义格式不是PEFT/LoRA，复现需原始固定基模及scripts/rmu_adaptation_utils.py。优化器状态不保存，模型可重建但不是断点续训包。训练配置、逐步指标、耗时显存、采样indices、验证和开发逐题评分保存独立目录，不覆盖历史。
+
+实测补充：transformers/models/qwen3/modeling_qwen3.py中ModuleList使用range(num_hidden_layers)构建，DecoderLayer返回hidden_states，确认零起始及block输出。三组最小CUDA峰值分别18.109/17.817/17.469GiB（hook7/12/18），每组三个参数均有非零有限梯度并更新；冻结参数及参考指纹不变、参考表示requires_grad=False。新手动检查脚本首试设备准备错误已修正并独立保留失败目录/日志，原RMU逻辑未改。1966道开发题原模型预测全与历史基线一致。
