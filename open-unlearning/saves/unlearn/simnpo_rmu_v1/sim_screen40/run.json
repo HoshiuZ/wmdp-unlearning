@@ -1,0 +1,241 @@
+{
+  "name": "sim_screen40",
+  "variant": "sim",
+  "status": "completed",
+  "started_at": "2026-10-14T00:33:10.701600+08:00",
+  "code_commit": "79131012fb46dd33a274962382a70afedf263799",
+  "data_manifest": "logs/rmu_formal_blocks_manifest.json",
+  "beta": 0.1,
+  "delta": 0,
+  "alpha_repr": 2,
+  "steering": 2,
+  "lr": 5e-05,
+  "seed": 42,
+  "coefficients": {
+    "sim_weight": 0.1566522562277117,
+    "ce_weight": 0.060028908617563034
+  },
+  "max_steps": 40,
+  "space_before": {
+    "total": 64424509440,
+    "used": 44271153152,
+    "free": 20153356288
+  },
+  "training_metrics": {
+    "train_runtime": 730.4031,
+    "train_samples_per_second": 0.876,
+    "train_steps_per_second": 0.055,
+    "total_flos": 0.0,
+    "train_loss": 1.9156779319047927,
+    "epoch": 0.3125
+  },
+  "development": [
+    {
+      "step": 10,
+      "metrics": {
+        "wmdp_bio": {
+          "n": 256,
+          "correct": 194,
+          "accuracy_percent": 75.78125,
+          "baseline_accuracy_percent": 75.78125,
+          "change_percentage_points": 0.0
+        },
+        "mmlu": {
+          "n": 1710,
+          "correct": 1247,
+          "accuracy_percent": 72.92397660818713,
+          "baseline_accuracy_percent": 73.50877192982456,
+          "change_percentage_points": -0.5847953216374269
+        }
+      },
+      "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/sim_screen40/checkpoint-10",
+      "save_reload_identical": true,
+      "seconds": 93.4092754018493
+    },
+    {
+      "step": 20,
+      "metrics": {
+        "wmdp_bio": {
+          "n": 256,
+          "correct": 193,
+          "accuracy_percent": 75.390625,
+          "baseline_accuracy_percent": 75.78125,
+          "change_percentage_points": -0.390625
+        },
+        "mmlu": {
+          "n": 1710,
+          "correct": 1237,
+          "accuracy_percent": 72.3391812865497,
+          "baseline_accuracy_percent": 73.50877192982456,
+          "change_percentage_points": -1.1695906432748537
+        }
+      },
+      "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/sim_screen40/checkpoint-20",
+      "save_reload_identical": true,
+      "seconds": 95.64142732694745
+    },
+    {
+      "step": 40,
+      "metrics": {
+        "wmdp_bio": {
+          "n": 256,
+          "correct": 189,
+          "accuracy_percent": 73.828125,
+          "baseline_accuracy_percent": 75.78125,
+          "change_percentage_points": -1.953125
+        },
+        "mmlu": {
+          "n": 1710,
+          "correct": 1213,
+          "accuracy_percent": 70.93567251461988,
+          "baseline_accuracy_percent": 73.50877192982456,
+          "change_percentage_points": -2.573099415204678
+        }
+      },
+      "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/sim_screen40/checkpoint-40",
+      "save_reload_identical": true,
+      "seconds": 97.23326544323936
+    }
+  ],
+  "validation": [
+    {
+      "training_run_id": "sim_screen40",
+      "phase": "validation",
+      "step": 0,
+      "epoch": 0,
+      "forget_loss": 1.8361171465367079,
+      "retain_loss": 0.13215802097693086,
+      "total_loss": 1.9682751707732677,
+      "validation_loss": 1.9682751707732677,
+      "retain_nll": 2.193743327304359,
+      "retain_ppl": 8.968723222441891,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 21.81855363631621,
+      "recorded_at": "2026-10-14T00:33:47.372052+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 1456.191850733709,
+      "gpu_peak_allocated_bytes": 16836307456,
+      "gpu_peak_reserved_bytes": 16959668224,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "sim_screen40",
+      "phase": "validation",
+      "step": 10,
+      "epoch": 0.078125,
+      "forget_loss": 1.8278668224811554,
+      "retain_loss": 0.13226664997637272,
+      "total_loss": 1.960133483633399,
+      "validation_loss": 1.960133483633399,
+      "retain_nll": 2.2138916748570763,
+      "retain_ppl": 9.15126091633461,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 21.74504641024396,
+      "recorded_at": "2026-10-14T00:35:33.325042+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 1461.1143798264052,
+      "gpu_peak_allocated_bytes": 19352171008,
+      "gpu_peak_reserved_bytes": 19593691136,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "sim_screen40",
+      "phase": "validation",
+      "step": 20,
+      "epoch": 0.15625,
+      "forget_loss": 1.808778140693903,
+      "retain_loss": 0.13396055344492197,
+      "total_loss": 1.9427386987954378,
+      "validation_loss": 1.9427386987954378,
+      "retain_nll": 2.2622528791396497,
+      "retain_ppl": 9.604703046028739,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 21.838368540164083,
+      "recorded_at": "2026-10-14T00:38:52.907400+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 1454.8705843830073,
+      "gpu_peak_allocated_bytes": 19352171008,
+      "gpu_peak_reserved_bytes": 21500002304,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "sim_screen40",
+      "phase": "validation",
+      "step": 30,
+      "epoch": 0.234375,
+      "forget_loss": 1.7761148866266012,
+      "retain_loss": 0.14010967302601784,
+      "total_loss": 1.9162245746701956,
+      "validation_loss": 1.9162245746701956,
+      "retain_nll": 2.376245083283955,
+      "retain_ppl": 10.764407429623938,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 21.42582225194201,
+      "recorded_at": "2026-10-14T00:42:11.904725+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 1482.8835797478077,
+      "gpu_peak_allocated_bytes": 19352171008,
+      "gpu_peak_reserved_bytes": 21500002304,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "sim_screen40",
+      "phase": "validation",
+      "step": 40,
+      "epoch": 0.3125,
+      "forget_loss": 1.7058120761066675,
+      "retain_loss": 0.1528191848192364,
+      "total_loss": 1.8586312625557184,
+      "validation_loss": 1.8586312625557184,
+      "retain_nll": 2.602264169830157,
+      "retain_ppl": 13.494256761213485,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 21.794397376012057,
+      "recorded_at": "2026-10-14T00:43:58.717661+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 1457.8058503682128,
+      "gpu_peak_allocated_bytes": 19352171008,
+      "gpu_peak_reserved_bytes": 21500002304,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    }
+  ],
+  "actual_input_tokens": 320619,
+  "actual_loss_tokens": 319339,
+  "effective_prediction_tokens": 319339,
+  "completed_at": "2026-10-14T00:45:54.899344+08:00",
+  "elapsed_seconds": 749.6059771040455,
+  "selected_parameters": [
+    "model.layers.10.mlp.down_proj.weight",
+    "model.layers.11.mlp.down_proj.weight",
+    "model.layers.12.mlp.down_proj.weight"
+  ],
+  "frozen_parameters_unchanged": true,
+  "reference_unchanged": true,
+  "cuda_peak_allocated_bytes": 19352171008,
+  "cuda_peak_reserved_bytes": 21500002304,
+  "space_after": {
+    "total": 64424509440,
+    "used": 44452999168,
+    "free": 19971510272
+  }
+}

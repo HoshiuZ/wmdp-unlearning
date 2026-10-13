@@ -1,7 +1,8 @@
 """Compile actual bounded ablation evidence; never launch new inference."""
 import json,csv,shutil,subprocess
 from pathlib import Path
-from rmu_adaptation_utils import ROOT,REPO,dump,materialized,digest
+from rmu_adaptation_utils import ROOT,REPO,dump,materialized,digest,base_samples
+from reweight_rmu_development import summarize
 OUT=REPO/'saves/unlearn/simnpo_rmu_v1'
 def read(p):return json.loads(p.read_text())
 def main():
@@ -22,9 +23,14 @@ def main():
   cp=(ROOT/selected['path']).parent.parent;folder=OUT/'full_evaluations'/(cp.parent.name+'_'+cp.name);result=read(folder/'result.json');samples=read(folder/'samples.json')
   for task,n in [('wmdp_bio',1273),('mmlu',14042)]:
    assert len(samples[task])==n and len({(r['task'],r['doc_id']) for r in samples[task]})==n;assert sum(r['acc'] for r in samples[task])==result['metrics'][task]['correct']
-  full.append({'name':folder.name,**result})
+  base=base_samples()
+  for task in samples:
+   reference={(name,r['doc_id']):r for name,rs in base[task].items() for r in rs}
+   for r in samples[task]:
+    b=reference[(r['task'],r['doc_id'])];assert r['doc_hash']==b['doc_hash'] and r['prompt_hash']==b['prompt_hash'] and r['baseline_acc']==b['acc']
+  full.append({'name':folder.name,**result,'mmlu_subjects':summarize(samples['mmlu'])})
  assert len(full)<=2;space=shutil.disk_usage(ROOT)._asdict();assert space['free']>2*2**30
- audit={'new_training_cases':3,'steps_per_case':40,'saved_checkpoints':count,'compressed_delta_bytes':size,'full_evaluations':len(full),'all_reload_identical':True,'all_object_sha_verified':True,'frozen_and_reference_unchanged':True,'matched_sampling_and_input_loss_prediction_token_budget':True,'space':space,'optimizer_saved':False,'independent_test':False,'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()};dump(ROOT/'logs/simnpo_rmu_completion_audit.json',audit);dump(ROOT/'logs/simnpo_rmu_full_results.json',{'rows':full,'exploratory':True})
+ audit={'new_training_cases':3,'steps_per_case':40,'saved_checkpoints':count,'compressed_delta_bytes':size,'full_evaluations':len(full),'all_reload_identical':True,'all_object_sha_verified':True,'frozen_and_reference_unchanged':True,'matched_sampling_and_input_loss_prediction_token_budget':True,'space':space,'optimizer_saved':False,'independent_test':False,'full_sample_hashes_verified':True,'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()};dump(ROOT/'logs/simnpo_rmu_completion_audit.json',audit);dump(ROOT/'logs/simnpo_rmu_full_results.json',{'rows':full,'exploratory':True})
  lines=['# SimNPO独立对照与RMU联合：有限探索结果','',
  '三组均从同一Qwen3-4B-Instruct-2507原始模型开始；hook12、仅更新10/11/12 down_proj（74,711,040参数）、lr5e-5、seed42、batch1×累积16、256token、40步、同formal_blocks_v1训练文章/块/顺序。新增B=SimNPO+retain CE；C=RMU+retain表示MSE+retain CE；D=与C相同再加SimNPO遗忘项。历史A为alpha2/steering2 RMU，原文件保留。','',
  '## 实现与预先锁定尺度','',
