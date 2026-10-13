@@ -47,6 +47,9 @@ def main():
  '| 状态 | 选定3层Sim/RMU加权梯度范数比均值 | RMU/Sim余弦均值 | 合成forget/retain余弦均值 |','| --- | ---: | ---: | ---: |']
  for name,records in diag['results'].items():
   gs=[r['groups']['selected'] for r in records];lines.append(f"| {name} | {sum(g['sim_over_rmu_weighted_norm'] for g in gs)/4:.4f} | {sum(g['cosines']['rmu_forget|sim_forget'] for g in gs)/4:.4f} | {sum(g['forget_retain_cosine'] for g in gs)/4:.4f} |")
+ lines+=['','| 状态 | RMU加权梯度范数均值 | Sim加权梯度范数均值 | 表示保留加权范数均值 | CE保留加权范数均值 |','| --- | ---: | ---: | ---: | ---: |']
+ for name,rs in diag['results'].items():
+  means=[sum(r['groups']['selected']['weighted_norms'][k] for r in rs)/4 for k in ['rmu_forget','sim_forget','retain_repr','retain_ce']];lines.append('| '+name+' | '+' | '.join(f'{v:.4f}' for v in means)+' |')
  lines+=['','这里是每个probe比值的平均，不是先平均梯度范数再求比。两项遗忘梯度近正交、均值略正，未见稳定强反向冲突；forget与retain有部分负向冲突。原始接近零的微小负余弦不作强结论。明显证据是Sim加权梯度相对RMU在联合40步剧增，原始的一次尺度校准无法保证训练全过程平衡；并非所有损伤都能归因于方向冲突。','',
  '| 状态 | RMU梯度选定层能量占比 | Sim梯度选定层能量占比 | retain CE选定层能量占比 |','| --- | ---: | ---: | ---: |']
  for name,rs in diag['results'].items():
