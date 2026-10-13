@@ -1,0 +1,30 @@
+# Root-level working documents stay local; delivery documents remain tracked.
+/*.md
+/*.doc
+/*.docx
+/*.pdf
+/*.txt
+
+# Local environments, caches and original downloaded models.
+/envs/
+/cache/
+/models/
+/.agents/
+/.codex/
+/.aws/
+/.vscode/
+
+# Keep the existing upstream checkout metadata local.
+/open-unlearning/.git/
+
+# Generated Python files and credentials.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# No blanket exclusions for logs, datasets, results or delivery directories.

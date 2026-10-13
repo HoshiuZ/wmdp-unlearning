@@ -1,0 +1,20 @@
+[2026-10-12 17:36:17,087][lm_eval.models.huggingface][WARNING] - `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+[2026-10-12 17:36:17,828][lm_eval.models.huggingface][WARNING] - Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[2026-10-12 17:36:17,830][evaluator][INFO] - ***** Running LMEval evaluation suite *****
+[2026-10-12 17:36:17,830][evaluator][INFO] - Fine-grained evaluations will be saved to: ./saves/eval/qwen3_4b_base_bio_full_v1/LMEval_EVAL.json
+[2026-10-12 17:36:17,830][evaluator][INFO] - Aggregated evaluations will be summarised in: ./saves/eval/qwen3_4b_base_bio_full_v1/LMEval_SUMMARY.json
+[2026-10-12 17:36:17,831][lm_eval.evaluator][INFO] - Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+[2026-10-12 17:36:17,831][lm_eval.evaluator][INFO] - Using pre-initialized model
+[2026-10-12 17:36:18,260][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/wmdp "HTTP/1.1 200 OK"
+[2026-10-12 17:36:19,316][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/cais/wmdp/cais/wmdp.py "HTTP/1.1 404 Not Found"
+[2026-10-12 17:36:19,481][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/wmdp "HTTP/1.1 200 OK"
+[2026-10-12 17:36:20,176][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/wmdp/revision/7125571f22f032c56415e7980f48d877dd830ff8 "HTTP/1.1 200 OK"
+[2026-10-12 17:36:20,512][httpx][INFO] - HTTP Request: HEAD https://hf-mirror.com/datasets/cais/wmdp/resolve/7125571f22f032c56415e7980f48d877dd830ff8/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-12 17:36:21,834][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/wmdp/tree/7125571f22f032c56415e7980f48d877dd830ff8/wmdp-bio?recursive=true&expand=false "HTTP/1.1 200 OK"
+[2026-10-12 17:36:23,661][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/wmdp/tree/7125571f22f032c56415e7980f48d877dd830ff8?recursive=false&expand=false "HTTP/1.1 200 OK"
+[2026-10-12 17:36:24,105][httpx][INFO] - HTTP Request: HEAD https://hf-mirror.com/datasets/cais/wmdp/resolve/7125571f22f032c56415e7980f48d877dd830ff8/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-12 17:36:24,162][lm_eval.tasks][INFO] - Selected tasks:
+[2026-10-12 17:36:24,163][lm_eval.tasks][INFO] - Task: wmdp_bio (wmdp/wmdp_bio.yaml)
+[2026-10-12 17:36:24,163][lm_eval.evaluator][INFO] - num_fewshot has been set to 0 for wmdp_bio in its config. Manual configuration will be ignored.
+[2026-10-12 17:36:24,163][lm_eval.api.task][INFO] - Building contexts for wmdp_bio on rank 0...
+[2026-10-12 17:36:26,191][lm_eval.evaluator][INFO] - Running loglikelihood requests
