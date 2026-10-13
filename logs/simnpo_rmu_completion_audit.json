@@ -1,0 +1,21 @@
+{
+  "new_training_cases": 3,
+  "steps_per_case": 40,
+  "saved_checkpoints": 9,
+  "compressed_delta_bytes": 560708743,
+  "full_evaluations": 0,
+  "all_reload_identical": true,
+  "all_object_sha_verified": true,
+  "frozen_and_reference_unchanged": true,
+  "matched_sampling_and_input_loss_prediction_token_budget": true,
+  "all_development_question_prompt_and_target_identity_verified": true,
+  "space": {
+    "total": 64424509440,
+    "used": 44846018560,
+    "free": 19578490880
+  },
+  "optimizer_saved": false,
+  "independent_test": false,
+  "full_sample_hashes_verified": false,
+  "code_commit": "a8a05e9400540043bf0cfcf4fe485c410981a8a6"
+}

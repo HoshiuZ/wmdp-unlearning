@@ -73,8 +73,22 @@ MMLU使用官方固定revision `c30699e8356da336a370243923dbaf21066bb9fe` 本地
 
 见 [第二轮中文报告](docs/rmu-scale-v2-results.md)、[完整开发配置表](logs/rmu_scale_v2_development_config_comparison.csv)、[全量比较表](logs/rmu_scale_v2_full_comparison.csv)、[完成审计](logs/rmu_scale_v2_completion_audit.json)、[增量加载说明](open-unlearning/saves/unlearn/rmu_scale_v2/README.md)。所有全量结果仍为已观察官方test后的探索性结果，不证明知识彻底删除。多seed复验及恢复测试留作后续，本轮未自动开展。
 
+## SimNPO独立对照与RMU联合探索
+
+完成实现适配、mask/移位及CUDA梯度检查、3组各40步训练。固定同一原始模型、hook12、10/11/12层down_proj、lr5e-5、seed42、训练文章块和采样顺序；用独立文章验证梯度锁定系数，未按测试分数调参。
+
+| 第40步开发结果（非全量） | Bio | 加权MMLU相对开发基线变化 |
+| --- | ---: | ---: |
+| 独立SimNPO＋retain CE | 73.8281% | -3.2403点 |
+| RMU＋额外retain CE | 66.7969% | -2.1823点 |
+| RMU＋SimNPO联合＋相同保留项 | 60.5469% | -4.1466点 |
+
+开发基线Bio75.78125%，MMLU等权73.50877%、加权69.98410%，不能与全量基线混用。联合比同保留项RMU多降低Bio6.25点，但多损失加权MMLU1.9643点；所有新增开发点被既有候选支配，按预先规则未追加全量评测，不建议替换现有已验证RMU配置。单seed、三层限制和有限预算的负面结果不代表方法普遍无效。
+
+9个无损增量保存重载校验通过，配置、分项loss、验证、时间、显存及逐题记录留档。见 [中文报告](docs/simnpo-rmu-results.md)、[方案](docs/simnpo-rmu-plan.md)、[比较表](logs/simnpo_rmu_development.csv)、[完成审计](logs/simnpo_rmu_completion_audit.json)、[恢复说明](open-unlearning/saves/unlearn/simnpo_rmu_v1/README.md)。本轮仅本地提交，未推送。
+
 ## 下一步
 
-按Word要求整理标准交付包：九个必需元数据文件、模型产物、实际训练与验证数据、前后评测证据及日志；受限数据依授权交付，缺项如实注明。当前标准平台交付包尚未完成。恢复攻击、再学习、多随机种子和多方法对照属于后续扩展。
+交付整理暂缓；后续需要时按Word要求整理标准交付包：九个必需元数据文件、模型产物、实际训练与验证数据、前后评测证据及日志；受限数据依授权交付，缺项如实注明。当前标准平台交付包尚未完成。恢复攻击、再学习、多随机种子和多方法对照属于后续扩展。
 
 服务器路径复现时需要调整，环境见 [依赖快照](logs/environment.txt)。模型与数据许可分别以各自来源为准，不公开token或其他凭证。
