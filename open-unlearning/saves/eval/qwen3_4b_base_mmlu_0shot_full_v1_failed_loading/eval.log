@@ -1,0 +1,23 @@
+[2026-10-13 12:24:40,369][lm_eval.models.huggingface][WARNING] - `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+[2026-10-13 12:24:40,372][lm_eval.models.huggingface][WARNING] - Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[2026-10-13 12:24:40,373][evaluator][INFO] - ***** Running LMEval evaluation suite *****
+[2026-10-13 12:24:40,374][evaluator][INFO] - Fine-grained evaluations will be saved to: ./saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/LMEval_EVAL.json
+[2026-10-13 12:24:40,374][evaluator][INFO] - Aggregated evaluations will be summarised in: ./saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/LMEval_SUMMARY.json
+[2026-10-13 12:24:40,375][lm_eval.evaluator][INFO] - Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+[2026-10-13 12:24:40,375][lm_eval.evaluator][INFO] - Using pre-initialized model
+[2026-10-13 12:24:41,102][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 308 Permanent Redirect"
+[2026-10-13 12:24:41,675][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 200 OK"
+[2026-10-13 12:24:42,671][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/cais/mmlu/cais/mmlu.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:24:42,827][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 308 Permanent Redirect"
+[2026-10-13 12:24:43,161][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 200 OK"
+[2026-10-13 12:24:43,345][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 308 Permanent Redirect"
+[2026-10-13 12:24:43,718][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 200 OK"
+[2026-10-13 12:24:43,885][httpx][INFO] - HTTP Request: HEAD https://hf-mirror.com/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/README.md "HTTP/1.1 308 Permanent Redirect"
+[2026-10-13 12:24:44,049][httpx][INFO] - HTTP Request: HEAD https://hf-mirror.com/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/.huggingface.yaml "HTTP/1.1 308 Permanent Redirect"
+[2026-10-13 12:24:44,222][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe/data?recursive=true&expand=false "HTTP/1.1 308 Permanent Redirect"
+[2026-10-13 12:24:44,535][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe/data?recursive=true&expand=false "HTTP/1.1 404 Not Found"
+[2026-10-13 12:24:44,686][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe?recursive=false&expand=false "HTTP/1.1 308 Permanent Redirect"
+[2026-10-13 12:24:45,006][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe?recursive=false&expand=false "HTTP/1.1 200 OK"
+[2026-10-13 12:24:45,165][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe?recursive=true&expand=false "HTTP/1.1 308 Permanent Redirect"
+[2026-10-13 12:24:45,490][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe?recursive=true&expand=false "HTTP/1.1 200 OK"
+[2026-10-13 12:24:45,765][httpx][INFO] - HTTP Request: HEAD https://hf-mirror.com/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/dataset_infos.json "HTTP/1.1 308 Permanent Redirect"

@@ -1,0 +1,242 @@
+[2026-10-13 12:27:55,984][lm_eval.models.huggingface][WARNING] - `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+[2026-10-13 12:27:55,987][lm_eval.models.huggingface][WARNING] - Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[2026-10-13 12:27:55,989][evaluator][INFO] - ***** Running LMEval evaluation suite *****
+[2026-10-13 12:27:55,990][evaluator][INFO] - Fine-grained evaluations will be saved to: ./saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/LMEval_EVAL.json
+[2026-10-13 12:27:55,990][evaluator][INFO] - Aggregated evaluations will be summarised in: ./saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/LMEval_SUMMARY.json
+[2026-10-13 12:27:55,991][lm_eval.evaluator][INFO] - Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+[2026-10-13 12:27:55,992][lm_eval.evaluator][INFO] - Using pre-initialized model
+[2026-10-13 12:27:57,099][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:27:57,500][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:27:57,886][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:27:58,267][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:27:58,653][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:27:59,037][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:27:59,415][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:27:59,792][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:00,171][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:00,550][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:00,936][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:01,332][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:01,715][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:02,094][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:02,480][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:02,884][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:03,268][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:03,653][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:04,054][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:04,763][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:05,141][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:05,574][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:05,955][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:06,350][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:06,719][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:07,111][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:07,490][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:07,873][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:08,255][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:08,626][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:09,007][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:09,394][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:09,795][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:10,183][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:10,552][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:10,923][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:11,307][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:11,716][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:12,097][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:12,481][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:12,868][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:13,253][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:13,648][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:14,026][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:14,404][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:14,803][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:15,212][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:15,594][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:15,975][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:16,362][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:16,747][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:17,125][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:17,514][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:17,892][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:18,281][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:18,659][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:19,040][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:28:19,074][lm_eval.tasks][INFO] - Selected tasks:
+[2026-10-13 12:28:19,074][lm_eval.tasks][INFO] - Group: mmlu
+[2026-10-13 12:28:19,074][lm_eval.tasks][INFO] -   Subgroup: mmlu_stem
+[2026-10-13 12:28:19,075][lm_eval.tasks][INFO] -     Task: mmlu_abstract_algebra (configs/eval/tasks/mmlu_pinned/mmlu_abstract_algebra.yaml)
+[2026-10-13 12:28:19,075][lm_eval.tasks][INFO] -     Task: mmlu_anatomy (configs/eval/tasks/mmlu_pinned/mmlu_anatomy.yaml)
+[2026-10-13 12:28:19,075][lm_eval.tasks][INFO] -     Task: mmlu_astronomy (configs/eval/tasks/mmlu_pinned/mmlu_astronomy.yaml)
+[2026-10-13 12:28:19,075][lm_eval.tasks][INFO] -     Task: mmlu_college_biology (configs/eval/tasks/mmlu_pinned/mmlu_college_biology.yaml)
+[2026-10-13 12:28:19,076][lm_eval.tasks][INFO] -     Task: mmlu_college_chemistry (configs/eval/tasks/mmlu_pinned/mmlu_college_chemistry.yaml)
+[2026-10-13 12:28:19,076][lm_eval.tasks][INFO] -     Task: mmlu_college_computer_science (configs/eval/tasks/mmlu_pinned/mmlu_college_computer_science.yaml)
+[2026-10-13 12:28:19,076][lm_eval.tasks][INFO] -     Task: mmlu_college_mathematics (configs/eval/tasks/mmlu_pinned/mmlu_college_mathematics.yaml)
+[2026-10-13 12:28:19,076][lm_eval.tasks][INFO] -     Task: mmlu_college_physics (configs/eval/tasks/mmlu_pinned/mmlu_college_physics.yaml)
+[2026-10-13 12:28:19,076][lm_eval.tasks][INFO] -     Task: mmlu_computer_security (configs/eval/tasks/mmlu_pinned/mmlu_computer_security.yaml)
+[2026-10-13 12:28:19,077][lm_eval.tasks][INFO] -     Task: mmlu_conceptual_physics (configs/eval/tasks/mmlu_pinned/mmlu_conceptual_physics.yaml)
+[2026-10-13 12:28:19,077][lm_eval.tasks][INFO] -     Task: mmlu_electrical_engineering (configs/eval/tasks/mmlu_pinned/mmlu_electrical_engineering.yaml)
+[2026-10-13 12:28:19,077][lm_eval.tasks][INFO] -     Task: mmlu_elementary_mathematics (configs/eval/tasks/mmlu_pinned/mmlu_elementary_mathematics.yaml)
+[2026-10-13 12:28:19,077][lm_eval.tasks][INFO] -     Task: mmlu_high_school_biology (configs/eval/tasks/mmlu_pinned/mmlu_high_school_biology.yaml)
+[2026-10-13 12:28:19,077][lm_eval.tasks][INFO] -     Task: mmlu_high_school_chemistry (configs/eval/tasks/mmlu_pinned/mmlu_high_school_chemistry.yaml)
+[2026-10-13 12:28:19,077][lm_eval.tasks][INFO] -     Task: mmlu_high_school_computer_science (configs/eval/tasks/mmlu_pinned/mmlu_high_school_computer_science.yaml)
+[2026-10-13 12:28:19,078][lm_eval.tasks][INFO] -     Task: mmlu_high_school_mathematics (configs/eval/tasks/mmlu_pinned/mmlu_high_school_mathematics.yaml)
+[2026-10-13 12:28:19,078][lm_eval.tasks][INFO] -     Task: mmlu_high_school_physics (configs/eval/tasks/mmlu_pinned/mmlu_high_school_physics.yaml)
+[2026-10-13 12:28:19,078][lm_eval.tasks][INFO] -     Task: mmlu_high_school_statistics (configs/eval/tasks/mmlu_pinned/mmlu_high_school_statistics.yaml)
+[2026-10-13 12:28:19,078][lm_eval.tasks][INFO] -     Task: mmlu_machine_learning (configs/eval/tasks/mmlu_pinned/mmlu_machine_learning.yaml)
+[2026-10-13 12:28:19,078][lm_eval.tasks][INFO] -   Subgroup: mmlu_other
+[2026-10-13 12:28:19,079][lm_eval.tasks][INFO] -     Task: mmlu_business_ethics (configs/eval/tasks/mmlu_pinned/mmlu_business_ethics.yaml)
+[2026-10-13 12:28:19,079][lm_eval.tasks][INFO] -     Task: mmlu_clinical_knowledge (configs/eval/tasks/mmlu_pinned/mmlu_clinical_knowledge.yaml)
+[2026-10-13 12:28:19,079][lm_eval.tasks][INFO] -     Task: mmlu_college_medicine (configs/eval/tasks/mmlu_pinned/mmlu_college_medicine.yaml)
+[2026-10-13 12:28:19,079][lm_eval.tasks][INFO] -     Task: mmlu_global_facts (configs/eval/tasks/mmlu_pinned/mmlu_global_facts.yaml)
+[2026-10-13 12:28:19,079][lm_eval.tasks][INFO] -     Task: mmlu_human_aging (configs/eval/tasks/mmlu_pinned/mmlu_human_aging.yaml)
+[2026-10-13 12:28:19,080][lm_eval.tasks][INFO] -     Task: mmlu_management (configs/eval/tasks/mmlu_pinned/mmlu_management.yaml)
+[2026-10-13 12:28:19,080][lm_eval.tasks][INFO] -     Task: mmlu_marketing (configs/eval/tasks/mmlu_pinned/mmlu_marketing.yaml)
+[2026-10-13 12:28:19,080][lm_eval.tasks][INFO] -     Task: mmlu_medical_genetics (configs/eval/tasks/mmlu_pinned/mmlu_medical_genetics.yaml)
+[2026-10-13 12:28:19,080][lm_eval.tasks][INFO] -     Task: mmlu_miscellaneous (configs/eval/tasks/mmlu_pinned/mmlu_miscellaneous.yaml)
+[2026-10-13 12:28:19,080][lm_eval.tasks][INFO] -     Task: mmlu_nutrition (configs/eval/tasks/mmlu_pinned/mmlu_nutrition.yaml)
+[2026-10-13 12:28:19,081][lm_eval.tasks][INFO] -     Task: mmlu_professional_accounting (configs/eval/tasks/mmlu_pinned/mmlu_professional_accounting.yaml)
+[2026-10-13 12:28:19,081][lm_eval.tasks][INFO] -     Task: mmlu_professional_medicine (configs/eval/tasks/mmlu_pinned/mmlu_professional_medicine.yaml)
+[2026-10-13 12:28:19,081][lm_eval.tasks][INFO] -     Task: mmlu_virology (configs/eval/tasks/mmlu_pinned/mmlu_virology.yaml)
+[2026-10-13 12:28:19,081][lm_eval.tasks][INFO] -   Subgroup: mmlu_social_sciences
+[2026-10-13 12:28:19,081][lm_eval.tasks][INFO] -     Task: mmlu_econometrics (configs/eval/tasks/mmlu_pinned/mmlu_econometrics.yaml)
+[2026-10-13 12:28:19,082][lm_eval.tasks][INFO] -     Task: mmlu_high_school_geography (configs/eval/tasks/mmlu_pinned/mmlu_high_school_geography.yaml)
+[2026-10-13 12:28:19,082][lm_eval.tasks][INFO] -     Task: mmlu_high_school_government_and_politics (configs/eval/tasks/mmlu_pinned/mmlu_high_school_government_and_politics.yaml)
+[2026-10-13 12:28:19,082][lm_eval.tasks][INFO] -     Task: mmlu_high_school_macroeconomics (configs/eval/tasks/mmlu_pinned/mmlu_high_school_macroeconomics.yaml)
+[2026-10-13 12:28:19,082][lm_eval.tasks][INFO] -     Task: mmlu_high_school_microeconomics (configs/eval/tasks/mmlu_pinned/mmlu_high_school_microeconomics.yaml)
+[2026-10-13 12:28:19,082][lm_eval.tasks][INFO] -     Task: mmlu_high_school_psychology (configs/eval/tasks/mmlu_pinned/mmlu_high_school_psychology.yaml)
+[2026-10-13 12:28:19,082][lm_eval.tasks][INFO] -     Task: mmlu_human_sexuality (configs/eval/tasks/mmlu_pinned/mmlu_human_sexuality.yaml)
+[2026-10-13 12:28:19,083][lm_eval.tasks][INFO] -     Task: mmlu_professional_psychology (configs/eval/tasks/mmlu_pinned/mmlu_professional_psychology.yaml)
+[2026-10-13 12:28:19,083][lm_eval.tasks][INFO] -     Task: mmlu_public_relations (configs/eval/tasks/mmlu_pinned/mmlu_public_relations.yaml)
+[2026-10-13 12:28:19,083][lm_eval.tasks][INFO] -     Task: mmlu_security_studies (configs/eval/tasks/mmlu_pinned/mmlu_security_studies.yaml)
+[2026-10-13 12:28:19,083][lm_eval.tasks][INFO] -     Task: mmlu_sociology (configs/eval/tasks/mmlu_pinned/mmlu_sociology.yaml)
+[2026-10-13 12:28:19,083][lm_eval.tasks][INFO] -     Task: mmlu_us_foreign_policy (configs/eval/tasks/mmlu_pinned/mmlu_us_foreign_policy.yaml)
+[2026-10-13 12:28:19,084][lm_eval.tasks][INFO] -   Subgroup: mmlu_humanities
+[2026-10-13 12:28:19,084][lm_eval.tasks][INFO] -     Task: mmlu_formal_logic (configs/eval/tasks/mmlu_pinned/mmlu_formal_logic.yaml)
+[2026-10-13 12:28:19,084][lm_eval.tasks][INFO] -     Task: mmlu_high_school_european_history (configs/eval/tasks/mmlu_pinned/mmlu_high_school_european_history.yaml)
+[2026-10-13 12:28:19,084][lm_eval.tasks][INFO] -     Task: mmlu_high_school_us_history (configs/eval/tasks/mmlu_pinned/mmlu_high_school_us_history.yaml)
+[2026-10-13 12:28:19,084][lm_eval.tasks][INFO] -     Task: mmlu_high_school_world_history (configs/eval/tasks/mmlu_pinned/mmlu_high_school_world_history.yaml)
+[2026-10-13 12:28:19,084][lm_eval.tasks][INFO] -     Task: mmlu_international_law (configs/eval/tasks/mmlu_pinned/mmlu_international_law.yaml)
+[2026-10-13 12:28:19,085][lm_eval.tasks][INFO] -     Task: mmlu_jurisprudence (configs/eval/tasks/mmlu_pinned/mmlu_jurisprudence.yaml)
+[2026-10-13 12:28:19,085][lm_eval.tasks][INFO] -     Task: mmlu_logical_fallacies (configs/eval/tasks/mmlu_pinned/mmlu_logical_fallacies.yaml)
+[2026-10-13 12:28:19,085][lm_eval.tasks][INFO] -     Task: mmlu_moral_disputes (configs/eval/tasks/mmlu_pinned/mmlu_moral_disputes.yaml)
+[2026-10-13 12:28:19,085][lm_eval.tasks][INFO] -     Task: mmlu_moral_scenarios (configs/eval/tasks/mmlu_pinned/mmlu_moral_scenarios.yaml)
+[2026-10-13 12:28:19,085][lm_eval.tasks][INFO] -     Task: mmlu_philosophy (configs/eval/tasks/mmlu_pinned/mmlu_philosophy.yaml)
+[2026-10-13 12:28:19,085][lm_eval.tasks][INFO] -     Task: mmlu_prehistory (configs/eval/tasks/mmlu_pinned/mmlu_prehistory.yaml)
+[2026-10-13 12:28:19,086][lm_eval.tasks][INFO] -     Task: mmlu_professional_law (configs/eval/tasks/mmlu_pinned/mmlu_professional_law.yaml)
+[2026-10-13 12:28:19,086][lm_eval.tasks][INFO] -     Task: mmlu_world_religions (configs/eval/tasks/mmlu_pinned/mmlu_world_religions.yaml)
+[2026-10-13 12:28:19,086][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_abstract_algebra from None to 0
+[2026-10-13 12:28:19,086][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_anatomy from None to 0
+[2026-10-13 12:28:19,086][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_astronomy from None to 0
+[2026-10-13 12:28:19,087][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_college_biology from None to 0
+[2026-10-13 12:28:19,087][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_college_chemistry from None to 0
+[2026-10-13 12:28:19,087][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_college_computer_science from None to 0
+[2026-10-13 12:28:19,087][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_college_mathematics from None to 0
+[2026-10-13 12:28:19,087][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_college_physics from None to 0
+[2026-10-13 12:28:19,087][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_computer_security from None to 0
+[2026-10-13 12:28:19,087][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_conceptual_physics from None to 0
+[2026-10-13 12:28:19,088][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_electrical_engineering from None to 0
+[2026-10-13 12:28:19,088][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_elementary_mathematics from None to 0
+[2026-10-13 12:28:19,088][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_biology from None to 0
+[2026-10-13 12:28:19,088][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_chemistry from None to 0
+[2026-10-13 12:28:19,088][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_computer_science from None to 0
+[2026-10-13 12:28:19,088][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_mathematics from None to 0
+[2026-10-13 12:28:19,088][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_physics from None to 0
+[2026-10-13 12:28:19,089][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_statistics from None to 0
+[2026-10-13 12:28:19,089][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_machine_learning from None to 0
+[2026-10-13 12:28:19,089][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_business_ethics from None to 0
+[2026-10-13 12:28:19,089][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_clinical_knowledge from None to 0
+[2026-10-13 12:28:19,089][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_college_medicine from None to 0
+[2026-10-13 12:28:19,089][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_global_facts from None to 0
+[2026-10-13 12:28:19,089][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_human_aging from None to 0
+[2026-10-13 12:28:19,090][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_management from None to 0
+[2026-10-13 12:28:19,090][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_marketing from None to 0
+[2026-10-13 12:28:19,090][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_medical_genetics from None to 0
+[2026-10-13 12:28:19,090][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_miscellaneous from None to 0
+[2026-10-13 12:28:19,090][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_nutrition from None to 0
+[2026-10-13 12:28:19,090][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_professional_accounting from None to 0
+[2026-10-13 12:28:19,091][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_professional_medicine from None to 0
+[2026-10-13 12:28:19,091][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_virology from None to 0
+[2026-10-13 12:28:19,091][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_econometrics from None to 0
+[2026-10-13 12:28:19,091][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_geography from None to 0
+[2026-10-13 12:28:19,091][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_government_and_politics from None to 0
+[2026-10-13 12:28:19,091][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_macroeconomics from None to 0
+[2026-10-13 12:28:19,091][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_microeconomics from None to 0
+[2026-10-13 12:28:19,092][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_psychology from None to 0
+[2026-10-13 12:28:19,092][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_human_sexuality from None to 0
+[2026-10-13 12:28:19,092][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_professional_psychology from None to 0
+[2026-10-13 12:28:19,092][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_public_relations from None to 0
+[2026-10-13 12:28:19,092][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_security_studies from None to 0
+[2026-10-13 12:28:19,092][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_sociology from None to 0
+[2026-10-13 12:28:19,092][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_us_foreign_policy from None to 0
+[2026-10-13 12:28:19,093][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_formal_logic from None to 0
+[2026-10-13 12:28:19,093][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_european_history from None to 0
+[2026-10-13 12:28:19,093][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_us_history from None to 0
+[2026-10-13 12:28:19,093][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_high_school_world_history from None to 0
+[2026-10-13 12:28:19,093][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_international_law from None to 0
+[2026-10-13 12:28:19,093][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_jurisprudence from None to 0
+[2026-10-13 12:28:19,093][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_logical_fallacies from None to 0
+[2026-10-13 12:28:19,094][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_moral_disputes from None to 0
+[2026-10-13 12:28:19,094][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_moral_scenarios from None to 0
+[2026-10-13 12:28:19,094][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_philosophy from None to 0
+[2026-10-13 12:28:19,094][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_prehistory from None to 0
+[2026-10-13 12:28:19,094][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_professional_law from None to 0
+[2026-10-13 12:28:19,094][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_world_religions from None to 0
+[2026-10-13 12:28:19,103][lm_eval.api.task][INFO] - Building contexts for mmlu_abstract_algebra on rank 0...
+[2026-10-13 12:28:19,262][lm_eval.api.task][INFO] - Building contexts for mmlu_anatomy on rank 0...
+[2026-10-13 12:28:19,477][lm_eval.api.task][INFO] - Building contexts for mmlu_astronomy on rank 0...
+[2026-10-13 12:28:19,721][lm_eval.api.task][INFO] - Building contexts for mmlu_college_biology on rank 0...
+[2026-10-13 12:28:19,973][lm_eval.api.task][INFO] - Building contexts for mmlu_college_chemistry on rank 0...
+[2026-10-13 12:28:20,196][lm_eval.api.task][INFO] - Building contexts for mmlu_college_computer_science on rank 0...
+[2026-10-13 12:28:20,358][lm_eval.api.task][INFO] - Building contexts for mmlu_college_mathematics on rank 0...
+[2026-10-13 12:28:20,518][lm_eval.api.task][INFO] - Building contexts for mmlu_college_physics on rank 0...
+[2026-10-13 12:28:20,682][lm_eval.api.task][INFO] - Building contexts for mmlu_computer_security on rank 0...
+[2026-10-13 12:28:20,842][lm_eval.api.task][INFO] - Building contexts for mmlu_conceptual_physics on rank 0...
+[2026-10-13 12:28:21,217][lm_eval.api.task][INFO] - Building contexts for mmlu_electrical_engineering on rank 0...
+[2026-10-13 12:28:21,452][lm_eval.api.task][INFO] - Building contexts for mmlu_elementary_mathematics on rank 0...
+[2026-10-13 12:28:22,049][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_biology on rank 0...
+[2026-10-13 12:28:22,538][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_chemistry on rank 0...
+[2026-10-13 12:28:22,859][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_computer_science on rank 0...
+[2026-10-13 12:28:23,358][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_mathematics on rank 0...
+[2026-10-13 12:28:23,784][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_physics on rank 0...
+[2026-10-13 12:28:24,022][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_statistics on rank 0...
+[2026-10-13 12:28:24,362][lm_eval.api.task][INFO] - Building contexts for mmlu_machine_learning on rank 0...
+[2026-10-13 12:28:24,535][lm_eval.api.task][INFO] - Building contexts for mmlu_business_ethics on rank 0...
+[2026-10-13 12:28:24,689][lm_eval.api.task][INFO] - Building contexts for mmlu_clinical_knowledge on rank 0...
+[2026-10-13 12:28:24,993][lm_eval.api.task][INFO] - Building contexts for mmlu_college_medicine on rank 0...
+[2026-10-13 12:28:25,211][lm_eval.api.task][INFO] - Building contexts for mmlu_global_facts on rank 0...
+[2026-10-13 12:28:25,327][lm_eval.api.task][INFO] - Building contexts for mmlu_human_aging on rank 0...
+[2026-10-13 12:28:25,588][lm_eval.api.task][INFO] - Building contexts for mmlu_management on rank 0...
+[2026-10-13 12:28:25,705][lm_eval.api.task][INFO] - Building contexts for mmlu_marketing on rank 0...
+[2026-10-13 12:28:25,982][lm_eval.api.task][INFO] - Building contexts for mmlu_medical_genetics on rank 0...
+[2026-10-13 12:28:26,107][lm_eval.api.task][INFO] - Building contexts for mmlu_miscellaneous on rank 0...
+[2026-10-13 12:28:27,033][lm_eval.api.task][INFO] - Building contexts for mmlu_nutrition on rank 0...
+[2026-10-13 12:28:27,395][lm_eval.api.task][INFO] - Building contexts for mmlu_professional_accounting on rank 0...
+[2026-10-13 12:28:27,739][lm_eval.api.task][INFO] - Building contexts for mmlu_professional_medicine on rank 0...
+[2026-10-13 12:28:28,061][lm_eval.api.task][INFO] - Building contexts for mmlu_virology on rank 0...
+[2026-10-13 12:28:28,263][lm_eval.api.task][INFO] - Building contexts for mmlu_econometrics on rank 0...
+[2026-10-13 12:28:28,400][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_geography on rank 0...
+[2026-10-13 12:28:28,638][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_government_and_politics on rank 0...
+[2026-10-13 12:28:28,865][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_macroeconomics on rank 0...
+[2026-10-13 12:28:29,315][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_microeconomics on rank 0...
+[2026-10-13 12:28:29,583][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_psychology on rank 0...
+[2026-10-13 12:28:30,235][lm_eval.api.task][INFO] - Building contexts for mmlu_human_sexuality on rank 0...
+[2026-10-13 12:28:30,387][lm_eval.api.task][INFO] - Building contexts for mmlu_professional_psychology on rank 0...
+[2026-10-13 12:28:31,122][lm_eval.api.task][INFO] - Building contexts for mmlu_public_relations on rank 0...
+[2026-10-13 12:28:31,260][lm_eval.api.task][INFO] - Building contexts for mmlu_security_studies on rank 0...
+[2026-10-13 12:28:31,552][lm_eval.api.task][INFO] - Building contexts for mmlu_sociology on rank 0...
+[2026-10-13 12:28:31,785][lm_eval.api.task][INFO] - Building contexts for mmlu_us_foreign_policy on rank 0...
+[2026-10-13 12:28:31,900][lm_eval.api.task][INFO] - Building contexts for mmlu_formal_logic on rank 0...
+[2026-10-13 12:28:32,048][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_european_history on rank 0...
+[2026-10-13 12:28:32,248][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_us_history on rank 0...
+[2026-10-13 12:28:32,490][lm_eval.api.task][INFO] - Building contexts for mmlu_high_school_world_history on rank 0...
+[2026-10-13 12:28:32,765][lm_eval.api.task][INFO] - Building contexts for mmlu_international_law on rank 0...
+[2026-10-13 12:28:32,906][lm_eval.api.task][INFO] - Building contexts for mmlu_jurisprudence on rank 0...
+[2026-10-13 12:28:33,034][lm_eval.api.task][INFO] - Building contexts for mmlu_logical_fallacies on rank 0...
+[2026-10-13 12:28:33,225][lm_eval.api.task][INFO] - Building contexts for mmlu_moral_disputes on rank 0...
+[2026-10-13 12:28:33,636][lm_eval.api.task][INFO] - Building contexts for mmlu_moral_scenarios on rank 0...
+[2026-10-13 12:28:34,678][lm_eval.api.task][INFO] - Building contexts for mmlu_philosophy on rank 0...
+[2026-10-13 12:28:35,043][lm_eval.api.task][INFO] - Building contexts for mmlu_prehistory on rank 0...
+[2026-10-13 12:28:35,429][lm_eval.api.task][INFO] - Building contexts for mmlu_professional_law on rank 0...
+[2026-10-13 12:28:37,198][lm_eval.api.task][INFO] - Building contexts for mmlu_world_religions on rank 0...
+[2026-10-13 12:28:37,391][lm_eval.evaluator][INFO] - Running loglikelihood requests

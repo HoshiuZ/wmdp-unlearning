@@ -1,0 +1,72 @@
+{
+  "run_id": "qwen3_4b_base_mmlu_0shot_full_v1",
+  "started_recorded_at": "2026-10-13T12:27:58.058809+08:00",
+  "code_commit": "14b97b6a2664fd81380c4a013147cf65f5412642",
+  "command": "HF_ENDPOINT=https://huggingface.co HF_HOME=/root/autodl-tmp/wmdp-work/cache/huggingface HF_HUB_DISABLE_XET=1 HF_HUB_DISABLE_IMPLICIT_TOKEN=1 HYDRA_FULL_ERROR=1 /root/autodl-tmp/wmdp-work/envs/unlearning/bin/python -u src/eval.py experiment=eval/mmlu/qwen3_4b_baseline",
+  "working_directory": "/root/autodl-tmp/wmdp-work/open-unlearning",
+  "output_dir": "open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1",
+  "dataset_manifest": "logs/mmlu_dataset_manifest.json",
+  "status": "completed",
+  "protocol": {
+    "num_fewshot": 0,
+    "apply_chat_template": false,
+    "system_instruction": null,
+    "batch_size": 1,
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "scoring": "multiple_choice loglikelihood of A/B/C/D",
+    "random_seed": 0,
+    "numpy_random_seed": 1234,
+    "torch_random_seed": 1234,
+    "fewshot_random_seed": 1234,
+    "limit": null
+  },
+  "completed_recorded_at": "2026-10-13T12:40:21.094612+08:00",
+  "exit_code": 0,
+  "sample_count": 14042,
+  "correct_count": 9924,
+  "subjects": 57,
+  "accuracy": 0.70673693206096,
+  "accuracy_percent": 70.673693206096,
+  "acc_stderr": 0.003616528576556448,
+  "stderr_percentage_points": 0.3616528576556448,
+  "validation": "All per-subject counts match snapshot, all tasks are 0-shot, no sample limit, accuracy equals sum of per-question acc / 14042.",
+  "failed_attempt": "logs/qwen3_4b_base_mmlu_0shot_full_v1.failed_loading.console.log",
+  "artifacts": [
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/.hydra/config.yaml",
+      "size_bytes": 1451,
+      "sha256": "c1a665a4109d916be6309e2a45ace61003f6fdf067c705f7e8ef2b392ed8e3fa"
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/.hydra/hydra.yaml",
+      "size_bytes": 3951,
+      "sha256": "1332f6cba91ff7878e2ef41d36ab72dbf12182dd1e40cdddc85ace4568845fda"
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/.hydra/overrides.yaml",
+      "size_bytes": 41,
+      "sha256": "67e58ff9824a5967f5e3a6b60a614ecbb79e25303b60f4b595da94d4f518de76"
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/LMEval_EVAL.json",
+      "size_bytes": 73118467,
+      "sha256": "36f76416fcb9b7e7a27f3a9aa2010d5bc8471c3fe4b185713a349565a811af91"
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/LMEval_FULL_mmlu.json",
+      "size_bytes": 60568014,
+      "sha256": "986240165198d2135743ac53d4c0a87af639092c7dff7851129c161749046e34"
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/LMEval_SUMMARY.json",
+      "size_bytes": 81,
+      "sha256": "e5dc74d0b96ae2966991c99308ee2690f13975b12eba54aa91f0b7a0f4a28bd6"
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/eval.log",
+      "size_bytes": 33200,
+      "sha256": "66e98ed02ca7b7e0e51c9b77954e3374a42163fe7c1aa2e687e2146905c553a9"
+    }
+  ]
+}

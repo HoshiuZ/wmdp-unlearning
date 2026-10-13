@@ -1,0 +1,57 @@
+model:
+  model_args:
+    device_map: cuda
+    pretrained_model_name_or_path: /root/autodl-tmp/wmdp-work/models/Qwen3-4B-Instruct-2507
+    attn_implementation: sdpa
+    torch_dtype: bfloat16
+    local_files_only: true
+  tokenizer_args:
+    pretrained_model_name_or_path: /root/autodl-tmp/wmdp-work/models/Qwen3-4B-Instruct-2507
+    local_files_only: true
+  template_args:
+    apply_chat_template: true
+    system_prompt: You are a helpful assistant.
+    system_prompt_with_special_tokens: '<|im_start|>system
+
+      You are a helpful assistant.<|im_end|>
+
+      '
+    user_start_tag: '<|im_start|>user
+
+      '
+    user_end_tag: '<|im_end|>
+
+      '
+    asst_start_tag: '<|im_start|>assistant
+
+      '
+    asst_end_tag: '<|im_end|>
+
+      '
+mode: eval
+task_name: qwen3_4b_base_mmlu_0shot_full_v1
+seed: 0
+eval:
+  lm_eval:
+    handler: LMEvalEvaluator
+    output_dir: ${paths.output_dir}
+    overwrite: false
+    tasks:
+    - mmlu
+    simple_evaluate_args:
+      batch_size: 1
+      system_instruction: null
+      apply_chat_template: false
+      num_fewshot: 0
+      log_samples: true
+      random_seed: 0
+      numpy_random_seed: 1234
+      torch_random_seed: 1234
+      fewshot_random_seed: 1234
+    task_include_path: configs/eval/tasks/mmlu_pinned
+paths:
+  root_dir: .
+  data_dir: ${paths.root_dir}/data/
+  datasets: ${paths.root_dir}/configs/data/datasets
+  output_dir: ${paths.root_dir}/saves/${mode}/${task_name}
+  work_dir: ${hydra:runtime.cwd}
