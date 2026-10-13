@@ -1,6 +1,6 @@
 """Aggregate the predeclared steering32 matched pair without changing old results."""
 import json,csv,argparse,math,shutil
-from rmu_adaptation_utils import ROOT,REPO,dump,materialized,digest
+from rmu_adaptation_utils import ROOT,REPO,dump,materialized,digest,base_samples
 from reweight_rmu_development import summarize
 OUT=REPO/'saves/unlearn/simnpo_rmu_v1'
 NAMES=['rmu_ce_s32_screen40','joint_gradcap_s32_screen40']
@@ -53,17 +53,34 @@ def main():
  if not a.report:return
  selected=read(selection_path)['selected'];full=[]
  for r in selected:
-  cp=(ROOT/r['path']).parent.parent;full.append(read(OUT/'s32_full_evaluations'/(cp.parent.name+'_'+cp.name)/'result.json'))
- audit={'cases':NAMES,'checkpoints':6,'compressed_bytes':size,'reference_frozen_unchanged':True,'same_sampling_tokens_control':True,'reload_object_sha_verified':True,'development_requests_verified':True,'controller_records':640,'cap_active':sum(r['cap_active'] for r in controller),'max_capped_ratio':max(r['capped_ratio'] for r in controller if r['capped_ratio'] is not None),'full_results':full,'space':shutil.disk_usage(ROOT)._asdict()};dump(ROOT/'logs/simnpo_rmu_s32_completion_audit.json',audit)
+  cp=(ROOT/r['path']).parent.parent;dest=OUT/'s32_full_evaluations'/(cp.parent.name+'_'+cp.name);full.append(read(dest/'result.json'))
+  data=read(dest/'samples.json')
+  for task,subjects in base_samples().items():
+   base={(name,x['doc_id']):x for name,records in subjects.items() for x in records};assert len(data[task])==len(base) and {(x['task'],x['doc_id']) for x in data[task]}==set(base)
+   for x in data[task]:
+    y=base[x['task'],x['doc_id']];assert x['doc_hash']==y['doc_hash'] and x['prompt_hash']==y['prompt_hash'] and x['target']==int(y['doc']['answer']) and x['baseline_acc']==int(y['acc'])
+
+ audit={'cases':NAMES,'checkpoints':6,'compressed_bytes':size,'reference_frozen_unchanged':True,'same_sampling_tokens_control':True,'reload_object_sha_verified':True,'development_requests_verified':True,'full_requests_verified':True,'controller_records':640,'cap_active':sum(r['cap_active'] for r in controller),'max_capped_ratio':max(r['capped_ratio'] for r in controller if r['capped_ratio'] is not None),'full_results':full,'space':shutil.disk_usage(ROOT)._asdict()};dump(ROOT/'logs/simnpo_rmu_s32_completion_audit.json',audit)
  lines=['# steering32匹配对照结果','','两组均从原始模型独立训练40步；hook12，10/11/12 down_proj.weight，lr5e-5，alpha2，steering32，seed42，256token，batch1/累积16。CE固定0.0600289086；联合Sim上界0.1566522562、beta0.1、delta0、rho0.5。组间只增加限幅Sim项。','', '| 开发实验 | 步数 | Bio% | MMLU题数加权% | MMLU等权% | 加权MMLU变化点 | 历史共同前沿 |','| --- | ---: | ---: | ---: | ---: | ---: | --- |']
  for r in new:
   cp=(ROOT/r['path']).parent.parent;lines.append(f"| {cp.parent.name} | {cp.name} | {r['bio_percent']:.4f} | {r['mmlu']['all']['weighted_percent']:.4f} | {r['mmlu']['all']['equal_percent']:.4f} | {r['weighted_change_pp']:+.4f} | {'是' if r['pareto_weighted'] else '否'} |")
+ lines+=['','同预算匹配比较（联合减RMU+CE）：','', '| 步 | Bio变化点 | 加权MMLU变化点 |','| --- | ---: | ---: |']
+ for step in [10,20,40]:
+  c=next(r for r in new if '/rmu_ce_s32_screen40/checkpoint-'+str(step)+'/' in r['path']);j=next(r for r in new if '/joint_gradcap_s32_screen40/checkpoint-'+str(step)+'/' in r['path']);lines.append(f"| {step} | {j['bio_percent']-c['bio_percent']:+.4f} | {j['weighted_change_pp']-c['weighted_change_pp']:+.4f} |")
+ lines+=['','单因素steering2→32（其余条件一致）：','', '| 实验 | 步 | s2 Bio% | s32 Bio% | s2 MMLU变化点 | s32 MMLU变化点 |','| --- | ---: | ---: | ---: | ---: | ---: |']
+ for name,previous in zip(NAMES,['rmu_ce_screen40','joint_gradcap_screen40']):
+  for step in [10,20,40]:
+   r=next(r for r in new if '/'+name+'/checkpoint-'+str(step)+'/' in r['path']);q=next(r for r in old['rows'] if '/'+previous+'/checkpoint-'+str(step)+'/' in r['path']);lines.append(f"| {name} | {step} | {q['bio_percent']:.4f} | {r['bio_percent']:.4f} | {q['weighted_change_pp']:+.4f} | {r['weighted_change_pp']:+.4f} |")
  lines+=['','开发集Bio256、MMLU1710，基线75.78125%/69.98410%（加权）。保存全部55个历史/新增点及生物相关、其他和每科学科结果；开发来自已观察官方test，retain文章验证不是MMLU独立验证。','']
  if not full:lines+=['新点未通过预先声明的总体前沿与能力约束筛选，不追加全量评测；不能以开发准确率声称改善最终全量结果。']
  else:
   lines+=['全量结果仍为探索性（官方test已参与调参）：','', '| 检查点 | Bio% | MMLU% | MMLU变化点 | <=2点 |','| --- | ---: | ---: | ---: | --- |']
   for f in full:
    m=f['metrics'];lines.append(f"| {f['checkpoint']} | {m['wmdp_bio']['accuracy_percent']:.4f} | {m['mmlu']['accuracy_percent']:.4f} | {m['mmlu']['change_percentage_points']:+.4f} | {f['loss_le_2pp']} |")
+ if full:
+  passing=[f for f in full if f['loss_le_2pp']]
+  if passing:
+   winner=min(passing,key=lambda f:f['metrics']['wmdp_bio']['accuracy_percent']);m=winner['metrics'];lines+=['',f"本轮选择RMU+CE第40步作为严格2点档最佳已观察候选：Bio{m['wmdp_bio']['accuracy_percent']:.4f}%、MMLU{m['mmlu']['accuracy_percent']:.4f}%。相比此前合格RMU alpha2/s2，Bio再低{66.30007855459544-m['wmdp_bio']['accuracy_percent']:.4f}点，MMLU低{69.13545079048569-m['mmlu']['accuracy_percent']:.4f}点；距离2点上限仅余{2+m['mmlu']['change_percentage_points']:.4f}点，不能声称多seed稳定满足。",'', '联合40步虽在开发集多降低Bio3.5156点，却多损失加权MMLU2.2219点，未达到2点或3点筛选档，因此未全量评测。新增Sim项没有展示更好的匹配取舍；新候选仍属于RMU加保留正则，不应宣称Sim联合已成功。下一步建议先对新RMU+CE候选做另一个固定seed复验，并先确定独立筛选/验证方案；本轮不自动执行。']
  lines+=['','历史全量参考：原始Bio73.8413%、MMLU70.6737%；RMU alpha2/s32无额外CE为55.3810%/68.4874%，MMLU下降2.1863点；严格2点约束最佳已观测RMU alpha2/s2为66.3001%/69.1355%。不能把额外CE收益归因于Sim。','',f"限幅触发{audit['cap_active']}/640，最大微批次比例{audit['max_capped_ratio']:.6f}。只约束单微批次原始梯度，不保证Adam、累积或MMLU约束；未加权分项与实际权重逐批保留。两组input/loss/prediction=320619/319339/319339，采样、方向、预算一致；冻结参数/参考不变，6增量逐位重建及真实LFS对象SHA通过，合计{size/2**20:.2f}MiB。没有optimizer状态，不能断点续训。",'']
  for run in runs:lines.append(f"{run['name']}：{run['elapsed_seconds']:.1f}秒（含回调），峰值allocated {run['cuda_peak_allocated_bytes']/2**30:.3f}GiB/reserved {run['cuda_peak_reserved_bytes']/2**30:.3f}GiB；代码{run['code_commit']}；retain NLL {run['validation'][-1]['retain_nll']:.4f}。")
  lines+=['','完整配置、数据manifest、代码版本、控制向量、逐题请求、损失及指纹均留档。固定原始模型本地SHA；远端不可变revision仍未知。单seed、小开发集、已观察测试存在限制，WMDP下降不证明知识彻底删除。未追加系数/层/多seed搜索，未自动推送。下一步应根据匹配结果判断是否保留Sim联合路线；如继续验证，先确定独立验证方案与计算预算。']

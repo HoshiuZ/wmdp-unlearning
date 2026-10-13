@@ -15,3 +15,6 @@ SimNPO组不使用RMU目标或参考表示作为loss，但为了共享审计基�
 
 
 `joint_gradcap_screen40` 为训练中梯度尺度限幅的单因素对照，模型增量恢复方式相同。`controller_metrics.json`记录640个训练microbatch的原始范数、权重及限幅后比值。3个检查点均已核验，未保存optimizer，不能断点续训；验证使用最新训练权重且不更新控制器。报告为 `docs/simnpo-rmu-cap-results.md`。
+
+
+`rmu_ce_s32_screen40`及`joint_gradcap_s32_screen40`为steering32匹配对照，每组均保存10/20/40步增量，恢复方法相同。新严格2点档最佳已观察候选是`rmu_ce_s32_screen40/checkpoint-40`，全量Bio58.2875%、MMLU68.7936%（下降1.8801点）；联合组未通过开发筛选，没有全量结果。配置、原始基模校验、640次实际采样和联合控制器记录均保留，不保存optimizer，不能断点续训。中文报告：`docs/simnpo-rmu-s32-results.md`。新产物仅本地Git/LFS保存，未自动推送。

@@ -1,0 +1,16 @@
+{
+  "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_screen40/checkpoint-40",
+  "code_commit": "3ca99f4c33a76522332de9adb023ff70a8f9a0b6",
+  "task_samples": {
+    "wmdp_bio": 1273,
+    "mmlu": 14042
+  },
+  "num_fewshot": 0,
+  "batch_size": 1,
+  "dtype": "bfloat16",
+  "attn": "sdpa",
+  "apply_chat_template": false,
+  "system_instruction": null,
+  "scoring": "Exact archived original requests, argmax continuation loglikelihood; no stochastic generation",
+  "exploratory": true
+}
