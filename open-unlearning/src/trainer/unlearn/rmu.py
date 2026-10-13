@@ -42,6 +42,7 @@ class RMU(GradDiff):
         self.ref_module = self._get_matching_module(self.ref_model, self.module_regex)
         self.steering_coeff = steering_coeff
         self.control_vec = None
+        self.step_loss_records = []
 
     def create_optimizer(self):
         self._freeze_all_params(self.model, False)
@@ -182,5 +183,15 @@ class RMU(GradDiff):
         retain_loss = self.compute_retain_loss(model=model, retain_inputs=retain_inputs)
 
         loss = self.gamma * forget_loss + self.alpha * retain_loss
+        if not torch.isfinite(loss):
+            raise FloatingPointError("Non-finite RMU loss")
+        if model.training:
+            self.step_loss_records.append({
+                "forget_loss": float(forget_loss.detach().float().cpu()),
+                "retain_loss": float(retain_loss.detach().float().cpu()),
+                "total_loss": float(loss.detach().float().cpu()),
+                "input_tokens": int(forget_inputs["attention_mask"].sum() + retain_inputs["attention_mask"].sum()),
+                "loss_tokens": int((forget_inputs["labels"] != -100).sum() + (retain_inputs["labels"] != -100).sum()),
+            })
 
         return (loss, forget_outputs) if return_outputs else loss
