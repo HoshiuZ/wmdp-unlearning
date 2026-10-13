@@ -27,6 +27,8 @@ def main():
  if a.need_fallback:print(int(not any(r['development_constraint_pass'] for r in rows)));return
  pick=choose(rows);selection={'selected':pick,'development_constraint_pass':pick['development_constraint_pass'],'all_candidates':rows,'independent_final_test':False,'full_evaluation_label':'exploratory; official test statistics were previously observed, development subset used in tuning'}
  dump(ROOT/'logs/rmu_adaptation_selection.json',selection)
+ if a.full and not pick['development_constraint_pass']:
+  dump(ROOT/'logs/rmu_adaptation_result.json',{'selection':selection,'full_metrics':None,'full_mmlu_constraint_pass':False,'note':'No development candidate met the 2pp constraint; no full candidate evaluation performed.'});print('NO_QUALIFYING_CANDIDATE',flush=True);return
  if a.full:
   out=OUT/'selected_full_evaluation'
   if out.exists():raise RuntimeError('Refuse to rerun/overwrite selected full evaluation')
