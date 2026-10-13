@@ -56,6 +56,15 @@ def main():
     trials=[]; cpbytes=0; cpcount=0
     for folder in sorted(NEW.glob('h12_*')):
         run=read(folder/'run.json'); assert run['status']=='completed' and run['steps']==40
+        vector=read(folder/'control_vector.json')
+        assert vector['unit_direction_sha256']==vector['saved_original_direction_sha256']=='4ce2cff959ea65bf75a4ed391c3db0bfae83aa5f226a110217532b310565a967'
+        assert vector['l2_norm']==run['steering']
+        consumed=read(folder/'consumed_block_indices.json'); assert consumed==read(OUT/'h12_a1_lr5e-05_s2_screen40/consumed_block_indices.json')
+        assert len(consumed['forget'])==len(consumed['retain'])==640
+        if run['coverage_dir']:
+            for role in ['forget','retain']:
+                positions=read(folder/f'{role}_consumed_positions.json')
+                assert len(positions)==640 and [p['index'] for p in positions]==consumed[role]
         for key in ['frozen_parameters_unchanged','reference_unchanged','sampling_sequence_identical','control_direction_identical']: assert run[key]
         assert run['actual_input_tokens']==320619 and run['actual_loss_tokens']==319339
         for check in run['development']:
@@ -134,6 +143,12 @@ def main():
     for t in [2,3]:
         best=min((r for r in full if r['loss_le_'+str(t)+'pp']),key=lambda r:(r['metrics']['wmdp_bio']['accuracy_percent'],-r['metrics']['mmlu']['accuracy_percent']))
         lines.append(f"在已观测全量结果中，损失≤{t}点的最低Bio为 `{best['name']}`：Bio{best['metrics']['wmdp_bio']['accuracy_percent']:.4f}%，MMLU{best['metrics']['mmlu']['accuracy_percent']:.4f}%。这是探索性比较，不新增调参、不将3点参考阈值解释为遗忘成功。")
+    newly_evaluated=full[4:]
+    if not any(r['loss_le_2pp'] for r in newly_evaluated):
+        lines+=['','本轮新增全量候选均未满足原来的2点约束；2点档仍保留旧alpha2/steering2候选，不能把开发达标冒充全量达标。']
+    for r in newly_evaluated:
+        old_a2=full[3];b=r['metrics']['wmdp_bio'];m=r['metrics']['mmlu']
+        lines.append(f"新增 `{r['name']}` 相比旧hook12/alpha2/steering2：Bio变化{b['accuracy_percent']-old_a2['metrics']['wmdp_bio']['accuracy_percent']:+.4f}点，MMLU变化{m['accuracy_percent']-old_a2['metrics']['mmlu']['accuracy_percent']:+.4f}点。该变化代表不同取舍，是否全面改进由上表Pareto标记判断。")
     lines+=['','## 运行、保存和限制','',
     '| 新实验 | 代码提交 | 运行秒数* | 峰值allocated GiB | reserved GiB | 保存权重步 |','| --- | --- | ---: | ---: | ---: | --- |']
     for r in trials:lines.append(f"| {r['name']} | {r['code_commit'][:7]} | {r['elapsed_seconds']:.1f} | {r['cuda_peak_allocated_bytes']/2**30:.3f} | {r['cuda_peak_reserved_bytes']/2**30:.3f} | {r['saved_steps']} |")
@@ -142,6 +157,7 @@ def main():
     '检查点为BF16逐位XOR+gzip，必须使用固定原始模型和load_delta重建，不是LoRA或独立HF完整模型。保存后已重载核实逐位一致，最终评测另从完整指纹一致的原模型重建。未保存优化器状态，不能宣称可断点续训。失败和负面结果不覆盖。','',
     '本轮只一个seed、40步有限预算，覆盖一次文章位置、候选少量；80步首轮和40步适配的差异不能全部归于换层或steering。Bio选择题下降只表示该代理任务表现下降，不证明危险知识彻底删除、不可恢复或系统安全。后续优先对较好取舍做少量预先声明的多seed复验与恢复测试；本轮没有自动执行。标准平台交付包仍须另按Word要求整理，受限训练正文/数据不得公开发布。','',
     '证据：`logs/rmu_scale_v2_full_comparison.json/.csv`、`logs/rmu_scale_v2_completion_audit.json`、`logs/rmu_scale_v2_full_selection.json`、`docs/rmu-scale-v2-plan.md`；所有新增模型和逐题结果位于 `open-unlearning/saves/unlearn/rmu_scale_v2/`。']
+    lines+=['','补充来源：清洗后forget训练/验证23220/1217条、retain57488/3029条，按文章组划分。formal_blocks_v1每角色2048训练候选块及64验证块，最长256token、短文原长，不跨文章拼接。本轮不重新划分文章。两份诊断执行时脚本为新增工作树文件；`logs/rmu_scale_v2_diagnostic_provenance.json`记录脚本SHA与后来保存完全相同内容的提交，执行时HEAD不单独充当完整源码快照。']
     (ROOT/'docs/rmu-scale-v2-results.md').write_text('\n'.join(lines)+'\n')
     print('AUDIT_COMPLETE',audit);print('FULL',[(r['name'],r['metrics']) for r in full])
 
