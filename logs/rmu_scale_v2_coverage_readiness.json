@@ -1,0 +1,18 @@
+{
+  "forget": {
+    "matched_input_tokens": 163510,
+    "matched_article_sequence": true,
+    "unchanged_rng": true,
+    "actual_unique_positions": 640,
+    "old_unique_positions": 640,
+    "non_original_exposures": 636
+  },
+  "retain": {
+    "matched_input_tokens": 157109,
+    "matched_article_sequence": true,
+    "unchanged_rng": true,
+    "actual_unique_positions": 631,
+    "old_unique_positions": 545,
+    "non_original_exposures": 553
+  }
+}
