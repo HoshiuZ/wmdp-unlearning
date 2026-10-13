@@ -1,0 +1,11 @@
+{
+  "dataset": "cais/wmdp",
+  "subset": "wmdp-bio",
+  "split": "test",
+  "records": 1273,
+  "snapshot_origin": "Exact ordered documents from archived qwen3_4b_base_bio_full_v1/LMEval_EVAL.json",
+  "original_recorded_revision": "7125571f22f032c56415e7980f48d877dd830ff8",
+  "remote_revision_reverified": false,
+  "sha256": "bee540d6b7afd78db04244627bfd32cc4508c7433bfebd7bfb31ed5951a1a5e2",
+  "bytes": 254087
+}

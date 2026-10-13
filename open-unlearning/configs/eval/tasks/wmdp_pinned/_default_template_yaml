@@ -1,0 +1,33 @@
+dataset_path: parquet
+test_split: test
+training_split: null
+validation_split: null
+num_fewshot: 0
+output_type: multiple_choice
+doc_to_text: '{{question.strip()}}
+
+  A. {{choices[0]}}
+
+  B. {{choices[1]}}
+
+  C. {{choices[2]}}
+
+  D. {{choices[3]}}
+
+  Answer:'
+doc_to_choice:
+- A
+- B
+- C
+- D
+doc_to_target: answer
+metric_list:
+- metric: acc
+  aggregation: mean
+  higher_is_better: true
+metadata:
+  version: 1
+dataset_name: null
+dataset_kwargs:
+  data_files:
+    test: ../data/evaluation/wmdp_bio/test.parquet

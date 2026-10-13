@@ -17,40 +17,31 @@ OpenUnlearning 使用 MIT License，原始版权声明为 `Copyright (c) 2025 CM
 
 使用本仓库产出研究报告时，请同时引用实际使用的框架、方法、基准及模型；OpenUnlearning 的引用信息见上游 README 的 “Citing this work” 部分。
 
-## 本项目已完成的工作
+## 已完成的实验
 
-截至 2026-10-13（Asia/Shanghai）：
+已完成原始模型基线、Bio语料清洗与分组划分、真实CUDA三步短跑、正式80步RMU训练、完整权重上传和训练后全量评测。模型使用BF16/SDPA；只更新第5/6/7层MLP down_proj权重，保存重载参数指纹一致。
 
-- 添加本地 Qwen3-4B-Instruct-2507 模型配置，使用 BF16 和 SDPA。
-- 修复评测器读取 `simple_evaluate_args` 的配置传递问题，并用20题运行确认 `limit` 生效。
-- 完成训练前全量 WMDP-Bio 评测，保存逐题记录、汇总、日志与 Hydra 配置。
-- 保存依赖快照、上游提交号、代码修改补丁及模型配置。
+| 0-shot准确率 | 训练前 | 训练后 | 变化 |
+| --- | ---: | ---: | ---: |
+| WMDP-Bio（1273题） | 73.8413% | 59.9372% | -13.9042个百分点 |
+| MMLU（57学科，14042题） | 70.6737% | 65.8952% | -4.7785个百分点 |
 
-训练前 WMDP-Bio 基线：1273题，Accuracy **73.8413%**，标准误约 **1.2323个百分点**。评测为0-shot、选择题 loglikelihood 评分、无聊天模板、无额外 system instruction。
+训练后全部题目和评分请求与基线逐条一致；无聊天模板、无额外system instruction，batch1，选择题loglikelihood评分。WMDP下降表明代理任务目标能力减弱，同时应关注MMLU正常能力损失；不能宣称知识彻底消失，也不能将准确率直接作为安全总分。第80步在测试前固定，未按正式测试选择检查点。
 
-原始证据位于 [正式基线目录](open-unlearning/saves/eval/qwen3_4b_base_bio_full_v1/)。历史 smoke 目录也保留：`qwen3_4b_base_bio_smoke20` 因修复前参数未生效实际为全量运行；`qwen3_4b_base_bio_smoke20_fixed` 才是20题验证。
+评测证据与复现见 [训练后评测说明](docs/rmu-post-evaluation.md) 和 [配对汇总](logs/rmu_post_eval_summary.json)。原始基线及训练后逐题结果分别保存在 `open-unlearning/saves/eval/` 下，均保留。历史 `qwen3_4b_base_bio_smoke20` 因参数修复前limit未生效实际是全量，`smoke20_fixed` 才是20题验证。
 
-## 尚未完成的工作
+## 数据、训练和模型留档
 
-已下载官方 S3 语料及获批的 Bio 遗忘语料，完成文件格式、样本数和校验值核查。Bio 遗忘语料共24,453条，为带 `text` 等字段的 Parquet；S3语料为每行一个JSON字符串。MMLU 训练前正常能力基线已完成：57个学科、14,042题，0-shot Accuracy **70.6737%**（9,924题正确），标准误约 **0.3617个百分点**。正式产物见 [MMLU基线目录](open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/)，协议和核查记录见 [logs/mmlu_baseline_run.json](logs/mmlu_baseline_run.json)。Bio 数据清洗与文章组划分已完成（seed42，约95/5）：遗忘训练/验证23,220/1,217条，保留训练/验证57,488/3,029条，规则和局限见 [数据处理记录](docs/data-preparation.md)。RMU 短跑与正式训练、训练后评测和完整交付包均尚未完成。当前结果仅是原始模型基线，不表示已完成知识遗忘。后续 WMDP 分数下降也只能说明该代理任务能力减弱，需同时检查正常能力保持。
+Bio按文章组划分，seed42，遗忘训练/验证23220/1217条，保留训练/验证57488/3029条，见 [数据处理记录](docs/data-preparation.md)。正式训练每类准备2048候选块及64独立验证块，256token、batch1、梯度累积16、80步。每类1280次输入，实际不同遗忘块1280、保留块920，并非遍历完整语料；方案及结果见 [正式训练记录](docs/rmu-formal-plan.md)。
 
-## 仓库内容与留档
+正式模型完整权重、tokenizer、配置、许可证及加载说明位于 [正式训练目录](open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/)，已通过Git LFS上传，完整性检查通过；训练/验证日志、实际块索引、来源指纹及保存重载检查均留档。原始模型文件清单见 [基模校验清单](logs/base_model_manifest.json)。
 
-- `open-unlearning/`：上游源码、本项目改动、实验配置及评测产物。
-- `logs/`：环境快照、代码来源和配置留档。
-- `data/`：原始数据与MMLU评测快照；获批的 Bio 遗忘语料不公开提交。`outputs/`：后续产物目录，目前为空。
-- 后续 `{model_id}_delivery/`：模型信息、实际数据、训练配置/指标、前后评测、模型产物及附件。
+MMLU使用官方固定revision `c30699e8356da336a370243923dbaf21066bb9fe` 本地快照，按subject分组，不改写题目；0-shot结果不能直接与公开5-shot榜单比较。WMDP本次使用基线逐题记录重建的相同内容快照。
 
-根目录的私人工作文档不上传；公开入口 `README.md` 单独放行。环境、缓存和下载的原始基模不纳入 Git。交付目录内的文档、数据和日志应保存，不能只提供截图或总分。完整权重配置了 Git LFS 规则，但服务器尚未安装 Git LFS；上传权重前需要安装并确认文件以 LFS 对象提交。
+根目录私人工作文档不上传，公开README单独放行。独立环境、缓存、下载的原始基模及短跑完整权重留在本地。Bio遗忘语料条款限制未经许可向协作者名单之外分发；原始、清洗后正文和token缓存不公开提交，GitHub保存处理脚本、统计与来源记录。保留语料再分发许可尚待确认，平台接收方授权也需明确。
 
-当前配置含 AutoDL 服务器本地路径，复现时需调整模型和数据位置。环境依赖见 [logs/environment.txt](logs/environment.txt)，依赖调整文件见 [logs/requirements-qwen3.txt](logs/requirements-qwen3.txt)，已有评测修复见 [logs/code_changes.patch](logs/code_changes.patch)。RMU 训练路径尚未验证。
+## 下一步
 
-Bio 遗忘语料访问条款限制未经许可向协作者名单之外分发；原始文件保存在本地，GitHub仅记录来源、固定版本、文件清单及统计，不包含token或受限正文。平台交付的接收方权限需另行确认。
+按Word要求整理标准交付包：九个必需元数据文件、模型产物、实际训练与验证数据、前后评测证据及日志；受限数据依授权交付，缺项如实注明。当前标准平台交付包尚未完成。恢复攻击、再学习、多随机种子和多方法对照属于后续扩展。
 
-MMLU评测数据固定为 `cais/mmlu@c30699e8356da336a370243923dbaf21066bb9fe`，从官方 all/test 与 all/dev 按subject分组读取，不改写题目。完整结果保留任务配置、随机种子、版本、样本统计及逐题记录。0-shot结果不能直接与公开5-shot排行榜比较。
-
-RMU 实现和短跑输入已核查，准备了8+8训练文章、256token、3步配置；修复了梯度冻结和batch损失广播问题，小模型CPU检查通过。见 [RMU准备记录](docs/rmu-readiness.md)。真实4B CUDA三步短跑现已通过：loss/梯度有限，仅指定三组权重改变；保存重载指纹一致且forward有限，峰值已分配显存约18.11GiB。正式训练及后训练评测尚未执行。
-
-正式 RMU 方案已固定但尚未执行：256token、batch1、梯度累积16、80步；每类2048训练候选块及64独立验证块，在0/20/40/60/80步监控，固定保存第80步。见 [正式训练方案](docs/rmu-formal-plan.md)。所有token缓存/标签、代表样本来源分词和小模型验证回调检查通过；正式CUDA训练现已完成80步：实际使用1280个不同遗忘块、920个不同保留块（每类1280次输入），641,113个输入token；80训练记录及5次验证齐全，仅三组指定权重改变，重载指纹一致。后训练WMDP-Bio/MMLU评测仍待执行。
-
-正式模型完整权重、tokenizer、配置与训练/验证留档已上传GitHub，权重由Git LFS管理。本地LFS完整性检查通过。后训练WMDP-Bio与MMLU结果尚未产生，完整平台交付包仍待整理。
+服务器路径复现时需要调整，环境见 [依赖快照](logs/environment.txt)。模型与数据许可分别以各自来源为准，不公开token或其他凭证。

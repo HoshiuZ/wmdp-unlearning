@@ -1,0 +1,24 @@
+{
+  "model_path": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model",
+  "task": "mmlu",
+  "protocol": {
+    "tasks": [
+      "mmlu"
+    ],
+    "task_include_path": "/root/autodl-tmp/wmdp-work/open-unlearning/configs/eval/tasks/mmlu_pinned",
+    "simple_evaluate_args": {
+      "batch_size": 1,
+      "num_fewshot": 0,
+      "apply_chat_template": false,
+      "system_instruction": null,
+      "log_samples": true,
+      "random_seed": 0,
+      "numpy_random_seed": 1234,
+      "torch_random_seed": 1234,
+      "fewshot_random_seed": 1234
+    },
+    "overwrite": false,
+    "output_dir": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/eval/qwen3_4b_rmu_formal80_mmlu_0shot_full_v1"
+  },
+  "snapshot_sha256": null
+}

@@ -1,0 +1,349 @@
+{
+  "exact_documents_and_scoring_arguments": true,
+  "baseline_prediction_check": false,
+  "subjects": [
+    {
+      "task": "mmlu_abstract_algebra",
+      "n": 100,
+      "correct": 59.0,
+      "baseline_correct": 56.0
+    },
+    {
+      "task": "mmlu_anatomy",
+      "n": 135,
+      "correct": 79.0,
+      "baseline_correct": 91.0
+    },
+    {
+      "task": "mmlu_astronomy",
+      "n": 152,
+      "correct": 124.0,
+      "baseline_correct": 132.0
+    },
+    {
+      "task": "mmlu_college_biology",
+      "n": 144,
+      "correct": 112.0,
+      "baseline_correct": 126.0
+    },
+    {
+      "task": "mmlu_college_chemistry",
+      "n": 100,
+      "correct": 52.0,
+      "baseline_correct": 53.0
+    },
+    {
+      "task": "mmlu_college_computer_science",
+      "n": 100,
+      "correct": 62.0,
+      "baseline_correct": 69.0
+    },
+    {
+      "task": "mmlu_college_mathematics",
+      "n": 100,
+      "correct": 45.0,
+      "baseline_correct": 53.0
+    },
+    {
+      "task": "mmlu_college_physics",
+      "n": 102,
+      "correct": 51.0,
+      "baseline_correct": 58.0
+    },
+    {
+      "task": "mmlu_computer_security",
+      "n": 100,
+      "correct": 73.0,
+      "baseline_correct": 78.0
+    },
+    {
+      "task": "mmlu_conceptual_physics",
+      "n": 235,
+      "correct": 187.0,
+      "baseline_correct": 189.0
+    },
+    {
+      "task": "mmlu_electrical_engineering",
+      "n": 145,
+      "correct": 101.0,
+      "baseline_correct": 115.0
+    },
+    {
+      "task": "mmlu_elementary_mathematics",
+      "n": 378,
+      "correct": 240.0,
+      "baseline_correct": 266.0
+    },
+    {
+      "task": "mmlu_high_school_biology",
+      "n": 310,
+      "correct": 255.0,
+      "baseline_correct": 278.0
+    },
+    {
+      "task": "mmlu_high_school_chemistry",
+      "n": 203,
+      "correct": 139.0,
+      "baseline_correct": 152.0
+    },
+    {
+      "task": "mmlu_high_school_computer_science",
+      "n": 100,
+      "correct": 82.0,
+      "baseline_correct": 83.0
+    },
+    {
+      "task": "mmlu_high_school_mathematics",
+      "n": 270,
+      "correct": 129.0,
+      "baseline_correct": 140.0
+    },
+    {
+      "task": "mmlu_high_school_physics",
+      "n": 151,
+      "correct": 93.0,
+      "baseline_correct": 98.0
+    },
+    {
+      "task": "mmlu_high_school_statistics",
+      "n": 216,
+      "correct": 147.0,
+      "baseline_correct": 156.0
+    },
+    {
+      "task": "mmlu_machine_learning",
+      "n": 112,
+      "correct": 51.0,
+      "baseline_correct": 67.0
+    },
+    {
+      "task": "mmlu_business_ethics",
+      "n": 100,
+      "correct": 75.0,
+      "baseline_correct": 75.0
+    },
+    {
+      "task": "mmlu_clinical_knowledge",
+      "n": 265,
+      "correct": 191.0,
+      "baseline_correct": 210.0
+    },
+    {
+      "task": "mmlu_college_medicine",
+      "n": 173,
+      "correct": 118.0,
+      "baseline_correct": 130.0
+    },
+    {
+      "task": "mmlu_global_facts",
+      "n": 100,
+      "correct": 26.0,
+      "baseline_correct": 41.0
+    },
+    {
+      "task": "mmlu_human_aging",
+      "n": 223,
+      "correct": 141.0,
+      "baseline_correct": 153.0
+    },
+    {
+      "task": "mmlu_management",
+      "n": 103,
+      "correct": 90.0,
+      "baseline_correct": 89.0
+    },
+    {
+      "task": "mmlu_marketing",
+      "n": 234,
+      "correct": 197.0,
+      "baseline_correct": 209.0
+    },
+    {
+      "task": "mmlu_medical_genetics",
+      "n": 100,
+      "correct": 73.0,
+      "baseline_correct": 82.0
+    },
+    {
+      "task": "mmlu_miscellaneous",
+      "n": 783,
+      "correct": 612.0,
+      "baseline_correct": 646.0
+    },
+    {
+      "task": "mmlu_nutrition",
+      "n": 306,
+      "correct": 216.0,
+      "baseline_correct": 238.0
+    },
+    {
+      "task": "mmlu_professional_accounting",
+      "n": 282,
+      "correct": 147.0,
+      "baseline_correct": 157.0
+    },
+    {
+      "task": "mmlu_professional_medicine",
+      "n": 272,
+      "correct": 173.0,
+      "baseline_correct": 207.0
+    },
+    {
+      "task": "mmlu_virology",
+      "n": 166,
+      "correct": 82.0,
+      "baseline_correct": 84.0
+    },
+    {
+      "task": "mmlu_econometrics",
+      "n": 114,
+      "correct": 64.0,
+      "baseline_correct": 74.0
+    },
+    {
+      "task": "mmlu_high_school_geography",
+      "n": 198,
+      "correct": 158.0,
+      "baseline_correct": 165.0
+    },
+    {
+      "task": "mmlu_high_school_government_and_politics",
+      "n": 193,
+      "correct": 159.0,
+      "baseline_correct": 171.0
+    },
+    {
+      "task": "mmlu_high_school_macroeconomics",
+      "n": 390,
+      "correct": 292.0,
+      "baseline_correct": 299.0
+    },
+    {
+      "task": "mmlu_high_school_microeconomics",
+      "n": 238,
+      "correct": 196.0,
+      "baseline_correct": 211.0
+    },
+    {
+      "task": "mmlu_high_school_psychology",
+      "n": 545,
+      "correct": 474.0,
+      "baseline_correct": 491.0
+    },
+    {
+      "task": "mmlu_human_sexuality",
+      "n": 131,
+      "correct": 91.0,
+      "baseline_correct": 99.0
+    },
+    {
+      "task": "mmlu_professional_psychology",
+      "n": 612,
+      "correct": 402.0,
+      "baseline_correct": 446.0
+    },
+    {
+      "task": "mmlu_public_relations",
+      "n": 110,
+      "correct": 72.0,
+      "baseline_correct": 75.0
+    },
+    {
+      "task": "mmlu_security_studies",
+      "n": 245,
+      "correct": 165.0,
+      "baseline_correct": 187.0
+    },
+    {
+      "task": "mmlu_sociology",
+      "n": 201,
+      "correct": 161.0,
+      "baseline_correct": 172.0
+    },
+    {
+      "task": "mmlu_us_foreign_policy",
+      "n": 100,
+      "correct": 86.0,
+      "baseline_correct": 86.0
+    },
+    {
+      "task": "mmlu_formal_logic",
+      "n": 126,
+      "correct": 78.0,
+      "baseline_correct": 84.0
+    },
+    {
+      "task": "mmlu_high_school_european_history",
+      "n": 165,
+      "correct": 128.0,
+      "baseline_correct": 133.0
+    },
+    {
+      "task": "mmlu_high_school_us_history",
+      "n": 204,
+      "correct": 167.0,
+      "baseline_correct": 173.0
+    },
+    {
+      "task": "mmlu_high_school_world_history",
+      "n": 237,
+      "correct": 191.0,
+      "baseline_correct": 204.0
+    },
+    {
+      "task": "mmlu_international_law",
+      "n": 121,
+      "correct": 99.0,
+      "baseline_correct": 99.0
+    },
+    {
+      "task": "mmlu_jurisprudence",
+      "n": 108,
+      "correct": 82.0,
+      "baseline_correct": 87.0
+    },
+    {
+      "task": "mmlu_logical_fallacies",
+      "n": 163,
+      "correct": 132.0,
+      "baseline_correct": 135.0
+    },
+    {
+      "task": "mmlu_moral_disputes",
+      "n": 346,
+      "correct": 233.0,
+      "baseline_correct": 246.0
+    },
+    {
+      "task": "mmlu_moral_scenarios",
+      "n": 895,
+      "correct": 305.0,
+      "baseline_correct": 325.0
+    },
+    {
+      "task": "mmlu_philosophy",
+      "n": 311,
+      "correct": 220.0,
+      "baseline_correct": 233.0
+    },
+    {
+      "task": "mmlu_prehistory",
+      "n": 324,
+      "correct": 232.0,
+      "baseline_correct": 250.0
+    },
+    {
+      "task": "mmlu_professional_law",
+      "n": 1534,
+      "correct": 703.0,
+      "baseline_correct": 755.0
+    },
+    {
+      "task": "mmlu_world_religions",
+      "n": 171,
+      "correct": 141.0,
+      "baseline_correct": 143.0
+    }
+  ],
+  "total": 14042
+}
