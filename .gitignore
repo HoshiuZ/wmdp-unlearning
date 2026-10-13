@@ -1,5 +1,6 @@
 # Root-level working documents stay local; delivery documents remain tracked.
 /*.md
+!/README.md
 /*.doc
 /*.docx
 /*.pdf
