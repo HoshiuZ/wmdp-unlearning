@@ -1,4 +1,4 @@
-"""Preserve old metrics; aggregate coefficient-half trial and gradient evidence."""
+"""Preserve old metrics; aggregate gradient-cap trial and prior gradient evidence."""
 import json,csv,argparse,math,shutil,subprocess
 from pathlib import Path
 from rmu_adaptation_utils import ROOT,REPO,dump,materialized,digest
@@ -16,7 +16,7 @@ def main():
  with (ROOT/'logs/simnpo_rmu_cap_development.csv').open('w') as f:
   w=csv.writer(f,lineterminator='\n');w.writerow(['path','bio_percent','bio_change_pp','mmlu_equal','mmlu_weighted','weighted_change_pp','biology_change_pp','other_change_pp','pareto'])
   for r in rows:w.writerow([r['path'],r['bio_percent'],r['bio_percent']-75.78125,r['mmlu']['all']['equal_percent'],r['mmlu']['all']['weighted_percent'],r['weighted_change_pp'],r['mmlu']['biology_related']['weighted_change_pp'],r['mmlu']['other']['weighted_change_pp'],r['pareto_weighted']])
- print('HALF_DEV',[(r['path'].split('/')[-3],r['bio_percent'],r['weighted_change_pp'],r['pareto_weighted']) for r in new])
+ print('CAP_DEV',[(r['path'].split('/')[-3],r['bio_percent'],r['weighted_change_pp'],r['pareto_weighted']) for r in new])
  if args.lock:
   assert len(new)==3 and read(TRIAL/'run.json')['status']=='completed';eligible=[r for r in new if r['pareto_weighted'] and r['weighted_change_pp']>=-3];selection=sorted(eligible,key=lambda r:(r['bio_percent'],-r['mmlu']['all']['weighted_percent']))[:1];p=ROOT/'logs/simnpo_rmu_cap_full_selection.json';assert not p.exists();dump(p,{'selected':selection,'rule':'New all-history development frontier with weighted MMLU loss<=2 or3; minBio,max1; fixed before full','exploratory':True});print('SELECTED',len(selection))
  if not args.report:return
@@ -25,6 +25,7 @@ def main():
  for key in ['actual_input_tokens','actual_loss_tokens','effective_prediction_tokens']:assert run[key]==oldrun[key]
  assert read(TRIAL/'consumed_block_indices.json')==read(OUT/'joint_screen40/consumed_block_indices.json');assert read(TRIAL/'control_vector.json')==read(OUT/'joint_screen40/control_vector.json');assert run['frozen_parameters_unchanged'] and run['reference_unchanged'];assert read(OUT/'joint_gradcap_minimal/run.json')['status']=='completed'
  controller=read(TRIAL/'controller_metrics.json');assert len(controller)==640
+ assert {s:sum(r['step']==s for r in controller) for s in range(40)}=={s:16 for s in range(40)}
  assert all(math.isfinite(r['effective_sim_weight']) and 0<=r['effective_sim_weight']<=run['coefficients']['sim_weight'] for r in controller)
  assert all(r['capped_ratio'] is None or r['capped_ratio']<=.500001 for r in controller)
  controller_stats={'n':len(controller),'cap_active_count':sum(r['cap_active'] for r in controller),'weight_min':min(r['effective_sim_weight'] for r in controller),'weight_max':max(r['effective_sim_weight'] for r in controller),'weight_mean':sum(r['effective_sim_weight'] for r in controller)/len(controller),'max_capped_ratio':max(r['capped_ratio'] for r in controller if r['capped_ratio'] is not None)}
@@ -73,6 +74,6 @@ def main():
  else:lines+=['',f'锁定{len(full)}次全量探索性结果：`{json.dumps(full,ensure_ascii=False)}`；不依全量继续搜索。']
  v=run['validation'][-1];oldv=oldrun['validation'][-1]
  lines+=['','## 保存与限制','',f"最终retain文章NLL：限幅{v['retain_nll']:.4f}，原联合{oldv['retain_nll']:.4f}，原始2.1937。这是文章预测诊断，不能替代MMLU。",'',f"input/loss/有效预测token={run['actual_input_tokens']}/{run['actual_loss_tokens']}/{run['effective_prediction_tokens']}，与原联合精确匹配；每角色640次输入，采样顺序、控制向量一致。3个新增增量{size/2**20:.2f}MiB，重建逐位及真实LFS对象SHA通过；不保存optimizer，不能断点续训。运行{run['elapsed_seconds']:.1f}秒（含验证/开发回调），峰值allocated {run['cuda_peak_allocated_bytes']/2**30:.3f}GiB、reserved {run['cuda_peak_reserved_bytes']/2**30:.3f}GiB，训练代码{run['code_commit']}。诊断{diag['seconds']:.1f}秒、峰值{diag['gpu_peak_bytes']/2**30:.3f}GiB。完成时数据盘余{space['free']/2**30:.2f}GiB，无自动清理或扩容。",'',
- '完整配置、数据manifest、代码版本、实际采样、分项loss、验证与逐题评分均保存；原始及训练参数指纹、模型本地文件SHA固定，原始远端immutable revision仍未知。只做一组，没有自动继续调系数、扩层、多seed或恢复测试；单seed、有限probe与已观察测试的探索不能证明知识删除。下一步根据实际比较决定是否值得研究动态权重或参数范围，不能把梯度占比当已验证方案。']
+ '完整配置、数据manifest、代码版本、实际采样、分项loss、验证与逐题评分均保存；原始及训练参数指纹、模型本地文件SHA固定，原始远端immutable revision仍未知。只做一组，没有追加rho或权重上界搜索、扩层、多seed或恢复测试；单seed、有限probe与已观察测试的探索不能证明知识删除。下一步根据实际比较决定是否值得研究动态权重或参数范围，不能把梯度占比当已验证方案。']
  (ROOT/'docs/simnpo-rmu-cap-results.md').write_text('\n'.join(lines)+'\n');print('REPORT_COMPLETE',size,space)
 if __name__=='__main__':main()
