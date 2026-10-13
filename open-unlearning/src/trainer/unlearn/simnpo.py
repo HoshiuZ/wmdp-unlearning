@@ -13,10 +13,12 @@ class SimNPO(GradDiff):
     def compute_loss(
         self, model, inputs, return_outputs=False, num_items_in_batch=None
     ):
-        forget_inputs = inputs["forget"]
+        forget_inputs = {k:inputs["forget"][k] for k in ("input_ids", "attention_mask", "labels")}
 
         forget_labels = forget_inputs["labels"]
-        loss_mask = forget_labels != -100
+        loss_mask = forget_labels[..., 1:] != -100
+        if (loss_mask.sum(-1) == 0).any():
+            raise ValueError("SimNPO requires at least one effective prediction token")
         forget_loss, forget_outputs = compute_batch_nll(model, forget_inputs)
         forget_loss = forget_loss / loss_mask.sum(-1) - self.delta
         forget_loss = -F.logsigmoid(self.beta * forget_loss).mean() * 2 / self.beta
