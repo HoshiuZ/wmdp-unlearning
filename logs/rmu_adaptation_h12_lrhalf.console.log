@@ -1,0 +1,2056 @@
+[2026-10-13 18:42:12,063] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:212: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:218: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:230: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/config_loader_impl.py:291: FutureWarning: Implicit conversion from Version to str at 'hydra.runtime.version_base' during assignment is deprecated; pass the declared type or use OmegaConf.update() for an existing path.
+  cfg.hydra.runtime.version_base = version.getbase()
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 4301.48it/s]
+`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+  0%|          | 0/40 [00:00<?, ?it/s]Validation step 0: forget=0.796631, retain=0.000000, retain_nll=2.193743
+  2%|▎         | 1/40 [00:11<07:36, 11.71s/it]                                              {'loss': '0.8008', 'grad_norm': '0.2891', 'learning_rate': '2.5e-05', 'epoch': '0.007812'}
+  2%|▎         | 1/40 [00:11<07:36, 11.71s/it]  5%|▌         | 2/40 [00:14<03:58,  6.27s/it]                                              {'loss': '0.7791', 'grad_norm': '0.2676', 'learning_rate': '2.5e-05', 'epoch': '0.01562'}
+  5%|▌         | 2/40 [00:14<03:58,  6.27s/it]  8%|▊         | 3/40 [00:16<02:47,  4.53s/it]                                              {'loss': '0.7744', 'grad_norm': '0.2656', 'learning_rate': '2.5e-05', 'epoch': '0.02344'}
+  8%|▊         | 3/40 [00:16<02:47,  4.53s/it] 10%|█         | 4/40 [00:18<02:12,  3.67s/it]                                              {'loss': '0.7751', 'grad_norm': '0.2734', 'learning_rate': '2.5e-05', 'epoch': '0.03125'}
+ 10%|█         | 4/40 [00:18<02:12,  3.67s/it] 12%|█▎        | 5/40 [00:21<01:51,  3.19s/it]                                              {'loss': '0.7754', 'grad_norm': '0.2617', 'learning_rate': '2.5e-05', 'epoch': '0.03906'}
+ 12%|█▎        | 5/40 [00:21<01:51,  3.19s/it] 15%|█▌        | 6/40 [00:23<01:38,  2.91s/it]                                              {'loss': '0.7429', 'grad_norm': '0.293', 'learning_rate': '2.5e-05', 'epoch': '0.04688'}
+ 15%|█▌        | 6/40 [00:23<01:38,  2.91s/it] 18%|█▊        | 7/40 [00:26<01:30,  2.73s/it]                                              {'loss': '0.7688', 'grad_norm': '0.2637', 'learning_rate': '2.5e-05', 'epoch': '0.05469'}
+ 18%|█▊        | 7/40 [00:26<01:30,  2.73s/it] 20%|██        | 8/40 [00:28<01:23,  2.61s/it]                                              {'loss': '0.7603', 'grad_norm': '0.2773', 'learning_rate': '2.5e-05', 'epoch': '0.0625'}
+ 20%|██        | 8/40 [00:28<01:23,  2.61s/it] 22%|██▎       | 9/40 [00:30<01:18,  2.54s/it]                                              {'loss': '0.7683', 'grad_norm': '0.2812', 'learning_rate': '2.5e-05', 'epoch': '0.07031'}
+ 22%|██▎       | 9/40 [00:30<01:18,  2.54s/it] 25%|██▌       | 10/40 [00:33<01:14,  2.48s/it]Validation step 10: forget=0.728455, retain=0.001710, retain_nll=2.195618
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+
+Running loglikelihood requests:   0%|          | 0/1024 [00:00<?, ?it/s][A
+Running loglikelihood requests:   1%|          | 9/1024 [00:00<00:15, 64.43it/s][A
+Running loglikelihood requests:   2%|▏         | 21/1024 [00:00<00:11, 87.68it/s][A
+Running loglikelihood requests:   3%|▎         | 33/1024 [00:00<00:10, 97.26it/s][A
+Running loglikelihood requests:   4%|▍         | 45/1024 [00:00<00:09, 103.53it/s][A
+Running loglikelihood requests:   6%|▌         | 57/1024 [00:00<00:09, 106.12it/s][A
+Running loglikelihood requests:   7%|▋         | 69/1024 [00:00<00:09, 104.84it/s][A
+Running loglikelihood requests:   8%|▊         | 81/1024 [00:00<00:08, 105.75it/s][A
+Running loglikelihood requests:   9%|▉         | 93/1024 [00:00<00:08, 106.91it/s][A
+Running loglikelihood requests:  10%|█         | 105/1024 [00:01<00:08, 107.47it/s][A
+Running loglikelihood requests:  11%|█▏        | 117/1024 [00:01<00:08, 108.35it/s][A
+Running loglikelihood requests:  13%|█▎        | 129/1024 [00:01<00:08, 110.39it/s][A
+Running loglikelihood requests:  14%|█▍        | 141/1024 [00:01<00:07, 111.68it/s][A
+Running loglikelihood requests:  15%|█▍        | 153/1024 [00:01<00:07, 111.98it/s][A
+Running loglikelihood requests:  16%|█▌        | 165/1024 [00:01<00:07, 113.11it/s][A
+Running loglikelihood requests:  17%|█▋        | 177/1024 [00:01<00:07, 113.36it/s][A
+Running loglikelihood requests:  18%|█▊        | 189/1024 [00:01<00:07, 113.04it/s][A
+Running loglikelihood requests:  20%|█▉        | 201/1024 [00:01<00:07, 112.93it/s][A
+Running loglikelihood requests:  21%|██        | 213/1024 [00:01<00:07, 113.03it/s][A
+Running loglikelihood requests:  22%|██▏       | 225/1024 [00:02<00:07, 112.17it/s][A
+Running loglikelihood requests:  23%|██▎       | 237/1024 [00:02<00:07, 111.87it/s][A
+Running loglikelihood requests:  24%|██▍       | 249/1024 [00:02<00:06, 112.16it/s][A
+Running loglikelihood requests:  25%|██▌       | 261/1024 [00:02<00:06, 111.31it/s][A
+Running loglikelihood requests:  27%|██▋       | 273/1024 [00:02<00:06, 109.67it/s][A
+Running loglikelihood requests:  28%|██▊       | 285/1024 [00:02<00:06, 110.68it/s][A
+Running loglikelihood requests:  29%|██▉       | 297/1024 [00:02<00:06, 110.97it/s][A
+Running loglikelihood requests:  30%|███       | 309/1024 [00:02<00:06, 112.62it/s][A
+Running loglikelihood requests:  31%|███▏      | 321/1024 [00:02<00:06, 112.21it/s][A
+Running loglikelihood requests:  33%|███▎      | 333/1024 [00:03<00:06, 111.78it/s][A
+Running loglikelihood requests:  34%|███▎      | 345/1024 [00:03<00:06, 111.56it/s][A
+Running loglikelihood requests:  35%|███▍      | 357/1024 [00:03<00:06, 110.98it/s][A
+Running loglikelihood requests:  36%|███▌      | 369/1024 [00:03<00:05, 111.35it/s][A
+Running loglikelihood requests:  37%|███▋      | 381/1024 [00:03<00:05, 110.85it/s][A
+Running loglikelihood requests:  38%|███▊      | 393/1024 [00:03<00:05, 111.02it/s][A
+Running loglikelihood requests:  40%|███▉      | 405/1024 [00:03<00:05, 111.80it/s][A
+Running loglikelihood requests:  41%|████      | 417/1024 [00:03<00:05, 111.87it/s][A
+Running loglikelihood requests:  42%|████▏     | 429/1024 [00:03<00:05, 108.85it/s][A
+Running loglikelihood requests:  43%|████▎     | 441/1024 [00:04<00:05, 108.60it/s][A
+Running loglikelihood requests:  44%|████▍     | 453/1024 [00:04<00:05, 108.28it/s][A
+Running loglikelihood requests:  45%|████▌     | 465/1024 [00:04<00:05, 107.99it/s][A
+Running loglikelihood requests:  47%|████▋     | 477/1024 [00:04<00:05, 107.90it/s][A
+Running loglikelihood requests:  48%|████▊     | 489/1024 [00:04<00:04, 107.63it/s][A
+Running loglikelihood requests:  49%|████▉     | 501/1024 [00:04<00:04, 108.93it/s][A
+Running loglikelihood requests:  50%|█████     | 513/1024 [00:04<00:04, 109.54it/s][A
+Running loglikelihood requests:  51%|█████▏    | 525/1024 [00:04<00:04, 110.26it/s][A
+Running loglikelihood requests:  52%|█████▏    | 537/1024 [00:04<00:04, 107.21it/s][A
+Running loglikelihood requests:  54%|█████▎    | 549/1024 [00:05<00:04, 106.95it/s][A
+Running loglikelihood requests:  55%|█████▍    | 561/1024 [00:05<00:04, 106.50it/s][A
+Running loglikelihood requests:  56%|█████▌    | 573/1024 [00:05<00:04, 107.43it/s][A
+Running loglikelihood requests:  57%|█████▋    | 585/1024 [00:05<00:04, 107.31it/s][A
+Running loglikelihood requests:  58%|█████▊    | 597/1024 [00:05<00:03, 107.35it/s][A
+Running loglikelihood requests:  59%|█████▉    | 609/1024 [00:05<00:03, 108.57it/s][A
+Running loglikelihood requests:  61%|██████    | 621/1024 [00:05<00:03, 109.06it/s][A
+Running loglikelihood requests:  62%|██████▏   | 633/1024 [00:05<00:03, 110.24it/s][A
+Running loglikelihood requests:  63%|██████▎   | 645/1024 [00:05<00:03, 110.44it/s][A
+Running loglikelihood requests:  64%|██████▍   | 657/1024 [00:06<00:03, 109.87it/s][A
+Running loglikelihood requests:  65%|██████▌   | 669/1024 [00:06<00:03, 109.26it/s][A
+Running loglikelihood requests:  67%|██████▋   | 681/1024 [00:06<00:03, 109.74it/s][A
+Running loglikelihood requests:  68%|██████▊   | 693/1024 [00:06<00:03, 110.12it/s][A
+Running loglikelihood requests:  69%|██████▉   | 705/1024 [00:06<00:02, 110.27it/s][A
+Running loglikelihood requests:  70%|███████   | 717/1024 [00:06<00:02, 110.55it/s][A
+Running loglikelihood requests:  71%|███████   | 729/1024 [00:06<00:02, 110.13it/s][A
+Running loglikelihood requests:  72%|███████▏  | 741/1024 [00:06<00:02, 110.43it/s][A
+Running loglikelihood requests:  74%|███████▎  | 753/1024 [00:06<00:02, 112.28it/s][A
+Running loglikelihood requests:  75%|███████▍  | 765/1024 [00:06<00:02, 112.91it/s][A
+Running loglikelihood requests:  76%|███████▌  | 777/1024 [00:07<00:02, 113.60it/s][A
+Running loglikelihood requests:  77%|███████▋  | 789/1024 [00:07<00:02, 113.47it/s][A
+Running loglikelihood requests:  78%|███████▊  | 801/1024 [00:07<00:01, 113.99it/s][A
+Running loglikelihood requests:  79%|███████▉  | 813/1024 [00:07<00:01, 113.86it/s][A
+Running loglikelihood requests:  81%|████████  | 825/1024 [00:07<00:01, 113.75it/s][A
+Running loglikelihood requests:  82%|████████▏ | 837/1024 [00:07<00:01, 112.77it/s][A
+Running loglikelihood requests:  83%|████████▎ | 849/1024 [00:07<00:01, 112.96it/s][A
+Running loglikelihood requests:  84%|████████▍ | 861/1024 [00:07<00:01, 112.91it/s][A
+Running loglikelihood requests:  85%|████████▌ | 873/1024 [00:07<00:01, 111.49it/s][A
+Running loglikelihood requests:  86%|████████▋ | 885/1024 [00:08<00:01, 112.51it/s][A
+Running loglikelihood requests:  88%|████████▊ | 897/1024 [00:08<00:01, 113.55it/s][A
+Running loglikelihood requests:  89%|████████▉ | 909/1024 [00:08<00:01, 113.76it/s][A
+Running loglikelihood requests:  90%|████████▉ | 921/1024 [00:08<00:00, 112.79it/s][A
+Running loglikelihood requests:  91%|█████████ | 933/1024 [00:08<00:00, 112.72it/s][A
+Running loglikelihood requests:  92%|█████████▏| 945/1024 [00:08<00:00, 113.78it/s][A
+Running loglikelihood requests:  93%|█████████▎| 957/1024 [00:08<00:00, 114.08it/s][A
+Running loglikelihood requests:  95%|█████████▍| 969/1024 [00:08<00:00, 113.78it/s][A
+Running loglikelihood requests:  96%|█████████▌| 981/1024 [00:08<00:00, 113.17it/s][A
+Running loglikelihood requests:  97%|█████████▋| 993/1024 [00:09<00:00, 112.88it/s][A
+Running loglikelihood requests:  98%|█████████▊| 1005/1024 [00:09<00:00, 112.23it/s][A
+Running loglikelihood requests:  99%|█████████▉| 1017/1024 [00:09<00:00, 112.50it/s][ARunning loglikelihood requests: 100%|██████████| 1024/1024 [00:09<00:00, 110.61it/s]
+
+Running loglikelihood requests:   0%|          | 0/6840 [00:00<?, ?it/s][A
+Running loglikelihood requests:   0%|          | 5/6840 [00:00<02:53, 39.45it/s][A
+Running loglikelihood requests:   0%|          | 13/6840 [00:00<01:58, 57.78it/s][A
+Running loglikelihood requests:   0%|          | 21/6840 [00:00<01:42, 66.22it/s][A
+Running loglikelihood requests:   0%|          | 33/6840 [00:00<01:32, 73.48it/s][A
+Running loglikelihood requests:   1%|          | 45/6840 [00:00<01:27, 77.57it/s][A
+Running loglikelihood requests:   1%|          | 57/6840 [00:00<01:22, 81.91it/s][A
+Running loglikelihood requests:   1%|          | 69/6840 [00:00<01:19, 85.46it/s][A
+Running loglikelihood requests:   1%|          | 81/6840 [00:01<01:16, 88.31it/s][A
+Running loglikelihood requests:   1%|▏         | 93/6840 [00:01<01:14, 90.23it/s][A
+Running loglikelihood requests:   2%|▏         | 105/6840 [00:01<01:13, 91.79it/s][A
+Running loglikelihood requests:   2%|▏         | 117/6840 [00:01<01:10, 94.84it/s][A
+Running loglikelihood requests:   2%|▏         | 129/6840 [00:01<01:08, 97.73it/s][A
+Running loglikelihood requests:   2%|▏         | 141/6840 [00:01<01:07, 99.72it/s][A
+Running loglikelihood requests:   2%|▏         | 153/6840 [00:01<01:05, 102.44it/s][A
+Running loglikelihood requests:   2%|▏         | 165/6840 [00:01<01:04, 104.00it/s][A
+Running loglikelihood requests:   3%|▎         | 177/6840 [00:01<01:03, 105.25it/s][A
+Running loglikelihood requests:   3%|▎         | 189/6840 [00:02<01:02, 105.95it/s][A
+Running loglikelihood requests:   3%|▎         | 201/6840 [00:02<01:02, 106.74it/s][A
+Running loglikelihood requests:   3%|▎         | 213/6840 [00:02<01:02, 106.06it/s][A
+Running loglikelihood requests:   3%|▎         | 225/6840 [00:02<01:03, 104.21it/s][A
+Running loglikelihood requests:   3%|▎         | 237/6840 [00:02<01:04, 102.78it/s][A
+Running loglikelihood requests:   4%|▎         | 249/6840 [00:02<01:04, 102.91it/s][A
+Running loglikelihood requests:   4%|▍         | 261/6840 [00:02<01:02, 104.85it/s][A
+Running loglikelihood requests:   4%|▍         | 273/6840 [00:02<01:01, 106.09it/s][A
+Running loglikelihood requests:   4%|▍         | 285/6840 [00:02<01:01, 106.25it/s][A
+Running loglikelihood requests:   4%|▍         | 297/6840 [00:03<01:02, 105.21it/s][A
+Running loglikelihood requests:   5%|▍         | 309/6840 [00:03<01:01, 105.40it/s][A
+Running loglikelihood requests:   5%|▍         | 321/6840 [00:03<01:02, 104.98it/s][A
+Running loglikelihood requests:   5%|▍         | 333/6840 [00:03<01:02, 103.85it/s][A
+Running loglikelihood requests:   5%|▌         | 345/6840 [00:03<01:02, 104.06it/s][A
+Running loglikelihood requests:   5%|▌         | 357/6840 [00:03<01:02, 104.51it/s][A
+Running loglikelihood requests:   5%|▌         | 369/6840 [00:03<01:01, 105.95it/s][A
+Running loglikelihood requests:   6%|▌         | 381/6840 [00:03<01:00, 106.27it/s][A
+Running loglikelihood requests:   6%|▌         | 393/6840 [00:03<00:59, 108.24it/s][A
+Running loglikelihood requests:   6%|▌         | 405/6840 [00:04<00:58, 109.57it/s][A
+Running loglikelihood requests:   6%|▌         | 417/6840 [00:04<00:58, 109.06it/s][A
+Running loglikelihood requests:   6%|▋         | 429/6840 [00:04<00:58, 109.07it/s][A
+Running loglikelihood requests:   6%|▋         | 441/6840 [00:04<00:58, 108.60it/s][A
+Running loglikelihood requests:   7%|▋         | 453/6840 [00:04<00:59, 107.92it/s][A
+Running loglikelihood requests:   7%|▋         | 465/6840 [00:04<00:59, 107.93it/s][A
+Running loglikelihood requests:   7%|▋         | 477/6840 [00:04<00:59, 107.61it/s][A
+Running loglikelihood requests:   7%|▋         | 489/6840 [00:04<00:58, 107.69it/s][A
+Running loglikelihood requests:   7%|▋         | 501/6840 [00:04<00:58, 107.70it/s][A
+Running loglikelihood requests:   8%|▊         | 513/6840 [00:05<00:58, 109.05it/s][A
+Running loglikelihood requests:   8%|▊         | 525/6840 [00:05<00:58, 108.79it/s][A
+Running loglikelihood requests:   8%|▊         | 537/6840 [00:05<00:57, 108.80it/s][A
+Running loglikelihood requests:   8%|▊         | 549/6840 [00:05<00:57, 109.01it/s][A
+Running loglikelihood requests:   8%|▊         | 561/6840 [00:05<00:57, 108.70it/s][A
+Running loglikelihood requests:   8%|▊         | 573/6840 [00:05<00:57, 109.65it/s][A
+Running loglikelihood requests:   9%|▊         | 585/6840 [00:05<00:57, 109.67it/s][A
+Running loglikelihood requests:   9%|▊         | 597/6840 [00:05<00:56, 110.36it/s][A
+Running loglikelihood requests:   9%|▉         | 609/6840 [00:05<00:56, 110.23it/s][A
+Running loglikelihood requests:   9%|▉         | 621/6840 [00:06<00:56, 110.42it/s][A
+Running loglikelihood requests:   9%|▉         | 633/6840 [00:06<00:56, 110.81it/s][A
+Running loglikelihood requests:   9%|▉         | 645/6840 [00:06<00:55, 111.52it/s][A
+Running loglikelihood requests:  10%|▉         | 657/6840 [00:06<00:55, 111.52it/s][A
+Running loglikelihood requests:  10%|▉         | 669/6840 [00:06<00:55, 110.62it/s][A
+Running loglikelihood requests:  10%|▉         | 681/6840 [00:06<00:55, 110.27it/s][A
+Running loglikelihood requests:  10%|█         | 693/6840 [00:06<00:55, 111.53it/s][A
+Running loglikelihood requests:  10%|█         | 705/6840 [00:06<00:55, 111.49it/s][A
+Running loglikelihood requests:  10%|█         | 717/6840 [00:06<00:54, 112.08it/s][A
+Running loglikelihood requests:  11%|█         | 729/6840 [00:07<00:54, 111.55it/s][A
+Running loglikelihood requests:  11%|█         | 741/6840 [00:07<00:55, 110.11it/s][A
+Running loglikelihood requests:  11%|█         | 753/6840 [00:07<00:55, 110.25it/s][A
+Running loglikelihood requests:  11%|█         | 765/6840 [00:07<00:55, 108.84it/s][A
+Running loglikelihood requests:  11%|█▏        | 777/6840 [00:07<00:55, 108.35it/s][A
+Running loglikelihood requests:  12%|█▏        | 789/6840 [00:07<00:55, 108.14it/s][A
+Running loglikelihood requests:  12%|█▏        | 801/6840 [00:07<00:55, 109.55it/s][A
+Running loglikelihood requests:  12%|█▏        | 813/6840 [00:07<00:54, 110.62it/s][A
+Running loglikelihood requests:  12%|█▏        | 825/6840 [00:07<00:54, 111.38it/s][A
+Running loglikelihood requests:  12%|█▏        | 837/6840 [00:08<00:53, 112.63it/s][A
+Running loglikelihood requests:  12%|█▏        | 849/6840 [00:08<00:53, 111.80it/s][A
+Running loglikelihood requests:  13%|█▎        | 861/6840 [00:08<00:53, 111.87it/s][A
+Running loglikelihood requests:  13%|█▎        | 873/6840 [00:08<00:53, 111.32it/s][A
+Running loglikelihood requests:  13%|█▎        | 885/6840 [00:08<00:53, 111.51it/s][A
+Running loglikelihood requests:  13%|█▎        | 897/6840 [00:08<00:53, 111.84it/s][A
+Running loglikelihood requests:  13%|█▎        | 909/6840 [00:08<00:52, 112.16it/s][A
+Running loglikelihood requests:  13%|█▎        | 921/6840 [00:08<00:52, 112.12it/s][A
+Running loglikelihood requests:  14%|█▎        | 933/6840 [00:08<00:52, 112.80it/s][A
+Running loglikelihood requests:  14%|█▍        | 945/6840 [00:08<00:51, 113.49it/s][A
+Running loglikelihood requests:  14%|█▍        | 957/6840 [00:09<00:52, 112.49it/s][A
+Running loglikelihood requests:  14%|█▍        | 969/6840 [00:09<00:51, 113.68it/s][A
+Running loglikelihood requests:  14%|█▍        | 981/6840 [00:09<00:51, 113.78it/s][A
+Running loglikelihood requests:  15%|█▍        | 993/6840 [00:09<00:51, 113.07it/s][A
+Running loglikelihood requests:  15%|█▍        | 1005/6840 [00:09<00:51, 112.32it/s][A
+Running loglikelihood requests:  15%|█▍        | 1017/6840 [00:09<00:52, 111.42it/s][A
+Running loglikelihood requests:  15%|█▌        | 1029/6840 [00:09<00:51, 111.98it/s][A
+Running loglikelihood requests:  15%|█▌        | 1041/6840 [00:09<00:51, 112.63it/s][A
+Running loglikelihood requests:  15%|█▌        | 1053/6840 [00:09<00:50, 113.88it/s][A
+Running loglikelihood requests:  16%|█▌        | 1065/6840 [00:10<00:50, 114.14it/s][A
+Running loglikelihood requests:  16%|█▌        | 1077/6840 [00:10<00:50, 113.11it/s][A
+Running loglikelihood requests:  16%|█▌        | 1089/6840 [00:10<00:50, 113.58it/s][A
+Running loglikelihood requests:  16%|█▌        | 1101/6840 [00:10<00:50, 114.12it/s][A
+Running loglikelihood requests:  16%|█▋        | 1113/6840 [00:10<00:49, 115.08it/s][A
+Running loglikelihood requests:  16%|█▋        | 1125/6840 [00:10<00:49, 114.58it/s][A
+Running loglikelihood requests:  17%|█▋        | 1137/6840 [00:10<00:49, 114.67it/s][A
+Running loglikelihood requests:  17%|█▋        | 1149/6840 [00:10<00:50, 113.64it/s][A
+Running loglikelihood requests:  17%|█▋        | 1161/6840 [00:10<00:50, 113.02it/s][A
+Running loglikelihood requests:  17%|█▋        | 1173/6840 [00:11<00:50, 111.97it/s][A
+Running loglikelihood requests:  17%|█▋        | 1185/6840 [00:11<00:50, 112.87it/s][A
+Running loglikelihood requests:  18%|█▊        | 1197/6840 [00:11<00:49, 114.05it/s][A
+Running loglikelihood requests:  18%|█▊        | 1209/6840 [00:11<00:49, 113.53it/s][A
+Running loglikelihood requests:  18%|█▊        | 1221/6840 [00:11<00:49, 114.03it/s][A
+Running loglikelihood requests:  18%|█▊        | 1233/6840 [00:11<00:49, 114.26it/s][A
+Running loglikelihood requests:  18%|█▊        | 1245/6840 [00:11<00:49, 113.82it/s][A
+Running loglikelihood requests:  18%|█▊        | 1257/6840 [00:11<00:49, 112.91it/s][A
+Running loglikelihood requests:  19%|█▊        | 1269/6840 [00:11<00:49, 111.47it/s][A
+Running loglikelihood requests:  19%|█▊        | 1281/6840 [00:11<00:50, 109.66it/s][A
+Running loglikelihood requests:  19%|█▉        | 1293/6840 [00:12<00:50, 110.72it/s][A
+Running loglikelihood requests:  19%|█▉        | 1305/6840 [00:12<00:49, 111.89it/s][A
+Running loglikelihood requests:  19%|█▉        | 1317/6840 [00:12<00:48, 113.32it/s][A
+Running loglikelihood requests:  19%|█▉        | 1329/6840 [00:12<00:49, 112.22it/s][A
+Running loglikelihood requests:  20%|█▉        | 1341/6840 [00:12<00:49, 110.60it/s][A
+Running loglikelihood requests:  20%|█▉        | 1353/6840 [00:12<00:48, 112.10it/s][A
+Running loglikelihood requests:  20%|█▉        | 1365/6840 [00:12<00:48, 113.24it/s][A
+Running loglikelihood requests:  20%|██        | 1377/6840 [00:12<00:48, 113.18it/s][A
+Running loglikelihood requests:  20%|██        | 1389/6840 [00:12<00:48, 113.36it/s][A
+Running loglikelihood requests:  20%|██        | 1401/6840 [00:13<00:48, 113.08it/s][A
+Running loglikelihood requests:  21%|██        | 1413/6840 [00:13<00:47, 113.31it/s][A
+Running loglikelihood requests:  21%|██        | 1425/6840 [00:13<00:47, 114.11it/s][A
+Running loglikelihood requests:  21%|██        | 1437/6840 [00:13<00:47, 113.32it/s][A
+Running loglikelihood requests:  21%|██        | 1449/6840 [00:13<00:47, 112.31it/s][A
+Running loglikelihood requests:  21%|██▏       | 1461/6840 [00:13<00:47, 112.06it/s][A
+Running loglikelihood requests:  22%|██▏       | 1473/6840 [00:13<00:47, 112.31it/s][A
+Running loglikelihood requests:  22%|██▏       | 1485/6840 [00:13<00:47, 112.86it/s][A
+Running loglikelihood requests:  22%|██▏       | 1497/6840 [00:13<00:47, 113.05it/s][A
+Running loglikelihood requests:  22%|██▏       | 1509/6840 [00:13<00:47, 111.27it/s][A
+Running loglikelihood requests:  22%|██▏       | 1521/6840 [00:14<00:48, 110.53it/s][A
+Running loglikelihood requests:  22%|██▏       | 1533/6840 [00:14<00:48, 109.44it/s][A
+Running loglikelihood requests:  23%|██▎       | 1545/6840 [00:14<00:48, 109.55it/s][A
+Running loglikelihood requests:  23%|██▎       | 1557/6840 [00:14<00:48, 109.90it/s][A
+Running loglikelihood requests:  23%|██▎       | 1569/6840 [00:14<00:47, 111.78it/s][A
+Running loglikelihood requests:  23%|██▎       | 1581/6840 [00:14<00:46, 112.28it/s][A
+Running loglikelihood requests:  23%|██▎       | 1593/6840 [00:14<00:46, 113.01it/s][A
+Running loglikelihood requests:  23%|██▎       | 1605/6840 [00:14<00:45, 114.04it/s][A
+Running loglikelihood requests:  24%|██▎       | 1617/6840 [00:14<00:46, 113.42it/s][A
+Running loglikelihood requests:  24%|██▍       | 1629/6840 [00:15<00:46, 113.13it/s][A
+Running loglikelihood requests:  24%|██▍       | 1641/6840 [00:15<00:45, 113.52it/s][A
+Running loglikelihood requests:  24%|██▍       | 1653/6840 [00:15<00:46, 111.46it/s][A
+Running loglikelihood requests:  24%|██▍       | 1665/6840 [00:15<00:46, 111.59it/s][A
+Running loglikelihood requests:  25%|██▍       | 1677/6840 [00:15<00:46, 111.45it/s][A
+Running loglikelihood requests:  25%|██▍       | 1689/6840 [00:15<00:46, 111.94it/s][A
+Running loglikelihood requests:  25%|██▍       | 1701/6840 [00:15<00:45, 112.02it/s][A
+Running loglikelihood requests:  25%|██▌       | 1713/6840 [00:15<00:45, 111.83it/s][A
+Running loglikelihood requests:  25%|██▌       | 1725/6840 [00:15<00:45, 112.09it/s][A
+Running loglikelihood requests:  25%|██▌       | 1737/6840 [00:16<00:45, 111.05it/s][A
+Running loglikelihood requests:  26%|██▌       | 1749/6840 [00:16<00:45, 111.60it/s][A
+Running loglikelihood requests:  26%|██▌       | 1761/6840 [00:16<00:45, 112.07it/s][A
+Running loglikelihood requests:  26%|██▌       | 1773/6840 [00:16<00:45, 112.14it/s][A
+Running loglikelihood requests:  26%|██▌       | 1785/6840 [00:16<00:45, 111.96it/s][A
+Running loglikelihood requests:  26%|██▋       | 1797/6840 [00:16<00:45, 110.84it/s][A
+Running loglikelihood requests:  26%|██▋       | 1809/6840 [00:16<00:45, 110.13it/s][A
+Running loglikelihood requests:  27%|██▋       | 1821/6840 [00:16<00:45, 109.37it/s][A
+Running loglikelihood requests:  27%|██▋       | 1833/6840 [00:16<00:45, 109.72it/s][A
+Running loglikelihood requests:  27%|██▋       | 1845/6840 [00:17<00:44, 111.26it/s][A
+Running loglikelihood requests:  27%|██▋       | 1857/6840 [00:17<00:44, 111.67it/s][A
+Running loglikelihood requests:  27%|██▋       | 1869/6840 [00:17<00:44, 110.72it/s][A
+Running loglikelihood requests:  28%|██▊       | 1881/6840 [00:17<00:44, 110.66it/s][A
+Running loglikelihood requests:  28%|██▊       | 1893/6840 [00:17<00:45, 109.67it/s][A
+Running loglikelihood requests:  28%|██▊       | 1905/6840 [00:17<00:45, 108.93it/s][A
+Running loglikelihood requests:  28%|██▊       | 1917/6840 [00:17<00:44, 110.31it/s][A
+Running loglikelihood requests:  28%|██▊       | 1929/6840 [00:17<00:44, 110.94it/s][A
+Running loglikelihood requests:  28%|██▊       | 1941/6840 [00:17<00:44, 111.31it/s][A
+Running loglikelihood requests:  29%|██▊       | 1953/6840 [00:17<00:43, 111.84it/s][A
+Running loglikelihood requests:  29%|██▊       | 1965/6840 [00:18<00:43, 111.49it/s][A
+Running loglikelihood requests:  29%|██▉       | 1977/6840 [00:18<00:43, 111.71it/s][A
+Running loglikelihood requests:  29%|██▉       | 1989/6840 [00:18<00:43, 110.87it/s][A
+Running loglikelihood requests:  29%|██▉       | 2001/6840 [00:18<00:44, 109.72it/s][A
+Running loglikelihood requests:  29%|██▉       | 2013/6840 [00:18<00:43, 110.54it/s][A
+Running loglikelihood requests:  30%|██▉       | 2025/6840 [00:18<00:44, 109.08it/s][A
+Running loglikelihood requests:  30%|██▉       | 2037/6840 [00:18<00:43, 109.36it/s][A
+Running loglikelihood requests:  30%|██▉       | 2049/6840 [00:18<00:43, 110.20it/s][A
+Running loglikelihood requests:  30%|███       | 2061/6840 [00:18<00:43, 108.72it/s][A
+Running loglikelihood requests:  30%|███       | 2073/6840 [00:19<00:44, 108.23it/s][A
+Running loglikelihood requests:  30%|███       | 2085/6840 [00:19<00:43, 109.46it/s][A
+Running loglikelihood requests:  31%|███       | 2097/6840 [00:19<00:42, 110.40it/s][A
+Running loglikelihood requests:  31%|███       | 2109/6840 [00:19<00:43, 109.59it/s][A
+Running loglikelihood requests:  31%|███       | 2121/6840 [00:19<00:42, 109.91it/s][A
+Running loglikelihood requests:  31%|███       | 2133/6840 [00:19<00:42, 110.04it/s][A
+Running loglikelihood requests:  31%|███▏      | 2145/6840 [00:19<00:42, 109.47it/s][A
+Running loglikelihood requests:  32%|███▏      | 2157/6840 [00:19<00:42, 109.98it/s][A
+Running loglikelihood requests:  32%|███▏      | 2169/6840 [00:19<00:42, 110.24it/s][A
+Running loglikelihood requests:  32%|███▏      | 2181/6840 [00:20<00:41, 111.58it/s][A
+Running loglikelihood requests:  32%|███▏      | 2193/6840 [00:20<00:41, 111.93it/s][A
+Running loglikelihood requests:  32%|███▏      | 2205/6840 [00:20<00:41, 112.88it/s][A
+Running loglikelihood requests:  32%|███▏      | 2217/6840 [00:20<00:40, 113.87it/s][A
+Running loglikelihood requests:  33%|███▎      | 2229/6840 [00:20<00:40, 113.10it/s][A
+Running loglikelihood requests:  33%|███▎      | 2241/6840 [00:20<00:40, 113.41it/s][A
+Running loglikelihood requests:  33%|███▎      | 2253/6840 [00:20<00:40, 113.79it/s][A
+Running loglikelihood requests:  33%|███▎      | 2265/6840 [00:20<00:40, 112.37it/s][A
+Running loglikelihood requests:  33%|███▎      | 2277/6840 [00:20<00:40, 111.95it/s][A
+Running loglikelihood requests:  33%|███▎      | 2289/6840 [00:21<00:40, 111.31it/s][A
+Running loglikelihood requests:  34%|███▎      | 2301/6840 [00:21<00:41, 110.10it/s][A
+Running loglikelihood requests:  34%|███▍      | 2313/6840 [00:21<00:41, 109.85it/s][A
+Running loglikelihood requests:  34%|███▍      | 2325/6840 [00:21<00:41, 109.27it/s][A
+Running loglikelihood requests:  34%|███▍      | 2337/6840 [00:21<00:41, 107.80it/s][A
+Running loglikelihood requests:  34%|███▍      | 2349/6840 [00:21<00:41, 108.56it/s][A
+Running loglikelihood requests:  35%|███▍      | 2361/6840 [00:21<00:41, 108.45it/s][A
+Running loglikelihood requests:  35%|███▍      | 2373/6840 [00:21<00:40, 109.92it/s][A
+Running loglikelihood requests:  35%|███▍      | 2385/6840 [00:21<00:40, 110.07it/s][A
+Running loglikelihood requests:  35%|███▌      | 2397/6840 [00:22<00:40, 109.70it/s][A
+Running loglikelihood requests:  35%|███▌      | 2409/6840 [00:22<00:40, 109.86it/s][A
+Running loglikelihood requests:  35%|███▌      | 2421/6840 [00:22<00:40, 110.03it/s][A
+Running loglikelihood requests:  36%|███▌      | 2433/6840 [00:22<00:40, 109.91it/s][A
+Running loglikelihood requests:  36%|███▌      | 2445/6840 [00:22<00:41, 107.07it/s][A
+Running loglikelihood requests:  36%|███▌      | 2457/6840 [00:22<00:40, 108.50it/s][A
+Running loglikelihood requests:  36%|███▌      | 2469/6840 [00:22<00:39, 110.16it/s][A
+Running loglikelihood requests:  36%|███▋      | 2481/6840 [00:22<00:39, 110.30it/s][A
+Running loglikelihood requests:  36%|███▋      | 2493/6840 [00:22<00:38, 111.69it/s][A
+Running loglikelihood requests:  37%|███▋      | 2505/6840 [00:22<00:38, 111.94it/s][A
+Running loglikelihood requests:  37%|███▋      | 2517/6840 [00:23<00:38, 112.24it/s][A
+Running loglikelihood requests:  37%|███▋      | 2529/6840 [00:23<00:38, 111.96it/s][A
+Running loglikelihood requests:  37%|███▋      | 2541/6840 [00:23<00:38, 111.38it/s][A
+Running loglikelihood requests:  37%|███▋      | 2553/6840 [00:23<00:38, 110.35it/s][A
+Running loglikelihood requests:  38%|███▊      | 2565/6840 [00:23<00:38, 109.65it/s][A
+Running loglikelihood requests:  38%|███▊      | 2577/6840 [00:23<00:39, 109.14it/s][A
+Running loglikelihood requests:  38%|███▊      | 2589/6840 [00:23<00:39, 107.61it/s][A
+Running loglikelihood requests:  38%|███▊      | 2601/6840 [00:23<00:39, 107.11it/s][A
+Running loglikelihood requests:  38%|███▊      | 2613/6840 [00:23<00:38, 109.21it/s][A
+Running loglikelihood requests:  38%|███▊      | 2625/6840 [00:24<00:38, 110.66it/s][A
+Running loglikelihood requests:  39%|███▊      | 2637/6840 [00:24<00:37, 112.02it/s][A
+Running loglikelihood requests:  39%|███▊      | 2649/6840 [00:24<00:37, 113.02it/s][A
+Running loglikelihood requests:  39%|███▉      | 2661/6840 [00:24<00:36, 113.39it/s][A
+Running loglikelihood requests:  39%|███▉      | 2673/6840 [00:24<00:36, 113.23it/s][A
+Running loglikelihood requests:  39%|███▉      | 2685/6840 [00:24<00:36, 114.50it/s][A
+Running loglikelihood requests:  39%|███▉      | 2697/6840 [00:24<00:36, 114.08it/s][A
+Running loglikelihood requests:  40%|███▉      | 2709/6840 [00:24<00:36, 113.84it/s][A
+Running loglikelihood requests:  40%|███▉      | 2721/6840 [00:24<00:36, 113.60it/s][A
+Running loglikelihood requests:  40%|███▉      | 2733/6840 [00:25<00:36, 112.97it/s][A
+Running loglikelihood requests:  40%|████      | 2745/6840 [00:25<00:36, 113.13it/s][A
+Running loglikelihood requests:  40%|████      | 2757/6840 [00:25<00:36, 112.67it/s][A
+Running loglikelihood requests:  40%|████      | 2769/6840 [00:25<00:36, 112.81it/s][A
+Running loglikelihood requests:  41%|████      | 2781/6840 [00:25<00:35, 113.43it/s][A
+Running loglikelihood requests:  41%|████      | 2793/6840 [00:25<00:35, 113.61it/s][A
+Running loglikelihood requests:  41%|████      | 2805/6840 [00:25<00:35, 113.68it/s][A
+Running loglikelihood requests:  41%|████      | 2817/6840 [00:25<00:35, 113.44it/s][A
+Running loglikelihood requests:  41%|████▏     | 2833/6840 [00:25<00:32, 124.17it/s][A
+Running loglikelihood requests:  42%|████▏     | 2846/6840 [00:25<00:32, 123.77it/s][A
+Running loglikelihood requests:  42%|████▏     | 2859/6840 [00:26<00:32, 123.26it/s][A
+Running loglikelihood requests:  42%|████▏     | 2872/6840 [00:26<00:32, 121.69it/s][A
+Running loglikelihood requests:  42%|████▏     | 2885/6840 [00:26<00:35, 111.18it/s][A
+Running loglikelihood requests:  42%|████▏     | 2897/6840 [00:26<00:34, 112.69it/s][A
+Running loglikelihood requests:  43%|████▎     | 2909/6840 [00:26<00:34, 114.21it/s][A
+Running loglikelihood requests:  43%|████▎     | 2921/6840 [00:26<00:34, 114.54it/s][A
+Running loglikelihood requests:  43%|████▎     | 2933/6840 [00:26<00:33, 114.94it/s][A
+Running loglikelihood requests:  43%|████▎     | 2945/6840 [00:26<00:33, 115.75it/s][A
+Running loglikelihood requests:  43%|████▎     | 2957/6840 [00:26<00:33, 115.79it/s][A
+Running loglikelihood requests:  43%|████▎     | 2969/6840 [00:27<00:33, 115.75it/s][A
+Running loglikelihood requests:  44%|████▎     | 2981/6840 [00:27<00:33, 116.24it/s][A
+Running loglikelihood requests:  44%|████▍     | 2993/6840 [00:27<00:33, 115.88it/s][A
+Running loglikelihood requests:  44%|████▍     | 3005/6840 [00:27<00:33, 115.23it/s][A
+Running loglikelihood requests:  44%|████▍     | 3017/6840 [00:27<00:33, 114.61it/s][A
+Running loglikelihood requests:  44%|████▍     | 3029/6840 [00:27<00:33, 114.60it/s][A
+Running loglikelihood requests:  44%|████▍     | 3041/6840 [00:27<00:33, 114.90it/s][A
+Running loglikelihood requests:  45%|████▍     | 3053/6840 [00:27<00:33, 114.60it/s][A
+Running loglikelihood requests:  45%|████▍     | 3065/6840 [00:27<00:33, 113.68it/s][A
+Running loglikelihood requests:  45%|████▍     | 3077/6840 [00:27<00:33, 113.69it/s][A
+Running loglikelihood requests:  45%|████▌     | 3089/6840 [00:28<00:33, 112.85it/s][A
+Running loglikelihood requests:  45%|████▌     | 3101/6840 [00:28<00:33, 112.96it/s][A
+Running loglikelihood requests:  46%|████▌     | 3113/6840 [00:28<00:33, 112.10it/s][A
+Running loglikelihood requests:  46%|████▌     | 3125/6840 [00:28<00:33, 111.17it/s][A
+Running loglikelihood requests:  46%|████▌     | 3137/6840 [00:28<00:33, 110.61it/s][A
+Running loglikelihood requests:  46%|████▌     | 3149/6840 [00:28<00:33, 110.65it/s][A
+Running loglikelihood requests:  46%|████▌     | 3161/6840 [00:28<00:33, 109.97it/s][A
+Running loglikelihood requests:  46%|████▋     | 3173/6840 [00:28<00:36, 99.99it/s] [A
+Running loglikelihood requests:  47%|████▋     | 3185/6840 [00:29<00:35, 104.25it/s][A
+Running loglikelihood requests:  47%|████▋     | 3197/6840 [00:29<00:33, 107.21it/s][A
+Running loglikelihood requests:  47%|████▋     | 3209/6840 [00:29<00:33, 108.99it/s][A
+Running loglikelihood requests:  47%|████▋     | 3221/6840 [00:29<00:32, 110.83it/s][A
+Running loglikelihood requests:  47%|████▋     | 3233/6840 [00:29<00:32, 112.25it/s][A
+Running loglikelihood requests:  47%|████▋     | 3245/6840 [00:29<00:32, 111.78it/s][A
+Running loglikelihood requests:  48%|████▊     | 3257/6840 [00:29<00:31, 112.24it/s][A
+Running loglikelihood requests:  48%|████▊     | 3269/6840 [00:29<00:31, 113.30it/s][A
+Running loglikelihood requests:  48%|████▊     | 3281/6840 [00:29<00:31, 112.93it/s][A
+Running loglikelihood requests:  48%|████▊     | 3293/6840 [00:29<00:31, 113.93it/s][A
+Running loglikelihood requests:  48%|████▊     | 3305/6840 [00:30<00:31, 113.18it/s][A
+Running loglikelihood requests:  48%|████▊     | 3317/6840 [00:30<00:31, 113.60it/s][A
+Running loglikelihood requests:  49%|████▊     | 3329/6840 [00:30<00:31, 112.12it/s][A
+Running loglikelihood requests:  49%|████▉     | 3341/6840 [00:30<00:31, 112.82it/s][A
+Running loglikelihood requests:  49%|████▉     | 3353/6840 [00:30<00:30, 113.11it/s][A
+Running loglikelihood requests:  49%|████▉     | 3365/6840 [00:30<00:30, 112.78it/s][A
+Running loglikelihood requests:  49%|████▉     | 3377/6840 [00:30<00:30, 112.76it/s][A
+Running loglikelihood requests:  50%|████▉     | 3389/6840 [00:30<00:30, 112.90it/s][A
+Running loglikelihood requests:  50%|████▉     | 3401/6840 [00:30<00:30, 112.11it/s][A
+Running loglikelihood requests:  50%|████▉     | 3413/6840 [00:31<00:30, 111.03it/s][A
+Running loglikelihood requests:  50%|█████     | 3425/6840 [00:31<00:30, 112.14it/s][A
+Running loglikelihood requests:  50%|█████     | 3437/6840 [00:31<00:30, 113.11it/s][A
+Running loglikelihood requests:  50%|█████     | 3449/6840 [00:31<00:30, 112.98it/s][A
+Running loglikelihood requests:  51%|█████     | 3461/6840 [00:31<00:29, 113.36it/s][A
+Running loglikelihood requests:  51%|█████     | 3473/6840 [00:31<00:29, 114.41it/s][A
+Running loglikelihood requests:  51%|█████     | 3485/6840 [00:31<00:29, 115.30it/s][A
+Running loglikelihood requests:  51%|█████     | 3497/6840 [00:31<00:28, 115.74it/s][A
+Running loglikelihood requests:  51%|█████▏    | 3509/6840 [00:31<00:28, 116.29it/s][A
+Running loglikelihood requests:  51%|█████▏    | 3521/6840 [00:31<00:28, 116.67it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3533/6840 [00:32<00:28, 115.78it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3545/6840 [00:32<00:28, 116.24it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3557/6840 [00:32<00:28, 115.87it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3569/6840 [00:32<00:28, 114.26it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3581/6840 [00:32<00:28, 112.94it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3593/6840 [00:32<00:28, 114.29it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3605/6840 [00:32<00:28, 115.17it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3617/6840 [00:32<00:27, 115.53it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3629/6840 [00:32<00:27, 115.11it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3641/6840 [00:33<00:27, 115.06it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3653/6840 [00:33<00:27, 114.91it/s][A
+Running loglikelihood requests:  54%|█████▎    | 3665/6840 [00:33<00:28, 112.86it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3677/6840 [00:33<00:28, 112.07it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3689/6840 [00:33<00:28, 110.79it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3701/6840 [00:33<00:27, 112.26it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3713/6840 [00:33<00:27, 113.32it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3725/6840 [00:33<00:27, 113.75it/s][A
+Running loglikelihood requests:  55%|█████▍    | 3737/6840 [00:33<00:27, 113.81it/s][A
+Running loglikelihood requests:  55%|█████▍    | 3749/6840 [00:33<00:26, 114.73it/s][A
+Running loglikelihood requests:  55%|█████▍    | 3761/6840 [00:34<00:26, 114.75it/s][A
+Running loglikelihood requests:  55%|█████▌    | 3773/6840 [00:34<00:26, 114.66it/s][A
+Running loglikelihood requests:  55%|█████▌    | 3785/6840 [00:34<00:26, 115.31it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3797/6840 [00:34<00:26, 114.85it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3809/6840 [00:34<00:26, 115.44it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3821/6840 [00:34<00:26, 115.99it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3833/6840 [00:34<00:25, 115.84it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3845/6840 [00:34<00:25, 115.20it/s][A
+Running loglikelihood requests:  56%|█████▋    | 3857/6840 [00:34<00:26, 114.67it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3869/6840 [00:35<00:26, 114.25it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3881/6840 [00:35<00:25, 114.40it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3893/6840 [00:35<00:25, 113.86it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3905/6840 [00:35<00:25, 113.12it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3917/6840 [00:35<00:25, 112.64it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3929/6840 [00:35<00:25, 112.10it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3941/6840 [00:35<00:25, 111.78it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3953/6840 [00:35<00:26, 110.22it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3965/6840 [00:35<00:25, 110.71it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3977/6840 [00:35<00:25, 111.70it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3989/6840 [00:36<00:25, 112.39it/s][A
+Running loglikelihood requests:  58%|█████▊    | 4001/6840 [00:36<00:25, 112.44it/s][A
+Running loglikelihood requests:  59%|█████▊    | 4013/6840 [00:36<00:25, 111.81it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4025/6840 [00:36<00:25, 111.50it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4037/6840 [00:36<00:25, 111.83it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4049/6840 [00:36<00:24, 112.87it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4061/6840 [00:36<00:24, 113.84it/s][A
+Running loglikelihood requests:  60%|█████▉    | 4073/6840 [00:36<00:24, 114.76it/s][A
+Running loglikelihood requests:  60%|█████▉    | 4085/6840 [00:36<00:23, 115.20it/s][A
+Running loglikelihood requests:  60%|█████▉    | 4097/6840 [00:37<00:23, 115.45it/s][A
+Running loglikelihood requests:  60%|██████    | 4109/6840 [00:37<00:23, 115.08it/s][A
+Running loglikelihood requests:  60%|██████    | 4121/6840 [00:37<00:23, 114.21it/s][A
+Running loglikelihood requests:  60%|██████    | 4133/6840 [00:37<00:23, 113.21it/s][A
+Running loglikelihood requests:  61%|██████    | 4145/6840 [00:37<00:24, 111.22it/s][A
+Running loglikelihood requests:  61%|██████    | 4157/6840 [00:37<00:24, 111.51it/s][A
+Running loglikelihood requests:  61%|██████    | 4169/6840 [00:37<00:23, 112.19it/s][A
+Running loglikelihood requests:  61%|██████    | 4181/6840 [00:37<00:23, 112.49it/s][A
+Running loglikelihood requests:  61%|██████▏   | 4193/6840 [00:37<00:23, 112.93it/s][A
+Running loglikelihood requests:  61%|██████▏   | 4205/6840 [00:38<00:25, 103.29it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4217/6840 [00:38<00:25, 104.28it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4229/6840 [00:38<00:24, 106.48it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4241/6840 [00:38<00:23, 108.92it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4253/6840 [00:38<00:23, 110.34it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4265/6840 [00:38<00:23, 111.82it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4277/6840 [00:38<00:22, 112.61it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4289/6840 [00:38<00:22, 113.76it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4301/6840 [00:38<00:22, 113.44it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4313/6840 [00:38<00:22, 113.48it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4325/6840 [00:39<00:22, 113.65it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4337/6840 [00:39<00:21, 114.89it/s][A
+Running loglikelihood requests:  64%|██████▎   | 4349/6840 [00:39<00:21, 115.49it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4361/6840 [00:39<00:21, 116.31it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4373/6840 [00:39<00:21, 116.89it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4385/6840 [00:39<00:21, 113.06it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4397/6840 [00:39<00:21, 112.68it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4409/6840 [00:39<00:21, 113.25it/s][A
+Running loglikelihood requests:  65%|██████▍   | 4421/6840 [00:39<00:21, 113.68it/s][A
+Running loglikelihood requests:  65%|██████▍   | 4433/6840 [00:40<00:21, 113.12it/s][A
+Running loglikelihood requests:  65%|██████▍   | 4445/6840 [00:40<00:21, 113.64it/s][A
+Running loglikelihood requests:  65%|██████▌   | 4457/6840 [00:40<00:20, 113.65it/s][A
+Running loglikelihood requests:  65%|██████▌   | 4469/6840 [00:40<00:20, 113.29it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4481/6840 [00:40<00:21, 111.99it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4493/6840 [00:40<00:21, 110.45it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4505/6840 [00:40<00:20, 111.81it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4517/6840 [00:40<00:20, 112.54it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4529/6840 [00:40<00:20, 113.22it/s][A
+Running loglikelihood requests:  66%|██████▋   | 4541/6840 [00:40<00:20, 114.42it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4553/6840 [00:41<00:19, 115.82it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4566/6840 [00:41<00:18, 119.93it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4579/6840 [00:41<00:18, 122.51it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4592/6840 [00:41<00:18, 123.72it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4605/6840 [00:41<00:19, 113.72it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4617/6840 [00:41<00:19, 114.77it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4629/6840 [00:41<00:19, 115.63it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4641/6840 [00:41<00:18, 116.64it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4655/6840 [00:41<00:17, 123.40it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4668/6840 [00:42<00:17, 124.80it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4681/6840 [00:42<00:18, 114.61it/s][A
+Running loglikelihood requests:  69%|██████▊   | 4693/6840 [00:42<00:18, 115.91it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4705/6840 [00:42<00:18, 114.25it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4717/6840 [00:42<00:18, 111.95it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4729/6840 [00:42<00:18, 113.12it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4741/6840 [00:42<00:18, 114.04it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4753/6840 [00:42<00:18, 113.81it/s][A
+Running loglikelihood requests:  70%|██████▉   | 4765/6840 [00:42<00:18, 113.62it/s][A
+Running loglikelihood requests:  70%|██████▉   | 4777/6840 [00:43<00:18, 114.50it/s][A
+Running loglikelihood requests:  70%|███████   | 4789/6840 [00:43<00:17, 114.58it/s][A
+Running loglikelihood requests:  70%|███████   | 4801/6840 [00:43<00:17, 115.68it/s][A
+Running loglikelihood requests:  70%|███████   | 4813/6840 [00:43<00:17, 115.90it/s][A
+Running loglikelihood requests:  71%|███████   | 4825/6840 [00:43<00:17, 114.87it/s][A
+Running loglikelihood requests:  71%|███████   | 4837/6840 [00:43<00:17, 113.70it/s][A
+Running loglikelihood requests:  71%|███████   | 4849/6840 [00:43<00:17, 112.95it/s][A
+Running loglikelihood requests:  71%|███████   | 4861/6840 [00:43<00:17, 113.47it/s][A
+Running loglikelihood requests:  71%|███████   | 4873/6840 [00:43<00:17, 114.51it/s][A
+Running loglikelihood requests:  71%|███████▏  | 4885/6840 [00:43<00:17, 114.81it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4897/6840 [00:44<00:17, 113.87it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4909/6840 [00:44<00:16, 113.68it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4921/6840 [00:44<00:16, 113.82it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4933/6840 [00:44<00:16, 114.08it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4945/6840 [00:44<00:16, 112.88it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4957/6840 [00:44<00:16, 112.64it/s][A
+Running loglikelihood requests:  73%|███████▎  | 4969/6840 [00:44<00:16, 113.30it/s][A
+Running loglikelihood requests:  73%|███████▎  | 4981/6840 [00:44<00:16, 113.43it/s][A
+Running loglikelihood requests:  73%|███████▎  | 4993/6840 [00:44<00:16, 113.58it/s][A
+Running loglikelihood requests:  73%|███████▎  | 5005/6840 [00:45<00:16, 113.04it/s][A
+Running loglikelihood requests:  73%|███████▎  | 5017/6840 [00:45<00:16, 111.98it/s][A
+Running loglikelihood requests:  74%|███████▎  | 5029/6840 [00:45<00:16, 111.45it/s][A
+Running loglikelihood requests:  74%|███████▎  | 5041/6840 [00:45<00:16, 110.73it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5053/6840 [00:45<00:16, 111.01it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5065/6840 [00:45<00:15, 112.38it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5077/6840 [00:45<00:15, 112.92it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5089/6840 [00:45<00:15, 112.72it/s][A
+Running loglikelihood requests:  75%|███████▍  | 5101/6840 [00:45<00:15, 113.97it/s][A
+Running loglikelihood requests:  75%|███████▍  | 5113/6840 [00:45<00:15, 113.98it/s][A
+Running loglikelihood requests:  75%|███████▍  | 5125/6840 [00:46<00:15, 113.41it/s][A
+Running loglikelihood requests:  75%|███████▌  | 5137/6840 [00:46<00:15, 113.51it/s][A
+Running loglikelihood requests:  75%|███████▌  | 5149/6840 [00:46<00:14, 113.48it/s][A
+Running loglikelihood requests:  75%|███████▌  | 5161/6840 [00:46<00:14, 113.35it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5173/6840 [00:46<00:14, 113.02it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5185/6840 [00:46<00:14, 113.75it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5197/6840 [00:46<00:14, 113.91it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5209/6840 [00:46<00:14, 114.51it/s][A
+Running loglikelihood requests:  76%|███████▋  | 5221/6840 [00:46<00:14, 115.24it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5233/6840 [00:47<00:13, 115.70it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5245/6840 [00:47<00:13, 115.46it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5257/6840 [00:47<00:13, 115.76it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5269/6840 [00:47<00:13, 114.93it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5281/6840 [00:47<00:13, 111.51it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5293/6840 [00:47<00:13, 110.82it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5305/6840 [00:47<00:13, 111.57it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5317/6840 [00:47<00:13, 113.30it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5329/6840 [00:47<00:13, 115.12it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5341/6840 [00:47<00:12, 115.79it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5353/6840 [00:48<00:12, 116.51it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5365/6840 [00:48<00:12, 116.46it/s][A
+Running loglikelihood requests:  79%|███████▊  | 5377/6840 [00:48<00:12, 114.99it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5389/6840 [00:48<00:12, 114.72it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5401/6840 [00:48<00:12, 114.06it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5413/6840 [00:48<00:12, 114.50it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5425/6840 [00:48<00:12, 115.02it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5437/6840 [00:48<00:12, 114.92it/s][A
+Running loglikelihood requests:  80%|███████▉  | 5449/6840 [00:48<00:12, 115.10it/s][A
+Running loglikelihood requests:  80%|███████▉  | 5461/6840 [00:49<00:11, 115.69it/s][A
+Running loglikelihood requests:  80%|████████  | 5473/6840 [00:49<00:11, 116.08it/s][A
+Running loglikelihood requests:  80%|████████  | 5485/6840 [00:49<00:11, 116.66it/s][A
+Running loglikelihood requests:  80%|████████  | 5497/6840 [00:49<00:11, 116.85it/s][A
+Running loglikelihood requests:  81%|████████  | 5509/6840 [00:49<00:11, 117.00it/s][A
+Running loglikelihood requests:  81%|████████  | 5521/6840 [00:49<00:11, 116.04it/s][A
+Running loglikelihood requests:  81%|████████  | 5533/6840 [00:49<00:11, 116.30it/s][A
+Running loglikelihood requests:  81%|████████  | 5545/6840 [00:49<00:11, 115.80it/s][A
+Running loglikelihood requests:  81%|████████  | 5557/6840 [00:49<00:11, 115.54it/s][A
+Running loglikelihood requests:  81%|████████▏ | 5569/6840 [00:49<00:11, 113.96it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5581/6840 [00:50<00:11, 114.04it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5593/6840 [00:50<00:10, 114.82it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5605/6840 [00:50<00:10, 114.74it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5617/6840 [00:50<00:10, 115.53it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5629/6840 [00:50<00:10, 116.10it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5641/6840 [00:50<00:10, 116.90it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5653/6840 [00:50<00:10, 117.41it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5665/6840 [00:50<00:10, 117.31it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5677/6840 [00:50<00:09, 117.22it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5689/6840 [00:50<00:09, 117.46it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5701/6840 [00:51<00:09, 117.62it/s][A
+Running loglikelihood requests:  84%|████████▎ | 5713/6840 [00:51<00:09, 117.86it/s][A
+Running loglikelihood requests:  84%|████████▎ | 5725/6840 [00:51<00:09, 117.67it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5737/6840 [00:51<00:09, 117.34it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5749/6840 [00:51<00:09, 116.79it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5761/6840 [00:51<00:09, 115.70it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5773/6840 [00:51<00:09, 115.46it/s][A
+Running loglikelihood requests:  85%|████████▍ | 5785/6840 [00:51<00:09, 115.14it/s][A
+Running loglikelihood requests:  85%|████████▍ | 5797/6840 [00:51<00:09, 115.28it/s][A
+Running loglikelihood requests:  85%|████████▍ | 5809/6840 [00:52<00:08, 114.87it/s][A
+Running loglikelihood requests:  85%|████████▌ | 5821/6840 [00:52<00:08, 114.12it/s][A
+Running loglikelihood requests:  85%|████████▌ | 5833/6840 [00:52<00:08, 113.23it/s][A
+Running loglikelihood requests:  85%|████████▌ | 5845/6840 [00:52<00:08, 112.11it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5857/6840 [00:52<00:09, 109.12it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5869/6840 [00:52<00:08, 108.72it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5881/6840 [00:52<00:08, 111.31it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5893/6840 [00:52<00:08, 111.71it/s][A
+Running loglikelihood requests:  86%|████████▋ | 5905/6840 [00:52<00:08, 112.30it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5917/6840 [00:52<00:08, 112.80it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5929/6840 [00:53<00:08, 113.26it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5941/6840 [00:53<00:07, 114.35it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5953/6840 [00:53<00:07, 114.76it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5965/6840 [00:53<00:07, 114.36it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5977/6840 [00:53<00:07, 114.14it/s][A
+Running loglikelihood requests:  88%|████████▊ | 5989/6840 [00:53<00:07, 113.28it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6001/6840 [00:53<00:07, 112.96it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6013/6840 [00:53<00:07, 113.09it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6025/6840 [00:53<00:07, 112.86it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6037/6840 [00:54<00:07, 113.08it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6049/6840 [00:54<00:06, 113.24it/s][A
+Running loglikelihood requests:  89%|████████▊ | 6061/6840 [00:54<00:06, 113.87it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6073/6840 [00:54<00:06, 114.65it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6085/6840 [00:54<00:06, 113.38it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6097/6840 [00:54<00:06, 113.23it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6109/6840 [00:54<00:06, 112.57it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6121/6840 [00:54<00:06, 112.41it/s][A
+Running loglikelihood requests:  90%|████████▉ | 6133/6840 [00:54<00:06, 110.81it/s][A
+Running loglikelihood requests:  90%|████████▉ | 6145/6840 [00:54<00:06, 110.86it/s][A
+Running loglikelihood requests:  90%|█████████ | 6157/6840 [00:55<00:06, 111.74it/s][A
+Running loglikelihood requests:  90%|█████████ | 6169/6840 [00:55<00:06, 111.81it/s][A
+Running loglikelihood requests:  90%|█████████ | 6181/6840 [00:55<00:05, 112.32it/s][A
+Running loglikelihood requests:  91%|█████████ | 6193/6840 [00:55<00:05, 112.96it/s][A
+Running loglikelihood requests:  91%|█████████ | 6205/6840 [00:55<00:05, 112.87it/s][A
+Running loglikelihood requests:  91%|█████████ | 6217/6840 [00:55<00:05, 112.68it/s][A
+Running loglikelihood requests:  91%|█████████ | 6229/6840 [00:55<00:05, 112.99it/s][A
+Running loglikelihood requests:  91%|█████████ | 6241/6840 [00:55<00:05, 112.29it/s][A
+Running loglikelihood requests:  91%|█████████▏| 6253/6840 [00:55<00:05, 112.25it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6265/6840 [00:56<00:05, 112.35it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6277/6840 [00:56<00:04, 113.00it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6289/6840 [00:56<00:04, 113.03it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6301/6840 [00:56<00:04, 113.48it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6313/6840 [00:56<00:04, 113.75it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6325/6840 [00:56<00:04, 112.80it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6337/6840 [00:56<00:04, 113.07it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6349/6840 [00:56<00:04, 113.46it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6361/6840 [00:56<00:04, 113.17it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6373/6840 [00:57<00:04, 113.30it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6385/6840 [00:57<00:04, 112.70it/s][A
+Running loglikelihood requests:  94%|█████████▎| 6397/6840 [00:57<00:03, 112.41it/s][A
+Running loglikelihood requests:  94%|█████████▎| 6409/6840 [00:57<00:03, 112.38it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6421/6840 [00:57<00:03, 110.80it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6433/6840 [00:57<00:03, 110.76it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6445/6840 [00:57<00:03, 111.20it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6457/6840 [00:57<00:03, 112.08it/s][A
+Running loglikelihood requests:  95%|█████████▍| 6469/6840 [00:57<00:03, 113.56it/s][A
+Running loglikelihood requests:  95%|█████████▍| 6481/6840 [00:57<00:03, 114.45it/s][A
+Running loglikelihood requests:  95%|█████████▍| 6493/6840 [00:58<00:03, 114.94it/s][A
+Running loglikelihood requests:  95%|█████████▌| 6505/6840 [00:58<00:02, 115.29it/s][A
+Running loglikelihood requests:  95%|█████████▌| 6517/6840 [00:58<00:02, 115.47it/s][A
+Running loglikelihood requests:  95%|█████████▌| 6529/6840 [00:58<00:02, 114.78it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6541/6840 [00:58<00:02, 113.82it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6553/6840 [00:58<00:02, 114.69it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6565/6840 [00:58<00:02, 114.77it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6577/6840 [00:58<00:02, 114.30it/s][A
+Running loglikelihood requests:  96%|█████████▋| 6589/6840 [00:58<00:02, 114.91it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6601/6840 [00:59<00:02, 114.44it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6613/6840 [00:59<00:01, 115.13it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6625/6840 [00:59<00:01, 115.52it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6637/6840 [00:59<00:01, 114.75it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6649/6840 [00:59<00:01, 114.26it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6661/6840 [00:59<00:01, 112.05it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6673/6840 [00:59<00:01, 113.47it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6685/6840 [00:59<00:01, 112.95it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6697/6840 [00:59<00:01, 113.25it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6709/6840 [00:59<00:01, 113.35it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6721/6840 [01:00<00:01, 113.83it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6733/6840 [01:00<00:00, 113.84it/s][A
+Running loglikelihood requests:  99%|█████████▊| 6745/6840 [01:00<00:00, 114.24it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6757/6840 [01:00<00:00, 115.52it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6769/6840 [01:00<00:00, 114.77it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6781/6840 [01:00<00:00, 115.92it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6793/6840 [01:00<00:00, 116.41it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6805/6840 [01:00<00:00, 115.40it/s][A
+Running loglikelihood requests: 100%|█████████▉| 6817/6840 [01:00<00:00, 115.77it/s][A
+Running loglikelihood requests: 100%|█████████▉| 6829/6840 [01:01<00:00, 114.49it/s][ARunning loglikelihood requests: 100%|██████████| 6840/6840 [01:01<00:00, 111.99it/s]
+DEV 10 {"wmdp_bio": {"n": 256, "correct": 193, "accuracy_percent": 75.390625, "baseline_accuracy_percent": 75.78125, "change_percentage_points": -0.390625}, "mmlu": {"n": 1710, "correct": 1248, "accuracy_percent": 72.98245614035088, "baseline_accuracy_percent": 73.50877192982456, "change_percentage_points": -0.5263157894736842}}
+                                               {'loss': '0.7495', 'grad_norm': '0.2695', 'learning_rate': '2.5e-05', 'epoch': '0.07812'}
+ 25%|██▌       | 10/40 [02:12<01:14,  2.48s/it] 28%|██▊       | 11/40 [02:14<15:50, 32.79s/it]                                               {'loss': '0.7327', 'grad_norm': '0.25', 'learning_rate': '2.5e-05', 'epoch': '0.08594'}
+ 28%|██▊       | 11/40 [02:14<15:50, 32.79s/it] 30%|███       | 12/40 [02:17<10:59, 23.54s/it]                                               {'loss': '0.7393', 'grad_norm': '0.252', 'learning_rate': '2.5e-05', 'epoch': '0.09375'}
+ 30%|███       | 12/40 [02:17<10:59, 23.54s/it] 32%|███▎      | 13/40 [02:19<07:42, 17.13s/it]                                               {'loss': '0.731', 'grad_norm': '0.2559', 'learning_rate': '2.5e-05', 'epoch': '0.1016'}
+ 32%|███▎      | 13/40 [02:19<07:42, 17.13s/it] 35%|███▌      | 14/40 [02:21<05:29, 12.68s/it]                                               {'loss': '3.942', 'grad_norm': '0.2393', 'learning_rate': '2.5e-05', 'epoch': '0.1094'}
+ 35%|███▌      | 14/40 [02:21<05:29, 12.68s/it] 38%|███▊      | 15/40 [02:24<03:59,  9.58s/it]                                               {'loss': '1.153', 'grad_norm': '0.2373', 'learning_rate': '2.5e-05', 'epoch': '0.1172'}
+ 38%|███▊      | 15/40 [02:24<03:59,  9.58s/it] 40%|████      | 16/40 [02:26<02:58,  7.43s/it]                                               {'loss': '0.71', 'grad_norm': '0.2383', 'learning_rate': '2.5e-05', 'epoch': '0.125'}
+ 40%|████      | 16/40 [02:26<02:58,  7.43s/it] 42%|████▎     | 17/40 [02:29<02:16,  5.92s/it]                                               {'loss': '0.7048', 'grad_norm': '0.2393', 'learning_rate': '2.5e-05', 'epoch': '0.1328'}
+ 42%|████▎     | 17/40 [02:29<02:16,  5.92s/it] 45%|████▌     | 18/40 [02:31<01:46,  4.85s/it]                                               {'loss': '0.7144', 'grad_norm': '0.2373', 'learning_rate': '2.5e-05', 'epoch': '0.1406'}
+ 45%|████▌     | 18/40 [02:31<01:46,  4.85s/it] 48%|████▊     | 19/40 [02:33<01:26,  4.12s/it]                                               {'loss': '0.6978', 'grad_norm': '0.2295', 'learning_rate': '2.5e-05', 'epoch': '0.1484'}
+ 48%|████▊     | 19/40 [02:33<01:26,  4.12s/it] 50%|█████     | 20/40 [02:36<01:12,  3.61s/it]Validation step 20: forget=0.670471, retain=0.005865, retain_nll=2.197782
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+
+Running loglikelihood requests:   0%|          | 0/1024 [00:00<?, ?it/s][A
+Running loglikelihood requests:   1%|          | 9/1024 [00:00<00:12, 80.32it/s][A
+Running loglikelihood requests:   2%|▏         | 21/1024 [00:00<00:10, 97.00it/s][A
+Running loglikelihood requests:   3%|▎         | 33/1024 [00:00<00:09, 104.04it/s][A
+Running loglikelihood requests:   4%|▍         | 45/1024 [00:00<00:09, 106.22it/s][A
+Running loglikelihood requests:   6%|▌         | 57/1024 [00:00<00:09, 106.69it/s][A
+Running loglikelihood requests:   7%|▋         | 69/1024 [00:00<00:08, 108.45it/s][A
+Running loglikelihood requests:   8%|▊         | 81/1024 [00:00<00:08, 107.82it/s][A
+Running loglikelihood requests:   9%|▉         | 93/1024 [00:00<00:08, 107.94it/s][A
+Running loglikelihood requests:  10%|█         | 105/1024 [00:00<00:08, 108.51it/s][A
+Running loglikelihood requests:  11%|█▏        | 117/1024 [00:01<00:08, 108.28it/s][A
+Running loglikelihood requests:  13%|█▎        | 129/1024 [00:01<00:08, 109.42it/s][A
+Running loglikelihood requests:  14%|█▍        | 141/1024 [00:01<00:08, 108.62it/s][A
+Running loglikelihood requests:  15%|█▍        | 153/1024 [00:01<00:08, 108.65it/s][A
+Running loglikelihood requests:  16%|█▌        | 165/1024 [00:01<00:07, 109.78it/s][A
+Running loglikelihood requests:  17%|█▋        | 177/1024 [00:01<00:07, 110.79it/s][A
+Running loglikelihood requests:  18%|█▊        | 189/1024 [00:01<00:07, 110.96it/s][A
+Running loglikelihood requests:  20%|█▉        | 201/1024 [00:01<00:07, 111.83it/s][A
+Running loglikelihood requests:  21%|██        | 213/1024 [00:01<00:07, 111.10it/s][A
+Running loglikelihood requests:  22%|██▏       | 225/1024 [00:02<00:07, 111.14it/s][A
+Running loglikelihood requests:  23%|██▎       | 237/1024 [00:02<00:07, 111.29it/s][A
+Running loglikelihood requests:  24%|██▍       | 249/1024 [00:02<00:06, 110.90it/s][A
+Running loglikelihood requests:  25%|██▌       | 261/1024 [00:02<00:06, 109.94it/s][A
+Running loglikelihood requests:  27%|██▋       | 273/1024 [00:02<00:06, 109.82it/s][A
+Running loglikelihood requests:  28%|██▊       | 285/1024 [00:02<00:06, 110.18it/s][A
+Running loglikelihood requests:  29%|██▉       | 297/1024 [00:02<00:06, 110.09it/s][A
+Running loglikelihood requests:  30%|███       | 309/1024 [00:02<00:06, 110.72it/s][A
+Running loglikelihood requests:  31%|███▏      | 321/1024 [00:02<00:06, 110.64it/s][A
+Running loglikelihood requests:  33%|███▎      | 333/1024 [00:03<00:06, 111.21it/s][A
+Running loglikelihood requests:  34%|███▎      | 345/1024 [00:03<00:06, 110.82it/s][A
+Running loglikelihood requests:  35%|███▍      | 357/1024 [00:03<00:06, 108.59it/s][A
+Running loglikelihood requests:  36%|███▌      | 369/1024 [00:03<00:06, 108.84it/s][A
+Running loglikelihood requests:  37%|███▋      | 381/1024 [00:03<00:05, 108.58it/s][A
+Running loglikelihood requests:  38%|███▊      | 393/1024 [00:03<00:05, 109.28it/s][A
+Running loglikelihood requests:  40%|███▉      | 405/1024 [00:03<00:05, 109.31it/s][A
+Running loglikelihood requests:  41%|████      | 417/1024 [00:03<00:05, 109.45it/s][A
+Running loglikelihood requests:  42%|████▏     | 429/1024 [00:03<00:05, 109.32it/s][A
+Running loglikelihood requests:  43%|████▎     | 441/1024 [00:04<00:05, 109.72it/s][A
+Running loglikelihood requests:  44%|████▍     | 453/1024 [00:04<00:05, 110.64it/s][A
+Running loglikelihood requests:  45%|████▌     | 465/1024 [00:04<00:05, 109.86it/s][A
+Running loglikelihood requests:  47%|████▋     | 477/1024 [00:04<00:05, 108.94it/s][A
+Running loglikelihood requests:  48%|████▊     | 489/1024 [00:04<00:04, 108.61it/s][A
+Running loglikelihood requests:  49%|████▉     | 501/1024 [00:04<00:04, 109.46it/s][A
+Running loglikelihood requests:  50%|█████     | 513/1024 [00:04<00:04, 108.67it/s][A
+Running loglikelihood requests:  51%|█████▏    | 525/1024 [00:04<00:04, 109.06it/s][A
+Running loglikelihood requests:  52%|█████▏    | 537/1024 [00:04<00:04, 108.14it/s][A
+Running loglikelihood requests:  54%|█████▎    | 549/1024 [00:05<00:04, 108.09it/s][A
+Running loglikelihood requests:  55%|█████▍    | 561/1024 [00:05<00:04, 108.24it/s][A
+Running loglikelihood requests:  56%|█████▌    | 573/1024 [00:05<00:04, 108.01it/s][A
+Running loglikelihood requests:  57%|█████▋    | 585/1024 [00:05<00:04, 107.13it/s][A
+Running loglikelihood requests:  58%|█████▊    | 597/1024 [00:05<00:03, 107.12it/s][A
+Running loglikelihood requests:  59%|█████▉    | 609/1024 [00:05<00:03, 106.94it/s][A
+Running loglikelihood requests:  61%|██████    | 621/1024 [00:05<00:03, 107.51it/s][A
+Running loglikelihood requests:  62%|██████▏   | 633/1024 [00:05<00:03, 108.33it/s][A
+Running loglikelihood requests:  63%|██████▎   | 645/1024 [00:05<00:03, 109.85it/s][A
+Running loglikelihood requests:  64%|██████▍   | 657/1024 [00:06<00:03, 111.59it/s][A
+Running loglikelihood requests:  65%|██████▌   | 669/1024 [00:06<00:03, 111.58it/s][A
+Running loglikelihood requests:  67%|██████▋   | 681/1024 [00:06<00:03, 113.05it/s][A
+Running loglikelihood requests:  68%|██████▊   | 693/1024 [00:06<00:02, 111.20it/s][A
+Running loglikelihood requests:  69%|██████▉   | 705/1024 [00:06<00:02, 109.52it/s][A
+Running loglikelihood requests:  70%|███████   | 717/1024 [00:06<00:02, 110.66it/s][A
+Running loglikelihood requests:  71%|███████   | 729/1024 [00:06<00:02, 110.94it/s][A
+Running loglikelihood requests:  72%|███████▏  | 741/1024 [00:06<00:02, 112.00it/s][A
+Running loglikelihood requests:  74%|███████▎  | 753/1024 [00:06<00:02, 111.99it/s][A
+Running loglikelihood requests:  75%|███████▍  | 765/1024 [00:06<00:02, 112.73it/s][A
+Running loglikelihood requests:  76%|███████▌  | 777/1024 [00:07<00:02, 111.97it/s][A
+Running loglikelihood requests:  77%|███████▋  | 789/1024 [00:07<00:02, 112.99it/s][A
+Running loglikelihood requests:  78%|███████▊  | 801/1024 [00:07<00:01, 112.03it/s][A
+Running loglikelihood requests:  79%|███████▉  | 813/1024 [00:07<00:01, 111.65it/s][A
+Running loglikelihood requests:  81%|████████  | 825/1024 [00:07<00:01, 110.89it/s][A
+Running loglikelihood requests:  82%|████████▏ | 837/1024 [00:07<00:01, 110.85it/s][A
+Running loglikelihood requests:  83%|████████▎ | 849/1024 [00:07<00:01, 110.64it/s][A
+Running loglikelihood requests:  84%|████████▍ | 861/1024 [00:07<00:01, 108.25it/s][A
+Running loglikelihood requests:  85%|████████▌ | 873/1024 [00:07<00:01, 107.39it/s][A
+Running loglikelihood requests:  86%|████████▋ | 885/1024 [00:08<00:01, 107.11it/s][A
+Running loglikelihood requests:  88%|████████▊ | 897/1024 [00:08<00:01, 106.69it/s][A
+Running loglikelihood requests:  89%|████████▉ | 909/1024 [00:08<00:01, 107.44it/s][A
+Running loglikelihood requests:  90%|████████▉ | 921/1024 [00:08<00:00, 108.22it/s][A
+Running loglikelihood requests:  91%|█████████ | 933/1024 [00:08<00:00, 108.92it/s][A
+Running loglikelihood requests:  92%|█████████▏| 945/1024 [00:08<00:00, 108.84it/s][A
+Running loglikelihood requests:  93%|█████████▎| 957/1024 [00:08<00:00, 109.88it/s][A
+Running loglikelihood requests:  95%|█████████▍| 969/1024 [00:08<00:00, 109.61it/s][A
+Running loglikelihood requests:  96%|█████████▌| 981/1024 [00:08<00:00, 110.66it/s][A
+Running loglikelihood requests:  97%|█████████▋| 993/1024 [00:09<00:00, 109.06it/s][A
+Running loglikelihood requests:  98%|█████████▊| 1005/1024 [00:09<00:00, 108.96it/s][A
+Running loglikelihood requests:  99%|█████████▉| 1017/1024 [00:09<00:00, 109.91it/s][ARunning loglikelihood requests: 100%|██████████| 1024/1024 [00:09<00:00, 109.69it/s]
+
+Running loglikelihood requests:   0%|          | 0/6840 [00:00<?, ?it/s][A
+Running loglikelihood requests:   0%|          | 5/6840 [00:00<02:53, 39.45it/s][A
+Running loglikelihood requests:   0%|          | 13/6840 [00:00<01:59, 57.31it/s][A
+Running loglikelihood requests:   0%|          | 21/6840 [00:00<01:43, 65.62it/s][A
+Running loglikelihood requests:   0%|          | 33/6840 [00:00<01:33, 73.10it/s][A
+Running loglikelihood requests:   1%|          | 45/6840 [00:00<01:27, 77.54it/s][A
+Running loglikelihood requests:   1%|          | 57/6840 [00:00<01:22, 81.90it/s][A
+Running loglikelihood requests:   1%|          | 69/6840 [00:00<01:19, 85.16it/s][A
+Running loglikelihood requests:   1%|          | 81/6840 [00:01<01:16, 88.09it/s][A
+Running loglikelihood requests:   1%|▏         | 93/6840 [00:01<01:14, 90.13it/s][A
+Running loglikelihood requests:   2%|▏         | 105/6840 [00:01<01:13, 91.76it/s][A
+Running loglikelihood requests:   2%|▏         | 117/6840 [00:01<01:10, 95.25it/s][A
+Running loglikelihood requests:   2%|▏         | 129/6840 [00:01<01:08, 97.59it/s][A
+Running loglikelihood requests:   2%|▏         | 141/6840 [00:01<01:06, 100.06it/s][A
+Running loglikelihood requests:   2%|▏         | 153/6840 [00:01<01:05, 101.46it/s][A
+Running loglikelihood requests:   2%|▏         | 165/6840 [00:01<01:04, 103.94it/s][A
+Running loglikelihood requests:   3%|▎         | 177/6840 [00:01<01:03, 105.17it/s][A
+Running loglikelihood requests:   3%|▎         | 189/6840 [00:02<01:02, 105.60it/s][A
+Running loglikelihood requests:   3%|▎         | 201/6840 [00:02<01:02, 106.17it/s][A
+Running loglikelihood requests:   3%|▎         | 213/6840 [00:02<01:02, 105.66it/s][A
+Running loglikelihood requests:   3%|▎         | 225/6840 [00:02<01:02, 105.67it/s][A
+Running loglikelihood requests:   3%|▎         | 237/6840 [00:02<01:02, 105.69it/s][A
+Running loglikelihood requests:   4%|▎         | 249/6840 [00:02<01:03, 103.62it/s][A
+Running loglikelihood requests:   4%|▍         | 261/6840 [00:02<01:03, 103.01it/s][A
+Running loglikelihood requests:   4%|▍         | 273/6840 [00:02<01:03, 103.49it/s][A
+Running loglikelihood requests:   4%|▍         | 285/6840 [00:02<01:02, 104.27it/s][A
+Running loglikelihood requests:   4%|▍         | 297/6840 [00:03<01:03, 103.47it/s][A
+Running loglikelihood requests:   5%|▍         | 309/6840 [00:03<01:02, 104.00it/s][A
+Running loglikelihood requests:   5%|▍         | 321/6840 [00:03<01:03, 103.13it/s][A
+Running loglikelihood requests:   5%|▍         | 333/6840 [00:03<01:02, 103.95it/s][A
+Running loglikelihood requests:   5%|▌         | 345/6840 [00:03<01:02, 104.28it/s][A
+Running loglikelihood requests:   5%|▌         | 357/6840 [00:03<01:02, 103.72it/s][A
+Running loglikelihood requests:   5%|▌         | 369/6840 [00:03<01:02, 102.90it/s][A
+Running loglikelihood requests:   6%|▌         | 381/6840 [00:03<01:01, 104.98it/s][A
+Running loglikelihood requests:   6%|▌         | 393/6840 [00:04<01:00, 106.96it/s][A
+Running loglikelihood requests:   6%|▌         | 405/6840 [00:04<00:59, 107.46it/s][A
+Running loglikelihood requests:   6%|▌         | 417/6840 [00:04<00:59, 107.92it/s][A
+Running loglikelihood requests:   6%|▋         | 429/6840 [00:04<01:00, 106.76it/s][A
+Running loglikelihood requests:   6%|▋         | 441/6840 [00:04<01:00, 105.98it/s][A
+Running loglikelihood requests:   7%|▋         | 453/6840 [00:04<01:00, 105.69it/s][A
+Running loglikelihood requests:   7%|▋         | 465/6840 [00:04<01:00, 105.60it/s][A
+Running loglikelihood requests:   7%|▋         | 477/6840 [00:04<01:00, 105.14it/s][A
+Running loglikelihood requests:   7%|▋         | 489/6840 [00:04<01:00, 105.49it/s][A
+Running loglikelihood requests:   7%|▋         | 501/6840 [00:05<01:00, 104.73it/s][A
+Running loglikelihood requests:   8%|▊         | 513/6840 [00:05<01:00, 105.18it/s][A
+Running loglikelihood requests:   8%|▊         | 525/6840 [00:05<00:59, 105.27it/s][A
+Running loglikelihood requests:   8%|▊         | 537/6840 [00:05<00:59, 106.10it/s][A
+Running loglikelihood requests:   8%|▊         | 549/6840 [00:05<00:59, 105.46it/s][A
+Running loglikelihood requests:   8%|▊         | 561/6840 [00:05<00:58, 106.85it/s][A
+Running loglikelihood requests:   8%|▊         | 573/6840 [00:05<00:57, 108.35it/s][A
+Running loglikelihood requests:   9%|▊         | 585/6840 [00:05<00:57, 108.62it/s][A
+Running loglikelihood requests:   9%|▊         | 597/6840 [00:05<00:57, 109.12it/s][A
+Running loglikelihood requests:   9%|▉         | 609/6840 [00:06<00:57, 109.19it/s][A
+Running loglikelihood requests:   9%|▉         | 621/6840 [00:06<00:56, 109.69it/s][A
+Running loglikelihood requests:   9%|▉         | 633/6840 [00:06<00:56, 110.06it/s][A
+Running loglikelihood requests:   9%|▉         | 645/6840 [00:06<00:56, 109.17it/s][A
+Running loglikelihood requests:  10%|▉         | 657/6840 [00:06<00:56, 109.43it/s][A
+Running loglikelihood requests:  10%|▉         | 669/6840 [00:06<00:56, 109.63it/s][A
+Running loglikelihood requests:  10%|▉         | 681/6840 [00:06<00:55, 111.01it/s][A
+Running loglikelihood requests:  10%|█         | 693/6840 [00:06<00:55, 111.24it/s][A
+Running loglikelihood requests:  10%|█         | 705/6840 [00:06<00:55, 110.94it/s][A
+Running loglikelihood requests:  10%|█         | 717/6840 [00:07<00:55, 110.12it/s][A
+Running loglikelihood requests:  11%|█         | 729/6840 [00:07<00:56, 109.09it/s][A
+Running loglikelihood requests:  11%|█         | 741/6840 [00:07<00:56, 108.63it/s][A
+Running loglikelihood requests:  11%|█         | 753/6840 [00:07<00:56, 108.53it/s][A
+Running loglikelihood requests:  11%|█         | 765/6840 [00:07<00:56, 107.87it/s][A
+Running loglikelihood requests:  11%|█▏        | 777/6840 [00:07<00:56, 107.81it/s][A
+Running loglikelihood requests:  12%|█▏        | 789/6840 [00:07<00:56, 107.92it/s][A
+Running loglikelihood requests:  12%|█▏        | 801/6840 [00:07<00:55, 108.65it/s][A
+Running loglikelihood requests:  12%|█▏        | 813/6840 [00:07<00:55, 108.52it/s][A
+Running loglikelihood requests:  12%|█▏        | 825/6840 [00:08<00:55, 108.87it/s][A
+Running loglikelihood requests:  12%|█▏        | 837/6840 [00:08<00:55, 108.80it/s][A
+Running loglikelihood requests:  12%|█▏        | 849/6840 [00:08<00:54, 109.34it/s][A
+Running loglikelihood requests:  13%|█▎        | 861/6840 [00:08<00:54, 109.00it/s][A
+Running loglikelihood requests:  13%|█▎        | 873/6840 [00:08<00:54, 109.32it/s][A
+Running loglikelihood requests:  13%|█▎        | 885/6840 [00:08<00:54, 109.67it/s][A
+Running loglikelihood requests:  13%|█▎        | 897/6840 [00:08<00:55, 107.41it/s][A
+Running loglikelihood requests:  13%|█▎        | 909/6840 [00:08<00:55, 106.93it/s][A
+Running loglikelihood requests:  13%|█▎        | 921/6840 [00:08<00:55, 107.05it/s][A
+Running loglikelihood requests:  14%|█▎        | 933/6840 [00:09<00:54, 108.17it/s][A
+Running loglikelihood requests:  14%|█▍        | 945/6840 [00:09<00:54, 107.87it/s][A
+Running loglikelihood requests:  14%|█▍        | 957/6840 [00:09<00:54, 108.44it/s][A
+Running loglikelihood requests:  14%|█▍        | 969/6840 [00:09<00:54, 107.99it/s][A
+Running loglikelihood requests:  14%|█▍        | 981/6840 [00:09<00:54, 107.71it/s][A
+Running loglikelihood requests:  15%|█▍        | 993/6840 [00:09<00:54, 107.71it/s][A
+Running loglikelihood requests:  15%|█▍        | 1005/6840 [00:09<00:54, 107.40it/s][A
+Running loglikelihood requests:  15%|█▍        | 1017/6840 [00:09<00:54, 106.57it/s][A
+Running loglikelihood requests:  15%|█▌        | 1029/6840 [00:09<00:54, 106.80it/s][A
+Running loglikelihood requests:  15%|█▌        | 1041/6840 [00:10<00:53, 107.80it/s][A
+Running loglikelihood requests:  15%|█▌        | 1053/6840 [00:10<00:52, 109.53it/s][A
+Running loglikelihood requests:  16%|█▌        | 1065/6840 [00:10<00:52, 110.17it/s][A
+Running loglikelihood requests:  16%|█▌        | 1077/6840 [00:10<00:52, 110.26it/s][A
+Running loglikelihood requests:  16%|█▌        | 1089/6840 [00:10<00:52, 109.95it/s][A
+Running loglikelihood requests:  16%|█▌        | 1101/6840 [00:10<00:51, 110.75it/s][A
+Running loglikelihood requests:  16%|█▋        | 1113/6840 [00:10<00:51, 111.62it/s][A
+Running loglikelihood requests:  16%|█▋        | 1125/6840 [00:10<00:51, 111.20it/s][A
+Running loglikelihood requests:  17%|█▋        | 1137/6840 [00:10<00:51, 111.59it/s][A
+Running loglikelihood requests:  17%|█▋        | 1149/6840 [00:10<00:51, 111.19it/s][A
+Running loglikelihood requests:  17%|█▋        | 1161/6840 [00:11<00:51, 111.30it/s][A
+Running loglikelihood requests:  17%|█▋        | 1173/6840 [00:11<00:50, 111.24it/s][A
+Running loglikelihood requests:  17%|█▋        | 1185/6840 [00:11<00:51, 109.25it/s][A
+Running loglikelihood requests:  18%|█▊        | 1197/6840 [00:11<00:51, 109.51it/s][A
+Running loglikelihood requests:  18%|█▊        | 1209/6840 [00:11<00:51, 109.67it/s][A
+Running loglikelihood requests:  18%|█▊        | 1221/6840 [00:11<00:51, 110.16it/s][A
+Running loglikelihood requests:  18%|█▊        | 1233/6840 [00:11<00:50, 110.82it/s][A
+Running loglikelihood requests:  18%|█▊        | 1245/6840 [00:11<00:50, 109.91it/s][A
+Running loglikelihood requests:  18%|█▊        | 1257/6840 [00:11<00:50, 109.64it/s][A
+Running loglikelihood requests:  19%|█▊        | 1269/6840 [00:12<00:50, 109.93it/s][A
+Running loglikelihood requests:  19%|█▊        | 1281/6840 [00:12<00:51, 108.63it/s][A
+Running loglikelihood requests:  19%|█▉        | 1293/6840 [00:12<00:50, 108.87it/s][A
+Running loglikelihood requests:  19%|█▉        | 1305/6840 [00:12<00:50, 108.93it/s][A
+Running loglikelihood requests:  19%|█▉        | 1317/6840 [00:12<00:49, 110.62it/s][A
+Running loglikelihood requests:  19%|█▉        | 1329/6840 [00:12<00:49, 111.54it/s][A
+Running loglikelihood requests:  20%|█▉        | 1341/6840 [00:12<00:49, 111.88it/s][A
+Running loglikelihood requests:  20%|█▉        | 1353/6840 [00:12<00:48, 112.32it/s][A
+Running loglikelihood requests:  20%|█▉        | 1365/6840 [00:12<00:49, 111.36it/s][A
+Running loglikelihood requests:  20%|██        | 1377/6840 [00:13<00:49, 111.10it/s][A
+Running loglikelihood requests:  20%|██        | 1389/6840 [00:13<00:49, 111.07it/s][A
+Running loglikelihood requests:  20%|██        | 1401/6840 [00:13<00:48, 111.46it/s][A
+Running loglikelihood requests:  21%|██        | 1413/6840 [00:13<00:48, 112.02it/s][A
+Running loglikelihood requests:  21%|██        | 1425/6840 [00:13<00:48, 111.23it/s][A
+Running loglikelihood requests:  21%|██        | 1437/6840 [00:13<00:48, 111.43it/s][A
+Running loglikelihood requests:  21%|██        | 1449/6840 [00:13<00:49, 108.60it/s][A
+Running loglikelihood requests:  21%|██▏       | 1461/6840 [00:13<00:50, 106.72it/s][A
+Running loglikelihood requests:  22%|██▏       | 1473/6840 [00:13<00:49, 107.66it/s][A
+Running loglikelihood requests:  22%|██▏       | 1485/6840 [00:14<00:49, 107.50it/s][A
+Running loglikelihood requests:  22%|██▏       | 1497/6840 [00:14<00:49, 108.37it/s][A
+Running loglikelihood requests:  22%|██▏       | 1509/6840 [00:14<00:49, 108.45it/s][A
+Running loglikelihood requests:  22%|██▏       | 1521/6840 [00:14<00:48, 108.75it/s][A
+Running loglikelihood requests:  22%|██▏       | 1533/6840 [00:14<00:48, 108.58it/s][A
+Running loglikelihood requests:  23%|██▎       | 1545/6840 [00:14<00:48, 108.63it/s][A
+Running loglikelihood requests:  23%|██▎       | 1557/6840 [00:14<00:48, 108.66it/s][A
+Running loglikelihood requests:  23%|██▎       | 1569/6840 [00:14<00:48, 108.27it/s][A
+Running loglikelihood requests:  23%|██▎       | 1581/6840 [00:14<00:48, 109.47it/s][A
+Running loglikelihood requests:  23%|██▎       | 1593/6840 [00:15<00:47, 109.68it/s][A
+Running loglikelihood requests:  23%|██▎       | 1605/6840 [00:15<00:47, 110.69it/s][A
+Running loglikelihood requests:  24%|██▎       | 1617/6840 [00:15<00:47, 109.80it/s][A
+Running loglikelihood requests:  24%|██▍       | 1629/6840 [00:15<00:47, 109.41it/s][A
+Running loglikelihood requests:  24%|██▍       | 1641/6840 [00:15<00:47, 109.33it/s][A
+Running loglikelihood requests:  24%|██▍       | 1653/6840 [00:15<00:47, 109.53it/s][A
+Running loglikelihood requests:  24%|██▍       | 1665/6840 [00:15<00:47, 110.04it/s][A
+Running loglikelihood requests:  25%|██▍       | 1677/6840 [00:15<00:46, 110.21it/s][A
+Running loglikelihood requests:  25%|██▍       | 1689/6840 [00:15<00:46, 110.63it/s][A
+Running loglikelihood requests:  25%|██▍       | 1701/6840 [00:16<00:45, 111.90it/s][A
+Running loglikelihood requests:  25%|██▌       | 1713/6840 [00:16<00:46, 111.11it/s][A
+Running loglikelihood requests:  25%|██▌       | 1725/6840 [00:16<00:46, 111.17it/s][A
+Running loglikelihood requests:  25%|██▌       | 1737/6840 [00:16<00:46, 110.10it/s][A
+Running loglikelihood requests:  26%|██▌       | 1749/6840 [00:16<00:46, 110.41it/s][A
+Running loglikelihood requests:  26%|██▌       | 1761/6840 [00:16<00:45, 110.85it/s][A
+Running loglikelihood requests:  26%|██▌       | 1773/6840 [00:16<00:45, 110.78it/s][A
+Running loglikelihood requests:  26%|██▌       | 1785/6840 [00:16<00:45, 110.61it/s][A
+Running loglikelihood requests:  26%|██▋       | 1797/6840 [00:16<00:45, 110.90it/s][A
+Running loglikelihood requests:  26%|██▋       | 1809/6840 [00:16<00:45, 110.43it/s][A
+Running loglikelihood requests:  27%|██▋       | 1821/6840 [00:17<00:45, 110.45it/s][A
+Running loglikelihood requests:  27%|██▋       | 1833/6840 [00:17<00:45, 110.03it/s][A
+Running loglikelihood requests:  27%|██▋       | 1845/6840 [00:17<00:44, 111.37it/s][A
+Running loglikelihood requests:  27%|██▋       | 1857/6840 [00:17<00:44, 111.67it/s][A
+Running loglikelihood requests:  27%|██▋       | 1869/6840 [00:17<00:44, 112.92it/s][A
+Running loglikelihood requests:  28%|██▊       | 1881/6840 [00:17<00:43, 114.02it/s][A
+Running loglikelihood requests:  28%|██▊       | 1893/6840 [00:17<00:43, 113.90it/s][A
+Running loglikelihood requests:  28%|██▊       | 1905/6840 [00:17<00:43, 114.64it/s][A
+Running loglikelihood requests:  28%|██▊       | 1917/6840 [00:17<00:43, 114.02it/s][A
+Running loglikelihood requests:  28%|██▊       | 1929/6840 [00:18<00:43, 114.07it/s][A
+Running loglikelihood requests:  28%|██▊       | 1941/6840 [00:18<00:42, 114.58it/s][A
+Running loglikelihood requests:  29%|██▊       | 1953/6840 [00:18<00:43, 112.60it/s][A
+Running loglikelihood requests:  29%|██▊       | 1965/6840 [00:18<00:43, 112.29it/s][A
+Running loglikelihood requests:  29%|██▉       | 1977/6840 [00:18<00:43, 111.77it/s][A
+Running loglikelihood requests:  29%|██▉       | 1989/6840 [00:18<00:43, 111.53it/s][A
+Running loglikelihood requests:  29%|██▉       | 2001/6840 [00:18<00:44, 109.56it/s][A
+Running loglikelihood requests:  29%|██▉       | 2013/6840 [00:18<00:44, 108.58it/s][A
+Running loglikelihood requests:  30%|██▉       | 2025/6840 [00:18<00:44, 108.58it/s][A
+Running loglikelihood requests:  30%|██▉       | 2037/6840 [00:19<00:43, 110.21it/s][A
+Running loglikelihood requests:  30%|██▉       | 2049/6840 [00:19<00:43, 110.43it/s][A
+Running loglikelihood requests:  30%|███       | 2061/6840 [00:19<00:43, 109.67it/s][A
+Running loglikelihood requests:  30%|███       | 2073/6840 [00:19<00:44, 107.90it/s][A
+Running loglikelihood requests:  30%|███       | 2085/6840 [00:19<00:43, 108.38it/s][A
+Running loglikelihood requests:  31%|███       | 2097/6840 [00:19<00:43, 109.27it/s][A
+Running loglikelihood requests:  31%|███       | 2109/6840 [00:19<00:42, 111.18it/s][A
+Running loglikelihood requests:  31%|███       | 2121/6840 [00:19<00:42, 111.88it/s][A
+Running loglikelihood requests:  31%|███       | 2133/6840 [00:19<00:42, 111.83it/s][A
+Running loglikelihood requests:  31%|███▏      | 2145/6840 [00:19<00:41, 113.05it/s][A
+Running loglikelihood requests:  32%|███▏      | 2157/6840 [00:20<00:41, 111.99it/s][A
+Running loglikelihood requests:  32%|███▏      | 2169/6840 [00:20<00:41, 112.70it/s][A
+Running loglikelihood requests:  32%|███▏      | 2181/6840 [00:20<00:41, 113.42it/s][A
+Running loglikelihood requests:  32%|███▏      | 2193/6840 [00:20<00:41, 112.26it/s][A
+Running loglikelihood requests:  32%|███▏      | 2205/6840 [00:20<00:41, 111.79it/s][A
+Running loglikelihood requests:  32%|███▏      | 2217/6840 [00:20<00:41, 110.59it/s][A
+Running loglikelihood requests:  33%|███▎      | 2229/6840 [00:20<00:41, 111.95it/s][A
+Running loglikelihood requests:  33%|███▎      | 2241/6840 [00:20<00:40, 113.11it/s][A
+Running loglikelihood requests:  33%|███▎      | 2253/6840 [00:20<00:40, 112.75it/s][A
+Running loglikelihood requests:  33%|███▎      | 2265/6840 [00:21<00:40, 113.52it/s][A
+Running loglikelihood requests:  33%|███▎      | 2277/6840 [00:21<00:40, 113.26it/s][A
+Running loglikelihood requests:  33%|███▎      | 2289/6840 [00:21<00:40, 112.89it/s][A
+Running loglikelihood requests:  34%|███▎      | 2301/6840 [00:21<00:40, 112.84it/s][A
+Running loglikelihood requests:  34%|███▍      | 2313/6840 [00:21<00:40, 111.32it/s][A
+Running loglikelihood requests:  34%|███▍      | 2325/6840 [00:21<00:40, 110.70it/s][A
+Running loglikelihood requests:  34%|███▍      | 2337/6840 [00:21<00:40, 110.93it/s][A
+Running loglikelihood requests:  34%|███▍      | 2349/6840 [00:21<00:40, 110.64it/s][A
+Running loglikelihood requests:  35%|███▍      | 2361/6840 [00:21<00:40, 110.80it/s][A
+Running loglikelihood requests:  35%|███▍      | 2373/6840 [00:22<00:39, 112.53it/s][A
+Running loglikelihood requests:  35%|███▍      | 2385/6840 [00:22<00:39, 112.67it/s][A
+Running loglikelihood requests:  35%|███▌      | 2397/6840 [00:22<00:39, 113.87it/s][A
+Running loglikelihood requests:  35%|███▌      | 2409/6840 [00:22<00:38, 113.91it/s][A
+Running loglikelihood requests:  35%|███▌      | 2421/6840 [00:22<00:38, 114.61it/s][A
+Running loglikelihood requests:  36%|███▌      | 2433/6840 [00:22<00:38, 114.10it/s][A
+Running loglikelihood requests:  36%|███▌      | 2445/6840 [00:22<00:38, 114.48it/s][A
+Running loglikelihood requests:  36%|███▌      | 2457/6840 [00:22<00:38, 114.56it/s][A
+Running loglikelihood requests:  36%|███▌      | 2469/6840 [00:22<00:38, 114.81it/s][A
+Running loglikelihood requests:  36%|███▋      | 2481/6840 [00:22<00:37, 115.53it/s][A
+Running loglikelihood requests:  36%|███▋      | 2493/6840 [00:23<00:37, 115.70it/s][A
+Running loglikelihood requests:  37%|███▋      | 2505/6840 [00:23<00:37, 114.88it/s][A
+Running loglikelihood requests:  37%|███▋      | 2517/6840 [00:23<00:37, 115.42it/s][A
+Running loglikelihood requests:  37%|███▋      | 2529/6840 [00:23<00:37, 114.98it/s][A
+Running loglikelihood requests:  37%|███▋      | 2541/6840 [00:23<00:37, 113.66it/s][A
+Running loglikelihood requests:  37%|███▋      | 2553/6840 [00:23<00:37, 113.60it/s][A
+Running loglikelihood requests:  38%|███▊      | 2565/6840 [00:23<00:39, 109.52it/s][A
+Running loglikelihood requests:  38%|███▊      | 2577/6840 [00:23<00:39, 109.06it/s][A
+Running loglikelihood requests:  38%|███▊      | 2589/6840 [00:23<00:38, 109.29it/s][A
+Running loglikelihood requests:  38%|███▊      | 2601/6840 [00:24<00:38, 109.81it/s][A
+Running loglikelihood requests:  38%|███▊      | 2613/6840 [00:24<00:38, 109.09it/s][A
+Running loglikelihood requests:  38%|███▊      | 2625/6840 [00:24<00:38, 108.54it/s][A
+Running loglikelihood requests:  39%|███▊      | 2637/6840 [00:24<00:38, 108.20it/s][A
+Running loglikelihood requests:  39%|███▊      | 2649/6840 [00:24<00:38, 109.12it/s][A
+Running loglikelihood requests:  39%|███▉      | 2661/6840 [00:24<00:38, 109.97it/s][A
+Running loglikelihood requests:  39%|███▉      | 2673/6840 [00:24<00:37, 110.22it/s][A
+Running loglikelihood requests:  39%|███▉      | 2685/6840 [00:24<00:37, 110.18it/s][A
+Running loglikelihood requests:  39%|███▉      | 2697/6840 [00:24<00:37, 110.52it/s][A
+Running loglikelihood requests:  40%|███▉      | 2709/6840 [00:25<00:37, 111.35it/s][A
+Running loglikelihood requests:  40%|███▉      | 2721/6840 [00:25<00:36, 111.34it/s][A
+Running loglikelihood requests:  40%|███▉      | 2733/6840 [00:25<00:36, 111.47it/s][A
+Running loglikelihood requests:  40%|████      | 2745/6840 [00:25<00:36, 113.03it/s][A
+Running loglikelihood requests:  40%|████      | 2757/6840 [00:25<00:36, 113.35it/s][A
+Running loglikelihood requests:  40%|████      | 2769/6840 [00:25<00:35, 114.55it/s][A
+Running loglikelihood requests:  41%|████      | 2781/6840 [00:25<00:35, 115.41it/s][A
+Running loglikelihood requests:  41%|████      | 2793/6840 [00:25<00:35, 115.20it/s][A
+Running loglikelihood requests:  41%|████      | 2805/6840 [00:25<00:34, 115.33it/s][A
+Running loglikelihood requests:  41%|████      | 2817/6840 [00:25<00:35, 113.55it/s][A
+Running loglikelihood requests:  41%|████▏     | 2833/6840 [00:26<00:32, 123.81it/s][A
+Running loglikelihood requests:  42%|████▏     | 2846/6840 [00:26<00:32, 123.12it/s][A
+Running loglikelihood requests:  42%|████▏     | 2859/6840 [00:26<00:32, 121.90it/s][A
+Running loglikelihood requests:  42%|████▏     | 2872/6840 [00:26<00:32, 121.67it/s][A
+Running loglikelihood requests:  42%|████▏     | 2885/6840 [00:26<00:35, 110.64it/s][A
+Running loglikelihood requests:  42%|████▏     | 2897/6840 [00:26<00:35, 110.41it/s][A
+Running loglikelihood requests:  43%|████▎     | 2909/6840 [00:26<00:35, 110.95it/s][A
+Running loglikelihood requests:  43%|████▎     | 2921/6840 [00:26<00:35, 111.20it/s][A
+Running loglikelihood requests:  43%|████▎     | 2933/6840 [00:26<00:35, 111.33it/s][A
+Running loglikelihood requests:  43%|████▎     | 2945/6840 [00:27<00:35, 110.81it/s][A
+Running loglikelihood requests:  43%|████▎     | 2957/6840 [00:27<00:34, 112.30it/s][A
+Running loglikelihood requests:  43%|████▎     | 2969/6840 [00:27<00:34, 112.03it/s][A
+Running loglikelihood requests:  44%|████▎     | 2981/6840 [00:27<00:34, 112.75it/s][A
+Running loglikelihood requests:  44%|████▍     | 2993/6840 [00:27<00:33, 113.53it/s][A
+Running loglikelihood requests:  44%|████▍     | 3005/6840 [00:27<00:33, 113.99it/s][A
+Running loglikelihood requests:  44%|████▍     | 3017/6840 [00:27<00:33, 114.69it/s][A
+Running loglikelihood requests:  44%|████▍     | 3029/6840 [00:27<00:33, 113.97it/s][A
+Running loglikelihood requests:  44%|████▍     | 3041/6840 [00:27<00:32, 115.40it/s][A
+Running loglikelihood requests:  45%|████▍     | 3053/6840 [00:28<00:32, 115.06it/s][A
+Running loglikelihood requests:  45%|████▍     | 3065/6840 [00:28<00:32, 114.74it/s][A
+Running loglikelihood requests:  45%|████▍     | 3077/6840 [00:28<00:33, 114.01it/s][A
+Running loglikelihood requests:  45%|████▌     | 3089/6840 [00:28<00:32, 114.78it/s][A
+Running loglikelihood requests:  45%|████▌     | 3101/6840 [00:28<00:32, 113.77it/s][A
+Running loglikelihood requests:  46%|████▌     | 3113/6840 [00:28<00:32, 114.24it/s][A
+Running loglikelihood requests:  46%|████▌     | 3125/6840 [00:28<00:32, 113.49it/s][A
+Running loglikelihood requests:  46%|████▌     | 3137/6840 [00:28<00:33, 111.25it/s][A
+Running loglikelihood requests:  46%|████▌     | 3149/6840 [00:28<00:33, 111.79it/s][A
+Running loglikelihood requests:  46%|████▌     | 3161/6840 [00:28<00:33, 109.94it/s][A
+Running loglikelihood requests:  46%|████▋     | 3173/6840 [00:29<00:33, 109.62it/s][A
+Running loglikelihood requests:  47%|████▋     | 3185/6840 [00:29<00:32, 111.03it/s][A
+Running loglikelihood requests:  47%|████▋     | 3197/6840 [00:29<00:32, 112.83it/s][A
+Running loglikelihood requests:  47%|████▋     | 3209/6840 [00:29<00:32, 112.90it/s][A
+Running loglikelihood requests:  47%|████▋     | 3221/6840 [00:29<00:31, 114.47it/s][A
+Running loglikelihood requests:  47%|████▋     | 3233/6840 [00:29<00:31, 114.67it/s][A
+Running loglikelihood requests:  47%|████▋     | 3245/6840 [00:29<00:31, 114.79it/s][A
+Running loglikelihood requests:  48%|████▊     | 3257/6840 [00:29<00:31, 115.09it/s][A
+Running loglikelihood requests:  48%|████▊     | 3269/6840 [00:29<00:31, 113.66it/s][A
+Running loglikelihood requests:  48%|████▊     | 3281/6840 [00:30<00:31, 113.56it/s][A
+Running loglikelihood requests:  48%|████▊     | 3293/6840 [00:30<00:31, 113.57it/s][A
+Running loglikelihood requests:  48%|████▊     | 3305/6840 [00:30<00:31, 113.80it/s][A
+Running loglikelihood requests:  48%|████▊     | 3317/6840 [00:30<00:30, 114.74it/s][A
+Running loglikelihood requests:  49%|████▊     | 3329/6840 [00:30<00:30, 115.25it/s][A
+Running loglikelihood requests:  49%|████▉     | 3341/6840 [00:30<00:30, 116.41it/s][A
+Running loglikelihood requests:  49%|████▉     | 3353/6840 [00:30<00:30, 116.22it/s][A
+Running loglikelihood requests:  49%|████▉     | 3365/6840 [00:30<00:29, 117.16it/s][A
+Running loglikelihood requests:  49%|████▉     | 3377/6840 [00:30<00:29, 117.18it/s][A
+Running loglikelihood requests:  50%|████▉     | 3389/6840 [00:30<00:29, 117.57it/s][A
+Running loglikelihood requests:  50%|████▉     | 3401/6840 [00:31<00:29, 117.39it/s][A
+Running loglikelihood requests:  50%|████▉     | 3413/6840 [00:31<00:29, 116.51it/s][A
+Running loglikelihood requests:  50%|█████     | 3425/6840 [00:31<00:29, 115.93it/s][A
+Running loglikelihood requests:  50%|█████     | 3437/6840 [00:31<00:29, 114.09it/s][A
+Running loglikelihood requests:  50%|█████     | 3449/6840 [00:31<00:29, 114.42it/s][A
+Running loglikelihood requests:  51%|█████     | 3461/6840 [00:31<00:29, 114.70it/s][A
+Running loglikelihood requests:  51%|█████     | 3473/6840 [00:31<00:29, 115.01it/s][A
+Running loglikelihood requests:  51%|█████     | 3485/6840 [00:31<00:29, 114.89it/s][A
+Running loglikelihood requests:  51%|█████     | 3497/6840 [00:31<00:29, 114.97it/s][A
+Running loglikelihood requests:  51%|█████▏    | 3509/6840 [00:32<00:29, 114.54it/s][A
+Running loglikelihood requests:  51%|█████▏    | 3521/6840 [00:32<00:29, 113.90it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3533/6840 [00:32<00:28, 114.46it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3545/6840 [00:32<00:28, 113.73it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3557/6840 [00:32<00:28, 113.95it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3569/6840 [00:32<00:28, 114.62it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3581/6840 [00:32<00:28, 114.17it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3593/6840 [00:32<00:28, 114.58it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3605/6840 [00:32<00:28, 113.67it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3617/6840 [00:32<00:28, 114.10it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3629/6840 [00:33<00:28, 113.48it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3641/6840 [00:33<00:28, 113.54it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3653/6840 [00:33<00:28, 113.72it/s][A
+Running loglikelihood requests:  54%|█████▎    | 3665/6840 [00:33<00:28, 113.33it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3677/6840 [00:33<00:27, 113.32it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3689/6840 [00:33<00:27, 113.93it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3701/6840 [00:33<00:28, 112.07it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3713/6840 [00:33<00:28, 110.63it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3725/6840 [00:33<00:27, 111.60it/s][A
+Running loglikelihood requests:  55%|█████▍    | 3737/6840 [00:34<00:27, 112.43it/s][A
+Running loglikelihood requests:  55%|█████▍    | 3749/6840 [00:34<00:27, 112.85it/s][A
+Running loglikelihood requests:  55%|█████▍    | 3761/6840 [00:34<00:27, 113.60it/s][A
+Running loglikelihood requests:  55%|█████▌    | 3773/6840 [00:34<00:27, 113.26it/s][A
+Running loglikelihood requests:  55%|█████▌    | 3785/6840 [00:34<00:26, 113.89it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3797/6840 [00:34<00:26, 113.83it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3809/6840 [00:34<00:26, 114.57it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3821/6840 [00:34<00:26, 113.50it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3833/6840 [00:34<00:26, 114.24it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3845/6840 [00:34<00:26, 113.68it/s][A
+Running loglikelihood requests:  56%|█████▋    | 3857/6840 [00:35<00:26, 113.28it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3869/6840 [00:35<00:25, 114.41it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3881/6840 [00:35<00:25, 114.41it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3893/6840 [00:35<00:25, 114.56it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3905/6840 [00:35<00:25, 114.03it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3917/6840 [00:35<00:25, 114.48it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3929/6840 [00:35<00:25, 113.41it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3941/6840 [00:35<00:26, 111.09it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3953/6840 [00:35<00:26, 108.73it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3965/6840 [00:36<00:26, 107.39it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3977/6840 [00:36<00:26, 106.57it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3989/6840 [00:36<00:27, 104.98it/s][A
+Running loglikelihood requests:  58%|█████▊    | 4001/6840 [00:36<00:27, 104.58it/s][A
+Running loglikelihood requests:  59%|█████▊    | 4013/6840 [00:36<00:26, 105.33it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4025/6840 [00:36<00:26, 106.35it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4037/6840 [00:36<00:26, 106.96it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4049/6840 [00:36<00:26, 106.78it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4061/6840 [00:36<00:26, 106.45it/s][A
+Running loglikelihood requests:  60%|█████▉    | 4073/6840 [00:37<00:25, 106.55it/s][A
+Running loglikelihood requests:  60%|█████▉    | 4085/6840 [00:37<00:25, 107.05it/s][A
+Running loglikelihood requests:  60%|█████▉    | 4097/6840 [00:37<00:25, 106.32it/s][A
+Running loglikelihood requests:  60%|██████    | 4109/6840 [00:37<00:25, 106.64it/s][A
+Running loglikelihood requests:  60%|██████    | 4121/6840 [00:37<00:25, 106.78it/s][A
+Running loglikelihood requests:  60%|██████    | 4133/6840 [00:37<00:25, 105.78it/s][A
+Running loglikelihood requests:  61%|██████    | 4145/6840 [00:37<00:25, 105.49it/s][A
+Running loglikelihood requests:  61%|██████    | 4157/6840 [00:37<00:25, 106.25it/s][A
+Running loglikelihood requests:  61%|██████    | 4169/6840 [00:37<00:24, 107.42it/s][A
+Running loglikelihood requests:  61%|██████    | 4181/6840 [00:38<00:24, 106.78it/s][A
+Running loglikelihood requests:  61%|██████▏   | 4193/6840 [00:38<00:24, 107.57it/s][A
+Running loglikelihood requests:  61%|██████▏   | 4205/6840 [00:38<00:24, 107.06it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4217/6840 [00:38<00:24, 106.35it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4229/6840 [00:38<00:24, 106.10it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4241/6840 [00:38<00:24, 105.22it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4253/6840 [00:38<00:24, 104.75it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4265/6840 [00:38<00:24, 105.81it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4277/6840 [00:39<00:23, 107.06it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4289/6840 [00:39<00:23, 107.59it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4301/6840 [00:39<00:23, 108.17it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4313/6840 [00:39<00:23, 106.23it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4325/6840 [00:39<00:23, 107.35it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4337/6840 [00:39<00:23, 108.39it/s][A
+Running loglikelihood requests:  64%|██████▎   | 4349/6840 [00:39<00:22, 109.09it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4361/6840 [00:39<00:22, 109.65it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4373/6840 [00:39<00:22, 110.28it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4385/6840 [00:39<00:22, 110.07it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4397/6840 [00:40<00:22, 110.06it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4409/6840 [00:40<00:22, 109.90it/s][A
+Running loglikelihood requests:  65%|██████▍   | 4421/6840 [00:40<00:22, 109.90it/s][A
+Running loglikelihood requests:  65%|██████▍   | 4433/6840 [00:40<00:21, 109.48it/s][A
+Running loglikelihood requests:  65%|██████▍   | 4445/6840 [00:40<00:21, 110.23it/s][A
+Running loglikelihood requests:  65%|██████▌   | 4457/6840 [00:40<00:22, 106.02it/s][A
+Running loglikelihood requests:  65%|██████▌   | 4469/6840 [00:40<00:23, 99.01it/s] [A
+Running loglikelihood requests:  65%|██████▌   | 4480/6840 [00:40<00:23, 98.81it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4490/6840 [00:41<00:26, 87.97it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4501/6840 [00:41<00:27, 84.15it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4513/6840 [00:41<00:27, 83.90it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4525/6840 [00:41<00:27, 83.69it/s][A
+Running loglikelihood requests:  66%|██████▋   | 4537/6840 [00:41<00:27, 83.40it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4549/6840 [00:41<00:27, 83.22it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4561/6840 [00:41<00:27, 83.06it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4573/6840 [00:42<00:27, 82.94it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4585/6840 [00:42<00:27, 82.92it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4597/6840 [00:42<00:27, 82.96it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4609/6840 [00:42<00:26, 82.95it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4619/6840 [00:42<00:25, 86.84it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4629/6840 [00:42<00:27, 80.93it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4641/6840 [00:42<00:26, 81.70it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4653/6840 [00:43<00:26, 82.39it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4665/6840 [00:43<00:26, 82.67it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4677/6840 [00:43<00:25, 85.58it/s][A
+Running loglikelihood requests:  69%|██████▊   | 4689/6840 [00:43<00:23, 90.61it/s][A
+Running loglikelihood requests:  69%|██████▊   | 4701/6840 [00:43<00:22, 93.42it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4713/6840 [00:43<00:21, 96.82it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4725/6840 [00:43<00:21, 100.35it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4737/6840 [00:43<00:20, 104.27it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4749/6840 [00:43<00:19, 107.52it/s][A
+Running loglikelihood requests:  70%|██████▉   | 4761/6840 [00:44<00:18, 110.44it/s][A
+Running loglikelihood requests:  70%|██████▉   | 4773/6840 [00:44<00:18, 112.30it/s][A
+Running loglikelihood requests:  70%|██████▉   | 4785/6840 [00:44<00:18, 112.91it/s][A
+Running loglikelihood requests:  70%|███████   | 4797/6840 [00:44<00:17, 113.70it/s][A
+Running loglikelihood requests:  70%|███████   | 4809/6840 [00:44<00:17, 113.23it/s][A
+Running loglikelihood requests:  70%|███████   | 4821/6840 [00:44<00:17, 113.78it/s][A
+Running loglikelihood requests:  71%|███████   | 4833/6840 [00:44<00:17, 113.74it/s][A
+Running loglikelihood requests:  71%|███████   | 4845/6840 [00:44<00:17, 114.41it/s][A
+Running loglikelihood requests:  71%|███████   | 4857/6840 [00:44<00:17, 114.73it/s][A
+Running loglikelihood requests:  71%|███████   | 4869/6840 [00:45<00:17, 114.35it/s][A
+Running loglikelihood requests:  71%|███████▏  | 4881/6840 [00:45<00:17, 114.82it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4893/6840 [00:45<00:16, 114.88it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4905/6840 [00:45<00:16, 114.67it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4917/6840 [00:45<00:16, 113.90it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4929/6840 [00:45<00:17, 112.04it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4941/6840 [00:45<00:16, 111.71it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4953/6840 [00:45<00:17, 110.73it/s][A
+Running loglikelihood requests:  73%|███████▎  | 4965/6840 [00:45<00:16, 111.88it/s][A
+Running loglikelihood requests:  73%|███████▎  | 4977/6840 [00:45<00:16, 111.63it/s][A
+Running loglikelihood requests:  73%|███████▎  | 4989/6840 [00:46<00:16, 111.49it/s][A
+Running loglikelihood requests:  73%|███████▎  | 5001/6840 [00:46<00:16, 111.95it/s][A
+Running loglikelihood requests:  73%|███████▎  | 5013/6840 [00:46<00:16, 112.91it/s][A
+Running loglikelihood requests:  73%|███████▎  | 5025/6840 [00:46<00:16, 112.94it/s][A
+Running loglikelihood requests:  74%|███████▎  | 5037/6840 [00:46<00:15, 113.30it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5049/6840 [00:46<00:15, 113.52it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5061/6840 [00:46<00:15, 114.06it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5073/6840 [00:46<00:15, 113.69it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5085/6840 [00:46<00:15, 113.83it/s][A
+Running loglikelihood requests:  75%|███████▍  | 5097/6840 [00:47<00:15, 112.80it/s][A
+Running loglikelihood requests:  75%|███████▍  | 5109/6840 [00:47<00:15, 113.19it/s][A
+Running loglikelihood requests:  75%|███████▍  | 5121/6840 [00:47<00:15, 113.04it/s][A
+Running loglikelihood requests:  75%|███████▌  | 5133/6840 [00:47<00:15, 113.57it/s][A
+Running loglikelihood requests:  75%|███████▌  | 5145/6840 [00:47<00:14, 113.80it/s][A
+Running loglikelihood requests:  75%|███████▌  | 5157/6840 [00:47<00:14, 114.34it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5169/6840 [00:47<00:14, 114.62it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5181/6840 [00:47<00:14, 114.18it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5193/6840 [00:47<00:15, 109.73it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5205/6840 [00:48<00:14, 109.94it/s][A
+Running loglikelihood requests:  76%|███████▋  | 5217/6840 [00:48<00:14, 109.61it/s][A
+Running loglikelihood requests:  76%|███████▋  | 5229/6840 [00:48<00:14, 110.95it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5241/6840 [00:48<00:14, 111.96it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5253/6840 [00:48<00:14, 112.66it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5265/6840 [00:48<00:13, 113.62it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5277/6840 [00:48<00:13, 112.47it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5289/6840 [00:48<00:14, 110.50it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5301/6840 [00:48<00:13, 110.70it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5313/6840 [00:48<00:13, 111.95it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5325/6840 [00:49<00:13, 112.71it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5337/6840 [00:49<00:13, 112.38it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5349/6840 [00:49<00:13, 112.14it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5361/6840 [00:49<00:13, 111.87it/s][A
+Running loglikelihood requests:  79%|███████▊  | 5373/6840 [00:49<00:13, 111.97it/s][A
+Running loglikelihood requests:  79%|███████▊  | 5385/6840 [00:49<00:13, 111.89it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5397/6840 [00:49<00:12, 111.19it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5409/6840 [00:49<00:12, 112.33it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5421/6840 [00:49<00:12, 112.86it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5433/6840 [00:50<00:12, 112.75it/s][A
+Running loglikelihood requests:  80%|███████▉  | 5445/6840 [00:50<00:12, 112.54it/s][A
+Running loglikelihood requests:  80%|███████▉  | 5457/6840 [00:50<00:12, 111.49it/s][A
+Running loglikelihood requests:  80%|███████▉  | 5469/6840 [00:50<00:12, 110.68it/s][A
+Running loglikelihood requests:  80%|████████  | 5481/6840 [00:50<00:12, 110.72it/s][A
+Running loglikelihood requests:  80%|████████  | 5493/6840 [00:50<00:12, 112.11it/s][A
+Running loglikelihood requests:  80%|████████  | 5505/6840 [00:50<00:11, 112.31it/s][A
+Running loglikelihood requests:  81%|████████  | 5517/6840 [00:50<00:11, 112.51it/s][A
+Running loglikelihood requests:  81%|████████  | 5529/6840 [00:50<00:11, 113.17it/s][A
+Running loglikelihood requests:  81%|████████  | 5541/6840 [00:50<00:11, 112.40it/s][A
+Running loglikelihood requests:  81%|████████  | 5553/6840 [00:51<00:11, 112.08it/s][A
+Running loglikelihood requests:  81%|████████▏ | 5565/6840 [00:51<00:11, 111.43it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5577/6840 [00:51<00:11, 112.09it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5589/6840 [00:51<00:11, 111.74it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5601/6840 [00:51<00:11, 112.47it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5613/6840 [00:51<00:10, 112.62it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5625/6840 [00:51<00:10, 113.82it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5637/6840 [00:51<00:10, 113.80it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5649/6840 [00:51<00:10, 113.90it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5661/6840 [00:52<00:10, 113.07it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5673/6840 [00:52<00:10, 113.10it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5685/6840 [00:52<00:10, 113.49it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5697/6840 [00:52<00:10, 112.90it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5709/6840 [00:52<00:10, 112.80it/s][A
+Running loglikelihood requests:  84%|████████▎ | 5721/6840 [00:52<00:09, 113.17it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5733/6840 [00:52<00:10, 107.81it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5745/6840 [00:52<00:10, 106.56it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5757/6840 [00:52<00:10, 100.91it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5769/6840 [00:53<00:10, 100.73it/s][A
+Running loglikelihood requests:  85%|████████▍ | 5781/6840 [00:53<00:10, 103.12it/s][A
+Running loglikelihood requests:  85%|████████▍ | 5793/6840 [00:53<00:09, 105.76it/s][A
+Running loglikelihood requests:  85%|████████▍ | 5805/6840 [00:53<00:09, 106.75it/s][A
+Running loglikelihood requests:  85%|████████▌ | 5817/6840 [00:53<00:09, 108.76it/s][A
+Running loglikelihood requests:  85%|████████▌ | 5829/6840 [00:53<00:09, 108.44it/s][A
+Running loglikelihood requests:  85%|████████▌ | 5841/6840 [00:53<00:09, 105.97it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5853/6840 [00:53<00:09, 107.36it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5865/6840 [00:53<00:09, 108.10it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5877/6840 [00:54<00:08, 109.74it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5889/6840 [00:54<00:08, 109.81it/s][A
+Running loglikelihood requests:  86%|████████▋ | 5901/6840 [00:54<00:08, 110.40it/s][A
+Running loglikelihood requests:  86%|████████▋ | 5913/6840 [00:54<00:08, 111.05it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5925/6840 [00:54<00:08, 111.52it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5937/6840 [00:54<00:08, 111.87it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5949/6840 [00:54<00:08, 111.12it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5961/6840 [00:54<00:07, 110.64it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5973/6840 [00:54<00:07, 109.84it/s][A
+Running loglikelihood requests:  88%|████████▊ | 5985/6840 [00:55<00:07, 110.48it/s][A
+Running loglikelihood requests:  88%|████████▊ | 5997/6840 [00:55<00:07, 110.10it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6009/6840 [00:55<00:07, 110.98it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6021/6840 [00:55<00:07, 111.44it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6033/6840 [00:55<00:07, 111.76it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6045/6840 [00:55<00:07, 111.46it/s][A
+Running loglikelihood requests:  89%|████████▊ | 6057/6840 [00:55<00:06, 112.42it/s][A
+Running loglikelihood requests:  89%|████████▊ | 6069/6840 [00:55<00:06, 112.93it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6081/6840 [00:55<00:06, 113.24it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6093/6840 [00:56<00:06, 113.25it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6105/6840 [00:56<00:06, 113.29it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6117/6840 [00:56<00:06, 112.80it/s][A
+Running loglikelihood requests:  90%|████████▉ | 6129/6840 [00:56<00:06, 113.02it/s][A
+Running loglikelihood requests:  90%|████████▉ | 6141/6840 [00:56<00:06, 113.04it/s][A
+Running loglikelihood requests:  90%|████████▉ | 6153/6840 [00:56<00:06, 113.24it/s][A
+Running loglikelihood requests:  90%|█████████ | 6165/6840 [00:56<00:05, 113.34it/s][A
+Running loglikelihood requests:  90%|█████████ | 6177/6840 [00:56<00:05, 113.75it/s][A
+Running loglikelihood requests:  90%|█████████ | 6189/6840 [00:56<00:05, 114.56it/s][A
+Running loglikelihood requests:  91%|█████████ | 6201/6840 [00:56<00:05, 114.67it/s][A
+Running loglikelihood requests:  91%|█████████ | 6213/6840 [00:57<00:05, 114.02it/s][A
+Running loglikelihood requests:  91%|█████████ | 6225/6840 [00:57<00:05, 114.10it/s][A
+Running loglikelihood requests:  91%|█████████ | 6237/6840 [00:57<00:05, 112.90it/s][A
+Running loglikelihood requests:  91%|█████████▏| 6249/6840 [00:57<00:05, 111.63it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6261/6840 [00:57<00:05, 111.24it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6273/6840 [00:57<00:05, 112.28it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6285/6840 [00:57<00:04, 113.46it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6297/6840 [00:57<00:04, 114.27it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6309/6840 [00:57<00:04, 115.51it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6321/6840 [00:58<00:04, 116.44it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6333/6840 [00:58<00:04, 116.61it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6345/6840 [00:58<00:04, 116.89it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6357/6840 [00:58<00:04, 116.81it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6369/6840 [00:58<00:04, 116.11it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6381/6840 [00:58<00:03, 116.53it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6393/6840 [00:58<00:03, 114.80it/s][A
+Running loglikelihood requests:  94%|█████████▎| 6405/6840 [00:58<00:03, 112.27it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6417/6840 [00:58<00:03, 110.24it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6429/6840 [00:58<00:03, 110.01it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6441/6840 [00:59<00:03, 111.14it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6453/6840 [00:59<00:03, 111.74it/s][A
+Running loglikelihood requests:  95%|█████████▍| 6465/6840 [00:59<00:03, 113.20it/s][A
+Running loglikelihood requests:  95%|█████████▍| 6477/6840 [00:59<00:03, 112.93it/s][A
+Running loglikelihood requests:  95%|█████████▍| 6489/6840 [00:59<00:03, 113.64it/s][A
+Running loglikelihood requests:  95%|█████████▌| 6501/6840 [00:59<00:02, 113.14it/s][A
+Running loglikelihood requests:  95%|█████████▌| 6513/6840 [00:59<00:02, 111.66it/s][A
+Running loglikelihood requests:  95%|█████████▌| 6525/6840 [00:59<00:02, 110.82it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6537/6840 [00:59<00:02, 109.80it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6549/6840 [01:00<00:02, 110.61it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6561/6840 [01:00<00:02, 112.04it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6573/6840 [01:00<00:02, 112.80it/s][A
+Running loglikelihood requests:  96%|█████████▋| 6585/6840 [01:00<00:02, 113.55it/s][A
+Running loglikelihood requests:  96%|█████████▋| 6597/6840 [01:00<00:02, 113.80it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6609/6840 [01:00<00:02, 113.89it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6621/6840 [01:00<00:01, 114.41it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6633/6840 [01:00<00:01, 114.43it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6645/6840 [01:00<00:01, 114.86it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6657/6840 [01:00<00:01, 114.22it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6669/6840 [01:01<00:01, 114.21it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6681/6840 [01:01<00:01, 114.61it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6693/6840 [01:01<00:01, 115.02it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6705/6840 [01:01<00:01, 114.57it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6717/6840 [01:01<00:01, 114.28it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6729/6840 [01:01<00:00, 114.17it/s][A
+Running loglikelihood requests:  99%|█████████▊| 6741/6840 [01:01<00:00, 114.54it/s][A
+Running loglikelihood requests:  99%|█████████▊| 6753/6840 [01:01<00:00, 114.97it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6765/6840 [01:01<00:00, 115.08it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6777/6840 [01:02<00:00, 113.10it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6789/6840 [01:02<00:00, 111.59it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6801/6840 [01:02<00:00, 111.48it/s][A
+Running loglikelihood requests: 100%|█████████▉| 6813/6840 [01:02<00:00, 112.47it/s][A
+Running loglikelihood requests: 100%|█████████▉| 6825/6840 [01:02<00:00, 113.44it/s][A
+Running loglikelihood requests: 100%|█████████▉| 6837/6840 [01:02<00:00, 114.00it/s][ARunning loglikelihood requests: 100%|██████████| 6840/6840 [01:02<00:00, 109.34it/s]
+DEV 20 {"wmdp_bio": {"n": 256, "correct": 193, "accuracy_percent": 75.390625, "baseline_accuracy_percent": 75.78125, "change_percentage_points": -0.390625}, "mmlu": {"n": 1710, "correct": 1244, "accuracy_percent": 72.74853801169591, "baseline_accuracy_percent": 73.50877192982456, "change_percentage_points": -0.7602339181286549}}
+                                               {'loss': '0.696', 'grad_norm': '0.2275', 'learning_rate': '2.5e-05', 'epoch': '0.1562'}
+ 50%|█████     | 20/40 [04:17<01:12,  3.61s/it] 52%|█████▎    | 21/40 [04:19<10:38, 33.63s/it]                                               {'loss': '0.6831', 'grad_norm': '0.2285', 'learning_rate': '2.5e-05', 'epoch': '0.1641'}
+ 52%|█████▎    | 21/40 [04:19<10:38, 33.63s/it] 55%|█████▌    | 22/40 [04:22<07:16, 24.26s/it]                                               {'loss': '0.678', 'grad_norm': '0.2354', 'learning_rate': '2.5e-05', 'epoch': '0.1719'}
+ 55%|█████▌    | 22/40 [04:22<07:16, 24.26s/it] 57%|█████▊    | 23/40 [04:24<05:01, 17.72s/it]                                               {'loss': '0.6726', 'grad_norm': '0.2236', 'learning_rate': '2.5e-05', 'epoch': '0.1797'}
+ 57%|█████▊    | 23/40 [04:24<05:01, 17.72s/it] 60%|██████    | 24/40 [04:27<03:29, 13.12s/it]                                               {'loss': '0.6394', 'grad_norm': '0.2207', 'learning_rate': '2.5e-05', 'epoch': '0.1875'}
+ 60%|██████    | 24/40 [04:27<03:29, 13.12s/it] 62%|██████▎   | 25/40 [04:29<02:28,  9.90s/it]                                               {'loss': '0.6699', 'grad_norm': '0.2305', 'learning_rate': '2.5e-05', 'epoch': '0.1953'}
+ 62%|██████▎   | 25/40 [04:29<02:28,  9.90s/it] 65%|██████▌   | 26/40 [04:31<01:47,  7.65s/it]                                               {'loss': '0.677', 'grad_norm': '0.2305', 'learning_rate': '2.5e-05', 'epoch': '0.2031'}
+ 65%|██████▌   | 26/40 [04:31<01:47,  7.65s/it] 68%|██████▊   | 27/40 [04:34<01:19,  6.08s/it]                                               {'loss': '0.6667', 'grad_norm': '0.207', 'learning_rate': '2.5e-05', 'epoch': '0.2109'}
+ 68%|██████▊   | 27/40 [04:34<01:19,  6.08s/it] 70%|███████   | 28/40 [04:36<00:59,  4.99s/it]                                               {'loss': '0.6497', 'grad_norm': '0.2256', 'learning_rate': '2.5e-05', 'epoch': '0.2188'}
+ 70%|███████   | 28/40 [04:36<00:59,  4.99s/it] 72%|███████▎  | 29/40 [04:39<00:48,  4.41s/it]                                               {'loss': '3.851', 'grad_norm': '0.2236', 'learning_rate': '2.5e-05', 'epoch': '0.2266'}
+ 72%|███████▎  | 29/40 [04:39<00:48,  4.41s/it] 75%|███████▌  | 30/40 [04:42<00:39,  3.99s/it]Validation step 30: forget=0.619751, retain=0.011845, retain_nll=2.201131
+                                               {'loss': '2.053', 'grad_norm': '0.2148', 'learning_rate': '2.5e-05', 'epoch': '0.2344'}
+ 75%|███████▌  | 30/40 [04:52<00:39,  3.99s/it] 78%|███████▊  | 31/40 [04:55<00:59,  6.57s/it]                                               {'loss': '7.916', 'grad_norm': '0.2188', 'learning_rate': '2.5e-05', 'epoch': '0.2422'}
+ 78%|███████▊  | 31/40 [04:55<00:59,  6.57s/it] 80%|████████  | 32/40 [04:57<00:42,  5.32s/it]                                               {'loss': '0.6221', 'grad_norm': '0.21', 'learning_rate': '2.5e-05', 'epoch': '0.25'}
+ 80%|████████  | 32/40 [04:57<00:42,  5.32s/it] 82%|████████▎ | 33/40 [05:00<00:31,  4.44s/it]                                               {'loss': '0.6279', 'grad_norm': '0.2119', 'learning_rate': '2.5e-05', 'epoch': '0.2578'}
+ 82%|████████▎ | 33/40 [05:00<00:31,  4.44s/it] 85%|████████▌ | 34/40 [05:02<00:22,  3.83s/it]                                               {'loss': '0.6169', 'grad_norm': '0.1943', 'learning_rate': '2.5e-05', 'epoch': '0.2656'}
+ 85%|████████▌ | 34/40 [05:02<00:22,  3.83s/it] 88%|████████▊ | 35/40 [05:05<00:17,  3.41s/it]                                               {'loss': '0.6243', 'grad_norm': '0.2012', 'learning_rate': '2.5e-05', 'epoch': '0.2734'}
+ 88%|████████▊ | 35/40 [05:05<00:17,  3.41s/it] 90%|█████████ | 36/40 [05:07<00:12,  3.11s/it]                                               {'loss': '0.6101', 'grad_norm': '0.2168', 'learning_rate': '2.5e-05', 'epoch': '0.2812'}
+ 90%|█████████ | 36/40 [05:07<00:12,  3.11s/it] 92%|█████████▎| 37/40 [05:09<00:08,  2.91s/it]                                               {'loss': '0.6221', 'grad_norm': '0.2031', 'learning_rate': '2.5e-05', 'epoch': '0.2891'}
+ 92%|█████████▎| 37/40 [05:09<00:08,  2.91s/it] 95%|█████████▌| 38/40 [05:12<00:05,  2.76s/it]                                               {'loss': '0.604', 'grad_norm': '0.208', 'learning_rate': '2.5e-05', 'epoch': '0.2969'}
+ 95%|█████████▌| 38/40 [05:12<00:05,  2.76s/it] 98%|█████████▊| 39/40 [05:14<00:02,  2.67s/it]                                               {'loss': '5.39', 'grad_norm': '0.1904', 'learning_rate': '2.5e-05', 'epoch': '0.3047'}
+ 98%|█████████▊| 39/40 [05:14<00:02,  2.67s/it]100%|██████████| 40/40 [05:17<00:00,  2.61s/it]Validation step 40: forget=0.575256, retain=0.019158, retain_nll=2.204442
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+
+Running loglikelihood requests:   0%|          | 0/1024 [00:00<?, ?it/s][A
+Running loglikelihood requests:   1%|          | 9/1024 [00:00<00:13, 77.50it/s][A
+Running loglikelihood requests:   2%|▏         | 21/1024 [00:00<00:10, 91.34it/s][A
+Running loglikelihood requests:   3%|▎         | 33/1024 [00:00<00:10, 98.27it/s][A
+Running loglikelihood requests:   4%|▍         | 45/1024 [00:00<00:09, 102.30it/s][A
+Running loglikelihood requests:   6%|▌         | 57/1024 [00:00<00:09, 106.10it/s][A
+Running loglikelihood requests:   7%|▋         | 69/1024 [00:00<00:08, 108.32it/s][A
+Running loglikelihood requests:   8%|▊         | 81/1024 [00:00<00:08, 109.63it/s][A
+Running loglikelihood requests:   9%|▉         | 93/1024 [00:00<00:08, 109.88it/s][A
+Running loglikelihood requests:  10%|█         | 105/1024 [00:00<00:08, 110.36it/s][A
+Running loglikelihood requests:  11%|█▏        | 117/1024 [00:01<00:08, 109.77it/s][A
+Running loglikelihood requests:  13%|█▎        | 129/1024 [00:01<00:08, 109.91it/s][A
+Running loglikelihood requests:  14%|█▍        | 141/1024 [00:01<00:08, 109.75it/s][A
+Running loglikelihood requests:  15%|█▍        | 153/1024 [00:01<00:07, 110.75it/s][A
+Running loglikelihood requests:  16%|█▌        | 165/1024 [00:01<00:07, 109.51it/s][A
+Running loglikelihood requests:  17%|█▋        | 177/1024 [00:01<00:07, 109.71it/s][A
+Running loglikelihood requests:  18%|█▊        | 189/1024 [00:01<00:07, 109.92it/s][A
+Running loglikelihood requests:  20%|█▉        | 201/1024 [00:01<00:07, 109.79it/s][A
+Running loglikelihood requests:  21%|██        | 213/1024 [00:01<00:07, 109.80it/s][A
+Running loglikelihood requests:  22%|██▏       | 225/1024 [00:02<00:07, 108.54it/s][A
+Running loglikelihood requests:  23%|██▎       | 237/1024 [00:02<00:07, 109.49it/s][A
+Running loglikelihood requests:  24%|██▍       | 249/1024 [00:02<00:07, 109.22it/s][A
+Running loglikelihood requests:  25%|██▌       | 261/1024 [00:02<00:06, 109.18it/s][A
+Running loglikelihood requests:  27%|██▋       | 273/1024 [00:02<00:06, 109.54it/s][A
+Running loglikelihood requests:  28%|██▊       | 285/1024 [00:02<00:06, 109.43it/s][A
+Running loglikelihood requests:  29%|██▉       | 297/1024 [00:02<00:06, 110.47it/s][A
+Running loglikelihood requests:  30%|███       | 309/1024 [00:02<00:06, 110.72it/s][A
+Running loglikelihood requests:  31%|███▏      | 321/1024 [00:02<00:06, 110.98it/s][A
+Running loglikelihood requests:  33%|███▎      | 333/1024 [00:03<00:06, 110.71it/s][A
+Running loglikelihood requests:  34%|███▎      | 345/1024 [00:03<00:06, 110.78it/s][A
+Running loglikelihood requests:  35%|███▍      | 357/1024 [00:03<00:06, 110.43it/s][A
+Running loglikelihood requests:  36%|███▌      | 369/1024 [00:03<00:05, 110.39it/s][A
+Running loglikelihood requests:  37%|███▋      | 381/1024 [00:03<00:05, 110.86it/s][A
+Running loglikelihood requests:  38%|███▊      | 393/1024 [00:03<00:05, 111.00it/s][A
+Running loglikelihood requests:  40%|███▉      | 405/1024 [00:03<00:05, 112.34it/s][A
+Running loglikelihood requests:  41%|████      | 417/1024 [00:03<00:05, 112.27it/s][A
+Running loglikelihood requests:  42%|████▏     | 429/1024 [00:03<00:05, 112.87it/s][A
+Running loglikelihood requests:  43%|████▎     | 441/1024 [00:04<00:05, 112.35it/s][A
+Running loglikelihood requests:  44%|████▍     | 453/1024 [00:04<00:05, 112.11it/s][A
+Running loglikelihood requests:  45%|████▌     | 465/1024 [00:04<00:05, 110.84it/s][A
+Running loglikelihood requests:  47%|████▋     | 477/1024 [00:04<00:04, 109.55it/s][A
+Running loglikelihood requests:  48%|████▊     | 489/1024 [00:04<00:04, 109.20it/s][A
+Running loglikelihood requests:  49%|████▉     | 501/1024 [00:04<00:04, 109.09it/s][A
+Running loglikelihood requests:  50%|█████     | 513/1024 [00:04<00:04, 110.41it/s][A
+Running loglikelihood requests:  51%|█████▏    | 525/1024 [00:04<00:04, 111.26it/s][A
+Running loglikelihood requests:  52%|█████▏    | 537/1024 [00:04<00:04, 112.68it/s][A
+Running loglikelihood requests:  54%|█████▎    | 549/1024 [00:05<00:04, 112.94it/s][A
+Running loglikelihood requests:  55%|█████▍    | 561/1024 [00:05<00:04, 112.19it/s][A
+Running loglikelihood requests:  56%|█████▌    | 573/1024 [00:05<00:04, 109.99it/s][A
+Running loglikelihood requests:  57%|█████▋    | 585/1024 [00:05<00:03, 111.37it/s][A
+Running loglikelihood requests:  58%|█████▊    | 597/1024 [00:05<00:03, 111.93it/s][A
+Running loglikelihood requests:  59%|█████▉    | 609/1024 [00:05<00:03, 112.77it/s][A
+Running loglikelihood requests:  61%|██████    | 621/1024 [00:05<00:03, 113.34it/s][A
+Running loglikelihood requests:  62%|██████▏   | 633/1024 [00:05<00:03, 113.59it/s][A
+Running loglikelihood requests:  63%|██████▎   | 645/1024 [00:05<00:03, 113.70it/s][A
+Running loglikelihood requests:  64%|██████▍   | 657/1024 [00:05<00:03, 112.78it/s][A
+Running loglikelihood requests:  65%|██████▌   | 669/1024 [00:06<00:03, 112.29it/s][A
+Running loglikelihood requests:  67%|██████▋   | 681/1024 [00:06<00:03, 110.04it/s][A
+Running loglikelihood requests:  68%|██████▊   | 693/1024 [00:06<00:03, 109.07it/s][A
+Running loglikelihood requests:  69%|██████▉   | 705/1024 [00:06<00:02, 109.20it/s][A
+Running loglikelihood requests:  70%|███████   | 717/1024 [00:06<00:02, 108.91it/s][A
+Running loglikelihood requests:  71%|███████   | 729/1024 [00:06<00:02, 109.05it/s][A
+Running loglikelihood requests:  72%|███████▏  | 741/1024 [00:06<00:02, 109.67it/s][A
+Running loglikelihood requests:  74%|███████▎  | 753/1024 [00:06<00:02, 109.48it/s][A
+Running loglikelihood requests:  75%|███████▍  | 765/1024 [00:06<00:02, 109.45it/s][A
+Running loglikelihood requests:  76%|███████▌  | 777/1024 [00:07<00:02, 110.34it/s][A
+Running loglikelihood requests:  77%|███████▋  | 789/1024 [00:07<00:02, 110.13it/s][A
+Running loglikelihood requests:  78%|███████▊  | 801/1024 [00:07<00:02, 110.66it/s][A
+Running loglikelihood requests:  79%|███████▉  | 813/1024 [00:07<00:01, 110.76it/s][A
+Running loglikelihood requests:  81%|████████  | 825/1024 [00:07<00:01, 112.03it/s][A
+Running loglikelihood requests:  82%|████████▏ | 837/1024 [00:07<00:01, 113.46it/s][A
+Running loglikelihood requests:  83%|████████▎ | 849/1024 [00:07<00:01, 112.39it/s][A
+Running loglikelihood requests:  84%|████████▍ | 861/1024 [00:07<00:01, 113.23it/s][A
+Running loglikelihood requests:  85%|████████▌ | 873/1024 [00:07<00:01, 113.53it/s][A
+Running loglikelihood requests:  86%|████████▋ | 885/1024 [00:08<00:01, 114.43it/s][A
+Running loglikelihood requests:  88%|████████▊ | 897/1024 [00:08<00:01, 113.62it/s][A
+Running loglikelihood requests:  89%|████████▉ | 909/1024 [00:08<00:01, 114.33it/s][A
+Running loglikelihood requests:  90%|████████▉ | 921/1024 [00:08<00:00, 114.93it/s][A
+Running loglikelihood requests:  91%|█████████ | 933/1024 [00:08<00:00, 114.09it/s][A
+Running loglikelihood requests:  92%|█████████▏| 945/1024 [00:08<00:00, 114.07it/s][A
+Running loglikelihood requests:  93%|█████████▎| 957/1024 [00:08<00:00, 114.14it/s][A
+Running loglikelihood requests:  95%|█████████▍| 969/1024 [00:08<00:00, 113.90it/s][A
+Running loglikelihood requests:  96%|█████████▌| 981/1024 [00:08<00:00, 113.15it/s][A
+Running loglikelihood requests:  97%|█████████▋| 993/1024 [00:08<00:00, 112.01it/s][A
+Running loglikelihood requests:  98%|█████████▊| 1005/1024 [00:09<00:00, 99.62it/s][A
+Running loglikelihood requests:  99%|█████████▉| 1017/1024 [00:09<00:00, 97.77it/s][ARunning loglikelihood requests: 100%|██████████| 1024/1024 [00:09<00:00, 110.23it/s]
+
+Running loglikelihood requests:   0%|          | 0/6840 [00:00<?, ?it/s][A
+Running loglikelihood requests:   0%|          | 5/6840 [00:00<02:51, 39.80it/s][A
+Running loglikelihood requests:   0%|          | 13/6840 [00:00<01:58, 57.52it/s][A
+Running loglikelihood requests:   0%|          | 21/6840 [00:00<01:43, 65.77it/s][A
+Running loglikelihood requests:   0%|          | 33/6840 [00:00<01:33, 73.05it/s][A
+Running loglikelihood requests:   1%|          | 45/6840 [00:00<01:27, 77.49it/s][A
+Running loglikelihood requests:   1%|          | 57/6840 [00:00<01:22, 81.92it/s][A
+Running loglikelihood requests:   1%|          | 69/6840 [00:00<01:19, 85.55it/s][A
+Running loglikelihood requests:   1%|          | 81/6840 [00:01<01:16, 88.46it/s][A
+Running loglikelihood requests:   1%|▏         | 93/6840 [00:01<01:14, 90.43it/s][A
+Running loglikelihood requests:   2%|▏         | 105/6840 [00:01<01:13, 91.85it/s][A
+Running loglikelihood requests:   2%|▏         | 117/6840 [00:01<01:10, 94.92it/s][A
+Running loglikelihood requests:   2%|▏         | 129/6840 [00:01<01:08, 97.93it/s][A
+Running loglikelihood requests:   2%|▏         | 141/6840 [00:01<01:06, 100.01it/s][A
+Running loglikelihood requests:   2%|▏         | 153/6840 [00:01<01:05, 102.79it/s][A
+Running loglikelihood requests:   2%|▏         | 165/6840 [00:01<01:03, 105.06it/s][A
+Running loglikelihood requests:   3%|▎         | 177/6840 [00:01<01:03, 105.75it/s][A
+Running loglikelihood requests:   3%|▎         | 189/6840 [00:02<01:02, 106.52it/s][A
+Running loglikelihood requests:   3%|▎         | 201/6840 [00:02<01:02, 106.71it/s][A
+Running loglikelihood requests:   3%|▎         | 213/6840 [00:02<01:01, 108.07it/s][A
+Running loglikelihood requests:   3%|▎         | 225/6840 [00:02<01:00, 108.88it/s][A
+Running loglikelihood requests:   3%|▎         | 237/6840 [00:02<01:00, 108.96it/s][A
+Running loglikelihood requests:   4%|▎         | 249/6840 [00:02<01:02, 106.26it/s][A
+Running loglikelihood requests:   4%|▍         | 261/6840 [00:02<01:01, 106.71it/s][A
+Running loglikelihood requests:   4%|▍         | 273/6840 [00:02<01:02, 105.61it/s][A
+Running loglikelihood requests:   4%|▍         | 285/6840 [00:02<01:01, 106.52it/s][A
+Running loglikelihood requests:   4%|▍         | 297/6840 [00:03<01:01, 106.60it/s][A
+Running loglikelihood requests:   5%|▍         | 309/6840 [00:03<01:01, 106.69it/s][A
+Running loglikelihood requests:   5%|▍         | 321/6840 [00:03<01:01, 106.39it/s][A
+Running loglikelihood requests:   5%|▍         | 333/6840 [00:03<01:01, 105.85it/s][A
+Running loglikelihood requests:   5%|▌         | 345/6840 [00:03<01:02, 104.53it/s][A
+Running loglikelihood requests:   5%|▌         | 357/6840 [00:03<01:01, 104.68it/s][A
+Running loglikelihood requests:   5%|▌         | 369/6840 [00:03<01:01, 105.86it/s][A
+Running loglikelihood requests:   6%|▌         | 381/6840 [00:03<01:00, 106.32it/s][A
+Running loglikelihood requests:   6%|▌         | 393/6840 [00:03<00:59, 107.74it/s][A
+Running loglikelihood requests:   6%|▌         | 405/6840 [00:04<00:59, 108.49it/s][A
+Running loglikelihood requests:   6%|▌         | 417/6840 [00:04<00:58, 109.24it/s][A
+Running loglikelihood requests:   6%|▋         | 429/6840 [00:04<00:58, 109.74it/s][A
+Running loglikelihood requests:   6%|▋         | 441/6840 [00:04<00:58, 109.84it/s][A
+Running loglikelihood requests:   7%|▋         | 453/6840 [00:04<00:57, 110.84it/s][A
+Running loglikelihood requests:   7%|▋         | 465/6840 [00:04<00:57, 110.97it/s][A
+Running loglikelihood requests:   7%|▋         | 477/6840 [00:04<00:56, 111.68it/s][A
+Running loglikelihood requests:   7%|▋         | 489/6840 [00:04<00:57, 110.80it/s][A
+Running loglikelihood requests:   7%|▋         | 501/6840 [00:04<00:57, 110.36it/s][A
+Running loglikelihood requests:   8%|▊         | 513/6840 [00:05<00:57, 110.14it/s][A
+Running loglikelihood requests:   8%|▊         | 525/6840 [00:05<00:57, 109.96it/s][A
+Running loglikelihood requests:   8%|▊         | 537/6840 [00:05<00:57, 109.61it/s][A
+Running loglikelihood requests:   8%|▊         | 549/6840 [00:05<00:57, 109.64it/s][A
+Running loglikelihood requests:   8%|▊         | 561/6840 [00:05<00:57, 109.20it/s][A
+Running loglikelihood requests:   8%|▊         | 573/6840 [00:05<00:57, 108.13it/s][A
+Running loglikelihood requests:   9%|▊         | 585/6840 [00:05<00:57, 108.50it/s][A
+Running loglikelihood requests:   9%|▊         | 597/6840 [00:05<00:57, 108.13it/s][A
+Running loglikelihood requests:   9%|▉         | 609/6840 [00:05<00:57, 107.80it/s][A
+Running loglikelihood requests:   9%|▉         | 621/6840 [00:06<00:57, 107.90it/s][A
+Running loglikelihood requests:   9%|▉         | 633/6840 [00:06<00:57, 108.04it/s][A
+Running loglikelihood requests:   9%|▉         | 645/6840 [00:06<00:57, 108.42it/s][A
+Running loglikelihood requests:  10%|▉         | 657/6840 [00:06<00:56, 109.01it/s][A
+Running loglikelihood requests:  10%|▉         | 669/6840 [00:06<00:56, 109.29it/s][A
+Running loglikelihood requests:  10%|▉         | 681/6840 [00:06<00:55, 110.77it/s][A
+Running loglikelihood requests:  10%|█         | 693/6840 [00:06<00:55, 111.11it/s][A
+Running loglikelihood requests:  10%|█         | 705/6840 [00:06<00:54, 112.35it/s][A
+Running loglikelihood requests:  10%|█         | 717/6840 [00:06<00:54, 112.37it/s][A
+Running loglikelihood requests:  11%|█         | 729/6840 [00:07<00:54, 112.75it/s][A
+Running loglikelihood requests:  11%|█         | 741/6840 [00:07<00:53, 113.86it/s][A
+Running loglikelihood requests:  11%|█         | 753/6840 [00:07<00:53, 113.13it/s][A
+Running loglikelihood requests:  11%|█         | 765/6840 [00:07<00:53, 113.91it/s][A
+Running loglikelihood requests:  11%|█▏        | 777/6840 [00:07<00:53, 112.92it/s][A
+Running loglikelihood requests:  12%|█▏        | 789/6840 [00:07<00:54, 111.07it/s][A
+Running loglikelihood requests:  12%|█▏        | 801/6840 [00:07<00:55, 108.99it/s][A
+Running loglikelihood requests:  12%|█▏        | 813/6840 [00:07<00:54, 109.84it/s][A
+Running loglikelihood requests:  12%|█▏        | 825/6840 [00:07<00:54, 110.36it/s][A
+Running loglikelihood requests:  12%|█▏        | 837/6840 [00:07<00:53, 111.48it/s][A
+Running loglikelihood requests:  12%|█▏        | 849/6840 [00:08<00:53, 111.80it/s][A
+Running loglikelihood requests:  13%|█▎        | 861/6840 [00:08<00:53, 111.93it/s][A
+Running loglikelihood requests:  13%|█▎        | 873/6840 [00:08<00:53, 111.89it/s][A
+Running loglikelihood requests:  13%|█▎        | 885/6840 [00:08<00:54, 109.40it/s][A
+Running loglikelihood requests:  13%|█▎        | 897/6840 [00:08<00:55, 107.72it/s][A
+Running loglikelihood requests:  13%|█▎        | 909/6840 [00:08<00:54, 108.39it/s][A
+Running loglikelihood requests:  13%|█▎        | 921/6840 [00:08<00:54, 109.43it/s][A
+Running loglikelihood requests:  14%|█▎        | 933/6840 [00:08<00:53, 109.64it/s][A
+Running loglikelihood requests:  14%|█▍        | 945/6840 [00:08<00:53, 110.66it/s][A
+Running loglikelihood requests:  14%|█▍        | 957/6840 [00:09<00:52, 112.68it/s][A
+Running loglikelihood requests:  14%|█▍        | 969/6840 [00:09<00:51, 113.29it/s][A
+Running loglikelihood requests:  14%|█▍        | 981/6840 [00:09<00:51, 113.25it/s][A
+Running loglikelihood requests:  15%|█▍        | 993/6840 [00:09<00:51, 113.65it/s][A
+Running loglikelihood requests:  15%|█▍        | 1005/6840 [00:09<00:51, 113.66it/s][A
+Running loglikelihood requests:  15%|█▍        | 1017/6840 [00:09<00:51, 114.14it/s][A
+Running loglikelihood requests:  15%|█▌        | 1029/6840 [00:09<00:50, 114.87it/s][A
+Running loglikelihood requests:  15%|█▌        | 1041/6840 [00:09<00:50, 115.06it/s][A
+Running loglikelihood requests:  15%|█▌        | 1053/6840 [00:09<00:50, 115.36it/s][A
+Running loglikelihood requests:  16%|█▌        | 1065/6840 [00:10<00:50, 115.34it/s][A
+Running loglikelihood requests:  16%|█▌        | 1077/6840 [00:10<00:50, 114.91it/s][A
+Running loglikelihood requests:  16%|█▌        | 1089/6840 [00:10<00:50, 114.21it/s][A
+Running loglikelihood requests:  16%|█▌        | 1101/6840 [00:10<00:50, 114.70it/s][A
+Running loglikelihood requests:  16%|█▋        | 1113/6840 [00:10<00:49, 115.12it/s][A
+Running loglikelihood requests:  16%|█▋        | 1125/6840 [00:10<00:49, 114.56it/s][A
+Running loglikelihood requests:  17%|█▋        | 1137/6840 [00:10<00:50, 113.65it/s][A
+Running loglikelihood requests:  17%|█▋        | 1149/6840 [00:10<00:50, 113.29it/s][A
+Running loglikelihood requests:  17%|█▋        | 1161/6840 [00:10<00:50, 112.64it/s][A
+Running loglikelihood requests:  17%|█▋        | 1173/6840 [00:10<00:50, 111.79it/s][A
+Running loglikelihood requests:  17%|█▋        | 1185/6840 [00:11<00:50, 112.58it/s][A
+Running loglikelihood requests:  18%|█▊        | 1197/6840 [00:11<00:49, 112.87it/s][A
+Running loglikelihood requests:  18%|█▊        | 1209/6840 [00:11<00:49, 112.81it/s][A
+Running loglikelihood requests:  18%|█▊        | 1221/6840 [00:11<00:49, 113.00it/s][A
+Running loglikelihood requests:  18%|█▊        | 1233/6840 [00:11<00:49, 113.03it/s][A
+Running loglikelihood requests:  18%|█▊        | 1245/6840 [00:11<00:49, 113.08it/s][A
+Running loglikelihood requests:  18%|█▊        | 1257/6840 [00:11<00:49, 113.77it/s][A
+Running loglikelihood requests:  19%|█▊        | 1269/6840 [00:11<00:48, 113.70it/s][A
+Running loglikelihood requests:  19%|█▊        | 1281/6840 [00:11<00:48, 113.98it/s][A
+Running loglikelihood requests:  19%|█▉        | 1293/6840 [00:12<00:48, 113.51it/s][A
+Running loglikelihood requests:  19%|█▉        | 1305/6840 [00:12<00:48, 113.59it/s][A
+Running loglikelihood requests:  19%|█▉        | 1317/6840 [00:12<00:48, 113.50it/s][A
+Running loglikelihood requests:  19%|█▉        | 1329/6840 [00:12<00:48, 112.79it/s][A
+Running loglikelihood requests:  20%|█▉        | 1341/6840 [00:12<00:48, 112.85it/s][A
+Running loglikelihood requests:  20%|█▉        | 1353/6840 [00:12<00:50, 109.44it/s][A
+Running loglikelihood requests:  20%|█▉        | 1365/6840 [00:12<00:50, 107.92it/s][A
+Running loglikelihood requests:  20%|██        | 1377/6840 [00:12<00:50, 108.82it/s][A
+Running loglikelihood requests:  20%|██        | 1389/6840 [00:12<00:49, 109.84it/s][A
+Running loglikelihood requests:  20%|██        | 1401/6840 [00:13<00:49, 110.17it/s][A
+Running loglikelihood requests:  21%|██        | 1413/6840 [00:13<00:49, 109.97it/s][A
+Running loglikelihood requests:  21%|██        | 1425/6840 [00:13<00:49, 109.83it/s][A
+Running loglikelihood requests:  21%|██        | 1437/6840 [00:13<00:49, 109.78it/s][A
+Running loglikelihood requests:  21%|██        | 1449/6840 [00:13<00:49, 109.89it/s][A
+Running loglikelihood requests:  21%|██▏       | 1461/6840 [00:13<00:48, 109.87it/s][A
+Running loglikelihood requests:  22%|██▏       | 1473/6840 [00:13<00:48, 109.65it/s][A
+Running loglikelihood requests:  22%|██▏       | 1485/6840 [00:13<00:48, 110.24it/s][A
+Running loglikelihood requests:  22%|██▏       | 1497/6840 [00:13<00:48, 111.22it/s][A
+Running loglikelihood requests:  22%|██▏       | 1509/6840 [00:13<00:47, 111.89it/s][A
+Running loglikelihood requests:  22%|██▏       | 1521/6840 [00:14<00:47, 112.03it/s][A
+Running loglikelihood requests:  22%|██▏       | 1533/6840 [00:14<00:47, 112.08it/s][A
+Running loglikelihood requests:  23%|██▎       | 1545/6840 [00:14<00:47, 111.93it/s][A
+Running loglikelihood requests:  23%|██▎       | 1557/6840 [00:14<00:47, 112.25it/s][A
+Running loglikelihood requests:  23%|██▎       | 1569/6840 [00:14<00:47, 112.07it/s][A
+Running loglikelihood requests:  23%|██▎       | 1581/6840 [00:14<00:46, 112.41it/s][A
+Running loglikelihood requests:  23%|██▎       | 1593/6840 [00:14<00:46, 112.77it/s][A
+Running loglikelihood requests:  23%|██▎       | 1605/6840 [00:14<00:46, 112.71it/s][A
+Running loglikelihood requests:  24%|██▎       | 1617/6840 [00:14<00:46, 113.12it/s][A
+Running loglikelihood requests:  24%|██▍       | 1629/6840 [00:15<00:45, 113.67it/s][A
+Running loglikelihood requests:  24%|██▍       | 1641/6840 [00:15<00:45, 113.65it/s][A
+Running loglikelihood requests:  24%|██▍       | 1653/6840 [00:15<00:46, 112.54it/s][A
+Running loglikelihood requests:  24%|██▍       | 1665/6840 [00:15<00:46, 112.41it/s][A
+Running loglikelihood requests:  25%|██▍       | 1677/6840 [00:15<00:46, 111.68it/s][A
+Running loglikelihood requests:  25%|██▍       | 1689/6840 [00:15<00:46, 110.69it/s][A
+Running loglikelihood requests:  25%|██▍       | 1701/6840 [00:15<00:46, 109.44it/s][A
+Running loglikelihood requests:  25%|██▌       | 1713/6840 [00:15<00:46, 109.89it/s][A
+Running loglikelihood requests:  25%|██▌       | 1725/6840 [00:15<00:46, 110.16it/s][A
+Running loglikelihood requests:  25%|██▌       | 1737/6840 [00:16<00:46, 109.95it/s][A
+Running loglikelihood requests:  26%|██▌       | 1749/6840 [00:16<00:45, 111.05it/s][A
+Running loglikelihood requests:  26%|██▌       | 1761/6840 [00:16<00:45, 110.93it/s][A
+Running loglikelihood requests:  26%|██▌       | 1773/6840 [00:16<00:45, 111.57it/s][A
+Running loglikelihood requests:  26%|██▌       | 1785/6840 [00:16<00:45, 111.37it/s][A
+Running loglikelihood requests:  26%|██▋       | 1797/6840 [00:16<00:45, 111.05it/s][A
+Running loglikelihood requests:  26%|██▋       | 1809/6840 [00:16<00:45, 111.28it/s][A
+Running loglikelihood requests:  27%|██▋       | 1821/6840 [00:16<00:44, 111.61it/s][A
+Running loglikelihood requests:  27%|██▋       | 1833/6840 [00:16<00:44, 112.67it/s][A
+Running loglikelihood requests:  27%|██▋       | 1845/6840 [00:16<00:44, 112.81it/s][A
+Running loglikelihood requests:  27%|██▋       | 1857/6840 [00:17<00:44, 112.77it/s][A
+Running loglikelihood requests:  27%|██▋       | 1869/6840 [00:17<00:44, 112.45it/s][A
+Running loglikelihood requests:  28%|██▊       | 1881/6840 [00:17<00:44, 112.57it/s][A
+Running loglikelihood requests:  28%|██▊       | 1893/6840 [00:17<00:44, 112.19it/s][A
+Running loglikelihood requests:  28%|██▊       | 1905/6840 [00:17<00:44, 111.69it/s][A
+Running loglikelihood requests:  28%|██▊       | 1917/6840 [00:17<00:45, 109.30it/s][A
+Running loglikelihood requests:  28%|██▊       | 1929/6840 [00:17<00:44, 109.96it/s][A
+Running loglikelihood requests:  28%|██▊       | 1941/6840 [00:17<00:44, 109.62it/s][A
+Running loglikelihood requests:  29%|██▊       | 1953/6840 [00:17<00:44, 109.52it/s][A
+Running loglikelihood requests:  29%|██▊       | 1965/6840 [00:18<00:44, 109.72it/s][A
+Running loglikelihood requests:  29%|██▉       | 1977/6840 [00:18<00:44, 110.21it/s][A
+Running loglikelihood requests:  29%|██▉       | 1989/6840 [00:18<00:44, 109.25it/s][A
+Running loglikelihood requests:  29%|██▉       | 2001/6840 [00:18<00:43, 109.99it/s][A
+Running loglikelihood requests:  29%|██▉       | 2013/6840 [00:18<00:43, 110.80it/s][A
+Running loglikelihood requests:  30%|██▉       | 2025/6840 [00:18<00:43, 110.26it/s][A
+Running loglikelihood requests:  30%|██▉       | 2037/6840 [00:18<00:44, 109.10it/s][A
+Running loglikelihood requests:  30%|██▉       | 2049/6840 [00:18<00:44, 108.66it/s][A
+Running loglikelihood requests:  30%|███       | 2061/6840 [00:18<00:44, 108.54it/s][A
+Running loglikelihood requests:  30%|███       | 2073/6840 [00:19<00:43, 108.61it/s][A
+Running loglikelihood requests:  30%|███       | 2085/6840 [00:19<00:43, 109.87it/s][A
+Running loglikelihood requests:  31%|███       | 2097/6840 [00:19<00:42, 110.81it/s][A
+Running loglikelihood requests:  31%|███       | 2109/6840 [00:19<00:42, 111.09it/s][A
+Running loglikelihood requests:  31%|███       | 2121/6840 [00:19<00:42, 111.61it/s][A
+Running loglikelihood requests:  31%|███       | 2133/6840 [00:19<00:42, 111.46it/s][A
+Running loglikelihood requests:  31%|███▏      | 2145/6840 [00:19<00:43, 107.56it/s][A
+Running loglikelihood requests:  32%|███▏      | 2157/6840 [00:19<00:43, 108.68it/s][A
+Running loglikelihood requests:  32%|███▏      | 2169/6840 [00:19<00:42, 109.43it/s][A
+Running loglikelihood requests:  32%|███▏      | 2181/6840 [00:20<00:42, 109.84it/s][A
+Running loglikelihood requests:  32%|███▏      | 2193/6840 [00:20<00:42, 109.78it/s][A
+Running loglikelihood requests:  32%|███▏      | 2205/6840 [00:20<00:42, 109.39it/s][A
+Running loglikelihood requests:  32%|███▏      | 2217/6840 [00:20<00:42, 109.37it/s][A
+Running loglikelihood requests:  33%|███▎      | 2229/6840 [00:20<00:42, 109.64it/s][A
+Running loglikelihood requests:  33%|███▎      | 2241/6840 [00:20<00:41, 110.18it/s][A
+Running loglikelihood requests:  33%|███▎      | 2253/6840 [00:20<00:41, 111.20it/s][A
+Running loglikelihood requests:  33%|███▎      | 2265/6840 [00:20<00:41, 111.16it/s][A
+Running loglikelihood requests:  33%|███▎      | 2277/6840 [00:20<00:41, 110.59it/s][A
+Running loglikelihood requests:  33%|███▎      | 2289/6840 [00:21<00:40, 111.53it/s][A
+Running loglikelihood requests:  34%|███▎      | 2301/6840 [00:21<00:40, 112.01it/s][A
+Running loglikelihood requests:  34%|███▍      | 2313/6840 [00:21<00:40, 111.51it/s][A
+Running loglikelihood requests:  34%|███▍      | 2325/6840 [00:21<00:40, 111.81it/s][A
+Running loglikelihood requests:  34%|███▍      | 2337/6840 [00:21<00:40, 111.63it/s][A
+Running loglikelihood requests:  34%|███▍      | 2349/6840 [00:21<00:39, 112.47it/s][A
+Running loglikelihood requests:  35%|███▍      | 2361/6840 [00:21<00:39, 113.53it/s][A
+Running loglikelihood requests:  35%|███▍      | 2373/6840 [00:21<00:39, 113.60it/s][A
+Running loglikelihood requests:  35%|███▍      | 2385/6840 [00:21<00:39, 112.44it/s][A
+Running loglikelihood requests:  35%|███▌      | 2397/6840 [00:21<00:39, 111.36it/s][A
+Running loglikelihood requests:  35%|███▌      | 2409/6840 [00:22<00:39, 111.57it/s][A
+Running loglikelihood requests:  35%|███▌      | 2421/6840 [00:22<00:39, 112.15it/s][A
+Running loglikelihood requests:  36%|███▌      | 2433/6840 [00:22<00:39, 112.59it/s][A
+Running loglikelihood requests:  36%|███▌      | 2445/6840 [00:22<00:39, 112.65it/s][A
+Running loglikelihood requests:  36%|███▌      | 2457/6840 [00:22<00:39, 109.95it/s][A
+Running loglikelihood requests:  36%|███▌      | 2469/6840 [00:22<00:42, 103.73it/s][A
+Running loglikelihood requests:  36%|███▋      | 2481/6840 [00:22<00:43, 99.71it/s] [A
+Running loglikelihood requests:  36%|███▋      | 2493/6840 [00:22<00:42, 102.63it/s][A
+Running loglikelihood requests:  37%|███▋      | 2505/6840 [00:23<00:41, 103.95it/s][A
+Running loglikelihood requests:  37%|███▋      | 2517/6840 [00:23<00:40, 105.50it/s][A
+Running loglikelihood requests:  37%|███▋      | 2529/6840 [00:23<00:40, 106.90it/s][A
+Running loglikelihood requests:  37%|███▋      | 2541/6840 [00:23<00:40, 106.87it/s][A
+Running loglikelihood requests:  37%|███▋      | 2553/6840 [00:23<00:39, 107.38it/s][A
+Running loglikelihood requests:  38%|███▊      | 2565/6840 [00:23<00:40, 106.09it/s][A
+Running loglikelihood requests:  38%|███▊      | 2577/6840 [00:23<00:39, 107.19it/s][A
+Running loglikelihood requests:  38%|███▊      | 2589/6840 [00:23<00:39, 108.77it/s][A
+Running loglikelihood requests:  38%|███▊      | 2601/6840 [00:23<00:38, 108.95it/s][A
+Running loglikelihood requests:  38%|███▊      | 2613/6840 [00:23<00:38, 109.33it/s][A
+Running loglikelihood requests:  38%|███▊      | 2625/6840 [00:24<00:38, 109.49it/s][A
+Running loglikelihood requests:  39%|███▊      | 2637/6840 [00:24<00:38, 110.52it/s][A
+Running loglikelihood requests:  39%|███▊      | 2649/6840 [00:24<00:37, 110.98it/s][A
+Running loglikelihood requests:  39%|███▉      | 2661/6840 [00:24<00:37, 111.35it/s][A
+Running loglikelihood requests:  39%|███▉      | 2673/6840 [00:24<00:37, 111.77it/s][A
+Running loglikelihood requests:  39%|███▉      | 2685/6840 [00:24<00:37, 112.04it/s][A
+Running loglikelihood requests:  39%|███▉      | 2697/6840 [00:24<00:36, 112.40it/s][A
+Running loglikelihood requests:  40%|███▉      | 2709/6840 [00:24<00:37, 111.25it/s][A
+Running loglikelihood requests:  40%|███▉      | 2721/6840 [00:24<00:37, 110.93it/s][A
+Running loglikelihood requests:  40%|███▉      | 2733/6840 [00:25<00:37, 109.85it/s][A
+Running loglikelihood requests:  40%|████      | 2745/6840 [00:25<00:37, 109.24it/s][A
+Running loglikelihood requests:  40%|████      | 2757/6840 [00:25<00:37, 109.04it/s][A
+Running loglikelihood requests:  40%|████      | 2769/6840 [00:25<00:37, 108.06it/s][A
+Running loglikelihood requests:  41%|████      | 2781/6840 [00:25<00:36, 109.74it/s][A
+Running loglikelihood requests:  41%|████      | 2793/6840 [00:25<00:36, 111.00it/s][A
+Running loglikelihood requests:  41%|████      | 2805/6840 [00:25<00:36, 111.70it/s][A
+Running loglikelihood requests:  41%|████      | 2817/6840 [00:25<00:36, 111.69it/s][A
+Running loglikelihood requests:  41%|████▏     | 2833/6840 [00:25<00:32, 121.75it/s][A
+Running loglikelihood requests:  42%|████▏     | 2846/6840 [00:26<00:32, 121.86it/s][A
+Running loglikelihood requests:  42%|████▏     | 2859/6840 [00:26<00:32, 121.68it/s][A
+Running loglikelihood requests:  42%|████▏     | 2872/6840 [00:26<00:32, 121.73it/s][A
+Running loglikelihood requests:  42%|████▏     | 2885/6840 [00:26<00:35, 111.23it/s][A
+Running loglikelihood requests:  42%|████▏     | 2897/6840 [00:26<00:35, 111.78it/s][A
+Running loglikelihood requests:  43%|████▎     | 2909/6840 [00:26<00:34, 112.47it/s][A
+Running loglikelihood requests:  43%|████▎     | 2921/6840 [00:26<00:34, 113.21it/s][A
+Running loglikelihood requests:  43%|████▎     | 2933/6840 [00:26<00:35, 111.62it/s][A
+Running loglikelihood requests:  43%|████▎     | 2945/6840 [00:26<00:35, 111.05it/s][A
+Running loglikelihood requests:  43%|████▎     | 2957/6840 [00:27<00:35, 110.91it/s][A
+Running loglikelihood requests:  43%|████▎     | 2969/6840 [00:27<00:34, 111.63it/s][A
+Running loglikelihood requests:  44%|████▎     | 2981/6840 [00:27<00:34, 111.02it/s][A
+Running loglikelihood requests:  44%|████▍     | 2993/6840 [00:27<00:34, 110.68it/s][A
+Running loglikelihood requests:  44%|████▍     | 3005/6840 [00:27<00:34, 109.65it/s][A
+Running loglikelihood requests:  44%|████▍     | 3017/6840 [00:27<00:35, 107.88it/s][A
+Running loglikelihood requests:  44%|████▍     | 3029/6840 [00:27<00:35, 108.37it/s][A
+Running loglikelihood requests:  44%|████▍     | 3041/6840 [00:27<00:34, 109.47it/s][A
+Running loglikelihood requests:  45%|████▍     | 3053/6840 [00:27<00:34, 110.18it/s][A
+Running loglikelihood requests:  45%|████▍     | 3065/6840 [00:28<00:34, 110.43it/s][A
+Running loglikelihood requests:  45%|████▍     | 3077/6840 [00:28<00:33, 110.85it/s][A
+Running loglikelihood requests:  45%|████▌     | 3089/6840 [00:28<00:33, 111.14it/s][A
+Running loglikelihood requests:  45%|████▌     | 3101/6840 [00:28<00:33, 111.76it/s][A
+Running loglikelihood requests:  46%|████▌     | 3113/6840 [00:28<00:33, 111.57it/s][A
+Running loglikelihood requests:  46%|████▌     | 3125/6840 [00:28<00:33, 110.92it/s][A
+Running loglikelihood requests:  46%|████▌     | 3137/6840 [00:28<00:33, 110.60it/s][A
+Running loglikelihood requests:  46%|████▌     | 3149/6840 [00:28<00:33, 111.30it/s][A
+Running loglikelihood requests:  46%|████▌     | 3161/6840 [00:28<00:32, 111.96it/s][A
+Running loglikelihood requests:  46%|████▋     | 3173/6840 [00:28<00:32, 112.38it/s][A
+Running loglikelihood requests:  47%|████▋     | 3185/6840 [00:29<00:32, 112.60it/s][A
+Running loglikelihood requests:  47%|████▋     | 3197/6840 [00:29<00:32, 113.15it/s][A
+Running loglikelihood requests:  47%|████▋     | 3209/6840 [00:29<00:31, 113.64it/s][A
+Running loglikelihood requests:  47%|████▋     | 3221/6840 [00:29<00:31, 113.31it/s][A
+Running loglikelihood requests:  47%|████▋     | 3233/6840 [00:29<00:31, 113.50it/s][A
+Running loglikelihood requests:  47%|████▋     | 3245/6840 [00:29<00:31, 112.79it/s][A
+Running loglikelihood requests:  48%|████▊     | 3257/6840 [00:29<00:31, 112.91it/s][A
+Running loglikelihood requests:  48%|████▊     | 3269/6840 [00:29<00:31, 113.14it/s][A
+Running loglikelihood requests:  48%|████▊     | 3281/6840 [00:29<00:31, 112.60it/s][A
+Running loglikelihood requests:  48%|████▊     | 3293/6840 [00:30<00:31, 112.85it/s][A
+Running loglikelihood requests:  48%|████▊     | 3305/6840 [00:30<00:31, 113.17it/s][A
+Running loglikelihood requests:  48%|████▊     | 3317/6840 [00:30<00:31, 112.76it/s][A
+Running loglikelihood requests:  49%|████▊     | 3329/6840 [00:30<00:31, 113.06it/s][A
+Running loglikelihood requests:  49%|████▉     | 3341/6840 [00:30<00:30, 113.29it/s][A
+Running loglikelihood requests:  49%|████▉     | 3353/6840 [00:30<00:31, 111.71it/s][A
+Running loglikelihood requests:  49%|████▉     | 3365/6840 [00:30<00:31, 111.42it/s][A
+Running loglikelihood requests:  49%|████▉     | 3377/6840 [00:30<00:31, 111.26it/s][A
+Running loglikelihood requests:  50%|████▉     | 3389/6840 [00:30<00:31, 110.92it/s][A
+Running loglikelihood requests:  50%|████▉     | 3401/6840 [00:31<00:30, 111.15it/s][A
+Running loglikelihood requests:  50%|████▉     | 3413/6840 [00:31<00:30, 111.21it/s][A
+Running loglikelihood requests:  50%|█████     | 3425/6840 [00:31<00:30, 111.60it/s][A
+Running loglikelihood requests:  50%|█████     | 3437/6840 [00:31<00:30, 111.99it/s][A
+Running loglikelihood requests:  50%|█████     | 3449/6840 [00:31<00:30, 112.94it/s][A
+Running loglikelihood requests:  51%|█████     | 3461/6840 [00:31<00:29, 113.97it/s][A
+Running loglikelihood requests:  51%|█████     | 3473/6840 [00:31<00:29, 114.64it/s][A
+Running loglikelihood requests:  51%|█████     | 3485/6840 [00:31<00:29, 114.90it/s][A
+Running loglikelihood requests:  51%|█████     | 3497/6840 [00:31<00:28, 115.40it/s][A
+Running loglikelihood requests:  51%|█████▏    | 3509/6840 [00:31<00:28, 115.59it/s][A
+Running loglikelihood requests:  51%|█████▏    | 3521/6840 [00:32<00:28, 115.04it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3533/6840 [00:32<00:28, 114.78it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3545/6840 [00:32<00:29, 113.20it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3557/6840 [00:32<00:29, 113.03it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3569/6840 [00:32<00:29, 112.10it/s][A
+Running loglikelihood requests:  52%|█████▏    | 3581/6840 [00:32<00:29, 109.30it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3593/6840 [00:32<00:29, 110.01it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3605/6840 [00:32<00:29, 110.91it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3617/6840 [00:32<00:28, 111.37it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3629/6840 [00:33<00:28, 112.06it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3641/6840 [00:33<00:28, 111.76it/s][A
+Running loglikelihood requests:  53%|█████▎    | 3653/6840 [00:33<00:28, 112.60it/s][A
+Running loglikelihood requests:  54%|█████▎    | 3665/6840 [00:33<00:28, 113.03it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3677/6840 [00:33<00:28, 112.33it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3689/6840 [00:33<00:28, 110.77it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3701/6840 [00:33<00:28, 111.70it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3713/6840 [00:33<00:27, 112.91it/s][A
+Running loglikelihood requests:  54%|█████▍    | 3725/6840 [00:33<00:27, 112.40it/s][A
+Running loglikelihood requests:  55%|█████▍    | 3737/6840 [00:34<00:27, 112.12it/s][A
+Running loglikelihood requests:  55%|█████▍    | 3749/6840 [00:34<00:27, 112.54it/s][A
+Running loglikelihood requests:  55%|█████▍    | 3761/6840 [00:34<00:27, 111.85it/s][A
+Running loglikelihood requests:  55%|█████▌    | 3773/6840 [00:34<00:27, 111.13it/s][A
+Running loglikelihood requests:  55%|█████▌    | 3785/6840 [00:34<00:27, 111.04it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3797/6840 [00:34<00:27, 110.35it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3809/6840 [00:34<00:27, 109.11it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3821/6840 [00:34<00:27, 108.77it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3833/6840 [00:34<00:27, 109.48it/s][A
+Running loglikelihood requests:  56%|█████▌    | 3845/6840 [00:34<00:27, 109.68it/s][A
+Running loglikelihood requests:  56%|█████▋    | 3857/6840 [00:35<00:27, 110.40it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3869/6840 [00:35<00:26, 110.47it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3881/6840 [00:35<00:26, 109.70it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3893/6840 [00:35<00:26, 110.18it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3905/6840 [00:35<00:26, 110.97it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3917/6840 [00:35<00:26, 111.77it/s][A
+Running loglikelihood requests:  57%|█████▋    | 3929/6840 [00:35<00:25, 112.37it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3941/6840 [00:35<00:25, 111.98it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3953/6840 [00:35<00:25, 111.71it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3965/6840 [00:36<00:25, 111.45it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3977/6840 [00:36<00:26, 110.04it/s][A
+Running loglikelihood requests:  58%|█████▊    | 3989/6840 [00:36<00:25, 110.11it/s][A
+Running loglikelihood requests:  58%|█████▊    | 4001/6840 [00:36<00:25, 110.17it/s][A
+Running loglikelihood requests:  59%|█████▊    | 4013/6840 [00:36<00:25, 110.95it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4025/6840 [00:36<00:25, 112.15it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4037/6840 [00:36<00:25, 111.94it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4049/6840 [00:36<00:25, 111.45it/s][A
+Running loglikelihood requests:  59%|█████▉    | 4061/6840 [00:36<00:25, 110.11it/s][A
+Running loglikelihood requests:  60%|█████▉    | 4073/6840 [00:37<00:25, 109.09it/s][A
+Running loglikelihood requests:  60%|█████▉    | 4085/6840 [00:37<00:25, 109.49it/s][A
+Running loglikelihood requests:  60%|█████▉    | 4097/6840 [00:37<00:25, 109.67it/s][A
+Running loglikelihood requests:  60%|██████    | 4109/6840 [00:37<00:24, 111.47it/s][A
+Running loglikelihood requests:  60%|██████    | 4121/6840 [00:37<00:24, 111.97it/s][A
+Running loglikelihood requests:  60%|██████    | 4133/6840 [00:37<00:24, 110.74it/s][A
+Running loglikelihood requests:  61%|██████    | 4145/6840 [00:37<00:24, 110.84it/s][A
+Running loglikelihood requests:  61%|██████    | 4157/6840 [00:37<00:24, 110.98it/s][A
+Running loglikelihood requests:  61%|██████    | 4169/6840 [00:37<00:23, 112.41it/s][A
+Running loglikelihood requests:  61%|██████    | 4181/6840 [00:38<00:23, 112.52it/s][A
+Running loglikelihood requests:  61%|██████▏   | 4193/6840 [00:38<00:23, 112.26it/s][A
+Running loglikelihood requests:  61%|██████▏   | 4205/6840 [00:38<00:23, 112.67it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4217/6840 [00:38<00:23, 112.33it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4229/6840 [00:38<00:23, 112.94it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4241/6840 [00:38<00:23, 112.18it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4253/6840 [00:38<00:23, 111.12it/s][A
+Running loglikelihood requests:  62%|██████▏   | 4265/6840 [00:38<00:23, 110.37it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4277/6840 [00:38<00:23, 110.14it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4289/6840 [00:38<00:22, 111.16it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4301/6840 [00:39<00:22, 110.69it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4313/6840 [00:39<00:22, 110.52it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4325/6840 [00:39<00:22, 109.94it/s][A
+Running loglikelihood requests:  63%|██████▎   | 4337/6840 [00:39<00:22, 110.65it/s][A
+Running loglikelihood requests:  64%|██████▎   | 4349/6840 [00:39<00:22, 111.66it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4361/6840 [00:39<00:21, 112.94it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4373/6840 [00:39<00:21, 114.29it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4385/6840 [00:39<00:21, 114.89it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4397/6840 [00:39<00:21, 114.94it/s][A
+Running loglikelihood requests:  64%|██████▍   | 4409/6840 [00:40<00:21, 115.26it/s][A
+Running loglikelihood requests:  65%|██████▍   | 4421/6840 [00:40<00:20, 115.57it/s][A
+Running loglikelihood requests:  65%|██████▍   | 4433/6840 [00:40<00:20, 115.57it/s][A
+Running loglikelihood requests:  65%|██████▍   | 4445/6840 [00:40<00:20, 115.43it/s][A
+Running loglikelihood requests:  65%|██████▌   | 4457/6840 [00:40<00:20, 115.67it/s][A
+Running loglikelihood requests:  65%|██████▌   | 4469/6840 [00:40<00:20, 114.79it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4481/6840 [00:40<00:20, 114.87it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4493/6840 [00:40<00:20, 114.78it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4505/6840 [00:40<00:20, 115.00it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4517/6840 [00:40<00:20, 114.31it/s][A
+Running loglikelihood requests:  66%|██████▌   | 4529/6840 [00:41<00:20, 114.17it/s][A
+Running loglikelihood requests:  66%|██████▋   | 4541/6840 [00:41<00:20, 113.30it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4553/6840 [00:41<00:20, 113.21it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4565/6840 [00:41<00:20, 113.70it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4577/6840 [00:41<00:20, 110.70it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4589/6840 [00:41<00:20, 111.25it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4601/6840 [00:41<00:20, 111.43it/s][A
+Running loglikelihood requests:  67%|██████▋   | 4613/6840 [00:41<00:20, 111.17it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4625/6840 [00:41<00:19, 111.03it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4637/6840 [00:42<00:19, 111.85it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4649/6840 [00:42<00:19, 112.21it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4661/6840 [00:42<00:19, 112.96it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4673/6840 [00:42<00:19, 113.37it/s][A
+Running loglikelihood requests:  68%|██████▊   | 4685/6840 [00:42<00:19, 113.15it/s][A
+Running loglikelihood requests:  69%|██████▊   | 4697/6840 [00:42<00:19, 110.30it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4709/6840 [00:42<00:19, 110.08it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4721/6840 [00:42<00:18, 111.83it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4733/6840 [00:42<00:18, 112.73it/s][A
+Running loglikelihood requests:  69%|██████▉   | 4745/6840 [00:43<00:18, 113.69it/s][A
+Running loglikelihood requests:  70%|██████▉   | 4757/6840 [00:43<00:18, 113.44it/s][A
+Running loglikelihood requests:  70%|██████▉   | 4769/6840 [00:43<00:18, 113.87it/s][A
+Running loglikelihood requests:  70%|██████▉   | 4781/6840 [00:43<00:17, 114.87it/s][A
+Running loglikelihood requests:  70%|███████   | 4793/6840 [00:43<00:17, 114.78it/s][A
+Running loglikelihood requests:  70%|███████   | 4805/6840 [00:43<00:17, 114.30it/s][A
+Running loglikelihood requests:  70%|███████   | 4817/6840 [00:43<00:17, 112.83it/s][A
+Running loglikelihood requests:  71%|███████   | 4829/6840 [00:43<00:17, 112.61it/s][A
+Running loglikelihood requests:  71%|███████   | 4841/6840 [00:43<00:17, 113.18it/s][A
+Running loglikelihood requests:  71%|███████   | 4853/6840 [00:43<00:17, 112.64it/s][A
+Running loglikelihood requests:  71%|███████   | 4865/6840 [00:44<00:17, 112.07it/s][A
+Running loglikelihood requests:  71%|███████▏  | 4877/6840 [00:44<00:17, 110.93it/s][A
+Running loglikelihood requests:  71%|███████▏  | 4889/6840 [00:44<00:17, 111.20it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4901/6840 [00:44<00:17, 112.05it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4913/6840 [00:44<00:17, 112.19it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4925/6840 [00:44<00:16, 113.21it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4937/6840 [00:44<00:16, 113.90it/s][A
+Running loglikelihood requests:  72%|███████▏  | 4949/6840 [00:44<00:16, 114.24it/s][A
+Running loglikelihood requests:  73%|███████▎  | 4961/6840 [00:44<00:16, 114.32it/s][A
+Running loglikelihood requests:  73%|███████▎  | 4973/6840 [00:45<00:16, 114.98it/s][A
+Running loglikelihood requests:  73%|███████▎  | 4985/6840 [00:45<00:16, 115.20it/s][A
+Running loglikelihood requests:  73%|███████▎  | 4997/6840 [00:45<00:15, 115.33it/s][A
+Running loglikelihood requests:  73%|███████▎  | 5009/6840 [00:45<00:15, 115.32it/s][A
+Running loglikelihood requests:  73%|███████▎  | 5021/6840 [00:45<00:15, 114.84it/s][A
+Running loglikelihood requests:  74%|███████▎  | 5033/6840 [00:45<00:15, 114.62it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5045/6840 [00:45<00:15, 114.04it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5057/6840 [00:45<00:15, 114.31it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5069/6840 [00:45<00:15, 114.23it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5081/6840 [00:45<00:15, 114.38it/s][A
+Running loglikelihood requests:  74%|███████▍  | 5093/6840 [00:46<00:15, 114.47it/s][A
+Running loglikelihood requests:  75%|███████▍  | 5105/6840 [00:46<00:15, 114.34it/s][A
+Running loglikelihood requests:  75%|███████▍  | 5117/6840 [00:46<00:15, 112.83it/s][A
+Running loglikelihood requests:  75%|███████▍  | 5129/6840 [00:46<00:15, 111.76it/s][A
+Running loglikelihood requests:  75%|███████▌  | 5141/6840 [00:46<00:15, 109.02it/s][A
+Running loglikelihood requests:  75%|███████▌  | 5153/6840 [00:46<00:15, 110.28it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5165/6840 [00:46<00:14, 111.76it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5177/6840 [00:46<00:14, 113.22it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5189/6840 [00:46<00:14, 113.82it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5201/6840 [00:47<00:14, 113.90it/s][A
+Running loglikelihood requests:  76%|███████▌  | 5213/6840 [00:47<00:14, 113.91it/s][A
+Running loglikelihood requests:  76%|███████▋  | 5225/6840 [00:47<00:14, 113.24it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5237/6840 [00:47<00:14, 114.23it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5249/6840 [00:47<00:13, 114.50it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5261/6840 [00:47<00:14, 111.26it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5273/6840 [00:47<00:14, 110.52it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5285/6840 [00:47<00:13, 111.52it/s][A
+Running loglikelihood requests:  77%|███████▋  | 5297/6840 [00:47<00:13, 111.74it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5309/6840 [00:47<00:13, 112.19it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5321/6840 [00:48<00:13, 112.50it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5333/6840 [00:48<00:13, 112.53it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5345/6840 [00:48<00:13, 112.49it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5357/6840 [00:48<00:13, 112.27it/s][A
+Running loglikelihood requests:  78%|███████▊  | 5369/6840 [00:48<00:13, 112.11it/s][A
+Running loglikelihood requests:  79%|███████▊  | 5381/6840 [00:48<00:13, 111.42it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5393/6840 [00:48<00:13, 111.09it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5405/6840 [00:48<00:12, 110.40it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5417/6840 [00:48<00:12, 109.82it/s][A
+Running loglikelihood requests:  79%|███████▉  | 5429/6840 [00:49<00:12, 111.12it/s][A
+Running loglikelihood requests:  80%|███████▉  | 5441/6840 [00:49<00:12, 111.78it/s][A
+Running loglikelihood requests:  80%|███████▉  | 5453/6840 [00:49<00:12, 112.37it/s][A
+Running loglikelihood requests:  80%|███████▉  | 5465/6840 [00:49<00:12, 112.54it/s][A
+Running loglikelihood requests:  80%|████████  | 5477/6840 [00:49<00:12, 112.41it/s][A
+Running loglikelihood requests:  80%|████████  | 5489/6840 [00:49<00:12, 112.33it/s][A
+Running loglikelihood requests:  80%|████████  | 5501/6840 [00:49<00:11, 112.54it/s][A
+Running loglikelihood requests:  81%|████████  | 5513/6840 [00:49<00:11, 113.20it/s][A
+Running loglikelihood requests:  81%|████████  | 5525/6840 [00:49<00:11, 113.23it/s][A
+Running loglikelihood requests:  81%|████████  | 5537/6840 [00:50<00:11, 113.33it/s][A
+Running loglikelihood requests:  81%|████████  | 5549/6840 [00:50<00:11, 113.55it/s][A
+Running loglikelihood requests:  81%|████████▏ | 5561/6840 [00:50<00:11, 112.91it/s][A
+Running loglikelihood requests:  81%|████████▏ | 5573/6840 [00:50<00:11, 113.31it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5585/6840 [00:50<00:11, 112.94it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5597/6840 [00:50<00:11, 112.36it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5609/6840 [00:50<00:10, 113.00it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5621/6840 [00:50<00:10, 113.21it/s][A
+Running loglikelihood requests:  82%|████████▏ | 5633/6840 [00:50<00:10, 112.24it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5645/6840 [00:50<00:10, 111.78it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5657/6840 [00:51<00:10, 111.94it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5669/6840 [00:51<00:10, 111.03it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5681/6840 [00:51<00:10, 109.01it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5693/6840 [00:51<00:10, 109.16it/s][A
+Running loglikelihood requests:  83%|████████▎ | 5705/6840 [00:51<00:10, 110.94it/s][A
+Running loglikelihood requests:  84%|████████▎ | 5717/6840 [00:51<00:10, 110.92it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5729/6840 [00:51<00:10, 110.73it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5741/6840 [00:51<00:09, 111.67it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5753/6840 [00:51<00:09, 111.69it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5765/6840 [00:52<00:09, 112.93it/s][A
+Running loglikelihood requests:  84%|████████▍ | 5777/6840 [00:52<00:09, 112.49it/s][A
+Running loglikelihood requests:  85%|████████▍ | 5789/6840 [00:52<00:09, 111.37it/s][A
+Running loglikelihood requests:  85%|████████▍ | 5801/6840 [00:52<00:09, 110.57it/s][A
+Running loglikelihood requests:  85%|████████▍ | 5813/6840 [00:52<00:09, 110.08it/s][A
+Running loglikelihood requests:  85%|████████▌ | 5825/6840 [00:52<00:09, 108.83it/s][A
+Running loglikelihood requests:  85%|████████▌ | 5837/6840 [00:52<00:09, 109.11it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5849/6840 [00:52<00:09, 108.54it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5861/6840 [00:52<00:08, 110.28it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5873/6840 [00:53<00:08, 110.66it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5885/6840 [00:53<00:08, 111.34it/s][A
+Running loglikelihood requests:  86%|████████▌ | 5897/6840 [00:53<00:08, 111.71it/s][A
+Running loglikelihood requests:  86%|████████▋ | 5909/6840 [00:53<00:08, 111.78it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5921/6840 [00:53<00:08, 111.46it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5933/6840 [00:53<00:08, 111.00it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5945/6840 [00:53<00:08, 109.72it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5957/6840 [00:53<00:08, 110.11it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5969/6840 [00:53<00:07, 110.25it/s][A
+Running loglikelihood requests:  87%|████████▋ | 5981/6840 [00:54<00:07, 110.52it/s][A
+Running loglikelihood requests:  88%|████████▊ | 5993/6840 [00:54<00:07, 111.56it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6005/6840 [00:54<00:07, 111.11it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6017/6840 [00:54<00:07, 110.85it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6029/6840 [00:54<00:07, 110.61it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6041/6840 [00:54<00:07, 111.92it/s][A
+Running loglikelihood requests:  88%|████████▊ | 6053/6840 [00:54<00:07, 112.42it/s][A
+Running loglikelihood requests:  89%|████████▊ | 6065/6840 [00:54<00:06, 113.49it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6077/6840 [00:54<00:06, 114.44it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6089/6840 [00:54<00:06, 114.94it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6101/6840 [00:55<00:06, 115.59it/s][A
+Running loglikelihood requests:  89%|████████▉ | 6113/6840 [00:55<00:06, 116.07it/s][A
+Running loglikelihood requests:  90%|████████▉ | 6125/6840 [00:55<00:06, 116.14it/s][A
+Running loglikelihood requests:  90%|████████▉ | 6137/6840 [00:55<00:06, 116.68it/s][A
+Running loglikelihood requests:  90%|████████▉ | 6149/6840 [00:55<00:05, 116.84it/s][A
+Running loglikelihood requests:  90%|█████████ | 6161/6840 [00:55<00:05, 117.29it/s][A
+Running loglikelihood requests:  90%|█████████ | 6173/6840 [00:55<00:05, 116.12it/s][A
+Running loglikelihood requests:  90%|█████████ | 6185/6840 [00:55<00:05, 113.98it/s][A
+Running loglikelihood requests:  91%|█████████ | 6197/6840 [00:55<00:05, 112.73it/s][A
+Running loglikelihood requests:  91%|█████████ | 6209/6840 [00:56<00:05, 113.05it/s][A
+Running loglikelihood requests:  91%|█████████ | 6221/6840 [00:56<00:05, 113.97it/s][A
+Running loglikelihood requests:  91%|█████████ | 6233/6840 [00:56<00:05, 113.87it/s][A
+Running loglikelihood requests:  91%|█████████▏| 6245/6840 [00:56<00:05, 114.74it/s][A
+Running loglikelihood requests:  91%|█████████▏| 6257/6840 [00:56<00:05, 115.44it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6269/6840 [00:56<00:04, 115.60it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6281/6840 [00:56<00:04, 115.96it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6293/6840 [00:56<00:04, 115.67it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6305/6840 [00:56<00:04, 114.99it/s][A
+Running loglikelihood requests:  92%|█████████▏| 6317/6840 [00:56<00:04, 114.68it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6329/6840 [00:57<00:04, 113.90it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6341/6840 [00:57<00:04, 114.26it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6353/6840 [00:57<00:04, 114.34it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6365/6840 [00:57<00:04, 114.26it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6377/6840 [00:57<00:04, 113.17it/s][A
+Running loglikelihood requests:  93%|█████████▎| 6389/6840 [00:57<00:04, 108.84it/s][A
+Running loglikelihood requests:  94%|█████████▎| 6401/6840 [00:57<00:03, 109.79it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6413/6840 [00:57<00:03, 110.94it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6425/6840 [00:57<00:03, 111.50it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6437/6840 [00:58<00:03, 111.57it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6449/6840 [00:58<00:03, 112.16it/s][A
+Running loglikelihood requests:  94%|█████████▍| 6461/6840 [00:58<00:03, 111.13it/s][A
+Running loglikelihood requests:  95%|█████████▍| 6473/6840 [00:58<00:03, 110.81it/s][A
+Running loglikelihood requests:  95%|█████████▍| 6485/6840 [00:58<00:03, 111.06it/s][A
+Running loglikelihood requests:  95%|█████████▍| 6497/6840 [00:58<00:03, 109.79it/s][A
+Running loglikelihood requests:  95%|█████████▌| 6509/6840 [00:58<00:02, 110.54it/s][A
+Running loglikelihood requests:  95%|█████████▌| 6521/6840 [00:58<00:02, 111.84it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6533/6840 [00:58<00:02, 112.07it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6545/6840 [00:59<00:02, 112.06it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6557/6840 [00:59<00:02, 112.37it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6569/6840 [00:59<00:02, 113.18it/s][A
+Running loglikelihood requests:  96%|█████████▌| 6581/6840 [00:59<00:02, 112.93it/s][A
+Running loglikelihood requests:  96%|█████████▋| 6593/6840 [00:59<00:02, 113.32it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6605/6840 [00:59<00:02, 113.03it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6617/6840 [00:59<00:01, 113.04it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6629/6840 [00:59<00:01, 113.39it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6641/6840 [00:59<00:01, 113.50it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6653/6840 [00:59<00:01, 113.70it/s][A
+Running loglikelihood requests:  97%|█████████▋| 6665/6840 [01:00<00:01, 113.76it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6677/6840 [01:00<00:01, 114.00it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6689/6840 [01:00<00:01, 113.75it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6701/6840 [01:00<00:01, 113.28it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6713/6840 [01:00<00:01, 112.03it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6725/6840 [01:00<00:01, 111.23it/s][A
+Running loglikelihood requests:  98%|█████████▊| 6737/6840 [01:00<00:00, 110.27it/s][A
+Running loglikelihood requests:  99%|█████████▊| 6749/6840 [01:00<00:00, 110.46it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6761/6840 [01:00<00:00, 110.39it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6773/6840 [01:01<00:00, 111.90it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6785/6840 [01:01<00:00, 113.78it/s][A
+Running loglikelihood requests:  99%|█████████▉| 6797/6840 [01:01<00:00, 114.57it/s][A
+Running loglikelihood requests: 100%|█████████▉| 6809/6840 [01:01<00:00, 115.47it/s][A
+Running loglikelihood requests: 100%|█████████▉| 6821/6840 [01:01<00:00, 115.73it/s][A
+Running loglikelihood requests: 100%|█████████▉| 6833/6840 [01:01<00:00, 115.60it/s][ARunning loglikelihood requests: 100%|██████████| 6840/6840 [01:01<00:00, 111.08it/s]
+DEV 40 {"wmdp_bio": {"n": 256, "correct": 189, "accuracy_percent": 73.828125, "baseline_accuracy_percent": 75.78125, "change_percentage_points": -1.953125}, "mmlu": {"n": 1710, "correct": 1245, "accuracy_percent": 72.80701754385964, "baseline_accuracy_percent": 73.50877192982456, "change_percentage_points": -0.7017543859649122}}
+                                               {'loss': '4.826', 'grad_norm': '0.1963', 'learning_rate': '2.5e-05', 'epoch': '0.3125'}
+100%|██████████| 40/40 [06:57<00:00,  2.61s/it]                                               {'train_runtime': '417.6', 'train_samples_per_second': '1.533', 'train_steps_per_second': '0.096', 'train_loss': '1.305', 'epoch': '0.3125'}
+100%|██████████| 40/40 [06:57<00:00,  2.61s/it]100%|██████████| 40/40 [06:57<00:00, 10.44s/it]
+RUN_COMPLETE h12_a1_lr2.5e-05_s2_screen40 19276036608

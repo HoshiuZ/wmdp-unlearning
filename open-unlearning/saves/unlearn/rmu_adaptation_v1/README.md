@@ -15,7 +15,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 root = Path.cwd()
 sys.path.insert(0, str(root / "scripts"))
 from rmu_adaptation_utils import load_delta
-selection = json.loads((root / "logs/rmu_adaptation_selection.json").read_text())["selected"]
+selection = json.loads((root / "open-unlearning/saves/unlearn/rmu_adaptation_v1/selected_checkpoint.json").read_text())
 base = root / "models/Qwen3-4B-Instruct-2507"
 model = AutoModelForCausalLM.from_pretrained(base, dtype=torch.bfloat16,
     attn_implementation="sdpa", device_map="cuda", local_files_only=True)

@@ -1,0 +1,469 @@
+{
+  "selection": {
+    "selected": {
+      "experiment": "h12_a2_lr5e-05_s2_screen40",
+      "hook": 12,
+      "update_parameters": [
+        "model.layers.10.mlp.down_proj.weight",
+        "model.layers.11.mlp.down_proj.weight",
+        "model.layers.12.mlp.down_proj.weight"
+      ],
+      "learning_rate": 5e-05,
+      "alpha": 2.0,
+      "steering_coefficient": 2,
+      "step": 40,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a2_lr5e-05_s2_screen40/checkpoint-40",
+      "wmdp_bio_development_percent": 67.96875,
+      "mmlu_development_percent": 71.81286549707602,
+      "wmdp_bio_change_pp": -7.8125,
+      "mmlu_change_pp": -1.695906432748538,
+      "development_constraint_pass": true,
+      "peak_allocated_bytes": 19276036608,
+      "training_wall_seconds": 458.01403189683333
+    },
+    "development_constraint_pass": true,
+    "all_candidates": [
+      {
+        "experiment": "h12_a1_lr2.5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 2.5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 10,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr2.5e-05_s2_screen40/checkpoint-10",
+        "wmdp_bio_development_percent": 75.390625,
+        "mmlu_development_percent": 72.98245614035088,
+        "wmdp_bio_change_pp": -0.390625,
+        "mmlu_change_pp": -0.5263157894736842,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 435.38167876703665
+      },
+      {
+        "experiment": "h12_a1_lr2.5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 2.5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 20,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr2.5e-05_s2_screen40/checkpoint-20",
+        "wmdp_bio_development_percent": 75.390625,
+        "mmlu_development_percent": 72.74853801169591,
+        "wmdp_bio_change_pp": -0.390625,
+        "mmlu_change_pp": -0.7602339181286549,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 435.38167876703665
+      },
+      {
+        "experiment": "h12_a1_lr2.5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 2.5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 40,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr2.5e-05_s2_screen40/checkpoint-40",
+        "wmdp_bio_development_percent": 73.828125,
+        "mmlu_development_percent": 72.80701754385964,
+        "wmdp_bio_change_pp": -1.953125,
+        "mmlu_change_pp": -0.7017543859649122,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 435.38167876703665
+      },
+      {
+        "experiment": "h12_a1_lr5e-05_s1_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 1.0,
+        "step": 10,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s1_screen40/checkpoint-10",
+        "wmdp_bio_development_percent": 74.21875,
+        "mmlu_development_percent": 72.57309941520468,
+        "wmdp_bio_change_pp": -1.5625,
+        "mmlu_change_pp": -0.935672514619883,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 466.300173623953
+      },
+      {
+        "experiment": "h12_a1_lr5e-05_s1_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 1.0,
+        "step": 20,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s1_screen40/checkpoint-20",
+        "wmdp_bio_development_percent": 71.09375,
+        "mmlu_development_percent": 72.3391812865497,
+        "wmdp_bio_change_pp": -4.6875,
+        "mmlu_change_pp": -1.1695906432748537,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 466.300173623953
+      },
+      {
+        "experiment": "h12_a1_lr5e-05_s1_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 1.0,
+        "step": 40,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s1_screen40/checkpoint-40",
+        "wmdp_bio_development_percent": 63.671875,
+        "mmlu_development_percent": 71.28654970760233,
+        "wmdp_bio_change_pp": -12.109375,
+        "mmlu_change_pp": -2.2222222222222223,
+        "development_constraint_pass": false,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 466.300173623953
+      },
+      {
+        "experiment": "h12_a1_lr5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 10,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s2_screen40/checkpoint-10",
+        "wmdp_bio_development_percent": 74.21875,
+        "mmlu_development_percent": 72.57309941520468,
+        "wmdp_bio_change_pp": -1.5625,
+        "mmlu_change_pp": -0.935672514619883,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 457.01009186403826
+      },
+      {
+        "experiment": "h12_a1_lr5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 20,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s2_screen40/checkpoint-20",
+        "wmdp_bio_development_percent": 71.484375,
+        "mmlu_development_percent": 72.69005847953217,
+        "wmdp_bio_change_pp": -4.296875,
+        "mmlu_change_pp": -0.8187134502923976,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 457.01009186403826
+      },
+      {
+        "experiment": "h12_a2_lr5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 2.0,
+        "steering_coefficient": 2,
+        "step": 10,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a2_lr5e-05_s2_screen40/checkpoint-10",
+        "wmdp_bio_development_percent": 74.21875,
+        "mmlu_development_percent": 72.69005847953217,
+        "wmdp_bio_change_pp": -1.5625,
+        "mmlu_change_pp": -0.8187134502923976,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 458.01403189683333
+      },
+      {
+        "experiment": "h12_a2_lr5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 2.0,
+        "steering_coefficient": 2,
+        "step": 20,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a2_lr5e-05_s2_screen40/checkpoint-20",
+        "wmdp_bio_development_percent": 72.265625,
+        "mmlu_development_percent": 72.39766081871345,
+        "wmdp_bio_change_pp": -3.515625,
+        "mmlu_change_pp": -1.1111111111111112,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 458.01403189683333
+      },
+      {
+        "experiment": "h12_a2_lr5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 2.0,
+        "steering_coefficient": 2,
+        "step": 40,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a2_lr5e-05_s2_screen40/checkpoint-40",
+        "wmdp_bio_development_percent": 67.96875,
+        "mmlu_development_percent": 71.81286549707602,
+        "wmdp_bio_change_pp": -7.8125,
+        "mmlu_change_pp": -1.695906432748538,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 458.01403189683333
+      },
+      {
+        "experiment": "h12_a4_lr5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 4.0,
+        "steering_coefficient": 2,
+        "step": 10,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a4_lr5e-05_s2_screen40/checkpoint-10",
+        "wmdp_bio_development_percent": 75.0,
+        "mmlu_development_percent": 72.92397660818713,
+        "wmdp_bio_change_pp": -0.78125,
+        "mmlu_change_pp": -0.5847953216374269,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 454.1976361502893
+      },
+      {
+        "experiment": "h12_a4_lr5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 4.0,
+        "steering_coefficient": 2,
+        "step": 20,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a4_lr5e-05_s2_screen40/checkpoint-20",
+        "wmdp_bio_development_percent": 71.484375,
+        "mmlu_development_percent": 72.046783625731,
+        "wmdp_bio_change_pp": -4.296875,
+        "mmlu_change_pp": -1.4619883040935673,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 454.1976361502893
+      },
+      {
+        "experiment": "h12_a4_lr5e-05_s2_screen40",
+        "hook": 12,
+        "update_parameters": [
+          "model.layers.10.mlp.down_proj.weight",
+          "model.layers.11.mlp.down_proj.weight",
+          "model.layers.12.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 4.0,
+        "steering_coefficient": 2,
+        "step": 40,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a4_lr5e-05_s2_screen40/checkpoint-40",
+        "wmdp_bio_development_percent": 69.140625,
+        "mmlu_development_percent": 72.3391812865497,
+        "wmdp_bio_change_pp": -6.640625,
+        "mmlu_change_pp": -1.1695906432748537,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19276036608,
+        "training_wall_seconds": 454.1976361502893
+      },
+      {
+        "experiment": "h18_a1_lr5e-05_s2_screen40",
+        "hook": 18,
+        "update_parameters": [
+          "model.layers.16.mlp.down_proj.weight",
+          "model.layers.17.mlp.down_proj.weight",
+          "model.layers.18.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 10,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h18_a1_lr5e-05_s2_screen40/checkpoint-10",
+        "wmdp_bio_development_percent": 75.0,
+        "mmlu_development_percent": 73.33333333333333,
+        "wmdp_bio_change_pp": -0.78125,
+        "mmlu_change_pp": -0.17543859649122806,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 18900511232,
+        "training_wall_seconds": 442.89004261093214
+      },
+      {
+        "experiment": "h18_a1_lr5e-05_s2_screen40",
+        "hook": 18,
+        "update_parameters": [
+          "model.layers.16.mlp.down_proj.weight",
+          "model.layers.17.mlp.down_proj.weight",
+          "model.layers.18.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 20,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h18_a1_lr5e-05_s2_screen40/checkpoint-20",
+        "wmdp_bio_development_percent": 75.390625,
+        "mmlu_development_percent": 73.04093567251462,
+        "wmdp_bio_change_pp": -0.390625,
+        "mmlu_change_pp": -0.4678362573099415,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 18900511232,
+        "training_wall_seconds": 442.89004261093214
+      },
+      {
+        "experiment": "h18_a1_lr5e-05_s2_screen40",
+        "hook": 18,
+        "update_parameters": [
+          "model.layers.16.mlp.down_proj.weight",
+          "model.layers.17.mlp.down_proj.weight",
+          "model.layers.18.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 40,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h18_a1_lr5e-05_s2_screen40/checkpoint-40",
+        "wmdp_bio_development_percent": 74.609375,
+        "mmlu_development_percent": 72.63157894736842,
+        "wmdp_bio_change_pp": -1.171875,
+        "mmlu_change_pp": -0.8771929824561403,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 18900511232,
+        "training_wall_seconds": 442.89004261093214
+      },
+      {
+        "experiment": "h7_a1_lr5e-05_s2_screen40",
+        "hook": 7,
+        "update_parameters": [
+          "model.layers.5.mlp.down_proj.weight",
+          "model.layers.6.mlp.down_proj.weight",
+          "model.layers.7.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 10,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h7_a1_lr5e-05_s2_screen40/checkpoint-10",
+        "wmdp_bio_development_percent": 73.828125,
+        "mmlu_development_percent": 72.16374269005848,
+        "wmdp_bio_change_pp": -1.953125,
+        "mmlu_change_pp": -1.345029239766082,
+        "development_constraint_pass": true,
+        "peak_allocated_bytes": 19585479168,
+        "training_wall_seconds": 469.3167160828598
+      },
+      {
+        "experiment": "h7_a1_lr5e-05_s2_screen40",
+        "hook": 7,
+        "update_parameters": [
+          "model.layers.5.mlp.down_proj.weight",
+          "model.layers.6.mlp.down_proj.weight",
+          "model.layers.7.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 20,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h7_a1_lr5e-05_s2_screen40/checkpoint-20",
+        "wmdp_bio_development_percent": 73.046875,
+        "mmlu_development_percent": 70.99415204678363,
+        "wmdp_bio_change_pp": -2.734375,
+        "mmlu_change_pp": -2.5146198830409356,
+        "development_constraint_pass": false,
+        "peak_allocated_bytes": 19585479168,
+        "training_wall_seconds": 469.3167160828598
+      },
+      {
+        "experiment": "h7_a1_lr5e-05_s2_screen40",
+        "hook": 7,
+        "update_parameters": [
+          "model.layers.5.mlp.down_proj.weight",
+          "model.layers.6.mlp.down_proj.weight",
+          "model.layers.7.mlp.down_proj.weight"
+        ],
+        "learning_rate": 5e-05,
+        "alpha": 1,
+        "steering_coefficient": 2,
+        "step": 40,
+        "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h7_a1_lr5e-05_s2_screen40/checkpoint-40",
+        "wmdp_bio_development_percent": 69.140625,
+        "mmlu_development_percent": 69.94152046783626,
+        "wmdp_bio_change_pp": -6.640625,
+        "mmlu_change_pp": -3.5672514619883042,
+        "development_constraint_pass": false,
+        "peak_allocated_bytes": 19585479168,
+        "training_wall_seconds": 469.3167160828598
+      }
+    ],
+    "independent_final_test": false,
+    "full_evaluation_label": "exploratory; official test statistics were previously observed, development subset used in tuning"
+  },
+  "full_metrics": {
+    "wmdp_bio": {
+      "n": 1273,
+      "correct": 844,
+      "accuracy_percent": 66.30007855459544,
+      "baseline_accuracy_percent": 73.84131971720346,
+      "change_percentage_points": -7.541241162608013
+    },
+    "mmlu": {
+      "n": 14042,
+      "correct": 9708,
+      "accuracy_percent": 69.13545079048569,
+      "baseline_accuracy_percent": 70.673693206096,
+      "change_percentage_points": -1.5382424156103118
+    }
+  },
+  "full_mmlu_constraint_pass": true,
+  "full_evaluation_label": "exploratory",
+  "success_standard_note": "2pp is this experiment goal, not universal proof of unlearning"
+}

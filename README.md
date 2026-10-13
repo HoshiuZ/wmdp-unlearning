@@ -17,7 +17,7 @@ OpenUnlearning 使用 MIT License，原始版权声明为 `Copyright (c) 2025 CM
 
 使用本仓库产出研究报告时，请同时引用实际使用的框架、方法、基准及模型；OpenUnlearning 的引用信息见上游 README 的 “Citing this work” 部分。
 
-## 已完成的实验
+## 首轮正式实验（80步）
 
 已完成原始模型基线、Bio语料清洗与分组划分、真实CUDA三步短跑、正式80步RMU训练、完整权重上传和训练后全量评测。模型使用BF16/SDPA；只更新第5/6/7层MLP down_proj权重，保存重载参数指纹一致。
 
@@ -40,11 +40,22 @@ MMLU使用官方固定revision `c30699e8356da336a370243923dbaf21066bb9fe` 本地
 
 根目录私人工作文档不上传，公开README单独放行。独立环境、缓存、下载的原始基模及短跑完整权重留在本地。Bio遗忘语料条款限制未经许可向协作者名单之外分发；原始、清洗后正文和token缓存不公开提交，GitHub保存处理脚本、统计与来源记录。保留语料再分发许可尚待确认，平台接收方授权也需明确。
 
-## 适配探索第一阶段
+## 适配探索最终结果
 
-已完成实现审查、hook7/12/18三组同预算40步筛选，以及hook12上的alpha1/2/4比较，共15个开发检查点。选定hook12、更新10/11/12层down_proj、alpha1、steering2、lr5e-5、第40步后，全量Bio **62.8437%**，MMLU **68.3663%**（相对原始基线下降 **2.3074个百分点**），未达本轮2点约束。结果属探索性，开发子集来自已观察的官方test。
+完成实现审查与7组独立原始模型起点的40步训练，共21个开发检查点，并对2个候选进行了全量探索性评测。最佳已全量验证候选为 **hook12，更新10/11/12层down_proj.weight，alpha2，steering2，lr5e-5，第40步**；seed42、256token、batch1、累积16。
 
-完整审查与结果见 [适配方案](docs/rmu-adaptation-plan.md)、[第一阶段结果](docs/rmu-adaptation-results-phase1.md)。按用户授权，接下来分别测试学习率减半与steering1，其他条件保持相同，新增单因素阶段单独留档，不覆盖第一阶段模型/评测。
+| 全量0-shot准确率 | 原始模型 | 首轮hook7/alpha1/80步 | 选定hook12/alpha2/40步 |
+| --- | ---: | ---: | ---: |
+| WMDP-Bio（1273题） | 73.8413% | 59.9372% | 66.3001% |
+| MMLU（14042题） | 70.6737% | 65.8952% | 69.1355% |
+
+选定候选Bio下降 **7.5412个百分点**，MMLU下降 **1.5382个百分点**，满足本轮MMLU下降不超过2点目标。它的遗忘幅度比首轮小、正常能力损失也明显更小；不把不同训练预算的改善全部归因于换层。
+
+开发子集来自已观察过的官方test；第一阶段全量失败还参与了追加动机及候选排除，因此这些结果只称探索性，不是独立未参与调参的测试，也不证明知识彻底删除。第一阶段hook12/alpha1全量MMLU下降2.3074点未达目标，失败结果原样保留。学习率减半遗忘较弱，steering1第40步开发MMLU下降2.2222点，未通过初筛。
+
+完整21个开发检查点、配置和两次全量对比见 [中文报告](docs/rmu-adaptation-results.md)、[CSV表](logs/rmu_adaptation_comparison_phase2.csv)、[最终结果](logs/rmu_adaptation_result_phase2.json)、[审查和预先声明方案](docs/rmu-adaptation-plan.md)。第一阶段报告单独保留于 [历史报告](docs/rmu-adaptation-results-phase1.md)。
+
+全部新增检查点采用Git LFS管理的无损BF16 XOR+gzip增量，不是LoRA或独立完整HF模型；加载需固定原始模型及helper，重建逐位核查通过。最终模型指针和加载示例见 [适配产物说明](open-unlearning/saves/unlearn/rmu_adaptation_v1/README.md)，选定checkpoint为 `h12_a2_lr5e-05_s2_screen40/checkpoint-40`。数据盘已由50GB扩至60GB，本轮未使用/tmp缓存。
 
 ## 下一步
 
