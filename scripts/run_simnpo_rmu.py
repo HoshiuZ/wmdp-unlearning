@@ -17,16 +17,16 @@ TRAINER_REGISTRY['ControlledSimRMU']=ControlledSimRMU
 OUT=REPO/'saves/unlearn/simnpo_rmu_v1'
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--variant',choices=['probe','sim','rmu_ce','joint'],required=True);p.add_argument('--sim-scale',type=float,choices=[.5,1.],default=1.);p.add_argument('--check-only',action='store_true');a=p.parse_args();probe=a.variant=='probe';assert a.sim_scale==1. or a.variant=='joint';name='implementation_probe' if probe else a.variant+('_simhalf' if a.sim_scale==.5 else '')+('_minimal' if a.check_only else '_screen40');out=OUT/name
+ p=argparse.ArgumentParser();p.add_argument('--variant',choices=['probe','sim','rmu_ce','joint'],required=True);p.add_argument('--sim-scale',type=float,choices=[.5,1.],default=1.);p.add_argument('--check-only',action='store_true');p.add_argument('--gradient-cap',action='store_true');a=p.parse_args();probe=a.variant=='probe';assert a.sim_scale==1. or a.variant=='joint';assert not a.gradient_cap or (a.variant=='joint' and a.sim_scale==1.);name='implementation_probe' if probe else a.variant+('_gradcap' if a.gradient_cap else '')+('_simhalf' if a.sim_scale==.5 else '')+('_minimal' if a.check_only else '_screen40');out=OUT/name
  assert not out.exists();assert shutil.disk_usage(ROOT).free>2*2**30+700*2**20
  out.mkdir(parents=True);cfg=configuration(12,2,5e-5,2,name,40)
  cfg.paths.output_dir=str(out);cfg.trainer.handler='ControlledSimRMU';cfg.trainer.args.output_dir=str(out);cfg.trainer.args.logging_dir=str(out/'logs')
  lock=ROOT/'logs/simnpo_rmu_coefficients.json'
  values={'sim_weight':1.,'ce_weight':1.} if probe else json.loads(lock.read_text())['coefficients'];values['sim_weight']*=a.sim_scale
  with open_dict(cfg.trainer.method_args):
-  cfg.trainer.method_args.variant='joint' if probe else a.variant;cfg.trainer.method_args.beta=.1
+  cfg.trainer.method_args.variant='joint' if probe else a.variant;cfg.trainer.method_args.beta=.1;cfg.trainer.method_args.gradient_cap=a.gradient_cap
   for k,v in values.items():cfg.trainer.method_args[k]=v
- dump(out/'training_config.json',OmegaConf.to_container(cfg,resolve=True));run={'name':name,'variant':a.variant,'status':'running','started_at':now(),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'data_manifest':'logs/rmu_formal_blocks_manifest.json','beta':.1,'delta':0,'alpha_repr':2,'steering':2,'lr':5e-5,'seed':42,'coefficients':values,'sim_scale':a.sim_scale,'check_only':a.check_only,'max_steps':2 if probe or a.check_only else 40,'space_before':shutil.disk_usage(ROOT)._asdict()};dump(out/'run.json',run)
+ dump(out/'training_config.json',OmegaConf.to_container(cfg,resolve=True));run={'name':name,'variant':a.variant,'status':'running','started_at':now(),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'data_manifest':'logs/rmu_formal_blocks_manifest.json','beta':.1,'delta':0,'alpha_repr':2,'steering':2,'lr':5e-5,'seed':42,'coefficients':values,'gradient_cap':a.gradient_cap,'sim_scale':a.sim_scale,'check_only':a.check_only,'max_steps':2 if probe or a.check_only else 40,'space_before':shutil.disk_usage(ROOT)._asdict()};dump(out/'run.json',run)
  for row in json.loads((ROOT/'logs/rmu_formal_blocks_manifest.json').read_text())['files']:assert __import__('hashlib').sha256((ROOT/row['path']).read_bytes()).hexdigest()==row['sha256']
  seed_everything(42);model,tok=get_model(cfg.model);data=get_data(cfg.data,mode=cfg.mode,tokenizer=tok,template_args=cfg.model.template_args);collator=get_collators(cfg.collator,tokenizer=tok)
  trainer,args=load_trainer(cfg.trainer,model,train_dataset=data['train'],processing_class=tok,data_collator=collator,evaluators=None,template_args=cfg.model.template_args);trainer.create_optimizer();model.to(trainer.accelerator.device)
@@ -70,5 +70,7 @@ def main():
   rows=[json.loads(l) for l in (out/'training_metrics.jsonl').open()];tr=[r for r in rows if r['phase']=='train'];assert [r['step'] for r in tr]==list(range(1,41));consumed={r:[i for row in tr for i in row['sampled_'+r+'_indices']] for r in ['forget','retain']};assert consumed==json.loads((REPO/'saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s2_screen40/consumed_block_indices.json').read_text());dump(out/'consumed_block_indices.json',consumed);dump(out/'component_metrics.json',trainer.component_records);assert len(trainer.component_records)==640
   run.update(training_metrics=result.metrics,development=cp.rows,validation=monitor.results,actual_input_tokens=sum(r['input_tokens'] for r in tr),actual_loss_tokens=sum(r['loss_tokens'] for r in tr),effective_prediction_tokens=sum(r['effective_prediction_tokens'] for r in trainer.component_records))
   assert run['actual_input_tokens']==320619 and run['actual_loss_tokens']==319339
+ if a.gradient_cap:
+  dump(out/'controller_metrics.json',trainer.controller_records);assert len(trainer.controller_records)==(2 if a.check_only else 640)
  assert fingerprints(trainer.ref_model)==before;dump(out/'control_vector.json',{'values':saved.flatten().tolist(),'sha256':tensor_hash(saved),'l2_norm':float(saved.norm())});run.update(status='completed',completed_at=now(),elapsed_seconds=time.perf_counter()-start,selected_parameters=selected,frozen_parameters_unchanged=True,reference_unchanged=True,cuda_peak_allocated_bytes=torch.cuda.max_memory_allocated(),cuda_peak_reserved_bytes=torch.cuda.max_memory_reserved(),space_after=shutil.disk_usage(ROOT)._asdict());dump(out/'run.json',run);print('COMPLETE',name,flush=True)
 if __name__=='__main__':main()
