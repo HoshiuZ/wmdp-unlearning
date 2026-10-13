@@ -20,7 +20,7 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--variant',choices=['probe','sim','rmu_ce','joint'],required=True);a=p.parse_args();probe=a.variant=='probe';name='implementation_probe' if probe else a.variant+'_screen40';out=OUT/name
  assert not out.exists();assert shutil.disk_usage(ROOT).free>2*2**30+700*2**20
  out.mkdir(parents=True);cfg=configuration(12,2,5e-5,2,name,40)
- cfg.trainer.handler='ControlledSimRMU';cfg.trainer.args.output_dir=str(out);cfg.trainer.args.logging_dir=str(out/'logs')
+ cfg.paths.output_dir=str(out);cfg.trainer.handler='ControlledSimRMU';cfg.trainer.args.output_dir=str(out);cfg.trainer.args.logging_dir=str(out/'logs')
  lock=ROOT/'logs/simnpo_rmu_coefficients.json'
  values={'sim_weight':1.,'ce_weight':1.} if probe else json.loads(lock.read_text())['coefficients']
  with open_dict(cfg.trainer.method_args):
