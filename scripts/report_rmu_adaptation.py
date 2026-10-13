@@ -48,7 +48,7 @@ def main():
  if full:table.append({**{k:pick[k] for k in fields if k in pick},'scope':'full-exploratory:Bio1273,MMLU14042','wmdp_bio_percent':full['wmdp_bio']['accuracy_percent'],'mmlu_percent':full['mmlu']['accuracy_percent'],'wmdp_bio_change_pp':full['wmdp_bio']['change_percentage_points'],'mmlu_change_pp':full['mmlu']['change_percentage_points'],'constraint_pass':result['full_mmlu_constraint_pass']})
  dump(ROOT/f'logs/rmu_adaptation_comparison{suffix}.json',table)
  with (ROOT/f'logs/rmu_adaptation_comparison{suffix}.csv').open('w') as f:
-  writer=csv.DictWriter(f,fieldnames=fields);writer.writeheader();writer.writerows(table)
+  writer=csv.DictWriter(f,fieldnames=fields,lineterminator="\n");writer.writeheader();writer.writerows(table)
  text='# Qwen3-4B RMU 适配实验结果\n\n'
  if args.phase2:text+='第一阶段全量候选MMLU下降2.3074点未达目标，之后按用户原授权分别追加lr2.5e-5与steering1，未同时修改两个因素。首轮全量参与追加动机及失败checkpoint排除，所有最终全量均为进一步探索。第一阶段完整结果保留于rmu-adaptation-results-phase1.md。\n\n'
  text+='各组均从同一原始模型独立开始，seed42、256token、batch1、累积16、40步；保存10/20/40步。详见 [审查与固定方案](rmu-adaptation-plan.md)。首轮80步作为历史结果列出，不能冒充本轮40步对照。\n\n'
