@@ -18,3 +18,6 @@ SimNPO组不使用RMU目标或参考表示作为loss，但为了共享审计基�
 
 
 `rmu_ce_s32_screen40`及`joint_gradcap_s32_screen40`为steering32匹配对照，每组均保存10/20/40步增量，恢复方法相同。新严格2点档最佳已观察候选是`rmu_ce_s32_screen40/checkpoint-40`，全量Bio58.2875%、MMLU68.7936%（下降1.8801点）；联合组未通过开发筛选，没有全量结果。配置、原始基模校验、640次实际采样和联合控制器记录均保留，不保存optimizer，不能断点续训。中文报告：`docs/simnpo-rmu-s32-results.md`。新产物仅本地Git/LFS保存，未自动推送。
+
+
+`rmu_ce_s32_seed43_screen40`为固定配置seed43复验，改变训练采样及随机控制方向；10/20/40步增量恢复方法相同。预先固定第40步全量Bio58.3661%、MMLU68.4304%（下降2.2433点），未满足2点目标；seed42单次达标结果保留，不宣称配置稳定达标。完整结果见`docs/rmu-ce-seed43-results.md`。真实LFS对象和指纹已核对，未保存optimizer，不能断点续训。仅本地提交，未推送。

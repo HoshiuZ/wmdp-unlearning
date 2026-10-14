@@ -2,6 +2,7 @@
   "seed": 43,
   "training_config_only_seed_changed": true,
   "control_direction_regenerated": true,
+  "control_reproduced_from_seed43": true,
   "old_control_sha256": "6c65de7d689a104dc5c49c65682b8a8df1e3758698bace5913d80b7b8fa5fd60",
   "new_control_sha256": "b099f54fe8f8dd62706d00fdef83707d6adf29e4302e87254d6e2cbb8f91aa90",
   "sampling_changed": true,
@@ -40,7 +41,7 @@
   "cuda_peak_reserved_bytes": 21657288704,
   "space": {
     "total": 64424509440,
-    "used": 45856858112,
-    "free": 18567651328
+    "used": 45865144320,
+    "free": 18559365120
   }
 }

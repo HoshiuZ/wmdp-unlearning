@@ -1,0 +1,54 @@
+{
+  "seed": 43,
+  "training_config_only_seed_changed": true,
+  "control_direction_regenerated": true,
+  "control_reproduced_from_seed43": true,
+  "old_control_sha256": "6c65de7d689a104dc5c49c65682b8a8df1e3758698bace5913d80b7b8fa5fd60",
+  "new_control_sha256": "b099f54fe8f8dd62706d00fdef83707d6adf29e4302e87254d6e2cbb8f91aa90",
+  "sampling_changed": true,
+  "data_manifest_sha_verified": true,
+  "budget": {
+    "forget": {
+      "exposures": 640,
+      "unique": 640,
+      "input_tokens": 163633,
+      "effective_prediction_tokens": 162993
+    },
+    "retain": {
+      "exposures": 640,
+      "unique": 552,
+      "input_tokens": 157132,
+      "effective_prediction_tokens": 156492
+    }
+  },
+  "actual_input_tokens": 320765,
+  "actual_loss_tokens": 319485,
+  "input_token_change_from_seed42": 146,
+  "old_input_tokens": 320619,
+  "old_loss_tokens": 319339,
+  "selected_parameters": [
+    "model.layers.10.mlp.down_proj.weight",
+    "model.layers.11.mlp.down_proj.weight",
+    "model.layers.12.mlp.down_proj.weight"
+  ],
+  "frozen_reference_unchanged": true,
+  "reload_and_real_lfs_sha_verified": true,
+  "development_requests_verified": true,
+  "compressed_bytes": 198162307,
+  "training_code_commit": "ca03219ec6eaa55c02eda52c003e7224aee28d6a",
+  "training_seconds": 747.4563211402856,
+  "cuda_peak_allocated_bytes": 19584230912,
+  "cuda_peak_reserved_bytes": 21657288704,
+  "space": {
+    "total": 64424509440,
+    "used": 45865144320,
+    "free": 18559365120
+  },
+  "full_requests_verified": true,
+  "full_counts": {
+    "wmdp_bio": 1273,
+    "mmlu": 14042
+  },
+  "all_seeds_meet_2pp": false,
+  "full_result": "open-unlearning/saves/unlearn/simnpo_rmu_v1/seed43_full_evaluations/rmu_ce_s32_seed43_screen40_checkpoint-40/result.json"
+}

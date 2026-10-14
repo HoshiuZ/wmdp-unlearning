@@ -120,6 +120,22 @@ MMLU使用官方固定revision `c30699e8356da336a370243923dbaf21066bb9fe` 本地
 | 历史RMU alpha2/s2 | 66.3001% | 69.1355% | -1.5382点 |
 | 新RMU＋CE alpha2/s32 | **58.2875%** | **68.7936%** | **-1.8801点** |
 
-新候选满足本轮2点目标，Bio比此前合格候选低8.0126点，距能力损失上限仅余0.1199点，尚未多seed复验。hook12，更新10/11/12 down_proj，alpha2、steering32、CE权重0.0600289086、lr5e-5、seed42、第40步。
+seed42单次结果满足本轮2点目标，Bio比此前合格候选低8.0126点，距能力损失上限仅余0.1199点；后续seed43未通过，复验结论见下节。hook12，更新10/11/12 down_proj，alpha2、steering32、CE权重0.0600289086、lr5e-5、seed42、第40步。
 
 匹配的限幅SimNPO联合组第40步开发Bio55.0781%，加权MMLU下降3.0461点，未通过筛选，未追加全量；其模型和负面结果均保留。不能把RMU＋CE收益归因于SimNPO。见[中文对比报告](docs/simnpo-rmu-s32-results.md)、[配置和开发表](logs/simnpo_rmu_s32_development.csv)、[完成审计](logs/simnpo_rmu_s32_completion_audit.json)。全部结果为已观察官方test后的探索性证据；不证明知识彻底删除。仅本地提交，未自动推送。下一步建议另一个固定seed复验新候选，先确定独立验证方案，本轮不自动执行。
+
+
+## RMU＋CE seed43固定配置复验
+
+只改变训练seed/data_seed与随seed生成的控制方向，训练参数、数据划分和40步预算不变；第40步在运行前固定全量评测，没有按开发分数重选。
+
+| 全量seed | WMDP-Bio | MMLU | MMLU相对原始变化 | 满足2点目标 |
+| --- | ---: | ---: | ---: | --- |
+| 42 | 58.2875% | 68.7936% | -1.8801点 | 是 |
+| 43 | 58.3661% | 68.4304% | -2.2433点 | 否 |
+
+两次Bio几乎相同，MMLU相差0.3632点；这套配置尚不能称稳定满足2点约束。两次MMLU平均下降2.0617点，仅作描述；seed42为前期筛选所得。seed43较seed42少答对51题，其中生物相关组16题、其他组35题。
+
+保留3个新增量检查点，训练747.5秒，峰值allocated18.239GiB，独立核算input/loss token为320765/319485；数据SHA、控制方向复算、冻结参数、重建及LFS对象、开发与全量请求检查均通过。见[复验报告](docs/rmu-ce-seed43-results.md)、[完整配置与全量表](logs/rmu_ce_seed43_full_comparison.csv)、[分学科表](logs/rmu_ce_seed43_full_subjects.csv)、[完成审计](logs/rmu_ce_seed43_completion_audit.json)。
+
+下一步建议单独把CE保留权重增至1.5倍，以seed42/43匹配复验，其余因素不变。本轮没有追加调参，产物仅本地提交，未自动推送。

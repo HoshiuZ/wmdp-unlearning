@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "seed": 42,
+      "hook": 12,
+      "parameters": "10/11/12 down_proj.weight",
+      "lr": 5e-05,
+      "alpha": 2,
+      "steering": 32,
+      "ce_weight": 0.060028908617563034,
+      "steps": 40,
+      "bio_percent": 58.28750981932443,
+      "bio_change_pp": -15.553809897879026,
+      "mmlu_percent": 68.79361914257228,
+      "mmlu_change_pp": -1.8800740635237145,
+      "meets_2pp": true
+    },
+    {
+      "seed": 43,
+      "hook": 12,
+      "parameters": "10/11/12 down_proj.weight",
+      "lr": 5e-05,
+      "alpha": 2,
+      "steering": 32,
+      "ce_weight": 0.060028908617563034,
+      "steps": 40,
+      "bio_percent": 58.36606441476827,
+      "bio_change_pp": -15.475255302435192,
+      "mmlu_percent": 68.43042301666429,
+      "mmlu_change_pp": -2.243270189431705,
+      "meets_2pp": false
+    }
+  ],
+  "n_seeds": 2,
+  "statistics": {
+    "bio_percent": {
+      "mean": 58.32678711704635,
+      "sample_sd": 0.055546487131705465
+    },
+    "mmlu_percent": {
+      "mean": 68.61202107961829,
+      "sample_sd": 0.25681844353022293
+    },
+    "mmlu_change_pp": {
+      "mean": -2.06167212647771,
+      "sample_sd": 0.2568184435302231
+    }
+  },
+  "all_seeds_meet_2pp": false,
+  "fixed_step": 40,
+  "exploratory": true,
+  "no_development_selection": true
+}
