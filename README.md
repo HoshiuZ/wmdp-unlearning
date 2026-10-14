@@ -2,6 +2,8 @@
 
 本仓库记录基于 Qwen3-4B-Instruct-2507 的文本有害知识遗忘实验，保存实验代码、配置、日志、评测结果及后续交付产物。维护者：HoshiuZ。
 
+同步约定：阶段检查通过后及时提交并推送GitHub；根目录私人文档和受限语料继续保留本地。历史报告中的“仅本地／未推送”记录的是当时状态，此前累计产物现已补推。
+
 ## 上游来源与致谢
 
 训练与评测框架基于 CMU Locus Lab 的 [OpenUnlearning](https://github.com/locuslab/open-unlearning)，代码位于 `open-unlearning/`。本项目采用的上游起始提交为 [`17cbbc87192e6934deb92875c359c91bbd837fb4`](https://github.com/locuslab/open-unlearning/tree/17cbbc87192e6934deb92875c359c91bbd837fb4)，也记录在 [logs/code_commit.txt](logs/code_commit.txt)。该编号是上游代码版本，不是模型或数据版本。

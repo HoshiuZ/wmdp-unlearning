@@ -46,11 +46,18 @@ def audit(seed):
  dump(ROOT/f'logs/rmu_ce15_seed{seed}_training_audit.json',result);print('TRAIN_AUDIT',seed,dev[-1]['bio_percent'],dev[-1]['weighted_change_pp'],flush=True);return result
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--seed',type=int,choices=[42,43]);p.add_argument('--training-only',action='store_true');a=p.parse_args();seeds=[a.seed] if a.seed else [42,43]
+ p=argparse.ArgumentParser();p.add_argument('--seed',type=int,choices=[42,43]);p.add_argument('--training-only',action='store_true');p.add_argument('--full-check-only',action='store_true');a=p.parse_args();seeds=[a.seed] if a.seed else [42,43]
  for q in read(ROOT/'logs/rmu_formal_blocks_manifest.json')['files']:assert digest((ROOT/q['path']).read_bytes())==q['sha256']
  audits=[audit(seed) for seed in seeds]
  if a.training_only:return
- assert seeds==[42,43] and audits[0]['script_sha256']==audits[1]['script_sha256'];reference={task:{(s,x['doc_id']):{'doc_hash':x['doc_hash'],'prompt_hash':x['prompt_hash'],'target':int(x['doc']['answer']),'baseline_acc':int(x['acc'])} for s,rs in subjects.items() for x in rs} for task,subjects in base_samples().items()}
+ assert a.full_check_only or (seeds==[42,43] and audits[0]['script_sha256']==audits[1]['script_sha256']);reference={task:{(s,x['doc_id']):{'doc_hash':x['doc_hash'],'prompt_hash':x['prompt_hash'],'target':int(x['doc']['answer']),'baseline_acc':int(x['acc'])} for s,rs in subjects.items() for x in rs} for task,subjects in base_samples().items()}
+ if a.full_check_only:
+  for seed in seeds:
+   dest=full_dest(seed,True);result=read(dest/'result.json');data=read(dest/'samples.json');verify_requests(data,reference);assert result['seed']==seed and result['ce_scale']==1.5
+   for task,rs in data.items():
+    m=result['metrics'][task];assert m['n']==len(rs) and m['correct']==sum(x['acc'] for x in rs) and abs(m['accuracy_percent']-100*m['correct']/m['n'])<1e-9
+   dump(ROOT/f'logs/rmu_ce15_seed{seed}_full_audit.json',{'seed':seed,'fixed_checkpoint':40,'requests_hash_target_and_baseline_verified':True,'metrics_recounted':True,'result':str((dest/'result.json').relative_to(ROOT))});print('FULL_AUDIT',seed,result['metrics'],flush=True)
+  return
  rows=[];groups={};paired=[]
  for seed in seeds:
   for scale in [False,True]:
