@@ -12,7 +12,7 @@ def verify_requests(data,reference):
  for task,base in reference.items():
   rows=data[task];assert len(rows)==len(base) and {(x['task'],x['doc_id']) for x in rows}==set(base)
   for x in rows:
-   y=base[x['task'],x['doc_id']];assert all(x[k]==y[k] for k in ['doc_hash','prompt_hash','target'])
+   y=base[x['task'],x['doc_id']];assert all(x[k]==y[k] for k in ['doc_hash','prompt_hash','target','baseline_acc'])
 def dev_reference():
  d=read(OUT.parent/'rmu_adaptation_v1/original_development_protocol_check/samples.json');return {task:{(x['task'],x['doc_id']):x for x in rows} for task,rows in d.items()}
 def audit(seed):
@@ -50,11 +50,11 @@ def main():
  for q in read(ROOT/'logs/rmu_formal_blocks_manifest.json')['files']:assert digest((ROOT/q['path']).read_bytes())==q['sha256']
  audits=[audit(seed) for seed in seeds]
  if a.training_only:return
- assert seeds==[42,43];reference={task:{(s,x['doc_id']):{'doc_hash':x['doc_hash'],'prompt_hash':x['prompt_hash'],'target':int(x['doc']['answer'])} for s,rs in subjects.items() for x in rs} for task,subjects in base_samples().items()}
+ assert seeds==[42,43] and audits[0]['script_sha256']==audits[1]['script_sha256'];reference={task:{(s,x['doc_id']):{'doc_hash':x['doc_hash'],'prompt_hash':x['prompt_hash'],'target':int(x['doc']['answer']),'baseline_acc':int(x['acc'])} for s,rs in subjects.items() for x in rs} for task,subjects in base_samples().items()}
  rows=[];groups={};paired=[]
  for seed in seeds:
   for scale in [False,True]:
-   dest=full_dest(seed,scale);result=read(dest/'result.json');data=read(dest/'samples.json');verify_requests(data,reference);m=result['metrics'];s=summarize(data['mmlu']);assert abs(s['all']['weighted_percent']-m['mmlu']['accuracy_percent'])<1e-9
+   dest=full_dest(seed,scale);result=read(dest/'result.json');data=read(dest/'samples.json');verify_requests(data,reference);m=result['metrics'];assert all(m[t]['n']==len(rs) and m[t]['correct']==sum(x['acc'] for x in rs) and abs(m[t]['accuracy_percent']-100*sum(x['acc'] for x in rs)/len(rs))<1e-9 for t,rs in data.items());s=summarize(data['mmlu']);assert abs(s['all']['weighted_percent']-m['mmlu']['accuracy_percent'])<1e-9
    row={'seed':seed,'ce_scale':1.5 if scale else 1.,'hook':12,'parameters':'10/11/12 down_proj.weight','lr':5e-5,'alpha':2,'steering':32,'ce_weight':audits[seeds.index(seed)]['coefficient'] if scale else audits[seeds.index(seed)]['coefficient']/1.5,'steps':40,'bio_percent':m['wmdp_bio']['accuracy_percent'],'bio_change_pp':m['wmdp_bio']['change_percentage_points'],'mmlu_percent':m['mmlu']['accuracy_percent'],'mmlu_change_pp':m['mmlu']['change_percentage_points'],'meets_2pp':m['mmlu']['change_percentage_points']>=-2,'result':str((dest/'result.json').relative_to(ROOT))};rows.append(row);groups[f'seed{seed}_ce{row["ce_scale"]}']=s
   old,new=rows[-2:];paired.append({'seed':seed,'bio_change_ce15_minus_ce1':new['bio_percent']-old['bio_percent'],'mmlu_change_ce15_minus_ce1':new['mmlu_percent']-old['mmlu_percent']})
  stats={str(scale):{k:{'mean':statistics.mean(r[k] for r in rows if r['ce_scale']==scale),'sample_sd':statistics.stdev(r[k] for r in rows if r['ce_scale']==scale)} for k in ['bio_percent','mmlu_percent','mmlu_change_pp']} for scale in [1.,1.5]};passed=all(r['meets_2pp'] for r in rows if r['ce_scale']==1.5)
