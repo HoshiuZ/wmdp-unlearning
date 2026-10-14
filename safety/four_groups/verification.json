@@ -1,0 +1,38 @@
+{
+  "generation_records_verified": 3398,
+  "system_rows_verified": 6796,
+  "blind_pairs_verified": 3866,
+  "blind_mapping_rows_verified": 10194,
+  "expected_fingerprints_verified": true,
+  "guard_config_parser_unchanged": true,
+  "rendered_input_audits_verified": 1699,
+  "rendered_output_audits_verified": 2096,
+  "raw_text_and_credentials_not_found_in_public": true,
+  "public_files_checked": [
+    "config.json",
+    "common.py",
+    "prepare.py",
+    "manifest.json",
+    "generate.py",
+    "audit.py",
+    "policy.py",
+    "test_pipeline.py",
+    "finish.py",
+    "PLAN.md",
+    "pilot_summary.json",
+    "run_full.py",
+    "report.py",
+    "README.md",
+    "verify.py",
+    "status.py",
+    "guard_integrity.json",
+    "results.json",
+    "REPORT.md",
+    "verification.json"
+  ],
+  "blind_source_identity_hits": 0,
+  "local_allocated_bytes": 30638080,
+  "after_resources": {
+    "disk_free_bytes": 28343738368
+  }
+}

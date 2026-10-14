@@ -3,7 +3,7 @@ from collections import Counter
 from .common import *
 
 def main():
- r=json.loads((HERE/'results.json').read_text());p=protocol();pilot=json.loads((HERE/'pilot_summary.json').read_text())
+ r=json.loads((HERE/'results.json').read_text());r['disk_after']=resource();r['orchestration']=json.loads((LOCAL/'orchestration.json').read_text());assert r['orchestration']['complete'];p=protocol();pilot=json.loads((HERE/'pilot_summary.json').read_text())
  pct=lambda x:f'{100*x:.2f}%'
  lines=['# 四组离线生成与审核记录（阶段完成）','',
  '本阶段只生成回答、运行固定审核器并准备盲评清单；没有训练/微调，也没有独立评判。原始文本与逐条敏感记录仅留本地，公开的是汇总与哈希。','',
@@ -41,14 +41,20 @@ def main():
  for s in r['sessions']:
   name=s.get('model','guard')+'/'+s['phase'];count=s.get('new_count',s.get('output_new',0))
   lines.append(f"|{name}|{count}|{s['wall_seconds']:.2f}|{s.get('generation_wall_seconds',s['wall_seconds']):.2f}|{s['peak_allocated_bytes']/2**30:.3f}|{s['peak_reserved_bytes']/2**30:.3f}|")
+ lines+=['','|生成模型|计算阶段秒（含落盘）|请求/秒|实际生成token/秒|','|---|---:|---:|---:|']
+ for model,m in r['models'].items():
+  seconds=sum(s['generation_wall_seconds'] for s in r['sessions'] if s.get('model')==model)
+  lines.append(f"|{model}|{seconds:.2f}|{m['completed']/seconds:.3f}|{m['output_tokens']/seconds:.2f}|")
+ full_wall=r['orchestration']['ended_unix']-r['orchestration']['started_unix']
+ lines+=['',f'全量编排实际wall（含模型加载、指纹核对、审核加载及最终记录）{full_wall:.2f}秒；pilot缓存已复用。实际生成token不含padding。']
  total=sum(s['wall_seconds'] for s in r['sessions']);free=r['disk_after']['disk_free_bytes'];delta=p['before_resources']['disk_free_bytes']-free
  lines+=['',f"会话wall总和 {total:.2f}秒（{total/60:.2f}分钟），含生成模型加载与全参数指纹检查；guard wall自加载后开始。计算列为生成批处理及落盘或审核工作循环；非在线服务端到端耗时。批次运行耗时记录在本地，各样本引用批次时间，不能把同一批时间重复求和。PyTorch allocated/reserved峰值包含常驻模型，不等于整卡峰值。模型顺序加载，退出即释放；无同时常驻生成模型与Guard。",'',
  f"初检至汇总磁盘变化 {delta/2**20:.2f} MiB（文件系统总量差，含其他临时变化）；汇总时可用 {free/2**30:.2f} GiB。本阶段私有目录实际占用见verification.json；无新模型下载、完整权重副本或logits/hidden states。",'',
  '## 盲评材料与下一阶段','',
  f"本地 cache/four_groups_v1/blind_review.jsonl：{r['blind']['unique_request_answer_pairs']}个精确去重的请求-回答对，仅含blind_id/request/answer，随机顺序，无组别、模型名、Guard判断或输入标签；human_labels_filled=0。blind_mapping.jsonl保留全部组/策略对应（{r['blind']['mapping_rows']}行），systems.jsonl保存最终状态和原回答/审核引用，全部不提交Git。",'',
- '盲评文件SHA：']
+ '盲评文件SHA：','']
  lines += [f"- {k}：`{v}`。" for k,v in r['blind']['files'].items()]
- lines+=['', '本阶段没有开展独立评判，不引入第二模型或付费API。下一阶段应先确定独立评判规则与人员/资源，再使用无组别材料；尤其需要处理512上限的非完整回答、统一拒答、合理拒答与有害回答的区别。本阶段完成后停止。']
+ lines+=['', '核验通过：3,398条生成、6,796条外挂系统记录、10,194条盲评映射逐条一致；1,699条输入及2,096条新回答审核的官方渲染哈希均匹配；生成模型及Guard关键源文件与实际执行SHA一致。4项流程测试及既有6项审核器检查共10项通过。公开文件扫描未发现原始请求/回答或凭据；盲评清单不含来源字段或来源模型名称。核验详情见verification.json。本阶段没有开展独立评判，不引入第二模型或付费API。下一阶段应先确定独立评判规则与人员/资源，再使用无组别材料；尤其需要处理512上限的非完整回答、统一拒答、合理拒答与有害回答的区别。本阶段完成后停止。']
  dump(HERE/'results.json',r);(HERE/'REPORT.md').write_text('\n'.join(lines)+'\n')
  print('PUBLIC_REPORT_READY')
 if __name__=='__main__':main()

@@ -1,6 +1,6 @@
 # WMDP Unlearning Experiments
 
-本仓库的模型训练仍仅推进 Qwen3-4B-Instruct-2507 纯 RMU；另设独立的 Qwen3Guard 外挂安全审核功能验证。维护者：HoshiuZ。
+本仓库的模型训练仍仅推进 Qwen3-4B-Instruct-2507 纯 RMU；另设独立的 Qwen3Guard 分类器及四组离线防护实验。维护者：HoshiuZ。
 
 标准目标为 forget 表示误导 MSE + alpha × retain 表示保留 MSE。retain NLL 仅作监控，不加入训练目标。层号从 0 开始，hook 捕获指定 decoder layer 的输出，更新指定层的 down_proj.weight；参考模型冻结。
 
@@ -59,7 +59,7 @@
 
 已完成18条固定中英文接口样例：Safe10、Unsafe7、Controversial1，解析/生成错误0；另通过单元和超长错误路径检查。这是小规模功能验证，不是正式准确率或安全提升评测。未修改RMU训练逻辑、结果或检查点，未训练模型，未执行原模型/RMU批量生成或正式四组实验。
 
-[阶段中文报告](safety/qwen3guard/REPORT.md)、[逐条结果](safety/qwen3guard/records/smoke_v1/results.jsonl)、[配置](safety/qwen3guard/config.json)。模型只存忽略的HF缓存，不提交Git/LFS。本阶段在接入和验证后停止；A原模型、B原模型＋Guard、C纯RMU、D纯RMU＋Guard尚未执行，下一阶段须先固定具体RMU检查点和评测协议。
+[阶段中文报告](safety/qwen3guard/REPORT.md)、[逐条结果](safety/qwen3guard/records/smoke_v1/results.jsonl)、[配置](safety/qwen3guard/config.json)。模型只存忽略的HF缓存，不提交Git/LFS。接入阶段当时未执行四组实验；后续进展见下方四组离线记录，历史功能验证结果保持不变。
 
 WildGuardTest 独立审核评测已完成：输入 1,699 条、输出 1,709 条，审核错误均为 0。主策略 Recall/FPR 分别为输入 80.37%/4.76%、输出 75.00%/4.49%；严格策略为输入 85.54%/6.46%、输出 82.04%/6.25%。本阶段只评分类器与数据集已有回答，未开展四组模型生成实验。详见 [中文评测报告](safety/qwen3guard/wildguardtest/REPORT.md)。
 
@@ -68,3 +68,7 @@ WildGuardTest 独立审核评测已完成：输入 1,699 条、输出 1,709 条�
 当前固定 A原模型、B原模型+Guard、C纯RMU80步、D同一RMU80步+Guard；80步MMLU损失3.7245点，未满足此前2点约束。[固定方案](safety/four_groups/PLAN.md)。
 
 Safe / Controversial / Unsafe 是官方输出等级；“主策略/main”和“严格策略/strict”是本实验自行定义的等级到动作映射，不是官方命名的两种固定策略。主策略放行 Safe/Controversial、拦 Unsafe；严格策略只放行 Safe。error/unknown 是执行或解析异常，不是官方等级，异常不放行并单列，不计为成功识别有害。两种策略共用模型、模板与审核结果，不涉及重新训练。
+
+四组正式生成与审核记录已完成：A/C各生成1699条，失败0；B/D分别复用对应回答，输入审核复用1699条、新增输出审核2096次，审核异常0。主策略B输入/输出拦截651/4、放行1044；D为651/3、放行1045；严格策略B为706/9、放行984，D为706/5、放行988。它们仅为本实验策略的流程统计，不是独立评判的有害回答率或安全提升。
+
+[中文结果报告](safety/four_groups/REPORT.md)、[公开汇总](safety/four_groups/results.json)、[核验记录](safety/four_groups/verification.json)。本地盲评清单3866个去重请求-回答对，对应10194条组/策略映射；无组别、模型名或Guard判断，未填人工标签。原文/回答/盲评映射只在忽略的cache目录。完成本阶段后停止，未开展独立评判。

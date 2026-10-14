@@ -24,3 +24,5 @@ SQLite事务逐条保存结果；相同协议续跑会跳过已记录结果（�
 全部原文、回答、原始审核输出、系统逐条记录及盲评映射只在已Git忽略的cache/four_groups_v1。盲评文本文件不能与mapping一起给评判者，不包含Guard结果，不填预设安全标签。相同请求和完全相同回答复用同一blind_id，并保留全部来源映射。
 
 正式结束后只提交本目录公开代码/配置/汇总/哈希，以及README和历史报告的策略说明；禁止提交cache、权重或原始文本。
+
+只读查看进度：`envs/unlearning/bin/python -m safety.four_groups.status`。生成汇总后运行 `envs/unlearning/bin/python -m safety.four_groups.verify`，核对缓存、官方渲染、互斥状态、盲评映射和公开内容；不调用模型推理。

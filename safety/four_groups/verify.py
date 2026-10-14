@@ -9,6 +9,12 @@ def main():
  assert sha((LOCAL/'requests.jsonl').read_bytes())==p['request_manifest_sha256']
  assert sha((ROOT/CFG['guard_config']).read_bytes())==p['guard_config_sha256']
  assert sha((ROOT/'safety/qwen3guard/moderator.py').read_bytes())==p['guard_parser_sha256']
+ assert CFG['policies']==json.loads((ROOT/CFG['guard_config']).read_text())['policies']
+ for session in r['sessions']:
+  for file,expected in session.get('sources',{}).items():assert sha((HERE/file).read_bytes())==expected, 'Executed source differs from current code'
+ from transformers import AutoTokenizer
+ base_tok=AutoTokenizer.from_pretrained(ROOT/CFG['base_path'],local_files_only=True)
+ guard_tok=AutoTokenizer.from_pretrained(p['guard_runtime']['snapshot_path'],local_files_only=True)
  c=db();verified=0
  for model in ('original','rmu80'):
   fp=p['base_fingerprint' if model=='original' else 'rmu80_fingerprint'];good=fail=cap=0
@@ -22,11 +28,23 @@ def main():
   sessions=[s for s in r['sessions'] if s.get('model')==model]
   assert all(s['parameters_verified']==398 and s['model_fingerprint']==fp and s.get('complete') for s in sessions)
   assert all(s['generation_config']['do_sample'] is False and s['generation_config']['max_new_tokens']==512 for s in sessions)
+ for row in rows:
+  a=get(c,key('generation',row,p['base_fingerprint']));b=get(c,key('generation',row,p['rmu80_fingerprint']))
+  if a['status']=='ok' and b['status']=='ok':
+   assert (a['input_rendered_sha256'],a['input_tokens'])==(b['input_rendered_sha256'],b['input_tokens'])
+   text=base_tok.apply_chat_template([{'role':'user','content':row['request']}],tokenize=False,**CFG['chat_template_kwargs'])
+   assert a['input_rendered_sha256']==sha(text.encode())
  systems=[json.loads(x) for x in (LOCAL/'systems.jsonl').read_text().splitlines()];assert len(systems)==4*1699
- counters={}
+ counters={};seen_input=set();seen_output=set()
  for s in systems:
   row=byid[s['sample_id']];model='original' if s['group']=='B' else 'rmu80';fp=p['base_fingerprint' if model=='original' else 'rmu80_fingerprint']
   a=get(c,s['input_audit_ref']);g=get(c,s['generation_ref']);oa=get(c,s['output_audit_ref']) if s['output_audit_ref'] else None
+  if s['input_audit_ref'] not in seen_input:
+   rendered=guard_tok.apply_chat_template([{'role':'user','content':row['request']}],tokenize=False)
+   assert sha(rendered.encode())==a['rendered_input_sha256'];seen_input.add(s['input_audit_ref'])
+  if oa is not None and s['output_audit_ref'] not in seen_output:
+   rendered=guard_tok.apply_chat_template([{'role':'user','content':row['request']},{'role':'assistant','content':g['response']}],tokenize=False)
+   assert sha(rendered.encode())==oa['rendered_input_sha256'];seen_output.add(s['output_audit_ref'])
   assert s['state']==outcome(a,g,oa,s['policy'])
   assert s['actual_simulated_generator_invocation']==(s['state'] not in ('input_block','exception_input'))
   assert s['final_response_ref']==(s['generation_ref'] if s['state']=='allow' else 'config.fixed_refusal')
@@ -36,6 +54,8 @@ def main():
   assert sum(counter.values())==1699
  blind=[json.loads(x) for x in (LOCAL/'blind_review.jsonl').read_text().splitlines()];b={x['blind_id']:x for x in blind};assert len(b)==len(blind)
  assert all(set(x)=={'blind_id','request','answer'} for x in blind)
+ identity_hits=sum(bool(re.search(r'Qwen|\brmu80\b',x['request']+' '+x['answer'],re.I)) for x in blind)
+ assert identity_hits==0, 'Source model identity appears in blind text: review before release'
  mapping=[json.loads(x) for x in (LOCAL/'blind_mapping.jsonl').read_text().splitlines()]
  for m in mapping:
   original=byid[m['sample_id']];answer=get(c,m['generation_ref']).get('response') if m['state'] in ('allow','raw_answer') else CFG['fixed_refusal']
@@ -60,7 +80,7 @@ def main():
   published.append(file.name)
  local_blocks=sum(x.stat().st_blocks*512 for x in LOCAL.rglob('*') if x.is_file())
  out=dict(generation_records_verified=verified,system_rows_verified=len(systems),blind_pairs_verified=len(blind),blind_mapping_rows_verified=len(mapping),
-          expected_fingerprints_verified=True,guard_config_parser_unchanged=True,raw_text_and_credentials_not_found_in_public=True,
-          public_files_checked=published,local_allocated_bytes=local_blocks,after_resources=resource())
+          expected_fingerprints_verified=True,guard_config_parser_unchanged=True,rendered_input_audits_verified=len(seen_input),rendered_output_audits_verified=len(seen_output),raw_text_and_credentials_not_found_in_public=True,
+          public_files_checked=published,blind_source_identity_hits=identity_hits,local_allocated_bytes=local_blocks,after_resources=resource())
  dump(HERE/'verification.json',out);print(json.dumps(out,indent=2))
 if __name__=='__main__':main()
