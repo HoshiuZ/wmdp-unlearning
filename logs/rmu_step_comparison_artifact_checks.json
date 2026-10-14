@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "training_updates": 120,
+  "validation_steps": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120
+  ],
+  "checkpoint_steps": [
+    40,
+    80,
+    120
+  ],
+  "execution_source_hashes_match": true,
+  "fixed_input_manifest_hashes_match": true,
+  "callback_integrity_checks": 16,
+  "same_fixed_development_ids_and_targets": true,
+  "full_sample_counts_verified": true,
+  "new_delta_objects_local_only": 9,
+  "new_delta_pointers_tracked_by_git": false,
+  "optimizer_state_or_full_model_copies_saved": false,
+  "full_question_and_score_arithmetic_checks": "Performed inside evaluate_rmu_step_comparison.checked_summary for each of all three results",
+  "new_inference_or_training_started_by_this_check": false
+}

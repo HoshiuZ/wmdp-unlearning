@@ -1,0 +1,17 @@
+{
+  "recommended_with_mmlu_loss_le_2pp": [],
+  "recommended_with_mmlu_loss_le_3pp": [
+    40
+  ],
+  "additional_stronger_forgetting_tradeoff_steps": [
+    80
+  ],
+  "lowest_bio_without_capability_constraint": [
+    120
+  ],
+  "single_overall_winner": null,
+  "bio_lower_and_mmlu_not_lower_pair_exists": false,
+  "supports_automatic_longer_training_under_existing_constraints": false,
+  "automatic_extra_training_started": false,
+  "reason": "40->80 Bio -12.8044pp / MMLU -1.5454pp;80->120 Bio -1.5711pp / MMLU -0.7406pp; observed diminishing Bio gains with additional capacity loss."
+}

@@ -1,0 +1,22 @@
+{
+  "full": true,
+  "exploratory": true,
+  "protocol": "Archived exact baseline loglikelihood requests, BF16/SDPA,batch1,no chat/system,0shot; deterministic argmax; no generation",
+  "seconds": 600.4320613010786,
+  "metrics": {
+    "wmdp_bio": {
+      "n": 1273,
+      "correct": 524,
+      "accuracy_percent": 41.16260801256873,
+      "baseline_accuracy_percent": 73.84131971720346,
+      "change_percentage_points": -32.67871170463472
+    },
+    "mmlu": {
+      "n": 14042,
+      "correct": 9297,
+      "accuracy_percent": 66.20851730522718,
+      "baseline_accuracy_percent": 70.673693206096,
+      "change_percentage_points": -4.4651759008688225
+    }
+  }
+}

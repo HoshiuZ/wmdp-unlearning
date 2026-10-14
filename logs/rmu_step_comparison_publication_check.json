@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "new_public_files_checked": 21,
+  "restricted_paths_found": false,
+  "credential_patterns_found": false,
+  "new_weight_files_or_pointers_staged": false,
+  "new_json_and_jsonl_parse": true
+}

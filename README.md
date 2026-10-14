@@ -4,7 +4,7 @@
 
 标准目标为 forget 表示误导 MSE + alpha × retain 表示保留 MSE。retain NLL 仅作监控，不加入训练目标。层号从 0 开始，hook 捕获指定 decoder layer 的输出，更新指定层的 down_proj.weight；参考模型冻结。
 
-当前保留候选：hook12，更新层10/11/12，学习率5e-5，alpha2，steering32，40步，seed42。其全量成绩为 **WMDP-bio 55.3810%、MMLU 68.4874%**；MMLU相对原始基线下降2.1863个百分点，未满足此前不超过2个百分点的严格目标。严格目标下已全量评测的可行配置为hook12/alpha2/steering2/40步（Bio66.3001%、MMLU69.1355%）。
+历史保留候选：hook12，更新层10/11/12，学习率5e-5，alpha2，steering32，40步，seed42。其历史全量成绩为 **WMDP-bio 55.3810%、MMLU 68.4874%**；MMLU相对原始基线下降2.1863个百分点，未满足此前不超过2个百分点的严格目标。历史其他配置中，严格目标下已全量评测的可行配置为hook12/alpha2/steering2/40步（Bio66.3001%、MMLU69.1355%），不混入下述本轮长度候选。
 
 ## 已有全量结果
 
@@ -35,6 +35,20 @@
 
 基于 [OpenUnlearning](https://github.com/locuslab/open-unlearning) 修改；保留上游许可证与归属说明，详见 [上游MIT许可证](open-unlearning/LICENSE)和[上游说明](open-unlearning/README.md)。
 
-## 训练长度对照（进行中）
+## 40/80/120步连续训练长度对照
 
-按[固定方案](docs/rmu-step-comparison-plan.md)，已从原模型连续完成120次更新并保存40/80/120步增量，重建及冻结参数检查通过，正在串行全量评测。本轮40步与历史不逐位一致；数据/配置/控制方向一致，同环境SDPA后向非确定性探针与数值差异审查已留档，因此本轮40步重新全量评测。新增增量额度未知，先仅存本地持久盘，文本记录正常推送；不宣称权重已远端备份。
+从固定原模型重新开始，同一条连续120步轨迹，其他配置保持历史hook12/alpha2/steering32一致。已完成训练、三个增量重建及三组全量评测。
+
+| 本轮步数 | WMDP-bio % | MMLU % | MMLU相对基线损失/点 |
+|---|---:|---:|---:|
+| 40 | 55.5381 | 68.4945 | 2.1792 |
+| 80 | 42.7337 | 66.9492 | 3.7245 |
+| 120 | 41.1626 | 66.2085 | 4.4652 |
+
+本轮≤2点能力损失约束下无候选；≤3点仅40步。80步是更低Bio与更大能力损失的折中，120步Bio最低；三者均互不支配，没有统一赢家。80→120步只再降低Bio1.5711点，同时再损失MMLU0.7406点，现有能力目标下不建议直接追加更长训练。
+
+本轮40步没有与历史参数逐位复现：固定配置/数据/方向一致，同环境Flash SDPA后向非确定性探针及数值审查已留档；因此本轮40步重新全量评测，历史55.3810%/68.4874%单独列参照。未改seed或其他超参。
+
+[中文完整报告](docs/rmu-step-comparison-results.md)、[结果JSON](logs/rmu_step_comparison_results.json)、[全量CSV](logs/rmu_step_comparison_full.csv)、[逐学科CSV](logs/rmu_step_comparison_subjects.csv)、[固定方案](docs/rmu-step-comparison-plan.md)。官方test已参与此前探索，本轮为单seed探索性结果。
+
+本轮新增三个增量、共9个LFS对象约209.94 MiB，**仅保存在本地持久数据盘**，GitHub额度未知，尚未上传或核实远端备份。路径、SHA和真实大小见[保存状态](open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/delta_storage_status.json)；不要清理这些唯一的本地对象。公开代码、配置、日志及逐题结果正常推送；不上传受限语料、token缓存或新的完整模型。增量没有优化器状态，不能独立精确断点续训。

@@ -1,6 +1,7 @@
 {
   "quota": "unknown",
-  "upload_policy": "Text only; keep new delta pointers local until quota verified",
+  "reason": "Git SSH transport available; no authenticated billing/LFS quota interface available in this environment. Existing uploads and disk free space do not prove remaining quota.",
+  "upload_policy": "Push text only. New delta pointers are locally retained and ignored by Git until quota is confirmed.",
   "objects": [
     {
       "step": 40,

@@ -1,0 +1,6 @@
+experiment,step,hook,updated_parameters,learning_rate,alpha,steering_coefficient,seed,bio_percent,bio_drop_pp,mmlu_percent,mmlu_loss_pp
+original,0,,,,,,,73.84131971720346,0.0,70.673693206096,0.0
+historical40,40,12,"model.layers.10.mlp.down_proj.weight,model.layers.11.mlp.down_proj.weight,model.layers.12.mlp.down_proj.weight",5e-05,2,32,42,55.38098978790259,18.46032992930087,68.4873949579832,2.1862982481128057
+continuous_step40,40,12,"model.layers.10.mlp.down_proj.weight,model.layers.11.mlp.down_proj.weight,model.layers.12.mlp.down_proj.weight",5e-05,2,32,42,55.53809897879026,18.303220738413202,68.49451645064805,2.179176755447955
+continuous_step80,80,12,"model.layers.10.mlp.down_proj.weight,model.layers.11.mlp.down_proj.weight,model.layers.12.mlp.down_proj.weight",5e-05,2,32,42,42.73369992144541,31.107619795758055,66.94915254237289,3.7245406637231184
+continuous_step120,120,12,"model.layers.10.mlp.down_proj.weight,model.layers.11.mlp.down_proj.weight,model.layers.12.mlp.down_proj.weight",5e-05,2,32,42,41.16260801256873,32.67871170463473,66.20851730522718,4.465175900868829

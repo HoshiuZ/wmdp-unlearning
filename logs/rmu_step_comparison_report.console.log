@@ -1,0 +1,50 @@
+{
+  "full": [
+    {
+      "step": 40,
+      "bio_percent": 55.53809897879026,
+      "mmlu_percent": 68.49451645064805,
+      "mmlu_loss_pp": 2.179176755447955
+    },
+    {
+      "step": 80,
+      "bio_percent": 42.73369992144541,
+      "mmlu_percent": 66.94915254237289,
+      "mmlu_loss_pp": 3.7245406637231184
+    },
+    {
+      "step": 120,
+      "bio_percent": 41.16260801256873,
+      "mmlu_percent": 66.20851730522718,
+      "mmlu_loss_pp": 4.465175900868829
+    }
+  ],
+  "feasible": {
+    "2": [],
+    "3": [
+      40
+    ]
+  },
+  "pareto": [
+    40,
+    80,
+    120
+  ],
+  "resources": {
+    "total_training_process_seconds": 890.3107616361231,
+    "trainer_wall_seconds_including_callbacks": 855.81899365969,
+    "optimizer_update_loop_seconds": 304.89831524994224,
+    "callback_seconds_including_checks": 548.0568905891851,
+    "new_full_inference_seconds": 1798.641350332182,
+    "reproduction_audit_pause_seconds": 116.0534029006958,
+    "evaluation_wall_seconds_including_loading_and_checks": 1822.8493172740564,
+    "training_peak_allocated_bytes": 19276036608,
+    "training_peak_reserved_bytes": 21349007360,
+    "evaluation_peak_allocated_bytes": 8967755776,
+    "new_run_allocated_bytes": 23146496,
+    "new_delta_allocated_bytes": 220155904,
+    "new_delta_payload_bytes": 220137333,
+    "free_bytes": 29908373504,
+    "free_space_change_since_run_start_bytes": 251068416
+  }
+}

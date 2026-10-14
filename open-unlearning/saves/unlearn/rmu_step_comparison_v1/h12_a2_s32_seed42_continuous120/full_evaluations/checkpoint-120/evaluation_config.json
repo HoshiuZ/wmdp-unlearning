@@ -1,0 +1,18 @@
+{
+  "checkpoint": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-120",
+  "num_fewshot": 0,
+  "apply_chat_template": false,
+  "system_instruction": null,
+  "batch_size": 1,
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "task_sizes": {
+    "wmdp_bio": 1273,
+    "mmlu": 14042
+  },
+  "exact_archived_baseline_requests_sha256": "7cdbe8f99cab6a5b977d96bb19286f83753476b846b54544b266cbabc43cc26e",
+  "scoring": "argmax of archived four-option continuation loglikelihood requests; no generation",
+  "exploratory": true,
+  "reused_historical_predictions": false,
+  "delta_always_against_fixed_original": true
+}
