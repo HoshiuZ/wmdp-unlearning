@@ -1,0 +1,6402 @@
+[
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.2109375,
+      "sim_forget": 11.258517265319824,
+      "retain_ce": 1.5739372968673706,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1328125,
+      "sim_forget": 11.444375991821289,
+      "retain_ce": 1.6661384105682373,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.125,
+      "sim_forget": 12.073837280273438,
+      "retain_ce": 2.3118221759796143,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.109375,
+      "sim_forget": 12.322576522827148,
+      "retain_ce": 2.9742794036865234,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.125,
+      "sim_forget": 11.668305397033691,
+      "retain_ce": 1.5187468528747559,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.203125,
+      "sim_forget": 11.248488426208496,
+      "retain_ce": 2.1088173389434814,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1796875,
+      "sim_forget": 11.678528785705566,
+      "retain_ce": 2.0804898738861084,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1953125,
+      "sim_forget": 11.590291023254395,
+      "retain_ce": 2.323657751083374,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1484375,
+      "sim_forget": 11.641214370727539,
+      "retain_ce": 3.242575168609619,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.21875,
+      "sim_forget": 11.381404876708984,
+      "retain_ce": 2.008976697921753,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.125,
+      "sim_forget": 11.685087203979492,
+      "retain_ce": 2.134690046310425,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.21875,
+      "sim_forget": 11.39830493927002,
+      "retain_ce": 1.8193845748901367,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.2578125,
+      "sim_forget": 11.405172348022461,
+      "retain_ce": 2.702085018157959,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.09375,
+      "sim_forget": 11.851920127868652,
+      "retain_ce": 2.253378391265869,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1484375,
+      "sim_forget": 11.655760765075684,
+      "retain_ce": 1.9376790523529053,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 0,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.234375,
+      "sim_forget": 11.285996437072754,
+      "retain_ce": 2.1142797470092773,
+      "retain_repr": 0.0
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.078125,
+      "sim_forget": 11.354110717773438,
+      "retain_ce": 2.594238758087158,
+      "retain_repr": 0.00018024444580078125
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.234375,
+      "sim_forget": 11.673652648925781,
+      "retain_ce": 2.142399311065674,
+      "retain_repr": 0.000263214111328125
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.2109375,
+      "sim_forget": 11.345010757446289,
+      "retain_ce": 1.6339654922485352,
+      "retain_repr": 0.000247955322265625
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1484375,
+      "sim_forget": 11.995429992675781,
+      "retain_ce": 1.9407774209976196,
+      "retain_repr": 0.0003490447998046875
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.21875,
+      "sim_forget": 12.472524642944336,
+      "retain_ce": 2.075197219848633,
+      "retain_repr": 0.0004558563232421875
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 454,
+    "components": {
+      "rmu_forget": 1.2421875,
+      "sim_forget": 11.54922103881836,
+      "retain_ce": 0.2280387282371521,
+      "retain_repr": 6.389617919921875e-05
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1953125,
+      "sim_forget": 11.88742446899414,
+      "retain_ce": 1.6289514303207397,
+      "retain_repr": 0.00021266937255859375
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.203125,
+      "sim_forget": 11.492586135864258,
+      "retain_ce": 2.0608723163604736,
+      "retain_repr": 0.0004482269287109375
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.203125,
+      "sim_forget": 11.893776893615723,
+      "retain_ce": 3.4339983463287354,
+      "retain_repr": 0.00016498565673828125
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 278,
+    "components": {
+      "rmu_forget": 1.2421875,
+      "sim_forget": 12.133504867553711,
+      "retain_ce": 2.327742576599121,
+      "retain_repr": 7.2479248046875e-05
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.140625,
+      "sim_forget": 11.467790603637695,
+      "retain_ce": 2.0362980365753174,
+      "retain_repr": 0.00020313262939453125
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.25,
+      "sim_forget": 11.717839241027832,
+      "retain_ce": 2.301882266998291,
+      "retain_repr": 0.0004444122314453125
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1171875,
+      "sim_forget": 11.856623649597168,
+      "retain_ce": 1.3865691423416138,
+      "retain_repr": 0.0002346038818359375
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.28125,
+      "sim_forget": 12.204383850097656,
+      "retain_ce": 1.3607844114303589,
+      "retain_repr": 0.00013637542724609375
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.09375,
+      "sim_forget": 11.258523941040039,
+      "retain_ce": 1.9262536764144897,
+      "retain_repr": 0.0003528594970703125
+    }
+  },
+  {
+    "step": 1,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1640625,
+      "sim_forget": 11.117158889770508,
+      "retain_ce": 2.8677563667297363,
+      "retain_repr": 0.0002460479736328125
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.109375,
+      "sim_forget": 11.573501586914062,
+      "retain_ce": 1.6963319778442383,
+      "retain_repr": 0.000469207763671875
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.125,
+      "sim_forget": 11.77324104309082,
+      "retain_ce": 1.7406264543533325,
+      "retain_repr": 0.00040435791015625
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1484375,
+      "sim_forget": 11.999996185302734,
+      "retain_ce": 2.113568067550659,
+      "retain_repr": 0.00058746337890625
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0859375,
+      "sim_forget": 11.709965705871582,
+      "retain_ce": 2.459242343902588,
+      "retain_repr": 0.00170135498046875
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.21875,
+      "sim_forget": 11.712606430053711,
+      "retain_ce": 2.433501720428467,
+      "retain_repr": 0.0004673004150390625
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.15625,
+      "sim_forget": 11.184928894042969,
+      "retain_ce": 2.0066044330596924,
+      "retain_repr": 0.00164031982421875
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1875,
+      "sim_forget": 11.087839126586914,
+      "retain_ce": 1.7000702619552612,
+      "retain_repr": 0.00099945068359375
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0703125,
+      "sim_forget": 11.59605884552002,
+      "retain_ce": 1.501950979232788,
+      "retain_repr": 0.00141143798828125
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.109375,
+      "sim_forget": 11.783653259277344,
+      "retain_ce": 1.7199797630310059,
+      "retain_repr": 0.000835418701171875
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0546875,
+      "sim_forget": 12.193890571594238,
+      "retain_ce": 2.4012370109558105,
+      "retain_repr": 0.0003299713134765625
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0625,
+      "sim_forget": 11.652503967285156,
+      "retain_ce": 1.029150366783142,
+      "retain_repr": 0.000644683837890625
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0546875,
+      "sim_forget": 11.972185134887695,
+      "retain_ce": 1.3712880611419678,
+      "retain_repr": 0.0014190673828125
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1796875,
+      "sim_forget": 11.94694709777832,
+      "retain_ce": 2.189012050628662,
+      "retain_repr": 0.000858306884765625
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1796875,
+      "sim_forget": 11.630390167236328,
+      "retain_ce": 1.6770085096359253,
+      "retain_repr": 0.0017242431640625
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.21875,
+      "sim_forget": 12.025774002075195,
+      "retain_ce": 2.034954309463501,
+      "retain_repr": 0.00138092041015625
+    }
+  },
+  {
+    "step": 2,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1640625,
+      "sim_forget": 12.362972259521484,
+      "retain_ce": 2.328324317932129,
+      "retain_repr": 0.00113677978515625
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1328125,
+      "sim_forget": 11.913108825683594,
+      "retain_ce": 0.4893767535686493,
+      "retain_repr": 0.0003032684326171875
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.203125,
+      "sim_forget": 11.952413558959961,
+      "retain_ce": 2.574739694595337,
+      "retain_repr": 0.0021820068359375
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.03125,
+      "sim_forget": 11.520318984985352,
+      "retain_ce": 1.0341758728027344,
+      "retain_repr": 0.00164031982421875
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1484375,
+      "sim_forget": 11.571918487548828,
+      "retain_ce": 2.3805577754974365,
+      "retain_repr": 0.0019989013671875
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1484375,
+      "sim_forget": 11.776077270507812,
+      "retain_ce": 2.7094717025756836,
+      "retain_repr": 0.0009765625
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.109375,
+      "sim_forget": 11.749765396118164,
+      "retain_ce": 1.633550763130188,
+      "retain_repr": 0.00083160400390625
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 278,
+    "components": {
+      "rmu_forget": 0.9765625,
+      "sim_forget": 11.822686195373535,
+      "retain_ce": 1.8923496007919312,
+      "retain_repr": 0.0004825592041015625
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.171875,
+      "sim_forget": 12.00527286529541,
+      "retain_ce": 1.6737339496612549,
+      "retain_repr": 0.0010833740234375
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0703125,
+      "sim_forget": 11.558116912841797,
+      "retain_ce": 3.1019177436828613,
+      "retain_repr": 0.00152587890625
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1171875,
+      "sim_forget": 12.08913803100586,
+      "retain_ce": 1.7074434757232666,
+      "retain_repr": 0.00153350830078125
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1484375,
+      "sim_forget": 11.382104873657227,
+      "retain_ce": 2.7977123260498047,
+      "retain_repr": 0.001678466796875
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0859375,
+      "sim_forget": 10.978559494018555,
+      "retain_ce": 2.43998646736145,
+      "retain_repr": 0.0029449462890625
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1796875,
+      "sim_forget": 11.876976013183594,
+      "retain_ce": 2.9537575244903564,
+      "retain_repr": 0.002685546875
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.09375,
+      "sim_forget": 11.476472854614258,
+      "retain_ce": 2.234776258468628,
+      "retain_repr": 0.003570556640625
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1328125,
+      "sim_forget": 11.258012771606445,
+      "retain_ce": 1.2000380754470825,
+      "retain_repr": 0.001373291015625
+    }
+  },
+  {
+    "step": 3,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0625,
+      "sim_forget": 11.610929489135742,
+      "retain_ce": 3.0914201736450195,
+      "retain_repr": 0.00164794921875
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 306,
+    "components": {
+      "rmu_forget": 1.0859375,
+      "sim_forget": 11.278395652770996,
+      "retain_ce": 1.675652265548706,
+      "retain_repr": 0.000682830810546875
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0859375,
+      "sim_forget": 11.221328735351562,
+      "retain_ce": 2.7697761058807373,
+      "retain_repr": 0.003448486328125
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1015625,
+      "sim_forget": 12.058832168579102,
+      "retain_ce": 1.3148113489151,
+      "retain_repr": 0.0019378662109375
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.09375,
+      "sim_forget": 11.756284713745117,
+      "retain_ce": 1.8090360164642334,
+      "retain_repr": 0.000782012939453125
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1953125,
+      "sim_forget": 11.750080108642578,
+      "retain_ce": 2.425107002258301,
+      "retain_repr": 0.00274658203125
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0625,
+      "sim_forget": 11.499786376953125,
+      "retain_ce": 2.698073625564575,
+      "retain_repr": 0.0036468505859375
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.125,
+      "sim_forget": 12.13268756866455,
+      "retain_ce": 1.1661031246185303,
+      "retain_repr": 0.00164794921875
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1015625,
+      "sim_forget": 12.167980194091797,
+      "retain_ce": 2.1993350982666016,
+      "retain_repr": 0.00213623046875
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1171875,
+      "sim_forget": 11.258440017700195,
+      "retain_ce": 2.2641830444335938,
+      "retain_repr": 0.005218505859375
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.125,
+      "sim_forget": 11.603974342346191,
+      "retain_ce": 2.9402103424072266,
+      "retain_repr": 0.001678466796875
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0390625,
+      "sim_forget": 11.237622261047363,
+      "retain_ce": 1.8654816150665283,
+      "retain_repr": 0.00250244140625
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.078125,
+      "sim_forget": 11.826339721679688,
+      "retain_ce": 1.1772747039794922,
+      "retain_repr": 0.0024871826171875
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0859375,
+      "sim_forget": 11.505876541137695,
+      "retain_ce": 1.8512437343597412,
+      "retain_repr": 0.005126953125
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.125,
+      "sim_forget": 11.946535110473633,
+      "retain_ce": 2.5962746143341064,
+      "retain_repr": 0.002105712890625
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1796875,
+      "sim_forget": 12.387554168701172,
+      "retain_ce": 1.9813793897628784,
+      "retain_repr": 0.00433349609375
+    }
+  },
+  {
+    "step": 4,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 52.5,
+      "sim_forget": 11.495380401611328,
+      "retain_ce": 1.8296794891357422,
+      "retain_repr": 0.002716064453125
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0625,
+      "sim_forget": 11.72967529296875,
+      "retain_ce": 1.9506973028182983,
+      "retain_repr": 0.00225830078125
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1484375,
+      "sim_forget": 12.010160446166992,
+      "retain_ce": 1.8805921077728271,
+      "retain_repr": 0.0021209716796875
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.046875,
+      "sim_forget": 11.708115577697754,
+      "retain_ce": 1.6871438026428223,
+      "retain_repr": 0.003082275390625
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.046875,
+      "sim_forget": 11.847648620605469,
+      "retain_ce": 3.553687572479248,
+      "retain_repr": 0.0026397705078125
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9765625,
+      "sim_forget": 11.643528938293457,
+      "retain_ce": 2.5072131156921387,
+      "retain_repr": 0.00347900390625
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0,
+      "sim_forget": 11.716339111328125,
+      "retain_ce": 2.642303228378296,
+      "retain_repr": 0.009521484375
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0546875,
+      "sim_forget": 11.51453971862793,
+      "retain_ce": 2.1173527240753174,
+      "retain_repr": 0.00408935546875
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1640625,
+      "sim_forget": 11.93193244934082,
+      "retain_ce": 2.6102869510650635,
+      "retain_repr": 0.00311279296875
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0234375,
+      "sim_forget": 11.10451602935791,
+      "retain_ce": 3.2607014179229736,
+      "retain_repr": 0.00250244140625
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0390625,
+      "sim_forget": 11.571893692016602,
+      "retain_ce": 2.7552738189697266,
+      "retain_repr": 0.00531005859375
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.015625,
+      "sim_forget": 11.209186553955078,
+      "retain_ce": 0.8946707248687744,
+      "retain_repr": 0.00140380859375
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.125,
+      "sim_forget": 10.84601879119873,
+      "retain_ce": 1.2802212238311768,
+      "retain_repr": 0.004852294921875
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.09375,
+      "sim_forget": 11.508723258972168,
+      "retain_ce": 1.842445731163025,
+      "retain_repr": 0.00738525390625
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 303,
+    "components": {
+      "rmu_forget": 1.1484375,
+      "sim_forget": 11.36125659942627,
+      "retain_ce": 1.8578954935073853,
+      "retain_repr": 0.01300048828125
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.03125,
+      "sim_forget": 11.35224723815918,
+      "retain_ce": 1.9967206716537476,
+      "retain_repr": 0.005523681640625
+    }
+  },
+  {
+    "step": 5,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0078125,
+      "sim_forget": 11.383585929870605,
+      "retain_ce": 1.5437582731246948,
+      "retain_repr": 0.006683349609375
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0390625,
+      "sim_forget": 12.227293014526367,
+      "retain_ce": 1.942751407623291,
+      "retain_repr": 0.008544921875
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0234375,
+      "sim_forget": 11.739630699157715,
+      "retain_ce": 0.8492240905761719,
+      "retain_repr": 0.001556396484375
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.03125,
+      "sim_forget": 11.267542839050293,
+      "retain_ce": 1.3588236570358276,
+      "retain_repr": 0.004425048828125
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.078125,
+      "sim_forget": 11.561423301696777,
+      "retain_ce": 2.08084774017334,
+      "retain_repr": 0.00640869140625
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.015625,
+      "sim_forget": 11.208610534667969,
+      "retain_ce": 2.3969507217407227,
+      "retain_repr": 0.0068359375
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 279,
+    "components": {
+      "rmu_forget": 1.0390625,
+      "sim_forget": 11.923824310302734,
+      "retain_ce": 1.3076857328414917,
+      "retain_repr": 0.001556396484375
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 446,
+    "components": {
+      "rmu_forget": 1.1484375,
+      "sim_forget": 11.645318984985352,
+      "retain_ce": 0.3314383327960968,
+      "retain_repr": 0.00106048583984375
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 302,
+    "components": {
+      "rmu_forget": 1.0390625,
+      "sim_forget": 11.61798095703125,
+      "retain_ce": 0.785601019859314,
+      "retain_repr": 0.00160980224609375
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.98046875,
+      "sim_forget": 10.92883586883545,
+      "retain_ce": 2.0815467834472656,
+      "retain_repr": 0.00823974609375
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0390625,
+      "sim_forget": 11.500104904174805,
+      "retain_ce": 1.632778286933899,
+      "retain_repr": 0.013916015625
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.078125,
+      "sim_forget": 11.658368110656738,
+      "retain_ce": 1.4459843635559082,
+      "retain_repr": 0.00244140625
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.078125,
+      "sim_forget": 11.806525230407715,
+      "retain_ce": 2.2970738410949707,
+      "retain_repr": 0.01611328125
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.1015625,
+      "sim_forget": 11.302909851074219,
+      "retain_ce": 1.625746726989746,
+      "retain_repr": 0.004638671875
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.03125,
+      "sim_forget": 11.648106575012207,
+      "retain_ce": 2.3403446674346924,
+      "retain_repr": 0.006927490234375
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0859375,
+      "sim_forget": 11.830713272094727,
+      "retain_ce": 1.7570734024047852,
+      "retain_repr": 0.004852294921875
+    }
+  },
+  {
+    "step": 6,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0703125,
+      "sim_forget": 11.65246868133545,
+      "retain_ce": 2.1885719299316406,
+      "retain_repr": 0.007598876953125
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.92578125,
+      "sim_forget": 11.859935760498047,
+      "retain_ce": 2.6837382316589355,
+      "retain_repr": 0.0081787109375
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.97265625,
+      "sim_forget": 11.605165481567383,
+      "retain_ce": 2.1960055828094482,
+      "retain_repr": 0.01495361328125
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.95703125,
+      "sim_forget": 11.634119033813477,
+      "retain_ce": 1.4061806201934814,
+      "retain_repr": 0.0054931640625
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.953125,
+      "sim_forget": 12.1984281539917,
+      "retain_ce": 2.656128406524658,
+      "retain_repr": 0.00518798828125
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0546875,
+      "sim_forget": 11.756551742553711,
+      "retain_ce": 2.13657808303833,
+      "retain_repr": 0.0167236328125
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0859375,
+      "sim_forget": 11.71963119506836,
+      "retain_ce": 1.937242031097412,
+      "retain_repr": 0.00872802734375
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 306,
+    "components": {
+      "rmu_forget": 1.0390625,
+      "sim_forget": 11.879735946655273,
+      "retain_ce": 1.3493903875350952,
+      "retain_repr": 0.001953125
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0390625,
+      "sim_forget": 11.928054809570312,
+      "retain_ce": 1.9145244359970093,
+      "retain_repr": 0.0036163330078125
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0703125,
+      "sim_forget": 11.368518829345703,
+      "retain_ce": 2.2016754150390625,
+      "retain_repr": 0.007476806640625
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0703125,
+      "sim_forget": 11.99891471862793,
+      "retain_ce": 3.032637357711792,
+      "retain_repr": 0.004730224609375
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.03125,
+      "sim_forget": 11.087746620178223,
+      "retain_ce": 2.8790059089660645,
+      "retain_repr": 0.00604248046875
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.92578125,
+      "sim_forget": 12.37051773071289,
+      "retain_ce": 2.7262542247772217,
+      "retain_repr": 0.00762939453125
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.98828125,
+      "sim_forget": 11.799038887023926,
+      "retain_ce": 1.7529605627059937,
+      "retain_repr": 0.01385498046875
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0078125,
+      "sim_forget": 11.455135345458984,
+      "retain_ce": 2.453899621963501,
+      "retain_repr": 0.005767822265625
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.078125,
+      "sim_forget": 11.465157508850098,
+      "retain_ce": 2.709867238998413,
+      "retain_repr": 0.007720947265625
+    }
+  },
+  {
+    "step": 7,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.91796875,
+      "sim_forget": 11.70867919921875,
+      "retain_ce": 3.0129024982452393,
+      "retain_repr": 0.00396728515625
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.97265625,
+      "sim_forget": 11.598560333251953,
+      "retain_ce": 1.8114521503448486,
+      "retain_repr": 0.00830078125
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.125,
+      "sim_forget": 11.459815979003906,
+      "retain_ce": 2.172420024871826,
+      "retain_repr": 0.01007080078125
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9921875,
+      "sim_forget": 12.095746040344238,
+      "retain_ce": 1.8093762397766113,
+      "retain_repr": 0.0111083984375
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9453125,
+      "sim_forget": 11.861859321594238,
+      "retain_ce": 2.9517204761505127,
+      "retain_repr": 0.006195068359375
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.92578125,
+      "sim_forget": 11.753497123718262,
+      "retain_ce": 1.7933109998703003,
+      "retain_repr": 0.00830078125
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.99609375,
+      "sim_forget": 11.871513366699219,
+      "retain_ce": 1.4371603727340698,
+      "retain_repr": 0.004730224609375
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9921875,
+      "sim_forget": 12.086835861206055,
+      "retain_ce": 1.0730602741241455,
+      "retain_repr": 0.01397705078125
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9609375,
+      "sim_forget": 11.85030746459961,
+      "retain_ce": 1.947027564048767,
+      "retain_repr": 0.0216064453125
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.03125,
+      "sim_forget": 11.554393768310547,
+      "retain_ce": 1.9671374559402466,
+      "retain_repr": 0.0096435546875
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0703125,
+      "sim_forget": 11.553176879882812,
+      "retain_ce": 2.473224401473999,
+      "retain_repr": 0.01129150390625
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.99609375,
+      "sim_forget": 11.723533630371094,
+      "retain_ce": 1.136407494544983,
+      "retain_repr": 0.0234375
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0546875,
+      "sim_forget": 11.782950401306152,
+      "retain_ce": 2.8214807510375977,
+      "retain_repr": 0.0093994140625
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0234375,
+      "sim_forget": 11.277839660644531,
+      "retain_ce": 1.1257898807525635,
+      "retain_repr": 0.023681640625
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.046875,
+      "sim_forget": 11.925670623779297,
+      "retain_ce": 2.233027219772339,
+      "retain_repr": 0.0108642578125
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0,
+      "sim_forget": 11.266372680664062,
+      "retain_ce": 1.8705166578292847,
+      "retain_repr": 0.01348876953125
+    }
+  },
+  {
+    "step": 8,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.890625,
+      "sim_forget": 11.856927871704102,
+      "retain_ce": 1.1824190616607666,
+      "retain_repr": 0.007537841796875
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.95703125,
+      "sim_forget": 11.557649612426758,
+      "retain_ce": 1.9395681619644165,
+      "retain_repr": 0.0262451171875
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.94140625,
+      "sim_forget": 11.262011528015137,
+      "retain_ce": 2.0539450645446777,
+      "retain_repr": 0.01287841796875
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.97265625,
+      "sim_forget": 11.740608215332031,
+      "retain_ce": 2.315946578979492,
+      "retain_repr": 0.0203857421875
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.92578125,
+      "sim_forget": 11.116656303405762,
+      "retain_ce": 2.37502384185791,
+      "retain_repr": 0.02001953125
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.03125,
+      "sim_forget": 12.053579330444336,
+      "retain_ce": 2.114320993423462,
+      "retain_repr": 0.0118408203125
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.91796875,
+      "sim_forget": 11.764111518859863,
+      "retain_ce": 1.4641491174697876,
+      "retain_repr": 0.01104736328125
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 296,
+    "components": {
+      "rmu_forget": 1.0625,
+      "sim_forget": 11.419071197509766,
+      "retain_ce": 3.0166072845458984,
+      "retain_repr": 0.00762939453125
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.97265625,
+      "sim_forget": 11.933345794677734,
+      "retain_ce": 1.347485065460205,
+      "retain_repr": 0.003936767578125
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.92578125,
+      "sim_forget": 11.69888973236084,
+      "retain_ce": 1.8486179113388062,
+      "retain_repr": 0.0250244140625
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9609375,
+      "sim_forget": 11.498880386352539,
+      "retain_ce": 2.9464361667633057,
+      "retain_repr": 0.0106201171875
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.03125,
+      "sim_forget": 10.825254440307617,
+      "retain_ce": 2.078670024871826,
+      "retain_repr": 0.010498046875
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.96875,
+      "sim_forget": 11.562127113342285,
+      "retain_ce": 1.7489293813705444,
+      "retain_repr": 0.0289306640625
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9296875,
+      "sim_forget": 11.28386402130127,
+      "retain_ce": 2.740898609161377,
+      "retain_repr": 0.0120849609375
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.921875,
+      "sim_forget": 11.34821891784668,
+      "retain_ce": 2.2752561569213867,
+      "retain_repr": 0.031494140625
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.91015625,
+      "sim_forget": 11.776094436645508,
+      "retain_ce": 1.7026972770690918,
+      "retain_repr": 0.00836181640625
+    }
+  },
+  {
+    "step": 9,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 52.5,
+      "sim_forget": 11.950236320495605,
+      "retain_ce": 1.8232898712158203,
+      "retain_repr": 0.015625
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 332,
+    "components": {
+      "rmu_forget": 0.984375,
+      "sim_forget": 11.375160217285156,
+      "retain_ce": 0.7638891935348511,
+      "retain_repr": 0.002655029296875
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9296875,
+      "sim_forget": 11.797980308532715,
+      "retain_ce": 1.8404691219329834,
+      "retain_repr": 0.018798828125
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.953125,
+      "sim_forget": 11.760531425476074,
+      "retain_ce": 2.0288772583007812,
+      "retain_repr": 0.0286865234375
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.921875,
+      "sim_forget": 11.848165512084961,
+      "retain_ce": 1.6949876546859741,
+      "retain_repr": 0.01251220703125
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.98828125,
+      "sim_forget": 11.37093734741211,
+      "retain_ce": 2.089684009552002,
+      "retain_repr": 0.006988525390625
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 430,
+    "components": {
+      "rmu_forget": 1.0,
+      "sim_forget": 11.424127578735352,
+      "retain_ce": 0.38106849789619446,
+      "retain_repr": 0.00201416015625
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 404,
+    "components": {
+      "rmu_forget": 1.078125,
+      "sim_forget": 11.43417739868164,
+      "retain_ce": 0.2257547527551651,
+      "retain_repr": 0.00225830078125
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.97265625,
+      "sim_forget": 12.20252513885498,
+      "retain_ce": 1.5285457372665405,
+      "retain_repr": 0.037841796875
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.88671875,
+      "sim_forget": 11.40398120880127,
+      "retain_ce": 1.4065148830413818,
+      "retain_repr": 0.02197265625
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.046875,
+      "sim_forget": 11.701955795288086,
+      "retain_ce": 1.7200956344604492,
+      "retain_repr": 0.01129150390625
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0,
+      "sim_forget": 11.04196548461914,
+      "retain_ce": 2.223884105682373,
+      "retain_repr": 0.01226806640625
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.96875,
+      "sim_forget": 11.569791793823242,
+      "retain_ce": 2.7352681159973145,
+      "retain_repr": 0.012939453125
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9375,
+      "sim_forget": 11.057819366455078,
+      "retain_ce": 1.783289909362793,
+      "retain_repr": 0.03759765625
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.92578125,
+      "sim_forget": 11.577762603759766,
+      "retain_ce": 2.9358103275299072,
+      "retain_repr": 0.01275634765625
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 278,
+    "components": {
+      "rmu_forget": 1.046875,
+      "sim_forget": 12.139694213867188,
+      "retain_ce": 1.3668266534805298,
+      "retain_repr": 0.0034332275390625
+    }
+  },
+  {
+    "step": 10,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9609375,
+      "sim_forget": 12.174128532409668,
+      "retain_ce": 2.4110331535339355,
+      "retain_repr": 0.01190185546875
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9453125,
+      "sim_forget": 11.908568382263184,
+      "retain_ce": 2.057610273361206,
+      "retain_repr": 0.0269775390625
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.96875,
+      "sim_forget": 11.767072677612305,
+      "retain_ce": 3.0364835262298584,
+      "retain_repr": 0.00830078125
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9609375,
+      "sim_forget": 11.368145942687988,
+      "retain_ce": 1.298866629600525,
+      "retain_repr": 0.00958251953125
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.87109375,
+      "sim_forget": 11.305594444274902,
+      "retain_ce": 2.058098793029785,
+      "retain_repr": 0.032470703125
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.078125,
+      "sim_forget": 10.930676460266113,
+      "retain_ce": 2.1131575107574463,
+      "retain_repr": 0.048583984375
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0625,
+      "sim_forget": 11.402831077575684,
+      "retain_ce": 2.1502296924591064,
+      "retain_repr": 0.0208740234375
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.97265625,
+      "sim_forget": 11.280387878417969,
+      "retain_ce": 3.0981693267822266,
+      "retain_repr": 0.00701904296875
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.88671875,
+      "sim_forget": 11.940826416015625,
+      "retain_ce": 1.3715437650680542,
+      "retain_repr": 0.00604248046875
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.87109375,
+      "sim_forget": 11.354639053344727,
+      "retain_ce": 1.280070185661316,
+      "retain_repr": 0.01348876953125
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9921875,
+      "sim_forget": 11.187629699707031,
+      "retain_ce": 1.9183156490325928,
+      "retain_repr": 0.0361328125
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.921875,
+      "sim_forget": 11.883939743041992,
+      "retain_ce": 3.045664072036743,
+      "retain_repr": 0.01104736328125
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.015625,
+      "sim_forget": 10.903925895690918,
+      "retain_ce": 2.058929920196533,
+      "retain_repr": 0.0206298828125
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.84375,
+      "sim_forget": 12.045926094055176,
+      "retain_ce": 2.201878547668457,
+      "retain_repr": 0.017578125
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 1.0546875,
+      "sim_forget": 11.207042694091797,
+      "retain_ce": 1.978145956993103,
+      "retain_repr": 0.0306396484375
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8515625,
+      "sim_forget": 12.2863187789917,
+      "retain_ce": 1.4019277095794678,
+      "retain_repr": 0.03125
+    }
+  },
+  {
+    "step": 11,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9921875,
+      "sim_forget": 11.245826721191406,
+      "retain_ce": 2.3008227348327637,
+      "retain_repr": 0.0130615234375
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.921875,
+      "sim_forget": 11.742950439453125,
+      "retain_ce": 2.232720136642456,
+      "retain_repr": 0.043701171875
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8125,
+      "sim_forget": 11.771674156188965,
+      "retain_ce": 2.252835273742676,
+      "retain_repr": 0.025390625
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.984375,
+      "sim_forget": 11.115123748779297,
+      "retain_ce": 2.055258274078369,
+      "retain_repr": 0.014404296875
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9140625,
+      "sim_forget": 11.846488952636719,
+      "retain_ce": 2.6985087394714355,
+      "retain_repr": 0.0235595703125
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.88671875,
+      "sim_forget": 12.19194507598877,
+      "retain_ce": 1.023241639137268,
+      "retain_repr": 0.0034332275390625
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8125,
+      "sim_forget": 11.833643913269043,
+      "retain_ce": 1.9312679767608643,
+      "retain_repr": 0.01611328125
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 278,
+    "components": {
+      "rmu_forget": 0.828125,
+      "sim_forget": 11.477989196777344,
+      "retain_ce": 1.3425737619400024,
+      "retain_repr": 0.003936767578125
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 436,
+    "components": {
+      "rmu_forget": 0.9375,
+      "sim_forget": 11.170267105102539,
+      "retain_ce": 0.3336356282234192,
+      "retain_repr": 0.0031280517578125
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.91015625,
+      "sim_forget": 11.800865173339844,
+      "retain_ce": 1.5649610757827759,
+      "retain_repr": 0.03515625
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.90234375,
+      "sim_forget": 12.258172988891602,
+      "retain_ce": 1.1900010108947754,
+      "retain_repr": 0.013671875
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.92578125,
+      "sim_forget": 11.668981552124023,
+      "retain_ce": 1.684352993965149,
+      "retain_repr": 0.0250244140625
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.921875,
+      "sim_forget": 11.821664810180664,
+      "retain_ce": 2.3603615760803223,
+      "retain_repr": 0.031982421875
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 52.25,
+      "sim_forget": 12.277366638183594,
+      "retain_ce": 2.9435131549835205,
+      "retain_repr": 0.01263427734375
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.91796875,
+      "sim_forget": 11.405998229980469,
+      "retain_ce": 1.7959529161453247,
+      "retain_repr": 0.03564453125
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9921875,
+      "sim_forget": 12.91070556640625,
+      "retain_ce": 2.5942161083221436,
+      "retain_repr": 0.045654296875
+    }
+  },
+  {
+    "step": 12,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.921875,
+      "sim_forget": 11.072092056274414,
+      "retain_ce": 2.180392265319824,
+      "retain_repr": 0.0157470703125
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 77.5,
+      "sim_forget": 11.385422706604004,
+      "retain_ce": 1.7772585153579712,
+      "retain_repr": 0.043701171875
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.828125,
+      "sim_forget": 11.759461402893066,
+      "retain_ce": 1.3615646362304688,
+      "retain_repr": 0.0228271484375
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.88671875,
+      "sim_forget": 11.609854698181152,
+      "retain_ce": 2.496976137161255,
+      "retain_repr": 0.019287109375
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9140625,
+      "sim_forget": 11.279488563537598,
+      "retain_ce": 1.7135225534439087,
+      "retain_repr": 0.041015625
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 278,
+    "components": {
+      "rmu_forget": 0.9375,
+      "sim_forget": 11.049816131591797,
+      "retain_ce": 1.3074134588241577,
+      "retain_repr": 0.00421142578125
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8828125,
+      "sim_forget": 11.955480575561523,
+      "retain_ce": 2.8882851600646973,
+      "retain_repr": 0.042236328125
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.92578125,
+      "sim_forget": 11.659001350402832,
+      "retain_ce": 1.6700949668884277,
+      "retain_repr": 0.0216064453125
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.97265625,
+      "sim_forget": 11.461315155029297,
+      "retain_ce": 2.3911468982696533,
+      "retain_repr": 0.0206298828125
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.765625,
+      "sim_forget": 11.955377578735352,
+      "retain_ce": 2.496976137161255,
+      "retain_repr": 0.019287109375
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.96484375,
+      "sim_forget": 11.35822868347168,
+      "retain_ce": 1.8063206672668457,
+      "retain_repr": 0.042724609375
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80078125,
+      "sim_forget": 12.24046516418457,
+      "retain_ce": 1.6355699300765991,
+      "retain_repr": 0.035400390625
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80078125,
+      "sim_forget": 11.748991966247559,
+      "retain_ce": 2.0383646488189697,
+      "retain_repr": 0.044921875
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.78125,
+      "sim_forget": 10.96849536895752,
+      "retain_ce": 3.295851945877075,
+      "retain_repr": 0.0196533203125
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.81640625,
+      "sim_forget": 11.449542045593262,
+      "retain_ce": 2.4729769229888916,
+      "retain_repr": 0.0181884765625
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.87890625,
+      "sim_forget": 11.279108047485352,
+      "retain_ce": 2.748950242996216,
+      "retain_repr": 0.035888671875
+    }
+  },
+  {
+    "step": 13,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9453125,
+      "sim_forget": 11.453665733337402,
+      "retain_ce": 2.289163112640381,
+      "retain_repr": 0.0198974609375
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.78125,
+      "sim_forget": 11.318218231201172,
+      "retain_ce": 2.1034796237945557,
+      "retain_repr": 0.04638671875
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7890625,
+      "sim_forget": 11.303420066833496,
+      "retain_ce": 2.93837308883667,
+      "retain_repr": 0.033203125
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 91.0,
+      "sim_forget": 11.58366584777832,
+      "retain_ce": 1.6309629678726196,
+      "retain_repr": 0.018310546875
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8203125,
+      "sim_forget": 11.71712875366211,
+      "retain_ce": 1.5503078699111938,
+      "retain_repr": 0.030517578125
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.93359375,
+      "sim_forget": 11.279472351074219,
+      "retain_ce": 2.4618730545043945,
+      "retain_repr": 0.01116943359375
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.890625,
+      "sim_forget": 11.698343276977539,
+      "retain_ce": 3.000624656677246,
+      "retain_repr": 0.01336669921875
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.90234375,
+      "sim_forget": 11.310362815856934,
+      "retain_ce": 2.706536293029785,
+      "retain_repr": 0.035400390625
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9296875,
+      "sim_forget": 11.317015647888184,
+      "retain_ce": 1.7813098430633545,
+      "retain_repr": 0.0224609375
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.94140625,
+      "sim_forget": 11.116140365600586,
+      "retain_ce": 1.6681925058364868,
+      "retain_repr": 0.0361328125
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.92578125,
+      "sim_forget": 12.028730392456055,
+      "retain_ce": 2.1484766006469727,
+      "retain_repr": 0.01904296875
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.91015625,
+      "sim_forget": 12.081279754638672,
+      "retain_ce": 1.7832551002502441,
+      "retain_repr": 0.006439208984375
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8984375,
+      "sim_forget": 11.372904777526855,
+      "retain_ce": 1.914573311805725,
+      "retain_repr": 0.044189453125
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8125,
+      "sim_forget": 11.832225799560547,
+      "retain_ce": 1.7483817338943481,
+      "retain_repr": 0.01287841796875
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.87890625,
+      "sim_forget": 11.73716926574707,
+      "retain_ce": 2.0457303524017334,
+      "retain_repr": 0.02734375
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.96484375,
+      "sim_forget": 11.068115234375,
+      "retain_ce": 2.1480207443237305,
+      "retain_repr": 0.04150390625
+    }
+  },
+  {
+    "step": 14,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.84375,
+      "sim_forget": 11.357959747314453,
+      "retain_ce": 1.847118854522705,
+      "retain_repr": 0.0211181640625
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.93359375,
+      "sim_forget": 11.989779472351074,
+      "retain_ce": 2.4245681762695312,
+      "retain_repr": 0.0537109375
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8125,
+      "sim_forget": 12.321737289428711,
+      "retain_ce": 2.106287717819214,
+      "retain_repr": 0.044189453125
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.83984375,
+      "sim_forget": 11.590465545654297,
+      "retain_ce": 1.1999170780181885,
+      "retain_repr": 0.01336669921875
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.97265625,
+      "sim_forget": 10.98694896697998,
+      "retain_ce": 2.00425386428833,
+      "retain_repr": 0.054443359375
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.82421875,
+      "sim_forget": 11.644448280334473,
+      "retain_ce": 1.7984775304794312,
+      "retain_repr": 0.035400390625
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 308,
+    "components": {
+      "rmu_forget": 0.88671875,
+      "sim_forget": 11.832082748413086,
+      "retain_ce": 0.972756028175354,
+      "retain_repr": 0.003936767578125
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.88671875,
+      "sim_forget": 11.4915189743042,
+      "retain_ce": 2.098372459411621,
+      "retain_repr": 0.0281982421875
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9609375,
+      "sim_forget": 11.818592071533203,
+      "retain_ce": 2.2341227531433105,
+      "retain_repr": 0.037353515625
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.890625,
+      "sim_forget": 12.09103775024414,
+      "retain_ce": 2.4245681762695312,
+      "retain_repr": 0.0537109375
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7734375,
+      "sim_forget": 11.80685806274414,
+      "retain_ce": 2.2267463207244873,
+      "retain_repr": 0.030029296875
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80078125,
+      "sim_forget": 11.407065391540527,
+      "retain_ce": 0.7516081929206848,
+      "retain_repr": 0.00897216796875
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.828125,
+      "sim_forget": 11.022201538085938,
+      "retain_ce": 2.8447189331054688,
+      "retain_repr": 0.0277099609375
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8203125,
+      "sim_forget": 11.856172561645508,
+      "retain_ce": 1.9431524276733398,
+      "retain_repr": 0.06298828125
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.89453125,
+      "sim_forget": 12.17905044555664,
+      "retain_ce": 1.5644621849060059,
+      "retain_repr": 0.0220947265625
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.86328125,
+      "sim_forget": 11.485294342041016,
+      "retain_ce": 2.7861416339874268,
+      "retain_repr": 0.0322265625
+    }
+  },
+  {
+    "step": 15,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7734375,
+      "sim_forget": 11.559856414794922,
+      "retain_ce": 1.951297402381897,
+      "retain_repr": 0.03662109375
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.90234375,
+      "sim_forget": 12.245729446411133,
+      "retain_ce": 2.191587448120117,
+      "retain_repr": 0.0257568359375
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.875,
+      "sim_forget": 11.712530136108398,
+      "retain_ce": 1.602512001991272,
+      "retain_repr": 0.0262451171875
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.82421875,
+      "sim_forget": 11.686351776123047,
+      "retain_ce": 1.7139729261398315,
+      "retain_repr": 0.051025390625
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.85546875,
+      "sim_forget": 11.955158233642578,
+      "retain_ce": 2.102181911468506,
+      "retain_repr": 0.07470703125
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.95703125,
+      "sim_forget": 11.24455451965332,
+      "retain_ce": 3.4960172176361084,
+      "retain_repr": 0.0177001953125
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.83203125,
+      "sim_forget": 11.719310760498047,
+      "retain_ce": 1.7312698364257812,
+      "retain_repr": 0.057861328125
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.73828125,
+      "sim_forget": 11.764833450317383,
+      "retain_ce": 1.9155845642089844,
+      "retain_repr": 0.047119140625
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7421875,
+      "sim_forget": 11.767927169799805,
+      "retain_ce": 2.652526378631592,
+      "retain_repr": 0.0264892578125
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.85546875,
+      "sim_forget": 12.132951736450195,
+      "retain_ce": 2.53800892829895,
+      "retain_repr": 0.02587890625
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 362,
+    "components": {
+      "rmu_forget": 0.83203125,
+      "sim_forget": 11.929287910461426,
+      "retain_ce": 1.8183852434158325,
+      "retain_repr": 0.00653076171875
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.859375,
+      "sim_forget": 12.280007362365723,
+      "retain_ce": 3.092487335205078,
+      "retain_repr": 0.025146484375
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.921875,
+      "sim_forget": 11.441250801086426,
+      "retain_ce": 2.2189204692840576,
+      "retain_repr": 0.052490234375
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.875,
+      "sim_forget": 12.051105499267578,
+      "retain_ce": 2.0090012550354004,
+      "retain_repr": 0.031982421875
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.82421875,
+      "sim_forget": 11.683992385864258,
+      "retain_ce": 2.494581460952759,
+      "retain_repr": 0.03271484375
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8671875,
+      "sim_forget": 11.599296569824219,
+      "retain_ce": 1.5590566396713257,
+      "retain_repr": 0.03076171875
+    }
+  },
+  {
+    "step": 16,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.87890625,
+      "sim_forget": 11.919986724853516,
+      "retain_ce": 2.0294156074523926,
+      "retain_repr": 0.0771484375
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.94921875,
+      "sim_forget": 11.468273162841797,
+      "retain_ce": 2.2362477779388428,
+      "retain_repr": 0.0830078125
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.921875,
+      "sim_forget": 11.633848190307617,
+      "retain_ce": 2.21331787109375,
+      "retain_repr": 0.0849609375
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.82421875,
+      "sim_forget": 11.450485229492188,
+      "retain_ce": 1.3208696842193604,
+      "retain_repr": 0.0252685546875
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 373,
+    "components": {
+      "rmu_forget": 52.25,
+      "sim_forget": 11.92726993560791,
+      "retain_ce": 1.4682316780090332,
+      "retain_repr": 0.02001953125
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.89453125,
+      "sim_forget": 11.658967971801758,
+      "retain_ce": 1.6701595783233643,
+      "retain_repr": 0.062255859375
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.87109375,
+      "sim_forget": 11.485311508178711,
+      "retain_ce": 2.6243624687194824,
+      "retain_repr": 0.021240234375
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71875,
+      "sim_forget": 11.465736389160156,
+      "retain_ce": 2.5821990966796875,
+      "retain_repr": 0.046630859375
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7890625,
+      "sim_forget": 11.70669174194336,
+      "retain_ce": 2.6782009601593018,
+      "retain_repr": 0.08056640625
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9296875,
+      "sim_forget": 12.219928741455078,
+      "retain_ce": 1.8655554056167603,
+      "retain_repr": 0.0146484375
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8984375,
+      "sim_forget": 11.890909194946289,
+      "retain_ce": 1.972907304763794,
+      "retain_repr": 0.0654296875
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.83984375,
+      "sim_forget": 11.818052291870117,
+      "retain_ce": 2.2500550746917725,
+      "retain_repr": 0.034912109375
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.87890625,
+      "sim_forget": 11.691362380981445,
+      "retain_ce": 2.1581101417541504,
+      "retain_repr": 0.024658203125
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.875,
+      "sim_forget": 11.92818546295166,
+      "retain_ce": 1.993182897567749,
+      "retain_repr": 0.0172119140625
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 488,
+    "components": {
+      "rmu_forget": 0.875,
+      "sim_forget": 12.08738899230957,
+      "retain_ce": 0.3235422372817993,
+      "retain_repr": 0.002532958984375
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.77734375,
+      "sim_forget": 11.164788246154785,
+      "retain_ce": 1.0387626886367798,
+      "retain_repr": 0.00933837890625
+    }
+  },
+  {
+    "step": 17,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.84765625,
+      "sim_forget": 11.520423889160156,
+      "retain_ce": 1.711896300315857,
+      "retain_repr": 0.0169677734375
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.73046875,
+      "sim_forget": 11.808771133422852,
+      "retain_ce": 1.6265250444412231,
+      "retain_repr": 0.0322265625
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 304,
+    "components": {
+      "rmu_forget": 0.76171875,
+      "sim_forget": 11.510504722595215,
+      "retain_ce": 0.8569834232330322,
+      "retain_repr": 0.004913330078125
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 404,
+    "components": {
+      "rmu_forget": 0.7421875,
+      "sim_forget": 11.9267578125,
+      "retain_ce": 0.25479328632354736,
+      "retain_repr": 0.003021240234375
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.828125,
+      "sim_forget": 12.167367935180664,
+      "retain_ce": 2.307241439819336,
+      "retain_repr": 0.0380859375
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8359375,
+      "sim_forget": 11.748598098754883,
+      "retain_ce": 1.7064980268478394,
+      "retain_repr": 0.0576171875
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.91015625,
+      "sim_forget": 11.884096145629883,
+      "retain_ce": 2.5829362869262695,
+      "retain_repr": 0.044677734375
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.79296875,
+      "sim_forget": 11.713556289672852,
+      "retain_ce": 1.8230992555618286,
+      "retain_repr": 0.07763671875
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.76953125,
+      "sim_forget": 11.890811920166016,
+      "retain_ce": 2.509719133377075,
+      "retain_repr": 0.07861328125
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.87890625,
+      "sim_forget": 12.193899154663086,
+      "retain_ce": 1.807418704032898,
+      "retain_repr": 0.03076171875
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.87109375,
+      "sim_forget": 10.850082397460938,
+      "retain_ce": 2.206083297729492,
+      "retain_repr": 0.037353515625
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8359375,
+      "sim_forget": 11.231134414672852,
+      "retain_ce": 2.6705801486968994,
+      "retain_repr": 0.027099609375
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.77734375,
+      "sim_forget": 11.921969413757324,
+      "retain_ce": 2.1495683193206787,
+      "retain_repr": 0.031005859375
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.86328125,
+      "sim_forget": 11.682846069335938,
+      "retain_ce": 2.131924867630005,
+      "retain_repr": 0.0220947265625
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.796875,
+      "sim_forget": 11.483025550842285,
+      "retain_ce": 3.2235605716705322,
+      "retain_repr": 0.019775390625
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71875,
+      "sim_forget": 11.625293731689453,
+      "retain_ce": 2.246314764022827,
+      "retain_repr": 0.0634765625
+    }
+  },
+  {
+    "step": 18,
+    "effective_prediction_tokens": 304,
+    "components": {
+      "rmu_forget": 0.76171875,
+      "sim_forget": 11.677709579467773,
+      "retain_ce": 0.6404798030853271,
+      "retain_repr": 0.004547119140625
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7578125,
+      "sim_forget": 11.632142066955566,
+      "retain_ce": 2.5205459594726562,
+      "retain_repr": 0.03857421875
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.73046875,
+      "sim_forget": 11.787972450256348,
+      "retain_ce": 1.355088472366333,
+      "retain_repr": 0.0233154296875
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.73828125,
+      "sim_forget": 11.353750228881836,
+      "retain_ce": 2.2796425819396973,
+      "retain_repr": 0.041748046875
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.69140625,
+      "sim_forget": 11.612237930297852,
+      "retain_ce": 1.7944670915603638,
+      "retain_repr": 0.0634765625
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.76953125,
+      "sim_forget": 11.674482345581055,
+      "retain_ce": 2.097332715988159,
+      "retain_repr": 0.0810546875
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.859375,
+      "sim_forget": 12.008576393127441,
+      "retain_ce": 1.5805702209472656,
+      "retain_repr": 0.0732421875
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.81640625,
+      "sim_forget": 11.87341594696045,
+      "retain_ce": 1.6805880069732666,
+      "retain_repr": 0.0301513671875
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.78515625,
+      "sim_forget": 11.892974853515625,
+      "retain_ce": 2.5438485145568848,
+      "retain_repr": 0.025390625
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 384,
+    "components": {
+      "rmu_forget": 0.72265625,
+      "sim_forget": 11.487711906433105,
+      "retain_ce": 0.43207862973213196,
+      "retain_repr": 0.0057373046875
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.76953125,
+      "sim_forget": 11.260040283203125,
+      "retain_ce": 2.056356191635132,
+      "retain_repr": 0.049072265625
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8125,
+      "sim_forget": 11.901081085205078,
+      "retain_ce": 2.312349319458008,
+      "retain_repr": 0.0556640625
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.86328125,
+      "sim_forget": 10.976643562316895,
+      "retain_ce": 2.3340494632720947,
+      "retain_repr": 0.0284423828125
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.83203125,
+      "sim_forget": 12.101264953613281,
+      "retain_ce": 1.5978987216949463,
+      "retain_repr": 0.039306640625
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.79296875,
+      "sim_forget": 11.129985809326172,
+      "retain_ce": 1.9248214960098267,
+      "retain_repr": 0.0194091796875
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9609375,
+      "sim_forget": 11.382881164550781,
+      "retain_ce": 1.7345499992370605,
+      "retain_repr": 0.058837890625
+    }
+  },
+  {
+    "step": 19,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.75,
+      "sim_forget": 11.863395690917969,
+      "retain_ce": 1.3453274965286255,
+      "retain_repr": 0.01141357421875
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.78125,
+      "sim_forget": 11.56501293182373,
+      "retain_ce": 2.7233388423919678,
+      "retain_repr": 0.038330078125
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71484375,
+      "sim_forget": 11.705498695373535,
+      "retain_ce": 3.539506673812866,
+      "retain_repr": 0.032958984375
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.82421875,
+      "sim_forget": 11.884025573730469,
+      "retain_ce": 1.5905187129974365,
+      "retain_repr": 0.0517578125
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7109375,
+      "sim_forget": 11.180242538452148,
+      "retain_ce": 2.057602643966675,
+      "retain_repr": 0.072265625
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.75,
+      "sim_forget": 11.457874298095703,
+      "retain_ce": 2.133882999420166,
+      "retain_repr": 0.068359375
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.86328125,
+      "sim_forget": 10.847369194030762,
+      "retain_ce": 1.7250478267669678,
+      "retain_repr": 0.037353515625
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7265625,
+      "sim_forget": 11.674013137817383,
+      "retain_ce": 1.663560152053833,
+      "retain_repr": 0.0712890625
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7734375,
+      "sim_forget": 11.316446304321289,
+      "retain_ce": 1.958994746208191,
+      "retain_repr": 0.0771484375
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80078125,
+      "sim_forget": 12.0182523727417,
+      "retain_ce": 2.345489978790283,
+      "retain_repr": 0.04736328125
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.84765625,
+      "sim_forget": 11.351606369018555,
+      "retain_ce": 2.7078354358673096,
+      "retain_repr": 0.039794921875
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.77734375,
+      "sim_forget": 10.887727737426758,
+      "retain_ce": 2.1825551986694336,
+      "retain_repr": 0.05029296875
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.82421875,
+      "sim_forget": 11.868609428405762,
+      "retain_ce": 2.6663970947265625,
+      "retain_repr": 0.0498046875
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.796875,
+      "sim_forget": 11.55159854888916,
+      "retain_ce": 1.8360434770584106,
+      "retain_repr": 0.0341796875
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71875,
+      "sim_forget": 11.90951156616211,
+      "retain_ce": 1.7681958675384521,
+      "retain_repr": 0.043701171875
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80859375,
+      "sim_forget": 12.152288436889648,
+      "retain_ce": 2.293649911880493,
+      "retain_repr": 0.056640625
+    }
+  },
+  {
+    "step": 20,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.86328125,
+      "sim_forget": 11.741920471191406,
+      "retain_ce": 2.0909385681152344,
+      "retain_repr": 0.041259765625
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.73828125,
+      "sim_forget": 11.972384452819824,
+      "retain_ce": 2.675816774368286,
+      "retain_repr": 0.044921875
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7109375,
+      "sim_forget": 11.148195266723633,
+      "retain_ce": 2.3004562854766846,
+      "retain_repr": 0.03662109375
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.69140625,
+      "sim_forget": 11.282600402832031,
+      "retain_ce": 2.0745954513549805,
+      "retain_repr": 0.064453125
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.79296875,
+      "sim_forget": 11.667084693908691,
+      "retain_ce": 1.7658030986785889,
+      "retain_repr": 0.031494140625
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.859375,
+      "sim_forget": 12.052183151245117,
+      "retain_ce": 1.8960058689117432,
+      "retain_repr": 0.07373046875
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.68359375,
+      "sim_forget": 12.256649017333984,
+      "retain_ce": 2.160245895385742,
+      "retain_repr": 0.04443359375
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8046875,
+      "sim_forget": 11.758415222167969,
+      "retain_ce": 2.1266283988952637,
+      "retain_repr": 0.05078125
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.73828125,
+      "sim_forget": 12.192002296447754,
+      "retain_ce": 0.17384208738803864,
+      "retain_repr": 0.00274658203125
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7578125,
+      "sim_forget": 11.21055793762207,
+      "retain_ce": 1.4775885343551636,
+      "retain_repr": 0.0341796875
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.796875,
+      "sim_forget": 11.66116714477539,
+      "retain_ce": 2.8012728691101074,
+      "retain_repr": 0.036865234375
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.9140625,
+      "sim_forget": 11.735698699951172,
+      "retain_ce": 0.41197481751441956,
+      "retain_repr": 0.00799560546875
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 479,
+    "components": {
+      "rmu_forget": 0.83203125,
+      "sim_forget": 12.011122703552246,
+      "retain_ce": 0.23313070833683014,
+      "retain_repr": 0.0034942626953125
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.734375,
+      "sim_forget": 11.968708992004395,
+      "retain_ce": 2.9686977863311768,
+      "retain_repr": 0.0732421875
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8046875,
+      "sim_forget": 11.726003646850586,
+      "retain_ce": 1.1947548389434814,
+      "retain_repr": 0.0135498046875
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71875,
+      "sim_forget": 11.888267517089844,
+      "retain_ce": 0.18333721160888672,
+      "retain_repr": 0.002899169921875
+    }
+  },
+  {
+    "step": 21,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8203125,
+      "sim_forget": 12.057113647460938,
+      "retain_ce": 2.1223134994506836,
+      "retain_repr": 0.025390625
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.78125,
+      "sim_forget": 11.51033878326416,
+      "retain_ce": 1.6758978366851807,
+      "retain_repr": 0.040771484375
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8046875,
+      "sim_forget": 11.684826850891113,
+      "retain_ce": 1.7781862020492554,
+      "retain_repr": 0.07958984375
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.69921875,
+      "sim_forget": 11.937151908874512,
+      "retain_ce": 2.302788019180298,
+      "retain_repr": 0.050537109375
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8515625,
+      "sim_forget": 11.209043502807617,
+      "retain_ce": 2.9195971488952637,
+      "retain_repr": 0.027587890625
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7890625,
+      "sim_forget": 11.46085262298584,
+      "retain_ce": 1.737430453300476,
+      "retain_repr": 0.05517578125
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.953125,
+      "sim_forget": 11.556522369384766,
+      "retain_ce": 1.8520740270614624,
+      "retain_repr": 0.06689453125
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.73828125,
+      "sim_forget": 11.371349334716797,
+      "retain_ce": 2.376209259033203,
+      "retain_repr": 0.08154296875
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7890625,
+      "sim_forget": 11.689031600952148,
+      "retain_ce": 2.177778959274292,
+      "retain_repr": 0.06689453125
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8046875,
+      "sim_forget": 12.391260147094727,
+      "retain_ce": 1.7165064811706543,
+      "retain_repr": 0.0341796875
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.70703125,
+      "sim_forget": 11.960387229919434,
+      "retain_ce": 1.6464446783065796,
+      "retain_repr": 0.04296875
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 418,
+    "components": {
+      "rmu_forget": 0.63671875,
+      "sim_forget": 12.12428092956543,
+      "retain_ce": 1.667472243309021,
+      "retain_repr": 0.015869140625
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8515625,
+      "sim_forget": 11.89853572845459,
+      "retain_ce": 1.7487179040908813,
+      "retain_repr": 0.04248046875
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.69140625,
+      "sim_forget": 11.536991119384766,
+      "retain_ce": 2.0169270038604736,
+      "retain_repr": 0.0286865234375
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.85546875,
+      "sim_forget": 11.503900527954102,
+      "retain_ce": 2.4682183265686035,
+      "retain_repr": 0.049560546875
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6640625,
+      "sim_forget": 12.058186531066895,
+      "retain_ce": 2.0022993087768555,
+      "retain_repr": 0.11328125
+    }
+  },
+  {
+    "step": 22,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80078125,
+      "sim_forget": 11.480637550354004,
+      "retain_ce": 1.362133502960205,
+      "retain_repr": 0.0220947265625
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6328125,
+      "sim_forget": 11.887922286987305,
+      "retain_ce": 2.591683864593506,
+      "retain_repr": 0.0703125
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71484375,
+      "sim_forget": 11.5928316116333,
+      "retain_ce": 1.4446537494659424,
+      "retain_repr": 0.03271484375
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.65234375,
+      "sim_forget": 11.9523344039917,
+      "retain_ce": 2.0648908615112305,
+      "retain_repr": 0.07763671875
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.67578125,
+      "sim_forget": 12.141140937805176,
+      "retain_ce": 2.5581438541412354,
+      "retain_repr": 0.0269775390625
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.671875,
+      "sim_forget": 10.989561080932617,
+      "retain_ce": 2.7191050052642822,
+      "retain_repr": 0.043212890625
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7734375,
+      "sim_forget": 12.241348266601562,
+      "retain_ce": 1.5791654586791992,
+      "retain_repr": 0.0281982421875
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.62890625,
+      "sim_forget": 11.88801383972168,
+      "retain_ce": 2.2535204887390137,
+      "retain_repr": 0.058837890625
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.88671875,
+      "sim_forget": 11.080436706542969,
+      "retain_ce": 2.750119686126709,
+      "retain_repr": 0.054443359375
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.81640625,
+      "sim_forget": 11.87431812286377,
+      "retain_ce": 1.6565979719161987,
+      "retain_repr": 0.04345703125
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.75390625,
+      "sim_forget": 11.143685340881348,
+      "retain_ce": 2.2349579334259033,
+      "retain_repr": 0.03466796875
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.78125,
+      "sim_forget": 12.120065689086914,
+      "retain_ce": 2.1545956134796143,
+      "retain_repr": 0.046630859375
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 448,
+    "components": {
+      "rmu_forget": 0.71875,
+      "sim_forget": 11.02357006072998,
+      "retain_ce": 0.39398193359375,
+      "retain_repr": 0.00555419921875
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.68359375,
+      "sim_forget": 12.029156684875488,
+      "retain_ce": 2.3966073989868164,
+      "retain_repr": 0.0498046875
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7109375,
+      "sim_forget": 10.967508316040039,
+      "retain_ce": 1.8450125455856323,
+      "retain_repr": 0.06689453125
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.94140625,
+      "sim_forget": 10.829263687133789,
+      "retain_ce": 2.1453516483306885,
+      "retain_repr": 0.045654296875
+    }
+  },
+  {
+    "step": 23,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.73828125,
+      "sim_forget": 11.227149963378906,
+      "retain_ce": 2.0125253200531006,
+      "retain_repr": 0.0252685546875
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7890625,
+      "sim_forget": 11.668222427368164,
+      "retain_ce": 1.8821264505386353,
+      "retain_repr": 0.04150390625
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71484375,
+      "sim_forget": 12.405973434448242,
+      "retain_ce": 2.4784998893737793,
+      "retain_repr": 0.0205078125
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.66796875,
+      "sim_forget": 11.423550605773926,
+      "retain_ce": 1.9210573434829712,
+      "retain_repr": 0.049072265625
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7734375,
+      "sim_forget": 11.50926399230957,
+      "retain_ce": 1.7804147005081177,
+      "retain_repr": 0.087890625
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80859375,
+      "sim_forget": 11.425710678100586,
+      "retain_ce": 2.4286131858825684,
+      "retain_repr": 0.0654296875
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7578125,
+      "sim_forget": 11.108604431152344,
+      "retain_ce": 1.9558725357055664,
+      "retain_repr": 0.0654296875
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.84765625,
+      "sim_forget": 11.450838088989258,
+      "retain_ce": 1.5562585592269897,
+      "retain_repr": 0.0137939453125
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.79296875,
+      "sim_forget": 11.963873863220215,
+      "retain_ce": 2.5005581378936768,
+      "retain_repr": 0.07421875
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8203125,
+      "sim_forget": 11.917154312133789,
+      "retain_ce": 2.012739419937134,
+      "retain_repr": 0.040283203125
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.65625,
+      "sim_forget": 11.588800430297852,
+      "retain_ce": 2.774190902709961,
+      "retain_repr": 0.048583984375
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.63671875,
+      "sim_forget": 12.06778621673584,
+      "retain_ce": 2.1048741340637207,
+      "retain_repr": 0.052490234375
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7578125,
+      "sim_forget": 11.369794845581055,
+      "retain_ce": 2.437519073486328,
+      "retain_repr": 0.06640625
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.72265625,
+      "sim_forget": 10.993494987487793,
+      "retain_ce": 1.0015153884887695,
+      "retain_repr": 0.0224609375
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 278,
+    "components": {
+      "rmu_forget": 0.65234375,
+      "sim_forget": 11.71075439453125,
+      "retain_ce": 1.1153892278671265,
+      "retain_repr": 0.005828857421875
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8046875,
+      "sim_forget": 11.883033752441406,
+      "retain_ce": 0.785754382610321,
+      "retain_repr": 0.007720947265625
+    }
+  },
+  {
+    "step": 24,
+    "effective_prediction_tokens": 278,
+    "components": {
+      "rmu_forget": 0.68359375,
+      "sim_forget": 11.762070655822754,
+      "retain_ce": 1.2438209056854248,
+      "retain_repr": 0.0057373046875
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.66796875,
+      "sim_forget": 11.484299659729004,
+      "retain_ce": 1.6398940086364746,
+      "retain_repr": 0.08203125
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8984375,
+      "sim_forget": 10.495241165161133,
+      "retain_ce": 3.1238553524017334,
+      "retain_repr": 0.02685546875
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7109375,
+      "sim_forget": 11.375689506530762,
+      "retain_ce": 2.0479226112365723,
+      "retain_repr": 0.02978515625
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.640625,
+      "sim_forget": 11.244407653808594,
+      "retain_ce": 2.6612586975097656,
+      "retain_repr": 0.06982421875
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80078125,
+      "sim_forget": 12.036776542663574,
+      "retain_ce": 2.725207805633545,
+      "retain_repr": 0.043212890625
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.63671875,
+      "sim_forget": 12.234768867492676,
+      "retain_ce": 2.306262969970703,
+      "retain_repr": 0.0693359375
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 332,
+    "components": {
+      "rmu_forget": 0.62109375,
+      "sim_forget": 11.364913940429688,
+      "retain_ce": 0.49639591574668884,
+      "retain_repr": 0.00439453125
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.68359375,
+      "sim_forget": 12.064314842224121,
+      "retain_ce": 2.2508606910705566,
+      "retain_repr": 0.043212890625
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7421875,
+      "sim_forget": 11.346681594848633,
+      "retain_ce": 2.1826655864715576,
+      "retain_repr": 0.125
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7734375,
+      "sim_forget": 11.345254898071289,
+      "retain_ce": 2.5968687534332275,
+      "retain_repr": 0.060791015625
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7109375,
+      "sim_forget": 11.514311790466309,
+      "retain_ce": 1.8173540830612183,
+      "retain_repr": 0.11669921875
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.76171875,
+      "sim_forget": 12.001026153564453,
+      "retain_ce": 2.5714097023010254,
+      "retain_repr": 0.0830078125
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.734375,
+      "sim_forget": 11.786898612976074,
+      "retain_ce": 2.446044445037842,
+      "retain_repr": 0.021484375
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6640625,
+      "sim_forget": 11.629900932312012,
+      "retain_ce": 2.7742743492126465,
+      "retain_repr": 0.0654296875
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80859375,
+      "sim_forget": 11.953088760375977,
+      "retain_ce": 2.429363965988159,
+      "retain_repr": 0.11328125
+    }
+  },
+  {
+    "step": 25,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.75,
+      "sim_forget": 11.202340126037598,
+      "retain_ce": 1.9224525690078735,
+      "retain_repr": 0.06982421875
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7734375,
+      "sim_forget": 11.633064270019531,
+      "retain_ce": 1.0761029720306396,
+      "retain_repr": 0.0205078125
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6953125,
+      "sim_forget": 11.50239086151123,
+      "retain_ce": 1.980263352394104,
+      "retain_repr": 0.038330078125
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 11.928315162658691,
+      "retain_ce": 2.03694486618042,
+      "retain_repr": 0.02294921875
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7578125,
+      "sim_forget": 11.142871856689453,
+      "retain_ce": 1.3021748065948486,
+      "retain_repr": 0.058349609375
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71875,
+      "sim_forget": 12.135917663574219,
+      "retain_ce": 1.7038006782531738,
+      "retain_repr": 0.037353515625
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8046875,
+      "sim_forget": 11.020217895507812,
+      "retain_ce": 2.08073353767395,
+      "retain_repr": 0.06494140625
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.734375,
+      "sim_forget": 11.09703254699707,
+      "retain_ce": 2.30440354347229,
+      "retain_repr": 0.030517578125
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.65234375,
+      "sim_forget": 11.255819320678711,
+      "retain_ce": 2.5014007091522217,
+      "retain_repr": 0.08642578125
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 10.882532119750977,
+      "retain_ce": 2.5570132732391357,
+      "retain_repr": 0.048828125
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.63671875,
+      "sim_forget": 11.050064086914062,
+      "retain_ce": 1.834153652191162,
+      "retain_repr": 0.08740234375
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6640625,
+      "sim_forget": 12.081622123718262,
+      "retain_ce": 1.8455233573913574,
+      "retain_repr": 0.027587890625
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6640625,
+      "sim_forget": 12.05840015411377,
+      "retain_ce": 2.6311216354370117,
+      "retain_repr": 0.06689453125
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8125,
+      "sim_forget": 11.420259475708008,
+      "retain_ce": 2.037680149078369,
+      "retain_repr": 0.03564453125
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.625,
+      "sim_forget": 11.518159866333008,
+      "retain_ce": 2.8193345069885254,
+      "retain_repr": 0.050537109375
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.75,
+      "sim_forget": 11.804559707641602,
+      "retain_ce": 2.072620153427124,
+      "retain_repr": 0.10546875
+    }
+  },
+  {
+    "step": 26,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6328125,
+      "sim_forget": 11.194206237792969,
+      "retain_ce": 2.780336856842041,
+      "retain_repr": 0.06005859375
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.76171875,
+      "sim_forget": 11.673505783081055,
+      "retain_ce": 2.2784290313720703,
+      "retain_repr": 0.041259765625
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7734375,
+      "sim_forget": 11.264246940612793,
+      "retain_ce": 2.2265281677246094,
+      "retain_repr": 0.080078125
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.73046875,
+      "sim_forget": 11.715277671813965,
+      "retain_ce": 1.7733607292175293,
+      "retain_repr": 0.04443359375
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.57421875,
+      "sim_forget": 12.206451416015625,
+      "retain_ce": 2.0531368255615234,
+      "retain_repr": 0.05078125
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.63671875,
+      "sim_forget": 11.985952377319336,
+      "retain_ce": 1.1486165523529053,
+      "retain_repr": 0.0625
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 454,
+    "components": {
+      "rmu_forget": 0.6875,
+      "sim_forget": 11.021003723144531,
+      "retain_ce": 0.17060790956020355,
+      "retain_repr": 0.003448486328125
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 462,
+    "components": {
+      "rmu_forget": 0.70703125,
+      "sim_forget": 11.41537857055664,
+      "retain_ce": 0.2615492045879364,
+      "retain_repr": 0.004730224609375
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.82421875,
+      "sim_forget": 11.771835327148438,
+      "retain_ce": 2.5726747512817383,
+      "retain_repr": 0.032470703125
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.58984375,
+      "sim_forget": 11.179594039916992,
+      "retain_ce": 2.325284242630005,
+      "retain_repr": 0.07470703125
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.828125,
+      "sim_forget": 11.373210906982422,
+      "retain_ce": 2.075181484222412,
+      "retain_repr": 0.060546875
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.73046875,
+      "sim_forget": 11.948065757751465,
+      "retain_ce": 2.5726747512817383,
+      "retain_repr": 0.032470703125
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.61328125,
+      "sim_forget": 11.2416353225708,
+      "retain_ce": 2.484321355819702,
+      "retain_repr": 0.1611328125
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7421875,
+      "sim_forget": 11.509170532226562,
+      "retain_ce": 2.1618192195892334,
+      "retain_repr": 0.031982421875
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.66015625,
+      "sim_forget": 11.504192352294922,
+      "retain_ce": 1.8802170753479004,
+      "retain_repr": 0.1103515625
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 374,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 11.390892028808594,
+      "retain_ce": 0.35083848237991333,
+      "retain_repr": 0.0034637451171875
+    }
+  },
+  {
+    "step": 27,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.69140625,
+      "sim_forget": 11.576631546020508,
+      "retain_ce": 2.2265281677246094,
+      "retain_repr": 0.080078125
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.609375,
+      "sim_forget": 11.682876586914062,
+      "retain_ce": 3.1626243591308594,
+      "retain_repr": 0.049072265625
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6015625,
+      "sim_forget": 11.246055603027344,
+      "retain_ce": 2.376631736755371,
+      "retain_repr": 0.044921875
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6640625,
+      "sim_forget": 11.580754280090332,
+      "retain_ce": 1.8617981672286987,
+      "retain_repr": 0.04736328125
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6171875,
+      "sim_forget": 11.198514938354492,
+      "retain_ce": 2.0950827598571777,
+      "retain_repr": 0.0419921875
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.72265625,
+      "sim_forget": 12.127915382385254,
+      "retain_ce": 2.5663042068481445,
+      "retain_repr": 0.061279296875
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.82421875,
+      "sim_forget": 11.507776260375977,
+      "retain_ce": 2.151165723800659,
+      "retain_repr": 0.061767578125
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.82421875,
+      "sim_forget": 11.32952880859375,
+      "retain_ce": 2.0324044227600098,
+      "retain_repr": 0.045654296875
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.77734375,
+      "sim_forget": 11.763501167297363,
+      "retain_ce": 1.7763193845748901,
+      "retain_repr": 0.046630859375
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.67578125,
+      "sim_forget": 11.3285493850708,
+      "retain_ce": 1.379335641860962,
+      "retain_repr": 0.042724609375
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.75,
+      "sim_forget": 11.550458908081055,
+      "retain_ce": 1.7203599214553833,
+      "retain_repr": 0.0859375
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.62890625,
+      "sim_forget": 11.458602905273438,
+      "retain_ce": 2.5171732902526855,
+      "retain_repr": 0.057373046875
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6796875,
+      "sim_forget": 11.468887329101562,
+      "retain_ce": 2.005664825439453,
+      "retain_repr": 0.08251953125
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.78515625,
+      "sim_forget": 11.173063278198242,
+      "retain_ce": 1.6312932968139648,
+      "retain_repr": 0.08740234375
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.625,
+      "sim_forget": 11.395692825317383,
+      "retain_ce": 2.0950827598571777,
+      "retain_repr": 0.0419921875
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.75,
+      "sim_forget": 11.4554443359375,
+      "retain_ce": 2.7156901359558105,
+      "retain_repr": 0.04296875
+    }
+  },
+  {
+    "step": 28,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8125,
+      "sim_forget": 11.377334594726562,
+      "retain_ce": 2.654792308807373,
+      "retain_repr": 0.037109375
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.55859375,
+      "sim_forget": 11.748271942138672,
+      "retain_ce": 1.9604724645614624,
+      "retain_repr": 0.024169921875
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5625,
+      "sim_forget": 11.596149444580078,
+      "retain_ce": 1.5374494791030884,
+      "retain_repr": 0.060791015625
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.765625,
+      "sim_forget": 11.209617614746094,
+      "retain_ce": 2.0684382915496826,
+      "retain_repr": 0.0791015625
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 11.792762756347656,
+      "retain_ce": 1.4927929639816284,
+      "retain_repr": 0.03662109375
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.68359375,
+      "sim_forget": 11.904623031616211,
+      "retain_ce": 2.2489428520202637,
+      "retain_repr": 0.052001953125
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.55859375,
+      "sim_forget": 11.607444763183594,
+      "retain_ce": 2.6406264305114746,
+      "retain_repr": 0.05712890625
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.66015625,
+      "sim_forget": 11.018611907958984,
+      "retain_ce": 1.9108847379684448,
+      "retain_repr": 0.0308837890625
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 11.978802680969238,
+      "retain_ce": 3.126805067062378,
+      "retain_repr": 0.045654296875
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 470,
+    "components": {
+      "rmu_forget": 0.64453125,
+      "sim_forget": 11.576107025146484,
+      "retain_ce": 0.27061596512794495,
+      "retain_repr": 0.004730224609375
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.578125,
+      "sim_forget": 11.476317405700684,
+      "retain_ce": 1.326143741607666,
+      "retain_repr": 0.0439453125
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7265625,
+      "sim_forget": 11.417064666748047,
+      "retain_ce": 2.3606374263763428,
+      "retain_repr": 0.053466796875
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.640625,
+      "sim_forget": 11.261360168457031,
+      "retain_ce": 1.5294538736343384,
+      "retain_repr": 0.0145263671875
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.75,
+      "sim_forget": 11.570688247680664,
+      "retain_ce": 2.2495486736297607,
+      "retain_repr": 0.06640625
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5390625,
+      "sim_forget": 11.673016548156738,
+      "retain_ce": 2.56449818611145,
+      "retain_repr": 0.05126953125
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.62109375,
+      "sim_forget": 10.963838577270508,
+      "retain_ce": 2.384477376937866,
+      "retain_repr": 0.033935546875
+    }
+  },
+  {
+    "step": 29,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.609375,
+      "sim_forget": 11.325109481811523,
+      "retain_ce": 2.6238560676574707,
+      "retain_repr": 0.0810546875
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.66015625,
+      "sim_forget": 11.665324211120605,
+      "retain_ce": 1.4416662454605103,
+      "retain_repr": 0.06884765625
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.84765625,
+      "sim_forget": 11.799890518188477,
+      "retain_ce": 2.996490001678467,
+      "retain_repr": 0.042724609375
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.72265625,
+      "sim_forget": 11.108577728271484,
+      "retain_ce": 1.7274616956710815,
+      "retain_repr": 0.10400390625
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.60546875,
+      "sim_forget": 11.575956344604492,
+      "retain_ce": 0.12713302671909332,
+      "retain_repr": 0.003021240234375
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6328125,
+      "sim_forget": 11.669540405273438,
+      "retain_ce": 2.1514017581939697,
+      "retain_repr": 0.038330078125
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.66796875,
+      "sim_forget": 11.698539733886719,
+      "retain_ce": 2.4098973274230957,
+      "retain_repr": 0.042724609375
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.625,
+      "sim_forget": 11.442299842834473,
+      "retain_ce": 1.872992753982544,
+      "retain_repr": 0.042724609375
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80078125,
+      "sim_forget": 11.36839485168457,
+      "retain_ce": 2.5152199268341064,
+      "retain_repr": 0.0830078125
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.859375,
+      "sim_forget": 11.762543678283691,
+      "retain_ce": 2.7585525512695312,
+      "retain_repr": 0.06103515625
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.56640625,
+      "sim_forget": 11.59408187866211,
+      "retain_ce": 2.8262815475463867,
+      "retain_repr": 0.0400390625
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 10.82979679107666,
+      "retain_ce": 2.6451900005340576,
+      "retain_repr": 0.0380859375
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.64453125,
+      "sim_forget": 11.568680763244629,
+      "retain_ce": 1.94020676612854,
+      "retain_repr": 0.0322265625
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71484375,
+      "sim_forget": 11.20612621307373,
+      "retain_ce": 2.5037693977355957,
+      "retain_repr": 0.11474609375
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.61328125,
+      "sim_forget": 11.413287162780762,
+      "retain_ce": 2.4452064037323,
+      "retain_repr": 0.06103515625
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7265625,
+      "sim_forget": 11.627264022827148,
+      "retain_ce": 1.9975054264068604,
+      "retain_repr": 0.05126953125
+    }
+  },
+  {
+    "step": 30,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.61328125,
+      "sim_forget": 11.57982349395752,
+      "retain_ce": 1.5604121685028076,
+      "retain_repr": 0.07861328125
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6328125,
+      "sim_forget": 11.70781135559082,
+      "retain_ce": 1.7970000505447388,
+      "retain_repr": 0.10107421875
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 266,
+    "components": {
+      "rmu_forget": 0.6328125,
+      "sim_forget": 11.794005393981934,
+      "retain_ce": 3.097005605697632,
+      "retain_repr": 0.0111083984375
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.58203125,
+      "sim_forget": 11.547666549682617,
+      "retain_ce": 3.0643880367279053,
+      "retain_repr": 0.031494140625
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6953125,
+      "sim_forget": 11.613788604736328,
+      "retain_ce": 1.990535855293274,
+      "retain_repr": 0.02880859375
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.80078125,
+      "sim_forget": 11.762566566467285,
+      "retain_ce": 1.4109677076339722,
+      "retain_repr": 0.0234375
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.765625,
+      "sim_forget": 11.79588794708252,
+      "retain_ce": 2.504155397415161,
+      "retain_repr": 0.036865234375
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.62890625,
+      "sim_forget": 10.86402702331543,
+      "retain_ce": 1.9276257753372192,
+      "retain_repr": 0.126953125
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8203125,
+      "sim_forget": 12.111725807189941,
+      "retain_ce": 2.041271209716797,
+      "retain_repr": 0.08056640625
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 373,
+    "components": {
+      "rmu_forget": 0.7109375,
+      "sim_forget": 12.158522605895996,
+      "retain_ce": 1.3662184476852417,
+      "retain_repr": 0.0260009765625
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.62890625,
+      "sim_forget": 11.34549617767334,
+      "retain_ce": 2.0056910514831543,
+      "retain_repr": 0.0361328125
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.60546875,
+      "sim_forget": 11.09142780303955,
+      "retain_ce": 1.7379083633422852,
+      "retain_repr": 0.0150146484375
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.72265625,
+      "sim_forget": 11.05363655090332,
+      "retain_ce": 1.3024184703826904,
+      "retain_repr": 0.0230712890625
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5546875,
+      "sim_forget": 12.129526138305664,
+      "retain_ce": 2.130570411682129,
+      "retain_repr": 0.044921875
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 433,
+    "components": {
+      "rmu_forget": 0.5546875,
+      "sim_forget": 11.964507102966309,
+      "retain_ce": 2.6572442054748535,
+      "retain_repr": 0.054443359375
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5859375,
+      "sim_forget": 11.174551010131836,
+      "retain_ce": 1.9951317310333252,
+      "retain_repr": 0.051513671875
+    }
+  },
+  {
+    "step": 31,
+    "effective_prediction_tokens": 279,
+    "components": {
+      "rmu_forget": 0.7265625,
+      "sim_forget": 11.838102340698242,
+      "retain_ce": 1.2680904865264893,
+      "retain_repr": 0.006072998046875
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7265625,
+      "sim_forget": 11.762866020202637,
+      "retain_ce": 1.5494321584701538,
+      "retain_repr": 0.033935546875
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 404,
+    "components": {
+      "rmu_forget": 0.84765625,
+      "sim_forget": 10.81057071685791,
+      "retain_ce": 0.22309105098247528,
+      "retain_repr": 0.00372314453125
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 12.12039566040039,
+      "retain_ce": 2.0071849822998047,
+      "retain_repr": 0.1357421875
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7421875,
+      "sim_forget": 11.765023231506348,
+      "retain_ce": 1.7719308137893677,
+      "retain_repr": 0.0888671875
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 11.968432426452637,
+      "retain_ce": 2.0443789958953857,
+      "retain_repr": 0.0322265625
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6484375,
+      "sim_forget": 12.190953254699707,
+      "retain_ce": 2.3223910331726074,
+      "retain_repr": 0.06787109375
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5390625,
+      "sim_forget": 11.205272674560547,
+      "retain_ce": 1.6544082164764404,
+      "retain_repr": 0.142578125
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6171875,
+      "sim_forget": 11.713050842285156,
+      "retain_ce": 1.7963249683380127,
+      "retain_repr": 0.12890625
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6015625,
+      "sim_forget": 11.149267196655273,
+      "retain_ce": 2.249563455581665,
+      "retain_repr": 0.057861328125
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.640625,
+      "sim_forget": 11.747368812561035,
+      "retain_ce": 2.1439757347106934,
+      "retain_repr": 0.057861328125
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.53515625,
+      "sim_forget": 11.577507019042969,
+      "retain_ce": 1.003803014755249,
+      "retain_repr": 0.00958251953125
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6328125,
+      "sim_forget": 11.42173957824707,
+      "retain_ce": 1.9805828332901,
+      "retain_repr": 0.049072265625
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.78515625,
+      "sim_forget": 10.93167495727539,
+      "retain_ce": 1.9516873359680176,
+      "retain_repr": 0.01953125
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.54296875,
+      "sim_forget": 12.139443397521973,
+      "retain_ce": 2.044179677963257,
+      "retain_repr": 0.05615234375
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.56640625,
+      "sim_forget": 11.570161819458008,
+      "retain_ce": 1.461841344833374,
+      "retain_repr": 0.05029296875
+    }
+  },
+  {
+    "step": 32,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.63671875,
+      "sim_forget": 11.171122550964355,
+      "retain_ce": 2.1110928058624268,
+      "retain_repr": 0.0625
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8046875,
+      "sim_forget": 11.635375022888184,
+      "retain_ce": 2.796341896057129,
+      "retain_repr": 0.0517578125
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.765625,
+      "sim_forget": 11.027608871459961,
+      "retain_ce": 1.659296989440918,
+      "retain_repr": 0.03662109375
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.78515625,
+      "sim_forget": 11.546393394470215,
+      "retain_ce": 2.6857330799102783,
+      "retain_repr": 0.1337890625
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6875,
+      "sim_forget": 11.229964256286621,
+      "retain_ce": 2.186194658279419,
+      "retain_repr": 0.0546875
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.51953125,
+      "sim_forget": 11.262497901916504,
+      "retain_ce": 2.4984724521636963,
+      "retain_repr": 0.0576171875
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.59375,
+      "sim_forget": 11.90951919555664,
+      "retain_ce": 1.6012941598892212,
+      "retain_repr": 0.06396484375
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.76171875,
+      "sim_forget": 12.306380271911621,
+      "retain_ce": 1.8985425233840942,
+      "retain_repr": 0.0888671875
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.734375,
+      "sim_forget": 10.873808860778809,
+      "retain_ce": 1.8214558362960815,
+      "retain_repr": 0.0791015625
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5625,
+      "sim_forget": 11.309547424316406,
+      "retain_ce": 2.1207892894744873,
+      "retain_repr": 0.046630859375
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.53125,
+      "sim_forget": 11.560711860656738,
+      "retain_ce": 2.473919153213501,
+      "retain_repr": 0.0537109375
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5,
+      "sim_forget": 10.6870698928833,
+      "retain_ce": 2.1817305088043213,
+      "retain_repr": 0.07373046875
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.83203125,
+      "sim_forget": 11.839853286743164,
+      "retain_ce": 2.4057674407958984,
+      "retain_repr": 0.080078125
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.74609375,
+      "sim_forget": 12.168132781982422,
+      "retain_ce": 1.67953360080719,
+      "retain_repr": 0.1748046875
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.78125,
+      "sim_forget": 11.692371368408203,
+      "retain_ce": 1.9320651292800903,
+      "retain_repr": 0.02001953125
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.69921875,
+      "sim_forget": 11.69914436340332,
+      "retain_ce": 1.6993377208709717,
+      "retain_repr": 0.044677734375
+    }
+  },
+  {
+    "step": 33,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.59375,
+      "sim_forget": 11.292706489562988,
+      "retain_ce": 2.3349525928497314,
+      "retain_repr": 0.0419921875
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.60546875,
+      "sim_forget": 11.375011444091797,
+      "retain_ce": 2.6997714042663574,
+      "retain_repr": 0.054931640625
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.515625,
+      "sim_forget": 11.195659637451172,
+      "retain_ce": 1.917801022529602,
+      "retain_repr": 0.07373046875
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.8046875,
+      "sim_forget": 11.545475959777832,
+      "retain_ce": 2.2326393127441406,
+      "retain_repr": 0.17578125
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.58984375,
+      "sim_forget": 11.280269622802734,
+      "retain_ce": 1.160090446472168,
+      "retain_repr": 0.02392578125
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6484375,
+      "sim_forget": 11.529890060424805,
+      "retain_ce": 1.8810080289840698,
+      "retain_repr": 0.055419921875
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.61328125,
+      "sim_forget": 11.737669944763184,
+      "retain_ce": 2.0188493728637695,
+      "retain_repr": 0.047119140625
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.70703125,
+      "sim_forget": 10.917196273803711,
+      "retain_ce": 2.0571696758270264,
+      "retain_repr": 0.0267333984375
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71875,
+      "sim_forget": 11.525472640991211,
+      "retain_ce": 0.166103333234787,
+      "retain_repr": 0.003936767578125
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.765625,
+      "sim_forget": 11.155366897583008,
+      "retain_ce": 2.669729471206665,
+      "retain_repr": 0.0380859375
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.53125,
+      "sim_forget": 10.94418716430664,
+      "retain_ce": 1.2003257274627686,
+      "retain_repr": 0.0517578125
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71875,
+      "sim_forget": 11.533995628356934,
+      "retain_ce": 1.9107487201690674,
+      "retain_repr": 0.037841796875
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.484375,
+      "sim_forget": 11.041748046875,
+      "retain_ce": 2.629143238067627,
+      "retain_repr": 0.119140625
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.609375,
+      "sim_forget": 11.923629760742188,
+      "retain_ce": 2.220038652420044,
+      "retain_repr": 0.052001953125
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6171875,
+      "sim_forget": 11.653336524963379,
+      "retain_ce": 2.1333279609680176,
+      "retain_repr": 0.06640625
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.57421875,
+      "sim_forget": 11.989535331726074,
+      "retain_ce": 2.6489579677581787,
+      "retain_repr": 0.052490234375
+    }
+  },
+  {
+    "step": 34,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.54296875,
+      "sim_forget": 11.41573429107666,
+      "retain_ce": 2.284256935119629,
+      "retain_repr": 0.09130859375
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 462,
+    "components": {
+      "rmu_forget": 0.71484375,
+      "sim_forget": 11.3722562789917,
+      "retain_ce": 0.246074378490448,
+      "retain_repr": 0.00341796875
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.62890625,
+      "sim_forget": 11.655293464660645,
+      "retain_ce": 2.853726625442505,
+      "retain_repr": 0.015869140625
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.55859375,
+      "sim_forget": 11.26349925994873,
+      "retain_ce": 2.6886940002441406,
+      "retain_repr": 0.1669921875
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5859375,
+      "sim_forget": 11.192253112792969,
+      "retain_ce": 1.8086931705474854,
+      "retain_repr": 0.0693359375
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.55078125,
+      "sim_forget": 10.83588695526123,
+      "retain_ce": 2.3489158153533936,
+      "retain_repr": 0.036376953125
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.58984375,
+      "sim_forget": 10.91651725769043,
+      "retain_ce": 2.234119176864624,
+      "retain_repr": 0.1494140625
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.62109375,
+      "sim_forget": 11.322022438049316,
+      "retain_ce": 1.7957186698913574,
+      "retain_repr": 0.1044921875
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.55859375,
+      "sim_forget": 11.542728424072266,
+      "retain_ce": 1.722934365272522,
+      "retain_repr": 0.0546875
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.671875,
+      "sim_forget": 11.689960479736328,
+      "retain_ce": 2.1701459884643555,
+      "retain_repr": 0.06201171875
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 327,
+    "components": {
+      "rmu_forget": 0.515625,
+      "sim_forget": 11.37032699584961,
+      "retain_ce": 1.3550801277160645,
+      "retain_repr": 0.017578125
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.54296875,
+      "sim_forget": 11.399637222290039,
+      "retain_ce": 0.935239315032959,
+      "retain_repr": 0.00726318359375
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.671875,
+      "sim_forget": 11.311225891113281,
+      "retain_ce": 1.583419680595398,
+      "retain_repr": 0.042236328125
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.765625,
+      "sim_forget": 11.265963554382324,
+      "retain_ce": 1.0818886756896973,
+      "retain_repr": 0.028076171875
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 306,
+    "components": {
+      "rmu_forget": 0.73046875,
+      "sim_forget": 11.119709014892578,
+      "retain_ce": 0.7789868116378784,
+      "retain_repr": 0.00762939453125
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.60546875,
+      "sim_forget": 11.893451690673828,
+      "retain_ce": 1.3804038763046265,
+      "retain_repr": 0.06298828125
+    }
+  },
+  {
+    "step": 35,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5078125,
+      "sim_forget": 11.038870811462402,
+      "retain_ce": 2.3960306644439697,
+      "retain_repr": 0.048583984375
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.51953125,
+      "sim_forget": 11.669370651245117,
+      "retain_ce": 1.9849070310592651,
+      "retain_repr": 0.0380859375
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5546875,
+      "sim_forget": 11.232852935791016,
+      "retain_ce": 2.354515790939331,
+      "retain_repr": 0.0390625
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 11.337425231933594,
+      "retain_ce": 1.8217116594314575,
+      "retain_repr": 0.10205078125
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.4765625,
+      "sim_forget": 10.921453475952148,
+      "retain_ce": 2.4063172340393066,
+      "retain_repr": 0.08544921875
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.51171875,
+      "sim_forget": 11.093483924865723,
+      "retain_ce": 1.585992455482483,
+      "retain_repr": 0.020751953125
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.828125,
+      "sim_forget": 11.177755355834961,
+      "retain_ce": 2.2601399421691895,
+      "retain_repr": 0.0264892578125
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6796875,
+      "sim_forget": 10.834218978881836,
+      "retain_ce": 1.5350916385650635,
+      "retain_repr": 0.06494140625
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6328125,
+      "sim_forget": 10.873449325561523,
+      "retain_ce": 2.068143844604492,
+      "retain_repr": 0.0615234375
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.55859375,
+      "sim_forget": 11.284666061401367,
+      "retain_ce": 2.5845224857330322,
+      "retain_repr": 0.060546875
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.76171875,
+      "sim_forget": 11.88090705871582,
+      "retain_ce": 1.6221797466278076,
+      "retain_repr": 0.02490234375
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 11.05128288269043,
+      "retain_ce": 1.9405020475387573,
+      "retain_repr": 0.064453125
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.72265625,
+      "sim_forget": 11.535625457763672,
+      "retain_ce": 2.6622047424316406,
+      "retain_repr": 0.038818359375
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6171875,
+      "sim_forget": 11.955832481384277,
+      "retain_ce": 1.8108806610107422,
+      "retain_repr": 0.07470703125
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 378,
+    "components": {
+      "rmu_forget": 0.59765625,
+      "sim_forget": 12.088191986083984,
+      "retain_ce": 0.953605055809021,
+      "retain_repr": 0.00543212890625
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.546875,
+      "sim_forget": 11.759333610534668,
+      "retain_ce": 2.0304183959960938,
+      "retain_repr": 0.062255859375
+    }
+  },
+  {
+    "step": 36,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.51953125,
+      "sim_forget": 11.613351821899414,
+      "retain_ce": 2.600625991821289,
+      "retain_repr": 0.060546875
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5390625,
+      "sim_forget": 11.909141540527344,
+      "retain_ce": 3.2089200019836426,
+      "retain_repr": 0.045654296875
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5703125,
+      "sim_forget": 11.912293434143066,
+      "retain_ce": 2.263474941253662,
+      "retain_repr": 0.039794921875
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6640625,
+      "sim_forget": 11.964454650878906,
+      "retain_ce": 1.9401010274887085,
+      "retain_repr": 0.0625
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.65234375,
+      "sim_forget": 11.613166809082031,
+      "retain_ce": 2.0024795532226562,
+      "retain_repr": 0.06591796875
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.470703125,
+      "sim_forget": 11.196375846862793,
+      "retain_ce": 2.1236677169799805,
+      "retain_repr": 0.10791015625
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.58203125,
+      "sim_forget": 11.243973731994629,
+      "retain_ce": 1.6078784465789795,
+      "retain_repr": 0.10693359375
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.66796875,
+      "sim_forget": 11.43425464630127,
+      "retain_ce": 2.1844258308410645,
+      "retain_repr": 0.04052734375
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.734375,
+      "sim_forget": 12.188464164733887,
+      "retain_ce": 1.6753439903259277,
+      "retain_repr": 0.07177734375
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5859375,
+      "sim_forget": 11.502416610717773,
+      "retain_ce": 2.037186861038208,
+      "retain_repr": 0.0810546875
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.71875,
+      "sim_forget": 11.193832397460938,
+      "retain_ce": 1.7340408563613892,
+      "retain_repr": 0.04296875
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.59765625,
+      "sim_forget": 11.368197441101074,
+      "retain_ce": 2.163214683532715,
+      "retain_repr": 0.05224609375
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.59765625,
+      "sim_forget": 11.088066101074219,
+      "retain_ce": 2.5298523902893066,
+      "retain_repr": 0.057861328125
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.60546875,
+      "sim_forget": 11.282173156738281,
+      "retain_ce": 2.212360143661499,
+      "retain_repr": 0.042724609375
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5703125,
+      "sim_forget": 10.852136611938477,
+      "retain_ce": 2.0368478298187256,
+      "retain_repr": 0.10498046875
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.57421875,
+      "sim_forget": 10.8853759765625,
+      "retain_ce": 2.813465118408203,
+      "retain_repr": 0.04345703125
+    }
+  },
+  {
+    "step": 37,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.65234375,
+      "sim_forget": 11.976139068603516,
+      "retain_ce": 1.6716105937957764,
+      "retain_repr": 0.046875
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7734375,
+      "sim_forget": 11.467161178588867,
+      "retain_ce": 2.157874584197998,
+      "retain_repr": 0.1357421875
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.45703125,
+      "sim_forget": 11.440949440002441,
+      "retain_ce": 2.636695146560669,
+      "retain_repr": 0.08203125
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.65625,
+      "sim_forget": 12.48818588256836,
+      "retain_ce": 2.9026973247528076,
+      "retain_repr": 0.123046875
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.57421875,
+      "sim_forget": 11.766619682312012,
+      "retain_ce": 2.174180746078491,
+      "retain_repr": 0.11962890625
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.482421875,
+      "sim_forget": 11.951395034790039,
+      "retain_ce": 2.4325549602508545,
+      "retain_repr": 0.111328125
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5546875,
+      "sim_forget": 11.241135597229004,
+      "retain_ce": 1.4275962114334106,
+      "retain_repr": 0.08056640625
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5546875,
+      "sim_forget": 11.817678451538086,
+      "retain_ce": 2.0521340370178223,
+      "retain_repr": 0.061767578125
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 384,
+    "components": {
+      "rmu_forget": 0.64453125,
+      "sim_forget": 11.638545036315918,
+      "retain_ce": 0.36895596981048584,
+      "retain_repr": 0.007354736328125
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.52734375,
+      "sim_forget": 10.974221229553223,
+      "retain_ce": 2.497507333755493,
+      "retain_repr": 0.0498046875
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.7421875,
+      "sim_forget": 10.951593399047852,
+      "retain_ce": 1.8853094577789307,
+      "retain_repr": 0.1201171875
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.59375,
+      "sim_forget": 11.383671760559082,
+      "retain_ce": 2.224642515182495,
+      "retain_repr": 0.05712890625
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5546875,
+      "sim_forget": 11.310340881347656,
+      "retain_ce": 2.725673198699951,
+      "retain_repr": 0.02490234375
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.65625,
+      "sim_forget": 11.861907005310059,
+      "retain_ce": 2.2058265209198,
+      "retain_repr": 0.1875
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6171875,
+      "sim_forget": 11.039030075073242,
+      "retain_ce": 2.5811359882354736,
+      "retain_repr": 0.0255126953125
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.62890625,
+      "sim_forget": 11.46009635925293,
+      "retain_ce": 1.96676766872406,
+      "retain_repr": 0.103515625
+    }
+  },
+  {
+    "step": 38,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.84375,
+      "sim_forget": 11.330962181091309,
+      "retain_ce": 2.290670871734619,
+      "retain_repr": 0.046875
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.703125,
+      "sim_forget": 11.42397689819336,
+      "retain_ce": 2.3104116916656494,
+      "retain_repr": 0.1025390625
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.60546875,
+      "sim_forget": 11.130938529968262,
+      "retain_ce": 1.7498340606689453,
+      "retain_repr": 0.14453125
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6640625,
+      "sim_forget": 11.789102554321289,
+      "retain_ce": 2.6241416931152344,
+      "retain_repr": 0.059814453125
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.55078125,
+      "sim_forget": 12.091484069824219,
+      "retain_ce": 1.7639660835266113,
+      "retain_repr": 0.10009765625
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.62890625,
+      "sim_forget": 11.458276748657227,
+      "retain_ce": 2.7030513286590576,
+      "retain_repr": 0.08056640625
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.5703125,
+      "sim_forget": 11.9464111328125,
+      "retain_ce": 1.9462183713912964,
+      "retain_repr": 0.018798828125
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 329,
+    "components": {
+      "rmu_forget": 0.4375,
+      "sim_forget": 11.365034103393555,
+      "retain_ce": 0.3994588553905487,
+      "retain_repr": 0.005889892578125
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6640625,
+      "sim_forget": 12.143136978149414,
+      "retain_ce": 3.0605411529541016,
+      "retain_repr": 0.025146484375
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.53125,
+      "sim_forget": 11.373496055603027,
+      "retain_ce": 2.4276578426361084,
+      "retain_repr": 0.044677734375
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.578125,
+      "sim_forget": 11.85466194152832,
+      "retain_ce": 2.084289312362671,
+      "retain_repr": 0.06689453125
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6171875,
+      "sim_forget": 11.420811653137207,
+      "retain_ce": 2.237210512161255,
+      "retain_repr": 0.06787109375
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.83984375,
+      "sim_forget": 11.079907417297363,
+      "retain_ce": 2.3148484230041504,
+      "retain_repr": 0.054931640625
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.890625,
+      "sim_forget": 11.175694465637207,
+      "retain_ce": 1.611641526222229,
+      "retain_repr": 0.0625
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.515625,
+      "sim_forget": 11.113022804260254,
+      "retain_ce": 2.0370752811431885,
+      "retain_repr": 0.076171875
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.63671875,
+      "sim_forget": 11.70712661743164,
+      "retain_ce": 1.7330334186553955,
+      "retain_repr": 0.0712890625
+    }
+  },
+  {
+    "step": 39,
+    "effective_prediction_tokens": 510,
+    "components": {
+      "rmu_forget": 0.6015625,
+      "sim_forget": 12.04821491241455,
+      "retain_ce": 0.9558941721916199,
+      "retain_repr": 0.0206298828125
+    }
+  }
+]
