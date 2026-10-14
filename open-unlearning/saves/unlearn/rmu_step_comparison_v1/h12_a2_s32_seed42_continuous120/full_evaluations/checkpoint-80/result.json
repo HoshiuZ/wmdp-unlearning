@@ -1,0 +1,21 @@
+{
+  "step": 80,
+  "metrics": {
+    "wmdp_bio": {
+      "n": 1273,
+      "correct": 544,
+      "accuracy_percent": 42.73369992144541,
+      "baseline_accuracy_percent": 73.84131971720346,
+      "change_percentage_points": -31.10761979575805
+    },
+    "mmlu": {
+      "n": 14042,
+      "correct": 9401,
+      "accuracy_percent": 66.94915254237289,
+      "baseline_accuracy_percent": 70.673693206096,
+      "change_percentage_points": -3.724540663723116
+    }
+  },
+  "reused": false,
+  "wall_seconds_including_reload_and_validation": 616.9902372602373
+}
