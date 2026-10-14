@@ -1,0 +1,10 @@
+{
+  "files": {
+    "logs/base_model_manifest.json": "f47f10617431a09f805fbe4b97a67f62941ef85b3f0358f77abcbd1a6b08a778",
+    "logs/rmu_formal_blocks_manifest.json": "9bfdce458914f0092351dcb0c95f336cff39fa3f6a2078eae13a49c8ef66f22f",
+    "logs/rmu_adaptation_dev_split.json": "0db64d2c58054660f09016cd5157aa04ef2c96c50af9255235f446b7b2b1b969",
+    "open-unlearning/saves/unlearn/rmu_scale_v2/h12_a2_s32_fixed40/control_vector.json": "ea457ef1a08ecc0a1d2bbcfc86fba2f05cdebb4fbf13e33301c0f86d932e3395"
+  },
+  "model_revision_note": "Original remote immutable revision unrecorded; exact local file and parameter fingerprints pin the model.",
+  "no_original_model_or_tokenizer_change": true
+}

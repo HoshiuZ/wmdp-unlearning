@@ -1,0 +1,32 @@
+{
+  "started_at": "2026-10-14T12:55:35.113697+08:00",
+  "code_commit": "b6e5d6f0a7ab1df5f4767006305ba2a013400184",
+  "steps": {
+    "40": {
+      "step": 40,
+      "metrics": {
+        "wmdp_bio": {
+          "n": 1273,
+          "correct": 707,
+          "accuracy_percent": 55.53809897879026,
+          "baseline_accuracy_percent": 73.84131971720346,
+          "change_percentage_points": -18.3032207384132
+        },
+        "mmlu": {
+          "n": 14042,
+          "correct": 9618,
+          "accuracy_percent": 68.49451645064805,
+          "baseline_accuracy_percent": 70.673693206096,
+          "change_percentage_points": -2.179176755447942
+        }
+      },
+      "reused": false,
+      "wall_seconds_including_reload_and_validation": 585.3536133989692
+    }
+  },
+  "new_full_evaluation_steps": [
+    40,
+    80,
+    120
+  ]
+}
