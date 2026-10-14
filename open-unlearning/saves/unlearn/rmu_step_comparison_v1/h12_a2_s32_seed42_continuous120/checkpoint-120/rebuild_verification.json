@@ -1,0 +1,10 @@
+{
+  "compressed_payload_and_base_and_reconstructed_hashes_match": true,
+  "trained_parameter_hashes": {
+    "model.layers.10.mlp.down_proj.weight": "9cf21b9ff05f2a50a7c5803108535f8261e3320218241ba6ac2d89c1a230c929",
+    "model.layers.11.mlp.down_proj.weight": "65af053781767761bdc0beaffe8ee48b88bf8a600d719aa5f029727aa456e077",
+    "model.layers.12.mlp.down_proj.weight": "2e488d5b83c81ba7958f2703fe18e349903daca42f8fc5b26f801897b87dbac8"
+  },
+  "bytes": 75038731,
+  "free_disk_bytes": 29936484352
+}

@@ -1,0 +1,20 @@
+{
+  "action": "continue",
+  "all_key_conditions_verified": true,
+  "explanation": "固定基模/tokenizer/缓存SHA、解析配置、核心源码、索引/320619输入与319339有效token、控制向量哈希一致；逐步梯度范数完全相同，最大总损失差0.00048828125。相同硬件/库/BF16/GQA/causal/dropout0的独立SDPA探针在相同输入和上游梯度下20次后向产生20组梯度哈希，前向一致，证明现用Flash SDPA后向非确定性。参数平均绝对差约3.1e-6，未发现配置、数据或实现漂移。将本轮差异解释为与已实测非确定性一致的数值差异（不能逐核追溯历史CUDA调度）；允许保持同一活进程继续，40步必须新做全量评测，不宣称逐位复现。",
+  "evidence": [
+    "reproduction40.json",
+    "reproduction40_numerical_audit.json",
+    "logs/rmu_step_sdpa_numerics_probe.json",
+    "logs/rmu_step_comparison_preflight.json"
+  ],
+  "audit_pause_seconds_before_continue": 116.0534029006958,
+  "change_hyperparameters": false,
+  "reuse_historical_full": false,
+  "additional_unchanged_core_paths": [
+    "open-unlearning/src/trainer/utils.py",
+    "open-unlearning/src/model/__init__.py",
+    "open-unlearning/src/data/collators.py",
+    "open-unlearning/src/trainer/finetune.py"
+  ]
+}

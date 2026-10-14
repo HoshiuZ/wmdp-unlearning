@@ -31,6 +31,10 @@
 - 数据、清洗/划分及缓存说明：[数据准备](docs/data-preparation.md)。受限Bio语料及其衍生缓存保留本地，不上传。
 - 环境及必要检查：`logs/requirements-qwen3.txt`、`tests/`。
 
-本轮仅清理、恢复历史、验证和整理，没有启动新训练或重复全量评测。[清理报告](docs/pure-rmu-convergence.md)列出归档入口、LFS核实、共享依赖和实际空间变化。
+上轮完成清理、恢复历史、验证和整理。[清理报告](docs/pure-rmu-convergence.md)列出归档入口、LFS核实、共享依赖和实际空间变化。
 
 基于 [OpenUnlearning](https://github.com/locuslab/open-unlearning) 修改；保留上游许可证与归属说明，详见 [上游MIT许可证](open-unlearning/LICENSE)和[上游说明](open-unlearning/README.md)。
+
+## 训练长度对照（进行中）
+
+按[固定方案](docs/rmu-step-comparison-plan.md)，已从原模型连续完成120次更新并保存40/80/120步增量，重建及冻结参数检查通过，正在串行全量评测。本轮40步与历史不逐位一致；数据/配置/控制方向一致，同环境SDPA后向非确定性探针与数值差异审查已留档，因此本轮40步重新全量评测。新增增量额度未知，先仅存本地持久盘，文本记录正常推送；不宣称权重已远端备份。

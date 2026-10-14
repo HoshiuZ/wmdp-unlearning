@@ -1,0 +1,114 @@
+[
+  {
+    "kind": "article_validation",
+    "step": 0,
+    "seconds_including_integrity_checks": 9.92193062370643,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 10,
+    "seconds_including_integrity_checks": 11.077647541183978,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 20,
+    "seconds_including_integrity_checks": 10.208562762942165,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 30,
+    "seconds_including_integrity_checks": 10.063495220150799,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 40,
+    "seconds_including_integrity_checks": 10.105033403262496,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "save_rebuild_and_development",
+    "step": 40,
+    "seconds_including_integrity_checks": 219.4183503780514,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 50,
+    "seconds_including_integrity_checks": 11.158207631669939,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 60,
+    "seconds_including_integrity_checks": 10.76277239387855,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 70,
+    "seconds_including_integrity_checks": 10.117749766912311,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 80,
+    "seconds_including_integrity_checks": 10.101441531907767,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "save_rebuild_and_development",
+    "step": 80,
+    "seconds_including_integrity_checks": 96.72422103583813,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 90,
+    "seconds_including_integrity_checks": 10.991092458367348,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 100,
+    "seconds_including_integrity_checks": 10.129080941900611,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 110,
+    "seconds_including_integrity_checks": 10.98389417026192,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "article_validation",
+    "step": 120,
+    "seconds_including_integrity_checks": 10.02923293504864,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  },
+  {
+    "kind": "save_rebuild_and_development",
+    "step": 120,
+    "seconds_including_integrity_checks": 96.26417779410258,
+    "weights_optimizer_scheduler_gradients_unchanged": true,
+    "rng_and_modes_restored": true
+  }
+]

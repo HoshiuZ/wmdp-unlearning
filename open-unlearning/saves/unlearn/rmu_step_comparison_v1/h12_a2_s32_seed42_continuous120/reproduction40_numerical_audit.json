@@ -1,0 +1,46 @@
+{
+  "same_training_core_sources_as_historical_commit": true,
+  "source_paths_compared": [
+    "open-unlearning/src/trainer/unlearn/rmu.py",
+    "open-unlearning/src/trainer/unlearn/grad_diff.py",
+    "open-unlearning/src/data/unlearn.py",
+    "open-unlearning/src/data/pretraining.py",
+    "scripts/rmu_adaptation_utils.py",
+    "scripts/rmu_validation.py",
+    "scripts/run_rmu_formal.py"
+  ],
+  "same_pinned_base_tokenizer_and_data": true,
+  "configuration_comparison": "preflight normalized equality; only length and output/description metadata differ",
+  "same_sampling_and_input_loss_token_budgets": true,
+  "maximum_step_loss_or_gradient_norm_difference": {
+    "forget_loss": 0.000244140625,
+    "retain_loss": 3.814697265625e-05,
+    "total_loss": 0.00048828125,
+    "gradient_norm": 0.0
+  },
+  "parameter_differences": [
+    {
+      "parameter": "model.layers.10.mlp.down_proj.weight",
+      "unequal_elements": 2720785,
+      "total_elements": 24903680,
+      "max_abs_difference": 0.00091552734375,
+      "mean_abs_difference": 3.1142290026764385e-06
+    },
+    {
+      "parameter": "model.layers.11.mlp.down_proj.weight",
+      "unequal_elements": 2649868,
+      "total_elements": 24903680,
+      "max_abs_difference": 0.0009765625,
+      "mean_abs_difference": 3.0495723422063747e-06
+    },
+    {
+      "parameter": "model.layers.12.mlp.down_proj.weight",
+      "unequal_elements": 2581957,
+      "total_elements": 24903680,
+      "max_abs_difference": 0.001007080078125,
+      "mean_abs_difference": 3.059302343899617e-06
+    }
+  ],
+  "numerical_probe": "logs/rmu_step_sdpa_numerics_probe.json",
+  "historical_environment_limit": "Historical config/library versions available; exact low-level kernel scheduling not archived. No claim to reconstruct a particular historical CUDA launch."
+}

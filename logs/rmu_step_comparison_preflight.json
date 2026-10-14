@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-10-14T12:38:50.951131+08:00",
+  "recorded_at": "2026-10-14T12:40:32.314060+08:00",
   "configuration_equals_history_except_length_and_metadata": true,
   "historical_delta_sizes": [
     61999123,
@@ -15,8 +15,8 @@
   "required_plus_1GiB_reserve": 2502862113,
   "space": {
     "total": 64424509440,
-    "used": 34264928256,
-    "free": 30159581184
+    "used": 34265063424,
+    "free": 30159446016
   },
   "versions": {
     "torch": "2.9.1+cu128",
@@ -26,7 +26,7 @@
     "lm_eval": "0.4.11",
     "deepspeed": "0.15.4"
   },
-  "code_commit": "57e374d50664f1d5942a68718d4f14780c02f793",
+  "code_commit": "ff618f4d83daa7dda4da5ddff765b5fa7505cb60",
   "max_optimizer_updates": 120,
   "checkpoints": [
     40,

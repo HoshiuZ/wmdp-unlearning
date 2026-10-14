@@ -1,0 +1,89 @@
+{
+  "quota": "unknown",
+  "upload_policy": "Text only; keep new delta pointers local until quota verified",
+  "objects": [
+    {
+      "step": 40,
+      "pointer_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-40/model.layers.10.mlp.down_proj.weight.xor.gz",
+      "local_object_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/aa/e4/aae48eca3ea6e0f64e66c8f143011baa007054dadf45332411f5e08104848782",
+      "oid_sha256": "aae48eca3ea6e0f64e66c8f143011baa007054dadf45332411f5e08104848782",
+      "bytes": 23601143,
+      "remote_uploaded_this_round": false,
+      "remote_verified": false
+    },
+    {
+      "step": 40,
+      "pointer_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-40/model.layers.11.mlp.down_proj.weight.xor.gz",
+      "local_object_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/4e/97/4e973a4488820dba1a94151be6f70bb352e23d3a79cad2f182e0216f43bbb83f",
+      "oid_sha256": "4e973a4488820dba1a94151be6f70bb352e23d3a79cad2f182e0216f43bbb83f",
+      "bytes": 23416895,
+      "remote_uploaded_this_round": false,
+      "remote_verified": false
+    },
+    {
+      "step": 40,
+      "pointer_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-40/model.layers.12.mlp.down_proj.weight.xor.gz",
+      "local_object_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/e5/a9/e5a986d7d7f41ed28c305108c299a0a8d395e59288d379c5dca67768d2e1f436",
+      "oid_sha256": "e5a986d7d7f41ed28c305108c299a0a8d395e59288d379c5dca67768d2e1f436",
+      "bytes": 24058372,
+      "remote_uploaded_this_round": false,
+      "remote_verified": false
+    },
+    {
+      "step": 80,
+      "pointer_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80/model.layers.10.mlp.down_proj.weight.xor.gz",
+      "local_object_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/58/96/58964d1b7f09d2d57e5fc73142a9a0dab6bff2afce98069a8f9b6e5ac87471c2",
+      "oid_sha256": "58964d1b7f09d2d57e5fc73142a9a0dab6bff2afce98069a8f9b6e5ac87471c2",
+      "bytes": 24568186,
+      "remote_uploaded_this_round": false,
+      "remote_verified": false
+    },
+    {
+      "step": 80,
+      "pointer_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80/model.layers.11.mlp.down_proj.weight.xor.gz",
+      "local_object_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/50/ae/50ae59c352f7130842cdfedf933ad84436c80ae1c4d5d8521c55d88030a7d17d",
+      "oid_sha256": "50ae59c352f7130842cdfedf933ad84436c80ae1c4d5d8521c55d88030a7d17d",
+      "bytes": 24349543,
+      "remote_uploaded_this_round": false,
+      "remote_verified": false
+    },
+    {
+      "step": 80,
+      "pointer_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80/model.layers.12.mlp.down_proj.weight.xor.gz",
+      "local_object_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/49/c4/49c4d90051a9485d647175db7aae74f729ec45afebb94bab1378bc6124f72351",
+      "oid_sha256": "49c4d90051a9485d647175db7aae74f729ec45afebb94bab1378bc6124f72351",
+      "bytes": 25104463,
+      "remote_uploaded_this_round": false,
+      "remote_verified": false
+    },
+    {
+      "step": 120,
+      "pointer_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-120/model.layers.10.mlp.down_proj.weight.xor.gz",
+      "local_object_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/81/48/81489a333251688508cf6b0da1f6167d4001206fc30809d949c4a62ccc5e4848",
+      "oid_sha256": "81489a333251688508cf6b0da1f6167d4001206fc30809d949c4a62ccc5e4848",
+      "bytes": 24911744,
+      "remote_uploaded_this_round": false,
+      "remote_verified": false
+    },
+    {
+      "step": 120,
+      "pointer_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-120/model.layers.11.mlp.down_proj.weight.xor.gz",
+      "local_object_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/9a/2d/9a2d13d0a491911009058909c1e8202c2d87bea4c141dd2274cd3219f0a08b7c",
+      "oid_sha256": "9a2d13d0a491911009058909c1e8202c2d87bea4c141dd2274cd3219f0a08b7c",
+      "bytes": 24642970,
+      "remote_uploaded_this_round": false,
+      "remote_verified": false
+    },
+    {
+      "step": 120,
+      "pointer_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-120/model.layers.12.mlp.down_proj.weight.xor.gz",
+      "local_object_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/1f/be/1fbee88abade3efeb707bcf6f65f86e44d1ba276a11485b3ed80a9993916f78f",
+      "oid_sha256": "1fbee88abade3efeb707bcf6f65f86e44d1ba276a11485b3ed80a9993916f78f",
+      "bytes": 25484017,
+      "remote_uploaded_this_round": false,
+      "remote_verified": false
+    }
+  ],
+  "total_payload_bytes": 220137333,
+  "optimizer_state_saved": false
+}

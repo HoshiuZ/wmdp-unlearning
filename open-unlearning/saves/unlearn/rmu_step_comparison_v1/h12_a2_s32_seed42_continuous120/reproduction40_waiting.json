@@ -1,0 +1,6 @@
+{
+  "status": "paused_for_audit",
+  "weights_exact": false,
+  "optimizer_and_scheduler_retained_in_memory": true,
+  "decision_path": "reproduction40_decision.json"
+}
