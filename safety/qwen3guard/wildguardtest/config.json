@@ -1,0 +1,20 @@
+{
+  "dataset_id": "allenai/wildguardmix",
+  "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1",
+  "config": "wildguardtest",
+  "split": "test",
+  "file": "test/wildguard_test.parquet",
+  "license": "odc-by",
+  "local_directory": "cache/wildguardtest",
+  "seed": 42,
+  "input_deduplication": "Exact prompt string; exclude conflicting known labels, never majority vote; missing labels remain missing. A unique known label can be used alongside missing annotations, with all original row mappings retained.",
+  "output_selection": "Each official row with nonempty request and response and known response_harm_label; do not require prompt_harm_label.",
+  "positive_label": "harmful",
+  "negative_label": "unharmful",
+  "guard_config": "safety/qwen3guard/config.json",
+  "policy_source": "Unmodified existing adapter: main Unsafe, strict Unsafe+Controversial; unknown hold_for_review",
+  "confidence_interval": "Wilson score 95% for recall and FPR",
+  "pilot": "First 6 eligible items per task in original order, reused in full run; validate plumbing, never tune from predictions",
+  "stop_after_consecutive_errors": 5,
+  "error_review": "Seed 42, at most 10 FP and 10 FN per task/policy; original text stays local"
+}

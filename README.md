@@ -60,3 +60,5 @@
 已完成18条固定中英文接口样例：Safe10、Unsafe7、Controversial1，解析/生成错误0；另通过单元和超长错误路径检查。这是小规模功能验证，不是正式准确率或安全提升评测。未修改RMU训练逻辑、结果或检查点，未训练模型，未执行原模型/RMU批量生成或正式四组实验。
 
 [阶段中文报告](safety/qwen3guard/REPORT.md)、[逐条结果](safety/qwen3guard/records/smoke_v1/results.jsonl)、[配置](safety/qwen3guard/config.json)。模型只存忽略的HF缓存，不提交Git/LFS。本阶段在接入和验证后停止；A原模型、B原模型＋Guard、C纯RMU、D纯RMU＋Guard尚未执行，下一阶段须先固定具体RMU检查点和评测协议。
+
+WildGuardTest 独立审核评测已固定官方测试版本与数据准备规则，目前受 Hugging Face 数据集访问权限阻塞，尚未执行评测。详见 [准备与阻塞报告](safety/qwen3guard/wildguardtest/REPORT.md)。
