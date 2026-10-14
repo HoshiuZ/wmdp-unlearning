@@ -31,7 +31,7 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 envs/unlearning/bin/python scripts/run_r
 
 ## 当前目录与历史
 
-其他项目实验的模型、结果、专用脚本和文档已从当前版本清理；Git历史保留，历史LFS对象仍在远端。本地只保留当前产物所需LFS缓存。清理范围见[清单](logs/method_cleanup_manifest.json)，新入口的损失/梯度及六个检查点重建核查见[验证记录](logs/rmu_ce_verification.json)。
+其他项目实验的模型、结果、专用脚本和文档已从当前版本清理；Git历史保留，历史LFS对象仍在远端。本地只保留当前产物所需LFS缓存。本地释放约20.41 GiB、当前可用约37.30 GiB。清理范围见[清单](logs/method_cleanup_manifest.json)和[清理说明](docs/method-cleanup.md)，新入口的损失/梯度及六个检查点重建核查见[验证记录](logs/rmu_ce_verification.json)。
 
 保留产物中的原始运行配置和日志是当时执行记录，其中旧handler名称及路径不作篡改。当前运行使用独立`RMUCE`入口，旧路径迁移关系见[映射](reference/rmu_ce/path_migration.json)，不再依赖已删除实验。`open-unlearning/`保留通用上游框架及其依赖；项目实验入口仅RMU＋CE。
 
