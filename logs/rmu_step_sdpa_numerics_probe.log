@@ -1,0 +1,36 @@
+{
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "device": "NVIDIA GeForce RTX 4090 D",
+  "dtype": "bfloat16",
+  "query_shape": [
+    1,
+    32,
+    256,
+    128
+  ],
+  "key_value_shape": [
+    1,
+    8,
+    256,
+    128
+  ],
+  "enable_gqa": true,
+  "dropout": 0,
+  "causal": true,
+  "identical_inputs_and_upstream_gradient": true,
+  "deterministic_algorithms": false,
+  "backend_events": [
+    "aten::scaled_dot_product_attention",
+    "aten::_scaled_dot_product_flash_attention",
+    "aten::_scaled_dot_product_flash_attention_backward"
+  ],
+  "unique_forward_hashes": 1,
+  "unique_gradient_triplets": 20,
+  "max_abs_gradient_difference_from_first": [
+    0.00048828125,
+    0.0,
+    0.0
+  ],
+  "no_model_or_optimizer_update": true
+}

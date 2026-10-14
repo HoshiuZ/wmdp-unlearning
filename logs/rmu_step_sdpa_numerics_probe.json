@@ -1,0 +1,198 @@
+{
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "device": "NVIDIA GeForce RTX 4090 D",
+  "dtype": "bfloat16",
+  "query_shape": [
+    1,
+    32,
+    256,
+    128
+  ],
+  "key_value_shape": [
+    1,
+    8,
+    256,
+    128
+  ],
+  "enable_gqa": true,
+  "dropout": 0,
+  "causal": true,
+  "identical_inputs_and_upstream_gradient": true,
+  "deterministic_algorithms": false,
+  "backend_events": [
+    "aten::scaled_dot_product_attention",
+    "aten::_scaled_dot_product_flash_attention",
+    "aten::_scaled_dot_product_flash_attention_backward"
+  ],
+  "repeats": [
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "2dfcacaa679d4b2615fc2ea7ca0b378fa0792077840a911da41221763e22b97d",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "8d3b21489ff06cbad5d470d0ac7032f8d3eab8ecbb17fa7cbd59145694af11b8",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "0244907698abe59d7ad3aca1b0b895774aed79a3295e52036e0c4d05919a9802",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "5db361ffd409643cb5bea9225e4c63202282e192195a809e3c4b81100b65d594",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "b4e939caea55ef93cf1afd9075d70bec830beff6042708aba6051e0c6c667830",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "8395178853853674d5b2394e38a03b28ecc0c9cd312d22682a6b5c220d5af3b2",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "8a25afa3a5d876cd2cbffc4c3dcc3ac2ffe81f5a18389d8553136f6c3f7619a4",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "0a21c020a71d69fa6efa951349e2b64945a36db0bddee03fa4f10c401610cf07",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "3446b293b04424ad1a787404df6cc45c481f295da39d58cc2af9ffca7f4792b3",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "8c50018bffd333fd6c61b4690dfeda6ba33d09ead27ed9762d89b64f365d96c4",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "dc5ce7be2abe615769d35b66b52b9daf7265be6569d8ff2bbfd83efd58fe3d5a",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "b5fb02b48c1cc9a71ce99cc5aee5d3d744f44ff7bcc53bb43769e804876fe0f8",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "3da2888cdcc85999852a1894a362393a61608b00a599e15d1692b63312715fa4",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "abd7d764da5aa50c920527d4c7081ab5d773b4cd5a2cd1d1e88a5ea1df698ffa",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "516f0c353be5468a25f7de734df6a5210540259d22f4d919aadbfc923cc78e9f",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "dc0ecf3009fa98ba1494463bea5682e3d318ebed97803ff52cee6a0b969add36",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "0ff59f6dde2218d427d1951e97a4108f47ddae5f9455141f66ed8620261e101b",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "4b19fe0b66e95c2a82faa8a1c8937428668f915e41cf2ce4eade909bc681115a",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "67971492cba62da33a14d96f13ab4447cfdc4faba2d60b9e190cf5330e753c75",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    },
+    {
+      "output_sha256": "6d4f1faa51e15dc9f5a41ee4746786d0102273aa130ff42e22383c1ad7acbdbb",
+      "gradient_sha256": [
+        "6248ecd4c256f06077e98b85d34bfc4f8f3d8b80048d1bd92fec069d637f59d0",
+        "80d59c531b7008b3c1be7d2de0d98ffbbe5b1823cf5855276af1fd0369ad4c45",
+        "10c00512167883bc9c7007b8764e4ae5bb3d8418ea77c6360466892ee1efb44b"
+      ]
+    }
+  ],
+  "unique_forward_hashes": 1,
+  "unique_gradient_triplets": 20,
+  "max_abs_gradient_difference_from_first": [
+    0.00048828125,
+    0.0,
+    0.0
+  ],
+  "no_model_or_optimizer_update": true
+}
