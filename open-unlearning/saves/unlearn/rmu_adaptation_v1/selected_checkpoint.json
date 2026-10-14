@@ -1,0 +1,21 @@
+{
+  "experiment": "h12_a2_lr5e-05_s2_screen40",
+  "hook": 12,
+  "update_parameters": [
+    "model.layers.10.mlp.down_proj.weight",
+    "model.layers.11.mlp.down_proj.weight",
+    "model.layers.12.mlp.down_proj.weight"
+  ],
+  "learning_rate": 5e-05,
+  "alpha": 2.0,
+  "steering_coefficient": 2,
+  "step": 40,
+  "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a2_lr5e-05_s2_screen40/checkpoint-40",
+  "wmdp_bio_development_percent": 67.96875,
+  "mmlu_development_percent": 71.81286549707602,
+  "wmdp_bio_change_pp": -7.8125,
+  "mmlu_change_pp": -1.695906432748538,
+  "development_constraint_pass": true,
+  "peak_allocated_bytes": 19276036608,
+  "training_wall_seconds": 458.01403189683333
+}

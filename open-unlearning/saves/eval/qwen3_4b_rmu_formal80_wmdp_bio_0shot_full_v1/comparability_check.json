@@ -1,0 +1,13 @@
+{
+  "exact_documents_and_scoring_arguments": true,
+  "baseline_prediction_check": false,
+  "subjects": [
+    {
+      "task": "wmdp_bio",
+      "n": 1273,
+      "correct": 763.0,
+      "baseline_correct": 940.0
+    }
+  ],
+  "total": 1273
+}

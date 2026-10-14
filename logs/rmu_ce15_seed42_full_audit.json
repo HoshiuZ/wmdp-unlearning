@@ -1,7 +1,0 @@
-{
-  "seed": 42,
-  "fixed_checkpoint": 40,
-  "requests_hash_target_and_baseline_verified": true,
-  "metrics_recounted": true,
-  "result": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed42_checkpoint-40/result.json"
-}

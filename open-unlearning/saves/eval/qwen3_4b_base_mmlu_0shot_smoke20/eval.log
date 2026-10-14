@@ -1,0 +1,13 @@
+[2026-10-13 12:26:59,327][lm_eval.models.huggingface][WARNING] - `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+[2026-10-13 12:26:59,330][lm_eval.models.huggingface][WARNING] - Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[2026-10-13 12:26:59,331][evaluator][INFO] - ***** Running LMEval evaluation suite *****
+[2026-10-13 12:26:59,332][evaluator][INFO] - Fine-grained evaluations will be saved to: ./saves/eval/qwen3_4b_base_mmlu_0shot_smoke20/LMEval_EVAL.json
+[2026-10-13 12:26:59,332][evaluator][INFO] - Aggregated evaluations will be summarised in: ./saves/eval/qwen3_4b_base_mmlu_0shot_smoke20/LMEval_SUMMARY.json
+[2026-10-13 12:26:59,333][lm_eval.evaluator][INFO] - Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+[2026-10-13 12:26:59,333][lm_eval.evaluator][INFO] - Using pre-initialized model
+[2026-10-13 12:27:00,401][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
+[2026-10-13 12:27:00,470][lm_eval.tasks][INFO] - Selected tasks:
+[2026-10-13 12:27:00,471][lm_eval.tasks][INFO] - Task: mmlu_professional_law (configs/eval/tasks/mmlu_pinned/mmlu_professional_law.yaml)
+[2026-10-13 12:27:00,471][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_professional_law from None to 0
+[2026-10-13 12:27:00,472][lm_eval.api.task][INFO] - Building contexts for mmlu_professional_law on rank 0...
+[2026-10-13 12:27:00,501][lm_eval.evaluator][INFO] - Running loglikelihood requests

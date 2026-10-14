@@ -1,0 +1,80 @@
+{
+  "module_matches": [
+    "model.layers.7"
+  ],
+  "selected_parameters": [
+    {
+      "name": "model.layers.5.mlp.down_proj.weight",
+      "shape": [
+        2560,
+        9728
+      ],
+      "parameters": 24903680
+    },
+    {
+      "name": "model.layers.6.mlp.down_proj.weight",
+      "shape": [
+        2560,
+        9728
+      ],
+      "parameters": 24903680
+    },
+    {
+      "name": "model.layers.7.mlp.down_proj.weight",
+      "shape": [
+        2560,
+        9728
+      ],
+      "parameters": 24903680
+    }
+  ],
+  "trainable_parameter_count": 74711040,
+  "total_model_parameters": 4411424256,
+  "model_inspection": "meta tensors only; no 4B weights loaded",
+  "reference_model": "RMU makes deepcopy on accelerator device; frozen after preparation",
+  "dataset_lengths": {
+    "forget": 8,
+    "retain": 8
+  },
+  "collated_tensor_shapes": {
+    "forget": {
+      "input_ids": [
+        1,
+        256
+      ],
+      "attention_mask": [
+        1,
+        256
+      ],
+      "labels": [
+        1,
+        256
+      ]
+    },
+    "retain": {
+      "input_ids": [
+        1,
+        256
+      ],
+      "attention_mask": [
+        1,
+        256
+      ],
+      "labels": [
+        1,
+        256
+      ]
+    }
+  },
+  "json_text_matches_source": true,
+  "all_examples_valid_labels": true,
+  "max_length": 256,
+  "model_dtype_for_actual_run": "bfloat16",
+  "short_run_max_steps": 3,
+  "short_run_started": false,
+  "cuda_training_verified": false,
+  "subset_manifest": "logs/rmu_smoke_subset_manifest.json",
+  "cpu_checks": "logs/rmu_cpu_checks.log",
+  "loss_fix_note": "Batch>1 normalization previously broadcast per-example sums with [b,1] denominator; corrected to [b]. Batch1 formula preserved.",
+  "freeze_fix_note": "Keep only selected parameters requires_grad after optimizer construction; freeze reference parameters explicitly."
+}

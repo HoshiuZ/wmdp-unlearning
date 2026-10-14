@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/wmdp-work/maintenance/check_lfs_remote.py", line 27, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/root/autodl-tmp/wmdp-work/maintenance/check_lfs_remote.py", line 7, in main
+    raw=subprocess.check_output(['ssh','-o','BatchMode=yes','-o','ConnectTimeout=20','git@'+m[1],'git-lfs-authenticate',m[2],'download'],stderr=subprocess.PIPE);auth=json.loads(raw)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=20', 'git@github.com', 'git-lfs-authenticate', 'HoshiuZ/wmdp-unlearning.git', 'download']' returned non-zero exit status 255.

@@ -1,0 +1,40 @@
+{
+  "status": "prepared_not_started",
+  "training_started": false,
+  "model_inspection": "meta tensors only",
+  "base_checkpoint": "/root/autodl-tmp/wmdp-work/models/Qwen3-4B-Instruct-2507",
+  "selected_parameters": [
+    "model.layers.5.mlp.down_proj.weight",
+    "model.layers.6.mlp.down_proj.weight",
+    "model.layers.7.mlp.down_proj.weight"
+  ],
+  "dataset_lengths": {
+    "forget_train": 2048,
+    "forget_validation": 64,
+    "retain_train": 2048,
+    "retain_validation": 64
+  },
+  "representative_source_token_slices_match": true,
+  "all_cached_tokens_and_masks_verified": true,
+  "sample_indices_available": true,
+  "max_steps": 80,
+  "batch_per_device": 1,
+  "gradient_accumulation_steps": 16,
+  "effective_batch": 16,
+  "max_sequence_length": 256,
+  "learning_rate": 5e-05,
+  "seed": 42,
+  "validation_steps": [
+    0,
+    20,
+    40,
+    60,
+    80
+  ],
+  "checkpoint_selection": "fixed step80; no early stopping or test-based selection",
+  "post_training_tests_used_for_tuning": false,
+  "formal_cuda_run_verified": false,
+  "short_run_cuda_evidence": "logs/rmu_smoke_run.json",
+  "cpu_validation_evidence": "logs/rmu_formal_monitor_cpu_checks.log",
+  "token_block_manifest": "logs/rmu_formal_blocks_manifest.json"
+}

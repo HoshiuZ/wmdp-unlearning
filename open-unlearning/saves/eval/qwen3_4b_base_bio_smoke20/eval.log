@@ -1,0 +1,26 @@
+[2026-10-12 17:11:14,582][lm_eval.models.huggingface][WARNING] - `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+[2026-10-12 17:11:15,357][lm_eval.models.huggingface][WARNING] - Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[2026-10-12 17:11:15,359][evaluator][INFO] - ***** Running LMEval evaluation suite *****
+[2026-10-12 17:11:15,360][evaluator][INFO] - Fine-grained evaluations will be saved to: ./saves/eval/qwen3_4b_base_bio_smoke20/LMEval_EVAL.json
+[2026-10-12 17:11:15,360][evaluator][INFO] - Aggregated evaluations will be summarised in: ./saves/eval/qwen3_4b_base_bio_smoke20/LMEval_SUMMARY.json
+[2026-10-12 17:11:15,361][lm_eval.evaluator][INFO] - Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+[2026-10-12 17:11:15,361][lm_eval.evaluator][INFO] - Using pre-initialized model
+[2026-10-12 17:18:42,846][lm_eval.models.huggingface][WARNING] - `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+[2026-10-12 17:18:43,628][lm_eval.models.huggingface][WARNING] - Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+[2026-10-12 17:18:43,629][evaluator][INFO] - ***** Running LMEval evaluation suite *****
+[2026-10-12 17:18:43,629][evaluator][INFO] - Fine-grained evaluations will be saved to: ./saves/eval/qwen3_4b_base_bio_smoke20/LMEval_EVAL.json
+[2026-10-12 17:18:43,629][evaluator][INFO] - Aggregated evaluations will be summarised in: ./saves/eval/qwen3_4b_base_bio_smoke20/LMEval_SUMMARY.json
+[2026-10-12 17:18:43,630][lm_eval.evaluator][INFO] - Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+[2026-10-12 17:18:43,631][lm_eval.evaluator][INFO] - Using pre-initialized model
+[2026-10-12 17:18:44,988][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/wmdp "HTTP/1.1 200 OK"
+[2026-10-12 17:18:45,905][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/cais/wmdp/cais/wmdp.py "HTTP/1.1 404 Not Found"
+[2026-10-12 17:18:46,265][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/wmdp "HTTP/1.1 200 OK"
+[2026-10-12 17:18:46,590][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/wmdp/revision/7125571f22f032c56415e7980f48d877dd830ff8 "HTTP/1.1 200 OK"
+[2026-10-12 17:18:47,155][httpx][INFO] - HTTP Request: HEAD https://hf-mirror.com/datasets/cais/wmdp/resolve/7125571f22f032c56415e7980f48d877dd830ff8/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-12 17:18:48,589][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/wmdp/tree/7125571f22f032c56415e7980f48d877dd830ff8/wmdp-bio?recursive=true&expand=false "HTTP/1.1 200 OK"
+[2026-10-12 17:18:48,960][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/wmdp/tree/7125571f22f032c56415e7980f48d877dd830ff8?recursive=false&expand=false "HTTP/1.1 200 OK"
+[2026-10-12 17:18:49,469][httpx][INFO] - HTTP Request: HEAD https://hf-mirror.com/datasets/cais/wmdp/resolve/7125571f22f032c56415e7980f48d877dd830ff8/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-12 17:18:49,530][lm_eval.tasks][INFO] - Selected tasks:
+[2026-10-12 17:18:49,531][lm_eval.tasks][INFO] - Task: wmdp_bio (wmdp/wmdp_bio.yaml)
+[2026-10-12 17:18:49,531][lm_eval.api.task][INFO] - Building contexts for wmdp_bio on rank 0...
+[2026-10-12 17:18:51,598][lm_eval.evaluator][INFO] - Running loglikelihood requests

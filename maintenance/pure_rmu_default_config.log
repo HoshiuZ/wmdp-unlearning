@@ -1,0 +1,58 @@
+[2026-10-14 12:24:08,120] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:212: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:218: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:230: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/config_loader_impl.py:291: FutureWarning: Implicit conversion from Version to str at 'hydra.runtime.version_base' during assignment is deprecated; pass the declared type or use OmegaConf.update() for an existing path.
+  cfg.hydra.runtime.version_base = version.getbase()
+handler: RMU
+args:
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 16
+  gradient_accumulation_steps: 16
+  learning_rate: 5.0e-05
+  bf16: true
+  bf16_full_eval: true
+  logging_steps: 1
+  output_dir: /root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_adaptation_v1/pure_rmu_h12_a2_s32_40
+  logging_dir: /root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_adaptation_v1/pure_rmu_h12_a2_s32_40/logs
+  report_to: none
+  ddp_find_unused_parameters: None
+  gradient_checkpointing: false
+  optim: adamw_torch
+  save_strategy: 'no'
+  save_only_model: true
+  weight_decay: 0.0
+  do_train: true
+  do_eval: false
+  eval_on_start: false
+  eval_strategy: 'no'
+  num_train_epochs: 10
+  seed: 42
+  eval_steps: 0.5
+  max_steps: 40
+  lr_scheduler_type: constant
+  data_seed: 42
+  remove_unused_columns: false
+  max_grad_norm: 1.0
+  warmup_steps: 0
+method_args:
+  gamma: 1.0
+  alpha: 2
+  retain_loss_type: EMBED_DIFF
+  steering_coeff: 32
+  module_regex: model\.layers\.12
+  trainable_params_regex:
+  - model\.layers\.(10|11|12)\.mlp\.down_proj\.weight
+

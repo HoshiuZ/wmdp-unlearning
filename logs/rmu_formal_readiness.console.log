@@ -1,0 +1,62 @@
+[2026-10-13 13:56:54,789] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:212: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:218: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:230: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/config_loader_impl.py:291: FutureWarning: Implicit conversion from Version to str at 'hydra.runtime.version_base' during assignment is deprecated; pass the declared type or use OmegaConf.update() for an existing path.
+  cfg.hydra.runtime.version_base = version.getbase()
+`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 2048 examples [00:00, 43221.54 examples/s]
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 64 examples [00:00, 5405.79 examples/s]
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 64 examples [00:00, 6132.02 examples/s]
+{
+  "status": "prepared_not_started",
+  "training_started": false,
+  "model_inspection": "meta tensors only",
+  "base_checkpoint": "/root/autodl-tmp/wmdp-work/models/Qwen3-4B-Instruct-2507",
+  "selected_parameters": [
+    "model.layers.5.mlp.down_proj.weight",
+    "model.layers.6.mlp.down_proj.weight",
+    "model.layers.7.mlp.down_proj.weight"
+  ],
+  "dataset_lengths": {
+    "forget_train": 2048,
+    "forget_validation": 64,
+    "retain_train": 2048,
+    "retain_validation": 64
+  },
+  "representative_source_token_slices_match": true,
+  "all_cached_tokens_and_masks_verified": true,
+  "sample_indices_available": true,
+  "max_steps": 80,
+  "batch_per_device": 1,
+  "gradient_accumulation_steps": 16,
+  "effective_batch": 16,
+  "max_sequence_length": 256,
+  "learning_rate": 5e-05,
+  "seed": 42,
+  "validation_steps": [
+    0,
+    20,
+    40,
+    60,
+    80
+  ],
+  "checkpoint_selection": "fixed step80; no early stopping or test-based selection",
+  "post_training_tests_used_for_tuning": false,
+  "formal_cuda_run_verified": false,
+  "short_run_cuda_evidence": "logs/rmu_smoke_run.json",
+  "cpu_validation_evidence": "logs/rmu_formal_monitor_cpu_checks.log",
+  "token_block_manifest": "logs/rmu_formal_blocks_manifest.json"
+}

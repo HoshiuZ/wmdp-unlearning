@@ -1,0 +1,32 @@
+{
+  "completed_trial": "h12_a1_s16_fixed40",
+  "actual_saved_checkpoint_bytes": 71057447,
+  "space_after": {
+    "total": 64424509440,
+    "used": 53973327872,
+    "free": 10451181568
+  },
+  "points": [
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_scale_v2/h12_a1_s16_fixed40/checkpoint-10/development/samples.json",
+      "bio_percent": 73.4375,
+      "weighted_change_pp": -1.347861178369655,
+      "pareto_weighted": false
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_scale_v2/h12_a1_s16_fixed40/checkpoint-20/development/samples.json",
+      "bio_percent": 72.65625,
+      "weighted_change_pp": -1.583107819398947,
+      "pareto_weighted": false
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_scale_v2/h12_a1_s16_fixed40/checkpoint-40/development/samples.json",
+      "bio_percent": 58.203125,
+      "weighted_change_pp": -2.0156198072449456,
+      "pareto_weighted": true
+    }
+  ],
+  "next_trial": "steering32/alpha1; different diagnosed target scale, no other factors changed",
+  "reason": "Steering16 safely executed, valid equal sampling/target direction and retained forward;32 is the predeclared distinct scale. Budget fits with >=1GiB reserve.",
+  "retain_damage_gate": false
+}

@@ -1,7 +1,0 @@
-[2026-10-14 11:10:04,020] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-usage: run_rmu_ce.py [-h] --seed {42,43} [--check-only]
-
-options:
-  -h, --help      show this help message and exit
-  --seed {42,43}
-  --check-only

@@ -1,0 +1,4 @@
+- experiment=eval/mmlu/qwen3_4b_baseline
+- task_name=qwen3_4b_base_mmlu_0shot_smoke20
+- eval.lm_eval.tasks=[mmlu_professional_law]
+- +eval.lm_eval.simple_evaluate_args.limit=20

@@ -1,0 +1,280 @@
+{
+  "run_id": "qwen3_4b_rmu_bio_formal80_v1",
+  "started_at": "2026-10-13T14:27:34.308194+08:00",
+  "status": "completed",
+  "code_commit": "b8d56c219a606ae3161e869c8197fe7bf2dec5b5",
+  "command": "envs/unlearning/bin/python -u scripts/run_rmu_formal.py",
+  "base_model": "/root/autodl-tmp/wmdp-work/models/Qwen3-4B-Instruct-2507",
+  "subset_manifest": "logs/rmu_formal_blocks_manifest.json",
+  "max_steps": 80,
+  "completed_at": "2026-10-13T14:33:09.518475+08:00",
+  "global_step": 80,
+  "validation_results": [
+    {
+      "training_run_id": "qwen3_4b_rmu_bio_formal80_v1",
+      "phase": "validation",
+      "step": 0,
+      "epoch": 0,
+      "forget_loss": 0.537689208984375,
+      "retain_loss": 0.0,
+      "total_loss": 0.537689208984375,
+      "validation_loss": 0.537689208984375,
+      "retain_nll": 2.193743327304359,
+      "retain_ppl": 8.968723222441891,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 10.222899396903813,
+      "recorded_at": "2026-10-13T14:28:02.265319+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 3107.9245492352898,
+      "gpu_peak_allocated_bytes": 16918116352,
+      "gpu_peak_reserved_bytes": 16961765376,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "qwen3_4b_rmu_bio_formal80_v1",
+      "phase": "validation",
+      "step": 20,
+      "epoch": 0.15625,
+      "forget_loss": 0.341094970703125,
+      "retain_loss": 0.026900291442871094,
+      "total_loss": 0.367828369140625,
+      "validation_loss": 0.367828369140625,
+      "retain_nll": 2.207052978444616,
+      "retain_ppl": 9.088891726187173,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 10.30325379781425,
+      "recorded_at": "2026-10-13T14:29:02.929570+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 3083.6860494245193,
+      "gpu_peak_allocated_bytes": 19585479168,
+      "gpu_peak_reserved_bytes": 19784531968,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "qwen3_4b_rmu_bio_formal80_v1",
+      "phase": "validation",
+      "step": 40,
+      "epoch": 0.3125,
+      "forget_loss": 0.2548675537109375,
+      "retain_loss": 0.05955314636230469,
+      "total_loss": 0.314422607421875,
+      "validation_loss": 0.314422607421875,
+      "retain_nll": 2.238066953347514,
+      "retain_ppl": 9.375191078425722,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 10.556916365399957,
+      "recorded_at": "2026-10-13T14:30:12.803344+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 3009.5909544317296,
+      "gpu_peak_allocated_bytes": 19585479168,
+      "gpu_peak_reserved_bytes": 19784531968,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "qwen3_4b_rmu_bio_formal80_v1",
+      "phase": "validation",
+      "step": 60,
+      "epoch": 0.46875,
+      "forget_loss": 0.228485107421875,
+      "retain_loss": 0.0651102066040039,
+      "total_loss": 0.293548583984375,
+      "validation_loss": 0.293548583984375,
+      "retain_nll": 2.266483034035208,
+      "retain_ppl": 9.645418483228081,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 10.371563029941171,
+      "recorded_at": "2026-10-13T14:31:15.785573+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 3063.3762633731217,
+      "gpu_peak_allocated_bytes": 19585479168,
+      "gpu_peak_reserved_bytes": 19784531968,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "qwen3_4b_rmu_bio_formal80_v1",
+      "phase": "validation",
+      "step": 80,
+      "epoch": 0.625,
+      "forget_loss": 0.2071380615234375,
+      "retain_loss": 0.06995058059692383,
+      "total_loss": 0.277099609375,
+      "validation_loss": 0.277099609375,
+      "retain_nll": 2.2995090145210284,
+      "retain_ppl": 9.969286478089886,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 12.528010182082653,
+      "recorded_at": "2026-10-13T14:32:25.697581+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 2536.0771214442157,
+      "gpu_peak_allocated_bytes": 19585479168,
+      "gpu_peak_reserved_bytes": 19784531968,
+      "checkpoint_path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model",
+      "sampling": "fixed held-out blocks; same control vector as training"
+    }
+  ],
+  "actual_used_block_counts": {
+    "forget": 1280,
+    "retain": 920
+  },
+  "training_metrics": {
+    "train_runtime": 273.6606,
+    "train_samples_per_second": 4.677,
+    "train_steps_per_second": 0.292,
+    "total_flos": 0.0,
+    "train_loss": 0.9347648620605469,
+    "epoch": 0.625
+  },
+  "selected_parameters": [
+    "model.layers.5.mlp.down_proj.weight",
+    "model.layers.6.mlp.down_proj.weight",
+    "model.layers.7.mlp.down_proj.weight"
+  ],
+  "changed_parameters": [
+    "model.layers.5.mlp.down_proj.weight",
+    "model.layers.6.mlp.down_proj.weight",
+    "model.layers.7.mlp.down_proj.weight"
+  ],
+  "parameter_changes": {
+    "model.layers.5.mlp.down_proj.weight": {
+      "changed_elements": 13672746,
+      "max_abs_change": 0.00531005859375,
+      "mean_abs_change": 0.00048622069880366325
+    },
+    "model.layers.6.mlp.down_proj.weight": {
+      "changed_elements": 13315995,
+      "max_abs_change": 0.005615234375,
+      "mean_abs_change": 0.000634140451438725
+    },
+    "model.layers.7.mlp.down_proj.weight": {
+      "changed_elements": 13228606,
+      "max_abs_change": 0.005615234375,
+      "mean_abs_change": 0.0006778588285669684
+    }
+  },
+  "frozen_parameters_unchanged": true,
+  "cuda_peak_allocated_bytes": 19585479168,
+  "cuda_peak_reserved_bytes": 19784531968,
+  "reload_fingerprints_identical": true,
+  "reload_forward_finite": true,
+  "training_metrics_path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/training_metrics.jsonl",
+  "model_directory": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model",
+  "model_files": [
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/chat_template.jinja",
+      "size_bytes": 2630,
+      "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/config.json",
+      "size_bytes": 1594,
+      "sha256": "8a54e3c7e605be34d66d2b89952870de8467034fb9361202e3f99fd10a0ea218"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/generation_config.json",
+      "size_bytes": 186,
+      "sha256": "204989ce285023b3a074d3fd48ff9dbdd24ca08557f0c1c324b46cd23def8ba5"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/model-00001-of-00009.safetensors",
+      "size_bytes": 979780560,
+      "sha256": "02e36c59d346e8fda2b8ce7bdc5b1c722d0e8844a63c81a34c30d3d8e08edc1b"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/model-00002-of-00009.safetensors",
+      "size_bytes": 983094528,
+      "sha256": "28211c9c601f93d38594c3e50a40a3e4f7f30d46132cbc5da65fce3daf02c2f4"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/model-00003-of-00009.safetensors",
+      "size_bytes": 988342384,
+      "sha256": "34dfb9ab7647b2d2ff6d2b38f5b86ea30d1c535d9e789864fe9ebbdf70361c1c"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/model-00004-of-00009.safetensors",
+      "size_bytes": 954258360,
+      "sha256": "8e3b10c0b509afa76e9c0d5fa2db1bef164485ea400bd618bdfc0782f9c2060f"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/model-00005-of-00009.safetensors",
+      "size_bytes": 959506960,
+      "sha256": "862f3a8ff20e2048e90e1d0f09b5cbc69c54128bd179b2a35487e6852d5672ea"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/model-00006-of-00009.safetensors",
+      "size_bytes": 959506968,
+      "sha256": "7e13ad8c2ca32e254c73d0a1af472226cb167d2fbe6a7b2903c6c9ea7ee239dd"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/model-00007-of-00009.safetensors",
+      "size_bytes": 983094576,
+      "sha256": "dba9f9ce1900a841f3ca0d2a446ff6dd34e116a4e6053eaf7b88e142b70333cd"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/model-00008-of-00009.safetensors",
+      "size_bytes": 988342432,
+      "sha256": "0fb05817aaa02d0eac14b3b291dddf87340f9a8725ccacac9d364c6165628462"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/model-00009-of-00009.safetensors",
+      "size_bytes": 249054752,
+      "sha256": "6f76d2f7a0e4a062050594214e49be9798bd7f6cb190b533b655cfca0f6c31a9"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/model.safetensors.index.json",
+      "size_bytes": 32855,
+      "sha256": "549e24ee5dfef3a320a7f36db3509223346f7b333643a3b761fff4264f76d41e"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/tokenizer.json",
+      "size_bytes": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/tokenizer_config.json",
+      "size_bytes": 665,
+      "sha256": "7a8b69bdd59cb05edc0ba8d60844b9395faf4752097f34382c7761bb8b198206"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/LICENSE",
+      "size_bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/BASE_MODEL_README.md",
+      "size_bytes": 8168,
+      "sha256": "8e3dd0c3b5b11897cc71092ccfe517bb7a9783479baa3665aad73c8d1a2041cd"
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/model/README.md",
+      "size_bytes": 1811,
+      "sha256": "a3400f18e2b6457184c168d6364350feac98a69f68319f792a02ee4c48a5a401"
+    }
+  ],
+  "note": "Formal RMU training; fixed final step80 checkpoint. Official WMDP/MMLU post-training evaluation remains pending.",
+  "total_input_tokens": 641113,
+  "github_weights_uploaded": true,
+  "lfs_version": "3.0.2",
+  "actual_consumption_dataset_manifest": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1/training_datasets.jsonl",
+  "published_commit": "bde1f91",
+  "repository_url": "https://github.com/HoshiuZ/wmdp-unlearning",
+  "lfs_integrity_checked": true
+}

@@ -1,0 +1,6 @@
+{
+  "staged_files_checked": 500,
+  "restricted_paths_found": [],
+  "credential_patterns_found": [],
+  "note": "Targeted credential and restricted-path scan; no environment export; original model and gated data remain ignored"
+}

@@ -1,9 +1,0 @@
-usage: evaluate_rmu_ce.py [-h] --seed {42,43} [--step {10,20,40}] --output
-                          OUTPUT [--development]
-
-options:
-  -h, --help         show this help message and exit
-  --seed {42,43}
-  --step {10,20,40}
-  --output OUTPUT
-  --development

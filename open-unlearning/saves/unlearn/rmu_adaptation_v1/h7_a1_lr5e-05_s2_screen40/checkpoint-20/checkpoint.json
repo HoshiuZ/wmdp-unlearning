@@ -1,0 +1,45 @@
+{
+  "format": "bf16-uint16-xor-gzip-v1",
+  "base_manifest": "logs/base_model_manifest.json",
+  "parameters": [
+    {
+      "name": "model.layers.5.mlp.down_proj.weight",
+      "shape": [
+        2560,
+        9728
+      ],
+      "dtype": "bfloat16",
+      "file": "model.layers.5.mlp.down_proj.weight.xor.gz",
+      "bytes": 23003117,
+      "compressed_sha256": "b4e09b579c9e8679931cf40627d703ed51f58740b2c28200425d3e5d79454a34",
+      "base_tensor_sha256": "281554090aa056fbc391439abd13fd93029e24523840eb7cf079eec9e0c0b8ad",
+      "trained_tensor_sha256": "aed5a7a78c5d03ce7595b65ed1a676bf6cf13bd9e1b55403a636439b94df5e4b"
+    },
+    {
+      "name": "model.layers.6.mlp.down_proj.weight",
+      "shape": [
+        2560,
+        9728
+      ],
+      "dtype": "bfloat16",
+      "file": "model.layers.6.mlp.down_proj.weight.xor.gz",
+      "bytes": 22531082,
+      "compressed_sha256": "0f57b92ff3a841a13422b947e85498f416590687c37b4edc72b0eef758c7f37a",
+      "base_tensor_sha256": "a62524695a3c989430d33f9e5c0b2da1e436fa89cc13c47a1d3454da48e61ae4",
+      "trained_tensor_sha256": "5167ca7316d17b7a4f60744a33d710ec9054f6d913b3b7542e5c434d6bcf609c"
+    },
+    {
+      "name": "model.layers.7.mlp.down_proj.weight",
+      "shape": [
+        2560,
+        9728
+      ],
+      "dtype": "bfloat16",
+      "file": "model.layers.7.mlp.down_proj.weight.xor.gz",
+      "bytes": 21812600,
+      "compressed_sha256": "b8ce5e4f30390d51b3523cceed1effdf5b24ce420d7af9d62654ba1c9ead62ec",
+      "base_tensor_sha256": "32c5bdb3f945ca5396bd20077d44c915f5e5a0c42ae290388d0b9c21dd84e282",
+      "trained_tensor_sha256": "cdc9b2d35476d849ea75d7c6409d995f8a742ff29f61bfa8807975086560d23e"
+    }
+  ]
+}

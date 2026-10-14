@@ -1,0 +1,240 @@
+{
+  "name": "h7_a1_lr5e-05_s2_screen40",
+  "started_at": "2026-10-13T16:39:46.163314+08:00",
+  "code_commit": "187eeb6f467d6eed4d07d292d9e2ae4736ccb42e",
+  "script_sha256": "4a36e64052e704f7126be0e3647a89f633f4e319afa20cf800df8efb5dfe0775",
+  "hook": 7,
+  "alpha": 1,
+  "learning_rate": 5e-05,
+  "steering_coefficient": 2,
+  "seed": 42,
+  "minimal": false,
+  "status": "completed",
+  "command": "/root/autodl-tmp/wmdp-work/scripts/run_rmu_adaptation.py --hook 7",
+  "data_manifest": "logs/rmu_formal_blocks_manifest.json",
+  "training_metrics": {
+    "train_runtime": 450.8358,
+    "train_samples_per_second": 1.42,
+    "train_steps_per_second": 0.089,
+    "total_flos": 0.0,
+    "train_loss": 0.978106689453125,
+    "epoch": 0.3125
+  },
+  "development": [
+    {
+      "step": 10,
+      "metrics": {
+        "wmdp_bio": {
+          "n": 256,
+          "correct": 189,
+          "accuracy_percent": 73.828125,
+          "baseline_accuracy_percent": 75.78125,
+          "change_percentage_points": -1.953125
+        },
+        "mmlu": {
+          "n": 1710,
+          "correct": 1234,
+          "accuracy_percent": 72.16374269005848,
+          "baseline_accuracy_percent": 73.50877192982456,
+          "change_percentage_points": -1.345029239766082
+        }
+      },
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h7_a1_lr5e-05_s2_screen40/checkpoint-10",
+      "save_reload_identical": true,
+      "seconds": 100.73293076222762
+    },
+    {
+      "step": 20,
+      "metrics": {
+        "wmdp_bio": {
+          "n": 256,
+          "correct": 187,
+          "accuracy_percent": 73.046875,
+          "baseline_accuracy_percent": 75.78125,
+          "change_percentage_points": -2.734375
+        },
+        "mmlu": {
+          "n": 1710,
+          "correct": 1214,
+          "accuracy_percent": 70.99415204678363,
+          "baseline_accuracy_percent": 73.50877192982456,
+          "change_percentage_points": -2.5146198830409356
+        }
+      },
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h7_a1_lr5e-05_s2_screen40/checkpoint-20",
+      "save_reload_identical": true,
+      "seconds": 103.36594810616225
+    },
+    {
+      "step": 40,
+      "metrics": {
+        "wmdp_bio": {
+          "n": 256,
+          "correct": 177,
+          "accuracy_percent": 69.140625,
+          "baseline_accuracy_percent": 75.78125,
+          "change_percentage_points": -6.640625
+        },
+        "mmlu": {
+          "n": 1710,
+          "correct": 1196,
+          "accuracy_percent": 69.94152046783626,
+          "baseline_accuracy_percent": 73.50877192982456,
+          "change_percentage_points": -3.5672514619883042
+        }
+      },
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h7_a1_lr5e-05_s2_screen40/checkpoint-40",
+      "save_reload_identical": true,
+      "seconds": 96.14496086584404
+    }
+  ],
+  "validation": [
+    {
+      "training_run_id": "h7_a1_lr5e-05_s2_screen40",
+      "phase": "validation",
+      "step": 0,
+      "epoch": 0,
+      "forget_loss": 0.537689208984375,
+      "retain_loss": 0.0,
+      "total_loss": 0.537689208984375,
+      "validation_loss": 0.537689208984375,
+      "retain_nll": 2.193743327304359,
+      "retain_ppl": 8.968723222441891,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 9.318503682035953,
+      "recorded_at": "2026-10-13T16:40:08.740905+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 3409.5602774992194,
+      "gpu_peak_allocated_bytes": 16918116352,
+      "gpu_peak_reserved_bytes": 16961765376,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "h7_a1_lr5e-05_s2_screen40",
+      "phase": "validation",
+      "step": 10,
+      "epoch": 0.078125,
+      "forget_loss": 0.416748046875,
+      "retain_loss": 0.0095062255859375,
+      "total_loss": 0.4261474609375,
+      "validation_loss": 0.4261474609375,
+      "retain_nll": 2.198485756256474,
+      "retain_ppl": 9.011357770867447,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 9.636182032059878,
+      "recorded_at": "2026-10-13T16:40:42.451114+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 3297.156476942171,
+      "gpu_peak_allocated_bytes": 19585479168,
+      "gpu_peak_reserved_bytes": 19780337664,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "h7_a1_lr5e-05_s2_screen40",
+      "phase": "validation",
+      "step": 20,
+      "epoch": 0.15625,
+      "forget_loss": 0.341064453125,
+      "retain_loss": 0.026892662048339844,
+      "total_loss": 0.367828369140625,
+      "validation_loss": 0.367828369140625,
+      "retain_nll": 2.2077920598278653,
+      "retain_ppl": 9.09561163983201,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 10.380886986851692,
+      "recorded_at": "2026-10-13T16:43:02.527341+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 3060.6247847840013,
+      "gpu_peak_allocated_bytes": 19585479168,
+      "gpu_peak_reserved_bytes": 21686648832,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "h7_a1_lr5e-05_s2_screen40",
+      "phase": "validation",
+      "step": 30,
+      "epoch": 0.234375,
+      "forget_loss": 0.286895751953125,
+      "retain_loss": 0.045981407165527344,
+      "total_loss": 0.332763671875,
+      "validation_loss": 0.332763671875,
+      "retain_nll": 2.2202774220457653,
+      "retain_ppl": 9.209885536791733,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 9.913393194787204,
+      "recorded_at": "2026-10-13T16:45:20.793556+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 3204.9571096107425,
+      "gpu_peak_allocated_bytes": 19585479168,
+      "gpu_peak_reserved_bytes": 21686648832,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "h7_a1_lr5e-05_s2_screen40",
+      "phase": "validation",
+      "step": 40,
+      "epoch": 0.3125,
+      "forget_loss": 0.2548370361328125,
+      "retain_loss": 0.059552669525146484,
+      "total_loss": 0.314361572265625,
+      "validation_loss": 0.314361572265625,
+      "retain_nll": 2.2381227159042703,
+      "retain_ppl": 9.375713877626506,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 8.966295469086617,
+      "recorded_at": "2026-10-13T16:45:54.106943+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 3543.492416633083,
+      "gpu_peak_allocated_bytes": 19585479168,
+      "gpu_peak_reserved_bytes": 21686648832,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    }
+  ],
+  "changed_parameters": [
+    "model.layers.5.mlp.down_proj.weight",
+    "model.layers.6.mlp.down_proj.weight",
+    "model.layers.7.mlp.down_proj.weight"
+  ],
+  "frozen_parameters_unchanged": true,
+  "reference_fingerprints_unchanged": true,
+  "actual_exposures": {
+    "forget": 640,
+    "retain": 640
+  },
+  "actual_unique_blocks": {
+    "forget": 640,
+    "retain": 545
+  },
+  "control_vector_sha256": "5985981b830d360b0b0b97ff305cc85e1b87771d8167e94af84c34665d83081f",
+  "current_control_first40_sampling_identical": true,
+  "completed_at": "2026-10-13T16:47:48.381551+08:00",
+  "elapsed_seconds": 469.3167160828598,
+  "selected_parameters": [
+    "model.layers.5.mlp.down_proj.weight",
+    "model.layers.6.mlp.down_proj.weight",
+    "model.layers.7.mlp.down_proj.weight"
+  ],
+  "trainable_parameters": 74711040,
+  "cuda_peak_allocated_bytes": 19585479168,
+  "cuda_peak_reserved_bytes": 21686648832
+}

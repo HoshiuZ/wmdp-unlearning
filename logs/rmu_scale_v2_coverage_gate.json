@@ -1,0 +1,29 @@
+{
+  "space": {
+    "total": 64424509440,
+    "used": 54383607808,
+    "free": 10040901632
+  },
+  "baseline_single_block_coverage": {
+    "forget": {
+      "exposures": 640,
+      "distinct_articles": 640,
+      "actual_input_tokens": 163510,
+      "source_article_tokens_counting_repeats": 4461566,
+      "fraction_of_exposed_article_tokens": 0.03664856689332849
+    },
+    "retain": {
+      "exposures": 640,
+      "distinct_articles": 545,
+      "actual_input_tokens": 157109,
+      "source_article_tokens_counting_repeats": 5256222,
+      "fraction_of_exposed_article_tokens": 0.029890099771280588
+    }
+  },
+  "value": "Current representation scaling produces stronger forgetting, but original fixed windows cover a small fraction of exposed article tokens. Isolate sensitivity to window positions with identical article sequence, per-article token lengths, steps and hyperparameters.",
+  "trial_limit": 1,
+  "control": "hook12,alpha1,steering2,lr5e-5,40steps,seed42",
+  "no_combination_with_new_steering": true,
+  "rules": "same2048 training articles; original+up to3 hash-selected full256 blocks; short blocks unchanged; deterministic cyclic per-visit selection without global RNG; validation groups excluded; total consumed tokens must exactly match control",
+  "persistent_data_version": "rmu-position-v2"
+}

@@ -1,12 +1,0 @@
-[2026-10-14 11:02:59,289] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-`torch_dtype` is deprecated! Use `dtype` instead!
-Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 4444.41it/s]
-`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
-Traceback (most recent call last):
-  File "/root/autodl-tmp/wmdp-work/scripts/verify_rmu_ce.py", line 32, in <module>
-    if __name__=='__main__':main()
-                            ^^^^^^
-  File "/root/autodl-tmp/wmdp-work/scripts/verify_rmu_ce.py", line 16, in main
-    t.__class__=RMUCE;t.optimizer.zero_grad();new_loss=t.compute_loss(model,batch);new_loss.backward();equal={n:torch.equal(grads[n],p.grad.detach().cpu()) for n,p in model.named_parameters() if n in selected};assert old_value==float(new_loss.detach()) and all(equal.values()),'Loss or gradients changed during refactor';assert all(p.grad is None for n,p in model.named_parameters() if n not in selected);assert all(p.grad is None for p in t.ref_model.parameters());torch.nn.utils.clip_grad_norm_([p for p in model.parameters() if p.requires_grad],1.);t.optimizer.step();comparisons.append({'step':i+1,'loss':old_value,'gradients_bitwise_equal':equal});del grads,new_loss
-                                                                                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: Loss or gradients changed during refactor

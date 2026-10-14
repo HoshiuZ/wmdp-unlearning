@@ -1,0 +1,215 @@
+{
+  "selected": {
+    "experiment": "h12_a1_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 40,
+    "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s2_screen40/checkpoint-40",
+    "wmdp_bio_development_percent": 64.0625,
+    "mmlu_development_percent": 71.57894736842105,
+    "wmdp_bio_change_pp": -11.71875,
+    "mmlu_change_pp": -1.9298245614035088,
+    "development_constraint_pass": true,
+    "peak_allocated_bytes": 19276036608,
+    "training_wall_seconds": 457.01009186403826
+  },
+  "basis": "frozen development subset constraint, then lowest Bio; if no passing candidate least MMLU loss",
+  "all_layer_candidates": [
+    {
+      "experiment": "h12_a1_lr5e-05_s2_screen40",
+      "hook": 12,
+      "update_parameters": [
+        "model.layers.10.mlp.down_proj.weight",
+        "model.layers.11.mlp.down_proj.weight",
+        "model.layers.12.mlp.down_proj.weight"
+      ],
+      "learning_rate": 5e-05,
+      "alpha": 1,
+      "steering_coefficient": 2,
+      "step": 10,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s2_screen40/checkpoint-10",
+      "wmdp_bio_development_percent": 74.21875,
+      "mmlu_development_percent": 72.57309941520468,
+      "wmdp_bio_change_pp": -1.5625,
+      "mmlu_change_pp": -0.935672514619883,
+      "development_constraint_pass": true,
+      "peak_allocated_bytes": 19276036608,
+      "training_wall_seconds": 457.01009186403826
+    },
+    {
+      "experiment": "h12_a1_lr5e-05_s2_screen40",
+      "hook": 12,
+      "update_parameters": [
+        "model.layers.10.mlp.down_proj.weight",
+        "model.layers.11.mlp.down_proj.weight",
+        "model.layers.12.mlp.down_proj.weight"
+      ],
+      "learning_rate": 5e-05,
+      "alpha": 1,
+      "steering_coefficient": 2,
+      "step": 20,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s2_screen40/checkpoint-20",
+      "wmdp_bio_development_percent": 71.484375,
+      "mmlu_development_percent": 72.69005847953217,
+      "wmdp_bio_change_pp": -4.296875,
+      "mmlu_change_pp": -0.8187134502923976,
+      "development_constraint_pass": true,
+      "peak_allocated_bytes": 19276036608,
+      "training_wall_seconds": 457.01009186403826
+    },
+    {
+      "experiment": "h12_a1_lr5e-05_s2_screen40",
+      "hook": 12,
+      "update_parameters": [
+        "model.layers.10.mlp.down_proj.weight",
+        "model.layers.11.mlp.down_proj.weight",
+        "model.layers.12.mlp.down_proj.weight"
+      ],
+      "learning_rate": 5e-05,
+      "alpha": 1,
+      "steering_coefficient": 2,
+      "step": 40,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h12_a1_lr5e-05_s2_screen40/checkpoint-40",
+      "wmdp_bio_development_percent": 64.0625,
+      "mmlu_development_percent": 71.57894736842105,
+      "wmdp_bio_change_pp": -11.71875,
+      "mmlu_change_pp": -1.9298245614035088,
+      "development_constraint_pass": true,
+      "peak_allocated_bytes": 19276036608,
+      "training_wall_seconds": 457.01009186403826
+    },
+    {
+      "experiment": "h18_a1_lr5e-05_s2_screen40",
+      "hook": 18,
+      "update_parameters": [
+        "model.layers.16.mlp.down_proj.weight",
+        "model.layers.17.mlp.down_proj.weight",
+        "model.layers.18.mlp.down_proj.weight"
+      ],
+      "learning_rate": 5e-05,
+      "alpha": 1,
+      "steering_coefficient": 2,
+      "step": 10,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h18_a1_lr5e-05_s2_screen40/checkpoint-10",
+      "wmdp_bio_development_percent": 75.0,
+      "mmlu_development_percent": 73.33333333333333,
+      "wmdp_bio_change_pp": -0.78125,
+      "mmlu_change_pp": -0.17543859649122806,
+      "development_constraint_pass": true,
+      "peak_allocated_bytes": 18900511232,
+      "training_wall_seconds": 442.89004261093214
+    },
+    {
+      "experiment": "h18_a1_lr5e-05_s2_screen40",
+      "hook": 18,
+      "update_parameters": [
+        "model.layers.16.mlp.down_proj.weight",
+        "model.layers.17.mlp.down_proj.weight",
+        "model.layers.18.mlp.down_proj.weight"
+      ],
+      "learning_rate": 5e-05,
+      "alpha": 1,
+      "steering_coefficient": 2,
+      "step": 20,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h18_a1_lr5e-05_s2_screen40/checkpoint-20",
+      "wmdp_bio_development_percent": 75.390625,
+      "mmlu_development_percent": 73.04093567251462,
+      "wmdp_bio_change_pp": -0.390625,
+      "mmlu_change_pp": -0.4678362573099415,
+      "development_constraint_pass": true,
+      "peak_allocated_bytes": 18900511232,
+      "training_wall_seconds": 442.89004261093214
+    },
+    {
+      "experiment": "h18_a1_lr5e-05_s2_screen40",
+      "hook": 18,
+      "update_parameters": [
+        "model.layers.16.mlp.down_proj.weight",
+        "model.layers.17.mlp.down_proj.weight",
+        "model.layers.18.mlp.down_proj.weight"
+      ],
+      "learning_rate": 5e-05,
+      "alpha": 1,
+      "steering_coefficient": 2,
+      "step": 40,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h18_a1_lr5e-05_s2_screen40/checkpoint-40",
+      "wmdp_bio_development_percent": 74.609375,
+      "mmlu_development_percent": 72.63157894736842,
+      "wmdp_bio_change_pp": -1.171875,
+      "mmlu_change_pp": -0.8771929824561403,
+      "development_constraint_pass": true,
+      "peak_allocated_bytes": 18900511232,
+      "training_wall_seconds": 442.89004261093214
+    },
+    {
+      "experiment": "h7_a1_lr5e-05_s2_screen40",
+      "hook": 7,
+      "update_parameters": [
+        "model.layers.5.mlp.down_proj.weight",
+        "model.layers.6.mlp.down_proj.weight",
+        "model.layers.7.mlp.down_proj.weight"
+      ],
+      "learning_rate": 5e-05,
+      "alpha": 1,
+      "steering_coefficient": 2,
+      "step": 10,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h7_a1_lr5e-05_s2_screen40/checkpoint-10",
+      "wmdp_bio_development_percent": 73.828125,
+      "mmlu_development_percent": 72.16374269005848,
+      "wmdp_bio_change_pp": -1.953125,
+      "mmlu_change_pp": -1.345029239766082,
+      "development_constraint_pass": true,
+      "peak_allocated_bytes": 19585479168,
+      "training_wall_seconds": 469.3167160828598
+    },
+    {
+      "experiment": "h7_a1_lr5e-05_s2_screen40",
+      "hook": 7,
+      "update_parameters": [
+        "model.layers.5.mlp.down_proj.weight",
+        "model.layers.6.mlp.down_proj.weight",
+        "model.layers.7.mlp.down_proj.weight"
+      ],
+      "learning_rate": 5e-05,
+      "alpha": 1,
+      "steering_coefficient": 2,
+      "step": 20,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h7_a1_lr5e-05_s2_screen40/checkpoint-20",
+      "wmdp_bio_development_percent": 73.046875,
+      "mmlu_development_percent": 70.99415204678363,
+      "wmdp_bio_change_pp": -2.734375,
+      "mmlu_change_pp": -2.5146198830409356,
+      "development_constraint_pass": false,
+      "peak_allocated_bytes": 19585479168,
+      "training_wall_seconds": 469.3167160828598
+    },
+    {
+      "experiment": "h7_a1_lr5e-05_s2_screen40",
+      "hook": 7,
+      "update_parameters": [
+        "model.layers.5.mlp.down_proj.weight",
+        "model.layers.6.mlp.down_proj.weight",
+        "model.layers.7.mlp.down_proj.weight"
+      ],
+      "learning_rate": 5e-05,
+      "alpha": 1,
+      "steering_coefficient": 2,
+      "step": 40,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_adaptation_v1/h7_a1_lr5e-05_s2_screen40/checkpoint-40",
+      "wmdp_bio_development_percent": 69.140625,
+      "mmlu_development_percent": 69.94152046783626,
+      "wmdp_bio_change_pp": -6.640625,
+      "mmlu_change_pp": -3.5672514619883042,
+      "development_constraint_pass": false,
+      "peak_allocated_bytes": 19585479168,
+      "training_wall_seconds": 469.3167160828598
+    }
+  ]
+}

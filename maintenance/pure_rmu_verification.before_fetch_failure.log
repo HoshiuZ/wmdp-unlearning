@@ -1,0 +1,29 @@
+[2026-10-14 11:56:22,272] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:212: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:218: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:230: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/config_loader_impl.py:291: FutureWarning: Implicit conversion from Version to str at 'hydra.runtime.version_base' during assignment is deprecated; pass the declared type or use OmegaConf.update() for an existing path.
+  cfg.hydra.runtime.version_base = version.getbase()
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 4176.60it/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/wmdp-work/maintenance/verify_pure_rmu.py", line 41, in <module>
+    m=load_delta(model,path.parent,original)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/wmdp-work/scripts/rmu_adaptation_utils.py", line 100, in load_delta
+    file=materialized(path/row['file']);assert digest(file.read_bytes())==row['compressed_sha256']
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/wmdp-work/scripts/rmu_adaptation_utils.py", line 90, in materialized
+    raise FileNotFoundError(f'Git LFS object {oid} unavailable; fetch/materialize the checkpoint first')
+FileNotFoundError: Git LFS object f7f1e0ed6b7d262f31e614e032832f31e1a75a42171e60fd50ec943ca75e7693 unavailable; fetch/materialize the checkpoint first

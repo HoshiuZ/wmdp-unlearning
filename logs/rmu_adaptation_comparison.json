@@ -1,0 +1,338 @@
+[
+  {
+    "experiment": "h12_a1_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 10,
+    "wmdp_bio_change_pp": -1.5625,
+    "mmlu_change_pp": -0.935672514619883,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 74.21875,
+    "mmlu_percent": 72.57309941520468,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h12_a1_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 20,
+    "wmdp_bio_change_pp": -4.296875,
+    "mmlu_change_pp": -0.8187134502923976,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 71.484375,
+    "mmlu_percent": 72.69005847953217,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h12_a1_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 40,
+    "wmdp_bio_change_pp": -11.71875,
+    "mmlu_change_pp": -1.9298245614035088,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 64.0625,
+    "mmlu_percent": 71.57894736842105,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h12_a2_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 2.0,
+    "steering_coefficient": 2,
+    "step": 10,
+    "wmdp_bio_change_pp": -1.5625,
+    "mmlu_change_pp": -0.8187134502923976,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 74.21875,
+    "mmlu_percent": 72.69005847953217,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h12_a2_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 2.0,
+    "steering_coefficient": 2,
+    "step": 20,
+    "wmdp_bio_change_pp": -3.515625,
+    "mmlu_change_pp": -1.1111111111111112,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 72.265625,
+    "mmlu_percent": 72.39766081871345,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h12_a2_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 2.0,
+    "steering_coefficient": 2,
+    "step": 40,
+    "wmdp_bio_change_pp": -7.8125,
+    "mmlu_change_pp": -1.695906432748538,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 67.96875,
+    "mmlu_percent": 71.81286549707602,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h12_a4_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 4.0,
+    "steering_coefficient": 2,
+    "step": 10,
+    "wmdp_bio_change_pp": -0.78125,
+    "mmlu_change_pp": -0.5847953216374269,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 75.0,
+    "mmlu_percent": 72.92397660818713,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h12_a4_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 4.0,
+    "steering_coefficient": 2,
+    "step": 20,
+    "wmdp_bio_change_pp": -4.296875,
+    "mmlu_change_pp": -1.4619883040935673,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 71.484375,
+    "mmlu_percent": 72.046783625731,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h12_a4_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 4.0,
+    "steering_coefficient": 2,
+    "step": 40,
+    "wmdp_bio_change_pp": -6.640625,
+    "mmlu_change_pp": -1.1695906432748537,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 69.140625,
+    "mmlu_percent": 72.3391812865497,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h18_a1_lr5e-05_s2_screen40",
+    "hook": 18,
+    "update_parameters": [
+      "model.layers.16.mlp.down_proj.weight",
+      "model.layers.17.mlp.down_proj.weight",
+      "model.layers.18.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 10,
+    "wmdp_bio_change_pp": -0.78125,
+    "mmlu_change_pp": -0.17543859649122806,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 75.0,
+    "mmlu_percent": 73.33333333333333,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h18_a1_lr5e-05_s2_screen40",
+    "hook": 18,
+    "update_parameters": [
+      "model.layers.16.mlp.down_proj.weight",
+      "model.layers.17.mlp.down_proj.weight",
+      "model.layers.18.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 20,
+    "wmdp_bio_change_pp": -0.390625,
+    "mmlu_change_pp": -0.4678362573099415,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 75.390625,
+    "mmlu_percent": 73.04093567251462,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h18_a1_lr5e-05_s2_screen40",
+    "hook": 18,
+    "update_parameters": [
+      "model.layers.16.mlp.down_proj.weight",
+      "model.layers.17.mlp.down_proj.weight",
+      "model.layers.18.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 40,
+    "wmdp_bio_change_pp": -1.171875,
+    "mmlu_change_pp": -0.8771929824561403,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 74.609375,
+    "mmlu_percent": 72.63157894736842,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h7_a1_lr5e-05_s2_screen40",
+    "hook": 7,
+    "update_parameters": [
+      "model.layers.5.mlp.down_proj.weight",
+      "model.layers.6.mlp.down_proj.weight",
+      "model.layers.7.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 10,
+    "wmdp_bio_change_pp": -1.953125,
+    "mmlu_change_pp": -1.345029239766082,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 73.828125,
+    "mmlu_percent": 72.16374269005848,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "h7_a1_lr5e-05_s2_screen40",
+    "hook": 7,
+    "update_parameters": [
+      "model.layers.5.mlp.down_proj.weight",
+      "model.layers.6.mlp.down_proj.weight",
+      "model.layers.7.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 20,
+    "wmdp_bio_change_pp": -2.734375,
+    "mmlu_change_pp": -2.5146198830409356,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 73.046875,
+    "mmlu_percent": 70.99415204678363,
+    "constraint_pass": false
+  },
+  {
+    "experiment": "h7_a1_lr5e-05_s2_screen40",
+    "hook": 7,
+    "update_parameters": [
+      "model.layers.5.mlp.down_proj.weight",
+      "model.layers.6.mlp.down_proj.weight",
+      "model.layers.7.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 40,
+    "wmdp_bio_change_pp": -6.640625,
+    "mmlu_change_pp": -3.5672514619883042,
+    "scope": "development:Bio256,MMLU1710",
+    "wmdp_bio_percent": 69.140625,
+    "mmlu_percent": 69.94152046783626,
+    "constraint_pass": false
+  },
+  {
+    "experiment": "original",
+    "hook": null,
+    "update_parameters": [],
+    "learning_rate": null,
+    "alpha": null,
+    "steering_coefficient": null,
+    "step": 0,
+    "scope": "full",
+    "wmdp_bio_percent": 73.84131971720346,
+    "mmlu_percent": 70.673693206096,
+    "wmdp_bio_change_pp": 0,
+    "mmlu_change_pp": 0,
+    "constraint_pass": true
+  },
+  {
+    "experiment": "first_formal80",
+    "hook": 7,
+    "update_parameters": [
+      "layers5/6/7.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 80,
+    "scope": "full",
+    "wmdp_bio_percent": 59.937156323644935,
+    "mmlu_percent": 65.89517162797323,
+    "wmdp_bio_change_pp": -13.904163393558523,
+    "mmlu_change_pp": -4.778521578122774,
+    "constraint_pass": false
+  },
+  {
+    "experiment": "h12_a1_lr5e-05_s2_screen40",
+    "hook": 12,
+    "update_parameters": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "learning_rate": 5e-05,
+    "alpha": 1,
+    "steering_coefficient": 2,
+    "step": 40,
+    "wmdp_bio_change_pp": -10.997643362136685,
+    "mmlu_change_pp": -2.3073636234154677,
+    "scope": "full-exploratory:Bio1273,MMLU14042",
+    "wmdp_bio_percent": 62.84367635506677,
+    "mmlu_percent": 68.36632958268054,
+    "constraint_pass": false
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "space_after": {
+    "total": 64424509440,
+    "used": 54179123200,
+    "free": 10245386240
+  },
+  "actual_s32_checkpoint_bytes": 201402839,
+  "weighted_points": [
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_scale_v2/h12_a1_s32_fixed40/checkpoint-10/development/samples.json",
+      "bio_percent": 73.828125,
+      "weighted_change_pp": -0.8709585529126969
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_scale_v2/h12_a1_s32_fixed40/checkpoint-20/development/samples.json",
+      "bio_percent": 73.828125,
+      "weighted_change_pp": -1.444476095522944
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_scale_v2/h12_a1_s32_fixed40/checkpoint-40/development/samples.json",
+      "bio_percent": 54.6875,
+      "weighted_change_pp": -3.1669277880643563
+    }
+  ],
+  "third_trial": {
+    "steering": 32,
+    "alpha": 2,
+    "other_factors": "unchanged"
+  },
+  "reason": "s32 produced lower Bio but >3pp weighted utility loss. Increase retain weight only on this same scale to test recovery; no assumed success.",
+  "maximum_hyperparameter_trials_reached_after_third": true
+}

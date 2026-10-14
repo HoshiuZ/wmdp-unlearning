@@ -1,0 +1,737 @@
+{
+  "source_commit": "f9cd6a3029bc9a1b827c8d042f85c116fd9629a9",
+  "archive_tag": "archive/before-pure-rmu-20261014-f9cd6a3",
+  "removed_files": [
+    {
+      "path": "configs/rmu_ce/seed42.json",
+      "bytes": 3915,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "configs/rmu_ce/seed43.json",
+      "bytes": 3915,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/method-cleanup.md",
+      "bytes": 1738,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/rmu-ce-method.md",
+      "bytes": 2765,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/rmu-ce-results.md",
+      "bytes": 927,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/method_cleanup_eval_entry_help.log",
+      "bytes": 258,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/method_cleanup_final_lfs_fsck.log",
+      "bytes": 16,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/method_cleanup_history_backup.console.log",
+      "bytes": 60,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/method_cleanup_history_backup.json",
+      "bytes": 178,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/method_cleanup_manifest.json",
+      "bytes": 65147,
+      "allocated_bytes": 65536
+    },
+    {
+      "path": "logs/method_cleanup_numeric_diagnostic.console.log",
+      "bytes": 1655,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/method_cleanup_numeric_diagnostic.json",
+      "bytes": 1543,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/method_cleanup_train_entry_help.log",
+      "bytes": 268,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/method_cleanup_verification.console.log",
+      "bytes": 1694,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/method_cleanup_verification_deterministic.console.log",
+      "bytes": 1943,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_lfs_fsck.log",
+      "bytes": 16,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_seed42_full.console.log",
+      "bytes": 499960,
+      "allocated_bytes": 503808
+    },
+    {
+      "path": "logs/rmu_ce15_seed42_full_audit.console.log",
+      "bytes": 407,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_seed42_full_audit.json",
+      "bytes": 231,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_seed42_minimal.console.log",
+      "bytes": 1850,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_seed42_screen40.console.log",
+      "bytes": 211411,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_ce15_seed42_training_audit.console.log",
+      "bytes": 43,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_seed42_training_audit.json",
+      "bytes": 34559,
+      "allocated_bytes": 36864
+    },
+    {
+      "path": "logs/rmu_ce15_seed43_full.console.log",
+      "bytes": 500541,
+      "allocated_bytes": 503808
+    },
+    {
+      "path": "logs/rmu_ce15_seed43_minimal.console.log",
+      "bytes": 1857,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_seed43_screen40.console.log",
+      "bytes": 210328,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_ce15_seed43_training_audit.console.log",
+      "bytes": 43,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_seed43_training_audit.json",
+      "bytes": 34621,
+      "allocated_bytes": 36864
+    },
+    {
+      "path": "logs/rmu_ce_results.csv",
+      "bytes": 643,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_results.json",
+      "bytes": 1120,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_verification.json",
+      "bytes": 1791,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/LICENSE",
+      "bytes": 11343,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/README.md",
+      "bytes": 870,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/checks/refactor_verified_deterministic/report.json",
+      "bytes": 1791,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/checks/seed42_minimal/control_vector.json",
+      "bytes": 62142,
+      "allocated_bytes": 65536
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/checks/seed42_minimal/run.json",
+      "bytes": 1927,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/checks/seed42_minimal/training_config.json",
+      "bytes": 4048,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/checks/seed43_minimal/control_vector.json",
+      "bytes": 62094,
+      "allocated_bytes": 65536
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/checks/seed43_minimal/run.json",
+      "bytes": 1945,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/checks/seed43_minimal/training_config.json",
+      "bytes": 4076,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed42_checkpoint-40/evaluation_config.json",
+      "bytes": 575,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed42_checkpoint-40/result.json",
+      "bytes": 734,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed42_checkpoint-40/samples.json",
+      "bytes": 6570919,
+      "allocated_bytes": 6574080
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed42_checkpoint-40/summary.json",
+      "bytes": 662,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed43_checkpoint-40/evaluation_config.json",
+      "bytes": 582,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed43_checkpoint-40/result.json",
+      "bytes": 742,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed43_checkpoint-40/samples.json",
+      "bytes": 6568928,
+      "allocated_bytes": 6569984
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed43_checkpoint-40/summary.json",
+      "bytes": 663,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-10/checkpoint.json",
+      "bytes": 1874,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-10/development/samples.json",
+      "bytes": 922650,
+      "allocated_bytes": 925696
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-10/development/summary.json",
+      "bytes": 632,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-10/model.layers.10.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-10/model.layers.11.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-10/model.layers.12.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-20/checkpoint.json",
+      "bytes": 1874,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-20/development/samples.json",
+      "bytes": 922658,
+      "allocated_bytes": 925696
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-20/development/summary.json",
+      "bytes": 633,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-20/model.layers.10.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-20/model.layers.11.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-20/model.layers.12.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-40/checkpoint.json",
+      "bytes": 1874,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-40/development/samples.json",
+      "bytes": 922534,
+      "allocated_bytes": 925696
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-40/development/summary.json",
+      "bytes": 634,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-40/model.layers.10.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-40/model.layers.11.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-40/model.layers.12.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/component_metrics.json",
+      "bytes": 151092,
+      "allocated_bytes": 151552
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/consumed_block_indices.json",
+      "bytes": 12149,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/control_vector.json",
+      "bytes": 62142,
+      "allocated_bytes": 65536
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/development_results.json",
+      "bytes": 1947,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/run.json",
+      "bytes": 8104,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/trainer_state.json",
+      "bytes": 7016,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/training_config.json",
+      "bytes": 4052,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/training_metrics.jsonl",
+      "bytes": 37792,
+      "allocated_bytes": 40960
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/validation_metrics.jsonl",
+      "bytes": 3634,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-10/checkpoint.json",
+      "bytes": 1874,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-10/development/samples.json",
+      "bytes": 922563,
+      "allocated_bytes": 925696
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-10/development/summary.json",
+      "bytes": 636,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-10/model.layers.10.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-10/model.layers.11.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-10/model.layers.12.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-20/checkpoint.json",
+      "bytes": 1874,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-20/development/samples.json",
+      "bytes": 922550,
+      "allocated_bytes": 925696
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-20/development/summary.json",
+      "bytes": 630,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-20/model.layers.10.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-20/model.layers.11.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-20/model.layers.12.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-40/checkpoint.json",
+      "bytes": 1874,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-40/development/samples.json",
+      "bytes": 922446,
+      "allocated_bytes": 925696
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-40/development/summary.json",
+      "bytes": 633,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-40/model.layers.10.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-40/model.layers.11.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-40/model.layers.12.mlp.down_proj.weight.xor.gz",
+      "bytes": 133,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/component_metrics.json",
+      "bytes": 150900,
+      "allocated_bytes": 151552
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/consumed_block_indices.json",
+      "bytes": 12131,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/control_vector.json",
+      "bytes": 62092,
+      "allocated_bytes": 65536
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/development_results.json",
+      "bytes": 1965,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/run.json",
+      "bytes": 8177,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/trainer_state.json",
+      "bytes": 6987,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/training_config.json",
+      "bytes": 4080,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/training_metrics.jsonl",
+      "bytes": 38054,
+      "allocated_bytes": 40960
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/validation_metrics.jsonl",
+      "bytes": 3674,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "reference/rmu_ce/base_weight_fingerprints.json",
+      "bytes": 44687,
+      "allocated_bytes": 45056
+    },
+    {
+      "path": "reference/rmu_ce/dev_split.json",
+      "bytes": 27568,
+      "allocated_bytes": 28672
+    },
+    {
+      "path": "reference/rmu_ce/original_development_samples.json",
+      "bytes": 842128,
+      "allocated_bytes": 843776
+    },
+    {
+      "path": "reference/rmu_ce/path_migration.json",
+      "bytes": 930,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "reference/rmu_ce/seed42/budget.json",
+      "bytes": 109,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "reference/rmu_ce/seed42/consumed_block_indices.json",
+      "bytes": 12149,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "reference/rmu_ce/seed42/control_vector.json",
+      "bytes": 62142,
+      "allocated_bytes": 65536
+    },
+    {
+      "path": "reference/rmu_ce/seed43/budget.json",
+      "bytes": 109,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "reference/rmu_ce/seed43/consumed_block_indices.json",
+      "bytes": 12131,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "reference/rmu_ce/seed43/control_vector.json",
+      "bytes": 62092,
+      "allocated_bytes": 65536
+    },
+    {
+      "path": "scripts/evaluate_rmu_ce.py",
+      "bytes": 1190,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/rmu_ce_callbacks.py",
+      "bytes": 6954,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/rmu_ce_method.py",
+      "bytes": 2416,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/rmu_ce_utils.py",
+      "bytes": 7395,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/run_rmu_ce.py",
+      "bytes": 5722,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/verify_rmu_ce.py",
+      "bytes": 3945,
+      "allocated_bytes": 4096
+    }
+  ],
+  "removed_lfs_objects": [
+    {
+      "oid": "c927ba3ff88a359110668534fcb6d6fe33aded1f93d4b6273f36094d4204dacf",
+      "bytes": 20668285,
+      "allocated_bytes": 20668416,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "7b89d2e9f571b555ece4e2febb20c86f1c745fc56eb3cec027c038f1353c020c",
+      "bytes": 20426045,
+      "allocated_bytes": 20426752,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "9425d380eafb4282a1411cbcc0fae245d2ca7b552584aeff200c015643a453f4",
+      "bytes": 20156210,
+      "allocated_bytes": 20156416,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "5887424d34c3c8c2692e5ff715f3f8a600078deff2eb1d371ecbbc3fd99c1243",
+      "bytes": 22237558,
+      "allocated_bytes": 22241280,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "01e2c9ff80f3a3aa527c3f320decb21fceebe4e09492056456dc450d05533768",
+      "bytes": 21980829,
+      "allocated_bytes": 21983232,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "9db07f46d76a21c7590a266051a49c42cd1f57ac180a3ec125220d8fb4822e67",
+      "bytes": 21807030,
+      "allocated_bytes": 21807104,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "a7829efdd17a848f8e4eaa9fe7bc4af36524a4990c7274721d90411fcae74848",
+      "bytes": 23385280,
+      "allocated_bytes": 23388160,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "9c2b876a3b20315865ea4422e01793848df4b42c9f12f785ec18c1a4b6e9fd67",
+      "bytes": 23135743,
+      "allocated_bytes": 23138304,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "dca7bb207cff003bff498a0d563643c969284b7416425366800796e8b10a5ac4",
+      "bytes": 23308639,
+      "allocated_bytes": 23310336,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "42b81a843d081a0a3193f369364adad17f724753fc7e53899a1a95dfc5c156e5",
+      "bytes": 20680833,
+      "allocated_bytes": 20684800,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "fd3b90d42cdfd7703af476a39eb6181f75dd786e395c525bf078c69e0e5e2d6e",
+      "bytes": 20431294,
+      "allocated_bytes": 20434944,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "f77971af34705470ea38fb47d3607ab2552fb068a832a5bbcfbada883ea83fef",
+      "bytes": 20097665,
+      "allocated_bytes": 20099072,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "9d1712f2b7f4803a90cc396ff98a8b9c9fc68bb18d36e23c3ce35bca0adb2318",
+      "bytes": 22205517,
+      "allocated_bytes": 22208512,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "ce0720e51703cb1d7f87fe680ee763daf255726bae7a5536f6ca243c707caed6",
+      "bytes": 21941719,
+      "allocated_bytes": 21942272,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "0e52d8c3eb137809ee22d277badf36dc9b9c8940c6d2865e482679af68b36142",
+      "bytes": 21726223,
+      "allocated_bytes": 21729280,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "a2686f3a9acd0fa52e21493026f31094b4b5177a7a410040f823227afffc5b54",
+      "bytes": 23296429,
+      "allocated_bytes": 23298048,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "a93458e12068bedbc80e3c95c98e10f5a4148fc2ffc4ac6365d77c791d72341e",
+      "bytes": 23029230,
+      "allocated_bytes": 23031808,
+      "remote_retrieval_verified": true
+    },
+    {
+      "oid": "1067e8b5f94ef4fdceb5e07c8e2ca9acce1ca9b4494c7612315e8036aad2130e",
+      "bytes": 23165873,
+      "allocated_bytes": 23166976,
+      "remote_retrieval_verified": true
+    }
+  ],
+  "actual_removed_file_allocated_bytes": 22405120,
+  "actual_removed_lfs_allocated_bytes": 393715712,
+  "space_before_deletion": {
+    "total": 64424509440,
+    "used": 28893335552,
+    "free": 35531173888
+  },
+  "space_after_deletion": {
+    "total": 64424509440,
+    "used": 28477132800,
+    "free": 35947376640
+  },
+  "unuploaded_unique_weights": [],
+  "global_prune_executed": false,
+  "history_rewritten": false,
+  "shared_reference_copies_preserved": [
+    [
+      "reference/rmu_ce/base_weight_fingerprints.json",
+      "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/base_weight_fingerprints.json"
+    ],
+    [
+      "reference/rmu_ce/dev_split.json",
+      "logs/rmu_adaptation_dev_split.json"
+    ],
+    [
+      "reference/rmu_ce/original_development_samples.json",
+      "open-unlearning/saves/unlearn/rmu_adaptation_v1/original_development_protocol_check/samples.json"
+    ]
+  ],
+  "training_started": false,
+  "full_evaluation_started": false
+}

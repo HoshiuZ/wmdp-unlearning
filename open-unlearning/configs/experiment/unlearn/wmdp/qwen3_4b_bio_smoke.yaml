@@ -1,0 +1,61 @@
+# @package _global_
+defaults:
+  - /experiment/unlearn/wmdp/default
+  - override /model: Qwen3-4B-Instruct-2507
+  - override /eval: null
+
+mode: unlearn
+eval: null
+data_split: bio
+task_name: qwen3_4b_rmu_bio_smoke3_v1
+model:
+  model_args:
+    use_cache: false
+
+data:
+  forget:
+    WMDP_forget:
+      handler: CompletionDataset
+      args:
+        hf_args:
+          path: json
+          data_files: ../data/processed/bio_v1/smoke_input/forget.jsonl
+          split: train
+        text_key: text
+        max_length: 256
+  retain:
+    WMDP_retain:
+      handler: CompletionDataset
+      args:
+        hf_args:
+          path: json
+          data_files: ../data/processed/bio_v1/smoke_input/retain.jsonl
+          split: train
+        text_key: text
+        max_length: 256
+
+trainer:
+  args:
+    per_device_train_batch_size: 1
+    gradient_accumulation_steps: 1
+    learning_rate: 5e-5
+    max_steps: 3
+    logging_steps: 1
+    optim: adamw_torch
+    seed: 42
+    data_seed: 42
+    remove_unused_columns: false
+    report_to: none
+    eval_strategy: 'no'
+    eval_on_start: false
+    do_eval: false
+    save_strategy: 'no'
+    gradient_checkpointing: false
+  method_args:
+    gamma: 1.0
+    steering_coeff: 2
+    retain_loss_type: EMBED_DIFF
+    alpha: 1.0
+    module_regex: model\.layers\.7
+    trainable_params_regex:
+      - model\.layers\.(5|6|7)\.mlp\.down_proj\.weight

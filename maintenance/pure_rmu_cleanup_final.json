@@ -1,0 +1,23 @@
+{
+  "source_commit": "f9cd6a3029bc9a1b827c8d042f85c116fd9629a9",
+  "archive_tag": "archive/before-pure-rmu-20261014-f9cd6a3",
+  "restored_files": 529,
+  "deleted_files": 118,
+  "deleted_lfs_objects": 18,
+  "actual_removed_allocated_bytes": 416120832,
+  "restored_lfs_payload_bytes": 10077252060,
+  "space_before": {
+    "total": 64424509440,
+    "used": 24372641792,
+    "free": 40051867648
+  },
+  "space_final": {
+    "total": 64424509440,
+    "used": 34265423872,
+    "free": 30159085568
+  },
+  "training_started": false,
+  "full_evaluation_started": false,
+  "unique_unuploaded_deleted": false,
+  "local_archive_tag_only": true
+}

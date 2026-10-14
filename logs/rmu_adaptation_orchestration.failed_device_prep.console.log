@@ -1,0 +1,11 @@
+START h7_minimal
+Traceback (most recent call last):
+  File "/root/autodl-tmp/wmdp-work/scripts/orchestrate_rmu_adaptation.py", line 12, in <module>
+    for hook in [7,12,18]:call('run_rmu_adaptation.py',['--hook',str(hook),'--minimal'],f'h{hook}_minimal')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/wmdp-work/scripts/orchestrate_rmu_adaptation.py", line 9, in call
+    with log.open('w') as f:subprocess.run([str(PYTHON),'-u',str(ROOT/'scripts'/script),*args],cwd=ROOT,stdout=f,stderr=subprocess.STDOUT,check=True)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/root/autodl-tmp/wmdp-work/envs/unlearning/bin/python', '-u', '/root/autodl-tmp/wmdp-work/scripts/run_rmu_adaptation.py', '--hook', '7', '--minimal']' returned non-zero exit status 1.

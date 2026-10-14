@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "safety": {
+      "log": "maintenance/pure_rmu_safety_check.log",
+      "sha256": "12071179cd4ee6a9496041997ee7c26f5d28e0cc64d764c0c8bb79cb91fcc236",
+      "passed": true
+    },
+    "monitor": {
+      "log": "maintenance/pure_rmu_monitor_check.log",
+      "sha256": "d2b395ff8dc2923e8d371b1ff844aa2673b430ef3eb5edd2573e20d083a897bf",
+      "passed": true
+    },
+    "position": {
+      "log": "maintenance/pure_rmu_position_check.log",
+      "sha256": "62fe94531481c2ed38fbc365bdabe1527d001d67653474c6d982694bb2016a3b",
+      "passed": true
+    },
+    "metrics": {
+      "log": "maintenance/pure_rmu_metrics_check.log",
+      "sha256": "4b67ba8c4e09334f81be4f58759993e80cd37614bb6e202b92f9d9b20e06c3bf",
+      "passed": true
+    },
+    "compileall": {
+      "passed": true
+    }
+  },
+  "training_started": false,
+  "full_evaluation_started": false
+}
