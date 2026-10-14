@@ -1,46 +1,0 @@
-[2026-10-13 13:35:47,882] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:212: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
-Use register_resolver() instead.
-See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
-
-  OmegaConf.register_new_resolver(
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:218: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
-Use register_resolver() instead.
-See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
-
-  OmegaConf.register_new_resolver(
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:230: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
-Use register_resolver() instead.
-See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
-
-  OmegaConf.register_new_resolver(
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/config_loader_impl.py:291: FutureWarning: Implicit conversion from Version to str at 'hydra.runtime.version_base' during assignment is deprecated; pass the declared type or use OmegaConf.update() for an existing path.
-  cfg.hydra.runtime.version_base = version.getbase()
-Loading official starting weights
-`torch_dtype` is deprecated! Use `dtype` instead!
-Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 4232.94it/s]
-`logging_dir` is deprecated and will be removed in v5.2. Please set `TENSORBOARD_LOGGING_DIR` instead.
-Taking weight fingerprints; selected parameters: ['model.layers.5.mlp.down_proj.weight', 'model.layers.6.mlp.down_proj.weight', 'model.layers.7.mlp.down_proj.weight']
-Beginning three optimizer steps
-The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
-  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:01,  1.50it/s]                                             {'loss': '0.5469', 'grad_norm': '0.9688', 'learning_rate': '5e-05', 'epoch': '0.125'}
- 33%|███▎      | 1/3 [00:00<00:01,  1.50it/s] 67%|██████▋   | 2/3 [00:00<00:00,  2.64it/s]                                             {'loss': '0.5273', 'grad_norm': '0.9492', 'learning_rate': '5e-05', 'epoch': '0.25'}
- 67%|██████▋   | 2/3 [00:00<00:00,  2.64it/s]100%|██████████| 3/3 [00:01<00:00,  3.46it/s]                                             {'loss': '0.5352', 'grad_norm': '0.9258', 'learning_rate': '5e-05', 'epoch': '0.375'}
-100%|██████████| 3/3 [00:01<00:00,  3.46it/s]                                             {'train_runtime': '1.03', 'train_samples_per_second': '2.913', 'train_steps_per_second': '2.913', 'train_loss': '0.5365', 'epoch': '0.375'}
-100%|██████████| 3/3 [00:01<00:00,  3.46it/s]100%|██████████| 3/3 [00:01<00:00,  2.91it/s]
-Saving final smoke weights in <=1GB shards
-Writing model shards:   0%|          | 0/9 [00:00<?, ?it/s]Writing model shards:  11%|█         | 1/9 [00:00<00:06,  1.21it/s]Writing model shards:  22%|██▏       | 2/9 [00:01<00:05,  1.22it/s]Writing model shards:  33%|███▎      | 3/9 [00:02<00:04,  1.24it/s]Writing model shards:  44%|████▍     | 4/9 [00:03<00:04,  1.25it/s]Writing model shards:  56%|█████▌    | 5/9 [00:04<00:03,  1.25it/s]Writing model shards:  67%|██████▋   | 6/9 [00:05<00:03,  1.01s/it]Writing model shards:  78%|███████▊  | 7/9 [00:07<00:02,  1.19s/it]Writing model shards:  89%|████████▉ | 8/9 [00:08<00:01,  1.35s/it]Writing model shards: 100%|██████████| 9/9 [00:08<00:00,  1.01s/it]Writing model shards: 100%|██████████| 9/9 [00:08<00:00,  1.00it/s]
-Reloading saved checkpoint
-Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   1%|          | 3/398 [00:00<00:14, 27.91it/s]Loading weights:   6%|▋         | 25/398 [00:00<00:02, 128.22it/s]Loading weights:  11%|█▏        | 45/398 [00:00<00:02, 158.65it/s]Loading weights:  15%|█▌        | 61/398 [00:00<00:02, 156.97it/s]Loading weights:  20%|██        | 81/398 [00:00<00:01, 169.17it/s]Loading weights:  26%|██▌       | 102/398 [00:00<00:01, 181.59it/s]Loading weights:  31%|███       | 122/398 [00:00<00:01, 186.60it/s]Loading weights:  35%|███▌      | 141/398 [00:00<00:01, 178.85it/s]Loading weights:  40%|███▉      | 159/398 [00:00<00:01, 163.18it/s]Loading weights:  45%|████▌     | 180/398 [00:01<00:01, 172.76it/s]Loading weights:  51%|█████     | 201/398 [00:01<00:01, 182.36it/s]Loading weights:  56%|█████▌    | 222/398 [00:01<00:00, 190.11it/s]Loading weights:  61%|██████    | 242/398 [00:01<00:00, 185.74it/s]Loading weights:  66%|██████▌   | 261/398 [00:01<00:00, 183.69it/s]Loading weights:  70%|███████   | 280/398 [00:01<00:00, 180.76it/s]Loading weights:  76%|███████▌  | 302/398 [00:01<00:00, 185.14it/s]Loading weights:  81%|████████  | 323/398 [00:01<00:00, 191.81it/s]Loading weights:  87%|████████▋ | 345/398 [00:01<00:00, 193.14it/s]Loading weights:  92%|█████████▏| 365/398 [00:02<00:00, 194.91it/s]Loading weights:  97%|█████████▋| 385/398 [00:02<00:00, 190.37it/s]Loading weights: 100%|██████████| 398/398 [00:02<00:00, 179.65it/s]
-{
-  "status": "completed",
-  "global_step": 3,
-  "changed_parameters": [
-    "model.layers.5.mlp.down_proj.weight",
-    "model.layers.6.mlp.down_proj.weight",
-    "model.layers.7.mlp.down_proj.weight"
-  ],
-  "cuda_peak_allocated_bytes": 19444815360,
-  "reload_fingerprints_identical": true,
-  "reload_forward_finite": true
-}

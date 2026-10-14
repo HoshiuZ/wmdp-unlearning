@@ -3,5 +3,5 @@
   "fixed_checkpoint": 40,
   "requests_hash_target_and_baseline_verified": true,
   "metrics_recounted": true,
-  "result": "open-unlearning/saves/unlearn/simnpo_rmu_v1/ce15_full_evaluations/rmu_ce_s32_ce15_screen40_checkpoint-40/result.json"
+  "result": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed42_checkpoint-40/result.json"
 }

@@ -1,5 +1,0 @@
-{
-  "selected": [],
-  "rule": "New all-history development frontier with weighted MMLU loss<=2 or3; minBio,max1; fixed before full",
-  "exploratory": true
-}

@@ -42,4 +42,4 @@ The initial screen yielded 78 candidate pairs covering74 corpus records. Distinc
 
 Saved files were parsed again; sample IDs are unique, text hashes match, input/output counts reconcile, and train/validation have zero normalized exact-text or article-group overlap. The split was independently reconstructed from the saved audit with seed42. This checks the declared grouping rule, not the completeness of near-duplicate detection.
 
-Next: inspect RMU and its data loader, verify correct JSON text ingestion and Qwen3 parameter matching, select and archive any fixed short-run subset, then run a small forward/backward/save/reload trial. The existing PretrainingDataset concatenates all text before tokenization; full-corpus resource use must be checked before invoking it. No short-run subset has yet been selected and no RMU training performed.
+当前训练直接读取formal_blocks_v1的缓存token块，入口为scripts/run_rmu_ce.py；不使用跨文章拼接或聊天模板。块生成脚本为scripts/prepare_rmu_formal_blocks.py，实际训练索引与token预算随保留产物和reference/rmu_ce/保存。

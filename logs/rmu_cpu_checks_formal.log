@@ -1,2 +1,0 @@
-[2026-10-13 13:45:43,668] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-PASS: selected optimizer/gradient mask; frozen reference; finite backward; batched masked loss; empty-mask guard; hook cleanup

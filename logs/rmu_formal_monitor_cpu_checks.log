@@ -1,4 +1,0 @@
-[2026-10-13 13:59:30,156] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 2 examples [00:00, 617.76 examples/s]
-Validation step 0: forget=0.251164, retain=0.000000, retain_nll=3.411118
-PASS: cached tokens preserved; sample indices; 16-step accumulation matches one-batch gradient; validation no gradients/parameter changes; weighted NLL and mode restored

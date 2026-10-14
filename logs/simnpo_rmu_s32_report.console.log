@@ -1,2 +1,0 @@
-NEW [(['rmu_ce_s32_screen40', 'checkpoint-10'], 73.046875, -0.8787921948440527, False), (['rmu_ce_s32_screen40', 'checkpoint-20'], 73.4375, -1.2389023405972637, False), (['rmu_ce_s32_screen40', 'checkpoint-40'], 58.59375, -0.8241940844134348, True), (['joint_gradcap_s32_screen40', 'checkpoint-10'], 73.4375, -1.0829416512367658, False), (['joint_gradcap_s32_screen40', 'checkpoint-20'], 74.21875, -1.3701751887195712, False), (['joint_gradcap_s32_screen40', 'checkpoint-40'], 55.078125, -3.0460997958505516, True)]
-REPORT_COMPLETE

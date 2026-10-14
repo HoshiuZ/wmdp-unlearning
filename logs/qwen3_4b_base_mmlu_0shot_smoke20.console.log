@@ -1,37 +1,0 @@
-[2026-10-13 12:26:50,539] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:212: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
-Use register_resolver() instead.
-See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
-
-  OmegaConf.register_new_resolver(
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:218: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
-Use register_resolver() instead.
-See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
-
-  OmegaConf.register_new_resolver(
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:230: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
-Use register_resolver() instead.
-See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
-
-  OmegaConf.register_new_resolver(
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/config_loader_impl.py:291: FutureWarning: Implicit conversion from Version to str at 'hydra.runtime.version_base' during assignment is deprecated; pass the declared type or use OmegaConf.update() for an existing path.
-  cfg.hydra.runtime.version_base = version.getbase()
-`torch_dtype` is deprecated! Use `dtype` instead!
-Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   0%|          | 1/398 [00:00<00:40,  9.72it/s]Loading weights:   6%|▌         | 23/398 [00:00<00:02, 130.88it/s]Loading weights:  10%|▉         | 38/398 [00:00<00:02, 137.63it/s]Loading weights:  15%|█▍        | 59/398 [00:00<00:02, 165.23it/s]Loading weights:  20%|██        | 81/398 [00:00<00:01, 179.84it/s]Loading weights:  26%|██▌       | 103/398 [00:00<00:01, 186.10it/s]Loading weights:  31%|███       | 124/398 [00:00<00:01, 193.39it/s]Loading weights:  36%|███▌      | 144/398 [00:00<00:01, 194.36it/s]Loading weights:  41%|████      | 164/398 [00:00<00:01, 189.79it/s]Loading weights:  46%|████▌     | 184/398 [00:01<00:01, 186.31it/s]Loading weights:  51%|█████     | 203/398 [00:01<00:01, 180.33it/s]Loading weights:  57%|█████▋    | 225/398 [00:01<00:00, 189.62it/s]Loading weights:  62%|██████▏   | 247/398 [00:01<00:00, 192.86it/s]Loading weights:  67%|██████▋   | 268/398 [00:01<00:00, 193.45it/s]Loading weights:  73%|███████▎  | 290/398 [00:01<00:00, 193.18it/s]Loading weights:  78%|███████▊  | 312/398 [00:01<00:00, 193.09it/s]Loading weights:  84%|████████▎ | 333/398 [00:01<00:00, 197.23it/s]Loading weights:  89%|████████▊ | 353/398 [00:01<00:00, 191.48it/s]Loading weights:  94%|█████████▎| 373/398 [00:02<00:00, 188.07it/s]Loading weights:  98%|█████████▊| 392/398 [00:02<00:00, 187.01it/s]Loading weights: 100%|██████████| 398/398 [00:02<00:00, 184.49it/s]
-[2026-10-13 12:26:59,327][lm_eval.models.huggingface][WARNING] - `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
-[2026-10-13 12:26:59,330][lm_eval.models.huggingface][WARNING] - Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
-[2026-10-13 12:26:59,331][evaluator][INFO] - ***** Running LMEval evaluation suite *****
-[2026-10-13 12:26:59,332][evaluator][INFO] - Fine-grained evaluations will be saved to: ./saves/eval/qwen3_4b_base_mmlu_0shot_smoke20/LMEval_EVAL.json
-[2026-10-13 12:26:59,332][evaluator][INFO] - Aggregated evaluations will be summarised in: ./saves/eval/qwen3_4b_base_mmlu_0shot_smoke20/LMEval_SUMMARY.json
-[2026-10-13 12:26:59,333][lm_eval.evaluator][INFO] - Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
-[2026-10-13 12:26:59,333][lm_eval.evaluator][INFO] - Using pre-initialized model
-[2026-10-13 12:27:00,401][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/parquet/parquet.py "HTTP/1.1 404 Not Found"
-Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 1534 examples [00:00, 69851.18 examples/s]
-Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 1381.25 examples/s]
-[2026-10-13 12:27:00,470][lm_eval.tasks][INFO] - Selected tasks:
-[2026-10-13 12:27:00,471][lm_eval.tasks][INFO] - Task: mmlu_professional_law (configs/eval/tasks/mmlu_pinned/mmlu_professional_law.yaml)
-[2026-10-13 12:27:00,471][lm_eval.evaluator][WARNING] - Overwriting default num_fewshot of mmlu_professional_law from None to 0
-[2026-10-13 12:27:00,472][lm_eval.api.task][INFO] - Building contexts for mmlu_professional_law on rank 0...
-  0%|          | 0/20 [00:00<?, ?it/s]100%|██████████| 20/20 [00:00<00:00, 728.42it/s]
-[2026-10-13 12:27:00,501][lm_eval.evaluator][INFO] - Running loglikelihood requests
-Running loglikelihood requests:   0%|          | 0/80 [00:00<?, ?it/s]Running loglikelihood requests:   1%|▏         | 1/80 [00:00<00:29,  2.70it/s]Running loglikelihood requests:  16%|█▋        | 13/80 [00:00<00:01, 34.03it/s]Running loglikelihood requests:  31%|███▏      | 25/80 [00:00<00:00, 55.08it/s]Running loglikelihood requests:  46%|████▋     | 37/80 [00:00<00:00, 68.88it/s]Running loglikelihood requests:  61%|██████▏   | 49/80 [00:00<00:00, 79.91it/s]Running loglikelihood requests:  76%|███████▋  | 61/80 [00:00<00:00, 87.14it/s]Running loglikelihood requests:  91%|█████████▏| 73/80 [00:01<00:00, 91.11it/s]Running loglikelihood requests: 100%|██████████| 80/80 [00:01<00:00, 72.09it/s]

@@ -1,9 +1,0 @@
-{
-  "selected": [],
-  "best_new_frontier_at_2_and_3pp": {
-    "2": null,
-    "3": null
-  },
-  "rule": "Saved new checkpoints, nondominated by any archived development point, best Bio under2/3 weighted MMLU loss; deduplicate; max2; no full feedback",
-  "exploratory": true
-}

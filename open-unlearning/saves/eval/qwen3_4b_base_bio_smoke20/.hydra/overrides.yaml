@@ -1,9 +1,0 @@
-- experiment=eval/wmdp/default
-- model=Qwen3-4B-Instruct-2507
-- data_split=bio
-- task_name=qwen3_4b_base_bio_smoke20
-- eval.lm_eval.tasks=[wmdp_bio]
-- eval.lm_eval.simple_evaluate_args.batch_size=1
-- +eval.lm_eval.simple_evaluate_args.limit=20
-- +eval.lm_eval.simple_evaluate_args.log_samples=true
-- +eval.lm_eval.simple_evaluate_args.num_fewshot=0

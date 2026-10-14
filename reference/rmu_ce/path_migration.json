@@ -1,0 +1,8 @@
+{
+  "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_ce15_screen40": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42",
+  "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_ce15_minimal": "open-unlearning/saves/unlearn/rmu_ce_v1/checks/seed42_minimal",
+  "open-unlearning/saves/unlearn/simnpo_rmu_v1/ce15_full_evaluations/rmu_ce_s32_ce15_screen40_checkpoint-40": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed42_checkpoint-40",
+  "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_seed43_ce15_screen40": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43",
+  "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_seed43_ce15_minimal": "open-unlearning/saves/unlearn/rmu_ce_v1/checks/seed43_minimal",
+  "open-unlearning/saves/unlearn/simnpo_rmu_v1/ce15_full_evaluations/rmu_ce_s32_seed43_ce15_screen40_checkpoint-40": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed43_checkpoint-40"
+}

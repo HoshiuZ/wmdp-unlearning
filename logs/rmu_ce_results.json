@@ -1,0 +1,36 @@
+{
+  "method": "RMU+CE",
+  "ce_scale": 1.5,
+  "rows": [
+    {
+      "seed": 42,
+      "hook": 12,
+      "updated_layers": "10/11/12 down_proj.weight",
+      "lr": 5e-05,
+      "alpha": 2,
+      "steering": 32,
+      "ce_weight": 0.09004336292634454,
+      "steps": 40,
+      "bio_percent": 60.25137470542027,
+      "mmlu_percent": 68.83634809856146,
+      "mmlu_change_pp": -1.8373451075345393,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_ce_v1/seed42/checkpoint-40",
+      "evaluation": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed42_checkpoint-40"
+    },
+    {
+      "seed": 43,
+      "hook": 12,
+      "updated_layers": "10/11/12 down_proj.weight",
+      "lr": 5e-05,
+      "alpha": 2,
+      "steering": 32,
+      "ce_weight": 0.09004336292634454,
+      "steps": 40,
+      "bio_percent": 61.115475255302435,
+      "mmlu_percent": 68.81498362056688,
+      "mmlu_change_pp": -1.858709585529127,
+      "checkpoint": "open-unlearning/saves/unlearn/rmu_ce_v1/seed43/checkpoint-40",
+      "evaluation": "open-unlearning/saves/unlearn/rmu_ce_v1/full_evaluations/seed43_checkpoint-40"
+    }
+  ]
+}

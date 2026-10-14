@@ -1,7 +1,0 @@
-path,hook,parameters,lr,alpha,steering,steps,bio,mmlu_weighted,mmlu_equal,weighted_change_pp,pareto
-open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_screen40/checkpoint-10/development/samples.json,12,10/11/12 down_proj.weight,5e-05,2,32,10,73.046875,69.10530313820442,72.98245614035088,-0.8787921948440527,False
-open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_screen40/checkpoint-20/development/samples.json,12,10/11/12 down_proj.weight,5e-05,2,32,20,73.4375,68.74519299245121,72.63157894736844,-1.2389023405972637,False
-open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_screen40/checkpoint-40/development/samples.json,12,10/11/12 down_proj.weight,5e-05,2,32,40,58.59375,69.15990124863504,72.33918128654972,-0.8241940844134348,True
-open-unlearning/saves/unlearn/simnpo_rmu_v1/joint_gradcap_s32_screen40/checkpoint-10/development/samples.json,12,10/11/12 down_proj.weight,5e-05,2,32,10,73.4375,68.9011536818117,72.80701754385967,-1.0829416512367658,False
-open-unlearning/saves/unlearn/simnpo_rmu_v1/joint_gradcap_s32_screen40/checkpoint-20/development/samples.json,12,10/11/12 down_proj.weight,5e-05,2,32,20,74.21875,68.6139201443289,72.45614035087719,-1.3701751887195712,False
-open-unlearning/saves/unlearn/simnpo_rmu_v1/joint_gradcap_s32_screen40/checkpoint-40/development/samples.json,12,10/11/12 down_proj.weight,5e-05,2,32,40,55.078125,66.93799553719792,71.28654970760235,-3.0460997958505516,True

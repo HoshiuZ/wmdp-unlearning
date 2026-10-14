@@ -1,118 +1,0 @@
-[2026-10-13 12:24:32,531] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:212: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
-Use register_resolver() instead.
-See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
-
-  OmegaConf.register_new_resolver(
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:218: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
-Use register_resolver() instead.
-See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
-
-  OmegaConf.register_new_resolver(
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:230: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
-Use register_resolver() instead.
-See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
-
-  OmegaConf.register_new_resolver(
-/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/config_loader_impl.py:291: FutureWarning: Implicit conversion from Version to str at 'hydra.runtime.version_base' during assignment is deprecated; pass the declared type or use OmegaConf.update() for an existing path.
-  cfg.hydra.runtime.version_base = version.getbase()
-`torch_dtype` is deprecated! Use `dtype` instead!
-Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   1%|          | 4/398 [00:00<00:13, 30.13it/s]Loading weights:   7%|▋         | 27/398 [00:00<00:02, 132.65it/s]Loading weights:  12%|█▏        | 49/398 [00:00<00:02, 165.17it/s]Loading weights:  18%|█▊        | 71/398 [00:00<00:01, 179.74it/s]Loading weights:  23%|██▎       | 93/398 [00:00<00:01, 185.94it/s]Loading weights:  29%|██▊       | 114/398 [00:00<00:01, 192.35it/s]Loading weights:  34%|███▍      | 135/398 [00:00<00:01, 194.40it/s]Loading weights:  39%|███▉      | 155/398 [00:00<00:01, 192.77it/s]Loading weights:  44%|████▍     | 175/398 [00:00<00:01, 191.15it/s]Loading weights:  49%|████▉     | 195/398 [00:01<00:01, 193.64it/s]Loading weights:  54%|█████▍    | 215/398 [00:01<00:01, 182.43it/s]Loading weights:  59%|█████▉    | 236/398 [00:01<00:00, 182.10it/s]Loading weights:  65%|██████▍   | 257/398 [00:01<00:00, 184.97it/s]Loading weights:  70%|██████▉   | 278/398 [00:01<00:00, 189.75it/s]Loading weights:  75%|███████▍  | 298/398 [00:01<00:00, 191.69it/s]Loading weights:  80%|███████▉  | 318/398 [00:01<00:00, 190.78it/s]Loading weights:  85%|████████▍ | 338/398 [00:01<00:00, 184.52it/s]Loading weights:  90%|████████▉ | 357/398 [00:01<00:00, 174.09it/s]Loading weights:  95%|█████████▌| 379/398 [00:02<00:00, 179.17it/s]Loading weights: 100%|██████████| 398/398 [00:02<00:00, 182.90it/s]
-[2026-10-13 12:24:40,369][lm_eval.models.huggingface][WARNING] - `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
-[2026-10-13 12:24:40,372][lm_eval.models.huggingface][WARNING] - Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
-[2026-10-13 12:24:40,373][evaluator][INFO] - ***** Running LMEval evaluation suite *****
-[2026-10-13 12:24:40,374][evaluator][INFO] - Fine-grained evaluations will be saved to: ./saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/LMEval_EVAL.json
-[2026-10-13 12:24:40,374][evaluator][INFO] - Aggregated evaluations will be summarised in: ./saves/eval/qwen3_4b_base_mmlu_0shot_full_v1/LMEval_SUMMARY.json
-[2026-10-13 12:24:40,375][lm_eval.evaluator][INFO] - Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
-[2026-10-13 12:24:40,375][lm_eval.evaluator][INFO] - Using pre-initialized model
-[2026-10-13 12:24:41,102][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 308 Permanent Redirect"
-[2026-10-13 12:24:41,675][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 200 OK"
-[2026-10-13 12:24:42,671][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/cais/mmlu/cais/mmlu.py "HTTP/1.1 404 Not Found"
-[2026-10-13 12:24:42,827][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 308 Permanent Redirect"
-[2026-10-13 12:24:43,161][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 200 OK"
-[2026-10-13 12:24:43,345][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 308 Permanent Redirect"
-[2026-10-13 12:24:43,718][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/revision/c30699e8356da336a370243923dbaf21066bb9fe "HTTP/1.1 200 OK"
-[2026-10-13 12:24:43,885][httpx][INFO] - HTTP Request: HEAD https://hf-mirror.com/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/README.md "HTTP/1.1 308 Permanent Redirect"
-[2026-10-13 12:24:44,049][httpx][INFO] - HTTP Request: HEAD https://hf-mirror.com/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/.huggingface.yaml "HTTP/1.1 308 Permanent Redirect"
-[2026-10-13 12:24:44,222][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe/data?recursive=true&expand=false "HTTP/1.1 308 Permanent Redirect"
-[2026-10-13 12:24:44,535][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe/data?recursive=true&expand=false "HTTP/1.1 404 Not Found"
-[2026-10-13 12:24:44,686][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe?recursive=false&expand=false "HTTP/1.1 308 Permanent Redirect"
-[2026-10-13 12:24:45,006][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe?recursive=false&expand=false "HTTP/1.1 200 OK"
-[2026-10-13 12:24:45,165][httpx][INFO] - HTTP Request: GET https://hf-mirror.com/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe?recursive=true&expand=false "HTTP/1.1 308 Permanent Redirect"
-[2026-10-13 12:24:45,490][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/cais/mmlu/tree/c30699e8356da336a370243923dbaf21066bb9fe?recursive=true&expand=false "HTTP/1.1 200 OK"
-[2026-10-13 12:24:45,765][httpx][INFO] - HTTP Request: HEAD https://hf-mirror.com/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/dataset_infos.json "HTTP/1.1 308 Permanent Redirect"
-Error executing job with overrides: ['experiment=eval/mmlu/qwen3_4b_baseline']
-Traceback (most recent call last):
-  File "/root/autodl-tmp/wmdp-work/open-unlearning/src/eval.py", line 33, in <module>
-    main()
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/main.py", line 90, in decorated_main
-    _run_hydra(
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
-    _run_app(
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/utils.py", line 457, in _run_app
-    run_and_report(
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/utils.py", line 222, in run_and_report
-    raise ex
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/utils.py", line 219, in run_and_report
-    return func()
-           ^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
-    lambda: hydra.run(
-            ^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/hydra.py", line 132, in run
-    _ = ret.return_value
-        ^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py", line 260, in return_value
-    raise self._return_value
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py", line 186, in run_job
-    ret.return_value = task_function(task_cfg)
-                       ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/open-unlearning/src/eval.py", line 29, in main
-    _ = evaluator.evaluate(**eval_args)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/open-unlearning/src/evals/lm_eval.py", line 116, in evaluate
-    results = simple_evaluate(
-              ^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/utils.py", line 498, in _wrapper
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/evaluator.py", line 292, in simple_evaluate
-    task_dict = get_task_dict(
-                ^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/tasks/__init__.py", line 646, in get_task_dict
-    task_name_from_string_dict = task_manager.load_task_or_group(
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/tasks/__init__.py", line 428, in load_task_or_group
-    collections.ChainMap(
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/tasks/__init__.py", line 430, in <lambda>
-    lambda task: self._load_individual_task_or_group(task),
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/tasks/__init__.py", line 412, in _load_individual_task_or_group
-    group_name: dict(collections.ChainMap(*map(fn, reversed(subtask_list))))
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/tasks/__init__.py", line 412, in _load_individual_task_or_group
-    group_name: dict(collections.ChainMap(*map(fn, reversed(subtask_list))))
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/tasks/__init__.py", line 328, in _load_individual_task_or_group
-    return _load_task(task_config, task=name_or_config)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/tasks/__init__.py", line 288, in _load_task
-    task_object = ConfigurableTask(config=config)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/api/task.py", line 748, in __init__
-    self.download(self.config.dataset_kwargs)
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/lm_eval/api/task.py", line 864, in download
-    self.dataset = datasets.load_dataset(
-                   ^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/datasets/load.py", line 2074, in load_dataset
-    builder_instance = load_dataset_builder(
-                       ^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/datasets/load.py", line 1832, in load_dataset_builder
-    builder_instance: DatasetBuilder = builder_cls(
-                                       ^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/datasets/builder.py", line 342, in __init__
-    self.config, self.config_id = self._create_builder_config(
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/datasets/builder.py", line 569, in _create_builder_config
-    raise ValueError(
-ValueError: BuilderConfig 'world_religions' not found. Available: ['default']

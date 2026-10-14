@@ -1,0 +1,6 @@
+{
+  "command": "git lfs push --all origin main",
+  "exit_code": 0,
+  "source_commit": "4d919a70609f0336ef467510eb19176c2960229c",
+  "all_reachable_history_lfs_backed_up": true
+}

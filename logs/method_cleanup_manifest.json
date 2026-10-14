@@ -1,0 +1,1449 @@
+{
+  "authorization": "Keep only RMU+CE CE1.5 seed42/43, remove other experimental artifacts and project-specific code/docs; preserve original data/model and Git history; clean GitHub current tree",
+  "source_commit": "4d919a70609f0336ef467510eb19176c2960229c",
+  "history_backup": {
+    "command": "git lfs push --all origin main",
+    "exit_code": 0,
+    "source_commit": "4d919a70609f0336ef467510eb19176c2960229c",
+    "all_reachable_history_lfs_backed_up": true
+  },
+  "removed_roots": [
+    {
+      "path": "scripts/__pycache__",
+      "files": 49,
+      "logical_bytes": 715058,
+      "allocated_bytes": 815104
+    },
+    {
+      "path": "scripts/prepare_rmu_smoke_subset.py",
+      "files": 1,
+      "logical_bytes": 1584,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/check_rmu_readiness.py",
+      "files": 1,
+      "logical_bytes": 3497,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/run_rmu_smoke.py",
+      "files": 1,
+      "logical_bytes": 8779,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/rmu_validation.py",
+      "files": 1,
+      "logical_bytes": 3536,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/run_rmu_formal.py",
+      "files": 1,
+      "logical_bytes": 10598,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/check_rmu_formal_readiness.py",
+      "files": 1,
+      "logical_bytes": 4524,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/archive_rmu_formal_usage.py",
+      "files": 1,
+      "logical_bytes": 1293,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/run_rmu_post_eval.py",
+      "files": 1,
+      "logical_bytes": 4024,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/summarize_rmu_post_eval.py",
+      "files": 1,
+      "logical_bytes": 3424,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/rmu_adaptation_utils.py",
+      "files": 1,
+      "logical_bytes": 7438,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/run_rmu_adaptation.py",
+      "files": 1,
+      "logical_bytes": 9186,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/check_rmu_adaptation_protocol.py",
+      "files": 1,
+      "logical_bytes": 826,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/finish_rmu_adaptation.py",
+      "files": 1,
+      "logical_bytes": 4098,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/orchestrate_rmu_adaptation.py",
+      "files": 1,
+      "logical_bytes": 1496,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/report_rmu_adaptation.py",
+      "files": 1,
+      "logical_bytes": 11134,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/orchestrate_rmu_adaptation_phase2.py",
+      "files": 1,
+      "logical_bytes": 1081,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/reweight_rmu_development.py",
+      "files": 1,
+      "logical_bytes": 3765,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/diagnose_rmu_scale.py",
+      "files": 1,
+      "logical_bytes": 6588,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/run_rmu_scale_v2.py",
+      "files": 1,
+      "logical_bytes": 8032,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/rmu_position_blocks.py",
+      "files": 1,
+      "logical_bytes": 1449,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/prepare_rmu_position_coverage.py",
+      "files": 1,
+      "logical_bytes": 3261,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/select_rmu_scale_v2.py",
+      "files": 1,
+      "logical_bytes": 2168,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/evaluate_rmu_scale_v2.py",
+      "files": 1,
+      "logical_bytes": 1881,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/diagnose_rmu_scale_after.py",
+      "files": 1,
+      "logical_bytes": 6983,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/report_rmu_scale_v2.py",
+      "files": 1,
+      "logical_bytes": 22308,
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "scripts/compact_rmu_smoke.py",
+      "files": 1,
+      "logical_bytes": 2985,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/simnpo_rmu_method.py",
+      "files": 1,
+      "logical_bytes": 4356,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/run_simnpo_rmu.py",
+      "files": 1,
+      "logical_bytes": 11522,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/summarize_simnpo_rmu.py",
+      "files": 1,
+      "logical_bytes": 3470,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/evaluate_simnpo_rmu.py",
+      "files": 1,
+      "logical_bytes": 1880,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/report_simnpo_rmu.py",
+      "files": 1,
+      "logical_bytes": 12780,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "scripts/diagnose_simnpo_gradients.py",
+      "files": 1,
+      "logical_bytes": 6299,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/finish_simnpo_half.py",
+      "files": 1,
+      "logical_bytes": 12283,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/evaluate_simnpo_half.py",
+      "files": 1,
+      "logical_bytes": 1890,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/finish_simnpo_cap.py",
+      "files": 1,
+      "logical_bytes": 13926,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "scripts/evaluate_simnpo_cap.py",
+      "files": 1,
+      "logical_bytes": 1888,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/finish_simnpo_s32.py",
+      "files": 1,
+      "logical_bytes": 11574,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/evaluate_simnpo_s32.py",
+      "files": 1,
+      "logical_bytes": 1888,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/evaluate_rmu_ce_seed43.py",
+      "files": 1,
+      "logical_bytes": 1936,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/finish_rmu_ce_seed43.py",
+      "files": 1,
+      "logical_bytes": 13952,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "scripts/evaluate_rmu_ce15.py",
+      "files": 1,
+      "logical_bytes": 2137,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/finish_rmu_ce15.py",
+      "files": 1,
+      "logical_bytes": 12737,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "docs/rmu-readiness.md",
+      "files": 1,
+      "logical_bytes": 5398,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "docs/rmu-formal-plan.md",
+      "files": 1,
+      "logical_bytes": 8412,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "docs/rmu-post-evaluation.md",
+      "files": 1,
+      "logical_bytes": 3459,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/rmu-adaptation-plan.md",
+      "files": 1,
+      "logical_bytes": 7900,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "docs/rmu-adaptation-results.md",
+      "files": 1,
+      "logical_bytes": 6875,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "docs/rmu-adaptation-results-phase1.md",
+      "files": 1,
+      "logical_bytes": 5430,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "docs/rmu-scale-v2-plan.md",
+      "files": 1,
+      "logical_bytes": 6697,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "docs/rmu-scale-v2-results.md",
+      "files": 1,
+      "logical_bytes": 14820,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "docs/simnpo-rmu-plan.md",
+      "files": 1,
+      "logical_bytes": 2661,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/simnpo-rmu-results.md",
+      "files": 1,
+      "logical_bytes": 7889,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "docs/simnpo-rmu-gradient-plan.md",
+      "files": 1,
+      "logical_bytes": 1935,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/simnpo-rmu-gradient-results.md",
+      "files": 1,
+      "logical_bytes": 5353,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "docs/simnpo-rmu-cap-plan.md",
+      "files": 1,
+      "logical_bytes": 2070,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/simnpo-rmu-cap-results.md",
+      "files": 1,
+      "logical_bytes": 5973,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "docs/simnpo-rmu-s32-plan.md",
+      "files": 1,
+      "logical_bytes": 1740,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/simnpo-rmu-s32-results.md",
+      "files": 1,
+      "logical_bytes": 4350,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "docs/rmu-ce-seed43-plan.md",
+      "files": 1,
+      "logical_bytes": 1731,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/rmu-ce-seed43-results.md",
+      "files": 1,
+      "logical_bytes": 3390,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/rmu-ce15-plan.md",
+      "files": 1,
+      "logical_bytes": 1824,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "docs/rmu-ce15-results.md",
+      "files": 1,
+      "logical_bytes": 3487,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/code_changes.patch",
+      "files": 1,
+      "logical_bytes": 752,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_environment.json",
+      "files": 1,
+      "logical_bytes": 477,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/qwen3_4b_base_mmlu_0shot_smoke20.console.log",
+      "files": 1,
+      "logical_bytes": 6237,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/qwen3_4b_base_mmlu_0shot_full_v1.failed_loading.console.log",
+      "files": 1,
+      "logical_bytes": 12905,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "logs/rmu_cpu_checks.log",
+      "files": 1,
+      "logical_bytes": 247,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_smoke_subset_manifest.json",
+      "files": 1,
+      "logical_bytes": 1856,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_development.csv",
+      "files": 1,
+      "logical_bytes": 8187,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_readiness.failed_config.console.log",
+      "files": 1,
+      "logical_bytes": 5150,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_readiness.console.log",
+      "files": 1,
+      "logical_bytes": 3706,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_smoke_resolved_config.json",
+      "files": 1,
+      "logical_bytes": 3414,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_readiness_report.json",
+      "files": 1,
+      "logical_bytes": 1846,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_cpu_checks_telemetry.log",
+      "files": 1,
+      "logical_bytes": 247,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_smoke3_v1.console.log",
+      "files": 1,
+      "logical_bytes": 6401,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_smoke_run.json",
+      "files": 1,
+      "logical_bytes": 5926,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_cpu_checks_formal.log",
+      "files": 1,
+      "logical_bytes": 247,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_formal_monitor_cpu_checks.log",
+      "files": 1,
+      "logical_bytes": 483,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_selection_phase2.json",
+      "files": 1,
+      "logical_bytes": 16870,
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "logs/rmu_formal_readiness.failed_assert.console.log",
+      "files": 1,
+      "logical_bytes": 1864,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_result_phase2.json",
+      "files": 1,
+      "logical_bytes": 18408,
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "logs/rmu_formal_readiness.failed_inherited_eval.console.log",
+      "files": 1,
+      "logical_bytes": 1856,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_audit_phase2.json",
+      "files": 1,
+      "logical_bytes": 727,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_formal_readiness.slow_check.console.log",
+      "files": 1,
+      "logical_bytes": 1745,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_formal_readiness.console.log",
+      "files": 1,
+      "logical_bytes": 3220,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_formal_resolved_config.json",
+      "files": 1,
+      "logical_bytes": 3707,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_formal_readiness_report.json",
+      "files": 1,
+      "logical_bytes": 1231,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_formal80_v1.console.log",
+      "files": 1,
+      "logical_bytes": 26620,
+      "allocated_bytes": 28672
+    },
+    {
+      "path": "logs/rmu_formal_run.json",
+      "files": 1,
+      "logical_bytes": 11171,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "logs/git_lfs_install.log",
+      "files": 1,
+      "logical_bytes": 4858,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_formal_git_push.log",
+      "files": 1,
+      "logical_bytes": 111,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_formal_git_push_retry.log",
+      "files": 1,
+      "logical_bytes": 135,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_post_eval_protocol_check.console.log",
+      "files": 1,
+      "logical_bytes": 3406,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_post_eval.console.log",
+      "files": 1,
+      "logical_bytes": 532354,
+      "allocated_bytes": 532480
+    },
+    {
+      "path": "logs/rmu_post_eval_summary.json",
+      "files": 1,
+      "logical_bytes": 4392,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_adaptation_dev_split.json",
+      "files": 1,
+      "logical_bytes": 27568,
+      "allocated_bytes": 28672
+    },
+    {
+      "path": "logs/rmu_adaptation_protocol.console.log",
+      "files": 1,
+      "logical_bytes": 66808,
+      "allocated_bytes": 69632
+    },
+    {
+      "path": "logs/rmu_adaptation_h12_alpha4.console.log",
+      "files": 1,
+      "logical_bytes": 207731,
+      "allocated_bytes": 208896
+    },
+    {
+      "path": "logs/rmu_adaptation_protocol_audit.json",
+      "files": 1,
+      "logical_bytes": 288,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_h7_minimal.failed_device_prep.console.log",
+      "files": 1,
+      "logical_bytes": 6176,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_adaptation_orchestration.failed_device_prep.console.log",
+      "files": 1,
+      "logical_bytes": 1132,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_orchestration.console.log",
+      "files": 1,
+      "logical_bytes": 348,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_h7_minimal.console.log",
+      "files": 1,
+      "logical_bytes": 2352,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_h12_minimal.console.log",
+      "files": 1,
+      "logical_bytes": 2353,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_h18_minimal.console.log",
+      "files": 1,
+      "logical_bytes": 2353,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_h7_screen40.console.log",
+      "files": 1,
+      "logical_bytes": 211860,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_adaptation_h12_screen40.console.log",
+      "files": 1,
+      "logical_bytes": 209746,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_adaptation_h18_screen40.console.log",
+      "files": 1,
+      "logical_bytes": 210592,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_adaptation_layer_selection.json",
+      "files": 1,
+      "logical_bytes": 8031,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_adaptation_h12_alpha2.console.log",
+      "files": 1,
+      "logical_bytes": 211434,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_adaptation_selected_full.console.log",
+      "files": 1,
+      "logical_bytes": 499968,
+      "allocated_bytes": 503808
+    },
+    {
+      "path": "logs/rmu_adaptation_selection.json",
+      "files": 1,
+      "logical_bytes": 12881,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "logs/rmu_adaptation_format_and_base_check.json",
+      "files": 1,
+      "logical_bytes": 102,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_result.json",
+      "files": 1,
+      "logical_bytes": 14211,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "logs/rmu_adaptation_audit.json",
+      "files": 1,
+      "logical_bytes": 727,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_comparison.json",
+      "files": 1,
+      "logical_bytes": 9788,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "logs/rmu_adaptation_comparison.csv",
+      "files": 1,
+      "logical_bytes": 4546,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_adaptation_phase2_config_check.json",
+      "files": 1,
+      "logical_bytes": 404,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_expansion_check.json",
+      "files": 1,
+      "logical_bytes": 390,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_orchestration_phase2.console.log",
+      "files": 1,
+      "logical_bytes": 141,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_h12_lrhalf.console.log",
+      "files": 1,
+      "logical_bytes": 211505,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_scale_v2_space_plan.json",
+      "files": 1,
+      "logical_bytes": 685,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_adaptation_h12_steering1.console.log",
+      "files": 1,
+      "logical_bytes": 211179,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_adaptation_selected_full_phase2.console.log",
+      "files": 1,
+      "logical_bytes": 498734,
+      "allocated_bytes": 499712
+    },
+    {
+      "path": "logs/rmu_adaptation_comparison_phase2.json",
+      "files": 1,
+      "logical_bytes": 13742,
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "logs/rmu_adaptation_comparison_phase2.csv",
+      "files": 1,
+      "logical_bytes": 6365,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_adaptation_final_samples_check.json",
+      "files": 1,
+      "logical_bytes": 353,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_reweighted_development.json",
+      "files": 1,
+      "logical_bytes": 426476,
+      "allocated_bytes": 430080
+    },
+    {
+      "path": "logs/rmu_scale_v2_diagnostics.console.log",
+      "files": 1,
+      "logical_bytes": 4621,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_scale_v2_diagnostics.json",
+      "files": 1,
+      "logical_bytes": 18540,
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "logs/rmu_scale_v2_s16.console.log",
+      "files": 1,
+      "logical_bytes": 211437,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_scale_v2_gate_after_s16.json",
+      "files": 1,
+      "logical_bytes": 1232,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_s32.console.log",
+      "files": 1,
+      "logical_bytes": 211481,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_scale_v2_gate_after_s32.json",
+      "files": 1,
+      "logical_bytes": 1112,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_s32a2.console.log",
+      "files": 1,
+      "logical_bytes": 210000,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_scale_v2_coverage_gate.json",
+      "files": 1,
+      "logical_bytes": 1316,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_coverage_prepare.console.log",
+      "files": 1,
+      "logical_bytes": 34,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_coverage_manifest.json",
+      "files": 1,
+      "logical_bytes": 1656,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_coverage_readiness.json",
+      "files": 1,
+      "logical_bytes": 449,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_coverage.console.log",
+      "files": 1,
+      "logical_bytes": 210325,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_scale_v2_full_selection.json",
+      "files": 1,
+      "logical_bytes": 69707,
+      "allocated_bytes": 73728
+    },
+    {
+      "path": "logs/rmu_scale_v2_postdiagnostics.console.log",
+      "files": 1,
+      "logical_bytes": 6235,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_scale_v2_postdiagnostics.json",
+      "files": 1,
+      "logical_bytes": 31266,
+      "allocated_bytes": 32768
+    },
+    {
+      "path": "logs/rmu_scale_v2_full.console.log",
+      "files": 1,
+      "logical_bytes": 997114,
+      "allocated_bytes": 999424
+    },
+    {
+      "path": "logs/rmu_scale_v2_diagnostic_provenance.json",
+      "files": 1,
+      "logical_bytes": 1174,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_report.console.log",
+      "files": 1,
+      "logical_bytes": 2245,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_completion_audit.json",
+      "files": 1,
+      "logical_bytes": 815,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_full_comparison.json",
+      "files": 1,
+      "logical_bytes": 73765,
+      "allocated_bytes": 77824
+    },
+    {
+      "path": "logs/rmu_scale_v2_full_comparison.csv",
+      "files": 1,
+      "logical_bytes": 1683,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_scale_v2_development_config_comparison.csv",
+      "files": 1,
+      "logical_bytes": 10280,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "logs/disk_cleanup_20261014.json",
+      "files": 1,
+      "logical_bytes": 932,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/smoke_compaction_20261014.console.log",
+      "files": 1,
+      "logical_bytes": 2866,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/smoke_compaction_20261014.json",
+      "files": 1,
+      "logical_bytes": 2722,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_probe.console.log",
+      "files": 1,
+      "logical_bytes": 1847,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_coefficients.json",
+      "files": 1,
+      "logical_bytes": 1895,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_sim.console.log",
+      "files": 1,
+      "logical_bytes": 211288,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/simnpo_rmu_development.console.log",
+      "files": 1,
+      "logical_bytes": 993,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_development.json",
+      "files": 1,
+      "logical_bytes": 520072,
+      "allocated_bytes": 520192
+    },
+    {
+      "path": "logs/simnpo_rmu_development.csv",
+      "files": 1,
+      "logical_bytes": 10207,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "logs/simnpo_rmu_rmu_ce.console.log",
+      "files": 1,
+      "logical_bytes": 211075,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/simnpo_rmu_provenance.json",
+      "files": 1,
+      "logical_bytes": 1912,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_joint.console.log",
+      "files": 1,
+      "logical_bytes": 211472,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/simnpo_rmu_full_selection.json",
+      "files": 1,
+      "logical_bytes": 274,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_report.console.log",
+      "files": 1,
+      "logical_bytes": 609,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_completion_audit.json",
+      "files": 1,
+      "logical_bytes": 643,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_full_results.json",
+      "files": 1,
+      "logical_bytes": 40,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_s32_completion_audit.json",
+      "files": 1,
+      "logical_bytes": 1254,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_seed43_minimal_source.json",
+      "files": 1,
+      "logical_bytes": 303,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_gradient_initial_scope.console.log",
+      "files": 1,
+      "logical_bytes": 1959,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_gradient_initial_scope.partial.json",
+      "files": 1,
+      "logical_bytes": 90571,
+      "allocated_bytes": 94208
+    },
+    {
+      "path": "logs/simnpo_rmu_gradient.console.log",
+      "files": 1,
+      "logical_bytes": 2679,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_gradient_diagnostics.partial.json",
+      "files": 1,
+      "logical_bytes": 411671,
+      "allocated_bytes": 413696
+    },
+    {
+      "path": "logs/simnpo_rmu_gradient_diagnostics.json",
+      "files": 1,
+      "logical_bytes": 412177,
+      "allocated_bytes": 413696
+    },
+    {
+      "path": "logs/simnpo_rmu_half_gate.json",
+      "files": 1,
+      "logical_bytes": 511,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_half_minimal.console.log",
+      "files": 1,
+      "logical_bytes": 1848,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_half.console.log",
+      "files": 1,
+      "logical_bytes": 211734,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/simnpo_rmu_half_development.console.log",
+      "files": 1,
+      "logical_bytes": 193,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_half_development.json",
+      "files": 1,
+      "logical_bytes": 554181,
+      "allocated_bytes": 557056
+    },
+    {
+      "path": "logs/simnpo_rmu_half_development.csv",
+      "files": 1,
+      "logical_bytes": 10432,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "logs/simnpo_rmu_half_full_selection.json",
+      "files": 1,
+      "logical_bytes": 157,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_half_report.console.log",
+      "files": 1,
+      "logical_bytes": 273,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_half_completion_audit.json",
+      "files": 1,
+      "logical_bytes": 567,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_cap_minimal.console.log",
+      "files": 1,
+      "logical_bytes": 1937,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_cap.console.log",
+      "files": 1,
+      "logical_bytes": 210371,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/simnpo_rmu_cap_development.console.log",
+      "files": 1,
+      "logical_bytes": 191,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_cap_development.json",
+      "files": 1,
+      "logical_bytes": 588688,
+      "allocated_bytes": 589824
+    },
+    {
+      "path": "logs/simnpo_rmu_cap_development.csv",
+      "files": 1,
+      "logical_bytes": 11106,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "logs/simnpo_rmu_cap_full_selection.json",
+      "files": 1,
+      "logical_bytes": 157,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_cap_report.console.log",
+      "files": 1,
+      "logical_bytes": 271,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_cap_controller_summary.json",
+      "files": 1,
+      "logical_bytes": 197,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_cap_completion_audit.json",
+      "files": 1,
+      "logical_bytes": 637,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_ce_s32_minimal.console.log",
+      "files": 1,
+      "logical_bytes": 1845,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_joint_gradcap_s32_minimal.console.log",
+      "files": 1,
+      "logical_bytes": 1852,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_ce_s32_screen40.console.log",
+      "files": 1,
+      "logical_bytes": 211581,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/simnpo_joint_gradcap_s32_screen40.console.log",
+      "files": 1,
+      "logical_bytes": 210839,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/simnpo_rmu_s32_selection.console.log",
+      "files": 1,
+      "logical_bytes": 527,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_s32_development.json",
+      "files": 1,
+      "logical_bytes": 634691,
+      "allocated_bytes": 634880
+    },
+    {
+      "path": "logs/simnpo_rmu_s32_development.csv",
+      "files": 1,
+      "logical_bytes": 1419,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_s32_full_selection.json",
+      "files": 1,
+      "logical_bytes": 11608,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "logs/simnpo_rmu_s32_full.console.log",
+      "files": 1,
+      "logical_bytes": 498786,
+      "allocated_bytes": 499712
+    },
+    {
+      "path": "logs/simnpo_rmu_s32_lfs_fsck.log",
+      "files": 1,
+      "logical_bytes": 16,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/simnpo_rmu_s32_report.console.log",
+      "files": 1,
+      "logical_bytes": 532,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_seed43_minimal.console.log",
+      "files": 1,
+      "logical_bytes": 1852,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_seed43_runner.patch",
+      "files": 1,
+      "logical_bytes": 9453,
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "logs/rmu_ce_seed43_screen40.console.log",
+      "files": 1,
+      "logical_bytes": 211668,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "logs/rmu_ce_seed43_training_audit.console.log",
+      "files": 1,
+      "logical_bytes": 56,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_seed43_development.json",
+      "files": 1,
+      "logical_bytes": 34211,
+      "allocated_bytes": 36864
+    },
+    {
+      "path": "logs/rmu_ce_seed43_training_audit.json",
+      "files": 1,
+      "logical_bytes": 1472,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_seed43_full.console.log",
+      "files": 1,
+      "logical_bytes": 499601,
+      "allocated_bytes": 499712
+    },
+    {
+      "path": "logs/rmu_ce_seed43_lfs_fsck.log",
+      "files": 1,
+      "logical_bytes": 16,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_seed43_report.console.log",
+      "files": 1,
+      "logical_bytes": 1092,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_seed43_full_subjects.json",
+      "files": 1,
+      "logical_bytes": 50537,
+      "allocated_bytes": 53248
+    },
+    {
+      "path": "logs/rmu_ce_seed43_full_subjects.csv",
+      "files": 1,
+      "logical_bytes": 6948,
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "logs/rmu_ce_seed43_full_comparison.json",
+      "files": 1,
+      "logical_bytes": 1293,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_seed43_full_comparison.csv",
+      "files": 1,
+      "logical_bytes": 415,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce_seed43_completion_audit.json",
+      "files": 1,
+      "logical_bytes": 1742,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_report.console.log",
+      "files": 1,
+      "logical_bytes": 2244,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_full_comparison.json",
+      "files": 1,
+      "logical_bytes": 45613,
+      "allocated_bytes": 49152
+    },
+    {
+      "path": "logs/rmu_ce15_full_comparison.csv",
+      "files": 1,
+      "logical_bytes": 1211,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "logs/rmu_ce15_completion_audit.json",
+      "files": 1,
+      "logical_bytes": 78601,
+      "allocated_bytes": 81920
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1",
+      "files": 19,
+      "logical_bytes": 11581773,
+      "allocated_bytes": 11624448
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_formal80_v1",
+      "files": 29,
+      "logical_bytes": 8056698923,
+      "allocated_bytes": 8056754176
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_adaptation_v1",
+      "files": 202,
+      "logical_bytes": 34433534,
+      "allocated_bytes": 34967552
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/rmu_scale_v2",
+      "files": 108,
+      "logical_bytes": 25333961,
+      "allocated_bytes": 25628672
+    },
+    {
+      "path": "open-unlearning/saves/unlearn/simnpo_rmu_v1",
+      "files": 248,
+      "logical_bytes": 38449159,
+      "allocated_bytes": 39092224
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_bio_smoke20",
+      "files": 6,
+      "logical_bytes": 6037377,
+      "allocated_bytes": 6053888
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_bio_smoke20_fixed",
+      "files": 6,
+      "logical_bytes": 115237,
+      "allocated_bytes": 131072
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_smoke20",
+      "files": 7,
+      "logical_bytes": 342651,
+      "allocated_bytes": 360448
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_mmlu_0shot_full_v1_failed_loading",
+      "files": 4,
+      "logical_bytes": 9661,
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_base_bio_protocol_check_v1",
+      "files": 5,
+      "logical_bytes": 151761,
+      "allocated_bytes": 163840
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_rmu_formal80_wmdp_bio_0shot_full_v1",
+      "files": 5,
+      "logical_bytes": 10932136,
+      "allocated_bytes": 10948608
+    },
+    {
+      "path": "open-unlearning/saves/eval/qwen3_4b_rmu_formal80_mmlu_0shot_full_v1",
+      "files": 5,
+      "logical_bytes": 133693538,
+      "allocated_bytes": 133705728
+    },
+    {
+      "path": "tests",
+      "files": 5,
+      "logical_bytes": 11092,
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "outputs",
+      "files": 0,
+      "logical_bytes": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "open-unlearning/configs/experiment/unlearn/wmdp/qwen3_4b_bio_formal.yaml",
+      "files": 1,
+      "logical_bytes": 949,
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "open-unlearning/configs/experiment/unlearn/wmdp/qwen3_4b_bio_smoke.yaml",
+      "files": 1,
+      "logical_bytes": 1370,
+      "allocated_bytes": 4096
+    }
+  ],
+  "kept_artifact_directory": "open-unlearning/saves/unlearn/rmu_ce_v1",
+  "file_cleanup_logical_bytes": 8330912875,
+  "file_cleanup_allocated_bytes": 8333221888,
+  "space_before": {
+    "total": 64424509440,
+    "used": 46289788928,
+    "free": 18134720512
+  },
+  "cache_cleanup_pending": true,
+  "kept_original_model_and_data": true,
+  "space_after_file_cleanup": {
+    "total": 64424509440,
+    "used": 37956210688,
+    "free": 26468298752
+  }
+}
