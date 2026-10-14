@@ -32,6 +32,8 @@
 - 基模/tokenizer文件清单和4份正式块缓存SHA通过。初次下载未记录不可变远端revision，继续如实保留null；以本地文件/参数SHA固定版本。
 - [历史评测核验](../maintenance/pure_rmu_metrics_verification.json)只读核对6组基线/纯RMU全量存档的题目、提示hash、数量和成绩算术，没有重新推理。详细重建与配置核验见[验证JSON](../maintenance/pure_rmu_verification.json)，必要检查日志见maintenance目录。
 
+提交后额外执行Git LFS整体完整性检查，结果为`Git LFS fsck OK`，见[最终检查日志](../maintenance/pure_rmu_final_lfs_fsck.log)。初次重建检查曾因下载尚未完成而停止，已保留失败日志；取回全部对象后完整重跑成功。历史恢复文件保留原有CRLF与空格，新增及修改代码通过语法检查。
+
 ## 成绩与限制
 
 全量表见[README](../README.md)与[全量CSV](../logs/rmu_scale_v2_full_comparison.csv)，开发子集的全部配置见[开发CSV](../logs/rmu_scale_v2_development_config_comparison.csv)。全量Bio1273/MMLU14042题；开发Bio256/MMLU1710题。开发集来自已观察过的测试集，调参后全量结果标注为探索性，retain训练数据不当作独立验证集。
