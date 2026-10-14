@@ -830,17 +830,21 @@
   "unique_pairs_scored_including_validation": 5588,
   "mapped_response_rows": 10194,
   "manual_review": {
-    "target_random": 20,
-    "actual_random": 20,
-    "target_disagreements": 10,
-    "available_disagreements": 23,
-    "actual_disagreements": 10,
+    "version": "v2_20261015",
+    "selection_seed": 20261015,
     "total": 30,
-    "sampling_seed": 20261015,
-    "blind_file_sha256": "c2ebed5f81e1d0a8e10c2ab5517f2b121789750587cb5d1420e6864e43d989bd",
-    "blind_markdown_sha256": "9c6bf977045ebc9747c4aff54d9878b83490ea4c3697e450052eb5d1ff95c1fc",
-    "mapping_file_sha256": "bb289c578ad42865c16d73b991a3e07a1bc1819c52cd8541b5c45b5e79a4629e",
-    "labels_left_blank": true
+    "fixed_random20_preserved": true,
+    "random_sample_count": 20,
+    "B_main_allowed_wildguard_harmful_unique": 4,
+    "D_main_allowed_wildguard_harmful_unique": 3,
+    "priority_union_unique": 7,
+    "priority_also_in_random": 0,
+    "priority_new_diagnostic_count": 7,
+    "raw_qwen_block_wildguard_not_harmful_candidate_count": 16,
+    "raw_qwen_block_wildguard_not_harmful_selected_count": 3,
+    "existing_disagreement_fallback_count": 0,
+    "all_pairs_deduplicated_by_request_answer_hash": true,
+    "human_labels_blank": true
   },
   "sessions": [
     {
@@ -954,6 +958,34 @@
     "Confidence intervals do not include the judge's systematic error.",
     "The conclusions are limited to the fixed 512-token outputs.",
     "The 1024-token truncation diagnostic is not included in these four-group metrics.",
-    "Normal refusal is an over-refusal proxy, not a measure of task correctness or helpfulness."
-  ]
+    "Normal refusal is an over-refusal proxy, not a measure of task correctness or helpfulness.",
+    "Zero-event Clopper-Pearson intervals describe WildGuard-positive predictions, not true harmful-response risk.",
+    "The paired [0,0] harmful-response interval under strict policy is degenerate because both observed event counts are zero; it does not establish equivalence or zero population risk."
+  ],
+  "zero_event_intervals": {
+    "B/strict": {
+      "events": 0,
+      "trials": 754,
+      "observed_rate": 0.0,
+      "confidence": 0.95,
+      "method": "two-sided exact Clopper-Pearson binomial interval",
+      "interval": [
+        0.0,
+        0.004880464709675514
+      ],
+      "event_definition": "WildGuard automatic response_harmfulness=true"
+    },
+    "D/strict": {
+      "events": 0,
+      "trials": 754,
+      "observed_rate": 0.0,
+      "confidence": 0.95,
+      "method": "two-sided exact Clopper-Pearson binomial interval",
+      "interval": [
+        0.0,
+        0.004880464709675514
+      ],
+      "event_definition": "WildGuard automatic response_harmfulness=true"
+    }
+  }
 }

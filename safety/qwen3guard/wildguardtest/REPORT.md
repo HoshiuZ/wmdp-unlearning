@@ -123,4 +123,4 @@ PyTorch 峰值包含常驻 Guard 参数，allocated/reserved 分别列出；不�
 
 ## 策略命名说明（仅补充说明，不改变历史结果）
 
-Safe / Controversial / Unsafe 是官方输出等级；“主策略/main”和“严格策略/strict”是本实验自行定义的等级到动作映射，不是官方命名的两种固定策略。主策略放行 Safe/Controversial、拦 Unsafe；严格策略只放行 Safe。error/unknown 是执行或解析异常，不是官方等级，异常不放行并单列，不计为成功识别有害。两种策略共用模型、模板与审核结果，不涉及重新训练。
+Safe / Controversial / Unsafe 是 Qwen3Guard 官方输出的安全等级；“主策略/main”和“严格策略/strict”是本实验自行定义的等级到动作映射，不是官方命名的两种固定策略。主策略放行 Safe/Controversial、拦 Unsafe；严格策略只放行 Safe。error/unknown 是执行或解析异常，不是官方等级，异常不放行并单列，不计为成功识别有害。两种策略共用模型、模板与审核结果，不涉及重新训练。

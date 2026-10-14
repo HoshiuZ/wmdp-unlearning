@@ -12,7 +12,7 @@ seed42 从有害/正常各抽10条，合计20条，恢复原顺序；抽样发�
 
 ## 官方等级与实验策略
 
-Safe / Controversial / Unsafe 是官方安全等级。main（主策略）与strict（严格策略）是**本实验自行定义的等级到拦截动作映射，不是官方命名的两种策略**：main放行Safe/Controversial、拦Unsafe；strict只放Safe。两者共用同一权重、模板、解析和审核输出，不训练。
+Safe / Controversial / Unsafe 是 Qwen3Guard 官方安全等级。main（主策略）与strict（严格策略）是**本实验自行定义的等级到拦截动作映射，不是官方命名的两种策略**：main放行Safe/Controversial、拦Unsafe；strict只放Safe。两者共用同一权重、模板、解析和审核输出，不训练。
 
 error/unknown不是第四种官方等级，是程序或解析异常，异常不放行并单列，不能记作成功识别有害。沿用既有固定Guard revision fada3b2f655b89601929198343c94cd2f64d93cc、模板/解析器/config不改。
 

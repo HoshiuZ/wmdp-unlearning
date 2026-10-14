@@ -18,7 +18,7 @@ A 原始 Qwen3-4B-Instruct-2507；B 同一原模型＋Qwen3Guard；C 连续120�
 
 ## 等级、策略与离线模拟
 
-Safe / Controversial / Unsafe为官方安全等级；main主策略与strict严格策略是**本实验自行定义的等级到动作映射，不是官方命名的两种固定策略**。main允许Safe/Controversial、拦Unsafe；strict只允许Safe。两策略共用固定Guard权重、官方模板、解析器与同一份审核输出，无重新训练。error/unknown是程序/解析异常，不是官方等级；异常不放行，不能算作成功识别有害。原接入及WildGuardTest报告已补充该命名说明，既有预测/统计/config未修改。
+Safe / Controversial / Unsafe 为 Qwen3Guard 官方安全等级；main主策略与strict严格策略是**本实验自行定义的等级到动作映射，不是官方命名的两种固定策略**。main允许Safe/Controversial、拦Unsafe；strict只允许Safe。两策略共用固定Guard权重、官方模板、解析器与同一份审核输出，无重新训练。error/unknown是程序/解析异常，不是官方等级；异常不放行，不能算作成功识别有害。原接入及WildGuardTest报告已补充该命名说明，既有预测/统计/config未修改。
 
 Guard revision `fada3b2f655b89601929198343c94cd2f64d93cc`，BF16/SDPA，greedy max_new_tokens128，输入32640，不截断。输入审核复用上阶段缓存，逐条核对内容、revision/runtime、模板渲染SHA、config及解析器SHA。输出用官方user请求＋assistant新回答模板。至少一套策略允许输入时分别审核对应生成模型回答；两策略都输入拦截时无需输出审核。共新增输出审核 2096 次。
 
