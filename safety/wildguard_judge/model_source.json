@@ -1,0 +1,49 @@
+{
+  "model_id": "allenai/wildguard",
+  "revision": "cbba4823f3e8020e5a74a5e29bf85072def6f2ff",
+  "license": "Apache-2.0",
+  "gated_access_verified": true,
+  "downloaded_cache_path": "cache/huggingface/hub/models--allenai--wildguard/snapshots/cbba4823f3e8020e5a74a5e29bf85072def6f2ff",
+  "files": {
+    "config.json": {
+      "bytes": 649,
+      "is_symlink": true
+    },
+    "generation_config.json": {
+      "bytes": 116,
+      "is_symlink": true
+    },
+    "model.safetensors.index.json": {
+      "bytes": 25125,
+      "is_symlink": true
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 9949281344,
+      "is_symlink": true
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 4546815992,
+      "is_symlink": true
+    },
+    "tokenizer.model": {
+      "bytes": 587404,
+      "is_symlink": true
+    },
+    "tokenizer_config.json": {
+      "bytes": 152968,
+      "is_symlink": true
+    },
+    "special_tokens_map.json": {
+      "bytes": 16201,
+      "is_symlink": true
+    },
+    "added_tokens.json": {
+      "bytes": 18292,
+      "is_symlink": true
+    }
+  },
+  "safetensors_bytes": 14496097336,
+  "total_selected_bytes": 14496898091,
+  "duplicate_pytorch_bin_weights_downloaded": false,
+  "repository_gated": true
+}

@@ -1,0 +1,2 @@
+# Added to the pre-existing envs/unlearning environment for Qwen tokenizer loading.
+sentencepiece==0.2.1

@@ -79,4 +79,8 @@ Safe / Controversial / Unsafe 是官方输出等级；“主策略/main”和“
 
 ## WildGuard自动评判
 
-已准备对512-token四组回答使用官方 `allenai/wildguard` 7B 作离线自动评分；当前 Hugging Face 账号访问模型文件返回403，未下载权重或生成评分。已核实本地答案与组别映射，并固定官方 revision、模板与可续跑代码。访问获批后续跑说明及阻塞记录见[阶段报告](safety/wildguard_judge/REPORT.md)。
+已用官方 `allenai/wildguard` 7B 对512-token四组回答及WildGuardTest原有问答完成离线自动评分。模型固定revision `cbba4823f3e8020e5a74a5e29bf85072def6f2ff`；5588个去重请求—回答对评分5588次，其中8条pilot结果由缓存复用，3条记录因格式/生成上限记为unknown/error。WildGuardTest有害性校验：1709条中有效预测1707条，Recall67.49%、FPR2.04%、Macro-F1 85.89%；拒答校验1720条中有效1717条，Precision80.79%、Recall98.04%、Macro-F1 91.05%。
+
+按WildGuard自动评分，有害请求上的有害回答率：A 17/754（2.25%）、B/main 3/754（0.40%）、B/strict 0/754、C 11/754（1.46%）、D/main 2/754（0.27%）、D/strict 0/754；正常请求拒答代理指标从A的94/945（9.95%）到B/main 120/945（12.70%）、B/strict 134/945（14.18%）、C 117/945（12.38%）、D/main 138/945（14.60%）、D/strict 147/945（15.56%）。纯RMU对原模型的有害回答差值置信区间含0；外挂策略显示自动评分上的下降，同时正常请求拒答代理上升。所有结论只针对512-token输出，配对区间不含评判器系统误差，不代表人工确认的有害率或完整任务帮助性。
+
+Safe/Controversial/Unsafe是官方输出等级；main和strict是本实验定义的动作映射，不是官方策略名。报告包含配对bootstrap区间、有效覆盖率、失败上下界、资源和限制：[中文汇总报告](safety/wildguard_judge/REPORT.md)。30条盲审材料及来源映射仅保存在本地忽略的`cache/wildguard_judge_v1/`，人工标签留空。

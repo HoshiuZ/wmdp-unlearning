@@ -1,0 +1,959 @@
+{
+  "scope": "512-token four-group final responses; WildGuard automatic scoring only",
+  "label_source": "wildguard_auto",
+  "judge": {
+    "model_id": "allenai/wildguard",
+    "revision": "cbba4823f3e8020e5a74a5e29bf85072def6f2ff",
+    "license": "Apache-2.0",
+    "runtime": {
+      "python": "3.11.17",
+      "torch": "2.9.1+cu128",
+      "transformers": "5.5.4",
+      "model_config_context": 32768,
+      "tokenizer_max_length": 1000000000000000019884624838656,
+      "effective_context_limit": 32768,
+      "parameter_count": 7248031744,
+      "dtype": "bfloat16",
+      "device": "cuda:0",
+      "attention_implementation": "sdpa",
+      "eos_token_id": 2,
+      "pad_token_id": 32768,
+      "input_template_sha256": "fa7f1c313ef1463a2fe249ff50c537adfbd84ff2fe82b3ffa72ee21124afb0d6",
+      "cuda_free_before_load_bytes": 24878252032,
+      "cuda_total_bytes": 25252724736,
+      "model_id": "allenai/wildguard",
+      "revision": "cbba4823f3e8020e5a74a5e29bf85072def6f2ff"
+    },
+    "scorer_fingerprint": "d2e26f67bcbe64d663467e795614160a091b462418b6472b09c28b2ee0704894",
+    "selected_model_bytes": 14496898091,
+    "safetensors_bytes": 14496097336
+  },
+  "validation_dataset": {
+    "dataset_id": "allenai/wildguardmix",
+    "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1",
+    "split": "test",
+    "file_sha256": "6ccc2909c1ae6d41424fac69f1fc32535b1de39cb8f80407d81e8bc64a0bebca",
+    "raw_rows": 1725,
+    "response_harm_rows": 1709,
+    "response_refusal_rows": 1720,
+    "metrics": {
+      "response_harmfulness": {
+        "label_counts": {
+          "unharmful": 1425,
+          "harmful": 284
+        },
+        "metrics_positive_harmful": {
+          "n_valid": 1707,
+          "TP": 191,
+          "FP": 29,
+          "TN": 1395,
+          "FN": 92,
+          "precision": 0.8681818181818182,
+          "recall": 0.6749116607773852,
+          "FPR": 0.020365168539325844,
+          "F1_positive": 0.7594433399602386,
+          "F1_negative": 0.9584335279972518,
+          "Macro_F1": 0.8589384339787451,
+          "unknown": 2,
+          "coverage": 0.9988297249853716
+        },
+        "field_parse_errors": 2,
+        "all_three_fields_parser_error": 1
+      },
+      "response_refusal": {
+        "label_counts": {
+          "compliance": 1157,
+          "refusal": 563
+        },
+        "metrics_positive_refusal": {
+          "n_valid": 1717,
+          "TP": 551,
+          "FP": 131,
+          "TN": 1024,
+          "FN": 11,
+          "precision": 0.8079178885630498,
+          "recall": 0.9804270462633452,
+          "FPR": 0.11341991341991342,
+          "F1_positive": 0.8858520900321544,
+          "F1_negative": 0.9351598173515981,
+          "Macro_F1": 0.9105059536918763,
+          "unknown": 3,
+          "coverage": 0.9982558139534884
+        },
+        "field_parse_errors": 3,
+        "all_three_fields_parser_error": 2
+      },
+      "labeled_sample_counts": {
+        "response_harmfulness": 1709,
+        "response_refusal": 1720
+      }
+    }
+  },
+  "generation_512_finish_reasons": {
+    "original": {
+      "completed": 1699,
+      "failed": 0,
+      "hit_generation_limit": 869,
+      "limit_fraction_of_completed": 0.5114773396115362,
+      "finish_reasons": {
+        "max_new_tokens": 869,
+        "eos": 830
+      },
+      "input_tokens": 169071,
+      "output_tokens": 585975,
+      "unexpected_thinking": 0,
+      "output_tokens_reached_512": 869
+    },
+    "rmu80": {
+      "completed": 1699,
+      "failed": 0,
+      "hit_generation_limit": 844,
+      "limit_fraction_of_completed": 0.4967628016480283,
+      "finish_reasons": {
+        "max_new_tokens": 844,
+        "eos": 855
+      },
+      "input_tokens": 169071,
+      "output_tokens": 572945,
+      "unexpected_thinking": 0,
+      "output_tokens_reached_512": 845
+    }
+  },
+  "four_group_input_counts": {
+    "harmful": 754,
+    "normal": 945,
+    "total": 1699
+  },
+  "four_group_automatic_scores": {
+    "A": {
+      "harmful_answer_rate_on_harmful_requests": {
+        "numerator_known_positive": 17,
+        "denominator": 754,
+        "effective_denominator": 753,
+        "effective_rate": 0.02257636122177955,
+        "all_sample_rate_lower": 0.022546419098143235,
+        "all_sample_rate_upper": 0.023872679045092837,
+        "unknown": 1,
+        "unknown_rate": 0.001326259946949602,
+        "coverage": 0.9986737400530504
+      },
+      "harmful_answer_rate_on_all_requests": {
+        "numerator_known_positive": 20,
+        "denominator": 1699,
+        "effective_denominator": 1697,
+        "effective_rate": 0.011785503830288745,
+        "all_sample_rate_lower": 0.011771630370806356,
+        "all_sample_rate_upper": 0.012948793407886992,
+        "unknown": 2,
+        "unknown_rate": 0.0011771630370806356,
+        "coverage": 0.9988228369629194,
+        "unknown_harmful_request_subset": {
+          "numerator_known_positive": 17,
+          "denominator": 754,
+          "effective_denominator": 753,
+          "effective_rate": 0.02257636122177955,
+          "all_sample_rate_lower": 0.022546419098143235,
+          "all_sample_rate_upper": 0.023872679045092837,
+          "unknown": 1,
+          "unknown_rate": 0.001326259946949602,
+          "coverage": 0.9986737400530504
+        },
+        "normal_request_response_harm": {
+          "numerator_known_positive": 3,
+          "denominator": 945,
+          "effective_denominator": 944,
+          "effective_rate": 0.0031779661016949155,
+          "all_sample_rate_lower": 0.0031746031746031746,
+          "all_sample_rate_upper": 0.004232804232804233,
+          "unknown": 1,
+          "unknown_rate": 0.0010582010582010583,
+          "coverage": 0.9989417989417989
+        }
+      },
+      "refusal_rate_on_normal_requests": {
+        "numerator_known_positive": 94,
+        "denominator": 945,
+        "effective_denominator": 944,
+        "effective_rate": 0.09957627118644068,
+        "all_sample_rate_lower": 0.09947089947089947,
+        "all_sample_rate_upper": 0.10052910052910052,
+        "unknown": 1,
+        "unknown_rate": 0.0010582010582010583,
+        "coverage": 0.9989417989417989
+      },
+      "normal_not_harmful_and_not_refusal_proxy": {
+        "numerator_known_positive": 847,
+        "denominator": 945,
+        "effective_denominator": 944,
+        "effective_rate": 0.8972457627118644,
+        "all_sample_rate_lower": 0.8962962962962963,
+        "all_sample_rate_upper": 0.8973544973544973,
+        "unknown": 1,
+        "unknown_rate": 0.0010582010582010583,
+        "coverage": 0.9989417989417989
+      },
+      "unknown_response_harmfulness_all": 2,
+      "unknown_response_refusal_all": 1,
+      "unknown_joint_proxy_normal": 1,
+      "total_requests": 1699
+    },
+    "B/main": {
+      "harmful_answer_rate_on_harmful_requests": {
+        "numerator_known_positive": 3,
+        "denominator": 754,
+        "effective_denominator": 754,
+        "effective_rate": 0.003978779840848806,
+        "all_sample_rate_lower": 0.003978779840848806,
+        "all_sample_rate_upper": 0.003978779840848806,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "harmful_answer_rate_on_all_requests": {
+        "numerator_known_positive": 4,
+        "denominator": 1699,
+        "effective_denominator": 1698,
+        "effective_rate": 0.002355712603062426,
+        "all_sample_rate_lower": 0.002354326074161271,
+        "all_sample_rate_upper": 0.002942907592701589,
+        "unknown": 1,
+        "unknown_rate": 0.0005885815185403178,
+        "coverage": 0.9994114184814596,
+        "unknown_harmful_request_subset": {
+          "numerator_known_positive": 3,
+          "denominator": 754,
+          "effective_denominator": 754,
+          "effective_rate": 0.003978779840848806,
+          "all_sample_rate_lower": 0.003978779840848806,
+          "all_sample_rate_upper": 0.003978779840848806,
+          "unknown": 0,
+          "unknown_rate": 0.0,
+          "coverage": 1.0
+        },
+        "normal_request_response_harm": {
+          "numerator_known_positive": 1,
+          "denominator": 945,
+          "effective_denominator": 944,
+          "effective_rate": 0.001059322033898305,
+          "all_sample_rate_lower": 0.0010582010582010583,
+          "all_sample_rate_upper": 0.0021164021164021165,
+          "unknown": 1,
+          "unknown_rate": 0.0010582010582010583,
+          "coverage": 0.9989417989417989
+        }
+      },
+      "refusal_rate_on_normal_requests": {
+        "numerator_known_positive": 120,
+        "denominator": 945,
+        "effective_denominator": 944,
+        "effective_rate": 0.1271186440677966,
+        "all_sample_rate_lower": 0.12698412698412698,
+        "all_sample_rate_upper": 0.12804232804232804,
+        "unknown": 1,
+        "unknown_rate": 0.0010582010582010583,
+        "coverage": 0.9989417989417989
+      },
+      "normal_not_harmful_and_not_refusal_proxy": {
+        "numerator_known_positive": 823,
+        "denominator": 945,
+        "effective_denominator": 944,
+        "effective_rate": 0.871822033898305,
+        "all_sample_rate_lower": 0.870899470899471,
+        "all_sample_rate_upper": 0.8719576719576719,
+        "unknown": 1,
+        "unknown_rate": 0.0010582010582010583,
+        "coverage": 0.9989417989417989
+      },
+      "unknown_response_harmfulness_all": 1,
+      "unknown_response_refusal_all": 1,
+      "unknown_joint_proxy_normal": 1,
+      "total_requests": 1699
+    },
+    "B/strict": {
+      "harmful_answer_rate_on_harmful_requests": {
+        "numerator_known_positive": 0,
+        "denominator": 754,
+        "effective_denominator": 754,
+        "effective_rate": 0.0,
+        "all_sample_rate_lower": 0.0,
+        "all_sample_rate_upper": 0.0,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "harmful_answer_rate_on_all_requests": {
+        "numerator_known_positive": 0,
+        "denominator": 1699,
+        "effective_denominator": 1698,
+        "effective_rate": 0.0,
+        "all_sample_rate_lower": 0.0,
+        "all_sample_rate_upper": 0.0005885815185403178,
+        "unknown": 1,
+        "unknown_rate": 0.0005885815185403178,
+        "coverage": 0.9994114184814596,
+        "unknown_harmful_request_subset": {
+          "numerator_known_positive": 0,
+          "denominator": 754,
+          "effective_denominator": 754,
+          "effective_rate": 0.0,
+          "all_sample_rate_lower": 0.0,
+          "all_sample_rate_upper": 0.0,
+          "unknown": 0,
+          "unknown_rate": 0.0,
+          "coverage": 1.0
+        },
+        "normal_request_response_harm": {
+          "numerator_known_positive": 0,
+          "denominator": 945,
+          "effective_denominator": 944,
+          "effective_rate": 0.0,
+          "all_sample_rate_lower": 0.0,
+          "all_sample_rate_upper": 0.0010582010582010583,
+          "unknown": 1,
+          "unknown_rate": 0.0010582010582010583,
+          "coverage": 0.9989417989417989
+        }
+      },
+      "refusal_rate_on_normal_requests": {
+        "numerator_known_positive": 134,
+        "denominator": 945,
+        "effective_denominator": 944,
+        "effective_rate": 0.1419491525423729,
+        "all_sample_rate_lower": 0.14179894179894179,
+        "all_sample_rate_upper": 0.14285714285714285,
+        "unknown": 1,
+        "unknown_rate": 0.0010582010582010583,
+        "coverage": 0.9989417989417989
+      },
+      "normal_not_harmful_and_not_refusal_proxy": {
+        "numerator_known_positive": 810,
+        "denominator": 945,
+        "effective_denominator": 944,
+        "effective_rate": 0.8580508474576272,
+        "all_sample_rate_lower": 0.8571428571428571,
+        "all_sample_rate_upper": 0.8582010582010582,
+        "unknown": 1,
+        "unknown_rate": 0.0010582010582010583,
+        "coverage": 0.9989417989417989
+      },
+      "unknown_response_harmfulness_all": 1,
+      "unknown_response_refusal_all": 1,
+      "unknown_joint_proxy_normal": 1,
+      "total_requests": 1699
+    },
+    "C": {
+      "harmful_answer_rate_on_harmful_requests": {
+        "numerator_known_positive": 11,
+        "denominator": 754,
+        "effective_denominator": 754,
+        "effective_rate": 0.014588859416445624,
+        "all_sample_rate_lower": 0.014588859416445624,
+        "all_sample_rate_upper": 0.014588859416445624,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "harmful_answer_rate_on_all_requests": {
+        "numerator_known_positive": 15,
+        "denominator": 1699,
+        "effective_denominator": 1699,
+        "effective_rate": 0.008828722778104767,
+        "all_sample_rate_lower": 0.008828722778104767,
+        "all_sample_rate_upper": 0.008828722778104767,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0,
+        "unknown_harmful_request_subset": {
+          "numerator_known_positive": 11,
+          "denominator": 754,
+          "effective_denominator": 754,
+          "effective_rate": 0.014588859416445624,
+          "all_sample_rate_lower": 0.014588859416445624,
+          "all_sample_rate_upper": 0.014588859416445624,
+          "unknown": 0,
+          "unknown_rate": 0.0,
+          "coverage": 1.0
+        },
+        "normal_request_response_harm": {
+          "numerator_known_positive": 4,
+          "denominator": 945,
+          "effective_denominator": 945,
+          "effective_rate": 0.004232804232804233,
+          "all_sample_rate_lower": 0.004232804232804233,
+          "all_sample_rate_upper": 0.004232804232804233,
+          "unknown": 0,
+          "unknown_rate": 0.0,
+          "coverage": 1.0
+        }
+      },
+      "refusal_rate_on_normal_requests": {
+        "numerator_known_positive": 117,
+        "denominator": 945,
+        "effective_denominator": 945,
+        "effective_rate": 0.12380952380952381,
+        "all_sample_rate_lower": 0.12380952380952381,
+        "all_sample_rate_upper": 0.12380952380952381,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "normal_not_harmful_and_not_refusal_proxy": {
+        "numerator_known_positive": 824,
+        "denominator": 945,
+        "effective_denominator": 945,
+        "effective_rate": 0.8719576719576719,
+        "all_sample_rate_lower": 0.8719576719576719,
+        "all_sample_rate_upper": 0.8719576719576719,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "unknown_response_harmfulness_all": 0,
+      "unknown_response_refusal_all": 0,
+      "unknown_joint_proxy_normal": 0,
+      "total_requests": 1699
+    },
+    "D/main": {
+      "harmful_answer_rate_on_harmful_requests": {
+        "numerator_known_positive": 2,
+        "denominator": 754,
+        "effective_denominator": 754,
+        "effective_rate": 0.002652519893899204,
+        "all_sample_rate_lower": 0.002652519893899204,
+        "all_sample_rate_upper": 0.002652519893899204,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "harmful_answer_rate_on_all_requests": {
+        "numerator_known_positive": 3,
+        "denominator": 1699,
+        "effective_denominator": 1699,
+        "effective_rate": 0.0017657445556209534,
+        "all_sample_rate_lower": 0.0017657445556209534,
+        "all_sample_rate_upper": 0.0017657445556209534,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0,
+        "unknown_harmful_request_subset": {
+          "numerator_known_positive": 2,
+          "denominator": 754,
+          "effective_denominator": 754,
+          "effective_rate": 0.002652519893899204,
+          "all_sample_rate_lower": 0.002652519893899204,
+          "all_sample_rate_upper": 0.002652519893899204,
+          "unknown": 0,
+          "unknown_rate": 0.0,
+          "coverage": 1.0
+        },
+        "normal_request_response_harm": {
+          "numerator_known_positive": 1,
+          "denominator": 945,
+          "effective_denominator": 945,
+          "effective_rate": 0.0010582010582010583,
+          "all_sample_rate_lower": 0.0010582010582010583,
+          "all_sample_rate_upper": 0.0010582010582010583,
+          "unknown": 0,
+          "unknown_rate": 0.0,
+          "coverage": 1.0
+        }
+      },
+      "refusal_rate_on_normal_requests": {
+        "numerator_known_positive": 138,
+        "denominator": 945,
+        "effective_denominator": 945,
+        "effective_rate": 0.14603174603174604,
+        "all_sample_rate_lower": 0.14603174603174604,
+        "all_sample_rate_upper": 0.14603174603174604,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "normal_not_harmful_and_not_refusal_proxy": {
+        "numerator_known_positive": 806,
+        "denominator": 945,
+        "effective_denominator": 945,
+        "effective_rate": 0.852910052910053,
+        "all_sample_rate_lower": 0.852910052910053,
+        "all_sample_rate_upper": 0.852910052910053,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "unknown_response_harmfulness_all": 0,
+      "unknown_response_refusal_all": 0,
+      "unknown_joint_proxy_normal": 0,
+      "total_requests": 1699
+    },
+    "D/strict": {
+      "harmful_answer_rate_on_harmful_requests": {
+        "numerator_known_positive": 0,
+        "denominator": 754,
+        "effective_denominator": 754,
+        "effective_rate": 0.0,
+        "all_sample_rate_lower": 0.0,
+        "all_sample_rate_upper": 0.0,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "harmful_answer_rate_on_all_requests": {
+        "numerator_known_positive": 0,
+        "denominator": 1699,
+        "effective_denominator": 1699,
+        "effective_rate": 0.0,
+        "all_sample_rate_lower": 0.0,
+        "all_sample_rate_upper": 0.0,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0,
+        "unknown_harmful_request_subset": {
+          "numerator_known_positive": 0,
+          "denominator": 754,
+          "effective_denominator": 754,
+          "effective_rate": 0.0,
+          "all_sample_rate_lower": 0.0,
+          "all_sample_rate_upper": 0.0,
+          "unknown": 0,
+          "unknown_rate": 0.0,
+          "coverage": 1.0
+        },
+        "normal_request_response_harm": {
+          "numerator_known_positive": 0,
+          "denominator": 945,
+          "effective_denominator": 945,
+          "effective_rate": 0.0,
+          "all_sample_rate_lower": 0.0,
+          "all_sample_rate_upper": 0.0,
+          "unknown": 0,
+          "unknown_rate": 0.0,
+          "coverage": 1.0
+        }
+      },
+      "refusal_rate_on_normal_requests": {
+        "numerator_known_positive": 147,
+        "denominator": 945,
+        "effective_denominator": 945,
+        "effective_rate": 0.15555555555555556,
+        "all_sample_rate_lower": 0.15555555555555556,
+        "all_sample_rate_upper": 0.15555555555555556,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "normal_not_harmful_and_not_refusal_proxy": {
+        "numerator_known_positive": 798,
+        "denominator": 945,
+        "effective_denominator": 945,
+        "effective_rate": 0.8444444444444444,
+        "all_sample_rate_lower": 0.8444444444444444,
+        "all_sample_rate_upper": 0.8444444444444444,
+        "unknown": 0,
+        "unknown_rate": 0.0,
+        "coverage": 1.0
+      },
+      "unknown_response_harmfulness_all": 0,
+      "unknown_response_refusal_all": 0,
+      "unknown_joint_proxy_normal": 0,
+      "total_requests": 1699
+    }
+  },
+  "paired_contrasts": {
+    "A->B/main": {
+      "harmful_request_harm": {
+        "paired_n": 753,
+        "delta_percentage_points": -1.859229747675963,
+        "CI95_percentage_points": [
+          -2.921646746347941,
+          -0.9296148738379815
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "all_request_harm": {
+        "paired_n": 1697,
+        "delta_percentage_points": -0.9428403064230996,
+        "CI95_percentage_points": [
+          -1.4142604596346495,
+          -0.5303476723629935
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_refusal": {
+        "paired_n": 944,
+        "delta_percentage_points": 2.754237288135593,
+        "CI95_percentage_points": [
+          1.8008474576271187,
+          3.8162076271186054
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_proxy": {
+        "paired_n": 944,
+        "delta_percentage_points": -2.5423728813559325,
+        "CI95_percentage_points": [
+          -3.6016949152542375,
+          -1.5889830508474576
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      }
+    },
+    "A->B/strict": {
+      "harmful_request_harm": {
+        "paired_n": 753,
+        "delta_percentage_points": -2.257636122177955,
+        "CI95_percentage_points": [
+          -3.4528552456839305,
+          -1.1952191235059761
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "all_request_harm": {
+        "paired_n": 1697,
+        "delta_percentage_points": -1.1785503830288746,
+        "CI95_percentage_points": [
+          -1.7088980553918678,
+          -0.7071302298173248
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_refusal": {
+        "paired_n": 944,
+        "delta_percentage_points": 4.23728813559322,
+        "CI95_percentage_points": [
+          3.0720338983050848,
+          5.614406779661017
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_proxy": {
+        "paired_n": 944,
+        "delta_percentage_points": -3.919491525423729,
+        "CI95_percentage_points": [
+          -5.190677966101695,
+          -2.754237288135593
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      }
+    },
+    "C->D/main": {
+      "harmful_request_harm": {
+        "paired_n": 754,
+        "delta_percentage_points": -1.1936339522546418,
+        "CI95_percentage_points": [
+          -1.989389920424403,
+          -0.5305039787798408
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "all_request_harm": {
+        "paired_n": 1699,
+        "delta_percentage_points": -0.7062978222483813,
+        "CI95_percentage_points": [
+          -1.118304885226604,
+          -0.35314891112419067
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_refusal": {
+        "paired_n": 945,
+        "delta_percentage_points": 2.2222222222222223,
+        "CI95_percentage_points": [
+          1.3756613756613756,
+          3.1746031746031744
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_proxy": {
+        "paired_n": 945,
+        "delta_percentage_points": -1.9047619047619049,
+        "CI95_percentage_points": [
+          -2.751322751322751,
+          -1.0582010582010581
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      }
+    },
+    "C->D/strict": {
+      "harmful_request_harm": {
+        "paired_n": 754,
+        "delta_percentage_points": -1.4588859416445623,
+        "CI95_percentage_points": [
+          -2.3872679045092835,
+          -0.6631299734748011
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "all_request_harm": {
+        "paired_n": 1699,
+        "delta_percentage_points": -0.8828722778104767,
+        "CI95_percentage_points": [
+          -1.353737492642731,
+          -0.47086521483225424
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_refusal": {
+        "paired_n": 945,
+        "delta_percentage_points": 3.1746031746031744,
+        "CI95_percentage_points": [
+          2.1164021164021163,
+          4.338624338624339
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_proxy": {
+        "paired_n": 945,
+        "delta_percentage_points": -2.751322751322751,
+        "CI95_percentage_points": [
+          -3.8095238095238098,
+          -1.7989417989417988
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      }
+    },
+    "A->C": {
+      "harmful_request_harm": {
+        "paired_n": 753,
+        "delta_percentage_points": -0.796812749003984,
+        "CI95_percentage_points": [
+          -1.7264276228419653,
+          0.13280212483399734
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "all_request_harm": {
+        "paired_n": 1697,
+        "delta_percentage_points": -0.29463759575721865,
+        "CI95_percentage_points": [
+          -0.7071302298173248,
+          0.11785503830288746
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_refusal": {
+        "paired_n": 944,
+        "delta_percentage_points": 2.4364406779661016,
+        "CI95_percentage_points": [
+          1.1652542372881356,
+          3.8135593220338984
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_proxy": {
+        "paired_n": 944,
+        "delta_percentage_points": -2.5423728813559325,
+        "CI95_percentage_points": [
+          -3.919491525423729,
+          -1.2711864406779663
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      }
+    },
+    "B/main->D/main": {
+      "harmful_request_harm": {
+        "paired_n": 754,
+        "delta_percentage_points": -0.1326259946949602,
+        "CI95_percentage_points": [
+          -0.3978779840848806,
+          0.0
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "all_request_harm": {
+        "paired_n": 1698,
+        "delta_percentage_points": -0.058892815076560655,
+        "CI95_percentage_points": [
+          -0.17667844522968199,
+          0.0
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_refusal": {
+        "paired_n": 944,
+        "delta_percentage_points": 1.9067796610169492,
+        "CI95_percentage_points": [
+          0.6355932203389831,
+          3.1779661016949152
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_proxy": {
+        "paired_n": 944,
+        "delta_percentage_points": -1.9067796610169492,
+        "CI95_percentage_points": [
+          -3.1779661016949152,
+          -0.6355932203389831
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      }
+    },
+    "B/strict->D/strict": {
+      "harmful_request_harm": {
+        "paired_n": 754,
+        "delta_percentage_points": 0.0,
+        "CI95_percentage_points": [
+          0.0,
+          0.0
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "all_request_harm": {
+        "paired_n": 1698,
+        "delta_percentage_points": 0.0,
+        "CI95_percentage_points": [
+          0.0,
+          0.0
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_refusal": {
+        "paired_n": 944,
+        "delta_percentage_points": 1.3771186440677965,
+        "CI95_percentage_points": [
+          0.211864406779661,
+          2.6483050847457625
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      },
+      "normal_proxy": {
+        "paired_n": 944,
+        "delta_percentage_points": -1.3771186440677965,
+        "CI95_percentage_points": [
+          -2.6483050847457625,
+          -0.211864406779661
+        ],
+        "method": "paired request bootstrap, stratified by fixed harmful/unharmful input labels, percentile 95% CI"
+      }
+    }
+  },
+  "unique_experiment_pairs_scored": 3866,
+  "unique_pairs_scored_including_validation": 5588,
+  "mapped_response_rows": 10194,
+  "manual_review": {
+    "target_random": 20,
+    "actual_random": 20,
+    "target_disagreements": 10,
+    "available_disagreements": 23,
+    "actual_disagreements": 10,
+    "total": 30,
+    "sampling_seed": 20261015,
+    "blind_file_sha256": "c2ebed5f81e1d0a8e10c2ab5517f2b121789750587cb5d1420e6864e43d989bd",
+    "blind_markdown_sha256": "9c6bf977045ebc9747c4aff54d9878b83490ea4c3697e450052eb5d1ff95c1fc",
+    "mapping_file_sha256": "bb289c578ad42865c16d73b991a3e07a1bc1819c52cd8541b5c45b5e79a4629e",
+    "labels_left_blank": true
+  },
+  "sessions": [
+    {
+      "phase": "full",
+      "started_unix": 1792002648.8872561,
+      "source_commit": "32158e6deff5fa3690a1fbe7923bfef94ceb026d",
+      "model_load_seconds": 3.9864997868426144,
+      "runtime": {
+        "python": "3.11.17",
+        "torch": "2.9.1+cu128",
+        "transformers": "5.5.4",
+        "model_config_context": 32768,
+        "tokenizer_max_length": 1000000000000000019884624838656,
+        "effective_context_limit": 32768,
+        "parameter_count": 7248031744,
+        "dtype": "bfloat16",
+        "device": "cuda:0",
+        "attention_implementation": "sdpa",
+        "eos_token_id": 2,
+        "pad_token_id": 32768,
+        "input_template_sha256": "fa7f1c313ef1463a2fe249ff50c537adfbd84ff2fe82b3ffa72ee21124afb0d6",
+        "cuda_free_before_load_bytes": 24878252032,
+        "cuda_total_bytes": 25252724736,
+        "model_id": "allenai/wildguard",
+        "revision": "cbba4823f3e8020e5a74a5e29bf85072def6f2ff"
+      },
+      "scorer_fingerprint": "d2e26f67bcbe64d663467e795614160a091b462418b6472b09c28b2ee0704894",
+      "selected_pairs": 5588,
+      "inference_new": 5580,
+      "cache_reused": 8,
+      "unknown_or_error": 3,
+      "elapsed_inference_seconds": 2883.8003079229966,
+      "initial_resources": {
+        "disk_total_bytes": 64424509440,
+        "disk_used_bytes": 50600304640,
+        "disk_free_bytes": 13824204800
+      },
+      "source_sha256": {
+        "common.py": "f213083dfa9db71b2998126e5c2e752e5611e1a83af27ec4523ca9538318e446",
+        "run.py": "d104b5fe5b6b379094fe70ffb75d25c237090eaea54171d0481d1ed07b7807ac",
+        "config.json": "87de44380860ea9cc6948df8c5e78bbdd09bcba8c177f9a270d13ae9e45a43a3"
+      },
+      "peak_allocated_bytes": 16385705472,
+      "peak_reserved_bytes": 17358127104,
+      "after_resources": {
+        "disk_total_bytes": 64424509440,
+        "disk_used_bytes": 50610778112,
+        "disk_free_bytes": 13813731328
+      },
+      "complete": true,
+      "wall_seconds": 2883.8009224599227
+    },
+    {
+      "phase": "pilot",
+      "started_unix": 1792002616.7700012,
+      "source_commit": "32158e6deff5fa3690a1fbe7923bfef94ceb026d",
+      "model_load_seconds": 4.463325012009591,
+      "runtime": {
+        "python": "3.11.17",
+        "torch": "2.9.1+cu128",
+        "transformers": "5.5.4",
+        "model_config_context": 32768,
+        "tokenizer_max_length": 1000000000000000019884624838656,
+        "effective_context_limit": 32768,
+        "parameter_count": 7248031744,
+        "dtype": "bfloat16",
+        "device": "cuda:0",
+        "attention_implementation": "sdpa",
+        "eos_token_id": 2,
+        "pad_token_id": 32768,
+        "input_template_sha256": "fa7f1c313ef1463a2fe249ff50c537adfbd84ff2fe82b3ffa72ee21124afb0d6",
+        "cuda_free_before_load_bytes": 24878252032,
+        "cuda_total_bytes": 25252724736,
+        "model_id": "allenai/wildguard",
+        "revision": "cbba4823f3e8020e5a74a5e29bf85072def6f2ff"
+      },
+      "scorer_fingerprint": "d2e26f67bcbe64d663467e795614160a091b462418b6472b09c28b2ee0704894",
+      "selected_pairs": 8,
+      "inference_new": 8,
+      "cache_reused": 0,
+      "unknown_or_error": 0,
+      "elapsed_inference_seconds": 4.321727377362549,
+      "initial_resources": {
+        "disk_total_bytes": 64424509440,
+        "disk_used_bytes": 50600284160,
+        "disk_free_bytes": 13824225280
+      },
+      "source_sha256": {
+        "common.py": "f213083dfa9db71b2998126e5c2e752e5611e1a83af27ec4523ca9538318e446",
+        "run.py": "d104b5fe5b6b379094fe70ffb75d25c237090eaea54171d0481d1ed07b7807ac",
+        "config.json": "87de44380860ea9cc6948df8c5e78bbdd09bcba8c177f9a270d13ae9e45a43a3"
+      },
+      "peak_allocated_bytes": 14734460928,
+      "peak_reserved_bytes": 14883487744,
+      "after_resources": {
+        "disk_total_bytes": 64424509440,
+        "disk_used_bytes": 50600296448,
+        "disk_free_bytes": 13824212992
+      },
+      "complete": true,
+      "wall_seconds": 4.322371303103864
+    }
+  ],
+  "resource_final": {
+    "disk_total_bytes": 64424509440,
+    "disk_used_bytes": 50608672768,
+    "disk_free_bytes": 13815836672
+  },
+  "interpretation_limits": [
+    "All safety labels in this report are WildGuard automatic judgments, not human review.",
+    "Confidence intervals do not include the judge's systematic error.",
+    "The conclusions are limited to the fixed 512-token outputs.",
+    "The 1024-token truncation diagnostic is not included in these four-group metrics.",
+    "Normal refusal is an over-refusal proxy, not a measure of task correctness or helpfulness."
+  ]
+}

@@ -26,11 +26,13 @@ def load_scorer():
     t0 = time.perf_counter()
     tokenizer = AutoTokenizer.from_pretrained(str(MODEL_SNAPSHOT), use_fast=False, local_files_only=True)
     model = AutoModelForCausalLM.from_pretrained(
-        str(MODEL_SNAPSHOT), torch_dtype=torch.bfloat16,
+        str(MODEL_SNAPSHOT), dtype=torch.bfloat16,
         attn_implementation=CFG["generation"]["attention_implementation"],
         low_cpu_mem_usage=True, local_files_only=True,
     ).to(CFG["generation"]["device"])
     model.eval()
+    for parameter in model.parameters():
+        parameter.requires_grad_(False)
     if any(parameter.requires_grad for parameter in model.parameters()):
         raise RuntimeError("Judge model unexpectedly has trainable parameters")
     model_context = int(getattr(model.config, "max_position_embeddings", 0) or 0)
@@ -67,6 +69,7 @@ def score_one(prompt, response, tokenizer, model, runtime, torch):
     input_tokens = int(ids["input_ids"].shape[-1])
     content_sha = digest([prompt, response])
     base = {"content_sha256": content_sha, "input_tokens": input_tokens,
+            "label_source": "wildguard_auto",
             "input_text_sha256": sha(rendered.encode()), "generation_config": CFG["generation"],
             "fields": {"prompt_harmfulness": None, "response_refusal": None, "response_harmfulness": None},
             "field_errors": {}, "is_parsing_error": True, "raw_output": "", "generated_tokens": 0,
@@ -120,7 +123,10 @@ def score_one(prompt, response, tokenizer, model, runtime, torch):
             base["error_code"] = None
         return base
     except Exception as exc:
-        torch.cuda.synchronize()
+        try:
+            torch.cuda.synchronize()
+        except Exception:
+            pass
         base.update(status="error", error_code=type(exc).__name__,
                     generation_seconds=time.perf_counter() - started,
                     field_errors={k: "inference_exception" for k in base["fields"]})

@@ -30,7 +30,7 @@ def main():
     expected_weight_bytes = sum(int(wanted[name].size) for name in ALLOW if name.endswith(".safetensors"))
     print(json.dumps({"download_start": True, "revision": info.sha,
                       "safetensors_bytes": expected_weight_bytes,
-                      "requested_files": len(ALLOW), "excluded_duplicate_bin_weights": True}, flush=True))
+                      "requested_files": len(ALLOW), "excluded_duplicate_bin_weights": True}), flush=True)
     cache_dir = str(ROOT / "cache/huggingface/hub")
     try:
         # Probe a tiny config file first so a gated 403 cannot leave large partial weight files.
@@ -69,7 +69,7 @@ def main():
     dump(ROOT / CFG["local_root"] / "download_receipt.json", receipt)
     print(json.dumps({"snapshot_ready": True, "safetensors_bytes": weight_bytes,
                       "total_selected_bytes": receipt["total_selected_bytes"],
-                      "snapshot": receipt["downloaded_cache_path"]}, flush=True))
+                      "snapshot": receipt["downloaded_cache_path"]}), flush=True)
 
 
 if __name__ == "__main__":

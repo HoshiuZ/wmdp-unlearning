@@ -52,9 +52,11 @@ def main():
         "model_weights_cache_path": str((ROOT / "cache/huggingface/hub/models--allenai--wildguard").relative_to(ROOT)),
     }
     dump(HERE / "preflight.json", report)
-    print(json.dumps({"preflight": "passed_except_gated_model_files", "pairs": len(inputs),
-                      "mapping_rows": len(blind), "official_parser_fixture": "passed",
-                      "model_weights_downloaded_bytes": 0}, ensure_ascii=False), flush=True)
+    print(json.dumps({"preflight": "snapshot_available" if downloaded else "blocked_model_files",
+                      "pairs": len(inputs), "mapping_rows": len(blind),
+                      "official_parser_fixture": "passed",
+                      "model_weights_downloaded_bytes": report["model_weights_downloaded_bytes"]},
+                     ensure_ascii=False), flush=True)
 
 
 if __name__ == "__main__":
