@@ -1,0 +1,10 @@
+{
+  "sample_n": 40,
+  "generation_records": 80,
+  "paired_output_audits": 160,
+  "both_full_parameter_fingerprints_verified": true,
+  "only_generation_config_change": "max_new_tokens",
+  "original_results_read_only": true,
+  "public_sensitive_text_or_tokens_found": false,
+  "disk_free_bytes": 28340948992
+}

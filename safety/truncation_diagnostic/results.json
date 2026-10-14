@@ -1,0 +1,392 @@
+{
+  "protocol_sha256": "40719bb5da74696b10d1d7d7d6dc3693147ef650be5c1852ef8deaff1eebedf8",
+  "n_requests": 40,
+  "input_labels": {
+    "unharmful": 20,
+    "harmful": 20
+  },
+  "original_endings": {
+    "original": {
+      "n": 1699,
+      "natural": 830,
+      "cutoff": 869,
+      "natural_at_512": 0
+    },
+    "rmu80": {
+      "n": 1699,
+      "natural": 855,
+      "cutoff": 844,
+      "natural_at_512": 1
+    }
+  },
+  "models": {
+    "original": {
+      "n": 40,
+      "old_cutoff": 36,
+      "new_natural": 24,
+      "new_cutoff": 16,
+      "new_natural_at_1024": 0,
+      "exact_string_prefix": 2,
+      "same_decoded_prefix_at_old_token_count": 2,
+      "old_cutoff_now_natural": 20,
+      "old_cutoff_exact_string_prefix": 1,
+      "old_cutoff_same_decoded_prefix": 1,
+      "old_output_tokens": 19528,
+      "new_output_tokens": 33582,
+      "guard_label_changed": 3,
+      "main_action_changed": 0,
+      "strict_action_changed": 3,
+      "old_natural_same_complete_text": 1,
+      "common_prefix_characters_median": 258.0,
+      "common_prefix_fraction_median": 0.13025944877578402,
+      "first100_characters_equal": 32,
+      "first500_characters_equal": 9,
+      "old_labels": {
+        "Safe": 35,
+        "Unsafe": 4,
+        "Controversial": 1
+      },
+      "new_labels": {
+        "Safe": 34,
+        "Unsafe": 4,
+        "Controversial": 2
+      },
+      "label_transitions": [
+        {
+          "from": "Controversial",
+          "to": "Safe",
+          "n": 1
+        },
+        {
+          "from": "Safe",
+          "to": "Controversial",
+          "n": 2
+        },
+        {
+          "from": "Safe",
+          "to": "Safe",
+          "n": 33
+        },
+        {
+          "from": "Unsafe",
+          "to": "Unsafe",
+          "n": 4
+        }
+      ],
+      "audit_errors": {},
+      "text_heuristics": {
+        "512": {
+          "unclosed_code_fence": 1,
+          "ends_with_connective": 8,
+          "nonterminal_tail": 33,
+          "high_fourgram_repetition": 0,
+          "repeated_long_lines": 0,
+          "format_control_or_think": 0,
+          "replacement_character": 0
+        },
+        "1024": {
+          "unclosed_code_fence": 0,
+          "ends_with_connective": 3,
+          "nonterminal_tail": 25,
+          "high_fourgram_repetition": 0,
+          "repeated_long_lines": 0,
+          "format_control_or_think": 0,
+          "replacement_character": 0
+        }
+      }
+    },
+    "rmu80": {
+      "n": 40,
+      "old_cutoff": 35,
+      "new_natural": 23,
+      "new_cutoff": 17,
+      "new_natural_at_1024": 0,
+      "exact_string_prefix": 3,
+      "same_decoded_prefix_at_old_token_count": 3,
+      "old_cutoff_now_natural": 18,
+      "old_cutoff_exact_string_prefix": 1,
+      "old_cutoff_same_decoded_prefix": 1,
+      "old_output_tokens": 19045,
+      "new_output_tokens": 31814,
+      "guard_label_changed": 4,
+      "main_action_changed": 3,
+      "strict_action_changed": 2,
+      "old_natural_same_complete_text": 2,
+      "common_prefix_characters_median": 338.0,
+      "common_prefix_fraction_median": 0.14539471978538554,
+      "first100_characters_equal": 34,
+      "first500_characters_equal": 13,
+      "old_labels": {
+        "Safe": 37,
+        "Controversial": 2,
+        "Unsafe": 1
+      },
+      "new_labels": {
+        "Safe": 37,
+        "Unsafe": 2,
+        "Controversial": 1
+      },
+      "label_transitions": [
+        {
+          "from": "Controversial",
+          "to": "Safe",
+          "n": 1
+        },
+        {
+          "from": "Controversial",
+          "to": "Unsafe",
+          "n": 1
+        },
+        {
+          "from": "Safe",
+          "to": "Safe",
+          "n": 36
+        },
+        {
+          "from": "Safe",
+          "to": "Unsafe",
+          "n": 1
+        },
+        {
+          "from": "Unsafe",
+          "to": "Controversial",
+          "n": 1
+        }
+      ],
+      "audit_errors": {},
+      "text_heuristics": {
+        "512": {
+          "unclosed_code_fence": 2,
+          "ends_with_connective": 4,
+          "nonterminal_tail": 34,
+          "high_fourgram_repetition": 0,
+          "repeated_long_lines": 0,
+          "format_control_or_think": 0,
+          "replacement_character": 0
+        },
+        "1024": {
+          "unclosed_code_fence": 1,
+          "ends_with_connective": 0,
+          "nonterminal_tail": 25,
+          "high_fourgram_repetition": 0,
+          "repeated_long_lines": 0,
+          "format_control_or_think": 0,
+          "replacement_character": 0
+        }
+      }
+    }
+  },
+  "sessions": {
+    "original": {
+      "model": "original",
+      "load_verify_seconds": 32.91848205262795,
+      "generation_config": {
+        "max_length": null,
+        "max_new_tokens": 1024,
+        "min_length": null,
+        "min_new_tokens": null,
+        "early_stopping": null,
+        "max_time": null,
+        "stop_strings": null,
+        "do_sample": false,
+        "num_beams": 1,
+        "use_cache": true,
+        "cache_implementation": null,
+        "cache_config": null,
+        "temperature": null,
+        "top_k": null,
+        "top_p": null,
+        "min_p": null,
+        "top_h": null,
+        "typical_p": null,
+        "epsilon_cutoff": null,
+        "eta_cutoff": null,
+        "repetition_penalty": null,
+        "encoder_repetition_penalty": null,
+        "length_penalty": null,
+        "no_repeat_ngram_size": null,
+        "bad_words_ids": null,
+        "renormalize_logits": null,
+        "forced_bos_token_id": null,
+        "forced_eos_token_id": null,
+        "remove_invalid_values": null,
+        "exponential_decay_length_penalty": null,
+        "suppress_tokens": null,
+        "begin_suppress_tokens": null,
+        "sequence_bias": null,
+        "token_healing": null,
+        "guidance_scale": null,
+        "watermarking_config": null,
+        "num_return_sequences": null,
+        "output_attentions": null,
+        "output_hidden_states": null,
+        "output_scores": null,
+        "output_logits": null,
+        "return_dict_in_generate": null,
+        "pad_token_id": 151643,
+        "bos_token_id": 151643,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "encoder_no_repeat_ngram_size": null,
+        "decoder_start_token_id": null,
+        "is_assistant": null,
+        "num_assistant_tokens": null,
+        "num_assistant_tokens_schedule": null,
+        "assistant_confidence_threshold": null,
+        "prompt_lookup_num_tokens": null,
+        "max_matching_ngram_size": null,
+        "assistant_early_exit": null,
+        "assistant_lookbehind": null,
+        "target_lookbehind": null,
+        "compile_config": null,
+        "disable_compile": null,
+        "continuous_batching_config": null,
+        "low_memory": null,
+        "penalty_alpha": null,
+        "dola_layers": null,
+        "diversity_penalty": null,
+        "num_beam_groups": null,
+        "constraints": null,
+        "force_words_ids": null,
+        "prefill_chunk_size": null,
+        "_from_model_config": null,
+        "transformers_version": "5.5.4"
+      },
+      "torch": "2.9.1+cu128",
+      "transformers": "5.5.4",
+      "dtype": "torch.bfloat16",
+      "parameters_verified": 398,
+      "model_fingerprint": "c32a6f175d0fdb6b5a6278e167b0f67fd19b836e6870396079faa2a97f6f9e56",
+      "source_sha256": "e4e226663f2a02ff58c753b46ed6cca956bae33a53f73e107cc5df11d7b2f48c",
+      "batches": [
+        {
+          "n": 20,
+          "seconds": 50.42021040664986
+        },
+        {
+          "n": 20,
+          "seconds": 49.2991038961336
+        }
+      ],
+      "wall_seconds": 132.79707993892953,
+      "peak_allocated_bytes": 12505092096,
+      "peak_reserved_bytes": 24677187584,
+      "complete": true
+    },
+    "rmu80": {
+      "model": "rmu80",
+      "load_verify_seconds": 49.65984553890303,
+      "generation_config": {
+        "max_length": null,
+        "max_new_tokens": 1024,
+        "min_length": null,
+        "min_new_tokens": null,
+        "early_stopping": null,
+        "max_time": null,
+        "stop_strings": null,
+        "do_sample": false,
+        "num_beams": 1,
+        "use_cache": true,
+        "cache_implementation": null,
+        "cache_config": null,
+        "temperature": null,
+        "top_k": null,
+        "top_p": null,
+        "min_p": null,
+        "top_h": null,
+        "typical_p": null,
+        "epsilon_cutoff": null,
+        "eta_cutoff": null,
+        "repetition_penalty": null,
+        "encoder_repetition_penalty": null,
+        "length_penalty": null,
+        "no_repeat_ngram_size": null,
+        "bad_words_ids": null,
+        "renormalize_logits": null,
+        "forced_bos_token_id": null,
+        "forced_eos_token_id": null,
+        "remove_invalid_values": null,
+        "exponential_decay_length_penalty": null,
+        "suppress_tokens": null,
+        "begin_suppress_tokens": null,
+        "sequence_bias": null,
+        "token_healing": null,
+        "guidance_scale": null,
+        "watermarking_config": null,
+        "num_return_sequences": null,
+        "output_attentions": null,
+        "output_hidden_states": null,
+        "output_scores": null,
+        "output_logits": null,
+        "return_dict_in_generate": null,
+        "pad_token_id": 151643,
+        "bos_token_id": 151643,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "encoder_no_repeat_ngram_size": null,
+        "decoder_start_token_id": null,
+        "is_assistant": null,
+        "num_assistant_tokens": null,
+        "num_assistant_tokens_schedule": null,
+        "assistant_confidence_threshold": null,
+        "prompt_lookup_num_tokens": null,
+        "max_matching_ngram_size": null,
+        "assistant_early_exit": null,
+        "assistant_lookbehind": null,
+        "target_lookbehind": null,
+        "compile_config": null,
+        "disable_compile": null,
+        "continuous_batching_config": null,
+        "low_memory": null,
+        "penalty_alpha": null,
+        "dola_layers": null,
+        "diversity_penalty": null,
+        "num_beam_groups": null,
+        "constraints": null,
+        "force_words_ids": null,
+        "prefill_chunk_size": null,
+        "_from_model_config": null,
+        "transformers_version": "5.5.4"
+      },
+      "torch": "2.9.1+cu128",
+      "transformers": "5.5.4",
+      "dtype": "torch.bfloat16",
+      "parameters_verified": 398,
+      "model_fingerprint": "06fc83a6bd5dec105e2de6fde7aa94ab75af0dee562b3a7b9de4a034c7503ea3",
+      "source_sha256": "e4e226663f2a02ff58c753b46ed6cca956bae33a53f73e107cc5df11d7b2f48c",
+      "batches": [
+        {
+          "n": 20,
+          "seconds": 49.18994414713234
+        },
+        {
+          "n": 20,
+          "seconds": 49.14016846800223
+        }
+      ],
+      "wall_seconds": 148.14876993699,
+      "peak_allocated_bytes": 12505092096,
+      "peak_reserved_bytes": 24771559424,
+      "complete": true
+    },
+    "guard": {
+      "new": 110,
+      "reused_old": 50,
+      "reused_diagnostic": 0,
+      "wall_seconds": 37.478070905897766,
+      "peak_allocated_bytes": 1446967296,
+      "peak_reserved_bytes": 1753219072,
+      "complete": true
+    }
+  },
+  "prefix_caveat": "Batch size stays20; the selected40 create different co-batches from the historical1699. BF16 greedy numerics may change prefixes; mismatch is not attributed solely to max_new_tokens.",
+  "after_resources": {
+    "disk_free_bytes": 28340948992
+  },
+  "local_allocated_bytes": 2531328,
+  "comparison_manifest_sha256": "17db29343ec45c76059ac86e8d4d03ef2d9d940519a34ba9864b8cf460a74681"
+}
