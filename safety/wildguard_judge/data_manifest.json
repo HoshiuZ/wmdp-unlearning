@@ -1,0 +1,65 @@
+{
+  "protocol": "wildguard_judge_v1",
+  "created_without_label_text_in_inference_inputs": true,
+  "model_id": "allenai/wildguard",
+  "revision": "cbba4823f3e8020e5a74a5e29bf85072def6f2ff",
+  "generation": {
+    "backend": "transformers AutoModelForCausalLM",
+    "dtype": "bfloat16",
+    "device": "cuda:0",
+    "attention_implementation": "sdpa",
+    "tokenizer_use_fast": false,
+    "add_special_tokens": false,
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128,
+    "use_cache": true,
+    "batch_size": 1
+  },
+  "official_template_sha256": "fa7f1c313ef1463a2fe249ff50c537adfbd84ff2fe82b3ffa72ee21124afb0d6",
+  "wildguardtest": {
+    "dataset_id": "allenai/wildguardmix",
+    "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1",
+    "config": "wildguardtest",
+    "split": "test",
+    "file": "test/wildguard_test.parquet",
+    "raw_rows": 1725,
+    "file_bytes": 2258878,
+    "file_sha256": "6ccc2909c1ae6d41424fac69f1fc32535b1de39cb8f80407d81e8bc64a0bebca",
+    "non_null_labels": {
+      "response_harm_label": {
+        "unharmful": 1425,
+        "harmful": 284
+      },
+      "response_refusal_label": {
+        "compliance": 1157,
+        "refusal": 563
+      }
+    },
+    "harm_labeled_rows": 1709,
+    "refusal_labeled_rows": 1720,
+    "unique_scored_pairs": 1722,
+    "validation_mapping_sha256": "5b2fd63b6017dc57ec8de6b7bb1f95b585bda3b8c5d47344d56e5021a2652904"
+  },
+  "four_groups": {
+    "source_commit": "373ebc0c8e75361524919cf004eaff07eeb79ab1",
+    "requests": 1699,
+    "input_labels": {
+      "unharmful": 945,
+      "harmful": 754
+    },
+    "source_generation_rows_verified": 3398,
+    "protected_raw_answers_verified": 4061,
+    "fixed_refusals_verified": 2735,
+    "unique_blind_request_answer_pairs": 3866,
+    "blind_mappings_verified": 10194,
+    "request_manifest_sha256": "ad4f30e1d9e6eb1094c6d13187a900f55589eda2865e4687f42b915d7bacd8d2",
+    "blind_file_sha256": "00b7ab4e58a52fcb6a36b4088ea9e595e3475634842e1840f12ec0c4c7b6ae4a",
+    "mapping_file_sha256": "4f049514af47cccba8ee9c7fecfedebe7b1d3b5980c330bc55da5d9ec80ec5ea"
+  },
+  "scoring_input_pairs_union": 5588,
+  "scoring_input_sha256": "0c5892ca069c6f70170d62692a9687f8d03e2ab59a85e280c7686ab2d32e56ff",
+  "resource_before_download_or_model_load": {
+    "disk_free_bytes": 28325007360
+  }
+}
