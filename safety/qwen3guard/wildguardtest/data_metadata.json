@@ -1,0 +1,39 @@
+{
+  "schema": {
+    "prompt": "string",
+    "response": "string",
+    "adversarial": "bool",
+    "prompt_harm_label": "string",
+    "response_refusal_agreement": "double",
+    "response_refusal_label": "string",
+    "response_harm_label": "string",
+    "subcategory": "string",
+    "prompt_harm_agreement": "double",
+    "response_harm_agreement": "double"
+  },
+  "test_file_bytes": 2258878,
+  "official_card_sha256": "4cdee2c6fa839a2802237826a09f594522a31b2c33afe691f46be5ee98d66512",
+  "official_groups": {
+    "False": 915,
+    "True": 810
+  },
+  "agreement_distributions": {
+    "prompt_harm_agreement": {
+      "2.0": 591,
+      "3.0": 1108,
+      "None": 26
+    },
+    "response_harm_agreement": {
+      "3.0": 1266,
+      "2.0": 443,
+      "None": 16
+    },
+    "response_refusal_agreement": {
+      "2.0": 333,
+      "3.0": 1387,
+      "None": 5
+    }
+  },
+  "GPU": "NVIDIA GeForce RTX 4090 D, 595.91.07, 24564 MiB",
+  "disk_free_bytes_during_run": 28378935296
+}

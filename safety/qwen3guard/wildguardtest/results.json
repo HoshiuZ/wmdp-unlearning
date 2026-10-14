@@ -1,0 +1,640 @@
+{
+  "dataset": {
+    "raw_rows": 1725,
+    "unique_nonempty_requests": 1725,
+    "repeated_request_extra_rows": 0,
+    "input_conflicting_requests": 0,
+    "input_without_known_label": 26,
+    "eligible_input": 1699,
+    "eligible_output": 1709,
+    "input_labels": {
+      "unharmful": 945,
+      "harmful": 754
+    },
+    "output_labels": {
+      "unharmful": 1425,
+      "harmful": 284
+    },
+    "missing_labels": {
+      "prompt_harm_label": 26,
+      "response_harm_label": 16,
+      "response_refusal_label": 5
+    },
+    "output_unique_pairs": 1709,
+    "dataset": {
+      "dataset_id": "allenai/wildguardmix",
+      "revision": "d29c47f41c8b51348b5c8e8c81c039b3132b66d1",
+      "config": "wildguardtest",
+      "split": "test",
+      "file": "test/wildguard_test.parquet",
+      "license": "odc-by",
+      "local_directory": "cache/wildguardtest",
+      "seed": 42,
+      "input_deduplication": "Exact prompt string; exclude conflicting known labels, never majority vote; missing labels remain missing. A unique known label can be used alongside missing annotations, with all original row mappings retained.",
+      "output_selection": "Each official row with nonempty request and response and known response_harm_label; do not require prompt_harm_label.",
+      "positive_label": "harmful",
+      "negative_label": "unharmful",
+      "guard_config": "safety/qwen3guard/config.json",
+      "policy_source": "Unmodified existing adapter: main Unsafe, strict Unsafe+Controversial; unknown hold_for_review",
+      "confidence_interval": "Wilson score 95% for recall and FPR",
+      "pilot": "First 6 eligible items per task in original order, reused in full run; validate plumbing, never tune from predictions",
+      "stop_after_consecutive_errors": 5,
+      "error_review": "Seed 42, at most 10 FP and 10 FN per task/policy; original text stays local"
+    },
+    "columns": [
+      "prompt",
+      "response",
+      "adversarial",
+      "prompt_harm_label",
+      "response_refusal_agreement",
+      "response_refusal_label",
+      "response_harm_label",
+      "subcategory",
+      "prompt_harm_agreement",
+      "response_harm_agreement"
+    ],
+    "data_sha256": "6ccc2909c1ae6d41424fac69f1fc32535b1de39cb8f80407d81e8bc64a0bebca",
+    "manifests": [
+      {
+        "file": "input",
+        "sha256": "ad4f30e1d9e6eb1094c6d13187a900f55589eda2865e4687f42b915d7bacd8d2",
+        "rows": 1699
+      },
+      {
+        "file": "output",
+        "sha256": "1be4206f8a6045a328fd62f6febbedca4f65b685ccfd016bf42f306733f64384",
+        "rows": 1709
+      },
+      {
+        "file": "conflicts",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      }
+    ]
+  },
+  "provenance": {
+    "safety/qwen3guard/config.json": "752f22654337d692912f2bbafefb92e15f1cb55d702b4c59a0bf4f3ddf44f0f8",
+    "safety/qwen3guard/moderator.py": "647d869a22f884d1997bce04f5eb8a38e7e1e098b5462c99ff426c35ad51fd32",
+    "safety/qwen3guard/wildguardtest/config.json": "d40f6e798b32eb5f96186f48a8a2aea531edc5f766874831afd7ff863f344e44",
+    "safety/qwen3guard/wildguardtest/evaluate.py": "b03f8ce40baded1b61aa63aefac562711dcca747a3f03864172b10c774c91db3"
+  },
+  "fingerprint": "2c9a83e5d6df3f5eb6f5ea69acfa146aab8c4b3e8d5d1cb6e8cea8733018e709",
+  "runtime": {
+    "model_id": "Qwen/Qwen3Guard-Gen-0.6B",
+    "revision": "fada3b2f655b89601929198343c94cd2f64d93cc",
+    "snapshot_path": "/root/autodl-tmp/wmdp-work/cache/huggingface/hub/models--Qwen--Qwen3Guard-Gen-0.6B/snapshots/fada3b2f655b89601929198343c94cd2f64d93cc",
+    "device": "cuda:0",
+    "dtype": "torch.bfloat16",
+    "attention": "sdpa",
+    "generation": {
+      "do_sample": false,
+      "num_beams": 1,
+      "max_new_tokens": 128
+    },
+    "model_context_limit": 32768,
+    "tokenizer_model_max_length": 131072,
+    "effective_context_limit": 32768,
+    "effective_input_limit": 32640,
+    "truncation": false,
+    "parameter_count": 596049920,
+    "chat_template_sha256": "b4230b556815baa1982c0b1eacb181ce965483ee20b1f6e4d9f375294900e02b"
+  },
+  "environment": {
+    "python": "3.11.17",
+    "torch": "2.9.1+cu128",
+    "transformers": "5.5.4"
+  },
+  "code_commit_before_run": "a66cefdf3eb453a6280f8b6371397c10714f3340",
+  "CI_method": "Wilson score 95%, z=1.959963984540054; conditional on fixed dataset, no population-generalization claim",
+  "zero_denominators": "Precision/Recall/FPR/FNR null; class F1 zero when denominator zero",
+  "tasks": {
+    "input": {
+      "n": 1699,
+      "labels": {
+        "unharmful": 945,
+        "harmful": 754
+      },
+      "predicted_labels": {
+        "Safe": 993,
+        "Unsafe": 651,
+        "Controversial": 55
+      },
+      "errors": 0,
+      "error_codes": {},
+      "policies": {
+        "main": {
+          "classification_valid": {
+            "n": 1699,
+            "positive": 754,
+            "negative": 945,
+            "TP": 606,
+            "FP": 45,
+            "TN": 900,
+            "FN": 148,
+            "precision": 0.9308755760368663,
+            "recall": 0.8037135278514589,
+            "F1": 0.8626334519572953,
+            "macro_F1": 0.882897257840163,
+            "FPR": 0.047619047619047616,
+            "FNR": 0.1962864721485411,
+            "recall_CI95": [
+              0.7738537509559595,
+              0.8304942886890492
+            ],
+            "FPR_CI95": [
+              0.035777092020103735,
+              0.06312400251820698
+            ]
+          },
+          "system_all": {
+            "n": 1699,
+            "positive": 754,
+            "negative": 945,
+            "TP": 606,
+            "FP": 45,
+            "TN": 900,
+            "FN": 148,
+            "precision": 0.9308755760368663,
+            "recall": 0.8037135278514589,
+            "F1": 0.8626334519572953,
+            "macro_F1": 0.882897257840163,
+            "FPR": 0.047619047619047616,
+            "FNR": 0.1962864721485411,
+            "recall_CI95": [
+              0.7738537509559595,
+              0.8304942886890492
+            ],
+            "FPR_CI95": [
+              0.035777092020103735,
+              0.06312400251820698
+            ]
+          }
+        },
+        "strict": {
+          "classification_valid": {
+            "n": 1699,
+            "positive": 754,
+            "negative": 945,
+            "TP": 645,
+            "FP": 61,
+            "TN": 884,
+            "FN": 109,
+            "precision": 0.9135977337110481,
+            "recall": 0.8554376657824934,
+            "F1": 0.8835616438356164,
+            "macro_F1": 0.8979211727950012,
+            "FPR": 0.06455026455026455,
+            "FNR": 0.14456233421750664,
+            "recall_CI95": [
+              0.8285343213900632,
+              0.8787376202032221
+            ],
+            "FPR_CI95": [
+              0.05057868685839262,
+              0.08204774683170063
+            ]
+          },
+          "system_all": {
+            "n": 1699,
+            "positive": 754,
+            "negative": 945,
+            "TP": 645,
+            "FP": 61,
+            "TN": 884,
+            "FN": 109,
+            "precision": 0.9135977337110481,
+            "recall": 0.8554376657824934,
+            "F1": 0.8835616438356164,
+            "macro_F1": 0.8979211727950012,
+            "FPR": 0.06455026455026455,
+            "FNR": 0.14456233421750664,
+            "recall_CI95": [
+              0.8285343213900632,
+              0.8787376202032221
+            ],
+            "FPR_CI95": [
+              0.05057868685839262,
+              0.08204774683170063
+            ]
+          }
+        }
+      },
+      "groups": {
+        "adversarial_False": {
+          "main": {
+            "n": 903,
+            "positive": 413,
+            "negative": 490,
+            "TP": 343,
+            "FP": 8,
+            "TN": 482,
+            "FN": 70,
+            "precision": 0.9772079772079773,
+            "recall": 0.8305084745762712,
+            "F1": 0.8979057591623036,
+            "macro_F1": 0.9115248565485223,
+            "FPR": 0.0163265306122449,
+            "FNR": 0.1694915254237288,
+            "recall_CI95": [
+              0.7913169762715798,
+              0.8636082818166085
+            ],
+            "FPR_CI95": [
+              0.008295610008883075,
+              0.0318821807907716
+            ]
+          },
+          "strict": {
+            "n": 903,
+            "positive": 413,
+            "negative": 490,
+            "TP": 373,
+            "FP": 17,
+            "TN": 473,
+            "FN": 40,
+            "precision": 0.9564102564102565,
+            "recall": 0.9031476997578692,
+            "F1": 0.9290161892901619,
+            "macro_F1": 0.9360933389122794,
+            "FPR": 0.03469387755102041,
+            "FNR": 0.09685230024213075,
+            "recall_CI95": [
+              0.8707983217855928,
+              0.9280665534648347
+            ],
+            "FPR_CI95": [
+              0.021772146737506437,
+              0.054854588715325905
+            ]
+          }
+        },
+        "adversarial_True": {
+          "main": {
+            "n": 796,
+            "positive": 341,
+            "negative": 455,
+            "TP": 263,
+            "FP": 37,
+            "TN": 418,
+            "FN": 78,
+            "precision": 0.8766666666666667,
+            "recall": 0.7712609970674487,
+            "F1": 0.8205928237129485,
+            "macro_F1": 0.8498337409837087,
+            "FPR": 0.08131868131868132,
+            "FNR": 0.2287390029325513,
+            "recall_CI95": [
+              0.7238051737323387,
+              0.8126732434297744
+            ],
+            "FPR_CI95": [
+              0.05957057731219016,
+              0.11007725490585048
+            ]
+          },
+          "strict": {
+            "n": 796,
+            "positive": 341,
+            "negative": 455,
+            "TP": 272,
+            "FP": 44,
+            "TN": 411,
+            "FN": 69,
+            "precision": 0.8607594936708861,
+            "recall": 0.7976539589442815,
+            "F1": 0.8280060882800608,
+            "macro_F1": 0.8535752366533994,
+            "FPR": 0.0967032967032967,
+            "FNR": 0.20234604105571846,
+            "recall_CI95": [
+              0.7518060643831878,
+              0.8368702528271309
+            ],
+            "FPR_CI95": [
+              0.07282690333897944,
+              0.12733255709152164
+            ]
+          }
+        }
+      },
+      "error_rate": 0.0,
+      "coverage": 1.0,
+      "resources": {
+        "sessions": [
+          {
+            "new_inferences": 1699,
+            "elapsed_seconds": 375.53581534605473,
+            "peak_allocated_bytes": 1330443264,
+            "peak_reserved_bytes": 1757413376
+          }
+        ],
+        "total_task_wall_seconds": 375.53581534605473,
+        "throughput_rows_per_second": 4.524202301275521,
+        "detection_seconds": {
+          "n": 1699,
+          "min": 0.17640947038307786,
+          "P50": 0.19153865380212665,
+          "P95": 0.290102355601266,
+          "max": 0.4473737720400095,
+          "mean": 0.21749146473267855
+        },
+        "input_tokens": {
+          "n": 1699,
+          "min": 302,
+          "P50": 342.0,
+          "P95": 567.0999999999999,
+          "max": 908,
+          "mean": 387.52795762213066
+        },
+        "generated_tokens": {
+          "n": 1699,
+          "min": 8,
+          "P50": 8.0,
+          "P95": 12.0,
+          "max": 14,
+          "mean": 9.157151265450265
+        },
+        "request_characters": {
+          "n": 1699,
+          "min": 27,
+          "P50": 250.0,
+          "P95": 1440.5999999999995,
+          "max": 3013,
+          "mean": 479.9340788699235
+        },
+        "response_characters": {
+          "n": 1699,
+          "min": 0,
+          "P50": 0.0,
+          "P95": 0.0,
+          "max": 0,
+          "mean": 0.0
+        }
+      }
+    },
+    "output": {
+      "n": 1709,
+      "labels": {
+        "unharmful": 1425,
+        "harmful": 284
+      },
+      "predicted_labels": {
+        "Safe": 1387,
+        "Unsafe": 277,
+        "Controversial": 45
+      },
+      "errors": 0,
+      "error_codes": {},
+      "policies": {
+        "main": {
+          "classification_valid": {
+            "n": 1709,
+            "positive": 284,
+            "negative": 1425,
+            "TP": 213,
+            "FP": 64,
+            "TN": 1361,
+            "FN": 71,
+            "precision": 0.7689530685920578,
+            "recall": 0.75,
+            "F1": 0.7593582887700535,
+            "macro_F1": 0.8560529630759612,
+            "FPR": 0.04491228070175438,
+            "FNR": 0.25,
+            "recall_CI95": [
+              0.6965291536422662,
+              0.7967979736651882
+            ],
+            "FPR_CI95": [
+              0.03532740475218856,
+              0.05694417513989445
+            ]
+          },
+          "system_all": {
+            "n": 1709,
+            "positive": 284,
+            "negative": 1425,
+            "TP": 213,
+            "FP": 64,
+            "TN": 1361,
+            "FN": 71,
+            "precision": 0.7689530685920578,
+            "recall": 0.75,
+            "F1": 0.7593582887700535,
+            "macro_F1": 0.8560529630759612,
+            "FPR": 0.04491228070175438,
+            "FNR": 0.25,
+            "recall_CI95": [
+              0.6965291536422662,
+              0.7967979736651882
+            ],
+            "FPR_CI95": [
+              0.03532740475218856,
+              0.05694417513989445
+            ]
+          }
+        },
+        "strict": {
+          "classification_valid": {
+            "n": 1709,
+            "positive": 284,
+            "negative": 1425,
+            "TP": 233,
+            "FP": 89,
+            "TN": 1336,
+            "FN": 51,
+            "precision": 0.7236024844720497,
+            "recall": 0.8204225352112676,
+            "F1": 0.768976897689769,
+            "macro_F1": 0.8595951344778858,
+            "FPR": 0.062456140350877196,
+            "FNR": 0.1795774647887324,
+            "recall_CI95": [
+              0.771598449662043,
+              0.8606940656193424
+            ],
+            "FPR_CI95": [
+              0.051030472682532135,
+              0.07623449271872274
+            ]
+          },
+          "system_all": {
+            "n": 1709,
+            "positive": 284,
+            "negative": 1425,
+            "TP": 233,
+            "FP": 89,
+            "TN": 1336,
+            "FN": 51,
+            "precision": 0.7236024844720497,
+            "recall": 0.8204225352112676,
+            "F1": 0.768976897689769,
+            "macro_F1": 0.8595951344778858,
+            "FPR": 0.062456140350877196,
+            "FNR": 0.1795774647887324,
+            "recall_CI95": [
+              0.771598449662043,
+              0.8606940656193424
+            ],
+            "FPR_CI95": [
+              0.051030472682532135,
+              0.07623449271872274
+            ]
+          }
+        }
+      },
+      "groups": {
+        "adversarial_False": {
+          "main": {
+            "n": 912,
+            "positive": 153,
+            "negative": 759,
+            "TP": 122,
+            "FP": 15,
+            "TN": 744,
+            "FN": 31,
+            "precision": 0.8905109489051095,
+            "recall": 0.7973856209150327,
+            "F1": 0.8413793103448276,
+            "macro_F1": 0.9056961740772378,
+            "FPR": 0.019762845849802372,
+            "FNR": 0.20261437908496732,
+            "recall_CI95": [
+              0.7267763170887855,
+              0.8534274165683591
+            ],
+            "FPR_CI95": [
+              0.01201251968298006,
+              0.03234985526319936
+            ]
+          },
+          "strict": {
+            "n": 912,
+            "positive": 153,
+            "negative": 759,
+            "TP": 129,
+            "FP": 19,
+            "TN": 740,
+            "FN": 24,
+            "precision": 0.8716216216216216,
+            "recall": 0.8431372549019608,
+            "F1": 0.8571428571428571,
+            "macro_F1": 0.9144545539818028,
+            "FPR": 0.025032938076416336,
+            "FNR": 0.1568627450980392,
+            "recall_CI95": [
+              0.7772007634702084,
+              0.8922650830572659
+            ],
+            "FPR_CI95": [
+              0.016083486422511322,
+              0.038765995520143495
+            ]
+          }
+        },
+        "adversarial_True": {
+          "main": {
+            "n": 797,
+            "positive": 131,
+            "negative": 666,
+            "TP": 91,
+            "FP": 49,
+            "TN": 617,
+            "FN": 40,
+            "precision": 0.65,
+            "recall": 0.6946564885496184,
+            "F1": 0.6715867158671587,
+            "macro_F1": 0.80215768144076,
+            "FPR": 0.07357357357357357,
+            "FNR": 0.3053435114503817,
+            "recall_CI95": [
+              0.6111785725988004,
+              0.7670433811388659
+            ],
+            "FPR_CI95": [
+              0.05609741457731687,
+              0.09594073934643937
+            ]
+          },
+          "strict": {
+            "n": 797,
+            "positive": 131,
+            "negative": 666,
+            "TP": 104,
+            "FP": 70,
+            "TN": 596,
+            "FN": 27,
+            "precision": 0.5977011494252874,
+            "recall": 0.7938931297709924,
+            "F1": 0.6819672131147541,
+            "macro_F1": 0.8033575398389907,
+            "FPR": 0.10510510510510511,
+            "FNR": 0.20610687022900764,
+            "recall_CI95": [
+              0.716733738492647,
+              0.8543072504838295
+            ],
+            "FPR_CI95": [
+              0.08403439821178618,
+              0.13070515982324163
+            ]
+          }
+        }
+      },
+      "error_rate": 0.0,
+      "coverage": 1.0,
+      "resources": {
+        "sessions": [
+          {
+            "new_inferences": 1709,
+            "elapsed_seconds": 557.3528971150517,
+            "peak_allocated_bytes": 1788588032,
+            "peak_reserved_bytes": 1956642816
+          }
+        ],
+        "total_task_wall_seconds": 557.3528971150517,
+        "throughput_rows_per_second": 3.0662799257814193,
+        "detection_seconds": {
+          "n": 1709,
+          "min": 0.286507457960397,
+          "P50": 0.3053114991635084,
+          "P95": 0.40623255865648383,
+          "max": 0.645094885956496,
+          "mean": 0.32102054327474594
+        },
+        "input_tokens": {
+          "n": 1709,
+          "min": 413,
+          "P50": 789.0,
+          "P95": 1315.0,
+          "max": 4141,
+          "mean": 825.5687536571094
+        },
+        "generated_tokens": {
+          "n": 1709,
+          "min": 13,
+          "P50": 13.0,
+          "P95": 17.0,
+          "max": 19,
+          "mean": 13.585137507314219
+        },
+        "request_characters": {
+          "n": 1709,
+          "min": 27,
+          "P50": 240.0,
+          "P95": 1438.7999999999997,
+          "max": 3013,
+          "mean": 478.00234055002926
+        },
+        "response_characters": {
+          "n": 1709,
+          "min": 2,
+          "P50": 1639.0,
+          "P95": 3964.7999999999997,
+          "max": 22038,
+          "mean": 1801.4997074312464
+        }
+      }
+    }
+  }
+}

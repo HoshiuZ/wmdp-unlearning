@@ -1,0 +1,179 @@
+{
+  "input/main/FP": {
+    "n": 10,
+    "official_prompt_subcategory": {
+      "benign": 10
+    },
+    "official_response_refusal_label": {
+      "compliance": 10
+    },
+    "predicted_severity": {
+      "Unsafe": 10
+    },
+    "official_adversarial": {
+      "True": 5,
+      "False": 5
+    }
+  },
+  "input/main/FN": {
+    "n": 10,
+    "official_prompt_subcategory": {
+      "others": 1,
+      "fraud_assisting_illegal_activities": 1,
+      "copyright_violations": 1,
+      "social_stereotypes_and_unfair_discrimination": 1,
+      "private_information_individual": 2,
+      "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 1,
+      "causing_material_harm_by_disseminating_misinformation": 1,
+      "sensitive_information_organization_government": 1,
+      "mental_health_over-reliance_crisis": 1
+    },
+    "official_response_refusal_label": {
+      "refusal": 5,
+      "compliance": 5
+    },
+    "predicted_severity": {
+      "Safe": 9,
+      "Controversial": 1
+    },
+    "official_adversarial": {
+      "True": 3,
+      "False": 7
+    }
+  },
+  "input/strict/FP": {
+    "n": 10,
+    "official_prompt_subcategory": {
+      "benign": 10
+    },
+    "official_response_refusal_label": {
+      "compliance": 9,
+      "refusal": 1
+    },
+    "predicted_severity": {
+      "Controversial": 2,
+      "Unsafe": 8
+    },
+    "official_adversarial": {
+      "True": 9,
+      "False": 1
+    }
+  },
+  "input/strict/FN": {
+    "n": 10,
+    "official_prompt_subcategory": {
+      "others": 1,
+      "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 1,
+      "violence_and_physical_harm": 1,
+      "mental_health_over-reliance_crisis": 1,
+      "sexual_content": 1,
+      "private_information_individual": 2,
+      "copyright_violations": 1,
+      "sensitive_information_organization_government": 1,
+      "fraud_assisting_illegal_activities": 1
+    },
+    "official_response_refusal_label": {
+      "refusal": 8,
+      "compliance": 2
+    },
+    "predicted_severity": {
+      "Safe": 10
+    },
+    "official_adversarial": {
+      "False": 5,
+      "True": 5
+    }
+  },
+  "output/main/FP": {
+    "n": 10,
+    "official_prompt_subcategory": {
+      "mental_health_over-reliance_crisis": 1,
+      "toxic_language_hate_speech": 3,
+      "social_stereotypes_and_unfair_discrimination": 1,
+      "benign": 3,
+      "fraud_assisting_illegal_activities": 1,
+      "sexual_content": 1
+    },
+    "official_response_refusal_label": {
+      "compliance": 9,
+      "refusal": 1
+    },
+    "predicted_severity": {
+      "Unsafe": 10
+    },
+    "official_adversarial": {
+      "True": 7,
+      "False": 3
+    }
+  },
+  "output/main/FN": {
+    "n": 10,
+    "official_prompt_subcategory": {
+      "cyberattack": 1,
+      "causing_material_harm_by_disseminating_misinformation": 2,
+      "sensitive_information_organization_government": 1,
+      "social_stereotypes_and_unfair_discrimination": 2,
+      "others": 1,
+      "defamation_encouraging_unethical_or_unsafe_actions": 1,
+      "private_information_individual": 1,
+      "benign": 1
+    },
+    "official_response_refusal_label": {
+      "compliance": 10
+    },
+    "predicted_severity": {
+      "Safe": 10
+    },
+    "official_adversarial": {
+      "True": 7,
+      "False": 3
+    }
+  },
+  "output/strict/FP": {
+    "n": 10,
+    "official_prompt_subcategory": {
+      "social_stereotypes_and_unfair_discrimination": 1,
+      "sexual_content": 1,
+      "sensitive_information_organization_government": 1,
+      "benign": 2,
+      "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": 1,
+      "toxic_language_hate_speech": 1,
+      "defamation_encouraging_unethical_or_unsafe_actions": 1,
+      "fraud_assisting_illegal_activities": 1,
+      "copyright_violations": 1
+    },
+    "official_response_refusal_label": {
+      "compliance": 8,
+      "refusal": 2
+    },
+    "predicted_severity": {
+      "Controversial": 3,
+      "Unsafe": 7
+    },
+    "official_adversarial": {
+      "False": 4,
+      "True": 6
+    }
+  },
+  "output/strict/FN": {
+    "n": 10,
+    "official_prompt_subcategory": {
+      "fraud_assisting_illegal_activities": 4,
+      "private_information_individual": 2,
+      "social_stereotypes_and_unfair_discrimination": 2,
+      "benign": 1,
+      "cyberattack": 1
+    },
+    "official_response_refusal_label": {
+      "compliance": 9,
+      "refusal": 1
+    },
+    "predicted_severity": {
+      "Safe": 10
+    },
+    "official_adversarial": {
+      "True": 5,
+      "False": 5
+    }
+  }
+}

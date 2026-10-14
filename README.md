@@ -61,4 +61,4 @@
 
 [阶段中文报告](safety/qwen3guard/REPORT.md)、[逐条结果](safety/qwen3guard/records/smoke_v1/results.jsonl)、[配置](safety/qwen3guard/config.json)。模型只存忽略的HF缓存，不提交Git/LFS。本阶段在接入和验证后停止；A原模型、B原模型＋Guard、C纯RMU、D纯RMU＋Guard尚未执行，下一阶段须先固定具体RMU检查点和评测协议。
 
-WildGuardTest 独立审核评测已固定官方测试版本与数据准备规则，目前受 Hugging Face 数据集访问权限阻塞，尚未执行评测。详见 [准备与阻塞报告](safety/qwen3guard/wildguardtest/REPORT.md)。
+WildGuardTest 独立审核评测已完成：输入 1,699 条、输出 1,709 条，审核错误均为 0。主策略 Recall/FPR 分别为输入 80.37%/4.76%、输出 75.00%/4.49%；严格策略为输入 85.54%/6.46%、输出 82.04%/6.25%。本阶段只评分类器与数据集已有回答，未开展四组模型生成实验。详见 [中文评测报告](safety/qwen3guard/wildguardtest/REPORT.md)。
