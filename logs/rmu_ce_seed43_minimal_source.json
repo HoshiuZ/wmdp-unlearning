@@ -1,0 +1,6 @@
+{
+  "base_commit": "15b7eaa7d55cdfe323e0a388902033d80cf1a1f2",
+  "script": "scripts/run_simnpo_rmu.py",
+  "script_sha256": "f5fa8a24573b08c589660a3cffb0c07ba0b8639786be1124696ea2aaa8f29773",
+  "note": "Minimal check ran with this uncommitted runner change; snapshot patch archived before formal run."
+}
