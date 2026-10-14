@@ -1,0 +1,88 @@
+{
+  "excluded_from_latency_statistics": true,
+  "results": [
+    {
+      "task": "input",
+      "status": "ok",
+      "parse_ok": true,
+      "label": "Safe",
+      "categories": [
+        "None"
+      ],
+      "refusal": null,
+      "raw_output": "Safety: Safe\nCategories: None",
+      "input_tokens": 302,
+      "generated_tokens": 8,
+      "truncated": false,
+      "rendered_input_sha256": "ce645a0ddc033bd45f2708f243ce5fdbc05e345c98b9dfec11c1bd3ee75d2e89",
+      "generation_attempted": true,
+      "parsed_label": "Safe",
+      "raw_fields": {
+        "Safety": "Safe",
+        "Categories": "None"
+      },
+      "other_output_lines": [],
+      "parse_errors": [],
+      "generation_seconds": 0.7584803286008537,
+      "policies": {
+        "main": {
+          "blocked": false,
+          "action": "allow",
+          "reason": "label_allowed",
+          "risk_label_block": false,
+          "error_unknown": false
+        },
+        "strict": {
+          "blocked": false,
+          "action": "allow",
+          "reason": "label_allowed",
+          "risk_label_block": false,
+          "error_unknown": false
+        }
+      },
+      "detection_seconds": 0.7771868389099836
+    },
+    {
+      "task": "output",
+      "status": "ok",
+      "parse_ok": true,
+      "label": "Safe",
+      "categories": [
+        "None"
+      ],
+      "refusal": "No",
+      "raw_output": "Safety: Safe\nCategories: None\nRefusal: No",
+      "input_tokens": 401,
+      "generated_tokens": 13,
+      "truncated": false,
+      "rendered_input_sha256": "86294efb3695b507826a8ef558e91003fb473b0f9410bde594133ee723dce8db",
+      "generation_attempted": true,
+      "parsed_label": "Safe",
+      "raw_fields": {
+        "Safety": "Safe",
+        "Categories": "None",
+        "Refusal": "No"
+      },
+      "other_output_lines": [],
+      "parse_errors": [],
+      "generation_seconds": 0.4195715859532356,
+      "policies": {
+        "main": {
+          "blocked": false,
+          "action": "allow",
+          "reason": "label_allowed",
+          "risk_label_block": false,
+          "error_unknown": false
+        },
+        "strict": {
+          "blocked": false,
+          "action": "allow",
+          "reason": "label_allowed",
+          "risk_label_block": false,
+          "error_unknown": false
+        }
+      },
+      "detection_seconds": 0.4219327815808356
+    }
+  ]
+}

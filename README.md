@@ -1,6 +1,6 @@
 # WMDP Unlearning Experiments
 
-本仓库当前只推进 Qwen3-4B-Instruct-2507 的纯 RMU 实验。维护者：HoshiuZ。
+本仓库的模型训练仍仅推进 Qwen3-4B-Instruct-2507 纯 RMU；另设独立的 Qwen3Guard 外挂安全审核功能验证。维护者：HoshiuZ。
 
 标准目标为 forget 表示误导 MSE + alpha × retain 表示保留 MSE。retain NLL 仅作监控，不加入训练目标。层号从 0 开始，hook 捕获指定 decoder layer 的输出，更新指定层的 down_proj.weight；参考模型冻结。
 
@@ -52,3 +52,11 @@
 [中文完整报告](docs/rmu-step-comparison-results.md)、[结果JSON](logs/rmu_step_comparison_results.json)、[全量CSV](logs/rmu_step_comparison_full.csv)、[逐学科CSV](logs/rmu_step_comparison_subjects.csv)、[固定方案](docs/rmu-step-comparison-plan.md)。官方test已参与此前探索，本轮为单seed探索性结果。
 
 本轮新增三个增量、共9个LFS对象约209.94 MiB，**仅保存在本地持久数据盘**，GitHub额度未知，尚未上传或核实远端备份。路径、SHA和真实大小见[保存状态](open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/delta_storage_status.json)；不要清理这些唯一的本地对象。公开代码、配置、日志及逐题结果正常推送；不上传受限语料、token缓存或新的完整模型。增量没有优化器状态，不能独立精确断点续训。
+
+## Qwen3Guard 外挂审核：接入阶段已完成
+
+独立模块位于`safety/qwen3guard/`，固定Qwen/Qwen3Guard-Gen-0.6B revision `fada3b2f655b89601929198343c94cd2f64d93cc`，直接使用官方tokenizer的输入/输出任务模板。支持原始输出、三档标签、类别、输出Refusal字段和错误记录；两种拦截策略共用一次审核，error/unknown不放行，超长输入报错而不静默截断。
+
+已完成18条固定中英文接口样例：Safe10、Unsafe7、Controversial1，解析/生成错误0；另通过单元和超长错误路径检查。这是小规模功能验证，不是正式准确率或安全提升评测。未修改RMU训练逻辑、结果或检查点，未训练模型，未执行原模型/RMU批量生成或正式四组实验。
+
+[阶段中文报告](safety/qwen3guard/REPORT.md)、[逐条结果](safety/qwen3guard/records/smoke_v1/results.jsonl)、[配置](safety/qwen3guard/config.json)。模型只存忽略的HF缓存，不提交Git/LFS。本阶段在接入和验证后停止；A原模型、B原模型＋Guard、C纯RMU、D纯RMU＋Guard尚未执行，下一阶段须先固定具体RMU检查点和评测协议。

@@ -1,0 +1,47 @@
+{
+  "branch": "main",
+  "existing_base_model_directory_present": true,
+  "base_manifest_sha256": "f47f10617431a09f805fbe4b97a67f62941ef85b3f0358f77abcbd1a6b08a778",
+  "existing_rmu_checkpoints": [
+    {
+      "step": 40,
+      "manifest": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-40/checkpoint.json",
+      "sha256": "c99d649e34de69db0cf4c53b5f7fa4839d1cf256b3f25def9533cfee945f5249",
+      "delta_objects_present": 3
+    },
+    {
+      "step": 80,
+      "manifest": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80/checkpoint.json",
+      "sha256": "e934ad4c30e6e438edfa9a1ab31296ca732fb8ddab3b10a6443cf1ac2a2e1524",
+      "delta_objects_present": 3
+    },
+    {
+      "step": 120,
+      "manifest": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-120/checkpoint.json",
+      "sha256": "c14834f29d0fca39fc4d9b1bb9590c9a0211399f1d066b6ea1da734e986e3280",
+      "delta_objects_present": 3
+    }
+  ],
+  "protected_tracked_files_changed": [],
+  "existing_rmu_environment_upgraded": false,
+  "new_model_snapshots": [
+    "Qwen/Qwen3Guard-Gen-0.6B@fada3b2f655b89601929198343c94cd2f64d93cc"
+  ],
+  "no_training": true,
+  "no_original_or_rmu_generation": true,
+  "no_formal_four_group_evaluation": true,
+  "resources": {
+    "cache_unique_blob_count": 9,
+    "cache_payload_bytes": 1519203341,
+    "cache_allocated_bytes": 1519222784,
+    "cache_layout": "Single ignored Hugging Face blob cache, symlink snapshot; no second model directory copy",
+    "disk": {
+      "total": 64424509440,
+      "used": 36037197824,
+      "free": 28387311616
+    },
+    "download_seconds": 267.4275949290022,
+    "gpu_peak_allocated_bytes": 1659389440,
+    "gpu_peak_reserved_bytes": 1732247552
+  }
+}

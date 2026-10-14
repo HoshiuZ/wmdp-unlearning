@@ -1,0 +1,48 @@
+{
+  "repo_id": "Qwen/Qwen3Guard-Gen-0.6B",
+  "revision": "fada3b2f655b89601929198343c94cd2f64d93cc",
+  "license": "apache-2.0",
+  "files": [
+    {
+      "name": ".gitattributes",
+      "size": 1570
+    },
+    {
+      "name": "LICENSE",
+      "size": 11343
+    },
+    {
+      "name": "README.md",
+      "size": 9841
+    },
+    {
+      "name": "config.json",
+      "size": 727
+    },
+    {
+      "name": "generation_config.json",
+      "size": 161
+    },
+    {
+      "name": "merges.txt",
+      "size": 1671853
+    },
+    {
+      "name": "model.safetensors",
+      "size": 1503300328
+    },
+    {
+      "name": "tokenizer.json",
+      "size": 11422654
+    },
+    {
+      "name": "tokenizer_config.json",
+      "size": 9601
+    },
+    {
+      "name": "vocab.json",
+      "size": 2776833
+    }
+  ],
+  "source": "https://huggingface.co/Qwen/Qwen3Guard-Gen-0.6B"
+}

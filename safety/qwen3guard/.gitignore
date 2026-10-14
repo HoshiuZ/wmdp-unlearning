@@ -1,0 +1,7 @@
+# Never commit classifier weights, caches, or checkpoint copies.
+weights/
+cache/
+*.safetensors
+*.bin
+*.pt
+*.pth

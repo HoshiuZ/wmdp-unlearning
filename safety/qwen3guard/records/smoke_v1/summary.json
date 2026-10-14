@@ -1,0 +1,71 @@
+{
+  "status": "completed",
+  "samples": 18,
+  "warmup_samples": 2,
+  "model_generation_calls": 20,
+  "overflow_probe_generation_calls": 0,
+  "label_counts_by_task": {
+    "input": {
+      "Safe": 4,
+      "Unsafe": 5
+    },
+    "output": {
+      "Safe": 6,
+      "Unsafe": 2,
+      "Controversial": 1
+    }
+  },
+  "parse_not_success_count": 0,
+  "parse_error_count": 0,
+  "generation_error_count": 0,
+  "policy_counts": {
+    "main": {
+      "risk_label_blocks": 7,
+      "error_unknown_holds": 0,
+      "allow": 11
+    },
+    "strict": {
+      "risk_label_blocks": 8,
+      "error_unknown_holds": 0,
+      "allow": 10
+    }
+  },
+  "qualitative_flags": {},
+  "latency_after_warmup": {
+    "all": {
+      "n": 18,
+      "mean_seconds": 0.3306693532762842,
+      "median_seconds": 0.3185092818457633,
+      "p95_seconds": 0.41705427030101416,
+      "min_seconds": 0.2599777220748365,
+      "max_seconds": 0.4189734016545117
+    },
+    "input": {
+      "n": 9,
+      "mean_seconds": 0.3036306460077564,
+      "median_seconds": 0.2911481959745288,
+      "p95_seconds": 0.3887070771306753,
+      "min_seconds": 0.2599777220748365,
+      "max_seconds": 0.38892250787466764
+    },
+    "output": {
+      "n": 9,
+      "mean_seconds": 0.357708060544812,
+      "median_seconds": 0.35205435985699296,
+      "p95_seconds": 0.4180702810175717,
+      "min_seconds": 0.30182676715776324,
+      "max_seconds": 0.4189734016545117
+    }
+  },
+  "timing_scope": "Synchronous wall time per single audit, template/tokenize/device transfer/generate/decode/parse/two policy maps; excludes model loading and two warmups; no batching or repetitions. generation_seconds separately measures generate plus CUDA synchronization. Overflow probe excluded.",
+  "cuda_peak_allocated_bytes": 1659389440,
+  "cuda_peak_reserved_bytes": 1732247552,
+  "total_process_seconds": 11.243535507004708,
+  "space_after": {
+    "total": 64424509440,
+    "used": 36037156864,
+    "free": 28387352576
+  },
+  "not_a_safety_accuracy_benchmark": true,
+  "stop_after_this_stage": true
+}

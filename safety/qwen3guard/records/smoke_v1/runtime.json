@@ -1,0 +1,22 @@
+{
+  "model_id": "Qwen/Qwen3Guard-Gen-0.6B",
+  "revision": "fada3b2f655b89601929198343c94cd2f64d93cc",
+  "snapshot_path": "/root/autodl-tmp/wmdp-work/cache/huggingface/hub/models--Qwen--Qwen3Guard-Gen-0.6B/snapshots/fada3b2f655b89601929198343c94cd2f64d93cc",
+  "device": "cuda:0",
+  "dtype": "torch.bfloat16",
+  "attention": "sdpa",
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 128
+  },
+  "model_context_limit": 32768,
+  "tokenizer_model_max_length": 131072,
+  "effective_context_limit": 32768,
+  "effective_input_limit": 32640,
+  "truncation": false,
+  "parameter_count": 596049920,
+  "chat_template_sha256": "b4230b556815baa1982c0b1eacb181ce965483ee20b1f6e4d9f375294900e02b",
+  "load_seconds": 3.76985239982605,
+  "seed": 0
+}

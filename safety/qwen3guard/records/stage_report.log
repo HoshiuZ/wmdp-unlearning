@@ -1,0 +1,27 @@
+{
+  "labels": {
+    "input": {
+      "Safe": 4,
+      "Unsafe": 5
+    },
+    "output": {
+      "Safe": 6,
+      "Unsafe": 2,
+      "Controversial": 1
+    }
+  },
+  "resource": {
+    "cache_unique_blob_count": 9,
+    "cache_payload_bytes": 1519203341,
+    "cache_allocated_bytes": 1519222784,
+    "cache_layout": "Single ignored Hugging Face blob cache, symlink snapshot; no second model directory copy",
+    "disk": {
+      "total": 64424509440,
+      "used": 36037197824,
+      "free": 28387311616
+    },
+    "download_seconds": 267.4275949290022,
+    "gpu_peak_allocated_bytes": 1659389440,
+    "gpu_peak_reserved_bytes": 1732247552
+  }
+}

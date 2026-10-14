@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-14T18:16:12.565692+08:00",
+  "python": "3.11.17 (main, Oct  1 2026, 20:17:42) [GCC 14.3.0]",
+  "python_executable": "/root/autodl-tmp/wmdp-work/envs/unlearning/bin/python",
+  "torch": "2.9.1+cu128",
+  "transformers": "5.5.4",
+  "cuda_runtime": "12.8",
+  "gpu_before": "name, memory.total [MiB], memory.free [MiB], memory.used [MiB], driver_version\nNVIDIA GeForce RTX 4090 D, 24564 MiB, 24082 MiB, 1 MiB, 595.91.07",
+  "space_before": {
+    "total": 64424509440,
+    "used": 36037111808,
+    "free": 28387397632
+  },
+  "code_commit_at_run": "33c0c6da5afdce570b266120b7773fc07b143500",
+  "source_sha256": {
+    "safety/qwen3guard/moderator.py": "647d869a22f884d1997bce04f5eb8a38e7e1e098b5462c99ff426c35ad51fd32",
+    "safety/qwen3guard/run_smoke.py": "a30e4c9b55d2d0117700650f4bb7096dff1137ba455f106cd15051466873915d",
+    "safety/qwen3guard/config.json": "752f22654337d692912f2bbafefb92e15f1cb55d702b4c59a0bf4f3ddf44f0f8",
+    "safety/qwen3guard/samples.jsonl": "0a77c0b96a0eeb0fbc4541c8e3639be681aaf82572df2dfe7c056e4953887078"
+  },
+  "command": "HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 OMP_NUM_THREADS=2 envs/unlearning/bin/python -m safety.qwen3guard.run_smoke",
+  "scope": "Only Guard and18 authored smoke cases; no training, no A/B/C/D formal evaluation, no original/RMU generation"
+}
