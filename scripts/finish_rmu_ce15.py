@@ -68,7 +68,7 @@ def main():
  dump(ROOT/'logs/rmu_ce15_full_comparison.json',{'rows':rows,'paired':paired,'statistics':stats,'ce15_both_seeds_meet_2pp':passed,'fixed_step':40,'used_development_for_selection':False,'groups':groups})
  with (ROOT/'logs/rmu_ce15_full_comparison.csv').open('w') as f:
   w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(rows)
- dump(ROOT/'logs/rmu_ce15_completion_audit.json',{'training':audits,'full_requests_verified':True,'data_manifest_sha_verified':True,'full_evaluations':2,'ce15_both_seeds_meet_2pp':passed,'space':shutil.disk_usage(ROOT)._asdict()})
+ dump(ROOT/'logs/rmu_ce15_completion_audit.json',{'training':audits,'both_training_script_sha_equal':True,'full_requests_verified':True,'data_manifest_sha_verified':True,'full_evaluations':2,'ce15_both_seeds_meet_2pp':passed,'space':shutil.disk_usage(ROOT)._asdict()})
  lines=['# CE保留权重1.5倍匹配对照结果','','仅改变CE保留权重，seed42/43各自与旧CE1倍匹配。两组均独立从原始模型开始，预先固定第40步全量评测。','', '| seed | CE倍率 | Bio% | MMLU% | MMLU较原始变化点 | 满足2点目标 |','| --- | ---: | ---: | ---: | ---: | --- |']
  for r in rows:lines.append(f"| {r['seed']} | {r['ce_scale']} | {r['bio_percent']:.4f} | {r['mmlu_percent']:.4f} | {r['mmlu_change_pp']:+.4f} | {'是' if r['meets_2pp'] else '否'} |")
  lines+=['','同seed内CE1.5减CE1：','', '| seed | Bio变化点 | MMLU变化点 |','| --- | ---: | ---: |']
@@ -76,7 +76,10 @@ def main():
  lines+=['', '两seed的CE1.5结果'+('均满足' if passed else '未全部满足')+'本轮2点目标；逐seed判断优先于均值。','']
  for scale in [1.,1.5]:
   st=stats[str(scale)];lines.append(f"CE{scale}两次描述性均值：Bio{st['bio_percent']['mean']:.4f}%（样本SD {st['bio_percent']['sample_sd']:.4f}点）、MMLU{st['mmlu_percent']['mean']:.4f}%（SD {st['mmlu_percent']['sample_sd']:.4f}点），MMLU变化{st['mmlu_change_pp']['mean']:+.4f}点。")
- lines+=['','seed42旧配置来自前期筛选，只有两个seed，统计仅作描述。测试集已参与前期探索，本轮是固定方案匹配对照；开发指标未用于改变检查点或配置。原始全量Bio73.8413%、MMLU70.6737%；Bio1273/MMLU14042，同一归档0shot题目、提示、答案与loglikelihood评分，BF16/SDPA、batch1、无聊天模板。','','## 配置和保存','','hook12输出（0-based），10/11/12 down_proj.weight共74,711,040参数，lr5e-5、alpha2、steering32、40步、batch1/累积16、256token上限，CE0.060028908617563034→0.09004336292634455。无Sim遗忘项。不改变文章划分、数据版本、优化器或其他损失权重。']
+ if passed:
+  chosen=min((r for r in rows if r['ce_scale']==1.5),key=lambda r:(r['bio_percent'],-r['mmlu_percent']));lines+=['','本轮推荐CE1.5作为后续复验主配置：两次已观察seed都满足2点目标，代价是Bio准确率较旧权重上升、遗忘幅度减小。具体候选可用seed42第40步（Bio60.2514%、MMLU68.8363%）。旧CE1倍seed42仍是单次Bio更低的合格结果；本轮没有用新结果覆盖它，也不把新配置称为所有历史单次结果中的最低Bio方案。','', '下一步建议固定本配置补seed44复验，不继续调权重。距2点上限的余量约0.14–0.16点，两次结果不足以判定所有seed稳定达标；本轮不自动追加第三seed。']
+ else:lines+=['','CE1.5未在两个seed中全部满足主要约束，不作为稳定达标结论；保留全部失败及旧单次结果。下一步建议先检查损失与分学科变化，不自动扩大系数搜索。']
+ lines+=['','seed42旧配置来自前期筛选，只有两个seed，统计仅作描述。测试集已参与前期探索，本轮是固定方案匹配对照；开发指标未用于改变检查点或配置。原始全量Bio73.8413%、MMLU70.6737%；Bio1273/MMLU14042，同一归档0shot题目、提示、答案与loglikelihood评分，BF16/SDPA、batch1、无聊天模板。','','## 配置和保存','','hook12输出（0-based），10/11/12 down_proj.weight共74,711,040参数，lr5e-5、alpha2、steering32、40步、batch1/累积16、256token上限，CE由锁定旧系数严格乘1.5，实际序列化值见完整training_config.json（约0.06002891→0.09004336）。无Sim遗忘项。不改变文章划分、数据版本、优化器或其他损失权重。']
  for au in audits:lines+=['',f"seed{au['seed']}：每角色640次输入，input/loss token={au['input_tokens']}/{au['loss_tokens']}，与该seed旧实验采样/方向/预算逐值一致。训练{au['seconds']:.1f}秒（含回调），峰值allocated {au['cuda_peak_allocated_bytes']/2**30:.3f}GiB/reserved {au['cuda_peak_reserved_bytes']/2**30:.3f}GiB；代码{au['training_code_commit']}，脚本SHA {au['script_sha256']}；3增量{au['compressed_bytes']/2**20:.2f}MiB。"]
  lines+=['','两组冻结参数和参考模型不变；最小CUDA检查、实际缓存token独立核算、逐位重建及真实LFS对象SHA、开发/全量请求逐题核对通过。6增量及所有旧结果保留；无optimizer状态，不能断点续训。数据SHA见logs/rmu_formal_blocks_manifest.json，完整配置/采样/控制向量/分项loss/逐题预测均保存。','','本轮结束后按用户授权推送代码、模型增量与结果到GitHub；私人根目录文档和受限正文/缓存继续排除。']
  (ROOT/'docs/rmu-ce15-results.md').write_text('\n'.join(lines)+'\n');print('COMPLETE',json.dumps({'rows':rows,'paired':paired,'both_pass':passed},ensure_ascii=False),flush=True)

@@ -1,0 +1,25 @@
+{
+  "metrics": {
+    "wmdp_bio": {
+      "n": 1273,
+      "correct": 778,
+      "accuracy_percent": 61.115475255302435,
+      "baseline_accuracy_percent": 73.84131971720346,
+      "change_percentage_points": -12.725844461901021
+    },
+    "mmlu": {
+      "n": 14042,
+      "correct": 9663,
+      "accuracy_percent": 68.81498362056688,
+      "baseline_accuracy_percent": 70.673693206096,
+      "change_percentage_points": -1.858709585529127
+    }
+  },
+  "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_seed43_ce15_screen40/checkpoint-40",
+  "seed": 43,
+  "ce_scale": 1.5,
+  "loss_le_2pp": true,
+  "elapsed_seconds": 632.0678256480023,
+  "cuda_peak_allocated_bytes": 8967755776,
+  "cuda_peak_reserved_bytes": 9930014720
+}
