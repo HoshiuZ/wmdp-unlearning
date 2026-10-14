@@ -44,3 +44,6 @@ __pycache__/
 /open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/control_vector.pt
 # Raw external corpora stay local while redistribution terms remain unresolved.
 /open-unlearning/data/wmdp/
+
+# New step-comparison deltas stay local until LFS quota is verified; manifests track SHA/size.
+/open-unlearning/saves/unlearn/rmu_step_comparison_v1/**/checkpoint-*/*.xor.gz

@@ -1,0 +1,62 @@
+[2026-10-14 12:38:50,097] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:212: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:218: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/core/utils.py:230: UserWarning: register_new_resolver() is deprecated and will be removed in a future release.
+Use register_resolver() instead.
+See https://github.com/hydra-ecosystem/omegaconf/issues/426 for migration instructions.
+
+  OmegaConf.register_new_resolver(
+/root/autodl-tmp/wmdp-work/envs/unlearning/lib/python3.11/site-packages/hydra/_internal/config_loader_impl.py:291: FutureWarning: Implicit conversion from Version to str at 'hydra.runtime.version_base' during assignment is deprecated; pass the declared type or use OmegaConf.update() for an existing path.
+  cfg.hydra.runtime.version_base = version.getbase()
+{
+  "recorded_at": "2026-10-14T12:38:50.951131+08:00",
+  "configuration_equals_history_except_length_and_metadata": true,
+  "historical_delta_sizes": [
+    61999123,
+    67005787,
+    71075693
+  ],
+  "additional_space_estimate": {
+    "three_delta_objects": 213227079,
+    "compression_and_lfs_temporary_duplicates": 142151386,
+    "text_results_and_logs_budget": 536870912,
+    "additional_margin": 536870912
+  },
+  "required_plus_1GiB_reserve": 2502862113,
+  "space": {
+    "total": 64424509440,
+    "used": 34264928256,
+    "free": 30159581184
+  },
+  "versions": {
+    "torch": "2.9.1+cu128",
+    "transformers": "5.5.4",
+    "accelerate": "1.13.0",
+    "datasets": "3.0.1",
+    "lm_eval": "0.4.11",
+    "deepspeed": "0.15.4"
+  },
+  "code_commit": "57e374d50664f1d5942a68718d4f14780c02f793",
+  "max_optimizer_updates": 120,
+  "checkpoints": [
+    40,
+    80,
+    120
+  ],
+  "expected_steps_per_epoch": 128,
+  "epoch_crossing": false,
+  "schedule": "constant, no warmup; max_steps does not alter first-epoch sampling",
+  "lfs_quota": "unknown; do not upload new objects without verified available quota",
+  "commands": {
+    "training": "HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 OMP_NUM_THREADS=2 envs/unlearning/bin/python -u scripts/run_rmu_step_comparison.py --run",
+    "evaluation": "HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 OMP_NUM_THREADS=2 envs/unlearning/bin/python -u scripts/evaluate_rmu_step_comparison.py"
+  }
+}
