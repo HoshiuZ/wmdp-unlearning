@@ -1,0 +1,48 @@
+{
+  "format": "bf16-uint16-xor-gzip-v1",
+  "base_manifest": "logs/base_model_manifest.json",
+  "parameters": [
+    {
+      "name": "model.layers.10.mlp.down_proj.weight",
+      "shape": [
+        2560,
+        9728
+      ],
+      "dtype": "bfloat16",
+      "file": "model.layers.10.mlp.down_proj.weight.xor.gz",
+      "bytes": 22312106,
+      "compressed_sha256": "cdd1f4f3d016e868461cd9f17df587b35479e1b0dff44376328a62e77ad5125c",
+      "base_tensor_sha256": "b22d94578775afce0606834edb069fd9fa1eb141cfae5d76eb626694cede4b94",
+      "trained_tensor_sha256": "f581052720b86a34f42c957fb2e16785cfddf8fefbf34ac4b37b3afd0a1e367b",
+      "local_lfs_cache": "/root/autodl-tmp/wmdp-work/.git/lfs"
+    },
+    {
+      "name": "model.layers.11.mlp.down_proj.weight",
+      "shape": [
+        2560,
+        9728
+      ],
+      "dtype": "bfloat16",
+      "file": "model.layers.11.mlp.down_proj.weight.xor.gz",
+      "bytes": 22070554,
+      "compressed_sha256": "336a7d4f2fbcbc1a38fbf66f409b4d2009c9f7188a76ce7a118f969a277af259",
+      "base_tensor_sha256": "85c846eff9fa600f60343af9c4ec497de803d393b1cea82850dbbe802aca3b8d",
+      "trained_tensor_sha256": "f779485bb2d55024ada92bb88700966a2deb89381c0971ad38b51144f46df493",
+      "local_lfs_cache": "/root/autodl-tmp/wmdp-work/.git/lfs"
+    },
+    {
+      "name": "model.layers.12.mlp.down_proj.weight",
+      "shape": [
+        2560,
+        9728
+      ],
+      "dtype": "bfloat16",
+      "file": "model.layers.12.mlp.down_proj.weight.xor.gz",
+      "bytes": 21992720,
+      "compressed_sha256": "564c4e8683e96c2eb256e3cd6e4adf765691d8079f9c9cba8b636988b761e8f0",
+      "base_tensor_sha256": "2531bc7c8c41c0cc2db584a7b9017c0c58786771b3dc2dd6ab625048d8f06624",
+      "trained_tensor_sha256": "e0fbed8f02e5ceb9436d8edf5707e886f05d23c2ca21cbc1fd4877a983412ced",
+      "local_lfs_cache": "/root/autodl-tmp/wmdp-work/.git/lfs"
+    }
+  ]
+}

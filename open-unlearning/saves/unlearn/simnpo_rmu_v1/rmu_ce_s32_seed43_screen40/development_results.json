@@ -1,0 +1,68 @@
+[
+  {
+    "step": 10,
+    "metrics": {
+      "wmdp_bio": {
+        "n": 256,
+        "correct": 191,
+        "accuracy_percent": 74.609375,
+        "baseline_accuracy_percent": 75.78125,
+        "change_percentage_points": -1.171875
+      },
+      "mmlu": {
+        "n": 1710,
+        "correct": 1246,
+        "accuracy_percent": 72.86549707602339,
+        "baseline_accuracy_percent": 73.50877192982456,
+        "change_percentage_points": -0.6432748538011696
+      }
+    },
+    "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_seed43_screen40/checkpoint-10",
+    "save_reload_identical": true,
+    "seconds": 98.28326987894252
+  },
+  {
+    "step": 20,
+    "metrics": {
+      "wmdp_bio": {
+        "n": 256,
+        "correct": 189,
+        "accuracy_percent": 73.828125,
+        "baseline_accuracy_percent": 75.78125,
+        "change_percentage_points": -1.953125
+      },
+      "mmlu": {
+        "n": 1710,
+        "correct": 1235,
+        "accuracy_percent": 72.22222222222223,
+        "baseline_accuracy_percent": 73.50877192982456,
+        "change_percentage_points": -1.286549707602339
+      }
+    },
+    "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_seed43_screen40/checkpoint-20",
+    "save_reload_identical": true,
+    "seconds": 99.02914224518463
+  },
+  {
+    "step": 40,
+    "metrics": {
+      "wmdp_bio": {
+        "n": 256,
+        "correct": 145,
+        "accuracy_percent": 56.640625,
+        "baseline_accuracy_percent": 75.78125,
+        "change_percentage_points": -19.140625
+      },
+      "mmlu": {
+        "n": 1710,
+        "correct": 1223,
+        "accuracy_percent": 71.52046783625731,
+        "baseline_accuracy_percent": 73.50877192982456,
+        "change_percentage_points": -1.9883040935672514
+      }
+    },
+    "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_seed43_screen40/checkpoint-40",
+    "save_reload_identical": true,
+    "seconds": 98.96398698212579
+  }
+]

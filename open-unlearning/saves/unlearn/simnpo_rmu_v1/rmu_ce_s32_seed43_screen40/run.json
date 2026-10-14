@@ -1,0 +1,245 @@
+{
+  "name": "rmu_ce_s32_seed43_screen40",
+  "variant": "rmu_ce",
+  "status": "completed",
+  "started_at": "2026-10-14T09:08:01.936303+08:00",
+  "code_commit": "ca03219ec6eaa55c02eda52c003e7224aee28d6a",
+  "data_manifest": "logs/rmu_formal_blocks_manifest.json",
+  "beta": 0.1,
+  "delta": 0,
+  "alpha_repr": 2,
+  "steering": 32,
+  "lr": 5e-05,
+  "seed": 43,
+  "control_policy": "native generator, training seed43",
+  "coefficients": {
+    "sim_weight": 0.1566522562277117,
+    "ce_weight": 0.060028908617563034
+  },
+  "gradient_cap": false,
+  "sim_scale": 1.0,
+  "check_only": false,
+  "max_steps": 40,
+  "space_before": {
+    "total": 64424509440,
+    "used": 45655203840,
+    "free": 18769305600
+  },
+  "training_metrics": {
+    "train_runtime": 729.5009,
+    "train_samples_per_second": 0.877,
+    "train_steps_per_second": 0.055,
+    "total_flos": 0.0,
+    "train_loss": 1.5989751175045968,
+    "epoch": 0.3125
+  },
+  "development": [
+    {
+      "step": 10,
+      "metrics": {
+        "wmdp_bio": {
+          "n": 256,
+          "correct": 191,
+          "accuracy_percent": 74.609375,
+          "baseline_accuracy_percent": 75.78125,
+          "change_percentage_points": -1.171875
+        },
+        "mmlu": {
+          "n": 1710,
+          "correct": 1246,
+          "accuracy_percent": 72.86549707602339,
+          "baseline_accuracy_percent": 73.50877192982456,
+          "change_percentage_points": -0.6432748538011696
+        }
+      },
+      "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_seed43_screen40/checkpoint-10",
+      "save_reload_identical": true,
+      "seconds": 98.28326987894252
+    },
+    {
+      "step": 20,
+      "metrics": {
+        "wmdp_bio": {
+          "n": 256,
+          "correct": 189,
+          "accuracy_percent": 73.828125,
+          "baseline_accuracy_percent": 75.78125,
+          "change_percentage_points": -1.953125
+        },
+        "mmlu": {
+          "n": 1710,
+          "correct": 1235,
+          "accuracy_percent": 72.22222222222223,
+          "baseline_accuracy_percent": 73.50877192982456,
+          "change_percentage_points": -1.286549707602339
+        }
+      },
+      "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_seed43_screen40/checkpoint-20",
+      "save_reload_identical": true,
+      "seconds": 99.02914224518463
+    },
+    {
+      "step": 40,
+      "metrics": {
+        "wmdp_bio": {
+          "n": 256,
+          "correct": 145,
+          "accuracy_percent": 56.640625,
+          "baseline_accuracy_percent": 75.78125,
+          "change_percentage_points": -19.140625
+        },
+        "mmlu": {
+          "n": 1710,
+          "correct": 1223,
+          "accuracy_percent": 71.52046783625731,
+          "baseline_accuracy_percent": 73.50877192982456,
+          "change_percentage_points": -1.9883040935672514
+        }
+      },
+      "checkpoint": "open-unlearning/saves/unlearn/simnpo_rmu_v1/rmu_ce_s32_seed43_screen40/checkpoint-40",
+      "save_reload_identical": true,
+      "seconds": 98.96398698212579
+    }
+  ],
+  "validation": [
+    {
+      "training_run_id": "rmu_ce_s32_seed43_screen40",
+      "phase": "validation",
+      "step": 0,
+      "epoch": 0,
+      "forget_loss": 1.1942138671875,
+      "retain_loss": 0.13215802097693086,
+      "total_loss": 1.3263718970119953,
+      "validation_loss": 1.3263718970119953,
+      "retain_nll": 2.193743327304359,
+      "retain_ppl": 8.968723222441891,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 24.461732326075435,
+      "recorded_at": "2026-10-14T09:08:40.661393+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 1298.8450522014768,
+      "gpu_peak_allocated_bytes": 16918117376,
+      "gpu_peak_reserved_bytes": 17116954624,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "rmu_ce_s32_seed43_screen40",
+      "phase": "validation",
+      "step": 10,
+      "epoch": 0.078125,
+      "forget_loss": 0.93511962890625,
+      "retain_loss": 0.1628455399768427,
+      "total_loss": 1.0979651659727097,
+      "validation_loss": 1.0979651659727097,
+      "retain_nll": 2.195246886511566,
+      "retain_ppl": 8.982218371655447,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 24.240948266815394,
+      "recorded_at": "2026-10-14T09:10:19.994610+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 1310.6747991164284,
+      "gpu_peak_allocated_bytes": 19582927360,
+      "gpu_peak_reserved_bytes": 19755171840,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "rmu_ce_s32_seed43_screen40",
+      "phase": "validation",
+      "step": 20,
+      "epoch": 0.15625,
+      "forget_loss": 0.76666259765625,
+      "retain_loss": 0.21453719155397266,
+      "total_loss": 0.9811997907236218,
+      "validation_loss": 0.9811997907236218,
+      "retain_nll": 2.2027174594102967,
+      "retain_ppl": 9.049571960493932,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 24.427911341190338,
+      "recorded_at": "2026-10-14T09:13:41.091509+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 1300.6433319751764,
+      "gpu_peak_allocated_bytes": 19584230912,
+      "gpu_peak_reserved_bytes": 21657288704,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "rmu_ce_s32_seed43_screen40",
+      "phase": "validation",
+      "step": 30,
+      "epoch": 0.234375,
+      "forget_loss": 0.64361572265625,
+      "retain_loss": 0.24543078371789306,
+      "total_loss": 0.8890465097501874,
+      "validation_loss": 0.8890465097501874,
+      "retain_nll": 2.208139790711656,
+      "retain_ppl": 9.09877501487587,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 24.192832477856427,
+      "recorded_at": "2026-10-14T09:17:04.425665+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 1313.2815278690805,
+      "gpu_peak_allocated_bytes": 19584230912,
+      "gpu_peak_reserved_bytes": 21657288704,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    },
+    {
+      "training_run_id": "rmu_ce_s32_seed43_screen40",
+      "phase": "validation",
+      "step": 40,
+      "epoch": 0.3125,
+      "forget_loss": 0.542724609375,
+      "retain_loss": 0.2690700258826837,
+      "total_loss": 0.8117946358397603,
+      "validation_loss": 0.8117946358397603,
+      "retain_nll": 2.2213769792281313,
+      "retain_ppl": 9.220017902119157,
+      "nll_tokens": 15324,
+      "blocks_per_role": 64,
+      "learning_rate": null,
+      "gradient_norm": null,
+      "elapsed_seconds": 24.235058846883476,
+      "recorded_at": "2026-10-14T09:18:46.730425+08:00",
+      "input_tokens": 31772,
+      "tokens_per_second": 1310.9933093513303,
+      "gpu_peak_allocated_bytes": 19584230912,
+      "gpu_peak_reserved_bytes": 21657288704,
+      "checkpoint_path": null,
+      "sampling": "fixed held-out blocks; same control vector as training"
+    }
+  ],
+  "actual_input_tokens": 320765,
+  "actual_loss_tokens": 319485,
+  "effective_prediction_tokens": 319485,
+  "completed_at": "2026-10-14T09:20:43.373306+08:00",
+  "elapsed_seconds": 747.4563211402856,
+  "selected_parameters": [
+    "model.layers.10.mlp.down_proj.weight",
+    "model.layers.11.mlp.down_proj.weight",
+    "model.layers.12.mlp.down_proj.weight"
+  ],
+  "frozen_parameters_unchanged": true,
+  "reference_unchanged": true,
+  "cuda_peak_allocated_bytes": 19584230912,
+  "cuda_peak_reserved_bytes": 21657288704,
+  "space_after": {
+    "total": 64424509440,
+    "used": 45856485376,
+    "free": 18568024064
+  }
+}
