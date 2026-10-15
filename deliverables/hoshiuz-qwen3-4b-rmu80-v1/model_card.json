@@ -1,0 +1,64 @@
+{
+  "schema_version": "2026-10-15",
+  "model_id": "hoshiuz-qwen3-4b-rmu80-v1",
+  "name": "Qwen3-4B-Instruct-2507 RMU checkpoint at step 80",
+  "version": "rmu80-continuous120-step80",
+  "base_model_id": "qwen3-4b-instruct-2507",
+  "base_model_name": "Qwen3-4B-Instruct-2507",
+  "base_model_version": "local file SHA-256 manifest and full parameter fingerprint; official immutable revision was not recorded",
+  "model_type": "Qwen3ForCausalLM with a pure RMU parameter delta",
+  "provider": "HoshiuZ (RMU adaptation); base model by Qwen Team / Alibaba",
+  "parameter_count": 4022468096,
+  "parameter_count_note": "Counted from local safetensors headers across 398 unique tensors; RMU changes 3 tensors in-place and adds no model parameters.",
+  "architecture": {
+    "model_type": "qwen3",
+    "architectures": [
+      "Qwen3ForCausalLM"
+    ],
+    "num_hidden_layers": 36,
+    "hidden_size": 2560,
+    "intermediate_size": 9728,
+    "vocab_size": 151936
+  },
+  "modalities": [
+    "text"
+  ],
+  "context_length_tokens": 262144,
+  "precision": "BF16 base tensors and BF16 XOR delta",
+  "release_status": "research artifact; not yet transferred to a delivery platform or released as a self-contained model",
+  "artifact_access": "local-only payload references; recipient needs the exact base model and all RMU delta objects",
+  "license": {
+    "base_model": "Apache-2.0",
+    "derived_delta": "inherits base model license and applicable terms; distribution authorization not independently determined"
+  },
+  "chat_template": {
+    "source": "base tokenizer official template",
+    "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326",
+    "serving_protocol": "single user message, add_generation_prompt=true"
+  },
+  "default_system_settings": {
+    "four_group_evaluation": null,
+    "training_config_field": "You are a helpful assistant.",
+    "note": "The RMU run consumed pre-tokenized blocks without applying this chat template. Four-group generation used no system message."
+  },
+  "experiment_id_mapping": {
+    "four_group_models": {
+      "A": "original base",
+      "B": "original base + Qwen3Guard",
+      "C": "hoshiuz-qwen3-4b-rmu80-v1",
+      "D": "same RMU80 + Qwen3Guard"
+    },
+    "source_run_id": "h12_a2_s32_seed42_continuous120",
+    "source_trajectory_id": "h12_a2_s32_seed42_continuous120",
+    "selected_checkpoint_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80"
+  },
+  "known_limitations": [
+    "80 steps is selected from one continuous 120-step training trajectory, not an independently trained 80-step run.",
+    "MMLU is down 3.7245 percentage points from baseline and does not meet the earlier 2-point target.",
+    "Single-seed exploratory result; official evaluation test data were used during tuning.",
+    "Evaluation responses have a 512-new-token limit; about half of original and RMU80 generations hit the limit.",
+    "Open-ended safety results use WildGuard automatic ratings; no human-verified gold standard was completed.",
+    "RMU80 WMDP-Bio accuracy decrease is a benchmark result, not evidence that all knowledge has been removed.",
+    "Weight delta and training corpora have not been transferred; remote LFS availability remains unverified."
+  ]
+}

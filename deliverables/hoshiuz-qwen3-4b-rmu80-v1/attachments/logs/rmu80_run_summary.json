@@ -1,0 +1,20 @@
+{
+  "training_run_id": "h12_a2_s32_seed42_continuous120",
+  "status": "completed",
+  "started_at": "2026-10-14T12:40:32.321390+08:00",
+  "completed_at": "2026-10-14T12:55:22.633075+08:00",
+  "run_max_steps": 120,
+  "selected_checkpoint_step": 80,
+  "optimizer_update_loop_seconds": 304.89831524994224,
+  "trainer_wall_seconds_including_callbacks": 855.81899365969,
+  "total_process_seconds": 890.3107616361231,
+  "trainer_loss": 1.1580205281575522,
+  "trainer_epoch": 0.9375,
+  "cuda_peak_allocated_bytes": 19276036608,
+  "cuda_peak_reserved_bytes": 21349007360,
+  "selected_checkpoint_payload_bytes": 74022192,
+  "selected_checkpoint_rebuild_hashes_match": true,
+  "reference_and_frozen_parameters_unchanged": true,
+  "full_optimizer_state_persisted": false,
+  "note": "Sanitized run facts only; no request, answer, corpus text, or row-level annotations."
+}

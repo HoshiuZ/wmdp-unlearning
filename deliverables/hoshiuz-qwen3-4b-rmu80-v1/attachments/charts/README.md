@@ -1,0 +1,4 @@
+
+# 图表来源与方向
+
+rmu_steps_bio_mmlu.svg 使用既有连续120步全量评测结果：Bio和MMLU均为原始准确率，越低分别表示WMDP-Bio目标基准表现下降和MMLU通用能力损失。four_group_wildguard.svg 使用已归档WildGuard自动评分汇总：有害回答率、正常请求拒答代理均来自WildGuard，并非人工标签。图表没有新计算预测或引入综合分数。

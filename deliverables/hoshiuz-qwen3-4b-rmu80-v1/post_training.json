@@ -1,0 +1,89 @@
+{
+  "schema_version": "2026-10-15",
+  "objective": "降低WMDP-Bio选择题基准准确率，同时以RMU retain表示损失约束表示漂移；该目标不是保证知识不可恢复",
+  "methods": [
+    "RMU"
+  ],
+  "started_at": "2026-10-14T12:40:32.321390+08:00",
+  "completed_at": "2026-10-14T12:55:22.633075+08:00",
+  "base_checkpoint": {
+    "model_id": "qwen3-4b-instruct-2507",
+    "local_path": "models/Qwen3-4B-Instruct-2507",
+    "remote_revision": null,
+    "fingerprint": "c32a6f175d0fdb6b5a6278e167b0f67fd19b836e6870396079faa2a97f6f9e56"
+  },
+  "output_checkpoint": {
+    "model_id": "hoshiuz-qwen3-4b-rmu80-v1",
+    "trajectory_id": "h12_a2_s32_seed42_continuous120",
+    "local_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80",
+    "selected_step": 80,
+    "run_max_steps": 120,
+    "independent_80_step_run": false,
+    "fingerprint": "06fc83a6bd5dec105e2de6fde7aa94ab75af0dee562b3a7b9de4a034c7503ea3"
+  },
+  "training_data": [
+    "rmu_formal_blocks_forget_train_rmu-formal-blocks-v1",
+    "rmu_formal_blocks_retain_train_rmu-formal-blocks-v1"
+  ],
+  "data_statistics": {
+    "forget_candidate_blocks": 2048,
+    "retain_candidate_blocks": 2048,
+    "selected_step_exposures_per_role": {
+      "forget": 1280,
+      "retain": 1280
+    },
+    "unique_blocks_seen_by_selected_step": {
+      "forget": 1280,
+      "retain": 920
+    },
+    "validation_blocks_per_role": 64,
+    "validation_passes_through_step80": 9,
+    "validation_block_evaluations_per_role": 576
+  },
+  "safety_focus": "WMDP-Bio biological knowledge benchmark; external safety classifier is inference-time policy simulation and is not part of post-training.",
+  "hyperparameters": {
+    "hook_layer_zero_based": 12,
+    "updated_layers_zero_based": [
+      10,
+      11,
+      12
+    ],
+    "updated_parameter_type": "mlp.down_proj.weight",
+    "trainable_parameter_count": 74711040,
+    "learning_rate": 5e-05,
+    "retain_weight_alpha": 2,
+    "steering_coefficient": 32,
+    "seed": 42,
+    "max_steps": 120,
+    "selected_checkpoint_step": 80,
+    "precision": "BF16"
+  },
+  "quality_controls": {
+    "delta_format": "bf16-uint16-xor-gzip-v1",
+    "existing_rebuild_check": true,
+    "reconstructed_parameter_hashes_match": {
+      "model.layers.10.mlp.down_proj.weight": "7b68187c821675b4a8eb4b0e54e23d21fb64a9c3ae1342816f8dd3cabea27bb6",
+      "model.layers.11.mlp.down_proj.weight": "5da03bb6f40ee3fb29f14b0ed0a55ac08ec4be5359e0c5380733be86a9f5242f",
+      "model.layers.12.mlp.down_proj.weight": "1f88c94b3b6ba7e8f73947ddac779dc9cade098c01c23630552759d0132afa3f"
+    },
+    "runtime_model_fingerprint_matches_four_group_record": "06fc83a6bd5dec105e2de6fde7aa94ab75af0dee562b3a7b9de4a034c7503ea3",
+    "reference_and_frozen_parameters_unchanged": true,
+    "source_code_commit": "ff618f4d83daa7dda4da5ddff765b5fa7505cb60",
+    "rebuild_test_repeated_during_this_delivery_prep": false,
+    "additional_training_or_evaluation_run": false
+  },
+  "platform_method_enum": {
+    "method_used": "RMU",
+    "target_platform_or_enum_schema_provided": false,
+    "machine_unlearning_enum_available": null,
+    "gap": "The target platform and its method enum were not provided or verified in this workspace. Keep the method as RMU; do not relabel as SFT or DPO. Resolve the platform mapping before submission."
+  },
+  "known_limitations": [
+    "Single seed and one continuous 120-step trajectory; selected 80 is not an independent 80-step run.",
+    "No optimizer state; checkpoint can be reconstructed for inference/evaluation but the exact training trajectory cannot be resumed.",
+    "Official test data have been used in tuning; all results are exploratory, not independent test estimates.",
+    "MMLU loss at selected step is 3.7245 percentage points, outside the previous 2-point target.",
+    "No human-verified answer-safety labels; ChatGPT auxiliary review remains model-assisted and uncertain cases remain unresolved.",
+    "Remote Git LFS payload retrieval for 40/80/120 deltas has not been verified."
+  ]
+}

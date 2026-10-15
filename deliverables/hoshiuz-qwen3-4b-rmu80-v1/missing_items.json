@@ -1,0 +1,63 @@
+{
+  "schema_version": "2026-10-15",
+  "prepared_at": "2026-10-15T04:19:28Z",
+  "not_platform_submitted": true,
+  "items": [
+    {
+      "item": "完整Qwen3-4B原始基模权重及配置",
+      "status": "present_locally_not_transferred",
+      "recipient_action": "obtain authorized exact base model; official immutable source revision was not recorded"
+    },
+    {
+      "item": "RMU40/80/120 BF16 XOR+gzip增量",
+      "status": "present_in_local_LFS_cache_remote_unverified_not_transferred",
+      "recipient_action": "verify/upload/retrieve all required LFS objects or provide another authorized transfer"
+    },
+    {
+      "item": "原始tokenizer文件",
+      "status": "present_locally_not_transferred",
+      "recipient_action": "transfer with exact base model or provide authorized official access"
+    },
+    {
+      "item": "WMDP-Bio forget/retain训练语料与固定token块",
+      "status": "present_locally_restricted_not_transferred",
+      "recipient_action": "verify recipient collaborator authorization; retain-corpus redistribution rights are unresolved"
+    },
+    {
+      "item": "WMDP-Bio/MMLU/WildGuardTest评测原文",
+      "status": "present_locally_or_source_retrievable_not_transferred",
+      "recipient_action": "verify applicable source access/license and retrieve from official source"
+    },
+    {
+      "item": "在线推理服务及运维材料",
+      "status": "missing",
+      "recipient_action": "out of scope for this phase; no service was built"
+    },
+    {
+      "item": "平台模型遗忘方法枚举映射",
+      "status": "missing_or_not_found",
+      "recipient_action": "platform must define a machine-unlearning/RMU method mapping; do not label as SFT or DPO"
+    },
+    {
+      "item": "人工安全复核金标准",
+      "status": "not_completed",
+      "recipient_action": "ChatGPT-assisted labels remain auxiliary and human_verified=false"
+    },
+    {
+      "item": "独立未参与调参的最终测试",
+      "status": "not_available",
+      "recipient_action": "official tests were used in tuning; current results remain exploratory"
+    },
+    {
+      "item": "PDF版中文报告",
+      "status": "not_created",
+      "recipient_action": "Markdown report is complete; no reliable Chinese PDF export was verified and no heavy toolchain was installed"
+    },
+    {
+      "item": "平台实际提交时间",
+      "status": "not_submitted",
+      "recipient_action": "manifest.submitted_at remains null until an actual platform submission"
+    }
+  ],
+  "statement": "Current status is metadata/report prepared only. Complete model weights and data are not delivered to a platform."
+}

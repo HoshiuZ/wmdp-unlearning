@@ -1,0 +1,302 @@
+{
+  "schema_version": "2026-10-15",
+  "artifact_access": "metadata package only; no model weights or tokenizer copied; base files and payloads remain on this server",
+  "base_model": {
+    "model_id": "qwen3-4b-instruct-2507",
+    "official_name": "Qwen3-4B-Instruct-2507",
+    "source_recorded": "Qwen/Qwen3-4B-Instruct-2507 via ModelScope (existing download)",
+    "remote_revision": null,
+    "revision_note": "Remote immutable revision was not recorded at initial download; local exact contents pinned by SHA256 and successful baseline fingerprints. Do not fabricate a remote commit.",
+    "local_file_manifest": [
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/LICENSE",
+        "size_bytes": 11343,
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/README.md",
+        "size_bytes": 8168,
+        "sha256": "8e3dd0c3b5b11897cc71092ccfe517bb7a9783479baa3665aad73c8d1a2041cd",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/config.json",
+        "size_bytes": 727,
+        "sha256": "5beea1a4a34c62782bfb2f911c606741a3bab8f92d80a118fa053c28af12e8ba",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/configuration.json",
+        "size_bytes": 73,
+        "sha256": "f888421726665e8a84b738eed42a64875aed79de8be7daade851ac8bf4c0cef9",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/generation_config.json",
+        "size_bytes": 238,
+        "sha256": "835fffe355c9438e7a25be099b3fccaa98350b83451f9fd2d99512e74f1ade48",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/merges.txt",
+        "size_bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/model-00001-of-00003.safetensors",
+        "size_bytes": 3957900840,
+        "sha256": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/model-00002-of-00003.safetensors",
+        "size_bytes": 3987450520,
+        "sha256": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/model-00003-of-00003.safetensors",
+        "size_bytes": 99630640,
+        "sha256": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/model.safetensors.index.json",
+        "size_bytes": 32819,
+        "sha256": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/tokenizer.json",
+        "size_bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/tokenizer_config.json",
+        "size_bytes": 9377,
+        "sha256": "a62ff0a2472a0fa1b8eaabcb57c59b58afa42a22831dc141400b6e0cf2b65ce3",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/vocab.json",
+        "size_bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "status": "present_locally_not_transferred"
+      }
+    ],
+    "total_manifested_file_bytes": 8060916071,
+    "parameter_file_count": 398,
+    "parameter_count": 4022468096,
+    "file_and_parameter_fingerprints": {
+      "file_manifest_path": "logs/base_model_manifest.json",
+      "complete_parameter_fingerprint_path": "open-unlearning/saves/unlearn/qwen3_4b_rmu_bio_smoke3_v1/base_weight_fingerprints.json",
+      "four_group_original_runtime_fingerprint": "c32a6f175d0fdb6b5a6278e167b0f67fd19b836e6870396079faa2a97f6f9e56"
+    },
+    "status": "present_locally_not_transferred; recipient requires same authorized base model or official access"
+  },
+  "rmu_delta": {
+    "selected_checkpoint": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80",
+    "trajectory_id": "h12_a2_s32_seed42_continuous120",
+    "selected_checkpoint_step": 80,
+    "run_max_steps": 120,
+    "independently_trained_80_step_run": false,
+    "format": "bf16-uint16 XOR + gzip (bf16-uint16-xor-gzip-v1); lossless against fixed base tensors",
+    "is_lora": false,
+    "payload_bytes": 74022192,
+    "delta_manifest_sha256": "e934ad4c30e6e438edfa9a1ab31296ca732fb8ddab3b10a6443cf1ac2a2e1524",
+    "parameters": [
+      {
+        "parameter_name": "model.layers.10.mlp.down_proj.weight",
+        "shape": [
+          2560,
+          9728
+        ],
+        "dtype": "bfloat16",
+        "stored_format": "bf16-uint16-xor-gzip-v1",
+        "path_local_only": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80/model.layers.10.mlp.down_proj.weight.xor.gz",
+        "repository_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80/model.layers.10.mlp.down_proj.weight.xor.gz",
+        "git_checkout_file_bytes": 133,
+        "git_lfs_oid_sha256": "58964d1b7f09d2d57e5fc73142a9a0dab6bff2afce98069a8f9b6e5ac87471c2",
+        "expected_payload_bytes": 24568186,
+        "local_payload_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/58/96/58964d1b7f09d2d57e5fc73142a9a0dab6bff2afce98069a8f9b6e5ac87471c2",
+        "local_payload_present": true,
+        "local_payload_bytes": 24568186,
+        "local_payload_hash_matches": true,
+        "included_in_delivery_package": false,
+        "remote_uploaded_or_retrievable": false,
+        "remote_status": "not verified; quota/upload state unavailable in archived run record",
+        "base_tensor_sha256": "b22d94578775afce0606834edb069fd9fa1eb141cfae5d76eb626694cede4b94",
+        "reconstructed_tensor_sha256": "7b68187c821675b4a8eb4b0e54e23d21fb64a9c3ae1342816f8dd3cabea27bb6"
+      },
+      {
+        "parameter_name": "model.layers.11.mlp.down_proj.weight",
+        "shape": [
+          2560,
+          9728
+        ],
+        "dtype": "bfloat16",
+        "stored_format": "bf16-uint16-xor-gzip-v1",
+        "path_local_only": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80/model.layers.11.mlp.down_proj.weight.xor.gz",
+        "repository_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80/model.layers.11.mlp.down_proj.weight.xor.gz",
+        "git_checkout_file_bytes": 133,
+        "git_lfs_oid_sha256": "50ae59c352f7130842cdfedf933ad84436c80ae1c4d5d8521c55d88030a7d17d",
+        "expected_payload_bytes": 24349543,
+        "local_payload_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/50/ae/50ae59c352f7130842cdfedf933ad84436c80ae1c4d5d8521c55d88030a7d17d",
+        "local_payload_present": true,
+        "local_payload_bytes": 24349543,
+        "local_payload_hash_matches": true,
+        "included_in_delivery_package": false,
+        "remote_uploaded_or_retrievable": false,
+        "remote_status": "not verified; quota/upload state unavailable in archived run record",
+        "base_tensor_sha256": "85c846eff9fa600f60343af9c4ec497de803d393b1cea82850dbbe802aca3b8d",
+        "reconstructed_tensor_sha256": "5da03bb6f40ee3fb29f14b0ed0a55ac08ec4be5359e0c5380733be86a9f5242f"
+      },
+      {
+        "parameter_name": "model.layers.12.mlp.down_proj.weight",
+        "shape": [
+          2560,
+          9728
+        ],
+        "dtype": "bfloat16",
+        "stored_format": "bf16-uint16-xor-gzip-v1",
+        "path_local_only": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80/model.layers.12.mlp.down_proj.weight.xor.gz",
+        "repository_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80/model.layers.12.mlp.down_proj.weight.xor.gz",
+        "git_checkout_file_bytes": 133,
+        "git_lfs_oid_sha256": "49c4d90051a9485d647175db7aae74f729ec45afebb94bab1378bc6124f72351",
+        "expected_payload_bytes": 25104463,
+        "local_payload_path": "/root/autodl-tmp/wmdp-work/.git/lfs/objects/49/c4/49c4d90051a9485d647175db7aae74f729ec45afebb94bab1378bc6124f72351",
+        "local_payload_present": true,
+        "local_payload_bytes": 25104463,
+        "local_payload_hash_matches": true,
+        "included_in_delivery_package": false,
+        "remote_uploaded_or_retrievable": false,
+        "remote_status": "not verified; quota/upload state unavailable in archived run record",
+        "base_tensor_sha256": "2531bc7c8c41c0cc2db584a7b9017c0c58786771b3dc2dd6ab625048d8f06624",
+        "reconstructed_tensor_sha256": "1f88c94b3b6ba7e8f73947ddac779dc9cade098c01c23630552759d0132afa3f"
+      }
+    ],
+    "local_rebuild_verification": {
+      "compressed_payload_and_base_and_reconstructed_hashes_match": true,
+      "trained_parameter_hashes": {
+        "model.layers.10.mlp.down_proj.weight": "7b68187c821675b4a8eb4b0e54e23d21fb64a9c3ae1342816f8dd3cabea27bb6",
+        "model.layers.11.mlp.down_proj.weight": "5da03bb6f40ee3fb29f14b0ed0a55ac08ec4be5359e0c5380733be86a9f5242f",
+        "model.layers.12.mlp.down_proj.weight": "1f88c94b3b6ba7e8f73947ddac779dc9cade098c01c23630552759d0132afa3f"
+      },
+      "bytes": 74022192,
+      "free_disk_bytes": 30012018688
+    },
+    "rmu80_full_runtime_fingerprint": "06fc83a6bd5dec105e2de6fde7aa94ab75af0dee562b3a7b9de4a034c7503ea3",
+    "status": "payloads_present_in_local_git_lfs_cache_not_in_delivery_package; remote upload/retrieval unverified"
+  },
+  "comparison_trajectory_checkpoints": [
+    {
+      "step": 40,
+      "checkpoint_path_local_only": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-40",
+      "parameter_count": 3,
+      "payload_bytes": 71076410,
+      "remote_verified": false,
+      "role": "same continuous120 trajectory; comparison attachment, not an independently trained model"
+    },
+    {
+      "step": 80,
+      "checkpoint_path_local_only": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80",
+      "parameter_count": 3,
+      "payload_bytes": 74022192,
+      "remote_verified": false,
+      "role": "same continuous120 trajectory; comparison attachment, not an independently trained model"
+    },
+    {
+      "step": 120,
+      "checkpoint_path_local_only": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-120",
+      "parameter_count": 3,
+      "payload_bytes": 75038731,
+      "remote_verified": false,
+      "role": "same continuous120 trajectory; comparison attachment, not an independently trained model"
+    }
+  ],
+  "tokenizer": {
+    "files": [
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/merges.txt",
+        "size_bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/tokenizer.json",
+        "size_bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/tokenizer_config.json",
+        "size_bytes": 9377,
+        "sha256": "a62ff0a2472a0fa1b8eaabcb57c59b58afa42a22831dc141400b6e0cf2b65ce3",
+        "status": "present_locally_not_transferred"
+      },
+      {
+        "path": "models/Qwen3-4B-Instruct-2507/vocab.json",
+        "size_bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "status": "present_locally_not_transferred"
+      }
+    ],
+    "chat_template_sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326",
+    "status": "present_locally_not_transferred; supplied with official base model"
+  },
+  "serving_and_loading": {
+    "config_paths": [
+      "models/Qwen3-4B-Instruct-2507/config.json",
+      "models/Qwen3-4B-Instruct-2507/generation_config.json"
+    ],
+    "reconstruction_entry": "scripts/rmu_adaptation_utils.py::load_delta",
+    "loading_order": [
+      "load the exact pinned base model",
+      "verify base tensor fingerprint",
+      "resolve and verify each XOR payload",
+      "XOR-reconstruct the three BF16 tensors",
+      "load the matching base tokenizer"
+    ],
+    "repository_loader_notes": "The repository checkout contains Git LFS pointer text at delta paths. The actual compressed bytes are resolved by load_delta from local .git/lfs/objects after pointer/OID verification.",
+    "reconstruction_command": "From project root: load the pinned local base with AutoModelForCausalLM.from_pretrained('models/Qwen3-4B-Instruct-2507', dtype=torch.bfloat16, local_files_only=True, attn_implementation='sdpa', device_map='cuda'); then call load_delta(model, Path('open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80')). The loader checks the complete base fingerprint, compressed SHA-256, XOR reconstruction, and trained tensor hashes.",
+    "existing_verification_is_reused": true,
+    "reverification_run_during_delivery_prep": false,
+    "optimizer_state_saved": false
+  },
+  "other_components": [
+    {
+      "name": "Qwen3Guard-Gen-0.6B",
+      "role": "inference-time external safety classifier",
+      "repo_id": "Qwen/Qwen3Guard-Gen-0.6B",
+      "revision": "fada3b2f655b89601929198343c94cd2f64d93cc",
+      "license": "apache-2.0",
+      "local_cache": "cache/huggingface/...",
+      "transferred": false,
+      "required_for_plain_RMU_model": false
+    },
+    {
+      "name": "allenai/wildguard 7B",
+      "role": "offline evaluation judge only; not required by serving",
+      "revision": "cbba4823f3e8020e5a74a5e29bf85072def6f2ff",
+      "license": "Apache-2.0",
+      "local_cache": "cache/huggingface/...",
+      "transferred": false,
+      "required_for_serving": false
+    }
+  ],
+  "loading_environment": {
+    "python": "3.11.17",
+    "torch": "2.9.1+cu128",
+    "transformers": "5.5.4",
+    "accelerate": "1.13.0",
+    "datasets": "3.0.1",
+    "lm_eval": "0.4.11",
+    "deepspeed": "0.15.4",
+    "gpu_recorded": "name, driver_version, memory.total [MiB]\nNVIDIA GeForce RTX 4090 D, 595.91.07, 24564 MiB",
+    "status": "environment exists locally; not transferred as a self-contained environment"
+  },
+  "delivery_boundary": "An absolute local path, symlink, or LFS pointer in source control is not a delivered weight file. No large weight or data payload is copied into this package."
+}

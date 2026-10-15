@@ -1,0 +1,362 @@
+{
+  "schema_version": "2026-10-15",
+  "training_run_id": "h12_a2_s32_seed42_continuous120",
+  "source_config_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/training_config.json",
+  "source_actual_training_arguments_path": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/actual_training_arguments.json",
+  "source_run_path_scope": "project-relative references; source project root on the training host",
+  "config": {
+    "mode": "unlearn",
+    "task_name": "h12_a2_s32_seed42_continuous120",
+    "model": {
+      "model_args": {
+        "pretrained_model_name_or_path": "$PROJECT_ROOT/models/Qwen3-4B-Instruct-2507",
+        "attn_implementation": "sdpa",
+        "torch_dtype": "bfloat16",
+        "local_files_only": true,
+        "use_cache": false
+      },
+      "tokenizer_args": {
+        "pretrained_model_name_or_path": "$PROJECT_ROOT/models/Qwen3-4B-Instruct-2507",
+        "local_files_only": true
+      },
+      "template_args": {
+        "apply_chat_template": true,
+        "system_prompt": "You are a helpful assistant.",
+        "system_prompt_with_special_tokens": "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n",
+        "user_start_tag": "<|im_start|>user\n",
+        "user_end_tag": "<|im_end|>\n",
+        "asst_start_tag": "<|im_start|>assistant\n",
+        "asst_end_tag": "<|im_end|>\n"
+      }
+    },
+    "trainer": {
+      "handler": "RMU",
+      "args": {
+        "per_device_train_batch_size": 1,
+        "per_device_eval_batch_size": 16,
+        "gradient_accumulation_steps": 16,
+        "learning_rate": 5e-05,
+        "bf16": true,
+        "bf16_full_eval": true,
+        "logging_steps": 1,
+        "output_dir": "$PROJECT_ROOT/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120",
+        "logging_dir": "$PROJECT_ROOT/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/logs",
+        "report_to": "none",
+        "ddp_find_unused_parameters": "None",
+        "gradient_checkpointing": false,
+        "optim": "adamw_torch",
+        "save_strategy": "no",
+        "save_only_model": true,
+        "weight_decay": 0.0,
+        "do_train": true,
+        "do_eval": false,
+        "eval_on_start": false,
+        "eval_strategy": "no",
+        "num_train_epochs": 10,
+        "seed": 42,
+        "eval_steps": 0.5,
+        "max_steps": 120,
+        "lr_scheduler_type": "constant",
+        "data_seed": 42,
+        "remove_unused_columns": false,
+        "max_grad_norm": 1.0,
+        "warmup_steps": 0
+      },
+      "method_args": {
+        "gamma": 1.0,
+        "alpha": 2,
+        "retain_loss_type": "EMBED_DIFF",
+        "steering_coeff": 32,
+        "module_regex": "model\\.layers\\.12",
+        "trainable_params_regex": [
+          "model\\.layers\\.(10|11|12)\\.mlp\\.down_proj\\.weight"
+        ]
+      }
+    },
+    "data": {
+      "forget": {
+        "WMDP_forget": {
+          "handler": "TokenBlockDataset",
+          "args": {
+            "hf_args": {
+              "path": "json",
+              "data_files": "../data/processed/bio_v1/formal_blocks_v1/forget/train.jsonl",
+              "split": "train"
+            },
+            "text_key": "text",
+            "max_length": 256
+          }
+        }
+      },
+      "retain": {
+        "WMDP_retain": {
+          "handler": "TokenBlockDataset",
+          "args": {
+            "hf_args": {
+              "path": "json",
+              "data_files": "../data/processed/bio_v1/formal_blocks_v1/retain/train.jsonl",
+              "split": "train"
+            },
+            "text_key": "text",
+            "max_length": 256
+          }
+        }
+      },
+      "anchor": "forget"
+    },
+    "collator": {
+      "DataCollatorForSupervisedDataset": {
+        "handler": "DataCollatorForSupervisedDataset",
+        "args": {
+          "padding_side": "left",
+          "index": "index"
+        }
+      }
+    },
+    "paths": {
+      "root_dir": ".",
+      "data_dir": "./data/",
+      "datasets": "./configs/data/datasets",
+      "output_dir": "$PROJECT_ROOT/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120",
+      "work_dir": "$PROJECT_ROOT/open-unlearning"
+    },
+    "data_split": "bio",
+    "eval": null,
+    "validation": {
+      "every_steps": 10,
+      "forget_file": "../data/processed/bio_v1/formal_blocks_v1/forget/validation.jsonl",
+      "retain_file": "../data/processed/bio_v1/formal_blocks_v1/retain/validation.jsonl",
+      "selection_rule": "Locked continuous trajectory:40/80/120; no score-based changes"
+    }
+  },
+  "actual_training_arguments": {
+    "output_dir": "$PROJECT_ROOT/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120",
+    "per_device_train_batch_size": 1,
+    "num_train_epochs": 10,
+    "max_steps": 120,
+    "learning_rate": 5e-05,
+    "lr_scheduler_type": "constant",
+    "lr_scheduler_kwargs": null,
+    "warmup_steps": 0,
+    "optim": "adamw_torch",
+    "optim_args": null,
+    "weight_decay": 0.0,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "optim_target_modules": null,
+    "gradient_accumulation_steps": 16,
+    "average_tokens_across_devices": true,
+    "max_grad_norm": 1.0,
+    "label_smoothing_factor": 0.0,
+    "bf16": true,
+    "fp16": false,
+    "bf16_full_eval": true,
+    "fp16_full_eval": false,
+    "tf32": null,
+    "gradient_checkpointing": false,
+    "gradient_checkpointing_kwargs": null,
+    "torch_compile": false,
+    "torch_compile_backend": null,
+    "torch_compile_mode": null,
+    "use_liger_kernel": false,
+    "liger_kernel_config": null,
+    "use_cache": false,
+    "neftune_noise_alpha": null,
+    "torch_empty_cache_steps": null,
+    "auto_find_batch_size": false,
+    "logging_strategy": "steps",
+    "logging_steps": 1,
+    "logging_first_step": false,
+    "log_on_each_node": true,
+    "logging_nan_inf_filter": true,
+    "include_num_input_tokens_seen": "no",
+    "log_level": "passive",
+    "log_level_replica": "warning",
+    "disable_tqdm": false,
+    "report_to": [],
+    "run_name": null,
+    "project": "huggingface",
+    "trackio_space_id": "trackio",
+    "eval_strategy": "no",
+    "eval_steps": 0.5,
+    "eval_delay": 0,
+    "per_device_eval_batch_size": 16,
+    "prediction_loss_only": false,
+    "eval_on_start": false,
+    "eval_do_concat_batches": true,
+    "eval_use_gather_object": false,
+    "eval_accumulation_steps": null,
+    "include_for_metrics": [],
+    "batch_eval_metrics": false,
+    "save_only_model": true,
+    "save_strategy": "no",
+    "save_steps": 500,
+    "save_on_each_node": false,
+    "save_total_limit": null,
+    "enable_jit_checkpoint": false,
+    "push_to_hub": false,
+    "hub_token": "<HUB_TOKEN>",
+    "hub_private_repo": null,
+    "hub_model_id": null,
+    "hub_strategy": "every_save",
+    "hub_always_push": false,
+    "hub_revision": null,
+    "load_best_model_at_end": false,
+    "metric_for_best_model": null,
+    "greater_is_better": null,
+    "ignore_data_skip": false,
+    "restore_callback_states_from_checkpoint": false,
+    "full_determinism": false,
+    "seed": 42,
+    "data_seed": 42,
+    "use_cpu": false,
+    "accelerator_config": {
+      "split_batches": false,
+      "dispatch_batches": null,
+      "even_batches": true,
+      "use_seedable_sampler": true,
+      "non_blocking": false,
+      "gradient_accumulation_kwargs": null
+    },
+    "parallelism_config": null,
+    "dataloader_drop_last": false,
+    "dataloader_num_workers": 0,
+    "dataloader_pin_memory": true,
+    "dataloader_persistent_workers": false,
+    "dataloader_prefetch_factor": null,
+    "remove_unused_columns": false,
+    "label_names": null,
+    "train_sampling_strategy": "random",
+    "length_column_name": "length",
+    "ddp_find_unused_parameters": "None",
+    "ddp_bucket_cap_mb": null,
+    "ddp_broadcast_buffers": null,
+    "ddp_backend": null,
+    "ddp_timeout": 1800,
+    "fsdp": [],
+    "fsdp_config": {
+      "min_num_params": 0,
+      "xla": false,
+      "xla_fsdp_v2": false,
+      "xla_fsdp_grad_ckpt": false
+    },
+    "deepspeed": null,
+    "debug": [],
+    "skip_memory_metrics": true,
+    "do_train": true,
+    "do_eval": false,
+    "do_predict": false,
+    "resume_from_checkpoint": null,
+    "warmup_ratio": null,
+    "logging_dir": "$PROJECT_ROOT/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/logs",
+    "local_rank": -1
+  },
+  "run_relationship": {
+    "max_steps": 120,
+    "selected_checkpoint_step": 80,
+    "checkpoint_steps": [
+      40,
+      80,
+      120
+    ],
+    "checkpoint_is_from_continuous_run": true,
+    "checkpoint_is_independent_80_step_run": false,
+    "configured_num_train_epochs": 10,
+    "actual_epoch_at_selected_step": 0.625
+  },
+  "parameter_update": {
+    "hook_module_pattern": "model\\.layers\\.12",
+    "hook_module_indexing": "decoder block index is zero-based; model.layers.12 is the 13th block",
+    "captured_activation": "matched transformer block output via forward hook",
+    "updated_parameter_patterns": [
+      "model\\.layers\\.(10|11|12)\\.mlp\\.down_proj\\.weight"
+    ],
+    "actual_parameter_names": [
+      "model.layers.10.mlp.down_proj.weight",
+      "model.layers.11.mlp.down_proj.weight",
+      "model.layers.12.mlp.down_proj.weight"
+    ],
+    "parameter_count": 74711040,
+    "alpha": 2,
+    "alpha_meaning": "RMU retain representation-loss weight; not LoRA alpha",
+    "lora_rank": null,
+    "lora_alpha": null,
+    "lora_dropout": null
+  },
+  "objective": {
+    "method": "pure RMU",
+    "forget_loss": "masked per-example MSE between hooked forget activation and fixed random normalized direction scaled by steering coefficient",
+    "retain_loss": "masked per-example MSE between train model and frozen reference model hooked activations",
+    "total_loss": "gamma * forget_loss + alpha * retain_loss",
+    "gamma": 1.0,
+    "retain_loss_type": "EMBED_DIFF",
+    "steering_coefficient": 32,
+    "control_vector": {
+      "path_local_only": "open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/control_vector.json",
+      "sha256": "fc91111ba04258c4d6055707062f89fa68faf1e5fdde9f89fee0dc5cc77b27d4",
+      "l2_norm": 32.0,
+      "unit_direction_sha256": "4ce2cff959ea65bf75a4ed391c3db0bfae83aa5f226a110217532b310565a967"
+    },
+    "padding_mask": "labels == -100 excluded from representation loss; attention mask also recorded in collator",
+    "answer_targets": null,
+    "answer_target_note": "RMU used token blocks and representation objectives; no standard Q/A target answer was created."
+  },
+  "optimization": {
+    "optimizer": "adamw_torch",
+    "learning_rate": 5e-05,
+    "weight_decay": 0.0,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 16,
+    "effective_examples_per_update_per_role": 16,
+    "max_grad_norm": 1.0,
+    "lr_scheduler_type": "constant",
+    "warmup_steps": 0,
+    "sequence_length_tokens": 256,
+    "seed": 42,
+    "data_seed": 42,
+    "precision": "bfloat16",
+    "attention_implementation": "sdpa",
+    "gradient_checkpointing": false
+  },
+  "checkpoint_policy": {
+    "trainer_save_strategy": "no",
+    "project_delta_callback_checkpoint_steps": [
+      40,
+      80,
+      120
+    ],
+    "selected_checkpoint_step": 80,
+    "optimizer_state_saved": false,
+    "exact_training_resume_supported": false
+  },
+  "code": {
+    "commit": "ff618f4d83daa7dda4da5ddff765b5fa7505cb60",
+    "source_sha256": {
+      "scripts/run_rmu_step_comparison.py": "b1dae21d10d489bf5c93ab183818c119eb1ab3f4317b6831a47083cc3ab4de75",
+      "scripts/rmu_step_common.py": "1df67045c72d4d185b0c0070a126d63d6f890e4479afcc3cb939e927aa534b86",
+      "scripts/rmu_adaptation_utils.py": "bb957e9f02f863948ce7c4860519a9c5b16bcfbec7a47b70c7adc63557ee79db",
+      "scripts/rmu_validation.py": "2305a431cc66cac398b47a74391b780426f37b20b5667712ff29a45b2b7c61c5",
+      "scripts/run_rmu_formal.py": "d0735ec9328872412e13c811c2964ed81364c73708826ed8522f917186d4ef58",
+      "scripts/run_rmu_adaptation.py": "4a36e64052e704f7126be0e3647a89f633f4e319afa20cf800df8efb5dfe0775",
+      "open-unlearning/src/trainer/unlearn/rmu.py": "4b4a7b19f590bcd14e8fec83f639f5f11e8df48321dfafa65a326ae7de27e82e"
+    },
+    "launch_command": "HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 OMP_NUM_THREADS=2 envs/unlearning/bin/python -u scripts/run_rmu_step_comparison.py --run",
+    "versions": {
+      "torch": "2.9.1+cu128",
+      "transformers": "5.5.4",
+      "accelerate": "1.13.0",
+      "datasets": "3.0.1",
+      "lm_eval": "0.4.11",
+      "deepspeed": "0.15.4"
+    },
+    "python": "3.11.17"
+  },
+  "unrecorded_parameters": {
+    "null_fields": [
+      "LoRA parameters (method not used)",
+      "wall-time fields not present in a source metric row"
+    ],
+    "note": "No missing metric values were interpolated; actual resolved Trainer arguments are included above."
+  }
+}

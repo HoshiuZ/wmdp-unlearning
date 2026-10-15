@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,"Noto Sans CJK SC",sans-serif;fill:#18212f}.title{font-size:23px;font-weight:bold}.sub{font-size:14px}.axis{font-size:13px}.grid{stroke:#d9dee8;stroke-width:1}.bio{stroke:#c4433b;fill:none;stroke-width:3}.mmlu{stroke:#2463a6;fill:none;stroke-width:3}.dotb{fill:#c4433b}.dotm{fill:#2463a6}</style>
+<text x="480" y="34" text-anchor="middle" class="title">连续120步轨迹：RMU步数与基准准确率</text>
+<text x="480" y="58" text-anchor="middle" class="sub">同一训练运行在40、80、120步保存；80步为主交付检查点</text>
+<text x="18" y="173" transform="rotate(-90 18 173)" text-anchor="middle" class="axis">WMDP-Bio准确率（%）</text>
+<text x="18" y="395" transform="rotate(-90 18 395)" text-anchor="middle" class="axis">MMLU准确率（%）</text>
+<line x1="90" y1="240.0" x2="920" y2="240.0" class="grid"/><text x="78" y="244.0" text-anchor="end" class="axis">40</text>
+<line x1="90" y1="200.0" x2="920" y2="200.0" class="grid"/><text x="78" y="204.0" text-anchor="end" class="axis">50</text>
+<line x1="90" y1="160.0" x2="920" y2="160.0" class="grid"/><text x="78" y="164.0" text-anchor="end" class="axis">60</text>
+<line x1="90" y1="120.0" x2="920" y2="120.0" class="grid"/><text x="78" y="124.0" text-anchor="end" class="axis">70</text>
+<line x1="90" y1="451.2" x2="920" y2="451.2" class="grid"/><text x="78" y="455.2" text-anchor="end" class="axis">65</text>
+<line x1="90" y1="413.8" x2="920" y2="413.8" class="grid"/><text x="78" y="417.8" text-anchor="end" class="axis">67</text>
+<line x1="90" y1="376.2" x2="920" y2="376.2" class="grid"/><text x="78" y="380.2" text-anchor="end" class="axis">69</text>
+<line x1="90" y1="338.8" x2="920" y2="338.8" class="grid"/><text x="78" y="342.8" text-anchor="end" class="axis">71</text>
+<line x1="90.0" y1="88" x2="90.0" y2="470" stroke="#eef0f4"/>
+<text x="90.0" y="493" text-anchor="middle" class="axis">0</text>
+<line x1="366.7" y1="88" x2="366.7" y2="470" stroke="#eef0f4"/>
+<text x="366.7" y="493" text-anchor="middle" class="axis">40</text>
+<line x1="643.3" y1="88" x2="643.3" y2="470" stroke="#eef0f4"/>
+<text x="643.3" y="493" text-anchor="middle" class="axis">80</text>
+<line x1="920.0" y1="88" x2="920.0" y2="470" stroke="#eef0f4"/>
+<text x="920.0" y="493" text-anchor="middle" class="axis">120</text>
+<polyline points="90.0,104.6 366.7,177.8 643.3,229.1 920.0,235.3" class="bio"/>
+<polyline points="90.0,344.9 366.7,385.7 643.3,414.7 920.0,428.6" class="mmlu"/>
+<circle cx="90.0" cy="104.6" r="5" class="dotb"/>
+<text x="90.0" y="95.6" text-anchor="middle" class="axis">73.84</text>
+<circle cx="90.0" cy="344.9" r="5" class="dotm"/>
+<text x="90.0" y="335.9" text-anchor="middle" class="axis">70.67</text>
+<circle cx="366.7" cy="177.8" r="5" class="dotb"/>
+<text x="366.7" y="168.8" text-anchor="middle" class="axis">55.54</text>
+<circle cx="366.7" cy="385.7" r="5" class="dotm"/>
+<text x="366.7" y="376.7" text-anchor="middle" class="axis">68.49</text>
+<circle cx="643.3" cy="229.1" r="5" class="dotb"/>
+<text x="643.3" y="220.1" text-anchor="middle" class="axis">42.73</text>
+<circle cx="643.3" cy="414.7" r="5" class="dotm"/>
+<text x="643.3" y="405.7" text-anchor="middle" class="axis">66.95</text>
+<circle cx="920.0" cy="235.3" r="5" class="dotb"/>
+<text x="920.0" y="226.3" text-anchor="middle" class="axis">41.16</text>
+<circle cx="920.0" cy="428.6" r="5" class="dotm"/>
+<text x="920.0" y="419.6" text-anchor="middle" class="axis">66.21</text>
+<text x="505" y="516" text-anchor="middle" class="axis">训练轨迹步数</text>
+<line x1="665" y1="78" x2="695" y2="78" class="bio"/><text x="703" y="83" class="axis">WMDP-Bio（越低表示该基准准确率下降）</text>
+<line x1="665" y1="302" x2="695" y2="302" class="mmlu"/><text x="703" y="307" class="axis">MMLU（越低表示通用能力损失）</text>
+</svg>

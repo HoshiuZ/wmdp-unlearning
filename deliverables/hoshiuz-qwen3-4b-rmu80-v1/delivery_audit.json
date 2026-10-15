@@ -1,0 +1,89 @@
+{
+  "schema_version": "2026-10-15",
+  "prepared_at": "2026-10-15T04:19:28Z",
+  "source_commit": "f81ebe0e34cd8b650010d145a29d5820d036b5db",
+  "workspace_branch": "main",
+  "checks": {
+    "required_standard_files_present_before_manifest": true,
+    "required_standard_directories_have_readme": true,
+    "JSON_UTF8_and_finite_numbers": true,
+    "JSONL_UTF8_and_finite_numbers": true,
+    "timestamps_timezone_or_null": true,
+    "package_files_hashed_and_sized": true,
+    "package_files_record_counts_where_JSONL": true,
+    "credential_scan": {
+      "pattern_hits": 0,
+      "hit_paths": []
+    },
+    "raw_text_scan": "metadata builder reads no prompt/answer bodies or per-item assisted labels",
+    "percent_metric_range": {
+      "percentages_0_to_100": true,
+      "risk_rates_0_to_1": true
+    },
+    "SVG_XML_parse": true,
+    "required_directory_readmes": true,
+    "model_rebuild_evidence_reused": true,
+    "model_rebuild_repeated_now": false,
+    "remote_LFS_verified": false,
+    "platform_submitted": false
+  },
+  "resources_from_archived_runs": {
+    "training_peak_allocated_GiB": 17.952208042144775,
+    "training_peak_reserved_GiB": 19.8828125,
+    "four_group_generation_and_guard_sessions": [
+      {
+        "model": "original",
+        "phase": "pilot",
+        "peak_allocated_GiB": 10.004799365997314,
+        "peak_reserved_GiB": 11.94140625,
+        "wall_seconds": 39.09667629329488
+      },
+      {
+        "model": "rmu80",
+        "phase": "pilot",
+        "peak_allocated_GiB": 10.004799365997314,
+        "peak_reserved_GiB": 11.90625,
+        "wall_seconds": 69.00851076981053
+      },
+      {
+        "model": "qwen3guard",
+        "phase": "pilot",
+        "peak_allocated_GiB": 1.277073860168457,
+        "peak_reserved_GiB": 1.5546875,
+        "wall_seconds": 8.03838335769251
+      },
+      {
+        "model": "original",
+        "phase": "full",
+        "peak_allocated_GiB": 10.964928150177002,
+        "peak_reserved_GiB": 16.537109375,
+        "wall_seconds": 1623.5378076010384
+      },
+      {
+        "model": "rmu80",
+        "phase": "full",
+        "peak_allocated_GiB": 10.964928150177002,
+        "peak_reserved_GiB": 16.478515625,
+        "wall_seconds": 1625.4330790317617
+      },
+      {
+        "model": "qwen3guard",
+        "phase": "full",
+        "peak_allocated_GiB": 1.3185882568359375,
+        "peak_reserved_GiB": 1.63671875,
+        "wall_seconds": 656.1048400998116
+      }
+    ],
+    "last_recorded_judge_disk_free_bytes": 13815836672,
+    "current_disk_free_bytes": 13814521856
+  },
+  "package_size_excludes": [
+    "base weights",
+    "RMU delta payloads",
+    "tokenizer payloads",
+    "datasets",
+    "raw requests/answers",
+    "per-item auxiliary labels and source mapping"
+  ],
+  "self_hash_note": "manifest.json omits its own size/hash to avoid a self-referential manifest; all other package files are listed."
+}
