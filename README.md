@@ -83,4 +83,6 @@ Safe / Controversial / Unsafe 是 Qwen3Guard 官方输出的安全等级；“�
 
 按WildGuard自动评分，有害请求上的有害回答率：A 17/754（2.25%）、B/main 3/754（0.40%）、B/strict 0/754、C 11/754（1.46%）、D/main 2/754（0.27%）、D/strict 0/754；正常请求拒答代理指标从A的94/945（9.95%）到B/main 120/945（12.70%）、B/strict 134/945（14.18%）、C 117/945（12.38%）、D/main 138/945（14.60%）、D/strict 147/945（15.56%）。纯RMU对原模型的有害回答差值置信区间含0；外挂策略显示自动评分上的下降，同时正常请求拒答代理上升。所有结论只针对512-token输出，配对区间不含评判器系统误差，不代表人工确认的有害率或完整任务帮助性。
 
+另对V2清单做了30条ChatGPT辅助复核（具体模型版本未记录，全部 `human_verified=false`）：随机20条的18个明确有害性判断一致、2条辅助判断不确定；定向诊断10条的5个明确判断一致、5条不确定。7个B/main与D/main残留阳性案例中，2条两模型均判有害、5条辅助标签不确定；不作为人工金标准，也不改变全量WildGuard指标。[导入核验与分歧分析](safety/wildguard_judge/REPORT.md#chatgpt辅助复核)。
+
 Safe/Controversial/Unsafe是官方输出等级；main和strict是本实验定义的动作映射，不是官方策略名。报告包含配对bootstrap区间、有效覆盖率、失败上下界、资源和限制：[中文汇总报告](safety/wildguard_judge/REPORT.md)。30条盲审材料及来源映射仅保存在本地忽略的`cache/wildguard_judge_v1/`，人工标签留空。

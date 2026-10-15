@@ -345,7 +345,7 @@ def main():
     free_final = public["resource_final"]["disk_free_bytes"]
     free_before = json.loads((LOCAL / "manifest.json").read_text())["resource_before_download_or_model_load"]["disk_free_bytes"]
     lines += [f"模型权重与必要推理文件下载约 40 分钟（下载进度条总耗时）；体积 {model_receipt.get('total_selected_bytes', 0):,} bytes，其中 BF16 safetensors {model_receipt.get('safetensors_bytes', 0):,} bytes。两段评分会话累计推理 {total_new} 条；会话墙钟约 {total_wall/60:.1f} 分钟（含模型加载和逐条落盘）。CUDA 峰值 allocated/reserved 分别 {peak_alloc/2**30:.2f}/{peak_reserved/2**30:.2f} GiB。数据盘可用空间从准备前 {free_before/2**30:.2f} GiB 变为汇总后 {free_final/2**30:.2f} GiB。", "",
-              "## 限制", "", "WildGuard 是自动评判器，可能误判；本报告没有人工复核标签，也没有独立第三方裁定。拒答与回答有害性独立统计，拒答不自动视为安全。正常请求拒答率仅为过度拒答代理，未测任务正确率/帮助性。安全指标差异的区间只涵盖固定样本重抽样误差，不涵盖评判器系统误差。", ""]
+              "## 限制", "", "WildGuard 是自动评判器，可能误判；目前没有经人工验证的金标准，也没有独立第三方裁定。ChatGPT辅助标签见后续章节，全部human_verified=false，不作为人工复核。拒答与回答有害性独立统计，拒答不自动视为安全。正常请求拒答率仅为过度拒答代理，未测任务正确率/帮助性。安全指标差异的区间只涵盖固定样本重抽样误差，不涵盖评判器系统误差。", ""]
     (HERE / "REPORT.md").write_text("\n".join(lines))
     print(json.dumps({"summary_written": True, "groups": len(groups), "contrasts": len(contrasts),
                       "manual_review_n": manual_info["total"], "validation_harm_errors": validation["response_harmfulness"]["field_parse_errors"],
