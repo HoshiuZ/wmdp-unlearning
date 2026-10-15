@@ -148,7 +148,7 @@ def chat(tokenizer, model, context_limit: int, max_new_tokens: int) -> None:
     print("RMU80已加载。输入 /clear 清空上下文，输入 /exit 退出。", flush=True)
     while True:
         try:
-            question = input("你：")
+            question = input("\n你> ")
         except (EOFError, KeyboardInterrupt):
             print("\n已退出。", flush=True)
             return
@@ -190,6 +190,7 @@ def chat(tokenizer, model, context_limit: int, max_new_tokens: int) -> None:
 
         inputs = inputs.to(model.device)
         try:
+            print("模型正在生成回答，请稍候…", flush=True)
             with torch.inference_mode():
                 output = model.generate(
                     **inputs,
