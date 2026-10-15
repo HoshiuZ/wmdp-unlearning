@@ -31,9 +31,19 @@ def digest_json(value: object) -> str:
     return hashlib.sha256(encoded).hexdigest()
 
 
-def verify_fingerprints(model, tensor_hash, expected_path: Path, expected_digest: str) -> int:
+def verify_fingerprints(
+    model, tensor_hash, expected_path: Path, expected_digest: str, label: str
+) -> int:
     expected = json.loads(expected_path.read_text(encoding="utf-8"))
-    actual = {name: tensor_hash(parameter) for name, parameter in model.named_parameters()}
+    named_parameters = list(model.named_parameters())
+    actual = {}
+    for index, (name, parameter) in enumerate(named_parameters, start=1):
+        actual[name] = tensor_hash(parameter)
+        if index % 40 == 0 or index == len(named_parameters):
+            print(
+                f"{label}参数指纹校验：{index}/{len(named_parameters)}",
+                flush=True,
+            )
     if actual != expected:
         mismatches = sorted(
             name
@@ -66,6 +76,7 @@ def load_rmu80():
     if not base_fingerprints.is_file() or not rmu_fingerprints.is_file():
         raise FileNotFoundError("缺少四组实验保存的基模或RMU80参数指纹文件")
 
+    print("正在读取本地tokenizer…", flush=True)
     tokenizer = AutoTokenizer.from_pretrained(BASE, local_files_only=True)
     tokenizer.padding_side = "left"
     template = tokenizer.chat_template
@@ -73,6 +84,7 @@ def load_rmu80():
     if template_sha != protocol["chat_template_sha256"]:
         raise RuntimeError("本地tokenizer聊天模板与四组实验记录的模板指纹不一致")
 
+    print("正在从本地加载基模权重（BF16，SDPA）…", flush=True)
     model = AutoModelForCausalLM.from_pretrained(
         BASE,
         dtype=torch.bfloat16,
@@ -86,18 +98,23 @@ def load_rmu80():
     sys.path.insert(0, str(ROOT / "scripts"))
     from rmu_adaptation_utils import load_delta, tensor_hash
 
+    print("基模权重已加载，开始逐项校验基模指纹…", flush=True)
     base_count = verify_fingerprints(
         model,
         tensor_hash,
         base_fingerprints,
         protocol["base_fingerprint"],
+        "基模",
     )
+    print("基模指纹通过，正在应用RMU80增量…", flush=True)
     load_delta(model, DELTA)
+    print("增量已应用，开始逐项校验RMU80指纹…", flush=True)
     rmu_count = verify_fingerprints(
         model,
         tensor_hash,
         rmu_fingerprints,
         protocol["rmu80_fingerprint"],
+        "RMU80",
     )
     if base_count != rmu_count:
         raise RuntimeError("基模与RMU80指纹参数数量不一致")
