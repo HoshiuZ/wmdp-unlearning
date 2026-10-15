@@ -1,7 +1,7 @@
 {
   "schema_version": "2026-10-15",
-  "prepared_at": "2026-10-15T04:19:28Z",
-  "source_commit": "f81ebe0e34cd8b650010d145a29d5820d036b5db",
+  "prepared_at": "2026-10-15T04:49:51Z",
+  "source_commit": "281d158656467955021d90fb98dc4dc61b42e9bd",
   "workspace_branch": "main",
   "checks": {
     "required_standard_files_present_before_manifest": true,
@@ -9,8 +9,15 @@
     "JSON_UTF8_and_finite_numbers": true,
     "JSONL_UTF8_and_finite_numbers": true,
     "timestamps_timezone_or_null": true,
+    "field_schema_validation": {
+      "status": "passed",
+      "dataset_rows": 8,
+      "capability_result_rows": 2,
+      "errors": []
+    },
     "package_files_hashed_and_sized": true,
-    "package_files_record_counts_where_JSONL": true,
+    "package_files_record_count_field_and_values": true,
+    "fraction_percentage_denominator_consistency": true,
     "credential_scan": {
       "pattern_hits": 0,
       "hit_paths": []
@@ -25,8 +32,41 @@
     "model_rebuild_evidence_reused": true,
     "model_rebuild_repeated_now": false,
     "remote_LFS_verified": false,
-    "platform_submitted": false
+    "platform_submitted": false,
+    "content_complete": false
   },
+  "content_gaps": [
+    {
+      "field": "model_card.base_model_version / model_artifacts.base_model.remote_revision",
+      "status": "unknown",
+      "reason": "基模最初下载时未记录上游不可变revision；目前以本地文件清单和参数指纹固定版本。"
+    },
+    {
+      "field": "training_datasets[].raw_count for cleaned article splits",
+      "status": "null_not_recorded",
+      "reason": "归档只记录forget/retain各自清洗前的合计数，未记录按train/validation拆分的清洗前数量。因此分割级raw_count为null，另列角色合计数和清洗后分割数。"
+    },
+    {
+      "field": "training_datasets[].license_or_authorization for retain data",
+      "status": "unresolved",
+      "reason": "retain语料归档revision及接收方再分发授权尚未从已有记录中确认。"
+    },
+    {
+      "field": "model_card.artifact_access.remote_retrievable",
+      "status": "null_unverified",
+      "reason": "未核实远端Git LFS对象可取回；本机缓存存在不代表远端可用。"
+    },
+    {
+      "field": "post_training.platform_method_enum / model_card.model_type enum mapping",
+      "status": "pending_recipient_platform",
+      "reason": "实际方法记录为RMU；machine_unlearning是本项目扩展表达，目标平台枚举尚未提供。"
+    },
+    {
+      "field": "manifest.submitted_at",
+      "status": "null_not_submitted",
+      "reason": "本阶段未向平台提交；实际转交前必须保持null。"
+    }
+  ],
   "resources_from_archived_runs": {
     "training_peak_allocated_GiB": 17.952208042144775,
     "training_peak_reserved_GiB": 19.8828125,
@@ -75,7 +115,7 @@
       }
     ],
     "last_recorded_judge_disk_free_bytes": 13815836672,
-    "current_disk_free_bytes": 13814521856
+    "current_disk_free_bytes": 13814185984
   },
   "package_size_excludes": [
     "base weights",

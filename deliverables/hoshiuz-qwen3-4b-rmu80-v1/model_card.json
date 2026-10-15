@@ -1,14 +1,19 @@
 {
   "schema_version": "2026-10-15",
   "model_id": "hoshiuz-qwen3-4b-rmu80-v1",
+  "model_name": "Qwen3-4B-Instruct-2507 RMU checkpoint at step 80",
+  "model_version": "rmu80-continuous120-step80",
   "name": "Qwen3-4B-Instruct-2507 RMU checkpoint at step 80",
   "version": "rmu80-continuous120-step80",
   "base_model_id": "qwen3-4b-instruct-2507",
   "base_model_name": "Qwen3-4B-Instruct-2507",
   "base_model_version": "local file SHA-256 manifest and full parameter fingerprint; official immutable revision was not recorded",
-  "model_type": "Qwen3ForCausalLM with a pure RMU parameter delta",
+  "model_type": "machine_unlearning",
+  "model_type_note": "Project-level extension describing RMU machine unlearning; target-platform enum mapping is unconfirmed. Architecture is recorded separately. The actual post-training method is RMU, not SFT or DPO.",
+  "post_training_method": "RMU",
   "provider": "HoshiuZ (RMU adaptation); base model by Qwen Team / Alibaba",
-  "parameter_count": 4022468096,
+  "parameter_count": "4,022,468,096",
+  "parameter_count_exact": 4022468096,
   "parameter_count_note": "Counted from local safetensors headers across 398 unique tensors; RMU changes 3 tensors in-place and adds no model parameters.",
   "architecture": {
     "model_type": "qwen3",
@@ -23,10 +28,27 @@
   "modalities": [
     "text"
   ],
+  "context_length": 262144,
   "context_length_tokens": 262144,
   "precision": "BF16 base tensors and BF16 XOR delta",
   "release_status": "research artifact; not yet transferred to a delivery platform or released as a self-contained model",
-  "artifact_access": "local-only payload references; recipient needs the exact base model and all RMU delta objects",
+  "artifact_access": {
+    "local_available": {
+      "base_model": true,
+      "rmu80_delta_payloads_in_local_lfs_cache": true,
+      "tokenizer": true
+    },
+    "remote_retrievable": null,
+    "remote_retrievable_status": "unverified; remote LFS upload and retrieval were not confirmed",
+    "included_in_delivery_package": false,
+    "transferred_to_platform": false,
+    "recipient_access_requirements": [
+      "authorized exact base model and tokenizer",
+      "all matching RMU80 XOR delta objects",
+      "project reconstruction loader and compatible runtime"
+    ],
+    "note": "The RMU80 artifact is a base-dependent lossless BF16 XOR+gzip delta, not standalone weights or LoRA. Local presence does not establish remote access or platform transfer."
+  },
   "license": {
     "base_model": "Apache-2.0",
     "derived_delta": "inherits base model license and applicable terms; distribution authorization not independently determined"

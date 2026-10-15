@@ -1,7 +1,39 @@
 {
   "schema_version": "2026-10-15",
-  "prepared_at": "2026-10-15T04:19:28Z",
+  "prepared_at": "2026-10-15T04:49:51Z",
   "not_platform_submitted": true,
+  "content_gaps": [
+    {
+      "field": "model_card.base_model_version / model_artifacts.base_model.remote_revision",
+      "status": "unknown",
+      "reason": "基模最初下载时未记录上游不可变revision；目前以本地文件清单和参数指纹固定版本。"
+    },
+    {
+      "field": "training_datasets[].raw_count for cleaned article splits",
+      "status": "null_not_recorded",
+      "reason": "归档只记录forget/retain各自清洗前的合计数，未记录按train/validation拆分的清洗前数量。因此分割级raw_count为null，另列角色合计数和清洗后分割数。"
+    },
+    {
+      "field": "training_datasets[].license_or_authorization for retain data",
+      "status": "unresolved",
+      "reason": "retain语料归档revision及接收方再分发授权尚未从已有记录中确认。"
+    },
+    {
+      "field": "model_card.artifact_access.remote_retrievable",
+      "status": "null_unverified",
+      "reason": "未核实远端Git LFS对象可取回；本机缓存存在不代表远端可用。"
+    },
+    {
+      "field": "post_training.platform_method_enum / model_card.model_type enum mapping",
+      "status": "pending_recipient_platform",
+      "reason": "实际方法记录为RMU；machine_unlearning是本项目扩展表达，目标平台枚举尚未提供。"
+    },
+    {
+      "field": "manifest.submitted_at",
+      "status": "null_not_submitted",
+      "reason": "本阶段未向平台提交；实际转交前必须保持null。"
+    }
+  ],
   "items": [
     {
       "item": "完整Qwen3-4B原始基模权重及配置",
@@ -59,5 +91,5 @@
       "recipient_action": "manifest.submitted_at remains null until an actual platform submission"
     }
   ],
-  "statement": "Current status is metadata/report prepared only. Complete model weights and data are not delivered to a platform."
+  "statement": "Metadata and reports are prepared only. The package is not content-complete: model weights and datasets have not been delivered to a platform."
 }

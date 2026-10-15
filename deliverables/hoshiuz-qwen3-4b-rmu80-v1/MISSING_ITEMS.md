@@ -17,4 +17,17 @@
 |PDF版中文报告|not_created|Markdown report is complete; no reliable Chinese PDF export was verified and no heavy toolchain was installed|
 |平台实际提交时间|not_submitted|manifest.submitted_at remains null until an actual platform submission|
 
+## 元数据内容待补或待确认
+
+格式字段已经按当前交付规范整理；下列内容仍缺失或待接收方确认，不能据此宣称包内容完整。
+
+|字段|状态|原因|
+|---|---|---|
+|`model_card.base_model_version / model_artifacts.base_model.remote_revision`|unknown|基模最初下载时未记录上游不可变revision；目前以本地文件清单和参数指纹固定版本。|
+|`training_datasets[].raw_count for cleaned article splits`|null_not_recorded|归档只记录forget/retain各自清洗前的合计数，未记录按train/validation拆分的清洗前数量。因此分割级raw_count为null，另列角色合计数和清洗后分割数。|
+|`training_datasets[].license_or_authorization for retain data`|unresolved|retain语料归档revision及接收方再分发授权尚未从已有记录中确认。|
+|`model_card.artifact_access.remote_retrievable`|null_unverified|未核实远端Git LFS对象可取回；本机缓存存在不代表远端可用。|
+|`post_training.platform_method_enum / model_card.model_type enum mapping`|pending_recipient_platform|实际方法记录为RMU；machine_unlearning是本项目扩展表达，目标平台枚举尚未提供。|
+|`manifest.submitted_at`|null_not_submitted|本阶段未向平台提交；实际转交前必须保持null。|
+
 RMU40/80/120增量仍在本机LFS缓存；本轮记录不证明GitHub端已可取回。数据权限、平台入口和服务部署均未由本阶段完成。

@@ -22,8 +22,470 @@
     "fingerprint": "06fc83a6bd5dec105e2de6fde7aa94ab75af0dee562b3a7b9de4a034c7503ea3"
   },
   "training_data": [
-    "rmu_formal_blocks_forget_train_rmu-formal-blocks-v1",
-    "rmu_formal_blocks_retain_train_rmu-formal-blocks-v1"
+    {
+      "dataset_id": "wmdp_bio_forget_cleaned_train_bio-clean-v1",
+      "dataset_name": "WMDP-Bio forget cleaned article corpus",
+      "dataset_version": "bio-clean-v1",
+      "split": "train",
+      "purpose": "source article pool used in preprocessing to construct fixed token blocks; not read directly by the selected RMU training run",
+      "source_type": "processed_project_dataset",
+      "source_detail": {
+        "source_dataset_id": "cais/wmdp-bio-forget-corpus",
+        "source_revision": "5a786ed1041e56fef2d4ed26c1239f12b73a68eb",
+        "source_description": "CAIS WMDP-Bio forget corpus; immutable source revision is recorded in the archived download manifest.",
+        "raw_role_total_before_cleaning_and_split": 24453,
+        "cleaned_records_in_this_split": 23220,
+        "preclean_split_specific_raw_count_recorded": false,
+        "direct_selected_run_article_reads": 0
+      },
+      "file_paths": [
+        "data/processed/bio_v1/forget/train.jsonl"
+      ],
+      "file_path_scope": "project-relative actual source path on the training host",
+      "file_paths_included_in_delivery_package": [
+        false
+      ],
+      "file_paths_included_note": "false means the source data file exists outside this metadata package and has not been transferred",
+      "file_format": "JSONL article records",
+      "raw_count": null,
+      "used_count": 2048,
+      "cleaning_pipeline_version": "bio-clean-v1",
+      "deduplication_method": "NFKC + casefold + whitespace normalization for exact SHA256 comparison; original casing and text preserved in output. Same DOI and verified near duplicates share a split; near duplicates are not deleted.",
+      "license_or_authorization": {
+        "license_or_terms": "gated; redistribution limited to authorized collaborator list",
+        "source_revision": "5a786ed1041e56fef2d4ed26c1239f12b73a68eb",
+        "recipient_authorization_status": "recipient authorization required; current package does not transfer data",
+        "redistribution_authorization": null,
+        "status_note": "No data is included in this package; recipient access and redistribution rights must be confirmed independently."
+      },
+      "test_overlap_result": {
+        "status": "partial_documented_screen_not_a_no_overlap_guarantee",
+        "evaluation_questions_checked": 15600,
+        "confirmed_matches": 0,
+        "method": "Aho-Corasick normalized question substring matching, plus three 8-word anchors for questions >=16 words. Exclude verbatim questions >=20 words and >=120 normalized chars; shorter exact/anchor matches are unreviewed candidates, not confirmed contamination.",
+        "reviewed_candidates": true,
+        "limitations": [
+          "Approximate duplicate candidate generation is sampled and cannot prove absence of semantic duplicates.",
+          "All flagged candidates were screened/reviewed, but paraphrases, answer-only overlap and unknown contamination may remain undetected.",
+          "Training loader/tokenization compatibility will be verified before RMU short run."
+        ]
+      },
+      "role": "forget",
+      "raw_count_note": "Split-specific pre-clean row count was not recorded. raw_role_total_before_cleaning_and_split records the known combined role count; it is not repeated as a per-split count.",
+      "available_cleaned_article_count": 23220,
+      "selected_source_articles_for_fixed_block_pool": 2048,
+      "actual_run_input_record_count": 0,
+      "actual_usage_note": "used_count is the number of source articles selected by preprocessing for the fixed block pool; the training process read the token-block JSONL rows below, not these article rows.",
+      "sha256": "75b1fc9ef9ea2b4388ffd037d1527548bdf4789e8c996c84ffe33f44a88b4a29",
+      "size_bytes": 720749094,
+      "transferred_with_package": false
+    },
+    {
+      "dataset_id": "wmdp_bio_forget_cleaned_validation_bio-clean-v1",
+      "dataset_name": "WMDP-Bio forget cleaned article corpus",
+      "dataset_version": "bio-clean-v1",
+      "split": "validation",
+      "purpose": "source article pool used in preprocessing to construct fixed token blocks; not read directly by the selected RMU training run",
+      "source_type": "processed_project_dataset",
+      "source_detail": {
+        "source_dataset_id": "cais/wmdp-bio-forget-corpus",
+        "source_revision": "5a786ed1041e56fef2d4ed26c1239f12b73a68eb",
+        "source_description": "CAIS WMDP-Bio forget corpus; immutable source revision is recorded in the archived download manifest.",
+        "raw_role_total_before_cleaning_and_split": 24453,
+        "cleaned_records_in_this_split": 1217,
+        "preclean_split_specific_raw_count_recorded": false,
+        "direct_selected_run_article_reads": 0
+      },
+      "file_paths": [
+        "data/processed/bio_v1/forget/validation.jsonl"
+      ],
+      "file_path_scope": "project-relative actual source path on the training host",
+      "file_paths_included_in_delivery_package": [
+        false
+      ],
+      "file_paths_included_note": "false means the source data file exists outside this metadata package and has not been transferred",
+      "file_format": "JSONL article records",
+      "raw_count": null,
+      "used_count": 64,
+      "cleaning_pipeline_version": "bio-clean-v1",
+      "deduplication_method": "NFKC + casefold + whitespace normalization for exact SHA256 comparison; original casing and text preserved in output. Same DOI and verified near duplicates share a split; near duplicates are not deleted.",
+      "license_or_authorization": {
+        "license_or_terms": "gated; redistribution limited to authorized collaborator list",
+        "source_revision": "5a786ed1041e56fef2d4ed26c1239f12b73a68eb",
+        "recipient_authorization_status": "recipient authorization required; current package does not transfer data",
+        "redistribution_authorization": null,
+        "status_note": "No data is included in this package; recipient access and redistribution rights must be confirmed independently."
+      },
+      "test_overlap_result": {
+        "status": "partial_documented_screen_not_a_no_overlap_guarantee",
+        "evaluation_questions_checked": 15600,
+        "confirmed_matches": 0,
+        "method": "Aho-Corasick normalized question substring matching, plus three 8-word anchors for questions >=16 words. Exclude verbatim questions >=20 words and >=120 normalized chars; shorter exact/anchor matches are unreviewed candidates, not confirmed contamination.",
+        "reviewed_candidates": true,
+        "limitations": [
+          "Approximate duplicate candidate generation is sampled and cannot prove absence of semantic duplicates.",
+          "All flagged candidates were screened/reviewed, but paraphrases, answer-only overlap and unknown contamination may remain undetected.",
+          "Training loader/tokenization compatibility will be verified before RMU short run."
+        ]
+      },
+      "role": "forget",
+      "raw_count_note": "Split-specific pre-clean row count was not recorded. raw_role_total_before_cleaning_and_split records the known combined role count; it is not repeated as a per-split count.",
+      "available_cleaned_article_count": 1217,
+      "selected_source_articles_for_fixed_block_pool": 64,
+      "actual_run_input_record_count": 0,
+      "actual_usage_note": "used_count is the number of source articles selected by preprocessing for the fixed block pool; the training process read the token-block JSONL rows below, not these article rows.",
+      "sha256": "032a9ae3d19468b8ee2eefa338bc4857614af10d1de35725e861caf3fcddc3ef",
+      "size_bytes": 37420261,
+      "transferred_with_package": false
+    },
+    {
+      "dataset_id": "wmdp_bio_retain_cleaned_train_bio-clean-v1",
+      "dataset_name": "WMDP-Bio retain cleaned article corpus",
+      "dataset_version": "bio-clean-v1",
+      "split": "train",
+      "purpose": "source article pool used in preprocessing to construct fixed token blocks; not read directly by the selected RMU training run",
+      "source_type": "processed_project_dataset",
+      "source_detail": {
+        "source_dataset_id": "WMDP Bio retain corpus in archived CAIS WMDP corpora archive",
+        "source_revision": null,
+        "source_description": "Retain data extracted from the archived WMDP corpora bundle; exact upstream dataset revision was not recorded.",
+        "raw_role_total_before_cleaning_and_split": 60887,
+        "cleaned_records_in_this_split": 57488,
+        "preclean_split_specific_raw_count_recorded": false,
+        "direct_selected_run_article_reads": 0
+      },
+      "file_paths": [
+        "data/processed/bio_v1/retain/train.jsonl"
+      ],
+      "file_path_scope": "project-relative actual source path on the training host",
+      "file_paths_included_in_delivery_package": [
+        false
+      ],
+      "file_paths_included_note": "false means the source data file exists outside this metadata package and has not been transferred",
+      "file_format": "JSONL article records",
+      "raw_count": null,
+      "used_count": 2048,
+      "cleaning_pipeline_version": "bio-clean-v1",
+      "deduplication_method": "NFKC + casefold + whitespace normalization for exact SHA256 comparison; original casing and text preserved in output. Same DOI and verified near duplicates share a split; near duplicates are not deleted.",
+      "license_or_authorization": {
+        "license_or_terms": "redistribution authorization not established in archived records",
+        "source_revision": null,
+        "recipient_authorization_status": "source revision and recipient redistribution authorization are unresolved",
+        "redistribution_authorization": null,
+        "status_note": "No data is included in this package; recipient access and redistribution rights must be confirmed independently."
+      },
+      "test_overlap_result": {
+        "status": "partial_documented_screen_not_a_no_overlap_guarantee",
+        "evaluation_questions_checked": 15600,
+        "confirmed_matches": 0,
+        "method": "Aho-Corasick normalized question substring matching, plus three 8-word anchors for questions >=16 words. Exclude verbatim questions >=20 words and >=120 normalized chars; shorter exact/anchor matches are unreviewed candidates, not confirmed contamination.",
+        "reviewed_candidates": true,
+        "limitations": [
+          "Approximate duplicate candidate generation is sampled and cannot prove absence of semantic duplicates.",
+          "All flagged candidates were screened/reviewed, but paraphrases, answer-only overlap and unknown contamination may remain undetected.",
+          "Training loader/tokenization compatibility will be verified before RMU short run."
+        ]
+      },
+      "role": "retain",
+      "raw_count_note": "Split-specific pre-clean row count was not recorded. raw_role_total_before_cleaning_and_split records the known combined role count; it is not repeated as a per-split count.",
+      "available_cleaned_article_count": 57488,
+      "selected_source_articles_for_fixed_block_pool": 2048,
+      "actual_run_input_record_count": 0,
+      "actual_usage_note": "used_count is the number of source articles selected by preprocessing for the fixed block pool; the training process read the token-block JSONL rows below, not these article rows.",
+      "sha256": "a6b05b6c430aabbfaebfe0179faf020c45aa3f5e8a8e9644b6b52394d9378593",
+      "size_bytes": 1869078075,
+      "transferred_with_package": false
+    },
+    {
+      "dataset_id": "wmdp_bio_retain_cleaned_validation_bio-clean-v1",
+      "dataset_name": "WMDP-Bio retain cleaned article corpus",
+      "dataset_version": "bio-clean-v1",
+      "split": "validation",
+      "purpose": "source article pool used in preprocessing to construct fixed token blocks; not read directly by the selected RMU training run",
+      "source_type": "processed_project_dataset",
+      "source_detail": {
+        "source_dataset_id": "WMDP Bio retain corpus in archived CAIS WMDP corpora archive",
+        "source_revision": null,
+        "source_description": "Retain data extracted from the archived WMDP corpora bundle; exact upstream dataset revision was not recorded.",
+        "raw_role_total_before_cleaning_and_split": 60887,
+        "cleaned_records_in_this_split": 3029,
+        "preclean_split_specific_raw_count_recorded": false,
+        "direct_selected_run_article_reads": 0
+      },
+      "file_paths": [
+        "data/processed/bio_v1/retain/validation.jsonl"
+      ],
+      "file_path_scope": "project-relative actual source path on the training host",
+      "file_paths_included_in_delivery_package": [
+        false
+      ],
+      "file_paths_included_note": "false means the source data file exists outside this metadata package and has not been transferred",
+      "file_format": "JSONL article records",
+      "raw_count": null,
+      "used_count": 64,
+      "cleaning_pipeline_version": "bio-clean-v1",
+      "deduplication_method": "NFKC + casefold + whitespace normalization for exact SHA256 comparison; original casing and text preserved in output. Same DOI and verified near duplicates share a split; near duplicates are not deleted.",
+      "license_or_authorization": {
+        "license_or_terms": "redistribution authorization not established in archived records",
+        "source_revision": null,
+        "recipient_authorization_status": "source revision and recipient redistribution authorization are unresolved",
+        "redistribution_authorization": null,
+        "status_note": "No data is included in this package; recipient access and redistribution rights must be confirmed independently."
+      },
+      "test_overlap_result": {
+        "status": "partial_documented_screen_not_a_no_overlap_guarantee",
+        "evaluation_questions_checked": 15600,
+        "confirmed_matches": 0,
+        "method": "Aho-Corasick normalized question substring matching, plus three 8-word anchors for questions >=16 words. Exclude verbatim questions >=20 words and >=120 normalized chars; shorter exact/anchor matches are unreviewed candidates, not confirmed contamination.",
+        "reviewed_candidates": true,
+        "limitations": [
+          "Approximate duplicate candidate generation is sampled and cannot prove absence of semantic duplicates.",
+          "All flagged candidates were screened/reviewed, but paraphrases, answer-only overlap and unknown contamination may remain undetected.",
+          "Training loader/tokenization compatibility will be verified before RMU short run."
+        ]
+      },
+      "role": "retain",
+      "raw_count_note": "Split-specific pre-clean row count was not recorded. raw_role_total_before_cleaning_and_split records the known combined role count; it is not repeated as a per-split count.",
+      "available_cleaned_article_count": 3029,
+      "selected_source_articles_for_fixed_block_pool": 64,
+      "actual_run_input_record_count": 0,
+      "actual_usage_note": "used_count is the number of source articles selected by preprocessing for the fixed block pool; the training process read the token-block JSONL rows below, not these article rows.",
+      "sha256": "2e3437e315a47e5aa1fad7e2cc0758d7df082a91aa1a0405a1ed6ca2657d06c5",
+      "size_bytes": 96500404,
+      "transferred_with_package": false
+    },
+    {
+      "dataset_id": "rmu_formal_blocks_forget_train_rmu-formal-blocks-v1",
+      "dataset_name": "RMU fixed forget token blocks",
+      "dataset_version": "rmu-formal-blocks-v1",
+      "split": "train",
+      "purpose": "direct RMU input: forget role receives representation-misdirection target; retain role matches frozen reference representation",
+      "source_type": "derived_project_token_block_dataset",
+      "source_detail": {
+        "source_dataset_id": "cais/wmdp-bio-forget-corpus",
+        "source_revision": "5a786ed1041e56fef2d4ed26c1239f12b73a68eb",
+        "source_description": "CAIS WMDP-Bio forget corpus; immutable source revision is recorded in the archived download manifest.",
+        "source_cleaned_article_file": "data/processed/bio_v1/forget/train.jsonl",
+        "source_cleaned_article_count": 23220,
+        "selected_articles_for_block_pool": 2048
+      },
+      "file_paths": [
+        "data/processed/bio_v1/formal_blocks_v1/forget/train.jsonl"
+      ],
+      "file_path_scope": "project-relative actual source path on the training host",
+      "file_paths_included_in_delivery_package": [
+        false
+      ],
+      "file_paths_included_note": "false means the source data file exists outside this metadata package and has not been transferred",
+      "file_format": "JSONL token-id blocks; no standard answer targets",
+      "raw_count": 2048,
+      "used_count": 1280,
+      "cleaning_pipeline_version": "bio-clean-v1 + rmu-formal-blocks-v1",
+      "deduplication_method": "Smallest SHA256(formal-v1:42:sample_id), separately per role and split; one hash-selected full 256-token block per article; shorter articles kept if >=2 tokens; incomplete tails ignored for longer articles.",
+      "license_or_authorization": {
+        "license_or_terms": "gated; redistribution limited to authorized collaborator list",
+        "source_revision": "5a786ed1041e56fef2d4ed26c1239f12b73a68eb",
+        "recipient_authorization_status": "recipient authorization required; current package does not transfer data",
+        "redistribution_authorization": null,
+        "status_note": "No data is included in this package; recipient access and redistribution rights must be confirmed independently."
+      },
+      "test_overlap_result": {
+        "status": "inherits_partial_article_level_screen_not_a_no_overlap_guarantee",
+        "evaluation_questions_checked": 15600,
+        "confirmed_matches": 0,
+        "method": "Aho-Corasick normalized question substring matching, plus three 8-word anchors for questions >=16 words. Exclude verbatim questions >=20 words and >=120 normalized chars; shorter exact/anchor matches are unreviewed candidates, not confirmed contamination.",
+        "limitations": [
+          "Approximate duplicate candidate generation is sampled and cannot prove absence of semantic duplicates.",
+          "All flagged candidates were screened/reviewed, but paraphrases, answer-only overlap and unknown contamination may remain undetected.",
+          "Training loader/tokenization compatibility will be verified before RMU short run."
+        ]
+      },
+      "role": "forget",
+      "candidate_block_count": 2048,
+      "raw_count_definition": "number of serialized token-block records in this fixed JSONL file before repeated run exposures/evaluations",
+      "unique_block_count_used": 1280,
+      "used_count_definition": "train: total block presentations through selected step 80; validation: total block evaluations through step 80; repeats are counted as exposures/evaluations",
+      "exposure_note": "1280 presentations through selected step 80; 1280 unique blocks from 2048 candidate blocks",
+      "tokenization": "Native tokenizer add_special_tokens=True; no chat template, no decode/re-encode, no cross-article packing",
+      "sequence_length": 256,
+      "sha256": "7353bad990eb564c74a52ab6ad8b664d5dff111c737ce19d0fff80b2455d9186",
+      "size_bytes": 3918024,
+      "transferred_with_package": false
+    },
+    {
+      "dataset_id": "rmu_formal_blocks_forget_validation_rmu-formal-blocks-v1",
+      "dataset_name": "RMU fixed forget token blocks",
+      "dataset_version": "rmu-formal-blocks-v1",
+      "split": "validation",
+      "purpose": "held-out representation-loss monitoring only; not an independent capability/safety validation set",
+      "source_type": "derived_project_token_block_dataset",
+      "source_detail": {
+        "source_dataset_id": "cais/wmdp-bio-forget-corpus",
+        "source_revision": "5a786ed1041e56fef2d4ed26c1239f12b73a68eb",
+        "source_description": "CAIS WMDP-Bio forget corpus; immutable source revision is recorded in the archived download manifest.",
+        "source_cleaned_article_file": "data/processed/bio_v1/forget/validation.jsonl",
+        "source_cleaned_article_count": 1217,
+        "selected_articles_for_block_pool": 64
+      },
+      "file_paths": [
+        "data/processed/bio_v1/formal_blocks_v1/forget/validation.jsonl"
+      ],
+      "file_path_scope": "project-relative actual source path on the training host",
+      "file_paths_included_in_delivery_package": [
+        false
+      ],
+      "file_paths_included_note": "false means the source data file exists outside this metadata package and has not been transferred",
+      "file_format": "JSONL token-id blocks; no standard answer targets",
+      "raw_count": 64,
+      "used_count": 576,
+      "cleaning_pipeline_version": "bio-clean-v1 + rmu-formal-blocks-v1",
+      "deduplication_method": "Smallest SHA256(formal-v1:42:sample_id), separately per role and split; one hash-selected full 256-token block per article; shorter articles kept if >=2 tokens; incomplete tails ignored for longer articles.",
+      "license_or_authorization": {
+        "license_or_terms": "gated; redistribution limited to authorized collaborator list",
+        "source_revision": "5a786ed1041e56fef2d4ed26c1239f12b73a68eb",
+        "recipient_authorization_status": "recipient authorization required; current package does not transfer data",
+        "redistribution_authorization": null,
+        "status_note": "No data is included in this package; recipient access and redistribution rights must be confirmed independently."
+      },
+      "test_overlap_result": {
+        "status": "inherits_partial_article_level_screen_not_a_no_overlap_guarantee",
+        "evaluation_questions_checked": 15600,
+        "confirmed_matches": 0,
+        "method": "Aho-Corasick normalized question substring matching, plus three 8-word anchors for questions >=16 words. Exclude verbatim questions >=20 words and >=120 normalized chars; shorter exact/anchor matches are unreviewed candidates, not confirmed contamination.",
+        "limitations": [
+          "Approximate duplicate candidate generation is sampled and cannot prove absence of semantic duplicates.",
+          "All flagged candidates were screened/reviewed, but paraphrases, answer-only overlap and unknown contamination may remain undetected.",
+          "Training loader/tokenization compatibility will be verified before RMU short run."
+        ]
+      },
+      "role": "forget",
+      "candidate_block_count": 64,
+      "raw_count_definition": "number of serialized token-block records in this fixed JSONL file before repeated run exposures/evaluations",
+      "unique_block_count_used": 64,
+      "used_count_definition": "train: total block presentations through selected step 80; validation: total block evaluations through step 80; repeats are counted as exposures/evaluations",
+      "exposure_note": "9 fixed validation passes through step 80; 64 distinct blocks per pass, 576 block evaluations per role",
+      "tokenization": "Native tokenizer add_special_tokens=True; no chat template, no decode/re-encode, no cross-article packing",
+      "sequence_length": 256,
+      "sha256": "33563fb11cd5bcc894716ed66b8703af8116cfc61e6cb6ce66ad1c4544d450b3",
+      "size_bytes": 122840,
+      "transferred_with_package": false
+    },
+    {
+      "dataset_id": "rmu_formal_blocks_retain_train_rmu-formal-blocks-v1",
+      "dataset_name": "RMU fixed retain token blocks",
+      "dataset_version": "rmu-formal-blocks-v1",
+      "split": "train",
+      "purpose": "direct RMU input: forget role receives representation-misdirection target; retain role matches frozen reference representation",
+      "source_type": "derived_project_token_block_dataset",
+      "source_detail": {
+        "source_dataset_id": "WMDP Bio retain corpus in archived CAIS WMDP corpora archive",
+        "source_revision": null,
+        "source_description": "Retain data extracted from the archived WMDP corpora bundle; exact upstream dataset revision was not recorded.",
+        "source_cleaned_article_file": "data/processed/bio_v1/retain/train.jsonl",
+        "source_cleaned_article_count": 57488,
+        "selected_articles_for_block_pool": 2048
+      },
+      "file_paths": [
+        "data/processed/bio_v1/formal_blocks_v1/retain/train.jsonl"
+      ],
+      "file_path_scope": "project-relative actual source path on the training host",
+      "file_paths_included_in_delivery_package": [
+        false
+      ],
+      "file_paths_included_note": "false means the source data file exists outside this metadata package and has not been transferred",
+      "file_format": "JSONL token-id blocks; no standard answer targets",
+      "raw_count": 2048,
+      "used_count": 1280,
+      "cleaning_pipeline_version": "bio-clean-v1 + rmu-formal-blocks-v1",
+      "deduplication_method": "Smallest SHA256(formal-v1:42:sample_id), separately per role and split; one hash-selected full 256-token block per article; shorter articles kept if >=2 tokens; incomplete tails ignored for longer articles.",
+      "license_or_authorization": {
+        "license_or_terms": "redistribution authorization not established in archived records",
+        "source_revision": null,
+        "recipient_authorization_status": "source revision and recipient redistribution authorization are unresolved",
+        "redistribution_authorization": null,
+        "status_note": "No data is included in this package; recipient access and redistribution rights must be confirmed independently."
+      },
+      "test_overlap_result": {
+        "status": "inherits_partial_article_level_screen_not_a_no_overlap_guarantee",
+        "evaluation_questions_checked": 15600,
+        "confirmed_matches": 0,
+        "method": "Aho-Corasick normalized question substring matching, plus three 8-word anchors for questions >=16 words. Exclude verbatim questions >=20 words and >=120 normalized chars; shorter exact/anchor matches are unreviewed candidates, not confirmed contamination.",
+        "limitations": [
+          "Approximate duplicate candidate generation is sampled and cannot prove absence of semantic duplicates.",
+          "All flagged candidates were screened/reviewed, but paraphrases, answer-only overlap and unknown contamination may remain undetected.",
+          "Training loader/tokenization compatibility will be verified before RMU short run."
+        ]
+      },
+      "role": "retain",
+      "candidate_block_count": 2048,
+      "raw_count_definition": "number of serialized token-block records in this fixed JSONL file before repeated run exposures/evaluations",
+      "unique_block_count_used": 920,
+      "used_count_definition": "train: total block presentations through selected step 80; validation: total block evaluations through step 80; repeats are counted as exposures/evaluations",
+      "exposure_note": "1280 presentations through selected step 80; 920 unique blocks from 2048 candidate blocks",
+      "tokenization": "Native tokenizer add_special_tokens=True; no chat template, no decode/re-encode, no cross-article packing",
+      "sequence_length": 256,
+      "sha256": "72e9f195ed2288f686fd8e3b7bd8de183c3f4d013a4e628a0a78ed5b181f8916",
+      "size_bytes": 3709520,
+      "transferred_with_package": false
+    },
+    {
+      "dataset_id": "rmu_formal_blocks_retain_validation_rmu-formal-blocks-v1",
+      "dataset_name": "RMU fixed retain token blocks",
+      "dataset_version": "rmu-formal-blocks-v1",
+      "split": "validation",
+      "purpose": "held-out representation-loss monitoring only; not an independent capability/safety validation set",
+      "source_type": "derived_project_token_block_dataset",
+      "source_detail": {
+        "source_dataset_id": "WMDP Bio retain corpus in archived CAIS WMDP corpora archive",
+        "source_revision": null,
+        "source_description": "Retain data extracted from the archived WMDP corpora bundle; exact upstream dataset revision was not recorded.",
+        "source_cleaned_article_file": "data/processed/bio_v1/retain/validation.jsonl",
+        "source_cleaned_article_count": 3029,
+        "selected_articles_for_block_pool": 64
+      },
+      "file_paths": [
+        "data/processed/bio_v1/formal_blocks_v1/retain/validation.jsonl"
+      ],
+      "file_path_scope": "project-relative actual source path on the training host",
+      "file_paths_included_in_delivery_package": [
+        false
+      ],
+      "file_paths_included_note": "false means the source data file exists outside this metadata package and has not been transferred",
+      "file_format": "JSONL token-id blocks; no standard answer targets",
+      "raw_count": 64,
+      "used_count": 576,
+      "cleaning_pipeline_version": "bio-clean-v1 + rmu-formal-blocks-v1",
+      "deduplication_method": "Smallest SHA256(formal-v1:42:sample_id), separately per role and split; one hash-selected full 256-token block per article; shorter articles kept if >=2 tokens; incomplete tails ignored for longer articles.",
+      "license_or_authorization": {
+        "license_or_terms": "redistribution authorization not established in archived records",
+        "source_revision": null,
+        "recipient_authorization_status": "source revision and recipient redistribution authorization are unresolved",
+        "redistribution_authorization": null,
+        "status_note": "No data is included in this package; recipient access and redistribution rights must be confirmed independently."
+      },
+      "test_overlap_result": {
+        "status": "inherits_partial_article_level_screen_not_a_no_overlap_guarantee",
+        "evaluation_questions_checked": 15600,
+        "confirmed_matches": 0,
+        "method": "Aho-Corasick normalized question substring matching, plus three 8-word anchors for questions >=16 words. Exclude verbatim questions >=20 words and >=120 normalized chars; shorter exact/anchor matches are unreviewed candidates, not confirmed contamination.",
+        "limitations": [
+          "Approximate duplicate candidate generation is sampled and cannot prove absence of semantic duplicates.",
+          "All flagged candidates were screened/reviewed, but paraphrases, answer-only overlap and unknown contamination may remain undetected.",
+          "Training loader/tokenization compatibility will be verified before RMU short run."
+        ]
+      },
+      "role": "retain",
+      "candidate_block_count": 64,
+      "raw_count_definition": "number of serialized token-block records in this fixed JSONL file before repeated run exposures/evaluations",
+      "unique_block_count_used": 64,
+      "used_count_definition": "train: total block presentations through selected step 80; validation: total block evaluations through step 80; repeats are counted as exposures/evaluations",
+      "exposure_note": "9 fixed validation passes through step 80; 64 distinct blocks per pass, 576 block evaluations per role",
+      "tokenization": "Native tokenizer add_special_tokens=True; no chat template, no decode/re-encode, no cross-article packing",
+      "sequence_length": 256,
+      "sha256": "b332c7fc411400029c2891e20e383ab576110466594b7ed98dfa6142894b2374",
+      "size_bytes": 114355,
+      "transferred_with_package": false
+    }
   ],
   "data_statistics": {
     "forget_candidate_blocks": 2048,
@@ -58,20 +520,51 @@
     "selected_checkpoint_step": 80,
     "precision": "BF16"
   },
-  "quality_controls": {
-    "delta_format": "bf16-uint16-xor-gzip-v1",
-    "existing_rebuild_check": true,
-    "reconstructed_parameter_hashes_match": {
-      "model.layers.10.mlp.down_proj.weight": "7b68187c821675b4a8eb4b0e54e23d21fb64a9c3ae1342816f8dd3cabea27bb6",
-      "model.layers.11.mlp.down_proj.weight": "5da03bb6f40ee3fb29f14b0ed0a55ac08ec4be5359e0c5380733be86a9f5242f",
-      "model.layers.12.mlp.down_proj.weight": "1f88c94b3b6ba7e8f73947ddac779dc9cade098c01c23630552759d0132afa3f"
+  "quality_controls": [
+    {
+      "check_id": "delta_encoding",
+      "status": "verified",
+      "result": "bf16-uint16-xor-gzip-v1",
+      "note": "Lossless XOR+gzip delta against the fixed base; not LoRA."
     },
-    "runtime_model_fingerprint_matches_four_group_record": "06fc83a6bd5dec105e2de6fde7aa94ab75af0dee562b3a7b9de4a034c7503ea3",
-    "reference_and_frozen_parameters_unchanged": true,
-    "source_code_commit": "ff618f4d83daa7dda4da5ddff765b5fa7505cb60",
-    "rebuild_test_repeated_during_this_delivery_prep": false,
-    "additional_training_or_evaluation_run": false
-  },
+    {
+      "check_id": "archived_rebuild_hashes",
+      "status": "verified_from_existing_record",
+      "result": true,
+      "parameter_hashes": {
+        "model.layers.10.mlp.down_proj.weight": "7b68187c821675b4a8eb4b0e54e23d21fb64a9c3ae1342816f8dd3cabea27bb6",
+        "model.layers.11.mlp.down_proj.weight": "5da03bb6f40ee3fb29f14b0ed0a55ac08ec4be5359e0c5380733be86a9f5242f",
+        "model.layers.12.mlp.down_proj.weight": "1f88c94b3b6ba7e8f73947ddac779dc9cade098c01c23630552759d0132afa3f"
+      },
+      "note": "Existing checkpoint-80 reconstruction record was reused; no rebuild was run in this phase."
+    },
+    {
+      "check_id": "runtime_model_fingerprint",
+      "status": "verified_from_existing_record",
+      "result": "06fc83a6bd5dec105e2de6fde7aa94ab75af0dee562b3a7b9de4a034c7503ea3",
+      "note": "Matches the archived four-group RMU80 fingerprint."
+    },
+    {
+      "check_id": "reference_and_frozen_parameters",
+      "status": "verified_from_training_log",
+      "result": true
+    },
+    {
+      "check_id": "training_source_commit",
+      "status": "recorded",
+      "result": "ff618f4d83daa7dda4da5ddff765b5fa7505cb60"
+    },
+    {
+      "check_id": "rebuild_repeated_during_delivery_prep",
+      "status": "not_run_by_scope",
+      "result": false
+    },
+    {
+      "check_id": "additional_training_or_evaluation",
+      "status": "not_run_by_scope",
+      "result": false
+    }
+  ],
   "platform_method_enum": {
     "method_used": "RMU",
     "target_platform_or_enum_schema_provided": false,

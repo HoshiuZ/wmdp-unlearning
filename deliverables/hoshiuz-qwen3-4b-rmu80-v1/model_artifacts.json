@@ -1,6 +1,14 @@
 {
   "schema_version": "2026-10-15",
-  "artifact_access": "metadata package only; no model weights or tokenizer copied; base files and payloads remain on this server",
+  "artifact_access": {
+    "base_and_tokenizer_available_locally": true,
+    "rmu_delta_available_in_local_lfs_cache": true,
+    "remote_lfs_retrievable": null,
+    "remote_lfs_status": "unverified",
+    "included_in_delivery_package": false,
+    "transferred_to_platform": false,
+    "note": "Metadata package only. Local resources remain on the training host; remote access and platform transfer are unverified/not completed."
+  },
   "base_model": {
     "model_id": "qwen3-4b-instruct-2507",
     "official_name": "Qwen3-4B-Instruct-2507",
@@ -126,7 +134,7 @@
         "local_payload_bytes": 24568186,
         "local_payload_hash_matches": true,
         "included_in_delivery_package": false,
-        "remote_uploaded_or_retrievable": false,
+        "remote_uploaded_or_retrievable": null,
         "remote_status": "not verified; quota/upload state unavailable in archived run record",
         "base_tensor_sha256": "b22d94578775afce0606834edb069fd9fa1eb141cfae5d76eb626694cede4b94",
         "reconstructed_tensor_sha256": "7b68187c821675b4a8eb4b0e54e23d21fb64a9c3ae1342816f8dd3cabea27bb6"
@@ -149,7 +157,7 @@
         "local_payload_bytes": 24349543,
         "local_payload_hash_matches": true,
         "included_in_delivery_package": false,
-        "remote_uploaded_or_retrievable": false,
+        "remote_uploaded_or_retrievable": null,
         "remote_status": "not verified; quota/upload state unavailable in archived run record",
         "base_tensor_sha256": "85c846eff9fa600f60343af9c4ec497de803d393b1cea82850dbbe802aca3b8d",
         "reconstructed_tensor_sha256": "5da03bb6f40ee3fb29f14b0ed0a55ac08ec4be5359e0c5380733be86a9f5242f"
@@ -172,7 +180,7 @@
         "local_payload_bytes": 25104463,
         "local_payload_hash_matches": true,
         "included_in_delivery_package": false,
-        "remote_uploaded_or_retrievable": false,
+        "remote_uploaded_or_retrievable": null,
         "remote_status": "not verified; quota/upload state unavailable in archived run record",
         "base_tensor_sha256": "2531bc7c8c41c0cc2db584a7b9017c0c58786771b3dc2dd6ab625048d8f06624",
         "reconstructed_tensor_sha256": "1f88c94b3b6ba7e8f73947ddac779dc9cade098c01c23630552759d0132afa3f"
@@ -197,7 +205,8 @@
       "checkpoint_path_local_only": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-40",
       "parameter_count": 3,
       "payload_bytes": 71076410,
-      "remote_verified": false,
+      "remote_verified": null,
+      "remote_status": "unverified; remote LFS retrieval was not tested",
       "role": "same continuous120 trajectory; comparison attachment, not an independently trained model"
     },
     {
@@ -205,7 +214,8 @@
       "checkpoint_path_local_only": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-80",
       "parameter_count": 3,
       "payload_bytes": 74022192,
-      "remote_verified": false,
+      "remote_verified": null,
+      "remote_status": "unverified; remote LFS retrieval was not tested",
       "role": "same continuous120 trajectory; comparison attachment, not an independently trained model"
     },
     {
@@ -213,7 +223,8 @@
       "checkpoint_path_local_only": "/root/autodl-tmp/wmdp-work/open-unlearning/saves/unlearn/rmu_step_comparison_v1/h12_a2_s32_seed42_continuous120/checkpoint-120",
       "parameter_count": 3,
       "payload_bytes": 75038731,
-      "remote_verified": false,
+      "remote_verified": null,
+      "remote_status": "unverified; remote LFS retrieval was not tested",
       "role": "same continuous120 trajectory; comparison attachment, not an independently trained model"
     }
   ],

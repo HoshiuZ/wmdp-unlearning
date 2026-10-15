@@ -2,8 +2,9 @@
   "delivery_id": "hoshiuz-qwen3-4b-rmu80-v1-20261015",
   "delivery_version": "0.1.0",
   "schema_version": "2026-10-15",
-  "prepared_at": "2026-10-15T04:19:28Z",
+  "prepared_at": "2026-10-15T04:49:51Z",
   "submitted_at": null,
+  "submission_status": "not_submitted",
   "model_id": "hoshiuz-qwen3-4b-rmu80-v1",
   "base_model_id": "qwen3-4b-instruct-2507",
   "confidentiality": "public metadata/report package; model weights and WMDP data restricted/local",
@@ -12,31 +13,31 @@
     {
       "path": "DELIVERY_CHECK_REPORT.md",
       "purpose": "integrity and completeness verification report",
-      "records": null,
-      "size_bytes": 1429,
-      "sha256": "7e787d82945ed39a3db44ef0530bb62c8b04727a59da11a3545f1b93de7efbbe",
+      "record_count": null,
+      "size_bytes": 1932,
+      "sha256": "af3490286185c8200ea3de0a36fdfa7a4c160eb7708b382cd0c0ad4f0dac77cb",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "DELIVERY_SUMMARY.md",
       "purpose": "Chinese delivery report for reviewers",
-      "records": null,
-      "size_bytes": 4675,
-      "sha256": "1bee6d663c760a54d402032534b2cf9c3b707aac9b88dd601a12cacb3c2c8e40",
+      "record_count": null,
+      "size_bytes": 5945,
+      "sha256": "c11cf528ea0e669fe466e599465c264e59c247635b9e463f493790ca3f406210",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "MISSING_ITEMS.md",
       "purpose": "remaining transfer and platform integration items",
-      "records": null,
-      "size_bytes": 1953,
-      "sha256": "2ddf0064e9e9a6b955feac0403b0e7a2ca69b25c6e191d8134e587a7b67503a0",
+      "record_count": null,
+      "size_bytes": 3264,
+      "sha256": "c5ec27029b9086353c6ab3fd9f1e248569b5ee165771e1bf39503dd65613ebbe",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "README.md",
       "purpose": "delivery package overview and status",
-      "records": null,
+      "record_count": null,
       "size_bytes": 1061,
       "sha256": "201ca4da6e0d0b2d92c0b28f4a5e84de960bf46f3b1a2506e9a360c371603b4a",
       "availability": "included_in_delivery_package"
@@ -44,7 +45,7 @@
     {
       "path": "artifacts/model/README.md",
       "purpose": "local RMU delta location and reconstruction boundary",
-      "records": null,
+      "record_count": null,
       "size_bytes": 1096,
       "sha256": "851bd35eb153d79c1377f9a7e8744e5e5811df64e929a7b806573783d05aaf74",
       "availability": "included_in_delivery_package"
@@ -52,7 +53,7 @@
     {
       "path": "artifacts/serving/README.md",
       "purpose": "current offline inference entry points and missing service components",
-      "records": null,
+      "record_count": null,
       "size_bytes": 802,
       "sha256": "69935011c2d03886b6ac4381c2a547db7c8cd4f593722eefb3eb19db5369aa9b",
       "availability": "included_in_delivery_package"
@@ -60,7 +61,7 @@
     {
       "path": "artifacts/tokenizer/README.md",
       "purpose": "base tokenizer reference and transfer status",
-      "records": null,
+      "record_count": null,
       "size_bytes": 424,
       "sha256": "be36f38a404f0eede1e1d5bbd22e7d9ef07dfd0fe27ea06996985638e7aa3582",
       "availability": "included_in_delivery_package"
@@ -68,7 +69,7 @@
     {
       "path": "attachments/charts/README.md",
       "purpose": "chart sources and metric direction",
-      "records": null,
+      "record_count": null,
       "size_bytes": 412,
       "sha256": "6ac239179be93a6324422d0743e5c9c14f88ab177653a17dc808b1bb9610dd49",
       "availability": "included_in_delivery_package"
@@ -76,15 +77,15 @@
     {
       "path": "attachments/charts/four_group_wildguard.svg",
       "purpose": "WildGuard-scored four-group comparison",
-      "records": null,
-      "size_bytes": 4375,
-      "sha256": "2f63a2f7354cb323e69d9832dc119b08caa0133e7f7fd729b4698648c766d10d",
+      "record_count": null,
+      "size_bytes": 4541,
+      "sha256": "b397eeb0fc64dcaad89b01e8972477b63dcecaa22db3662a83b48b357189aa28",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "attachments/charts/rmu_steps_bio_mmlu.svg",
       "purpose": "existing full-evaluation RMU step tradeoff",
-      "records": null,
+      "record_count": null,
       "size_bytes": 3971,
       "sha256": "f2d5a0d35411e696c8c8bc3910722e91ba9bf2433f4fbe5e71e5c8be7a132928",
       "availability": "included_in_delivery_package"
@@ -92,7 +93,7 @@
     {
       "path": "attachments/logs/README.md",
       "purpose": "log provenance and excluded sensitive records",
-      "records": null,
+      "record_count": null,
       "size_bytes": 337,
       "sha256": "c27e90f4f72bf972b13f53e00ce0304a5504cf5c67553785b22f6edca203e037",
       "availability": "included_in_delivery_package"
@@ -100,7 +101,7 @@
     {
       "path": "attachments/logs/rmu80_run_summary.json",
       "purpose": "sanitized archived run provenance summary",
-      "records": null,
+      "record_count": null,
       "size_bytes": 859,
       "sha256": "1582468d722391a5a7065c641cceaa67fc24284e2f0ffba5e4b6afec502992d0",
       "availability": "included_in_delivery_package"
@@ -108,7 +109,7 @@
     {
       "path": "data_statement.md",
       "purpose": "data provenance, licenses and distribution limits",
-      "records": null,
+      "record_count": null,
       "size_bytes": 2352,
       "sha256": "b1e6d4a502b0ac2d9277f27b929920fa5fa29b7cca3c051b24440992559d0e5f",
       "availability": "included_in_delivery_package"
@@ -116,7 +117,7 @@
     {
       "path": "datasets/evaluation/README.md",
       "purpose": "evaluation source/status index; no raw evaluation rows copied",
-      "records": null,
+      "record_count": null,
       "size_bytes": 347,
       "sha256": "984157ff810f4f920a7732dc0fa0c772171f5dcef981beb283a318a2e0965c41",
       "availability": "included_in_delivery_package"
@@ -124,7 +125,7 @@
     {
       "path": "datasets/train/README.md",
       "purpose": "restricted training data is referenced locally, not copied",
-      "records": null,
+      "record_count": null,
       "size_bytes": 460,
       "sha256": "d90217f3edd8d601b62e6e51deb122c1d7914dab6a85d361453b01d659a7a709",
       "availability": "included_in_delivery_package"
@@ -132,7 +133,7 @@
     {
       "path": "datasets/validation/README.md",
       "purpose": "held-out representation-loss data is referenced locally, not copied",
-      "records": null,
+      "record_count": null,
       "size_bytes": 295,
       "sha256": "21d89505ed566753185fb99345a6a266405ee770318682ea9a51ec7a1f3039e8",
       "availability": "included_in_delivery_package"
@@ -140,55 +141,55 @@
     {
       "path": "delivery_audit.json",
       "purpose": "lightweight package integrity and completeness checks",
-      "records": null,
-      "size_bytes": 2889,
-      "sha256": "e1908ce022f53b87880a4d6d1ff22c68915c01fe109a01f8c4d3fe3bcf0bd4d4",
+      "record_count": null,
+      "size_bytes": 4638,
+      "sha256": "e7c4c4aa3d5953234b301dc36956e8a20d355da8b5f019ece47937849a8e5657",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "evaluation_summary.json",
       "purpose": "capability, classifier, four-group and assisted-review results",
-      "records": null,
-      "size_bytes": 47648,
-      "sha256": "3b57d81440bf785538f4d6976eb7bda5c67cbe40b41c1e37425eb9bf0c84f434",
+      "record_count": null,
+      "size_bytes": 55087,
+      "sha256": "b599a1eb81def3f8d0c8ceb1ed4e7d50120a4ec3eb4b1c81520f1c16182c8564",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "missing_items.json",
       "purpose": "supporting delivery metadata",
-      "records": null,
-      "size_bytes": 2653,
-      "sha256": "fd4358d22ef6612f295154f6d520903c0f9b6377ce2ded79b16e01c8f4a774ad",
+      "record_count": null,
+      "size_bytes": 4194,
+      "sha256": "98d15e0e3905dc028dd48237f54efa3fe37bbc8b7f4a2dd658551c118a17fee2",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "model_artifacts.json",
       "purpose": "artifact locations, hashes, reconstructability and transfer status",
-      "records": null,
-      "size_bytes": 15375,
-      "sha256": "87ad49b0579cc66c8ce2cbdaf999df3599341edadcb7e364e388329ad683b349",
+      "record_count": null,
+      "size_bytes": 15894,
+      "sha256": "8a407a682d0fb03f5aedbb808fa0b1d64ca639c418b5631889617965ba8ba4bc",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "model_card.json",
       "purpose": "model identity, intended use, license, access and limitations",
-      "records": null,
-      "size_bytes": 3277,
-      "sha256": "c91bbb5b4f32beac03076c18abb3eff0acb85ba7552fad8ecaa4b6625ce715a0",
+      "record_count": null,
+      "size_bytes": 4338,
+      "sha256": "24e42836d929b657c8cc427321dc58375d5a305989becb10aa9555f5f10eb7fe",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "post_training.json",
       "purpose": "RMU post-training method and quality controls",
-      "records": null,
-      "size_bytes": 4061,
-      "sha256": "9e200938d191d530998fa4f905b09594f73360b5d235e25707fee7fa54ed40a7",
+      "record_count": null,
+      "size_bytes": 35838,
+      "sha256": "15c1423ca043796919a219cbe001e2f5103d02c66617025bd2292436247f4a84",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "training_config.json",
       "purpose": "resolved RMU run configuration and selected checkpoint relation",
-      "records": null,
+      "record_count": null,
       "size_bytes": 12906,
       "sha256": "cd550b9dd03e5e743230141fcbe5fd78cc49455b7c453f5b27a6a22593221477",
       "availability": "included_in_delivery_package"
@@ -196,15 +197,15 @@
     {
       "path": "training_datasets.jsonl",
       "purpose": "training and validation dataset provenance and counts",
-      "records": 8,
-      "size_bytes": 19232,
-      "sha256": "bfe233ed9c567fb87176da41848353f106a4b633018c5f691a2b6b06b1ddc400",
+      "record_count": 8,
+      "size_bytes": 27843,
+      "sha256": "289e943d9c9b90cb36d362189a123fae0f13bb5baba22bd8d4e831ed18d9a95f",
       "availability": "included_in_delivery_package"
     },
     {
       "path": "training_metrics.jsonl",
       "purpose": "normalized archived step-level training/validation metrics",
-      "records": 133,
+      "record_count": 133,
       "size_bytes": 126372,
       "sha256": "13c44fb1f13fa798071f1463a191d25c2ca5ed4f887ab3e380b84a8bb322973c",
       "availability": "included_in_delivery_package"
@@ -265,6 +266,36 @@
       "item": "平台实际提交时间",
       "status": "not_submitted",
       "recipient_action": "manifest.submitted_at remains null until an actual platform submission"
+    },
+    {
+      "field": "model_card.base_model_version / model_artifacts.base_model.remote_revision",
+      "status": "unknown",
+      "reason": "基模最初下载时未记录上游不可变revision；目前以本地文件清单和参数指纹固定版本。"
+    },
+    {
+      "field": "training_datasets[].raw_count for cleaned article splits",
+      "status": "null_not_recorded",
+      "reason": "归档只记录forget/retain各自清洗前的合计数，未记录按train/validation拆分的清洗前数量。因此分割级raw_count为null，另列角色合计数和清洗后分割数。"
+    },
+    {
+      "field": "training_datasets[].license_or_authorization for retain data",
+      "status": "unresolved",
+      "reason": "retain语料归档revision及接收方再分发授权尚未从已有记录中确认。"
+    },
+    {
+      "field": "model_card.artifact_access.remote_retrievable",
+      "status": "null_unverified",
+      "reason": "未核实远端Git LFS对象可取回；本机缓存存在不代表远端可用。"
+    },
+    {
+      "field": "post_training.platform_method_enum / model_card.model_type enum mapping",
+      "status": "pending_recipient_platform",
+      "reason": "实际方法记录为RMU；machine_unlearning是本项目扩展表达，目标平台枚举尚未提供。"
+    },
+    {
+      "field": "manifest.submitted_at",
+      "status": "null_not_submitted",
+      "reason": "本阶段未向平台提交；实际转交前必须保持null。"
     }
   ],
   "self_hash_note": "manifest.json is excluded from files to avoid a self-referential hash; its own size/hash is therefore null/unavailable.",
