@@ -145,7 +145,10 @@ def chat(tokenizer, model, context_limit: int, max_new_tokens: int) -> None:
     if pad_id is None:
         pad_id = tokenizer.pad_token_id
 
-    print("RMU80已加载。输入 /clear 清空上下文，输入 /exit 退出。", flush=True)
+    print(
+        "RMU80已加载。输入 /multi 开始多行输入，/clear 清空上下文，/exit 退出。",
+        flush=True,
+    )
     while True:
         try:
             question = input("\n你> ")
@@ -163,6 +166,28 @@ def chat(tokenizer, model, context_limit: int, max_new_tokens: int) -> None:
             history.clear()
             print("已清空聊天上下文。", flush=True)
             continue
+        if command == "/multi":
+            print("多行输入：输入或粘贴问题，单独输入 /send 提交，/cancel 取消。", flush=True)
+            lines = []
+            try:
+                while True:
+                    line = input("... ")
+                    if line.strip() == "/send":
+                        question = "\n".join(lines)
+                        break
+                    if line.strip() == "/cancel":
+                        question = ""
+                        print("已取消多行输入。", flush=True)
+                        break
+                    if line.strip() == "/exit":
+                        print("已退出。", flush=True)
+                        return
+                    lines.append(line)
+            except (EOFError, KeyboardInterrupt):
+                print("\n已退出。", flush=True)
+                return
+            if not question.strip():
+                continue
 
         messages = history + [{"role": "user", "content": question}]
         try:
